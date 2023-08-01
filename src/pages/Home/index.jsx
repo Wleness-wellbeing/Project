@@ -654,7 +654,7 @@ function Home() {
         </div>
       </section>
 
-      <Assessment />
+      {/* <Assessment /> */}
     </>
   );
 }

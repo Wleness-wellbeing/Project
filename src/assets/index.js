@@ -173,13 +173,6 @@ export {
   sirsasanaHeader,
 };
 
-// Join us
-import Elipse1 from "./images/joinus/Ellipse 1150.png";
-import Elipse2 from "./images/joinus/Ellipse 1151.png";
-import Elipse3 from "./images/joinus/Ellipse 1152.png";
-
-export { Elipse1, Elipse2, Elipse3 };
-
 // Feature Icons
 import feature1 from "./images/features/feature-1.png";
 import feature2 from "./images/features/feature-2.png";
