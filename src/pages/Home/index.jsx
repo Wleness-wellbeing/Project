@@ -45,6 +45,7 @@ import {
   homeHyperTension,
   homeStress,
 } from "../../assets";
+import Assessment from "../../components/Assessment";
 
 function Home() {
   return (
@@ -652,6 +653,8 @@ function Home() {
           </details>
         </div>
       </section>
+
+      <Assessment />
     </>
   );
 }

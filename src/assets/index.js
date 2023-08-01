@@ -420,3 +420,9 @@ export {
   blogThumbnail5,
   blogThumbnail6,
 };
+
+// Assessment Images
+import assessment1 from "./images/assessment/assessment-welcome-1.png";
+import assessment2 from "./images/assessment/assessment-welcome-2.png";
+
+export { assessment1, assessment2 };
