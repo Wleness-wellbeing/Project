@@ -93,7 +93,16 @@ import brainExerciseHeader from "./images/activities/brainExercise/brain-exercis
 import brainGameGalaxy from "./images/activities/brainExercise/brain-game-galaxy.png";
 import brainGameTreasure from "./images/activities/brainExercise/brain-game-treasure-chest.png";
 import brainGameHunter from "./images/activities/brainExercise/brain-game-turtle-hunter.png";
-// Activities >> Others
+
+// Join us
+import Elipse1 from "./images/joinus/Ellipse 1150.png";
+import Elipse2 from "./images/joinus/Ellipse 1151.png";
+import Elipse3 from "./images/joinus/Ellipse 1152.png";
+import Bubble from "./images/joinus/Bubble.png";
+
+export { Elipse1, Elipse2, Elipse3, Bubble };
+
+// Others
 import benefits from "./images/activities/yoga/others/benefits.png";
 import precautions from "./images/activities/yoga/others/precautions.png";
 export {

@@ -1,75 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-h1, h2, h3, h4, h5, h6, p, span, li, ul, button, a{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+li,
+ul,
+button,
+a {
   @apply !font-quicksand;
 }
 .container {
-  @apply w-full px-5
+  @apply w-full px-5;
 }
 @media (min-width: 480px) {
   .container {
-    @apply max-w-screen-xs
+    @apply max-w-screen-xs;
   }
 }
 @media (min-width: 640px) {
   .container {
-    @apply max-w-[560px]
+    @apply max-w-[560px];
   }
 }
 @media (min-width: 768px) {
   .container {
-    @apply max-w-[640px]
+    @apply max-w-[640px];
   }
 }
 @media (min-width: 1024px) {
   .container {
-    @apply max-w-[920px]
+    @apply max-w-[920px];
   }
 }
 @media (min-width: 1280px) {
   .container {
-    @apply max-w-[1100px]
+    @apply max-w-[1100px];
   }
 }
 @media (min-width: 1440px) {
   .container {
-    @apply max-w-[1200px]
+    @apply max-w-[1200px];
   }
 }
 @media (min-width: 1536px) {
   .container {
-    @apply max-w-[1100px]
+    @apply max-w-[1100px];
   }
 }
 @media (min-width: 1600px) {
   .container {
-    @apply max-w-[1400px]
+    @apply max-w-[1400px];
   }
 }
 @media (min-width: 1920px) {
   .container {
-    @apply max-w-[1500px]
+    @apply max-w-[1500px];
   }
 }
 
 /* Headings */
-.subheading{
+.subheading {
   @apply text-[2rem] sm:text-5xl md:text-6xl xl:text-5xl 3xl:text-6xl 4xl:text-7xl font-quicksand font-bold leading-10 lg:leading-normal pb-2;
 }
-.heading-primary{
-  @apply  text-transparent bg-gradient-to-r from-secondary to-tertiary bg-clip-text;
+.heading-primary {
+  @apply text-transparent bg-gradient-to-r from-secondary to-tertiary bg-clip-text;
 }
 
 /* Links and Paragraphs */
-.menu-link{ 
-  @apply  inline-block py-2 font-semibold hover:text-primary-300 transition-all
+.menu-link {
+  @apply inline-block py-2 font-semibold hover:text-primary-300 transition-all;
 }
-.para{
-  @apply text-sm leading-5  lg:text-lg font-quicksand !text-[#383838] font-semibold
+.para {
+  @apply text-sm leading-5  lg:text-lg font-quicksand !text-[#383838] font-semibold;
 }
 
 /* Buttons */
@@ -89,6 +100,6 @@ h1, h2, h3, h4, h5, h6, p, span, li, ul, button, a{
 }
 
 /* Custom styling */
-.issue-card{
-  @apply mx-auto block w-20 h-20 lg:h-52 lg:w-52 2xl:h-60 2xl:w-60 object-cover
+.issue-card {
+  @apply mx-auto block w-20 h-20 lg:h-52 lg:w-52 2xl:h-60 2xl:w-60 object-cover;
 }
