@@ -21,6 +21,8 @@ import Avatar from "./components/layout/Avatar";
 import ActivitySubPageLayout from "./pages/Activities/ActivitySubPageLayout";
 // Data
 import { activities } from "./data";
+import TherapistJoiningForm from "./components/TherapistJoiningForm.jsx";
+import PsychiatristJoiningForm from "./components/PsychiatristJoiningForm";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -182,6 +184,23 @@ function App() {
           element={
             <SignupLayout>
               <PatientSignup />
+            </SignupLayout>
+          }
+        />
+        <Route
+          path="/join-therapist"
+          element={
+            <SignupLayout>
+              <TherapistJoiningForm />
+            </SignupLayout>
+          }
+        />
+
+        <Route
+          path="/join-psychiatrist"
+          element={
+            <SignupLayout>
+              <PsychiatristJoiningForm />
             </SignupLayout>
           }
         />

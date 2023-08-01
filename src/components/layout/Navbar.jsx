@@ -165,12 +165,12 @@ function Navbar() {
 
         {/* Authentication */}
         <div className="hidden xl:flex xl:items-center">
-          <Link
-            to="/doctors-signup"
+          <button
+            onClick={() => setJoinUsOpen(true)}
             className="menu-link mr-2 text-primary-400 !font-bold border-2 px-4 border-primary-400 hover:bg-primary-400 hover:text-white transition-all !py-1.5 rounded-full"
           >
             Join Us
-          </Link>
+          </button>
           <Link
             to="/patient-signup"
             className="btn-primary !w-fit !rounded-full !bg-primary-400 hover:!bg-primary-300 !py-2 font-medium"

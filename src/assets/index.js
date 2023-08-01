@@ -78,8 +78,9 @@ import brainGameHunter from "./images/activities/brainExercise/brain-game-turtle
 import Elipse1 from "./images/joinus/Ellipse 1150.png";
 import Elipse2 from "./images/joinus/Ellipse 1151.png";
 import Elipse3 from "./images/joinus/Ellipse 1152.png";
+import Bubble from "./images/joinus/Bubble.png"
 
-export { Elipse1, Elipse2, Elipse3 };
+export { Elipse1, Elipse2, Elipse3,Bubble };
 
 // Others
 import benefits from "./images/activities/yoga/others/benefits.png";
