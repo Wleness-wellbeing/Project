@@ -3,20 +3,18 @@ import { benefits, precautions, adhvmukhaSteps } from "../assets";
 
 export default function LeftVideoList(props) {
   return (
-    <div className="container mx-auto grid grid-cols-2 items-center ">
-      <div>
+    <div className="container mx-auto flex flex-col lg:flex-row lg:items-center">
+      <div className="lg:w-1/2">
         <iframe
-          width="500"
-          height="300"
           src={props.data.videoUrl}
           title="YouTube video player"
-          frameborder="0"
+          frameBorder={0}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          className="rounded-2xl"
-        ></iframe>
+          allowFullScreen="true"
+          className="rounded-2xl w-fit h-44 mx-auto lg:w-[460px] lg:h-[300px]"
+        />
       </div>
-      <div className="p-8 font-semibold">
+      <div className="lg:p-8 py-2 font-semibold lg:w-1/2">
         <h2 className="text-2xl font-bold mb-4 text-primary-500">
           {props.data.title}
         </h2>

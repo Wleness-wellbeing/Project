@@ -12,8 +12,8 @@ export default function HeaderWithImage(props) {
         </h1>
         <p className="para pt-1 lg:pt-6">{props.data.desc}</p>
 
-        <div>
-          <h2 className="text-primary-500 font-bold text-2xl pt-24">
+        <div className="mb-8">
+          <h2 className="text-primary-500 font-bold text-2xl pt-8 lg:pt-20">
             Variations:
           </h2>
           <p className="para">{props.data.var}</p>

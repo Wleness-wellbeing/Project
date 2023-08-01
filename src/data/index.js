@@ -58,8 +58,19 @@ import {
   adhvVariationOne,
   adhvVariationTwo,
   adhvVariationThree,
+  virabhadrasanaHeader,
+  virabhadrasanaVariation1,
+  virabhadrasanaVariation2,
+  virabhadrasanaVariation3,
+  trikonasanaHeader,
+  trikonasanaVariation1,
+  trikonasanaVariation2,
+  trikonasanaVariation3,
+  vrkasanaHeader,
+  vrkasanaVariation1,
+  vrkasanaVariation2,
+  ustrasanaHeader,
 } from "../assets";
-
 // Components
 import HeaderWithImage from "../components/HeaderWithImage";
 import RightImage from "../components/RightImage";
@@ -305,10 +316,26 @@ export const activities = [
                 ],
               },
             },
-            // {
-            //   component: ActivityBlogs,
-            //   data: blogsData,
-            // },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
           ],
         },
         {
@@ -316,24 +343,440 @@ export const activities = [
           thumbnail: yogaVirbhadrasana,
           desc: "Virabhadrasana emanates strength and grace. This yoga asana cultivates stability, balance, and a sense of inner courage, making it a powerful addition to any yoga sequence.",
           slug: "/activities/yoga/virabhadrasana",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Virabhadrasana",
+                desc: "Virabhadrasana II, also known as Warrior II Pose, is a powerful and energizing yoga asana that offers numerous physical and mental benefits. This pose is named after the fierce warrior Virabhadra, who is said to have been created by the god Shiva. In this blog, we will explore the many benefits of Virabhadrasana II, how to practice the pose, and precautions to keep in mind.",
+                image: virabhadrasanaHeader,
+                var: "You can try several variations of Virabhadrasana II, depending on your skill level and flexibility. Here are a few:",
+              },
+            },
+            {
+              component: RightImage,
+              data: {
+                title: "Reverse Warrior Pose: ",
+                desc: "This variation is a gentle backbend stretching the body's side. Start in Virabhadrasana II, then reach your right arm up and back as you extend your left arm down towards your left leg. Keep your right knee bent and your gaze towards the ceiling.",
+                image: virabhadrasanaVariation1,
+              },
+            },
+            {
+              component: LeftImage,
+              data: {
+                title: "Extended Side Angle Pose: ",
+                desc: "This variation is a deeper stretch for the hips and side of the body. Start in Virabhadrasana II, then reach your right arm forward and down, placing your hand on the ground or a block outside your right foot. Extend your left arm towards the ceiling and gaze towards your left fingertips.",
+                image: virabhadrasanaVariation2,
+              },
+            },
+            {
+              component: RightImage,
+              data: {
+                title: "Bound Warrior Pose: ",
+                desc: "This variation is an advanced variation that requires both strength and flexibility. Start in Virabhadrasana II, then reach your right arm behind your back and clasp your hands together. Lift your chest and gaze towards the ceiling, keeping your shoulders relaxed.",
+                image: virabhadrasanaVariation3,
+              },
+            },
+            {
+              component: LeftVideoList,
+              data: {
+                title: "Steps for Virabhadrasana II: ",
+                desc: "To practice Virabhadrasana II, follow these steps: ",
+                videoUrl: "https://www.youtube.com/embed/cCEK6XrcUx0",
+                list: [
+                  {
+                    subtitle: "",
+                    desc: "Begin in Tadasana (Mountain Pose) at the front of your mat.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Step your left foot back about 3-4 feet, keeping your toes pointing forward. Your right foot should be pointing straight ahead.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Inhale and lift your arms to shoulder height, keeping them parallel to the ground. Your palms should be facing down.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Exhale and bend your right knee above your ankle. Your left leg should be straight behind you, with your left foot at a 45-degree angle.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Press down through your feet and engage your thigh muscles. Keep your hips facing forward, and your shoulders relaxed.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Gaze over your proper fingertips, keeping your neck aligned with your spine.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Hold the pose for several deep breaths, then release and repeat on the other side.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Benefits of Virabhadrasana II: ",
+                desc: "Virabhadrasana II offers many benefits for the body and mind, including",
+                list: [
+                  {
+                    subtitle: "Strengthens the legs: ",
+                    desc: "This pose strengthens the muscles in the legs, including the quadriceps, hamstrings, and calves.",
+                  },
+                  {
+                    subtitle: "Improves balance: ",
+                    desc: "By focusing on one point in front of you, Virabhadrasana II can help improve balance and stability.",
+                  },
+                  {
+                    subtitle: "Increases flexibility: ",
+                    desc: "This pose stretches the hips and groin, which can help increase flexibility in these areas.",
+                  },
+                  {
+                    subtitle: "Stimulates circulation: ",
+                    desc: "Virabhadrasana II can help increase blood flow to the legs and hips, improving circulation and reducing swelling.",
+                  },
+                  {
+                    subtitle: "Builds endurance: ",
+                    desc: "Holding the pose for several breaths can help build endurance and stamina.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList,
+              data: {
+                desc: "While Virabhadrasana II is a safe and beneficial pose for most people, there are a few precautions to remember: ",
+                info: "Virabhadrasana II is a powerful, energizing yoga pose with numerous bodily and mental benefits. Practicing this pose regularly can strengthen your legs, improve your balance, increase your flexibility, and build endurance. Always listen to your body and take precautions if you have any injuries or medical conditions. Consistent practice and patience can deepen your understanding of this pose and reap its many benefits.",
+                list: [
+                  "Avoid this pose if you have a knee, hip, or shoulder injury.",
+                  "If you have high blood pressure, avoid holding the pose for too long or come out of the carriage if you feel dizzy or lightheaded",
+                  "Refrain from overstretching these areas if you have tight hips or groin muscles.",
+                  "Always listen to your body, and don't push yourself beyond your limits. Remember that yoga is about finding a balance between effort and ease and never forcing your body into a pose that feels uncomfortable or painful.",
+                ],
+              },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
+          ],
         },
         {
           title: "Trikonasana",
           thumbnail: yogaTrikonasana,
           desc: "Trikonasana is a radiant and dynamic yoga posture that stretches and opens the entire body. With its triangular shape, this asana offers a blend of strength, expansion, and tranquility",
           slug: "/activities/yoga/trikonasana",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Trikonasana",
+                desc: "Trikonasana, or Triangle Pose, is a foundational yoga asana that offers numerous physical and mental benefits. This pose is named after the shape that your body creates when practicing it, resembling a triangle. In this blog, we will explore the many benefits of Trikonasana, how to practice the pose, and precautions to keep in mind.",
+                image: trikonasanaHeader,
+                var: "There are several variations of Trikonasana that you can try depending on your skill level and flexibility. Here are a few:",
+              },
+            },
+            {
+              component: RightImage,
+              data: {
+                title: "Revolved Triangle Pose: ",
+                desc: "This variation is a more profound twist that requires more flexibility. Start in Trikonasana, then place your left hand on your right hip as you twist your torso towards the ceiling. Extend your right arm towards the top, keeping your gaze towards your fingertips.",
+                image: trikonasanaVariation1,
+              },
+            },
+            {
+              component: LeftImage,
+              data: {
+                title: "Extended Triangle Pose: ",
+                desc: "This variation is a deeper stretch for the legs and hips. Start in Trikonasana, then place your right hand on a block or the floor outside your right foot. Extend your left arm towards the ceiling, keeping your gaze towards your fingertips.",
+                image: trikonasanaVariation2,
+              },
+            },
+            {
+              component: RightImage,
+              data: {
+                title: "Half Triangle Pose: ",
+                desc: "This variation is a modified version of Trikonasana that is more accessible for beginners or those with limited flexibility. Start in Trikonasana, then place your right hand on your right shin instead of reaching the floor.",
+                image: trikonasanaVariation3,
+              },
+            },
+            {
+              component: LeftVideoList,
+              data: {
+                title: "Steps for Trikonasana: ",
+                desc: "To practice Trikonasana, follow these steps: ",
+                videoUrl: "https://www.youtube.com/embed/cCEK6XrcUx0",
+                list: [
+                  {
+                    subtitle: "",
+                    desc: "Begin in Tadasana (Mountain Pose) at the front of your mat.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Step your left foot back about 3-4 feet, keeping your toes pointing forward. Your right foot should be pointing straight ahead.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Inhale and lift your arms to shoulder height, keeping them parallel to the ground. Your palms should be facing down.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Exhale and reach your right arm forward, then down towards your right shin, ankle, or the floor outside your right foot. Your left arm should be reaching up toward the ceiling.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Keep your legs strong and engaged, pressing down through your feet. Keep your hips facing forward and your chest open.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Gaze towards your left fingertips, keeping your neck aligned with your spine.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Hold the pose for several deep breaths, then release and repeat on the other side.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Benefits of Trikonasana: ",
+                desc: "Trikonasana offers many benefits for the body and mind, including",
+                list: [
+                  {
+                    subtitle: "Stretches the hamstrings and hips: ",
+                    desc: "This pose stretches the muscles in the back of the legs, including the hamstrings, hips, and groin.",
+                  },
+                  {
+                    subtitle: "Strengthens the legs: ",
+                    desc: "By pressing down through the feet and engaging the leg muscles, Trikonasana can help build strength in the legs.",
+                  },
+                  {
+                    subtitle: "Opens the chest and shoulders:  ",
+                    desc: "This pose can help spread the chest and shoulders, improving posture and breathing.",
+                  },
+                  {
+                    subtitle: "Stimulates digestion: ",
+                    desc: "Trikonasana can help stimulate the abdominal organs, promoting healthy digestion.",
+                  },
+                  {
+                    subtitle: "Calms the mind: ",
+                    desc: "Practicing Trikonasana can help calm the mind and reduce stress and anxiety.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList,
+              data: {
+                desc: "While Trikonasana is a safe and beneficial pose for most people, remember a few precautions: ",
+                info: "Trikonasana is a foundational yoga pose that offers numerous bodily and mental benefits. Practicing this pose regularly can improve your flexibility, strength, and balance while promoting healthy digestion and reducing stress and anxiety. Listen to your body and take precautions if you have any injuries or medical conditions. Consistent practice and patience can deepen your understanding of this pose and enjoy its many benefits.",
+                list: [
+                  "Avoid this pose if you have a knee or hip injury.",
+                  "If you have low blood pressure, avoid holding the pose for too long or come out of the carriage if you feel dizzy or lightheaded.",
+                  "Don't overstretch these areas if you have tight hamstrings or hips.",
+                  "Always listen to your body, and don't push yourself beyond your limits. Remember that yoga is about finding a balance between effort and ease and never forcing your body into a pose that feels uncomfortable or painful.",
+                ],
+              },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
+          ],
         },
         {
           title: "Vrksasna",
           thumbnail: yogaVrksasna,
           desc: "Vrksasana embodies the essence of balance and rootlessness in yoga. This graceful and standing posture cultivates stability, concentration, and a profound connection with nature.",
           slug: "/activities/yoga/vrksasna",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Vrksasna",
+                desc: "Vrksasna, also known as Tree Pose, is a popular yoga asana that offers numerous physical and mental benefits. This pose is named after the shape that your body creates when practicing it, resembling a tree with its roots extending into the ground and its branches reaching up toward the sky. In this blog, we will explore the many benefits of Vrksasana, how to practice the pose, and precautions to keep in mind.",
+                image: vrkasanaHeader,
+                var: "There are several variations of Vrksasana that you can try depending on your skill level and flexibility. Here are a few:",
+              },
+            },
+            {
+              component: RightImage,
+              data: {
+                title: "Half Lotus Tree Pose: ",
+                desc: "This variation is a deeper stretch for the hips and requires more flexibility. Start in Vrksasana, then bring your right foot onto your left thigh in Half Lotus Pose.",
+                image: vrkasanaVariation1,
+              },
+            },
+            {
+              component: LeftImage,
+              data: {
+                title: "Revolved Tree Pose: ",
+                desc: "This variation is a more profound twist that requires more flexibility. Start in Vrksasana, then bring your hands to your heart and twist your torso towards your right knee.",
+                image: vrkasanaVariation2,
+              },
+            },
+            {
+              component: RightImage,
+              data: {
+                title: "One-Legged Mountain Pose: ",
+                desc: "This variation is a modified version of Vrksasana that is more accessible for beginners or those with limited flexibility. Lift one foot off the ground and balance on the other foot, keeping your hands at your heart center or extending them overhead.",
+                image: vrkasanaVariation2,
+              },
+            },
+            {
+              component: LeftVideoList,
+              data: {
+                title: "Steps for Vrkasana: ",
+                desc: "To practice Vrksasana, follow these steps: ",
+                videoUrl: "https://www.youtube.com/embed/cCEK6XrcUx0",
+                list: [
+                  {
+                    subtitle: "",
+                    desc: "Begin in Tadasana (Mountain Pose) at the front of your mat.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Shift your weight onto your left foot and lift your right foot off the ground",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Place the sole of your right foot onto the inside of your left thigh, as high up as possible. You can also place your foot on your left calf if it's challenging to balance.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Press your right foot into your left thigh or calf and your thigh or calf into your foot to create a stable foundation.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Bring your hands together at your heart center in Namaste mudra, or extend your arms overhead, keeping them parallel to the ground.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Gaze at a fixed point before you, keeping your neck aligned with your spine.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Hold the pose for several deep breaths, then release and repeat on the other side.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Benefits of Vrksasana: ",
+                desc: "Vrksasana offers many benefits for the body and mind, including",
+                list: [
+                  {
+                    subtitle: "Improves balance: ",
+                    desc: "This pose requires you to stand on one leg, which can help improve your balance and coordination.",
+                  },
+                  {
+                    subtitle: "Strengthens the legs: ",
+                    desc: "By pressing down through the standing foot and engaging the leg muscles, Vrksasana can help build strength in the legs",
+                  },
+                  {
+                    subtitle: "Stretches the hips and groin: ",
+                    desc: "This pose can help extend the muscles in the hips and groin, promoting flexibility and mobility.",
+                  },
+                  {
+                    subtitle: "Improves posture: ",
+                    desc: "By standing tall and rooting down through the feet, Vrksasana can help improve your posture and alignment.",
+                  },
+                  {
+                    subtitle: "Calms the mind: ",
+                    desc: "Practicing Vrksasana can help calm the mind and reduce stress and anxiety.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList,
+              data: {
+                desc: "While Vrksasana is a safe and beneficial pose for most people, remember a few precautions: ",
+                info: "Vrksasana is a beautiful and empowering pose that can benefit the body and mind. Practicing this pose regularly can improve your balance, strength, flexibility, and posture while reducing stress and anxiety. Remember to start slowly and take precautions if you have any injuries or medical conditions. Consistent practice and patience can deepen your understanding of this pose and help you enjoy its many benefits.",
+                list: [
+                  "Avoid this pose if you have a knee or ankle injury.",
+                  "If you have low blood pressure, avoid holding the pose for too long or come out of the carriage if you feel dizzy or lightheaded.",
+                  "Refrain from overstretching these areas if you have tight hips or groin muscles.",
+                  "Always listen to your body, and don't push yourself beyond your limits. Remember that yoga is about finding a balance between effort and ease and never forcing your body into a pose that feels uncomfortable or painful.",
+                ],
+              },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
+          ],
         },
         {
           title: "Ustrasana",
           thumbnail: yogaUstrasana,
           desc: "Ustrasana opens the heart center and stimulates the entire front body, offering a profound stretch and release. This bring a sense of liberation & vulnerability, to embrace courage. ",
           slug: "/activities/yoga/ustrasana",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Ustrasana",
+                desc: "Ustrasana, also known as Camel Pose, is a popular yoga posture practiced by many enthusiasts worldwide. It is a backbend asana named after the Sanskrit word 'ustra,' which means camel, and 'asana,' which means posture. The pose resembles the shape of a camel, hence the name. The Ustrasana posture stretches the entire front of the body, particularly the chest, abdomen, and quadriceps. This posture is beneficial in opening up the heart and increasing lung capacity, which can help alleviate respiratory problems. It also helps to strengthen the back muscles, shoulders, and neck.",
+                image: ustrasanaHeader,
+                var: "",
+              },
+            },
+          ],
         },
         {
           title: "Matsyasana",

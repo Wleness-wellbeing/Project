@@ -51,12 +51,32 @@ import yogaTrikonasana from "./images/activities/yoga/yoga-trikonasana.png";
 import yogaUstrasana from "./images/activities/yoga/yoga-ustrasana.png";
 import yogaVirbhadrasana from "./images/activities/yoga/yoga-virbhadrasana.png";
 import yogaVrksasna from "./images/activities/yoga/yoga-vrksasna.png";
-// Activities >> Yoga >> adhomukha
+// Activities >> Yoga >> Adhomukha
 import adhvmukhaHeader from "./images/activities/yoga/adhomukha/adhv-mukha-header.png";
 import adhvmukhaSteps from "./images/activities/yoga/adhomukha/steps-of-adhv-mukha-yoga.png";
 import adhvVariationOne from "./images/activities/yoga/adhomukha/variation-1.png";
 import adhvVariationTwo from "./images/activities/yoga/adhomukha/variation-2.png";
 import adhvVariationThree from "./images/activities/yoga/adhomukha/variation-3.png";
+// Activities >> Yoga >> Virabhadrasana
+import virabhadrasanaHeader from "./images/activities/yoga/virabhadrasana/virabhadrasana-header.png";
+import virabhadrasanaVariation1 from "./images/activities/yoga/virabhadrasana/variation-1.png";
+import virabhadrasanaVariation2 from "./images/activities/yoga/virabhadrasana/variation-2.png";
+import virabhadrasanaVariation3 from "./images/activities/yoga/virabhadrasana/variation-3.png";
+// Activities >> Yoga >> Trikonasana
+import trikonasanaHeader from "./images/activities/yoga/trikonasana/trikonasana-header.png";
+import trikonasanaVariation1 from "./images/activities/yoga/trikonasana/trikonasana-variation-1.png";
+import trikonasanaVariation2 from "./images/activities/yoga/trikonasana/trikonasana-variation-2.png";
+import trikonasanaVariation3 from "./images/activities/yoga/trikonasana/trikonasana-variation-3.png";
+// Activities >> Yoga >> Vrkasana
+import vrkasanaHeader from "./images/activities/yoga/vrkasana/vrkasana-header.png";
+import vrkasanaVariation1 from "./images/activities/yoga/vrkasana/vrkasana-variation-1.png";
+import vrkasanaVariation2 from "./images/activities/yoga/vrkasana/vrkasana-variation-2.png";
+// Activities >> Yoga >> Other Categories Header
+import matsyasanaHeader from "./images/activities/yoga/others/matsyasana-header.png";
+import sarvangasanaHeader from "./images/activities/yoga/others/sarvangasana-header.png";
+import setuBandhasanaHeader from "./images/activities/yoga/others/setu-bandhasana-header.png";
+import ustrasanaHeader from "./images/activities/yoga/others/ustrasana-header.png";
+import sirsasanaHeader from "./images/activities/yoga/others/sirsasana-header.png";
 // Activities >> Sadhna
 import sadhnaHeader from "./images/activities/sadhna/sadhna-header.png";
 import sadhnaBhakti from "./images/activities/sadhna/bhakti-sadhna.png";
@@ -73,15 +93,7 @@ import brainExerciseHeader from "./images/activities/brainExercise/brain-exercis
 import brainGameGalaxy from "./images/activities/brainExercise/brain-game-galaxy.png";
 import brainGameTreasure from "./images/activities/brainExercise/brain-game-treasure-chest.png";
 import brainGameHunter from "./images/activities/brainExercise/brain-game-turtle-hunter.png";
-
-// Join us
-import Elipse1 from "./images/joinus/Ellipse 1150.png";
-import Elipse2 from "./images/joinus/Ellipse 1151.png";
-import Elipse3 from "./images/joinus/Ellipse 1152.png";
-
-export { Elipse1, Elipse2, Elipse3 };
-
-// Others
+// Activities >> Others
 import benefits from "./images/activities/yoga/others/benefits.png";
 import precautions from "./images/activities/yoga/others/precautions.png";
 export {
@@ -134,7 +146,30 @@ export {
   brainGameGalaxy,
   brainGameTreasure,
   brainGameHunter,
+  virabhadrasanaHeader,
+  virabhadrasanaVariation1,
+  virabhadrasanaVariation2,
+  virabhadrasanaVariation3,
+  trikonasanaHeader,
+  trikonasanaVariation1,
+  trikonasanaVariation2,
+  trikonasanaVariation3,
+  vrkasanaHeader,
+  vrkasanaVariation1,
+  vrkasanaVariation2,
+  matsyasanaHeader,
+  sarvangasanaHeader,
+  setuBandhasanaHeader,
+  ustrasanaHeader,
+  sirsasanaHeader,
 };
+
+// Join us
+import Elipse1 from "./images/joinus/Ellipse 1150.png";
+import Elipse2 from "./images/joinus/Ellipse 1151.png";
+import Elipse3 from "./images/joinus/Ellipse 1152.png";
+
+export { Elipse1, Elipse2, Elipse3 };
 
 // Feature Icons
 import feature1 from "./images/features/feature-1.png";
