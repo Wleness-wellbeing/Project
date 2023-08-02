@@ -20,7 +20,7 @@ import MusicalTherapy from "./pages/Services/MusicalTherapy";
 import Avatar from "./components/layout/Avatar";
 import ActivitySubPageLayout from "./pages/Activities/ActivitySubPageLayout";
 // Data
-import { activities } from "./data";
+import { activities, brainExercise } from "./data";
 import TherapistJoiningForm from "./components/TherapistJoiningForm.jsx";
 import PsychiatristJoiningForm from "./components/PsychiatristJoiningForm";
 
@@ -89,15 +89,6 @@ function App() {
             </Layout>
           }
         />
-
-        <Route
-          path="/services"
-          element={
-            <Layout>
-              <Services />
-            </Layout>
-          }
-        />
         <Route
           path="/services/couples-therapy"
           element={
@@ -156,7 +147,7 @@ function App() {
           );
         })} */}
         <Route
-          path="/brain-exercise"
+          path={brainExercise.slug}
           element={
             <Layout>
               <BrainExercise />

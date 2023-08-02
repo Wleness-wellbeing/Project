@@ -10,6 +10,7 @@ import {
   activitiesExplore2,
   activitiesExplore3,
 } from "../../assets";
+import { Link } from "react-router-dom";
 
 function Activities() {
   return (
@@ -34,38 +35,50 @@ function Activities() {
       {/* Sliders Section */}
       <section className="hidden container mx-auto md:flex h-44 lg:h-64 xl:h-80 my-20 relative">
         <div className="w-44 lg:w-64 xl:w-80 absolute left-5 top-0 drop-shadow-xl hover:z-20 hover:scale-105 transition-all">
-          <h2 className="text-xl font-semibold text-[#bbaef8]">Meditation</h2>
-          <div className="cursor-pointer w-full flex justify-center items-center bg-gradient-to-r from-[#D2C9FE] to-[#D9BFFF] h-44 lg:h-64 xl:h-72  rounded-3xl">
-            <img src={meditation} className="m-auto w-24 lg:w-36" />
-          </div>
+          <Link to="/activities/meditation">
+            <h2 className="text-xl font-semibold text-[#bbaef8]">Meditation</h2>
+            <div className="cursor-pointer w-full flex justify-center items-center bg-gradient-to-r from-[#D2C9FE] to-[#D9BFFF] h-44 lg:h-64 xl:h-72  rounded-3xl">
+              <img src={meditation} className="m-auto w-24 lg:w-36" />
+            </div>
+          </Link>
         </div>
         <div className="w-44 lg:w-64 xl:w-80 absolute left-[125px] lg:left-[177px] xl:left-[205px] z-10 hover:z-20 top-0 drop-shadow-xl hover:scale-105 transition-all">
-          <h2 className="text-xl font-semibold text-[#90d244] pl-8">Yoga</h2>
-          <div className="cursor-pointer w-full flex bg-gradient-to-r from-[#E5FDCA] to-[#A7ECF7] h-44 lg:h-64 xl:h-72 rounded-3xl">
-            <img src={yoga} className="m-auto w-24 lg:w-36" />
-          </div>
+          <Link to="/activities/yoga">
+            <h2 className="text-xl font-semibold text-[#90d244] pl-8">Yoga</h2>
+            <div className="cursor-pointer w-full flex bg-gradient-to-r from-[#E5FDCA] to-[#A7ECF7] h-44 lg:h-64 xl:h-72 rounded-3xl">
+              <img src={yoga} className="m-auto w-24 lg:w-36" />
+            </div>
+          </Link>
         </div>
         <div className="absolute w-44 lg:w-64 xl:w-80 left-[230px] lg:left-[334px] xl:left-[390px] z-10 top-0 drop-shadow-xl  hover:z-20 hover:scale-105 transition-all">
-          <h2 className="text-xl font-semibold text-[#f0b4c4] pl-8">Sadhna</h2>
-          <div className="cursor-pointer w-full flex bg-gradient-to-r from-[#F8D2DC] to-[#D1F1F8] h-44 lg:h-64 xl:h-72 rounded-3xl">
-            <img src={sadhna} className="m-auto w-24  lg:w-36" />
-          </div>
+          <Link to="/activities/sadhna">
+            <h2 className="text-xl font-semibold text-[#f0b4c4] pl-8">
+              Sadhna
+            </h2>
+            <div className="cursor-pointer w-full flex bg-gradient-to-r from-[#F8D2DC] to-[#D1F1F8] h-44 lg:h-64 xl:h-72 rounded-3xl">
+              <img src={sadhna} className="m-auto w-24  lg:w-36" />
+            </div>
+          </Link>
         </div>
         <div className="absolute w-44 lg:w-64 xl:w-80 left-[335px] lg:left-[491px] xl:left-[575px] z-10 top-0 drop-shadow-xl hover:z-20 hover:scale-105 transition-all">
-          <h2 className="text-xl font-semibold text-[#f2ceae] pl-8">
-            Goal Plan
-          </h2>
-          <div className="cursor-pointer w-full flex bg-gradient-to-r from-[#FBDFC6] to-[#FED1D2] h-44 lg:h-64 xl:h-72  rounded-3xl">
-            <img src={goalPlan} className="m-auto  w-24 lg:w-36" />
-          </div>
+          <Link to="/activities/goal-plan">
+            <h2 className="text-xl font-semibold text-[#f2ceae] pl-8">
+              Goal Plan
+            </h2>
+            <div className="cursor-pointer w-full flex bg-gradient-to-r from-[#FBDFC6] to-[#FED1D2] h-44 lg:h-64 xl:h-72  rounded-3xl">
+              <img src={goalPlan} className="m-auto  w-24 lg:w-36" />
+            </div>
+          </Link>
         </div>
         <div className="absolute w-44 lg:w-64 xl:w-80 left-[440px] lg:left-[648px] xl:left-[760px] z-10 top-0 drop-shadow-xl hover:z-20 hover:scale-105 transition-all">
-          <h2 className="text-xl font-semibold text-[#9fe3f3] pl-8">
-            Brain Exercise
-          </h2>
-          <div className="cursor-pointer w-full flex bg-gradient-to-r from-[#CFF4FC] to-[#F9E6F5] h-44 lg:h-64 xl:h-72  rounded-3xl">
-            <img src={brainExercise} className="m-auto w-24  lg:w-36" />
-          </div>
+          <Link to="/activities/brain-exercise">
+            <h2 className="text-xl font-semibold text-[#9fe3f3] pl-8">
+              Brain Exercise
+            </h2>
+            <div className="cursor-pointer w-full flex bg-gradient-to-r from-[#CFF4FC] to-[#F9E6F5] h-44 lg:h-64 xl:h-72  rounded-3xl">
+              <img src={brainExercise} className="m-auto w-24  lg:w-36" />
+            </div>
+          </Link>
         </div>
       </section>
 
@@ -81,9 +94,9 @@ function Activities() {
               view of mental health, considering biological, psychological, and
               social factors that may impact an individual's well-being.
             </p>
-            <a href="#" className="btn-one">
-              Explore
-            </a>
+            <Link to="/activities/yoga" className="btn-one">
+              Explore Your Body
+            </Link>
           </figcaption>
           <div className="order-1 lg:order-2 lg:w-[45%] lg:ml-14 mb-5">
             <img
@@ -111,9 +124,9 @@ function Activities() {
               meet the individual needs of each client, ensuring personalized
               and effective care.
             </p>
-            <a href="#" className="btn-one">
-              Explore
-            </a>
+            <Link to="/activities/meditation" className="btn-one">
+              Explore Your Body
+            </Link>
           </figcaption>
         </figure>
         <figure className="flex flex-col lg:flex-row items-center mb-12 lg:mb-2">
@@ -129,9 +142,9 @@ function Activities() {
               shine. Remember, you deserve it! Treat yourself to self-care
               today.
             </p>
-            <a href="#" className="btn-one">
+            <Link to="" className="btn-one">
               Explore
-            </a>
+            </Link>
           </figcaption>
           <div className="order-1 lg:order-2 lg:w-[45%] lg:ml-14 mb-5">
             <img

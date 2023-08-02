@@ -5,7 +5,7 @@ import { faAngleDown, faBars } from "@fortawesome/free-solid-svg-icons";
 import JoinUs from "../JoinUs";
 // Data
 import { logo } from "../../assets";
-import { activities } from "../../data";
+import { activities, brainExercise } from "../../data";
 
 function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -47,9 +47,9 @@ function Navbar() {
             </Link>
           </li>
           <li className="group relative inline-block">
-            <Link to="/services" className="menu-link">
+            <span to="/services" className="menu-link cursor-pointer">
               Services <FontAwesomeIcon icon={faAngleDown} />
-            </Link>
+            </span>
 
             {/* Submenu */}
             <ul className="absolute hidden w-60 z-10 rounded-xl border-[1px] border-slate-100 bg-white px-6 py-4 shadow-md group-hover:block">
@@ -108,39 +108,6 @@ function Navbar() {
               Experts
             </Link>
           </li>
-          <li className="group relative inline-block">
-            <Link to="/issues" className="menu-link">
-              Issues <FontAwesomeIcon icon={faAngleDown} />
-            </Link>
-            {/* Submenu */}
-            <ul className="absolute hidden z-20 w-60 rounded-xl border-[1px] border-slate-100 bg-white px-6 py-4 shadow-md group-hover:block">
-              <li>
-                <Link to="/depression" className="menu-link inline-block py-2">
-                  Depression
-                </Link>
-              </li>
-              <li>
-                <Link to="/anxiety" className="menu-link inline-block py-2">
-                  Anxiety
-                </Link>
-              </li>
-              <li>
-                <Link to="/adult-adhd" className="menu-link inline-block py-2">
-                  Adult ADHD
-                </Link>
-              </li>
-              <li>
-                <Link to="/stress" className="menu-link inline-block py-2">
-                  Stress
-                </Link>
-              </li>
-              <li>
-                <Link to="/feeling-low" className="menu-link inline-block py-2">
-                  Feeling Low
-                </Link>
-              </li>
-            </ul>
-          </li>
           <li>
             <Link to="/internship" className="menu-link">
               Internship
@@ -155,10 +122,10 @@ function Navbar() {
               {activitiesMenu}
               <li>
                 <Link
-                  to="/brain-exercise"
+                  to={brainExercise.slug}
                   className="menu-link inline-block py-2"
                 >
-                  Brain Exercise
+                  {brainExercise.name}
                 </Link>
               </li>
             </ul>
@@ -166,6 +133,11 @@ function Navbar() {
           <li>
             <Link to="/blogs" className="menu-link">
               Blogs
+            </Link>
+          </li>
+          <li>
+            <Link to="/corporate" className="menu-link">
+              Corporate
             </Link>
           </li>
         </ul>
