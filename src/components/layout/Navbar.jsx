@@ -8,8 +8,15 @@ import { logo } from "../../assets";
 import { activities } from "../../data";
 
 function Navbar() {
-  // Activities Submenu
-  const [isJoinUsOpen, setJoinUsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   const activitiesMenu = activities.map((value, index) => {
     return (
@@ -166,7 +173,7 @@ function Navbar() {
         {/* Authentication */}
         <div className="hidden xl:flex xl:items-center">
           <button
-            onClick={() => setJoinUsOpen(true)}
+            onClick={handleOpenModal}
             className="menu-link mr-2 text-primary-400 !font-bold border-2 px-4 border-primary-400 hover:bg-primary-400 hover:text-white transition-all !py-1.5 rounded-full"
           >
             Join Us
@@ -184,7 +191,7 @@ function Navbar() {
           <FontAwesomeIcon icon={faBars} className="text-3xl" />
         </button>
       </nav>
-      <JoinUs isOpen={isJoinUsOpen} onClose={() => setJoinUsOpen(false)} />
+      <JoinUs isOpen={isModalOpen} onClose={handleCloseModal} />
     </>
   );
 }

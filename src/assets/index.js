@@ -426,5 +426,32 @@ export {
 // Assessment Images
 import assessment1 from "./images/assessment/assessment-welcome-1.png";
 import assessment2 from "./images/assessment/assessment-welcome-2.png";
+import assessmentIconAdhd from "./images/assessment/icon-adhd.png";
+import assessmentIconAnger from "./images/assessment/icon-anger.png";
+import assessmentIconAnxiety from "./images/assessment/icon-anxiety.png";
+import assessmentIconBiopolarDisorder from "./images/assessment/icon-biopolar-disorder.png";
+import assessmentIconDepression from "./images/assessment/icon-depression.png";
+import assessmentIconEatingDisorder from "./images/assessment/icon-eating-disorder.png";
+import assessmentIconLgbt from "./images/assessment/icon-lgbt.png";
+import assessmentIconOcd from "./images/assessment/icon-ocd.png";
+import assessmentIconOdd from "./images/assessment/icon-odd.png";
+import assessmentIconPanicAttacks from "./images/assessment/icon-panic-attacks.png";
+import assessmentIconRelationship from "./images/assessment/icon-relationship.png";
+import assessmentIconStress from "./images/assessment/icon-stress.png";
 
-export { assessment1, assessment2 };
+export {
+  assessment1,
+  assessment2,
+  assessmentIconAnxiety,
+  assessmentIconAdhd,
+  assessmentIconAnger,
+  assessmentIconBiopolarDisorder,
+  assessmentIconDepression,
+  assessmentIconLgbt,
+  assessmentIconOcd,
+  assessmentIconOdd,
+  assessmentIconRelationship,
+  assessmentIconStress,
+  assessmentIconEatingDisorder,
+  assessmentIconPanicAttacks,
+};

@@ -1,0 +1,12 @@
+import React from "react";
+
+export default function AssessmentOption(props) {
+  return (
+    <div className="bg-gradient-to-r from-secondary to-tertiary rounded-lg flex items-stretch p-[3px] box-border group">
+      <button className="flex items-center px-5 py-2.5  hover:text-white font-semibold bg-white rounded-md hover:bg-primary-300">
+        <img src={props.image} alt="" className="w-6 object-contain mr-2" />
+        {props.name}
+      </button>
+    </div>
+  );
+}
