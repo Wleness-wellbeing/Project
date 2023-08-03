@@ -50,7 +50,7 @@ export default function Avatar() {
       </div>
       <div className="pt-4 ">
         <input
-          className="border border-slate-400 border-2 rounded-lg h-12 w-full px-4"
+          className="border-slate-400 border-2 rounded-lg h-12 w-full px-4"
           type="text"
           placeholder="Create Username"
         />

@@ -1,13 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// Data
+import { activities, brainExercise } from "./data";
 // Components
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import PatientSignup from "./pages/Authentication/PatientSignup";
 import DoctorSignup from "./pages/Authentication/DoctorSignup";
+import TherapistJoiningForm from "./components/TherapistJoiningForm.jsx";
+import PsychiatristJoiningForm from "./components/PsychiatristJoiningForm";
 // Pages
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
-import Services from "./pages/Services";
 import Experts from "./pages/Experts";
 import Issues from "./pages/Issues";
 import Internship from "./pages/Internship";
@@ -19,10 +22,7 @@ import CouplesTherapy from "./pages/Services/CouplesTherapy";
 import MusicalTherapy from "./pages/Services/MusicalTherapy";
 import Avatar from "./components/layout/Avatar";
 import ActivitySubPageLayout from "./pages/Activities/ActivitySubPageLayout";
-// Data
-import { activities, brainExercise } from "./data";
-import TherapistJoiningForm from "./components/TherapistJoiningForm.jsx";
-import PsychiatristJoiningForm from "./components/PsychiatristJoiningForm";
+import CampusAmbassador from "./pages/CampusAmbassador";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -179,6 +179,14 @@ function App() {
           }
         />
         <Route
+          path="/join-campus-ambassador"
+          element={
+            <Layout>
+              <CampusAmbassador />
+            </Layout>
+          }
+        />
+        <Route
           path="/join-therapist"
           element={
             <SignupLayout>
@@ -186,7 +194,6 @@ function App() {
             </SignupLayout>
           }
         />
-
         <Route
           path="/join-psychiatrist"
           element={

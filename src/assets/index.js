@@ -99,8 +99,42 @@ import Elipse1 from "./images/joinus/Ellipse 1150.png";
 import Elipse2 from "./images/joinus/Ellipse 1151.png";
 import Elipse3 from "./images/joinus/Ellipse 1152.png";
 import Bubble from "./images/joinus/Bubble.png";
+// Campus Ambassador
+import campusAmbassadorHeader from "./images/joinus/campusAmbassador/campus-ambassador-header.png";
+import campusAmbassadorTeam from "./images/joinus/campusAmbassador/campus-ambassador.png";
+import roleCampus from "./images/joinus/campusAmbassador/role-campus.png";
+import roleProgram from "./images/joinus/campusAmbassador/role-program.png";
+import roleSMM from "./images/joinus/campusAmbassador/role-social-media-marketing.png";
+import roleSpreadAwareness from "./images/joinus/campusAmbassador/role-spread-awareness.png";
+import campusWhyToApply from "./images/joinus/campusAmbassador/why-to-apply.png";
+import dots1 from "./images/joinus/campusAmbassador/dots-1.png";
+import dots2 from "./images/joinus/campusAmbassador/dots-2.png";
+import cloudWithDots from "./images/joinus/campusAmbassador/cloud-with-dots.png";
+import dottedLinesSmall from "./images/joinus/campusAmbassador/dotted-line-sm.png";
+import dottedLinesLarge from "./images/joinus/campusAmbassador/dotted-line-lg.png";
+import dottedPlane from "./images/joinus/campusAmbassador/dotted-plane.png";
+import bgCircles from "./images/joinus/campusAmbassador/bg-circles.png";
 
-export { Elipse1, Elipse2, Elipse3, Bubble };
+export {
+  Elipse1,
+  Elipse2,
+  Elipse3,
+  Bubble,
+  campusAmbassadorHeader,
+  campusAmbassadorTeam,
+  roleCampus,
+  roleProgram,
+  roleSMM,
+  roleSpreadAwareness,
+  dots1,
+  dots2,
+  cloudWithDots,
+  campusWhyToApply,
+  dottedLinesSmall,
+  dottedLinesLarge,
+  dottedPlane,
+  bgCircles,
+};
 
 // Others
 import benefits from "./images/activities/yoga/others/benefits.png";

@@ -42,7 +42,7 @@ function JoinUs({ isOpen, onClose }) {
             {joinUsList.map((value, index) => {
               return (
                 <figure key={index}>
-                  <Link to={value.slug}>
+                  <Link to={value.slug} onClick={onClose}>
                     <img
                       src={value.image}
                       alt={value.name}
