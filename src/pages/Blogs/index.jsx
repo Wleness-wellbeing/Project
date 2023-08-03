@@ -85,7 +85,7 @@ export default function Blogs() {
         </ul>
 
         {/* =========Maintain A good habit ======= */}
-        <div className="2xl:flex border-4 rounded-xl shadow-primary-100 items-center  sm:grid xs:grid">
+        <div className="2xl:flex rounded-xl  items-center  sm:grid xs:grid">
           <div>
             <img src={blogRecent} className="w-full object-cover"></img>
           </div>
@@ -172,7 +172,7 @@ export default function Blogs() {
               value,
               index // Don't forget to adgrid 'index' to the map function
             ) => (
-              <div key={index} className="flex flex-col p-2 shadow-2xl">
+              <div key={index} className="flex flex-col p-2 ">
                 <img src={value.image} className="w-full" alt="..." />
                 <div className="para">
                   <h5 className="text-lg text-black font-black tracking-widest mb-2 uppercase">
