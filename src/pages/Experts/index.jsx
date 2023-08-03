@@ -196,11 +196,11 @@ function Experts() {
         </div>
       </section>
       {/* ========== Appoinment ========== */}
-      <section className="container mx-auto bg-primary-50/30 rounded-2xl p-8 lg:p-14 mb-2">
+      <section className="container mx-auto bg-primary-50/30 rounded-2xl p-8 lg:p-14 mb-12">
         <h2 className="subheading text-center mb-2">
           Book an <span className="heading-primary">appointment</span> now
         </h2>
-        <p className="font-medium text-justify lg:text-lg mb-6">
+        <p className="font-medium text-center lg:text-lg mb-6">
           We are excited to embark on this wellness journey with you and are
           committed to providing you with the highest quality of care and
           support. Your health and well-being are our top priorities, and we
@@ -210,7 +210,9 @@ function Experts() {
           <button className="btn-one">Make an appointment</button>
         </div>
       </section>
-      {/* <HappyClient client={doctorsPageClient} /> */}
+
+      {/* Our Clients */}
+      <HappyClient data={doctorsPageClient} />
     </>
   );
 }
