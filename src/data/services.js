@@ -12,13 +12,29 @@ import {
   musicalTherapy4,
   musicalTherapy5,
   musicalTherapy6,
+  feature4,
+  feature6,
 } from "../assets";
 
 // Services Page Features Blocks
 export const servicesFeatures = [
   {
-    name: "Express Love",
+    name: "Express Music",
     image: feature7,
+  },
+  {
+    name: "Inner Peace",
+    image: feature5,
+  },
+  {
+    name: "Emotional Support",
+    image: feature8,
+  },
+];
+export const couplesTherapyFeatures = [
+  {
+    name: "Express Love",
+    image: feature4,
   },
   {
     name: "Feel Alive",
@@ -26,6 +42,20 @@ export const servicesFeatures = [
   },
   {
     name: "Reclaim Affection",
+    image: feature6,
+  },
+];
+export const musicalTherapyFeatures = [
+  {
+    name: "Express Music",
+    image: feature7,
+  },
+  {
+    name: "Inner Peace",
+    image: feature5,
+  },
+  {
+    name: "Emotional Support",
     image: feature8,
   },
 ];
@@ -191,4 +221,9 @@ export const MusicalTherapyData = {
       desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
     },
   ],
+};
+
+export const TherapyData = {
+  name: "Therapy",
+  slug: "/therapy",
 };

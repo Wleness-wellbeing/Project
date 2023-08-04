@@ -1,4 +1,4 @@
-import { happyClient1, happyClient2 } from "../assets";
+import { happyClient1, happyClient2, happyClient4 } from "../assets";
 
 export const doctorsPageClient = {
   heading: [
@@ -64,4 +64,26 @@ export const musicalTherapyClient = {
   image: happyClient2,
   review:
     "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
+};
+
+export const internshipClients = {
+  heading: [
+    {
+      color: false,
+      text: "What Our ",
+    },
+    {
+      color: true,
+      text: "Happy Clients ",
+    },
+    {
+      color: false,
+      text: "Say",
+    },
+  ],
+  name: "Leena Paxton",
+  profession: "UI/UX Designer",
+  image: happyClient4,
+  review:
+    "Wleness provided an exceptional internship experience that exceeded my expectations. The supportive team, meaningful projects, and commitment to personal development made it a transformative journey for my career growth. Highly recommend!",
 };

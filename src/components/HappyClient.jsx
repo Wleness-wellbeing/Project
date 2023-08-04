@@ -1,15 +1,16 @@
 import React from "react";
 // Data
 import { textColorize } from "../utils";
+import { doodle2 } from "../assets";
 
 export default function HappyClient(props) {
   return (
-    <section className="container mx-auto py-6 lg:py-10">
+    <section className="py-6 lg:py-10 relative">
       <h2 className="subheading text-center">
         {textColorize(props.data.heading)}
       </h2>
-      <div className="py-2 lg:py-4">
-        <div className="container mx-auto relative lg:!pr-0 pb-4 lg:pb-0">
+      <div className="container mx-auto py-2 lg:py-4">
+        <div className="relative lg:!pr-0 pb-4 lg:pb-0">
           {/* Testimonials */}
           <figure className="lg:flex items-center">
             <div className="lg:w-2/5 p-4 flex justify-center items-center">
@@ -38,6 +39,16 @@ export default function HappyClient(props) {
           <span className="w-3 h-3 block rounded-full bg-slate-500" />
         </div>
       </div>
+      <img
+        src={doodle2}
+        alt=""
+        className="absolute right-0 top-0 w-20 object-cover xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80 -scale-x-[1] opacity-20 -z-10"
+      />
+      <img
+        src={doodle2}
+        alt=""
+        className="absolute bottom-0 left-0 w-20 object-cover xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80 opacity-20 -z-10"
+      />
     </section>
   );
 }

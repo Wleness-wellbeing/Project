@@ -398,7 +398,6 @@ import internshipIcon2 from "./images/internship/internship-icon-2.png";
 import internshipIcon3 from "./images/internship/internship-icon-3.png";
 import internshipIcon4 from "./images/internship/internship-icon-4.png";
 import internshipIcon5 from "./images/internship/internship-icon-5.png";
-import internshipTestimonial from "./images/internship/internship-testimonial-1.png";
 import internshipWhy from "./images/internship/internship-why.png";
 export {
   internshipHeader,
@@ -407,26 +406,16 @@ export {
   internshipIcon3,
   internshipIcon4,
   internshipIcon5,
-  internshipTestimonial,
   internshipWhy,
 };
-
-// Other Images
-import doctorLogin from "./images/doctor-login.png";
-import doctorSignup from "./images/doctor-signup.png";
-import login from "./images/login.png";
-import logo from "./images/logo.png";
-import rightBar from "./images/right-bar.jpg";
-import signup from "./images/signup.png";
-
-export { doctorLogin, doctorSignup, login, logo, rightBar, signup };
 
 // Clients and Testimonials Image
 import happyClient1 from "./images/clients/happy-client-1.png";
 import happyClient2 from "./images/clients/happy-client-2.png";
 import happyClient3 from "./images/clients/happy-client-3.png";
+import happyClient4 from "./images/clients/happy-client-4.png";
 
-export { happyClient1, happyClient2, happyClient3 };
+export { happyClient1, happyClient2, happyClient3, happyClient4 };
 
 // FAQ's Section
 import faq1 from "./images/faqs/faq-1.png";
@@ -489,3 +478,14 @@ export {
   assessmentIconEatingDisorder,
   assessmentIconPanicAttacks,
 };
+
+// Other Images
+import doctorLogin from "./images/doctor-login.png";
+import doctorSignup from "./images/doctor-signup.png";
+import login from "./images/login.png";
+import logo from "./images/logo.png";
+import rightBar from "./images/right-bar.jpg";
+import signup from "./images/signup.png";
+import bubbles from "./images/bubbles.png";
+
+export { doctorLogin, doctorSignup, login, logo, rightBar, signup, bubbles };

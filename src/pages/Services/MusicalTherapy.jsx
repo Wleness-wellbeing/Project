@@ -2,7 +2,7 @@ import React from "react";
 // Data
 import { servicesFeatures, MusicalTherapyData } from "../../data/services";
 import { musicalTherapyClient } from "../../data/clients";
-import { musicalTherapyQna } from "../../data/faqs";
+import { musicalTherapyFaq } from "../../data/faqs";
 // Components
 import FeaturesBlock from "../../components/FeaturesBlock";
 import ActivityHeader from "../../components/ActivityHeader";
@@ -25,7 +25,7 @@ export default function MusicalTherapy() {
         types={MusicalTherapyData.activities.types}
       />
       <HappyClient data={musicalTherapyClient} />
-      <FaqWithImage data={musicalTherapyQna} />
+      <FaqWithImage data={musicalTherapyFaq} />
     </>
   );
 }

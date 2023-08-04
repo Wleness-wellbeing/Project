@@ -1,7 +1,6 @@
 import React from "react";
 // Data
 import {
-  doctor1,
   faceIcon,
   expertsHeader,
   expertsHeaderMobile,
@@ -11,6 +10,7 @@ import {
   expertsWhy1,
   expertsWhy2,
   expertsWhy3,
+  bubbles,
 } from "../../assets";
 import { doctorsPageClient } from "../../data/clients";
 import { expertDoctors } from "../../data/doctors";
@@ -55,7 +55,7 @@ function Experts() {
             </h1>
           </hgroup>
           <div className="lg:flex lg:space-x-3 space-y-3 lg:space-y-0">
-            <button className="btn-one !w-full border-2 border-primary-400 lg:!w-fit lg:px-6">
+            <button className="btn-one !w-full lg:!w-fit lg:px-6">
               Make an appointment
             </button>
             <button className="btn-one !bg-transparent border-2 !text-[#383838] !w-full !border-primary-300 lg:!w-fit">
@@ -95,9 +95,10 @@ function Experts() {
           </figcaption>
         </figure>
       </section>
+
       {/* ========== Why Us ========== */}
-      <section className="container mx-auto lg:pb-14 lg:!px-0 px-5">
-        <div className="mb-16 from-primary-50/30 to-transparent rounded-t-2xl bg-gradient-to-b pt-10">
+      <section className="lg:pb-14 lg:!px-0 px-5 relative overflow-x-hidden overflow-y-clip">
+        <div className="container mx-auto mb-16 from-primary-50/30 to-transparent rounded-t-2xl bg-gradient-to-b pt-10">
           <h1 className="subheading text-center mb-2">
             Why <span className="heading-primary">Wleness</span>
           </h1>
@@ -108,7 +109,7 @@ function Experts() {
           </p>
         </div>
         {/* Our Services */}
-        <div>
+        <div className="container mx-auto">
           <figure className="lg:flex items-center mb-12 lg:mb-2">
             <div className="lg:w-[45%] lg:mr-14 mb-5">
               <img
@@ -194,6 +195,13 @@ function Experts() {
             </figcaption>
           </figure>
         </div>
+
+        <img src={bubbles} alt="" className="absolute top-0 -right-96 -z-10" />
+        <img
+          src={bubbles}
+          alt=""
+          className="absolute top-[520px] -left-96 -z-10 -scale-x-100"
+        />
       </section>
       {/* ========== Appoinment ========== */}
       <section className="container mx-auto bg-primary-50/30 rounded-2xl p-8 lg:p-14 mb-12">

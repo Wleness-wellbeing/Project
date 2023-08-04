@@ -45,7 +45,29 @@ import {
   homeHyperTension,
   homeStress,
 } from "../../assets";
-import Assessment from "../../components/Assessment";
+
+const faqs = [
+  {
+    question: "What is Wleness?",
+    answer:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus tempore blanditiis, dolorem explicabo doloremque debitis aperiam! Exercitationem eaque, cumque accusamus impedit assumenda labore odit, sunt architecto quia, magnam ipsam voluptates?",
+  },
+  {
+    question: "What services does Wleness offer?",
+    answer:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus tempore blanditiis, dolorem explicabo doloremque debitis aperiam! Exercitationem eaque, cumque accusamus impedit assumenda labore odit, sunt architecto quia, magnam ipsam voluptates?",
+  },
+  {
+    question: "What makes Wleness different from others?",
+    answer:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus tempore blanditiis, dolorem explicabo doloremque debitis aperiam! Exercitationem eaque, cumque accusamus impedit assumenda labore odit, sunt architecto quia, magnam ipsam voluptates?",
+  },
+  {
+    question: "How can I benefit from using Wleness?",
+    answer:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus tempore blanditiis, dolorem explicabo doloremque debitis aperiam! Exercitationem eaque, cumque accusamus impedit assumenda labore odit, sunt architecto quia, magnam ipsam voluptates?",
+  },
+];
 
 function Home() {
   return (
@@ -72,10 +94,8 @@ function Home() {
               Partnering Your Well Being
             </h1>
           </hgroup>
-          <p className="mb-5 font-[600] lg:text-lg !leading-6 md:mb-10 text-base text-justify">
-            We fuse the powers of self-nurturing, expert guidance, and social
-            connectivity to offer you a mental health care experience that is
-            life.
+          <p className="mb-5 font-[600] lg:text-lg !leading-6 md:mb-10 text-base text-justify lg:w-80">
+            Nurturing mind, body and soul for a lasting fulfillment
           </p>
           <button className="btn-one !w-fit block mx-auto lg:mx-0">
             Schedule an appointment
@@ -90,7 +110,8 @@ function Home() {
           </h2>
           <p className="para">
             Discover engaging mental health resources, including articles,
-            videos, self-assessments, and interactive
+            videos, self-assessments, and interactive tools, to support your
+            journey towards better mental health.
           </p>
         </div>
         {/* Issues */}
@@ -134,7 +155,7 @@ function Home() {
             </div>
           </div>
           <div className="text-center">
-            <button className="btn-one">Get Started</button>
+            <button className="btn-one">Explore More</button>
           </div>
         </div>
       </section>
@@ -290,7 +311,7 @@ function Home() {
               <button className="btn-one">Join Us Now</button>
             </article>
             <div className="p-4 lg:px-10 lg:w-2/5">
-              <div className="">
+              <div>
                 <img src={community} alt="" className="w-full object-cover" />
               </div>
             </div>
@@ -300,12 +321,12 @@ function Home() {
         <img
           src={doodle2}
           alt=""
-          className="absolute right-0 top-0 w-20 object-cover xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80 -scale-x-[1] opacity-20"
+          className="absolute right-0 top-0 w-20 object-cover xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80 -scale-x-[1] opacity-20 -z-10"
         />
         <img
           src={doodle2}
           alt=""
-          className="absolute bottom-0 left-0 w-20 object-cover xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80 opacity-20"
+          className="absolute bottom-0 left-0 w-20 object-cover xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80 opacity-20 -z-10"
         />
       </section>
       {/* ========== Why Choose Us ========== */}
@@ -592,65 +613,25 @@ function Home() {
             Everything you need to know right here at Wleness. Ask questions and
             browse around for answers.
           </p>
-          <button className="btn-one">Goes to FAQ’s</button>
+          <button className="btn-one">Goes to FAQ's</button>
         </div>
         <div className="flex flex-col lg:w-1/2 gap-4">
-          <details className="bg-200/30 p-4 lg:p-6 rounded-lg cursor-pointer bg-[#52D0C2]">
-            <summary className="flex justify-between items-center">
-              <h3 className="text-lg font-bold flex justify-between items-center w-full">
-                <span>This is question</span> <FontAwesomeIcon icon={faPlus} />
-              </h3>
-            </summary>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Necessitatibus tempore blanditiis, dolorem explicabo doloremque
-              debitis aperiam! Exercitationem eaque, cumque accusamus impedit
-              assumenda labore odit, sunt architecto quia, magnam ipsam
-              voluptates?
-            </p>
-          </details>
-          <details className="bg-200/30 p-4 lg:p-6 rounded-lg cursor-pointer bg-[#52D0C2]">
-            <summary className="flex justify-between items-center">
-              <h3 className="text-lg font-bold flex justify-between items-center w-full">
-                <span>This is question</span> <FontAwesomeIcon icon={faPlus} />
-              </h3>
-            </summary>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Necessitatibus tempore blanditiis, dolorem explicabo doloremque
-              debitis aperiam! Exercitationem eaque, cumque accusamus impedit
-              assumenda labore odit, sunt architecto quia, magnam ipsam
-              voluptates?
-            </p>
-          </details>
-          <details className="bg-200/30 p-4 lg:p-6 rounded-lg cursor-pointer bg-[#52D0C2]">
-            <summary className="flex justify-between items-center">
-              <h3 className="text-lg font-bold flex justify-between items-center w-full">
-                <span>This is question</span> <FontAwesomeIcon icon={faPlus} />
-              </h3>
-            </summary>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Necessitatibus tempore blanditiis, dolorem explicabo doloremque
-              debitis aperiam! Exercitationem eaque, cumque accusamus impedit
-              assumenda labore odit, sunt architecto quia, magnam ipsam
-              voluptates?
-            </p>
-          </details>
-          <details className="bg-200/30 p-4 lg:p-6 rounded-lg cursor-pointer bg-[#52D0C2]">
-            <summary className="flex justify-between items-center">
-              <h3 className="text-lg font-bold flex justify-between items-center w-full">
-                <span>This is question</span> <FontAwesomeIcon icon={faPlus} />
-              </h3>
-            </summary>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Necessitatibus tempore blanditiis, dolorem explicabo doloremque
-              debitis aperiam! Exercitationem eaque, cumque accusamus impedit
-              assumenda labore odit, sunt architecto quia, magnam ipsam
-              voluptates?
-            </p>
-          </details>
+          {faqs.map((value, index) => {
+            return (
+              <details
+                key={index}
+                className="bg-200/30 p-4 lg:p-6 rounded-lg cursor-pointer bg-[#52D0C2]"
+              >
+                <summary className="flex justify-between items-center">
+                  <h3 className="text-lg font-bold flex justify-between items-center w-full">
+                    <span>{value.question} </span>
+                    <FontAwesomeIcon icon={faPlus} />
+                  </h3>
+                </summary>
+                <p className="font-medium">{value.answer}</p>
+              </details>
+            );
+          })}
         </div>
       </section>
 

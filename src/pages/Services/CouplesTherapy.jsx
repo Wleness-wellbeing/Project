@@ -1,9 +1,12 @@
 import React from "react";
 // Data
-import { servicesFeatures, couplesTherapyData } from "../../data/services";
+import {
+  couplesTherapyData,
+  couplesTherapyFeatures,
+} from "../../data/services";
 import { couplesTherapyDoctors } from "../../data/doctors";
 import { coupleTherapyClient } from "../../data/clients";
-import { servicesFaq } from "../../data/faqs";
+import { coupleTherapyFaq } from "../../data/faqs";
 import { textColorize } from "../../utils";
 import { couplesTherapy1, couplesTherapy2 } from "../../assets";
 // Components
@@ -21,7 +24,7 @@ function CouplesTherapy() {
         image={couplesTherapyData.header.image}
         desc={couplesTherapyData.header.desc}
       />
-      <FeaturesBlock data={servicesFeatures} />
+      <FeaturesBlock data={couplesTherapyFeatures} />
 
       {/* How Section  */}
       <section className="container mx-auto !px-0">
@@ -81,25 +84,23 @@ function CouplesTherapy() {
             <figcaption className="w-3/5 self-center">
               <div className="border-2 border-primary-50 px-6 py-3 rounded-2xl mr-20">
                 <h6 className="font-bold text-lg text-primary-400">
-                  Dedicated experts team:
+                  Accessibility:
                 </h6>
                 <p className="font-medium">
-                  With years of specialized training and a compassionate
-                  approach, our team of best counselors can guide you through
-                  challenges and help you build a stronger, more fulfilling
-                  connection.
+                  Get a one-to-one therapy session with the best therapist from
+                  the comfort of your home through video, calls or chats, to
+                  deal with your ongoing issues.
                 </p>
               </div>
               <div className=" bg-primary-50 shadow-lg px-6 py-3 rounded-2xl rounded-br-[4rem] ml-20 -mt-2">
                 <h6 className="font-bold text-lg text-primary-400">
-                  Tailored Approach:
+                  Safe and Non-Judgmental Space:
                 </h6>
                 <p className="font-medium">
-                  We understand that every couple is unique, and there is no
-                  one-size-fits-all solution. Our therapy sessions are
-                  customized to address your specific needs, concerns, and
-                  goals, ensuring you receive personalized support throughout
-                  your journey.
+                  Our therapy environment is a safe haven where you and your
+                  partner can express yourselves openly without fear of
+                  judgment. We foster a nurturing atmosphere, encouraging honest
+                  communication and emotional vulnerability.
                 </p>
               </div>
             </figcaption>
@@ -117,7 +118,7 @@ function CouplesTherapy() {
       {/* Doctors */}
       <DoctorSlider data={couplesTherapyDoctors} />
       <HappyClient data={coupleTherapyClient} />
-      <FaqWithImage data={servicesFaq} />
+      <FaqWithImage data={coupleTherapyFaq} />
     </>
   );
 }

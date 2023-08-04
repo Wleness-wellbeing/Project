@@ -21,7 +21,7 @@ export default function FaqWithImage(props) {
               return (
                 <details
                   key={index}
-                  className="bg-200/30 p-4 lg:p-6 rounded-lg cursor-pointer bg-[#52D0C2]"
+                  className="bg-200/30 p-4 lg:p-6 rounded-lg cursor-pointer bg-primary-50"
                 >
                   <summary className="flex justify-between items-center">
                     <h3 className="text-lg font-bold flex justify-between items-center w-full">

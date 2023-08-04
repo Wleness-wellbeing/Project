@@ -23,6 +23,8 @@ import MusicalTherapy from "./pages/Services/MusicalTherapy";
 import Avatar from "./components/layout/Avatar";
 import ActivitySubPageLayout from "./pages/Activities/ActivitySubPageLayout";
 import CampusAmbassador from "./pages/CampusAmbassador";
+import Psychiatrist from "./pages/Services/Psychiatrist";
+import Therapy from "./pages/Services/Therapy";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -86,6 +88,22 @@ function App() {
           element={
             <Layout>
               <Avatar />
+            </Layout>
+          }
+        />
+        <Route
+          path="/services/psychiatrist"
+          element={
+            <Layout>
+              <Psychiatrist />
+            </Layout>
+          }
+        />
+        <Route
+          path="/services/therapy"
+          element={
+            <Layout>
+              <Therapy />
             </Layout>
           }
         />

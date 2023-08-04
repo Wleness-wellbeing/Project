@@ -63,10 +63,10 @@ function Navbar() {
               </li>
               <li>
                 <Link
-                  to="/services/psychiatry"
+                  to="/services/psychiatrist"
                   className="menu-link inline-block py-2"
                 >
-                  Psychiatry
+                  Psychiatrist
                 </Link>
               </li>
               <li>

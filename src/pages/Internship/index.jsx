@@ -1,4 +1,5 @@
 import React from "react";
+// Data
 import {
   internshipHeader,
   internshipIcon1,
@@ -6,12 +7,42 @@ import {
   internshipIcon3,
   internshipIcon4,
   internshipIcon5,
-  internshipTestimonial,
   internshipWhy,
   iconCommitment,
   iconFacilities,
   iconExperience,
 } from "../../assets";
+import { internshipClients } from "../../data/clients";
+// Components
+import HappyClient from "../../components/HappyClient";
+
+const wlenessWork = [
+  {
+    image: internshipIcon1,
+    title: "Kill deadlines, not your mental health:",
+    desc: "Flexible timings for your Flexible creativity",
+  },
+  {
+    image: internshipIcon2,
+    title: "The perfect work life balance:",
+    desc: "We work as a family where your priority matters to us.",
+  },
+  {
+    image: internshipIcon3,
+    title: "We spread smiles, not stress:",
+    desc: "Unleash a perfect state of mind sans anxiety or stress.",
+  },
+  {
+    image: internshipIcon4,
+    title: "Break mental health barriers:",
+    desc: "well-being rules with wit, passion, and positive vibes!",
+  },
+  {
+    image: internshipIcon5,
+    title: "The perfect Work-Life balance:",
+    desc: "Conquer the stigma,spread love and compassion.",
+  },
+];
 
 export default function Index() {
   return (
@@ -109,108 +140,36 @@ export default function Index() {
         </section>
 
         {/* Want to know what is like to work at WLENESS */}
-        <div>
-          <h1 className="subheading heading-primary ">
+        <div className="mb-8">
+          <h1 className="subheading text-center heading-primary">
             Want to know what it's like to work at WLENESS
           </h1>
+
           <div className="grid mt-4 grid-cols-5 items-center gap-4">
-            {/* Icon-1 */}
-            <div className="h-74 items-center p-2 shadow-2xl h-full rounded-xl">
-              <img
-                src={internshipIcon1}
-                alt="Icon 1"
-                className="mx-auto py-4"
-              />
-              <h3 className="text-primary-400 font-bold">
-                Kill deadlines, not your mental health:
-              </h3>
-              <p className="font-semibold">
-                Flexible timings for your Flexible creativity
-              </p>
-            </div>
-
-            {/* Icon-2 */}
-            <div className="h-74 items-center p-2 shadow-2xl h-full rounded-xl">
-              <img
-                src={internshipIcon2}
-                alt="Icon 2"
-                className="mx-auto py-4"
-              />
-              <h3 className="text-primary-400 font-bold">
-                The perfect work-life balance:
-              </h3>
-              <p className="para">
-                We work as a family where your priority matters to us.
-              </p>
-            </div>
-
-            {/* Icon-3 */}
-            <div className="h-74 items-center p-2 shadow-2xl h-full rounded-xl">
-              <img src={internshipIcon3} alt="Icon 3" className="mx-auto" />
-              <h3 className="text-primary-400 font-bold">
-                We spread smiles, not stress:
-              </h3>
-              <p className="para">
-                Unleash a perfect state of mind sans anxiety or stress
-              </p>
-            </div>
-
-            {/* Icon-4 */}
-            <div className="h-74 items-center p-2 shadow-2xl h-full rounded-xl">
-              <img
-                src={internshipIcon4}
-                alt="Icon 4"
-                className="mx-auto py-5"
-              />
-              <h3 className="text-primary-400 font-bold">
-                Break mental health barriers:
-              </h3>
-              <p className="para">
-                Well-being rules with wit, passion, and positive vibes!
-              </p>
-            </div>
-
-            {/* Icon-5 */}
-            <div className="h-74 items-center p-2 shadow-2xl h-full rounded-xl">
-              <img src={internshipIcon5} alt="Icon 5" className="mx-auto" />
-              <h3 className="text-primary-400 font-bold">
-                The perfect Work-Life balance:
-              </h3>
-              <p className="para">
-                Conquer the stigma, spread love and compassion.
-              </p>
-            </div>
-          </div>
-
-          {/* Listen to their stories. */}
-          <div className="container  mx-auto py-6 ">
-            <h1 className="subheading heading-primary py-4 text-center">
-              Listen to their stories.
-            </h1>
-            <div className="flex items-center py-6 ">
-              <div className="w-2/5 ">
-                <img
-                  src={internshipTestimonial}
-                  className="w-full h-96 object-contain"
-                />
-              </div>
-
-              <div className="w-3/5  pr-0">
-                <h3 className="text-teal-400 font-bold text-2xl">
-                  Leena Paxton
-                </h3>
-                <h4>UI/UX Designer</h4>
-                <p className="para py-10">
-                  “Wleness provided an exceptional internship experience that
-                  exceeded my expectations. The supportive team, meaningful
-                  projects, and commitment to personal development made it a
-                  transformative journey for my career growth. Highly recommend!
-                </p>
-              </div>
-            </div>
+            {wlenessWork.map((value, index) => {
+              return (
+                <div
+                  key={index}
+                  className="p-4 border-2 border-slate-100 shadow-xl rounded-xl h-full"
+                >
+                  <img
+                    src={value.image}
+                    alt="Icon 1"
+                    className="mx-auto lg:w-40 lg:h-40 object-contain"
+                  />
+                  <div>
+                    <h3 className="text-primary-400 font-bold">
+                      {value.title}
+                    </h3>
+                    <p className="font-semibold">{value.desc}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </main>
+      <HappyClient data={internshipClients} />
     </>
   );
 }
