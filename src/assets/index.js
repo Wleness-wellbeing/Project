@@ -350,6 +350,19 @@ import musicalTherapy3 from "./images/services/musicalTherapy/musical-therapy-3.
 import musicalTherapy4 from "./images/services/musicalTherapy/musical-therapy-4.png";
 import musicalTherapy5 from "./images/services/musicalTherapy/musical-therapy-5.png";
 import musicalTherapy6 from "./images/services/musicalTherapy/musical-therapy-6.png";
+// Services >> Therapy
+import therapyHeader from "./images/services/therapy/therapy-header.png";
+import bestTherapy from "./images/services/therapy/best-therapy.png";
+import whyChooseTherapy1 from "./images/services/therapy/why-choose-1.png";
+import whyChooseTherapy2 from "./images/services/therapy/why-choose-2.png";
+import whyChooseTherapy3 from "./images/services/therapy/why-choose-3.png";
+import whyChooseTherapy4 from "./images/services/therapy/why-choose-4.png";
+import whyChooseTherapy5 from "./images/services/therapy/why-choose-5.png";
+// Services >> Psychiatrist
+import psychiatristHeader from "./images/services/psychiatrist/psychiatrist-header.png";
+import bestPsychiatrist from "./images/services/psychiatrist/best-psychiatrist.png";
+import bulb from "./images/services/psychiatrist/bulb.png";
+import mythsAndFacts from "./images/services/psychiatrist/myths-and-facts.png";
 export {
   musicalTherapyHeader,
   musicalTherapy1,
@@ -358,6 +371,17 @@ export {
   musicalTherapy4,
   musicalTherapy5,
   musicalTherapy6,
+  therapyHeader,
+  bestTherapy,
+  whyChooseTherapy1,
+  whyChooseTherapy2,
+  whyChooseTherapy3,
+  whyChooseTherapy4,
+  whyChooseTherapy5,
+  psychiatristHeader,
+  bestPsychiatrist,
+  bulb,
+  mythsAndFacts,
 };
 
 // Issues Images
@@ -487,5 +511,15 @@ import logo from "./images/logo.png";
 import rightBar from "./images/right-bar.jpg";
 import signup from "./images/signup.png";
 import bubbles from "./images/bubbles.png";
+import themeWAve from "./images/theme-wave.png";
 
-export { doctorLogin, doctorSignup, login, logo, rightBar, signup, bubbles };
+export {
+  doctorLogin,
+  doctorSignup,
+  login,
+  logo,
+  rightBar,
+  signup,
+  bubbles,
+  themeWAve,
+};

@@ -14,6 +14,16 @@ import {
   musicalTherapy6,
   feature4,
   feature6,
+  whyChooseTherapy1,
+  whyChooseTherapy2,
+  whyChooseTherapy3,
+  whyChooseTherapy4,
+  whyChooseTherapy5,
+  bestTherapy,
+  doctor1,
+  therapyHeader,
+  psychiatristHeader,
+  bestPsychiatrist,
 } from "../assets";
 
 // Services Page Features Blocks
@@ -225,5 +235,201 @@ export const MusicalTherapyData = {
 
 export const TherapyData = {
   name: "Therapy",
+  desc: "Discover transformative counseling and online therapy for growth, healing, and resilience, empowering you with compassionate support for renewed well-being.",
   slug: "/therapy",
+  image: therapyHeader,
+  bestTherapist: {
+    heading: [
+      {
+        color: false,
+        text: "Select the best ",
+      },
+      {
+        color: true,
+        text: "Therapist ",
+      },
+      {
+        color: false,
+        text: "Today",
+      },
+    ],
+    featureImage: bestTherapy,
+    features: [
+      ["Consultations ", "anywhere, anytime", " top-6 left-16 "],
+      ["Online ", "Consultations", " top-6 right-28 "],
+      ["Affordable ", "Help", " bottom-0 left-32"],
+      ["Trusted ", "Therapist", " -bottom-2 right-36 "],
+    ],
+    startBtn: "Start the therapy",
+    doctors: [
+      {
+        name: "Dr. Christina",
+        image: doctor1,
+        profession: "Therapist",
+        exp: "6+ years of experience",
+        expertise: "Yoga, work-life",
+        speaks: "German, English",
+        price: "500",
+      },
+      {
+        name: "Dr. Christina",
+        image: doctor1,
+        profession: "Therapist",
+        exp: "6+ years of experience",
+        expertise: "Yoga, work-life",
+        speaks: "German, English",
+        price: "500",
+      },
+      {
+        name: "Dr. Christina",
+        image: doctor1,
+        profession: "Therapist",
+        exp: "6+ years of experience",
+        expertise: "Yoga, work-life",
+        speaks: "German, English",
+        price: "500",
+      },
+      {
+        name: "Dr. Christina",
+        image: doctor1,
+        profession: "Therapist",
+        exp: "6+ years of experience",
+        expertise: "Yoga, work-life",
+        speaks: "German, English",
+        price: "500",
+      },
+      {
+        name: "Dr. Christina",
+        image: doctor1,
+        profession: "Therapist",
+        exp: "6+ years of experience",
+        expertise: "Yoga, work-life",
+        speaks: "German, English",
+        price: "500",
+      },
+      {
+        name: "Dr. Christina",
+        image: doctor1,
+        profession: "Therapist",
+        exp: "6+ years of experience",
+        expertise: "Yoga, work-life",
+        speaks: "German, English",
+        price: "500",
+      },
+    ],
+  },
+  whyChoose: [
+    {
+      title: "Emotional Support",
+      desc: "Therapy provides a safe and supportive space to express & process emotions.",
+      image: whyChooseTherapy1,
+    },
+    {
+      title: "Problem Solving",
+      desc: "Therapists offer  strategies to cope with challenges & find solutions.",
+      image: whyChooseTherapy2,
+    },
+    {
+      title: "Self Understanding",
+      desc: "Therapy fosters self-awareness of thoughts, behaviors, and patterns",
+      image: whyChooseTherapy3,
+    },
+    {
+      title: "Improved Relationships",
+      desc: "Therapy can enhance communication and interpersonal skills.",
+      image: whyChooseTherapy4,
+    },
+    {
+      title: "Mental Wellness",
+      desc: "Therapy promotes overall mental health and well-being.",
+      image: whyChooseTherapy5,
+    },
+  ],
+};
+
+export const psychiatristData = {
+  name: "Psychiatrist",
+  desc: "Discover transformative psychiatric care and personalized online counselling for effective treatment, renewed well-being, and empowered growth.",
+  slug: "/psychiatrist",
+  image: psychiatristHeader,
+  bestTherapist: {
+    heading: [
+      {
+        color: false,
+        text: "Select the best ",
+      },
+      {
+        color: true,
+        text: "Therapist ",
+      },
+      {
+        color: false,
+        text: "Today",
+      },
+    ],
+    featureImage: bestPsychiatrist,
+    features: [
+      ["Best Psychiatrist ", "available", " top-6 left-16 "],
+      ["Online ", "Consultations", " top-6 right-28 "],
+      ["Affordable ", "Help", " bottom-0 left-32"],
+      ["Psychiatrist ", "just a all away", " -bottom-4 right-28"],
+    ],
+    startBtn: "Start the treatment",
+    doctors: [
+      {
+        name: "Dr. Christina",
+        image: doctor1,
+        profession: "Therapist",
+        exp: "6+ years of experience",
+        expertise: "Yoga, work-life",
+        speaks: "German, English",
+        price: "500",
+      },
+      {
+        name: "Dr. Christina",
+        image: doctor1,
+        profession: "Therapist",
+        exp: "6+ years of experience",
+        expertise: "Yoga, work-life",
+        speaks: "German, English",
+        price: "500",
+      },
+      {
+        name: "Dr. Christina",
+        image: doctor1,
+        profession: "Therapist",
+        exp: "6+ years of experience",
+        expertise: "Yoga, work-life",
+        speaks: "German, English",
+        price: "500",
+      },
+      {
+        name: "Dr. Christina",
+        image: doctor1,
+        profession: "Therapist",
+        exp: "6+ years of experience",
+        expertise: "Yoga, work-life",
+        speaks: "German, English",
+        price: "500",
+      },
+      {
+        name: "Dr. Christina",
+        image: doctor1,
+        profession: "Therapist",
+        exp: "6+ years of experience",
+        expertise: "Yoga, work-life",
+        speaks: "German, English",
+        price: "500",
+      },
+      {
+        name: "Dr. Christina",
+        image: doctor1,
+        profession: "Therapist",
+        exp: "6+ years of experience",
+        expertise: "Yoga, work-life",
+        speaks: "German, English",
+        price: "500",
+      },
+    ],
+  },
 };

@@ -1,14 +1,15 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter, faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
-import { specialist1, expertClient, featuredPatient } from "../../assets";
+import { expertClient, featuredPatient } from "../../assets";
+import DoctorsCard from "../../components/DoctorsCard";
+import { allExperts } from "../../data/doctors";
+import HeartIcon from "../../components/icon/HeartIcon";
 
 export default function ExpertsDetails() {
-  let specialists = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
   return (
-    <main className="py-4 xl:py-6">
-      <div className="flex flex-col lg:flex-row container mx-auto items-center pb-8">
+    <main>
+      <header className="flex flex-col lg:flex-row container mx-auto items-center py-4 xl:py-6 2xl:py-8">
         <h1 className="subheading heading-primary lg:w-4/5">
           Meet Our Specialists
         </h1>
@@ -16,56 +17,70 @@ export default function ExpertsDetails() {
         {/* Filters */}
         <div className="flex lg:w-1/5 justify-end items-center">
           <span>
-            <FontAwesomeIcon icon={faHeart} className="text-3xl mr-2" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="1em"
+              viewBox="0 0 512 512"
+              className="text-3xl mr-2 cursor-pointer hover:fill-[#FF0E1C] "
+            >
+              {/* Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. */}
+              <path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
+            </svg>
           </span>
-          <button className="pl-4 pr-6 py-2 border-2 border-primary-300 rounded-full">
-            <span className="mr-2 font-semibold px-2">Filter</span>
-            <FontAwesomeIcon icon={faFilter} className="text-primary-300" />
-          </button>
+          {/* Filter */}
+          <span className="cursor-pointer">
+            <svg
+              width="32"
+              height="20"
+              viewBox="0 0 32 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="15"
+                y="2"
+                width="17"
+                height="5"
+                rx="2.5"
+                fill="#262626"
+                fill-opacity="0.88"
+              />
+              <rect
+                y="13"
+                width="17"
+                height="5"
+                rx="2.5"
+                fill="#262626"
+                fill-opacity="0.88"
+              />
+              <circle
+                cx="8.5"
+                cy="4.5"
+                r="4.5"
+                fill="#262626"
+                fill-opacity="0.88"
+              />
+              <circle
+                cx="23.5"
+                cy="15.5"
+                r="4.5"
+                fill="#262626"
+                fill-opacity="0.88"
+              />
+            </svg>
+          </span>
         </div>
-      </div>
+      </header>
 
       {/* Specialist Doctors */}
       <section>
-        <div className="bg-primary-50/50">
-          <div className="md:py-12">
-            <div className="container side-spacing mx-auto p-4 grid grid-cols-[repeat(4, minmax(280, 1fr))] items-center sm:grid-cols-2 gap-5 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-3 3xl:gap-10">
-              {specialists.map((i) => {
-                return (
-                  <figure className="p-6 pb-8 bg-white rounded-2xl rounded-br-[7rem] border-2 border-primary-300">
-                    <div className="mb-3 relative">
-                      <img
-                        src={specialist1}
-                        alt=""
-                        className="w-full object-cover block"
-                      />
-                      <span className="font-semibold bg-white px-2 absolute left-0 bottom-0 text-primary-300">
-                        Consultant
-                      </span>
-                    </div>
-                    <figcaption>
-                      <h3 className="font-semibold text-2xl xs:text-3xl">
-                        Dr. Christina
-                      </h3>
-                      <h4 className="text-slate-500 font-semibold text-lg xs:text-xl">
-                        6+ yrs of experience
-                      </h4>
-                      <p className="leading-5 text-slate-600 mb-8 xs:text-lg">
-                        Lorem ipsum dolor sit amet conse ctetur adipisicing
-                        elit.
-                      </p>
-                      <a href="/" className="btn-one">
-                        Book Now
-                      </a>
-                    </figcaption>
-                  </figure>
-                );
-              })}
-            </div>
-            <div className="text-center py-6 lg:pb-0">
-              <button className="btn-one">Get Started</button>
-            </div>
-          </div>
+        <div className="container side-spacing mx-auto p-4 grid grid-cols-[repeat(4, minmax(280, 1fr))] items-center sm:grid-cols-2 gap-5 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-3 3xl:gap-10">
+          {allExperts.map((value, i) => {
+            return <DoctorsCard key={i} data={value} />;
+          })}
+        </div>
+        <div className="text-center py-6 lg:pb-0">
+          <button className="btn-one">More..</button>
         </div>
       </section>
 
@@ -75,7 +90,7 @@ export default function ExpertsDetails() {
           <h2 className="subheading mb-4 text-center heading-primary">
             What Our Patients Say About Us
           </h2>
-          <p className="text-center leading-5 mx-auto xl:text-lg xl:leading-6">
+          <p className="text-center leading-5 mx-auto xl:text-lg xl:leading-6 font-medium">
             Hear from our valued patients about their experience with us and the
             impact we've made on their lives. Read their heartfelt testimonials
             and discover the quality of care and support we provide.
@@ -121,7 +136,7 @@ export default function ExpertsDetails() {
                     />
                   </span>
                 </p>
-                <p className="mb-1 text-sm xs:pr-3 sm:text-lg md:text-base md:leading-5">
+                <p className="mb-1 text-sm xs:pr-3 sm:text-lg md:text-base md:leading-5 font-medium">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Incidunt laudantium mollitia id.
                 </p>

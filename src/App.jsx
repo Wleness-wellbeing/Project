@@ -25,6 +25,7 @@ import ActivitySubPageLayout from "./pages/Activities/ActivitySubPageLayout";
 import CampusAmbassador from "./pages/CampusAmbassador";
 import Psychiatrist from "./pages/Services/Psychiatrist";
 import Therapy from "./pages/Services/Therapy";
+import ExpertsDetails from "./pages/Experts/ExpertsDetails";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -128,6 +129,14 @@ function App() {
           element={
             <Layout>
               <Experts />
+            </Layout>
+          }
+        />
+        <Route
+          path="/experts/all"
+          element={
+            <Layout>
+              <ExpertsDetails />
             </Layout>
           }
         />

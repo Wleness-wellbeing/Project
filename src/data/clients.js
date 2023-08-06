@@ -66,6 +66,28 @@ export const musicalTherapyClient = {
     "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
 };
 
+export const therapyClient = {
+  heading: [
+    {
+      color: false,
+      text: "What Our ",
+    },
+    {
+      color: true,
+      text: "Happy Clients ",
+    },
+    {
+      color: false,
+      text: "Say",
+    },
+  ],
+  name: "Ben Parker",
+  profession: "Digital Marketing",
+  image: happyClient2,
+  review:
+    "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
+};
+
 export const internshipClients = {
   heading: [
     {

@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight, faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 import { textColorize } from "../utils";
+import { Link } from "react-router-dom";
 
 export default function DoctorSlider(props) {
   return (
@@ -36,7 +37,9 @@ export default function DoctorSlider(props) {
               className="text-primary-300 text-2xl lg:text-4xl"
             />
           </button>
-          <button className="btn-one mx-auto">{props.data.button.text}</button>
+          <Link to={props.data.button.slug} className="btn-one mx-auto">
+            {props.data.button.text}
+          </Link>
           <button className="bg-primary-300 lg:w-12 lg:h-12 w-8 h-8 rounded-full flex justify-center items-center absolute top-[55%] right-4 -translate-y-[55%] lg:-translate-y-0 lg:static">
             <FontAwesomeIcon
               icon={faCaretRight}

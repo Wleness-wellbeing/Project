@@ -56,7 +56,7 @@ export const couplesTherapyDoctors = {
   ],
   button: {
     text: "View All",
-    slug: "/view-all",
+    slug: "/experts/all",
   },
 };
 
@@ -120,6 +120,62 @@ export const expertDoctors = {
   ],
   button: {
     text: "View All",
-    slug: "/view-all",
+    slug: "/experts/all",
   },
 };
+
+export const allExperts = [
+  {
+    name: "Dr. Christina",
+    image: doctor1,
+    profession: "Therapist",
+    exp: "6+ years of experience",
+    expertise: "Yoga, work-life",
+    speaks: "German, English",
+    price: "400",
+  },
+  {
+    name: "Dr. Christina",
+    image: doctor1,
+    profession: "Therapist",
+    exp: "6+ years of experience",
+    expertise: "Yoga, work-life",
+    speaks: "German, English",
+    price: "300",
+  },
+  {
+    name: "Dr. Christina",
+    image: doctor1,
+    profession: "Therapist",
+    exp: "6+ years of experience",
+    expertise: "Yoga, work-life",
+    speaks: "German, English",
+    price: "500",
+  },
+  {
+    name: "Dr. Christina",
+    image: doctor1,
+    profession: "Therapist",
+    exp: "6+ years of experience",
+    expertise: "Yoga, work-life",
+    speaks: "German, English",
+    price: "400",
+  },
+  {
+    name: "Dr. Christina",
+    image: doctor1,
+    profession: "Therapist",
+    exp: "6+ years of experience",
+    expertise: "Yoga, work-life",
+    speaks: "German, English",
+    price: "400",
+  },
+  {
+    name: "Dr. Christina",
+    image: doctor1,
+    profession: "Therapist",
+    exp: "6+ years of experience",
+    expertise: "Yoga, work-life",
+    speaks: "German, English",
+  },
+];
