@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCaretRight,
   faCaretLeft,
   faPlus,
 } from "@fortawesome/free-solid-svg-icons";
+// Data
 import {
   headerMobile,
   headerDesktop,
@@ -45,6 +46,9 @@ import {
   homeHyperTension,
   homeStress,
 } from "../../assets";
+// Components
+import Assessment from "../../components/Assessment";
+import { Link } from "react-router-dom";
 
 const faqs = [
   {
@@ -69,7 +73,17 @@ const faqs = [
   },
 ];
 
-function Home() {
+export default function Home() {
+  const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
+
+  const openAssessmentModal = () => {
+    setShowAssessmentModal(true);
+  };
+
+  const closeAssessmentModal = () => {
+    setShowAssessmentModal(false);
+  };
+
   return (
     <>
       {/* ========== Header Bar ========== */}
@@ -97,7 +111,10 @@ function Home() {
           <p className="mb-5 font-[600] lg:text-lg !leading-6 md:mb-10 text-base text-justify lg:w-80">
             Nurturing mind, body and soul for a lasting fulfillment
           </p>
-          <button className="btn-one !w-fit block mx-auto lg:mx-0">
+          <button
+            className="btn-one !w-fit block mx-auto lg:mx-0"
+            onClick={openAssessmentModal}
+          >
             Schedule an appointment
           </button>
         </div>
@@ -155,7 +172,9 @@ function Home() {
             </div>
           </div>
           <div className="text-center">
-            <button className="btn-one">Explore More</button>
+            <Link to="/issues" className="btn-one">
+              Explore More
+            </Link>
           </div>
         </div>
       </section>
@@ -237,7 +256,9 @@ function Home() {
                   Upload your CV and make a positive impact on peoples life by
                   joining our internship program.
                 </p>
-                <button className="btn-one">Get Started</button>
+                <Link to="/internship" className="btn-one">
+                  Explore More
+                </Link>
               </div>
               {/* Figures */}
               <img
@@ -635,9 +656,11 @@ function Home() {
         </div>
       </section>
 
-      {/* <Assessment /> */}
+      {/* {isVisible && <Assessment />} */}
+      <Assessment
+        isAssessmentOpen={isAssessmentModalOpen}
+        onAssessmentClose={closeAssessmentModal}
+      />
     </>
   );
 }
-
-export default Home;

@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faClose } from "@fortawesome/free-solid-svg-icons";
 // Data
 import { assessment1, assessment2 } from "../assets";
 import {
@@ -13,12 +15,14 @@ import {
 import AssessmentOption from "./AssessmentOption";
 import AssessmentTextBtn from "./AssessmentTextBtn";
 
-export default function Assessment() {
+export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
+  if (!isAssessmentOpen) return null;
+
   return (
-    <div className="fixed inset-0 w-full bg-white h-[100svh] grid place-items-center">
-      <div className="w-[720px] mx-auto relative">
+    <div className="fixed inset-0 w-full grid place-items-center backdrop-brightness-50">
+      <div className="w-[420px] md:w-[720px] lg:w-[1100px] py-20 mx-auto relative border-2 overflow-hidden bg-white rounded-3xl">
         {/* Welcome Page */}
-        <div className="hidden">
+        <div>
           <h2 className="subheading text-center mb-4">
             <span className="heading-primary">Welcome to Wleness</span>
           </h2>
@@ -55,11 +59,15 @@ export default function Assessment() {
             </div>
           </div>
           {/* Images */}
-          <img src={assessment1} alt="" className="absolute top-14 -left-40" />
+          <img
+            src={assessment1}
+            alt=""
+            className="w-32 absolute top-32 left-20"
+          />
           <img
             src={assessment2}
             alt=""
-            className="absolute bottom-0 -right-20"
+            className="w-32 absolute bottom-40 right-20"
           />
         </div>
 
@@ -138,7 +146,7 @@ export default function Assessment() {
         </div>
 
         {/* Screen 4 */}
-        <div className="lg:w-[600px] lg:mx-auto">
+        <div className="lg:w-[600px] lg:mx-auto hidden">
           <h2 className="flex flex-col text-primary-300 text-4xl font-bold text-center">
             Thanks you for your response
           </h2>
@@ -190,17 +198,25 @@ export default function Assessment() {
             </button>
           </div>
         </div>
+
+        {/* Shapes */}
+        <span className="border-8 w-40 h-40 border-primary-50 rounded-full absolute -top-14 right-10"></span>
+        <span className="border-8 w-40 h-40 border-primary-50 rounded-full absolute left-10 -bottom-8"></span>
+        <span className="border-4 w-14 h-14 border-primary-50 rounded-full absolute top-24 right-44"></span>
+        <span className="border-4 w-16 h-16 border-primary-50 rounded-full absolute left-48 bottom-32"></span>
+        <span className="border-4 w-12 h-12 border-primary-50 rounded-full absolute left-48 top-1/2"></span>
+        <span className="w-10 h-10 rounded-full bg-primary-50 absolute top-44 right-40"></span>
+        <span className="w-10 h-10 rounded-full bg-primary-50 absolute bottom-12 left-72"></span>
+        <span className="w-10 h-10 rounded-full bg-primary-50 absolute top-4 left-80"></span>
+        <span className="w-10 h-10 rounded-full bg-primary-50 absolute bottom-12 right-32"></span>
+
+        {/* Close */}
+        <FontAwesomeIcon
+          icon={faClose}
+          className="text-4xl absolute top-8 right-8 text-slate-800 cursor-pointer"
+          onClick={onAssessmentClose}
+        />
       </div>
-      {/* Shapes */}
-      <span className="border-8 w-40 h-40 border-primary-50 rounded-full absolute -top-14 right-10"></span>
-      <span className="border-8 w-40 h-40 border-primary-50 rounded-full absolute left-10 -bottom-8"></span>
-      <span className="border-4 w-16 h-16 border-primary-50 rounded-full absolute top-20 right-52"></span>
-      <span className="border-4 w-16 h-16 border-primary-50 rounded-full absolute left-48 bottom-32"></span>
-      <span className="border-4 w-12 h-12 border-primary-50 rounded-full absolute left-48 top-1/2"></span>
-      <span className="w-12 h-12 rounded-full bg-primary-50 absolute top-44 right-40"></span>
-      <span className="w-12 h-12 rounded-full bg-primary-50 absolute bottom-12 left-72"></span>
-      <span className="w-12 h-12 rounded-full bg-primary-50 absolute top-12 left-80"></span>
-      <span className="w-12 h-12 rounded-full bg-primary-50 absolute bottom-12 right-32"></span>
     </div>
   );
 }
