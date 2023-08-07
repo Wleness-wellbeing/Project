@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faBars } from "@fortawesome/free-solid-svg-icons";
@@ -9,6 +9,7 @@ import { activities, brainExercise } from "../../data";
 
 function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
@@ -16,6 +17,10 @@ function Navbar() {
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
   };
 
   const activitiesMenu = activities.map((value, index) => {
@@ -32,7 +37,7 @@ function Navbar() {
     <>
       {/* ========== Navigation Bar ========== */}
       <nav className="sticky top-0 left-0 right-0 bg-white z-20 shadow-sm">
-        <div className="container mx-auto flex items-center justify-between py-4">
+        <div className="container mx-auto flex items-center justify-between py-4 relative">
           {/* Logo */}
           <div className="w-32 xl:w-48 md:w-56 lg:w-64">
             <Link to="/" className="outline-none">
@@ -41,7 +46,12 @@ function Navbar() {
           </div>
 
           {/* Menu list */}
-          <ul className="hidden justify-end space-x-6 xl:space-x-5 xl:flex">
+          <ul
+            className={
+              "absolute xl:static w-72 bg-white top-20 right-4 justify-end xl:space-x-5 xl:flex p-8 xl:p-0 border-2 border-slate-200 xl:border-none xl:w-fit" +
+              (isMenuOpen ? " block " : "  hidden xl:flex ")
+            }
+          >
             <li>
               <Link to="/about-us" className="menu-link">
                 About
@@ -157,7 +167,7 @@ function Navbar() {
               Join Us
             </button>
             <Link
-              to="/patient-signup"
+              to="/signup"
               className="btn-primary !w-fit !rounded-full !bg-primary-400 hover:!bg-primary-300 !py-2 font-semibold"
             >
               Sign Up
@@ -165,7 +175,7 @@ function Navbar() {
           </div>
 
           {/* Hamburger Icon */}
-          <button className="xl:hidden">
+          <button className="xl:hidden" onClick={toggleMenu}>
             <FontAwesomeIcon icon={faBars} className="text-3xl" />
           </button>
         </div>

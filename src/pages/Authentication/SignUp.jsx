@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { logo } from "../../assets";
 import { signup } from "../../assets";
 
-function PatientSignup() {
+export default function SignUp() {
   return (
     <main class="flex md:flex-row flex-col justify-center items-center md:items-stretch h-screen">
       <aside class="md:w-1/2 hidden md:flex justify-center items-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-right bg-no-repeat bg-contain">
@@ -19,10 +19,10 @@ function PatientSignup() {
           </div>
 
           <div class="flex justify-between gap-5 mb-10">
-            <Link to="/patient-login" class="btn-transparent">
+            <Link to="/login" class="btn-transparent">
               LOGIN
             </Link>
-            <Link to="/patient-login" class="btn-primary">
+            <Link to="/signup" class="btn-primary">
               SIGN UP
             </Link>
           </div>
@@ -72,15 +72,16 @@ function PatientSignup() {
             </div>
           </form>
           <p className="text-center">
-            Already have an account?
-            <a href="#" className="text-primary-100 font-bold hover:text-primary-500">
-               Login
-            </a>
+            <span> Already have an account? </span>
+            <Link
+              className="text-primary-100 font-bold hover:text-primary-500"
+              to="/login"
+            >
+              Login
+            </Link>
           </p>
         </div>
       </div>
     </main>
   );
 }
-
-export default PatientSignup;

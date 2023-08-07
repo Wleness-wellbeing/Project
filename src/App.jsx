@@ -1,11 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Data
 import { activities, brainExercise } from "./data";
-// import { adminRoutes } from "./data/admin";
 // Components
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
-import PatientSignup from "./pages/Authentication/PatientSignup";
 import DoctorSignup from "./pages/Authentication/DoctorSignup";
 import TherapistJoiningForm from "./components/TherapistJoiningForm.jsx";
 import PsychiatristJoiningForm from "./components/PsychiatristJoiningForm";
@@ -28,6 +26,8 @@ import CampusAmbassador from "./pages/CampusAmbassador";
 import Psychiatrist from "./pages/Services/Psychiatrist";
 import Therapy from "./pages/Services/Therapy";
 import ExpertsDetails from "./pages/Experts/ExpertsDetails";
+import SignUp from "./pages/Authentication/SignUp";
+import Login from "./pages/Authentication/Login";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -196,10 +196,18 @@ function App() {
           }
         />
         <Route
-          path="/patient-signup"
+          path="/login"
           element={
             <SignupLayout>
-              <PatientSignup />
+              <Login />
+            </SignupLayout>
+          }
+        />
+        <Route
+          path="/signup"
+          element={
+            <SignupLayout>
+              <SignUp />
             </SignupLayout>
           }
         />
@@ -250,14 +258,14 @@ function App() {
 
 function Layout({ children }) {
   // Check if the current path is /doctors-signup or /patient-signup to decide whether to render Navbar and Footer or not
-  const isDoctorSignupPage = window.location.pathname === "/doctors-signup";
-  const isPatientSignupPage = window.location.pathname === "/patient-signup";
+  const isLoginPage = window.location.pathname === "/login";
+  const isSignUpPage = window.location.pathname === "/signup";
 
   return (
     <div>
-      {!isDoctorSignupPage && !isPatientSignupPage && <Navbar />}
+      {!isLoginPage && !isSignUpPage && <Navbar />}
       {children}
-      {!isDoctorSignupPage && !isPatientSignupPage && <Footer />}
+      {!isLoginPage && !isSignUpPage && <Footer />}
     </div>
   );
 }

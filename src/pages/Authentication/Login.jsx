@@ -3,26 +3,30 @@ import { Link } from "react-router-dom";
 import { logo } from "../../assets";
 import { login } from "../../assets";
 
-function PatientLogin() {
+export default function Login() {
   return (
-    <main class="flex md:flex-row flex-col justify-center items-center md:items-stretch h-screen">
-      <aside class="md:w-1/2 hidden md:flex justify-center items-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-right bg-no-repeat bg-contain">
-        <img src={login} alt="" class="block object-cover w-[648px]" />
+    <main className="flex md:flex-row flex-col justify-center items-center md:items-stretch h-screen">
+      <aside className="md:w-1/2 hidden md:flex justify-center items-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-right bg-no-repeat bg-contain">
+        <img src={login} alt="" className="block object-cover w-[648px]" />
       </aside>
 
-      <div class="md:w-1/2 flex justify-center items-center px-4">
-        <div class="sm:w-[440px] w-full">
-          <div class="sm:w-[320px] w-full mx-auto mb-12">
+      <div className="md:w-1/2 flex justify-center items-center px-4">
+        <div className="sm:w-[440px] w-full">
+          <div className="sm:w-[320px] w-full mx-auto mb-12">
             <Link to="/">
-              <img src={logo} alt="Logo" class="block object-cover w-full" />
+              <img
+                src={logo}
+                alt="Logo"
+                className="block object-cover w-full"
+              />
             </Link>
           </div>
 
-          <div class="flex justify-between gap-5 mb-10">
-            <Link to={LoginUrl} class="btn-transparent">
+          <div className="flex justify-between gap-5 mb-10">
+            <Link to="/login" className="btn-primary">
               LOGIN
             </Link>
-            <Link to={SignUpUrl} class="btn-primary">
+            <Link to="/signup" className="btn-transparent">
               SIGN UP
             </Link>
           </div>
@@ -55,15 +59,13 @@ function PatientLogin() {
             </div>
           </form>
           <p className="text-center">
-            Don't have an account yet.
-            <a href="#" className="text-primary-100">
+            <span>Don't have an account yet. </span>
+            <Link className="text-primary-100 font-semibold" to="/signup">
               Sign Up
-            </a>
+            </Link>
           </p>
         </div>
       </div>
     </main>
   );
 }
-
-export default PatientLogin;
