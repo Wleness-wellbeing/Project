@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Data
 import { activities, brainExercise } from "./data";
+// import { adminRoutes } from "./data/admin";
 // Components
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -8,6 +9,7 @@ import PatientSignup from "./pages/Authentication/PatientSignup";
 import DoctorSignup from "./pages/Authentication/DoctorSignup";
 import TherapistJoiningForm from "./components/TherapistJoiningForm.jsx";
 import PsychiatristJoiningForm from "./components/PsychiatristJoiningForm";
+import ScrollToTop from "./components/icon/ScrollToTop";
 // Pages
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
@@ -26,8 +28,6 @@ import CampusAmbassador from "./pages/CampusAmbassador";
 import Psychiatrist from "./pages/Services/Psychiatrist";
 import Therapy from "./pages/Services/Therapy";
 import ExpertsDetails from "./pages/Experts/ExpertsDetails";
-import Login from "./pages/Admin";
-import { adminRoutes } from "./data/admin";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -69,6 +69,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route
           path="/"
@@ -203,7 +204,7 @@ function App() {
           }
         />
         <Route
-          path="/join-campus-ambassador"
+          path="/campus-ambassador"
           element={
             <Layout>
               <CampusAmbassador />
@@ -227,7 +228,7 @@ function App() {
           }
         />
         {/* Admin Routes */}
-        {adminRoutes.map(
+        {/* {adminRoutes.map(
           ({ component: Component, page: page, slug = slug }, index) => {
             return (
               <Route
@@ -241,7 +242,7 @@ function App() {
               />
             );
           }
-        )}
+        )} */}
       </Routes>
     </Router>
   );

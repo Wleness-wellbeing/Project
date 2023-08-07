@@ -21,13 +21,13 @@ function Issues() {
         <div className="lg:order-1 mb-6 md:mb-6 lg:mb-0 lg:w-[55%] xl:pl-4 lg:pr-16">
           <hgroup className="md:mb-3">
             <h1 className="subheading mb-4 text-center lg:text-left lg:leading-[4rem] hidden lg:block">
-              <span className="heading-primary block lg:inline-block">
+              <span className="heading-primary block lg:inline-block pb-1">
                 Facing Issues
               </span>
               <span className="text-[#383838] lg:block">Let's Talk</span>
             </h1>
           </hgroup>
-          <p className="mb-8 text-justify">
+          <p className="mb-8 text-justify font-semibold">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
             placeat cumque! Ducimus quis nulla, distinctio magni laudantium
             ipsam quam, obcaecati est consequatur accusantium at unde? Optio

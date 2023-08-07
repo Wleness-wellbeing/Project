@@ -9,7 +9,7 @@ const joinUsList = [
   {
     image: Elipse1,
     name: "Campus Ambassador",
-    slug: "/join-campus-ambassador",
+    slug: "/campus-ambassador",
   },
   {
     image: Elipse2,
