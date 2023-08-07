@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // Data
 import {
   faceIcon,
@@ -17,8 +17,19 @@ import { expertDoctors } from "../../data/doctors";
 // Components
 import HappyClient from "../../components/HappyClient";
 import DoctorSlider from "../../components/DoctorSlider";
+import { Link } from "react-router-dom";
+import Assessment from "../../components/Assessment";
 
 function Experts() {
+  const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
+
+  const openAssessmentModal = () => {
+    setShowAssessmentModal(true);
+  };
+
+  const closeAssessmentModal = () => {
+    setShowAssessmentModal(false);
+  };
   return (
     <>
       {/* ========== Header Bar ========== */}
@@ -58,7 +69,7 @@ function Experts() {
             <button className="btn-one !w-full lg:!w-fit lg:px-6">
               Make an appointment
             </button>
-            <button className="btn-one !bg-transparent border-2 !text-[#383838] !w-full !border-primary-300 lg:!w-fit">
+            <button className="btn-one !bg-transparent hover:!bg-primary-400 border-2 hover:!text-white !text-[#383838] !w-full !border-primary-400 lg:!w-fit">
               Explore More
             </button>
           </div>
@@ -129,12 +140,12 @@ function Experts() {
                 and effective care.
               </p>
               <p className="text-right">
-                <a
-                  href="#"
+                <Link
+                  to="/services/therapy"
                   className="font-bold text-primary-300 hover:text-primary-500 transition-all underline underline-offset-4"
                 >
                   Get Started
-                </a>
+                </Link>
               </p>
             </figcaption>
           </figure>
@@ -151,12 +162,12 @@ function Experts() {
                 individual's well-being.
               </p>
               <p className="text-right">
-                <a
-                  href="#"
+                <Link
+                  to="/services/psychiatrist"
                   className="font-bold text-primary-300 hover:text-primary-500 transition-all underline underline-offset-4"
                 >
                   Get Started
-                </a>
+                </Link>
               </p>
             </figcaption>
             <div className="order-1 lg:order-2 lg:w-[45%] lg:ml-14 mb-5">
@@ -185,12 +196,12 @@ function Experts() {
                 the specific needs and dynamics of each relationship.
               </p>
               <p className="text-right">
-                <a
-                  href="#"
+                <Link
+                  to="/services/couples-therapy"
                   className="font-bold text-primary-300 hover:text-primary-500 transition-all underline underline-offset-4"
                 >
                   Get Started
-                </a>
+                </Link>
               </p>
             </figcaption>
           </figure>
@@ -215,12 +226,19 @@ function Experts() {
           look forward to assisting you in achieving your therapeutic goals.
         </p>
         <div className="text-center">
-          <button className="btn-one">Make an appointment</button>
+          <button className="btn-one" onClick={openAssessmentModal}>
+            Make an appointment
+          </button>
         </div>
       </section>
 
       {/* Our Clients */}
       <HappyClient data={doctorsPageClient} />
+
+      <Assessment
+        isAssessmentOpen={isAssessmentModalOpen}
+        onAssessmentClose={closeAssessmentModal}
+      />
     </>
   );
 }

@@ -26,6 +26,8 @@ import CampusAmbassador from "./pages/CampusAmbassador";
 import Psychiatrist from "./pages/Services/Psychiatrist";
 import Therapy from "./pages/Services/Therapy";
 import ExpertsDetails from "./pages/Experts/ExpertsDetails";
+import Login from "./pages/Admin";
+import { adminRoutes } from "./data/admin";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -168,11 +170,6 @@ function App() {
         {activitiesMenu}
         {/* Inner pages of yoga, meditation and sadhna */}
         {activitiesInnerSubpages}
-        {/* {activities.activities.types.map((value, index) => {
-          return (
-            <Route key={index} path={value.slug} element={<Layout></Layout>} />
-          );
-        })} */}
         <Route
           path={brainExercise.slug}
           element={
@@ -229,6 +226,22 @@ function App() {
             </SignupLayout>
           }
         />
+        {/* Admin Routes */}
+        {adminRoutes.map(
+          ({ component: Component, page: page, slug = slug }, index) => {
+            return (
+              <Route
+                key={index}
+                path={slug}
+                element={
+                  <Layout>
+                    <Component />
+                  </Layout>
+                }
+              />
+            );
+          }
+        )}
       </Routes>
     </Router>
   );

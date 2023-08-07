@@ -80,7 +80,7 @@ export default function ExpertsDetails() {
           })}
         </div>
         <div className="text-center py-6 lg:pb-0">
-          <button className="btn-one">More..</button>
+          <button className="btn-one">Show More..</button>
         </div>
       </section>
 

@@ -1,6 +1,7 @@
 import React from "react";
 import DoctorsCard from "./DoctorsCard";
 import { themeWAve } from "../assets";
+import { Link } from "react-router-dom";
 
 export default function SelectBest(props) {
   return (
@@ -30,7 +31,9 @@ export default function SelectBest(props) {
           </div>
 
           <div className="text-center pt-14 pb-10">
-            <button className="btn-one">{props.btn}</button>
+            <Link to={props.btn[1]} className="btn-one">
+              {props.btn[0]}
+            </Link>
           </div>
 
           <img

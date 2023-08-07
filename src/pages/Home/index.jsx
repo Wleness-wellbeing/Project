@@ -656,7 +656,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* {isVisible && <Assessment />} */}
       <Assessment
         isAssessmentOpen={isAssessmentModalOpen}
         onAssessmentClose={closeAssessmentModal}

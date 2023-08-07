@@ -18,7 +18,10 @@ export default function ActivityHeader(props) {
               {textColorize(props.desc)}
             </h5>
           </hgroup>
-          <button className="btn-one">Explore More</button>
+          <button className="btn-one mr-2">Explore More</button>
+          {/* <button className="btn-one !bg-transparent hover:!bg-primary-400 border-2 hover:!text-white !text-[#383838] !w-full !border-primary-400 lg:!w-fit !py-2">
+            Book Now
+          </button> */}
         </div>
 
         {/* BreadCrump */}

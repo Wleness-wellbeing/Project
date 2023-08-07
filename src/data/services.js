@@ -260,7 +260,7 @@ export const TherapyData = {
       ["Affordable ", "Help", " bottom-0 left-32"],
       ["Trusted ", "Therapist", " -bottom-2 right-36 "],
     ],
-    startBtn: "Start the therapy",
+    startBtn: ["Start the therapy", "/issues"],
     doctors: [
       {
         name: "Dr. Christina",
@@ -374,7 +374,7 @@ export const psychiatristData = {
       ["Affordable ", "Help", " bottom-0 left-32"],
       ["Psychiatrist ", "just a all away", " -bottom-4 right-28"],
     ],
-    startBtn: "Start the treatment",
+    startBtn: ["Start the treatment", "/treatments"],
     doctors: [
       {
         name: "Dr. Christina",

@@ -32,7 +32,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
               <h4 className="text-2xl mb-5">
                 Do you want help finding a
                 <Link
-                  to=""
+                  to="/services/therapy"
                   className="text-primary-400 font-bold text-xl block"
                 >
                   Therapist?
@@ -47,15 +47,17 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             </div>
             <div className=" text-center">
               <h4 className="text-2xl mb-5">
-                Do you want to browse all our
+                Do you want to browse all our &nbsp;
                 <Link
-                  to=""
-                  className="text-primary-400 font-bold text-xl block"
+                  to="/services/therapy"
+                  className="text-primary-400 font-bold text-xl"
                 >
                   Therapist?
                 </Link>
               </h4>
-              <button className="btn-primary">Browse all Therapist</button>
+              <Link to="/experts/all" className="btn-primary block">
+                Browse all Therapist
+              </Link>
             </div>
           </div>
           {/* Images */}
