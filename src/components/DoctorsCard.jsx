@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIndianRupee } from "@fortawesome/free-solid-svg-icons";
 import HeartIcon from "./icon/HeartIcon";
+import { Link } from "react-router-dom";
 
 export default function DoctorsCard(props) {
   return (
@@ -38,7 +39,9 @@ export default function DoctorsCard(props) {
             <FontAwesomeIcon icon={faIndianRupee} className="text-sm mx-1" />
             {props.data.price}
           </h5>
-          <button className="btn-one">Book Now</button>
+          <Link to="/experts/appointment" className="btn-one inline-block">
+            Book Now
+          </Link>
         </div>
       </figcaption>
     </figure>

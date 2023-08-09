@@ -503,6 +503,17 @@ export {
   assessmentIconPanicAttacks,
 };
 
+// Doctor Images
+import doctorAppointment from "./images/doctors/doctor-appointment.png";
+
+export { doctorAppointment };
+
+// Design Elements
+import bgDotsPattern from "./images/designs/bg-dots-pattern.png";
+import bubbleDoodles from "./images/designs/bubble-doodle.png";
+
+export { bgDotsPattern, bubbleDoodles };
+
 // Other Images
 import doctorLogin from "./images/doctor-login.png";
 import doctorSignup from "./images/doctor-signup.png";

@@ -51,6 +51,9 @@ export default function SelectBest(props) {
             return <DoctorsCard key={i} data={value} />;
           })}
         </div>
+        <div className="text-center py-8">
+          <button className="btn-one">Show More</button>
+        </div>
         <img
           src={themeWAve}
           alt=""

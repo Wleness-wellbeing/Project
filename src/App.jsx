@@ -28,6 +28,7 @@ import Therapy from "./pages/Services/Therapy";
 import ExpertsDetails from "./pages/Experts/ExpertsDetails";
 import SignUp from "./pages/Authentication/SignUp";
 import Login from "./pages/Authentication/Login";
+import DoctorAppointment from "./pages/Experts/DoctorAppointment";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -140,6 +141,14 @@ function App() {
           element={
             <Layout>
               <ExpertsDetails />
+            </Layout>
+          }
+        />
+        <Route
+          path="/experts/appointment"
+          element={
+            <Layout>
+              <DoctorAppointment />
             </Layout>
           }
         />
