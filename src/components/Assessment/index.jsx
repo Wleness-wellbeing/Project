@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
+
 // Data
 import { assessment1, assessment2 } from "../../assets";
 import {
@@ -71,6 +72,21 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
     setFinalScreen(false);
   }
 
+  const [isSelected, setIsSelected] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
   return (
     <div className="fixed inset-0 w-full grid place-items-center backdrop-brightness-50 z-30">
       <div className="w-[420px] md:w-[720px] lg:w-[1100px] py-12 mx-auto relative border-2 overflow-hidden bg-white rounded-3xl">
@@ -148,6 +164,9 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                     key={index}
                     image={value[0]}
                     name={value[1]}
+                    isSelected={isSelected}
+                    setIsSelected={setIsSelected}
+                    index={index}
                   />
                 );
               })}
@@ -252,7 +271,10 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
               <div className="bg-primary-100 rounded-xl px-6 py-2 w-full">
                 <h4 className="flex justify-between font-semibold">
                   <span className="text-lg text-white">Your Issues :</span>
-                  <span className="text-white cursor-pointer underline">
+                  <span
+                    className="text-white cursor-pointer underline"
+                    onClick={openScreenOne}
+                  >
                     Edit
                   </span>
                 </h4>
@@ -263,7 +285,10 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                   <span className="text-lg text-white">
                     Duration & difficulty your issue:
                   </span>
-                  <span className="text-white cursor-pointer underline">
+                  <span
+                    className="text-white cursor-pointer underline"
+                    onClick={openScreenTwo}
+                  >
                     Edit
                   </span>
                 </h4>
@@ -274,7 +299,10 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                   <span className="text-lg text-white">
                     Language of your choice:
                   </span>
-                  <span className="text-white cursor-pointer underline">
+                  <span
+                    className="text-white cursor-pointer underline"
+                    onClick={openScreenThree}
+                  >
                     Edit
                   </span>
                 </h4>
@@ -283,14 +311,23 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
               <div className="bg-primary-100 rounded-xl px-6 py-2 w-full">
                 <h4 className="flex justify-between font-semibold">
                   <span className="text-lg text-white">Your Age:</span>
-                  <span className="text-white cursor-pointer underline">
+                  <span
+                    className="text-white cursor-pointer underline"
+                    onClick={openScreenThree}
+                  >
                     Edit
                   </span>
                 </h4>
                 <p className="text-white font-medium">18 - 25 years</p>
               </div>
             </div>
-            <div className="text-center">
+            <div className="text-center flex justify-center space-x-4">
+              <button
+                onClick={openScreenThree}
+                className="btn-primary !w-fit !py-2  font-semibold border-2 border-primary-300 !bg-transparent !text-primary-300"
+              >
+                Go Back
+              </button>
               <Link
                 to="/experts/all"
                 className="btn-primary !w-fit !py-2.5 font-semibold inline-block"

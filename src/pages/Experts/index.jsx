@@ -66,12 +66,17 @@ function Experts() {
             </h1>
           </hgroup>
           <div className="lg:flex lg:space-x-3 space-y-3 lg:space-y-0">
-            <button className="btn-one !w-full lg:!w-fit lg:px-6">
+            <button
+              className="btn-one !w-full lg:!w-fit lg:px-6"
+              onClick={openAssessmentModal}
+            >
               Make an appointment
             </button>
-            <button className="btn-one !bg-transparent hover:!bg-primary-400 border-2 hover:!text-white !text-[#383838] !w-full !border-primary-400 lg:!w-fit">
-              Explore More
-            </button>
+            <a href="#whyus">
+              <button className="btn-one !bg-transparent hover:!bg-primary-400 border-2 hover:!text-white !text-[#383838] !w-full !border-primary-400 lg:!w-fit">
+                Explore More
+              </button>
+            </a>
           </div>
         </div>
       </header>
@@ -108,7 +113,10 @@ function Experts() {
       </section>
 
       {/* ========== Why Us ========== */}
-      <section className="lg:pb-14 lg:!px-0 px-5 relative overflow-x-hidden overflow-y-clip">
+      <section
+        id="whyus"
+        className="lg:pb-14 lg:!px-0 px-5 relative overflow-x-hidden overflow-y-clip"
+      >
         <div className="container mx-auto mb-16 from-primary-50/30 to-transparent rounded-t-2xl bg-gradient-to-b pt-10">
           <h1 className="subheading text-center mb-2">
             Why <span className="heading-primary">Wleness</span>
@@ -123,16 +131,20 @@ function Experts() {
         <div className="container mx-auto">
           <figure className="lg:flex items-center mb-12 lg:mb-2">
             <div className="lg:w-[45%] lg:mr-14 mb-5">
-              <img
-                src={expertsWhy1}
-                alt="Therapy"
-                className="w-full object-cover"
-              />
+              <Link to="/services/therapy">
+                <img
+                  src={expertsWhy1}
+                  alt="Therapy"
+                  className="w-full object-cover"
+                />
+              </Link>
             </div>
             <figcaption className="lg:w-[55%]">
-              <h3 className="text-4xl font-bold text-primary-400 mb-3">
-                Therapy
-              </h3>
+              <Link to="/services/therapy">
+                <h3 className="text-4xl font-bold text-primary-400 mb-3">
+                  Therapy
+                </h3>
+              </Link>
               <p className="text-justify mb-5 font-medium">
                 A holistic approach to therapy that considers the whole person –
                 mind, body, and spirit. Our therapeutic services are tailored to
@@ -151,9 +163,11 @@ function Experts() {
           </figure>
           <figure className="flex flex-col lg:flex-row items-center mb-12 lg:mb-2">
             <figcaption className="order-2 lg:order-1 lg:w-[55%]">
-              <h3 className="text-4xl font-bold text-primary-400 mb-3">
-                Psychiatrist
-              </h3>
+              <Link to="/services/psychiatrist">
+                <h3 className="text-4xl font-bold text-primary-400 mb-3">
+                  Psychiatrist
+                </h3>
+              </Link>
               <p className="text-justify mb-5 font-medium">
                 A psychiatry is grounded in the principles of empathy,
                 compassion, and evidence-based practice. Our psychiatrists
@@ -171,25 +185,31 @@ function Experts() {
               </p>
             </figcaption>
             <div className="order-1 lg:order-2 lg:w-[45%] lg:ml-14 mb-5">
-              <img
-                src={expertsWhy2}
-                alt="Therapy"
-                className="w-full object-cover"
-              />
+              <Link to="/services/psychiatrist">
+                <img
+                  src={expertsWhy2}
+                  alt="Therapy"
+                  className="w-full object-cover"
+                />
+              </Link>
             </div>
           </figure>
           <figure className="lg:flex items-center mb-12 lg:mb-2">
             <div className="lg:w-[45%] lg:mr-14 mb-5">
-              <img
-                src={expertsWhy3}
-                alt="Therapy"
-                className="w-full object-cover"
-              />
+              <Link to="/services/couples-therapy">
+                <img
+                  src={expertsWhy3}
+                  alt="Therapy"
+                  className="w-full object-cover"
+                />
+              </Link>
             </div>
             <figcaption className="lg:w-[55%]">
-              <h3 className="text-4xl font-bold text-primary-400 mb-3">
-                Couple Therapy
-              </h3>
+              <Link to="/services/couples-therapy">
+                <h3 className="text-4xl font-bold text-primary-400 mb-3">
+                  Couple Therapy
+                </h3>
+              </Link>
               <p className="text-justify mb-5 font-medium">
                 we believe that every couple is unique, and their therapy should
                 reflect that. Our couple therapy approach is tailored to meet
@@ -208,6 +228,7 @@ function Experts() {
         </div>
 
         <img src={bubbles} alt="" className="absolute top-0 -right-96 -z-10" />
+
         <img
           src={bubbles}
           alt=""
