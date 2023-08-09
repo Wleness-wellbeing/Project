@@ -48,7 +48,7 @@ function Navbar() {
           {/* Menu list */}
           <ul
             className={
-              "absolute xl:static w-72 bg-white top-20 right-4 justify-end xl:space-x-5 xl:flex p-8 xl:p-0 border-2 border-slate-200 xl:border-none xl:w-fit" +
+              "absolute xl:static w-56 bg-white top-20 right-4 justify-end xl:space-x-5 xl:flex p-6 rounded-xl border-[1px] border-slate-100 xl:p-0 shadow-md xl:shadow-none xl:border-none xl:w-fit" +
               (isMenuOpen ? " block " : "  hidden xl:flex ")
             }
           >
@@ -63,7 +63,7 @@ function Navbar() {
               </span>
 
               {/* Submenu */}
-              <ul className="absolute hidden w-60 z-10 rounded-xl border-[1px] border-slate-100 bg-white px-6 py-4 shadow-md group-hover:block">
+              <ul className="absolute hidden w-52 xl:w-60 z-10 rounded-xl border-[1px] border-slate-100 bg-white px-6 py-4 shadow-md group-hover:block">
                 <li>
                   <Link to="/issues" className="menu-link inline-block py-2">
                     Issues
@@ -134,7 +134,7 @@ function Navbar() {
                 Activities <FontAwesomeIcon icon={faAngleDown} />
               </Link>
               {/* Submenu */}
-              <ul className="absolute hidden w-60 z-20 rounded-xl border-[1px] border-slate-100 bg-white px-6 py-4 shadow-md group-hover:block">
+              <ul className="absolute hidden w-52 xl:w-60 z-10 rounded-xl border-[1px] border-slate-100 bg-white px-6 py-4 shadow-md group-hover:block">
                 {activitiesMenu}
                 <li>
                   <Link
