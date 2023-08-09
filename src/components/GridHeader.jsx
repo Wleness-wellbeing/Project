@@ -1,7 +1,17 @@
-import React from "react";
-import { cloudWithDots, therapyHeader } from "../assets";
+import React, { useState } from "react";
 
+import { cloudWithDots, therapyHeader } from "../assets";
+import Assessment from "../components/Assessment";
 export default function GridHeader(props) {
+  const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
+
+  const openAssessmentModal = () => {
+    setShowAssessmentModal(true);
+  };
+
+  const closeAssessmentModal = () => {
+    setShowAssessmentModal(false);
+  };
   return (
     <header className="py-10 relative overflow-x-hidden">
       <div className="container mx-auto ">
@@ -18,7 +28,9 @@ export default function GridHeader(props) {
           renewed well-being.
         </p>
         <div className="text-center">
-          <button className="btn-one">Book an appointment now</button>
+          <button className="btn-one" onClick={openAssessmentModal}>
+            Book an appointment now
+          </button>
         </div>
       </div>
       <img
@@ -30,6 +42,10 @@ export default function GridHeader(props) {
         src={cloudWithDots}
         alt=""
         className="absolute bottom-0 left-0 -z-10 lg:w-96"
+      />
+      <Assessment
+        isAssessmentOpen={isAssessmentModalOpen}
+        onAssessmentClose={closeAssessmentModal}
       />
     </header>
   );

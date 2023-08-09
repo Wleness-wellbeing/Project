@@ -37,9 +37,9 @@ function Navbar() {
     <>
       {/* ========== Navigation Bar ========== */}
       <nav className="sticky top-0 left-0 right-0 bg-white z-20 shadow-sm">
-        <div className="container mx-auto flex items-center justify-between py-4 relative">
+        <div className="container mx-auto flex items-center justify-between relative">
           {/* Logo */}
-          <div className="w-32 xl:w-48 md:w-56 lg:w-64">
+          <div className=" pt-2 w-32 xl:w-48 md:w-56 lg:w-64">
             <Link to="/" className="outline-none">
               <img src={logo} alt="" className="w-full object-cover" />
             </Link>

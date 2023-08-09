@@ -44,7 +44,7 @@ const wlenessWork = [
   },
 ];
 
-export default function Index() {
+export default function Internship() {
   return (
     <>
       <main className="container mx-auto ">
