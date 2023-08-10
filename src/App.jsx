@@ -30,6 +30,8 @@ import SignUp from "./pages/Authentication/SignUp";
 import Login from "./pages/Authentication/Login";
 import DoctorAppointment from "./pages/Experts/DoctorAppointment";
 import Appointment from "./pages/Appointment";
+import Faqs from "./pages/Faqs";
+import Community from "./pages/Community";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -130,6 +132,14 @@ function App() {
           }
         />
         <Route
+          path="/community"
+          element={
+            <Layout>
+              <Community />
+            </Layout>
+          }
+        />
+        <Route
           path="/experts"
           element={
             <Layout>
@@ -202,6 +212,14 @@ function App() {
           element={
             <Layout>
               <Blogs />
+            </Layout>
+          }
+        />
+        <Route
+          path="/faqs"
+          element={
+            <Layout>
+              <Faqs />
             </Layout>
           }
         />

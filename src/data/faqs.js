@@ -182,3 +182,47 @@ export const musicalTherapyFaq = {
     },
   ],
 };
+
+// FAQ's page QNA's
+export const faqs = [
+  {
+    question: "What Is Musical Therapy?",
+    answer:
+      "Wleness is an inclusive online platform dedicated to promoting mental health and wellness.",
+  },
+  {
+    question: "What services does Wleness offer?",
+    answer:
+      "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
+  },
+  {
+    question: "What makes Wleness different from others?",
+    answer:
+      "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
+  },
+  {
+    question: "How can I benefit from using Wleness?",
+    answer:
+      "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
+  },
+  {
+    question: "What makes Wleness different from others?",
+    answer:
+      "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
+  },
+  {
+    question: "How can I benefit from using Wleness?",
+    answer:
+      "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
+  },
+  {
+    question: "What makes Wleness different from others?",
+    answer:
+      "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
+  },
+  {
+    question: "How can I benefit from using Wleness?",
+    answer:
+      "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
+  },
+];

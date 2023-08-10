@@ -103,3 +103,18 @@ a {
 .issue-card {
   @apply mx-auto block w-20 h-20 lg:h-52 lg:w-52 2xl:h-60 2xl:w-60 object-cover;
 }
+.preserve-3d{
+  transform-style: preserve-3d;
+}
+.backface-hidden{
+  backface-visibility: hidden;
+}
+.rotate-y-180{
+  transform: rotateY(180deg);
+}
+.perpective-1000{
+  perspective: 1000px;
+}
+.flip-card:hover{
+  transform: rotateY(180deg);
+}
