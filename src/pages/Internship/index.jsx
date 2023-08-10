@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // Data
 import {
   internshipHeader,
@@ -15,6 +15,7 @@ import {
 import { internshipClients } from "../../data/clients";
 // Components
 import HappyClient from "../../components/HappyClient";
+import InternshipApply from "../../components/InternshipApply";
 
 const wlenessWork = [
   {
@@ -45,6 +46,16 @@ const wlenessWork = [
 ];
 
 export default function Internship() {
+  const [internshipModal, setInternshipModal] = useState(false);
+
+  const openInternshipModal = () => {
+    setInternshipModal(true);
+  };
+
+  const closeInternshipModal = () => {
+    setInternshipModal(false);
+  };
+
   return (
     <>
       <main className="container mx-auto ">
@@ -62,7 +73,9 @@ export default function Internship() {
               If yes, look no further! Join Wleness to embark on a rewarding
               journey promoting well-being and supporting individuals in need.
             </p>
-            <button className="btn-one !text-lg ">Apply Now</button>
+            <button className="btn-one !text-lg" onClick={openInternshipModal}>
+              Apply Now
+            </button>
           </div>
 
           {/* Image on the right */}
@@ -170,6 +183,11 @@ export default function Internship() {
         </div>
       </main>
       <HappyClient data={internshipClients} />
+
+      <InternshipApply
+        isOpen={internshipModal}
+        onClose={closeInternshipModal}
+      />
     </>
   );
 }

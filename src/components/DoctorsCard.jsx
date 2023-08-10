@@ -39,7 +39,7 @@ export default function DoctorsCard(props) {
             <FontAwesomeIcon icon={faIndianRupee} className="text-sm mx-1" />
             {props.data.price}
           </h5>
-          <Link to="/experts/appointment" className="btn-one inline-block">
+          <Link to="/appointment" className="btn-one inline-block">
             Book Now
           </Link>
         </div>

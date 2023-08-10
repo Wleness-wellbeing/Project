@@ -50,6 +50,7 @@ import {
 import Assessment from "../../components/Assessment";
 import { Link } from "react-router-dom";
 import RequestForm from "../../components/RequestForm";
+import Feedback from "../../components/Feedback";
 const faqs = [
   {
     question: "What is Wleness?",
@@ -75,6 +76,7 @@ const faqs = [
 
 export default function Home() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
+  const [isFeedbackOpen, setFeedback] = useState(false);
 
   const openAssessmentModal = () => {
     setShowAssessmentModal(true);
@@ -82,6 +84,14 @@ export default function Home() {
 
   const closeAssessmentModal = () => {
     setShowAssessmentModal(false);
+  };
+
+  const openFeedbackModal = () => {
+    setFeedback(true);
+  };
+
+  const closeFeedbackModal = () => {
+    setFeedback(false);
   };
 
   const [name, setName] = useState("");
@@ -136,10 +146,16 @@ export default function Home() {
             Nurturing mind, body and soul for a lasting fulfillment
           </p>
           <button
-            className="btn-one !w-fit block mx-auto lg:mx-0"
+            className="btn-one !w-fit inline-block mx-auto lg:mx-0 !mr-2"
             onClick={openAssessmentModal}
           >
             Schedule an appointment
+          </button>
+          <button
+            className="btn-one !w-fit inline-block mx-auto lg:mx-0"
+            onClick={openFeedbackModal}
+          >
+            Feedback
           </button>
         </div>
       </header>
@@ -631,6 +647,8 @@ export default function Home() {
         isAssessmentOpen={isAssessmentModalOpen}
         onAssessmentClose={closeAssessmentModal}
       />
+
+      <Feedback isOpen={isFeedbackOpen} onClose={closeFeedbackModal} />
     </>
   );
 }

@@ -444,8 +444,9 @@ export { happyClient1, happyClient2, happyClient3, happyClient4 };
 // FAQ's Section
 import faq1 from "./images/faqs/faq-1.png";
 import faq2 from "./images/faqs/faq-2.png";
+import faq3 from "./images/faqs/faq-3.png";
 
-export { faq1, faq2 };
+export { faq1, faq2, faq3 };
 
 // Blogs Images
 import blogHeader1 from "./images/blogs/blogs-header-1.png";

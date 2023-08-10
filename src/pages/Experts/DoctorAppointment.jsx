@@ -1,6 +1,8 @@
 import React from "react";
-import { bgDotsPattern, doctorAppointment } from "../../assets";
+import { bgDotsPattern, doctorAppointment, faq3 } from "../../assets";
 import StatisticsBlock from "../../components/StatisticsBlock";
+import { Link } from "react-router-dom";
+import Faq from "../../components/layout/Faq";
 
 const doctorsForte = [
   "Evidence based therapy expertise",
@@ -10,11 +12,45 @@ const doctorsForte = [
   "Empathetic & self environment creation",
 ];
 
+const doctorsSuggestions = [
+  "Stay Connected",
+  "Healthy Lifestyle",
+  "Help Others",
+  "Prioritize Self care",
+  "Limit Screen Time",
+  "Seek Professional Help",
+  "Learn To Say No",
+  "Stay Mindfull",
+];
+
+const faqs = [
+  {
+    question: "What is Wleness?",
+    answer:
+      "Wleness is an inclusive online platform dedicated to promoting mental health and wellness.",
+  },
+  {
+    question: "What services does Wleness offer?",
+    answer:
+      "Wleness is an inclusive online platform dedicated to promoting mental health and wellness.",
+  },
+  {
+    question: "What makes Wleness different from others?",
+    answer:
+      "Wleness is an inclusive online platform dedicated to promoting mental health and wellness.",
+  },
+  {
+    question: "How can I benefit from using Wleness?",
+    answer:
+      "Wleness is an inclusive online platform dedicated to promoting mental health and wellness.",
+  },
+];
+
 export default function DoctorAppointment() {
   return (
     <>
       <header className="relative overflow-x-hidden">
-        <div className="container mx-auto py-12">
+        <div className="container mx-auto pt-12 pb-8">
           <h1 className="text-4xl font-bold text-center text-primary-400">
             Appointment Booking
           </h1>
@@ -47,6 +83,12 @@ export default function DoctorAppointment() {
               View More
             </span>
           </div>
+
+          <div className="text-center pt-10">
+            <Link to="/appointment/checkout" className="btn-one inline-block">
+              Book an appointment Now
+            </Link>
+          </div>
         </div>
         <img src={bgDotsPattern} alt="" className="absolute top-0 -right-20" />
         <img
@@ -63,17 +105,17 @@ export default function DoctorAppointment() {
         <StatisticsBlock number={22} suffix="" subtitle="Ongoing Sessions" />
       </section>
 
-      <section className="container mx-auto flex items-center">
+      <section className="container mx-auto flex gap-x-6">
         <div className="w-1/2">
-          <h2 className="text-3xl font-bold mb-5">
+          <h2 className="text-4xl font-bold mb-10 text-center">
             Doctor's Main <span className="heading-primary">Forte</span>
           </h2>
-          <div>
+          <div className="flex flex-wrap gap-3 justify-center">
             {doctorsForte.map((value, index) => {
               return (
                 <span
                   key={index}
-                  className="p-4 rounded-xl border-2 border-secondary font-semibold"
+                  className="py-3 px-5 rounded-xl border-2 border-primary-300 font-semibold"
                 >
                   {value}
                 </span>
@@ -82,15 +124,51 @@ export default function DoctorAppointment() {
           </div>
         </div>
         <div className="w-1/2">
-          <h2 className="text-3xl font-bold mb-5">
+          <h2 className="text-4xl font-bold mb-10 text-center">
             Doctor's Main <span className="heading-primary">Suggestion's</span>
           </h2>
-          <div>
-            <span>Evidence based therapy expertise</span>
-            <span>Holistic approach to wellness</span>
-            <span>Coping skill cultivation</span>
-            <span>Resilience</span>
-            <span>Empathetic & self environment creation</span>
+          <div className="flex flex-wrap gap-3 justify-center">
+            {doctorsSuggestions.map((value, index) => {
+              return (
+                <span
+                  key={index}
+                  className="py-3 px-5 rounded-xl border-2 text-white border-primary-300 bg-primary-300 font-semibold"
+                >
+                  {value}
+                </span>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="container mx-auto pt-12">
+        <h4 className="text-4xl font-bold text-center pb-6">
+          <span>Looking for different service </span>
+          <Link to="" className="heading-primary underline inline-block">
+            Click Here
+          </Link>
+        </h4>
+
+        <div className="flex py-10">
+          <div className="w-1/2 pr-10">
+            <h2 className="heading-primary text-6xl font-bold inline-block pb-2">
+              FAQ's
+            </h2>
+            <p className="font-semibold my-5 text-lg">
+              Everything you need to know right here at Wleness. Ask questions
+              and browse around for answers.
+            </p>
+            <div>
+              <img src={faq3} alt="" className="w-96" />
+            </div>
+            <button className="btn-one">Goes to FAQ's</button>
+          </div>
+
+          <div className="w-1/2 space-y-4">
+            {faqs.map((value, index) => {
+              return <Faq question={value.question} answer={value.answer} />;
+            })}
           </div>
         </div>
       </section>
