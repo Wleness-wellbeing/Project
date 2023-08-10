@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { logo, signup } from "../../assets";
 import axios from "axios";
+// import GoogleLogin from "react-google-login";
 
 export default function Signup() {
   const [name, setName] = useState("");
@@ -45,7 +46,7 @@ export default function Signup() {
         console.log(res.data);
         if (res.data.status === "ok") {
           alert("Registration Successful! Please proceed to login.");
-          navigate("/patient-login");
+          navigate("/login");
         } else {
           alert("Something went wrong");
         }
@@ -93,7 +94,7 @@ export default function Signup() {
       <aside className="md:w-1/2 hidden md:flex justify-center items-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-right bg-no-repeat bg-contain">
         <img src={signup} alt="" className="block object-cover w-[648px]" />
       </aside>
-
+      {/* <GoogleLogin /> */}
       {/* Right Content */}
       <div className="md:w-1/2 flex justify-center items-center px-4">
         <div className="sm:w-[440px] w-full">

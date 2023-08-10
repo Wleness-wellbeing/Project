@@ -5,6 +5,7 @@ function RequestForm() {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [date, setDate] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -19,14 +20,13 @@ function RequestForm() {
       const response = await fetch("http://localhost:3000/submit-form", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json", // Set the content type to JSON
         },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
-        console.log("Form data submitted successfully");
-        console.log("Submitted Form Data:", formData); // Print the form data
+        setSuccessMessage("Form data submitted successfully!"); // Update success message
       } else {
         console.error("Error submitting form data");
       }
@@ -70,25 +70,33 @@ function RequestForm() {
           <input
             type="text"
             placeholder="Enter Your Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             className="px-6 block py-4 w-full rounded-md shadow-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:bg-white"
           />
         </label>
         <label className="mb-6">
           <input
-            type="digit"
-            placeholder="Your number "
+            type="tel" // Use "tel" for phone numbers
+            placeholder="Your number"
+            value={number}
+            onChange={(e) => setNumber(e.target.value)}
             className="px-6 block py-4 w-full rounded-md shadow-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:bg-white"
           />
         </label>
-        <label className="mb-6">
+        <label className="mb-2">
           <input
-            rows={3}
             type="date"
             placeholder="Date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
             className="px-6 block py-4 w-full rounded-md shadow-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:bg-white"
           />
         </label>
-        <button type="submit" className="btn-one mx-auto">
+        {successMessage && (
+          <p className="text-green-500 text-center">{successMessage}</p>
+        )}
+        <button type="submit" className="btn-one mt-4 mx-auto">
           Submit
         </button>
       </form>
