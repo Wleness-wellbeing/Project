@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Data
 import { activities, brainExercise } from "./data";
+import { issuesData } from "./data/issues";
 // Components
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -32,7 +33,6 @@ import DoctorAppointment from "./pages/Experts/DoctorAppointment";
 import Appointment from "./pages/Appointment";
 import Faqs from "./pages/Faqs";
 import Community from "./pages/Community";
-import { issueSubpages } from "./data/navigation";
 import IssueSubPageLayout from "./pages/Issues/IssueSubPageLayout";
 
 function App() {
@@ -183,14 +183,19 @@ function App() {
           }
         />
         {/* Issues Subpages */}
-        {issueSubpages.map((value, index) => {
+        {issuesData.map((value, index) => {
           return (
             <Route
               key={index}
-              path={value[1]}
+              path={value.slug}
               element={
                 <Layout>
-                  <IssueSubPageLayout />
+                  <IssueSubPageLayout
+                    header={value.header}
+                    symptoms={value.symptoms}
+                    doctors={value.doctors}
+                    quote={value.quote}
+                  />
                 </Layout>
               }
             />

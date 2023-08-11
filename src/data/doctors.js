@@ -251,3 +251,63 @@ export const allExperts = [
     speaks: "German, English",
   },
 ];
+
+export const stressDoctors = {
+  heading: [
+    {
+      color: false,
+      text: "Speak to our ",
+    },
+    {
+      color: true,
+      text: " Specialist",
+    },
+  ],
+  desc: "",
+  doctors: [
+    {
+      name: "Dr. Christina",
+      image: doctor1,
+      exp: "6+ years of experience",
+      expertise: "Yoga, work-life",
+      speaks: "German, English",
+      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
+    },
+    {
+      name: "Dr. Christina",
+      image: doctor1,
+      exp: "6+ years of experience",
+      expertise: "Yoga, work-life",
+      speaks: "German, English",
+      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
+    },
+    {
+      name: "Dr. Christina",
+      image: doctor1,
+      exp: "6+ years of experience",
+      expertise: "Yoga, work-life",
+      speaks: "German, English",
+      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-105",
+    },
+    {
+      name: "Dr. Christina",
+      image: doctor1,
+      exp: "6+ years of experience",
+      expertise: "Yoga, work-life",
+      speaks: "German, English",
+      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
+    },
+    {
+      name: "Dr. Christina",
+      image: doctor1,
+      exp: "6+ years of experience",
+      expertise: "Yoga, work-life",
+      speaks: "German, English",
+      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
+    },
+  ],
+  button: {
+    text: "Book Now",
+    slug: "/experts/all",
+  },
+};

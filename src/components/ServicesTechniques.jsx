@@ -17,7 +17,7 @@ export default function ServicesTechniques(props) {
           </h4>
           <p className="pb-2 text-justify">{value.desc}</p>
           <div className="text-center mt-2">
-            <button className="btn-one !py-2">Book Now</button>
+            <button className="btn-one !py-2">Subscribe</button>
           </div>
         </figcaption>
       </figure>

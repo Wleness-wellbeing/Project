@@ -23,19 +23,3 @@ export const menuPages = [
   ["Faqs", "/faqs"],
   ["Avatar", "/avatar"],
 ];
-
-// Issues subpages
-export const issueSubpages = [
-  ["Stress", "/issues/stress"],
-  ["Depression", "/issues/depression"],
-  ["Panic Attacks", "/issues/panic-attacks"],
-  ["Anxiety", "/issues/anxiety"],
-  ["OCD", "/issues/ocd"],
-  ["Biopolar Disorder", "/issues/biopolar-disorder"],
-  ["Schizophrenia", "/issues/schizophrenia"],
-  ["Eating Disorder", "/issues/eating-disorder"],
-  ["Paranoia", "/issues/paranoia"],
-  ["ADHD", "/issues/adhd"],
-  ["ODD", "/issues/odd"],
-  ["CD", "/issues/cd"],
-];

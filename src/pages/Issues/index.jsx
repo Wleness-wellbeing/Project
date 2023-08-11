@@ -2,6 +2,7 @@ import React from "react";
 import { issuesHeader } from "../../assets";
 import { issues } from "../../data";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Issues() {
   return (
@@ -126,39 +127,6 @@ function Issues() {
           <div className="grid gap-4 py-6 pt-8 lg:pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-12 xl:gap-10 xl:pb-16 2xl:gap-16 2xl:w-[95%] mx-auto">
             {issues.map((value, index) => {
               return (
-                // <div className="flip-card">
-                //   <div className="flip-inner">
-                //     <div className="backface-hidden bg-slate-200">
-                //       <div>
-                //         <h4 className="text-center lg:text-2xl font-semibold mb-2">
-                //           {value.name}
-                //         </h4>
-                //         <img
-                //           src={value.image}
-                //           alt=""
-                //           className="mx-auto block w-24 h-24 lg:h-40 lg:w-40 object-cover rounded-2xl 2xl:w-48 2xl:h-48 mb-4"
-                //         />
-                //         <div className="text-center">
-                //           <button className="btn-one">Book Now</button>
-                //         </div>
-                //       </div>
-                //     </div>
-                //     <div className="rotate-y-180 absolute inset-0 bg-white">
-                //       <div className="user-details">
-                //         <h2>Farina Azad</h2>
-                //         <h4>Age: 25</h4>
-                //         <h4>Location: Coimbatore</h4>
-                //         <p>
-                //           Lorem ipsum dolor sit amet consectetur adipisicing
-                //           elit. Ducimus fuga, reiciendis ex animi laborum
-                //           aperiam placeat dolorem? Id libero delectus facere
-                //           commodi nulla soluta eligendi ratione, vitae, ducimus,
-                //           quas nobis!
-                //         </p>
-                //       </div>
-                //     </div>
-                //   </div>
-                // </div>
                 <div
                   className="flip-card bg-transparent w-80 h-96 perspective-1000"
                   key={index}
