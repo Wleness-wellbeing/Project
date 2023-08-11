@@ -30,6 +30,10 @@ import SignUp from "./pages/Authentication/SignUp";
 import Login from "./pages/Authentication/Login";
 import DoctorAppointment from "./pages/Experts/DoctorAppointment";
 import Appointment from "./pages/Appointment";
+import Faqs from "./pages/Faqs";
+import Community from "./pages/Community";
+import { issueSubpages } from "./data/navigation";
+import IssueSubPageLayout from "./pages/Issues/IssueSubPageLayout";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -50,8 +54,9 @@ function App() {
       />
     );
   });
+
   // Activity Subpages Routing - Yoga subpages
-  const activitiesInnerSubpages = activities.map((value, index) => {
+  const activitiesInnerSubpages = activities.map((value) => {
     const innerSubPages = value.activities.types.map((key, i) => {
       return (
         <Route
@@ -130,6 +135,14 @@ function App() {
           }
         />
         <Route
+          path="/community"
+          element={
+            <Layout>
+              <Community />
+            </Layout>
+          }
+        />
+        <Route
           path="/experts"
           element={
             <Layout>
@@ -169,6 +182,20 @@ function App() {
             </Layout>
           }
         />
+        {/* Issues Subpages */}
+        {issueSubpages.map((value, index) => {
+          return (
+            <Route
+              key={index}
+              path={value[1]}
+              element={
+                <Layout>
+                  <IssueSubPageLayout />
+                </Layout>
+              }
+            />
+          );
+        })}
         <Route
           path="/internship"
           element={
@@ -202,6 +229,14 @@ function App() {
           element={
             <Layout>
               <Blogs />
+            </Layout>
+          }
+        />
+        <Route
+          path="/faqs"
+          element={
+            <Layout>
+              <Faqs />
             </Layout>
           }
         />

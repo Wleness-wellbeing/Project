@@ -216,6 +216,8 @@ import feature5 from "./images/features/feature-5.png";
 import feature6 from "./images/features/feature-6.png";
 import feature7 from "./images/features/feature-7.png";
 import feature8 from "./images/features/feature-8.png";
+import feature9 from "./images/features/feature-9.png";
+import feature10 from "./images/features/feature-10.png";
 
 export {
   feature1,
@@ -226,6 +228,8 @@ export {
   feature6,
   feature7,
   feature8,
+  feature9,
+  feature10,
 };
 
 // Experts Images
@@ -398,6 +402,8 @@ import issuePanicAttack from "./images/issues/issue-panic-attack.png";
 import issueParanoia from "./images/issues/issue-paranoia.png";
 import issueSchizophrenia from "./images/issues/issue-schizophrenia.png";
 import issueStress from "./images/issues/issue-stress.png";
+// Issues >> Subpages header
+// import stressHeader from " "
 
 export {
   issuesHeader,
@@ -445,8 +451,9 @@ export { happyClient1, happyClient2, happyClient3, happyClient4 };
 import faq1 from "./images/faqs/faq-1.png";
 import faq2 from "./images/faqs/faq-2.png";
 import faq3 from "./images/faqs/faq-3.png";
+import faq3Lg from "./images/faqs/faq-3-lg.png";
 
-export { faq1, faq2, faq3 };
+export { faq1, faq2, faq3, faq3Lg };
 
 // Blogs Images
 import blogHeader1 from "./images/blogs/blogs-header-1.png";
@@ -514,6 +521,33 @@ import bgDotsPattern from "./images/designs/bg-dots-pattern.png";
 import bubbleDoodles from "./images/designs/bubble-doodle.png";
 
 export { bgDotsPattern, bubbleDoodles };
+
+// Community
+import communityHeader from "./images/community/community-header.png";
+import community1 from "./images/community/community-1.png";
+import community2 from "./images/community/community-2.png";
+import community3 from "./images/community/community-3.png";
+import community4 from "./images/community/community-4.png";
+import communitySupport1 from "./images/community/community-support-1.png";
+import communitySupport2 from "./images/community/community-support-2.png";
+import communitySupport3 from "./images/community/community-support-3.png";
+import communitySupport4 from "./images/community/community-support-4.png";
+import communitySupport5 from "./images/community/community-support-5.png";
+import communitySupport6 from "./images/community/community-support-6.png";
+
+export {
+  communityHeader,
+  community1,
+  community2,
+  community3,
+  community4,
+  communitySupport1,
+  communitySupport2,
+  communitySupport3,
+  communitySupport4,
+  communitySupport5,
+  communitySupport6,
+};
 
 // Other Images
 import doctorLogin from "./images/doctor-login.png";

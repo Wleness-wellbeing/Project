@@ -1,11 +1,17 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import JoinUs from "../JoinUs";
 // Data
 import { logo } from "../../assets";
-import { activities, brainExercise } from "../../data";
+import MenuLink from "../links/MenuLink";
+import SubmenuLink from "../links/SubmenuLink";
+import {
+  activitiesMenuPages,
+  menuPages,
+  serviceMenuPages,
+} from "../../data/navigation";
 
 function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -22,16 +28,6 @@ function Navbar() {
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
-
-  const activitiesMenu = activities.map((value, index) => {
-    return (
-      <li key={index}>
-        <Link to={value.slug} className="menu-link inline-block py-2">
-          {value.name}
-        </Link>
-      </li>
-    );
-  });
 
   return (
     <>
@@ -52,110 +48,25 @@ function Navbar() {
               (isMenuOpen ? " block " : "  hidden xl:flex ")
             }
           >
-            <li>
-              <Link to="/about-us" className="menu-link">
-                About
-              </Link>
-            </li>
-            <li className="group relative inline-block">
-              <span to="/services" className="menu-link cursor-pointer">
-                Services <FontAwesomeIcon icon={faAngleDown} />
-              </span>
-
-              {/* Submenu */}
-              <ul className="absolute hidden w-52 xl:w-60 z-10 rounded-xl border-[1px] border-slate-100 bg-white px-6 py-4 shadow-md group-hover:block">
-                <li>
-                  <Link to="/issues" className="menu-link inline-block py-2">
-                    Issues
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/services/therapy"
-                    className="menu-link inline-block py-2"
-                  >
-                    Therapy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/services/psychiatrist"
-                    className="menu-link inline-block py-2"
-                  >
-                    Psychiatrist
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/services/musical-therapy"
-                    className="menu-link inline-block py-2"
-                  >
-                    Musical Therapy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/services/couples-therapy"
-                    className="menu-link inline-block py-2"
-                  >
-                    Couples Therapy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/services/self-care"
-                    className="menu-link inline-block py-2"
-                  >
-                    Self-Care
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/services/community"
-                    className="menu-link inline-block py-2"
-                  >
-                    Community
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <Link to="/experts" className="menu-link">
-                Experts
-              </Link>
-            </li>
-            <li>
-              <Link to="/internship" className="menu-link">
-                Internship
-              </Link>
-            </li>
-            <li className="group relative inline-block">
-              <Link to="/activities" className="menu-link">
-                Activities <FontAwesomeIcon icon={faAngleDown} />
-              </Link>
-              {/* Submenu */}
-              <ul className="absolute hidden w-52 xl:w-60 z-10 rounded-xl border-[1px] border-slate-100 bg-white px-6 py-4 shadow-md group-hover:block">
-                {activitiesMenu}
-                <li>
-                  <Link
-                    to={brainExercise.slug}
-                    className="menu-link inline-block py-2"
-                  >
-                    {brainExercise.name}
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <Link to="/blogs" className="menu-link">
-                Blogs
-              </Link>
-            </li>
-            <li>
-              <Link to="/corporate" className="menu-link">
-                Corporate
-              </Link>
-            </li>
+            <MenuLink url="/about-us" text="About Us" />
+            <SubmenuLink
+              url="javascript:void()"
+              text="Services"
+              pages={serviceMenuPages}
+            />
+            <MenuLink url="/experts" text="Experts" />
+            <MenuLink url="/internship" text="Internship" />
+            <MenuLink url="/blogs" text="Blogs" />
+            <SubmenuLink
+              url="/activities"
+              text="Activities"
+              pages={activitiesMenuPages}
+            />
+            <SubmenuLink
+              url="javascript:void()"
+              text="Pages"
+              pages={menuPages}
+            />
           </ul>
 
           {/* Authentication */}

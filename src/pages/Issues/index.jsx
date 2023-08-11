@@ -1,13 +1,12 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { issuesHeader } from "../../assets";
 import { issues } from "../../data";
+import { Link } from "react-router-dom";
 
 function Issues() {
   return (
     <>
-      <header className="container mx-auto flex flex-col items-center rounded-3xl !px-5 py-2 lg:py-6 lg:flex-row 2xl:justify-between 2xl:pt-14 2xl:pb-10">
+      <header className="container mx-auto flex flex-col items-center rounded-3xl !px-5 py-2 lg:py-6 lg:flex-row 2xl:justify-between 2xl:pt-14 2xl:pb-0">
         <h1 className="subheading mb-4 text-center lg:text-left lg:leading-[4rem] lg:hidden">
           <span className="heading-primary block lg:inline-block pb-1">
             Facing Issues
@@ -28,38 +27,49 @@ function Issues() {
             </h1>
           </hgroup>
           <p className="mb-8 text-justify font-semibold">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
-            placeat cumque! Ducimus quis nulla, distinctio magni laudantium
-            ipsam quam, obcaecati est consequatur accusantium at unde? Optio
-            quas est ex aliquam.
+            Mental health is just as important as physical health; seeking help
+            is a sign of strength. Our team of top therapists understands that
+            everyone's mental health journey is different and strives to provide
+            individualized care and support. We can help you find the resources
+            and support you need to improve your mental well-being.
           </p>
-          <form className="lg:flex lg:space-x-3 space-y-3 lg:space-y-0">
-            <label
-              htmlFor="search"
-              className="flex w-full border-2 border-slate-300 rounded-2xl pr-5"
-            >
-              <input
-                type="search"
-                name="search"
-                id="search"
-                placeholder="Search"
-                className="w-full p-4 pl-5 h-full outline-none bg-transparent"
-              />
-              <button type="submit" className="outline-none">
-                <FontAwesomeIcon
-                  icon={faSearch}
-                  className="text-slate-400 transition-all hover:text-slate-600"
-                />
-              </button>
-            </label>
-          </form>
         </div>
       </header>
 
-      <section className="container mx-auto lg:py-10 p-4 xl:pt-2">
+      <section className="container mx-auto lg:py-10 p-4 xl:pt-0">
+        <div className="flex justify-center mb-6">
+          <span className="text-3xl font-semibold text-primary-300">
+            Find a Therapist in
+          </span>
+          <select
+            name="languages"
+            id="languages-select"
+            className="px-3 py-1.5 border-2 border-primary-300 rounded-full outline-none mx-2 w-fit text-primary-300 font-semibold cursor-pointer"
+          >
+            <option value="">Your Language</option>
+            <option value="hindi">Hindi</option>
+            <option value="english">English</option>
+            <option value="marathi">Marathi</option>
+          </select>
+          <span className="text-3xl font-semibold text-primary-300">in </span>
+          <select
+            name="issues"
+            id="issues-select"
+            className="px-3 py-1.5 border-2 border-primary-300 rounded-full outline-none mx-2 w-fit text-primary-300 font-semibold cursor-pointer"
+          >
+            <option value="">Your Issue</option>
+            <option value="stress">Stress</option>
+            <option value="depression">Depression</option>
+            <option value="panic-attacks">Panic Attacks</option>
+            <option value="anxiety">Anxiety</option>
+            <option value="ocd">OCD</option>
+            <option value="biopolar-disorder">Biopolar Disorder</option>
+          </select>
+        </div>
         <h2 className="subheading text-center heading-primary">
           Most Common Health Issues
         </h2>
+
         <ul className="flex flex-wrap gap-x-4 gap-y-6 py-4 2xl:pt-8 justify-center">
           <li>
             <a
@@ -110,22 +120,78 @@ function Issues() {
             </a>
           </li>
         </ul>
-
+        {/* https://www.w3schools.com/howto/howto_css_flip_card.asp - Flip card */}
         {/* Issues */}
         <div className="pb-8">
-          <div className="grid gap-4 py-6 pt-8 lg:pt-8 grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-12 xl:gap-10 xl:pb-16">
-            {issues.map((value) => {
+          <div className="grid gap-4 py-6 pt-8 lg:pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-12 xl:gap-10 xl:pb-16 2xl:gap-16 2xl:w-[95%] mx-auto">
+            {issues.map((value, index) => {
               return (
-                <div className="bg-gradient-to-r overflow-hidden from-secondary via-tertiary to-primary-300 rounded-2xl rounded-br-[5rem] lg:rounded-br-[8rem] hover:shadow-xl shadow-slate-300">
-                  <div className="py-4 lg:py-6 bg-white m-1 rounded-2xl rounded-br-[5rem] lg:rounded-br-[8rem]">
-                    <h4 className="text-center lg:text-2xl font-semibold mb-5">
-                      {value.name}
-                    </h4>
-                    <img
-                      src={value.image}
-                      alt=""
-                      className="mx-auto block w-24 h-24 lg:h-40 lg:w-40 object-cover rounded-2xl 2xl:w-52 2xl:h-52"
-                    />
+                // <div className="flip-card">
+                //   <div className="flip-inner">
+                //     <div className="backface-hidden bg-slate-200">
+                //       <div>
+                //         <h4 className="text-center lg:text-2xl font-semibold mb-2">
+                //           {value.name}
+                //         </h4>
+                //         <img
+                //           src={value.image}
+                //           alt=""
+                //           className="mx-auto block w-24 h-24 lg:h-40 lg:w-40 object-cover rounded-2xl 2xl:w-48 2xl:h-48 mb-4"
+                //         />
+                //         <div className="text-center">
+                //           <button className="btn-one">Book Now</button>
+                //         </div>
+                //       </div>
+                //     </div>
+                //     <div className="rotate-y-180 absolute inset-0 bg-white">
+                //       <div className="user-details">
+                //         <h2>Farina Azad</h2>
+                //         <h4>Age: 25</h4>
+                //         <h4>Location: Coimbatore</h4>
+                //         <p>
+                //           Lorem ipsum dolor sit amet consectetur adipisicing
+                //           elit. Ducimus fuga, reiciendis ex animi laborum
+                //           aperiam placeat dolorem? Id libero delectus facere
+                //           commodi nulla soluta eligendi ratione, vitae, ducimus,
+                //           quas nobis!
+                //         </p>
+                //       </div>
+                //     </div>
+                //   </div>
+                // </div>
+                <div
+                  className="flip-card bg-transparent w-80 h-96 perspective-1000"
+                  key={index}
+                >
+                  <div className="flip-card-inner">
+                    {/* Front */}
+                    <div className="bg-gradient-to-br p-1 from-secondary to-tertiary flip-card-front rounded-2xl">
+                      <div className="bg-[#FAFCE7] h-full rounded-2xl flex flex-col items-center justify-center">
+                        <h3 className="font-bold text-center text-2xl">
+                          {value.name}
+                        </h3>
+                        <img
+                          src={value.image}
+                          alt="Avatar"
+                          className="mx-auto block w-24 h-24 lg:h-40 lg:w-40 object-cover rounded-2xl 2xl:w-48 2xl:h-48 mb-4"
+                        />
+                        <button className="btn-one">Book Now</button>
+                      </div>
+                    </div>
+                    {/* Back */}
+                    <div className="bg-gradient-to-br p-1 from-secondary to-tertiary flip-card-back rounded-2xl">
+                      <div className="bg-[#FAFCE7] h-full rounded-2xl flex flex-col items-center justify-center p-4">
+                        <p className="para mb-6">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing
+                          elit. Dolorum eos maxime quas quisquam sequi quis,
+                          nostrum iste laboriosam corporis amet ad, atque sit
+                          aspernatur ullam, placeat eum! Quis, nesciunt enim?
+                        </p>
+                        <Link to={value.slug} className="btn-one">
+                          Take Assessment
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 </div>
               );
@@ -141,3 +207,38 @@ function Issues() {
 }
 
 export default Issues;
+
+{
+  /* <div className="perpective-1000 flip-container">
+  <div className="preserve-3d flip-card relative">
+    <div className="relative preserve-3d">
+      <div className="bg-gradient-to-r overflow-hidden from-secondary via-tertiary to-primary-300 rounded-2xl rounded-br-[5rem] lg:rounded-br-[5rem] hover:shadow-xl shadow-slate-300 cursor-pointer backface-hidden transition-transform">
+        <div className="py-4 lg:py-6 bg-[#FAFCE7] m-1 rounded-2xl rounded-br-[5rem] lg:rounded-br-[5rem]">
+          <h4 className="text-center lg:text-2xl font-semibold mb-2">
+            {value.name}
+          </h4>
+          <img
+            src={value.image}
+            alt=""
+            className="mx-auto block w-24 h-24 lg:h-40 lg:w-40 object-cover rounded-2xl 2xl:w-48 2xl:h-48 mb-4"
+          />
+          <div className="text-center">
+            <button className="btn-one">Book Now</button>
+          </div>
+        </div>
+      </div>
+      <div className="bg-gradient-to-r overflow-hidden from-secondary via-tertiary to-primary-300 rounded-2xl rounded-br-[5rem] lg:rounded-br-[5rem] hover:shadow-xl shadow-slate-300 cursor-pointer absolute inset-0 rotate-y-180 backface-hidden transition-transform">
+        <div className="py-4 lg:py-6 bg-[#FAFCE7] m-1 rounded-2xl rounded-br-[5rem] lg:rounded-br-[5rem]">
+          <h6 className="text-center font-semibold mb-2">
+            Depression is a mental health condition characterized by persistent
+            feelings of sadness, loss of interest, and a lack of energy.
+          </h6>
+          <div className="text-center">
+            <button className="btn-one">Book then</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>; */
+}
