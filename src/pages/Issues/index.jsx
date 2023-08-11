@@ -1,12 +1,12 @@
 import React from "react";
 import { issuesHeader } from "../../assets";
 import { issues } from "../../data";
-import "../../assets/css/flip-card.css";
+import { Link } from "react-router-dom";
 
 function Issues() {
   return (
     <>
-      <header className="container mx-auto flex flex-col items-center rounded-3xl !px-5 py-2 lg:py-6 lg:flex-row 2xl:justify-between 2xl:pt-14 2xl:pb-10">
+      <header className="container mx-auto flex flex-col items-center rounded-3xl !px-5 py-2 lg:py-6 lg:flex-row 2xl:justify-between 2xl:pt-14 2xl:pb-0">
         <h1 className="subheading mb-4 text-center lg:text-left lg:leading-[4rem] lg:hidden">
           <span className="heading-primary block lg:inline-block pb-1">
             Facing Issues
@@ -69,6 +69,7 @@ function Issues() {
         <h2 className="subheading text-center heading-primary">
           Most Common Health Issues
         </h2>
+
         <ul className="flex flex-wrap gap-x-4 gap-y-6 py-4 2xl:pt-8 justify-center">
           <li>
             <a
@@ -122,40 +123,73 @@ function Issues() {
         {/* https://www.w3schools.com/howto/howto_css_flip_card.asp - Flip card */}
         {/* Issues */}
         <div className="pb-8">
-          <div className="grid gap-4 py-6 pt-8 lg:pt-8 grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-12 xl:gap-10 xl:pb-16 2xl:gap-16 2xl:w-[95%] mx-auto">
-            {issues.map((value) => {
+          <div className="grid gap-4 py-6 pt-8 lg:pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-12 xl:gap-10 xl:pb-16 2xl:gap-16 2xl:w-[95%] mx-auto">
+            {issues.map((value, index) => {
               return (
-                <div className="card-container">
-                  <div className="card">
-                    <div className="card-inner">
-                      <div className="card-front">
-                        <div className="card-content">
-                          <h4 className="text-center lg:text-2xl font-semibold mb-2">
-                            {value.name}
-                          </h4>
-                          <img
-                            src={value.image}
-                            alt=""
-                            className="mx-auto block w-24 h-24 lg:h-40 lg:w-40 object-cover rounded-2xl 2xl:w-48 2xl:h-48 mb-4"
-                          />
-                          <div className="text-center">
-                            <button className="btn-one">Book Now</button>
-                          </div>
-                        </div>
+                // <div className="flip-card">
+                //   <div className="flip-inner">
+                //     <div className="backface-hidden bg-slate-200">
+                //       <div>
+                //         <h4 className="text-center lg:text-2xl font-semibold mb-2">
+                //           {value.name}
+                //         </h4>
+                //         <img
+                //           src={value.image}
+                //           alt=""
+                //           className="mx-auto block w-24 h-24 lg:h-40 lg:w-40 object-cover rounded-2xl 2xl:w-48 2xl:h-48 mb-4"
+                //         />
+                //         <div className="text-center">
+                //           <button className="btn-one">Book Now</button>
+                //         </div>
+                //       </div>
+                //     </div>
+                //     <div className="rotate-y-180 absolute inset-0 bg-white">
+                //       <div className="user-details">
+                //         <h2>Farina Azad</h2>
+                //         <h4>Age: 25</h4>
+                //         <h4>Location: Coimbatore</h4>
+                //         <p>
+                //           Lorem ipsum dolor sit amet consectetur adipisicing
+                //           elit. Ducimus fuga, reiciendis ex animi laborum
+                //           aperiam placeat dolorem? Id libero delectus facere
+                //           commodi nulla soluta eligendi ratione, vitae, ducimus,
+                //           quas nobis!
+                //         </p>
+                //       </div>
+                //     </div>
+                //   </div>
+                // </div>
+                <div
+                  className="flip-card bg-transparent w-80 h-96 perspective-1000"
+                  key={index}
+                >
+                  <div className="flip-card-inner">
+                    {/* Front */}
+                    <div className="bg-gradient-to-br p-1 from-secondary to-tertiary flip-card-front rounded-2xl">
+                      <div className="bg-[#FAFCE7] h-full rounded-2xl flex flex-col items-center justify-center">
+                        <h3 className="font-bold text-center text-2xl">
+                          {value.name}
+                        </h3>
+                        <img
+                          src={value.image}
+                          alt="Avatar"
+                          className="mx-auto block w-24 h-24 lg:h-40 lg:w-40 object-cover rounded-2xl 2xl:w-48 2xl:h-48 mb-4"
+                        />
+                        <button className="btn-one">Book Now</button>
                       </div>
-                      <div className="card-back card-content">
-                        <div className="user-details">
-                          <h2>Farina Azad</h2>
-                          <h4>Age: 25</h4>
-                          <h4>Location: Coimbatore</h4>
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Ducimus fuga, reiciendis ex animi laborum
-                            aperiam placeat dolorem? Id libero delectus facere
-                            commodi nulla soluta eligendi ratione, vitae,
-                            ducimus, quas nobis!
-                          </p>
-                        </div>
+                    </div>
+                    {/* Back */}
+                    <div className="bg-gradient-to-br p-1 from-secondary to-tertiary flip-card-back rounded-2xl">
+                      <div className="bg-[#FAFCE7] h-full rounded-2xl flex flex-col items-center justify-center p-4">
+                        <p className="para mb-6">
+                          Lorem ipsum dolor sit, amet consectetur adipisicing
+                          elit. Dolorum eos maxime quas quisquam sequi quis,
+                          nostrum iste laboriosam corporis amet ad, atque sit
+                          aspernatur ullam, placeat eum! Quis, nesciunt enim?
+                        </p>
+                        <Link to={value.slug} className="btn-one">
+                          Take Assessment
+                        </Link>
                       </div>
                     </div>
                   </div>

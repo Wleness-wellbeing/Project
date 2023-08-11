@@ -87,50 +87,62 @@ export const issues = [
   {
     name: "Anxiety",
     image: issueAnxiety,
+    slug: "/issues/anxiety",
   },
   {
     name: "ADHD",
     image: issueAdhd,
+    slug: "/issues/adhd",
   },
   {
     name: "Bio polar disorder",
     image: issueBiopolarDisorder,
+    slug: "/issues/biopolar-disorder",
   },
   {
     name: "CD",
     image: issueCd,
+    slug: "/issues/cd",
   },
   {
     name: "Depression",
     image: issueDepression,
+    slug: "/issues/depression",
   },
   {
     name: "Eating Disorder",
     image: issueEatingDisorder,
+    slug: "/issues/eating-disorder",
   },
   {
     name: "OCD",
     image: issueOcd,
+    slug: "/issues/ocd",
   },
   {
     name: "ODD",
     image: issueOdd,
+    slug: "/issues/odd",
   },
   {
     name: "Panic Attack",
     image: issuePanicAttack,
+    slug: "/issues/panic-attack",
   },
   {
     name: "Paranoia",
     image: issueParanoia,
+    slug: "/issues/paranoia",
   },
   {
     name: "Schizophrenia",
     image: issueSchizophrenia,
+    slug: "/issues/schizophrenia",
   },
   {
     name: "Stress",
     image: issueStress,
+    slug: "/issues/stress",
   },
 ];
 
@@ -918,7 +930,6 @@ export const activities = [
     name: "Sadhna",
     slug: "/activities/sadhna",
     header: {
-      title: ":",
       title: [
         {
           color: true,
@@ -1020,6 +1031,7 @@ export const activities = [
     ],
   },
 ];
+
 export const brainExercise = {
   id: 1,
   name: "Brain Exercise",

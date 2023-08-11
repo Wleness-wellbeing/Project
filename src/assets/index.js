@@ -402,6 +402,8 @@ import issuePanicAttack from "./images/issues/issue-panic-attack.png";
 import issueParanoia from "./images/issues/issue-paranoia.png";
 import issueSchizophrenia from "./images/issues/issue-schizophrenia.png";
 import issueStress from "./images/issues/issue-stress.png";
+// Issues >> Subpages header
+// import stressHeader from " "
 
 export {
   issuesHeader,

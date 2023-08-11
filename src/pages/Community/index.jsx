@@ -8,6 +8,10 @@ import {
   communityHeader,
   communitySupport1,
   communitySupport2,
+  communitySupport3,
+  communitySupport4,
+  communitySupport5,
+  communitySupport6,
 } from "../../assets";
 
 const communitySupport = [
@@ -22,24 +26,24 @@ const communitySupport = [
     desc: "Connect with others & experience the transformative power of support and understanding. You will find the strength & personal growth needed to navigate the challenges of depression,",
   },
   {
-    title: "Dealing with addiction",
-    image: communitySupport1,
-    desc: "Discover a supportive community of individuals overcoming addiction, and provide believe,  encouragement & understanding as you take steps toward a healthier and happier life.",
+    title: "Tackling Anxiety",
+    image: communitySupport3,
+    desc: "Embrace the strength of togetherness & find support among others tackling anxiety. Let’s share experiences & provide understanding, empowering each other to overcome anxiety.",
   },
   {
-    title: "Dealing with addiction",
-    image: communitySupport1,
-    desc: "Discover a supportive community of individuals overcoming addiction, and provide believe,  encouragement & understanding as you take steps toward a healthier and happier life.",
+    title: "Overcoming Traumas",
+    image: communitySupport4,
+    desc: "Find solace and support among fellow survivors on the path to overcoming traumas. Here, you'll discover a safe space to share your journey, heal, and grow stronger together.",
   },
   {
-    title: "Dealing with addiction",
-    image: communitySupport1,
-    desc: "Discover a supportive community of individuals overcoming addiction, and provide believe,  encouragement & understanding as you take steps toward a healthier and happier life.",
+    title: "Adulating with ADHD",
+    image: communitySupport5,
+    desc: "Navigate the challenges of adulting with ADHD through our community. You'll find acceptance, practical tips, and shared experiences to help you thrive here.",
   },
   {
-    title: "Dealing with addiction",
-    image: communitySupport1,
-    desc: "Discover a supportive community of individuals overcoming addiction, and provide believe,  encouragement & understanding as you take steps toward a healthier and happier life.",
+    title: "Learning Self Love",
+    image: communitySupport6,
+    desc: "Dismantle negative thought patterns and cultivate a positive self-image. Support each other as we navigate the healing process, fostering a sense of belonging and acceptance.",
   },
 ];
 
@@ -152,7 +156,7 @@ export default function index() {
       </section>
 
       {/* Support Section */}
-      <section className="container mx-auto py-8">
+      <section className="container mx-auto pt-8">
         <h2 className="subheading text-center">
           <span>Uncover your special heaven of </span>
           <span className="heading-primary">support and belonging</span>
@@ -161,11 +165,40 @@ export default function index() {
           Always remember sharing your struggles only makes you stronger.
         </p>
 
-        <div>
-          <figure>
-            <h3>Dealing with Addiction</h3>
-            <figcaption></figcaption>
-          </figure>
+        <div className="grid grid-cols-3 gap-x-14 gap-y-8 py-12">
+          {communitySupport.map((value, index) => {
+            return (
+              <figure
+                key={index}
+                className="border-2 border-primary-300 p-5 rounded-xl rounded-br-[3rem] grid justify-between"
+              >
+                <h3 className="text-2xl font-bold text-primary-300 text-center">
+                  {value.title}
+                </h3>
+                <div className="mx-auto w-32 h-32">
+                  <img
+                    src={value.image}
+                    alt={value.title}
+                    className="w-full object-contain h-full"
+                  />
+                </div>
+                <figcaption>
+                  <p className="text-justify font-semibold">{value.desc}</p>
+                </figcaption>
+              </figure>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="container mx-auto text-center pb-10">
+        <h2 className="subheading heading-primary">We are here to help you!</h2>
+        <p className="para mb-4">
+          Helping you connect with like minded people. Find your ultimate
+          support network today
+        </p>
+        <div className="">
+          <button className="btn-one">Explore</button>
         </div>
       </section>
     </>
