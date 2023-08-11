@@ -29,25 +29,54 @@ const PsychiatristJoiningForm = () => {
     joiningReason: "",
   });
 
+  const [showProfessionalDetails, setShowProfessionalDetails] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3000/psychiatrist", {
-        personalDetails,
-        professionalDetails,
-      });
+      if (
+        personalDetails.firstName !== "" &&
+        personalDetails.lastName !== "" &&
+        personalDetails.email !== "" &&
+        personalDetails.phoneNumber !== "" &&
+        personalDetails.address !== "" &&
+        personalDetails.city !== "" &&
+        personalDetails.country !== "" &&
+        personalDetails.dateOfBirth !== "" &&
+        personalDetails.language !== "" &&
+        personalDetails.postalCode !== "" &&
+        personalDetails.state !== "" &&
+        professionalDetails.degree !== "" &&
+        professionalDetails.language !== "" &&
+        professionalDetails.institute !== "" &&
+        professionalDetails.degreeUpload !== "" &&
+        professionalDetails.graduationYear !== "" &&
+        professionalDetails.experienceYears !== "" &&
+        professionalDetails.degreeUploads !== "" &&
+        professionalDetails.currentSalary !== "" &&
+        professionalDetails.joiningReason !== ""
+      ) {
+        const response = await axios.post(
+          "http://localhost:3000/psychiatrist",
+          {
+            personalDetails,
+            professionalDetails,
+          }
+        );
 
-      if (response.status === 200) {
-        setFormSubmitted(true);
+        if (response.status === 200) {
+          setFormSubmitted(true);
+        }
+      } else {
+        console.log("Please fill out all details before submitting.");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
     }
   };
-  const [showProfessionalDetails, setShowProfessionalDetails] = useState(false);
-  const [formSubmitted, setFormSubmitted] = useState(false);
+
   const handlePersonalDetailsSaveAndContinue = () => {
-    // Move to the professional details section
     setShowProfessionalDetails(true);
   };
 
@@ -319,15 +348,7 @@ const PsychiatristJoiningForm = () => {
                   type="file"
                   id="fileInput"
                   name="fileInput"
-                  placeholder="fileInput"
                   className="w-full rounded-xl border-2 border-primary-300 outline-none px-4 py-2.5"
-                  value={professionalDetails.degreeUpload}
-                  onChange={(e) =>
-                    setProfessionalDetails((prev) => ({
-                      ...prev,
-                      degreeUpload: e.target.value,
-                    }))
-                  }
                 />
                 <p className="text-gray-500 text-sm mt-2">
                   Please upload your degree in PDF format.
@@ -345,15 +366,7 @@ const PsychiatristJoiningForm = () => {
                   type="file"
                   id="fileInput"
                   name="fileInput"
-                  placeholder="fileInput"
                   className="w-full rounded-xl border-2 border-primary-300 outline-none px-4 py-2.5"
-                  value={professionalDetails.degreeUpload}
-                  onChange={(e) =>
-                    setProfessionalDetails((prev) => ({
-                      ...prev,
-                      degreeUpload: e.target.value,
-                    }))
-                  }
                 />
                 <p className="text-gray-500 text-sm mt-2">
                   Please upload your degree in PDF format.
@@ -371,17 +384,8 @@ const PsychiatristJoiningForm = () => {
                   type="file"
                   id="fileInput"
                   name="fileInput"
-                  placeholder="fileInput"
                   className="w-full rounded-xl border-2 border-primary-300 outline-none px-4 py-2.5"
-                  value={professionalDetails.degreeUpload}
-                  onChange={(e) =>
-                    setProfessionalDetails((prev) => ({
-                      ...prev,
-                      degreeUpload: e.target.value,
-                    }))
-                  }
                 />
-
                 <p className="text-gray-500 text-sm mt-2">
                   Please upload your degree in PDF format.
                 </p>
@@ -426,11 +430,31 @@ const PsychiatristJoiningForm = () => {
           </div>
         )}
       </form>
-      {formSubmitted && (
-        <div className="text-center mt-2 text-green-600">
-          Form submitted successfully!
-        </div>
-      )}
+      {personalDetails.firstName !== "" &&
+        personalDetails.lastName !== "" &&
+        personalDetails.email !== "" &&
+        personalDetails.phoneNumber !== "" &&
+        personalDetails.address !== "" &&
+        personalDetails.city !== "" &&
+        personalDetails.country !== "" &&
+        personalDetails.dateOfBirth !== "" &&
+        personalDetails.language !== "" &&
+        personalDetails.postalCode !== "" &&
+        personalDetails.state !== "" &&
+        professionalDetails.degree !== "" &&
+        professionalDetails.language !== "" &&
+        professionalDetails.institute !== "" &&
+        professionalDetails.degreeUpload !== "" &&
+        professionalDetails.graduationYear !== "" &&
+        professionalDetails.experienceYears !== "" &&
+        professionalDetails.degreeUploads !== "" &&
+        professionalDetails.currentSalary !== "" &&
+        professionalDetails.joiningReason !== "" &&
+        formSubmitted && (
+          <div className="text-center mt-2 text-green-600">
+            Form submitted successfully!
+          </div>
+        )}
       <img
         src={Bubble}
         alt="Bottom Right"

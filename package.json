@@ -16,9 +16,14 @@
     "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-facebook-auth": "^1.4.0",
+    "react-facebook-login": "^4.1.1",
     "react-google-login": "^5.2.2",
     "react-multi-select-component": "^4.3.4",
-    "react-router-dom": "^6.14.2"
+    "react-router-dom": "^6.14.2",
+    "react-social-login": "^3.4.17",
+    "react-social-login-buttons": "^3.9.1",
+    "reactjs-social-login": "^2.6.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { logo, signup } from "../../assets";
 import axios from "axios";
-// import GoogleLogin from "react-google-login";
+import GoogleAuth from "../../components/googleAuth/GoogleLogout";
+import FacebookAuth from "../../components/googleAuth/facebookAuth";
+// import { AuthApp } from "../../components/googleAuth/facebookAuth";
+import { FacebookLoginButton } from "react-social-login-buttons";
 
 export default function Signup() {
   const [name, setName] = useState("");
@@ -94,7 +97,6 @@ export default function Signup() {
       <aside className="md:w-1/2 hidden md:flex justify-center items-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-right bg-no-repeat bg-contain">
         <img src={signup} alt="" className="block object-cover w-[648px]" />
       </aside>
-      {/* <GoogleLogin /> */}
       {/* Right Content */}
       <div className="md:w-1/2 flex justify-center items-center px-4">
         <div className="sm:w-[440px] w-full">
@@ -118,6 +120,8 @@ export default function Signup() {
               SIGN UP
             </Link>
           </div>
+          <GoogleAuth />
+          <FacebookAuth />
 
           {/* Signup Form */}
           <form onSubmit={handleSubmit} className="mb-4 md:mb-8">
