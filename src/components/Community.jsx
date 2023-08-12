@@ -3,20 +3,24 @@ import { cloudWithDots } from "../assets";
 
 export default function Community() {
   return (
-    <section>
-      <div className="container mx-auto">
-        <h1 className="subheading">
+    <section className="relative overflow-x-hidden overflow-y-clip pb-7">
+      <div className="container mx-auto text-center">
+        <h1 className="subheading grid">
           <span>We are here to help you!</span>
-          <span className="heading-primary">Wleness Community</span>
+          <span className="heading-primary pb-1">Wleness Community</span>
         </h1>
-        <p className="para">
+        <p className="para xl:w-3/5 xl:mx-auto pt-4 pb-6">
           Helping you connect with like minded people. Find your ultimate
           support network today.
         </p>
         <button className="btn-one">Join Now</button>
 
         {/* Cloud */}
-        <img src={cloudWithDots} alt="" />
+        <img
+          src={cloudWithDots}
+          alt=""
+          className="absolute top-0 -right-20 w-44 xl:w-72"
+        />
       </div>
     </section>
   );

@@ -59,7 +59,7 @@ export default function index() {
 
           <div className="mb-8 text-center">
             <img src={communityHeader} alt="" className="w-full mb-10" />
-            <p className="text-xl font-bold px-44 mb-5">
+            <p className="text-xl font-bold xl:px-44 mb-5">
               Let's come together and build a supportive community where we
               share, grow, and heal as one.
             </p>
@@ -71,18 +71,18 @@ export default function index() {
         <img
           src={bgDotsPattern}
           alt=""
-          className="w-72 absolute top-24 -right-10 -z-10"
+          className="w-40 xl:w-72 absolute top-24 -right-10 -z-10"
         />
         <img
           src={bgDotsPattern}
           alt=""
-          className="w-80 absolute bottom-32 -left-20 -z-10"
+          className="w-44 xl:w-80 absolute bottom-32 -left-20 -z-10"
         />
       </header>
 
       {/* Community Section */}
-      <section className="container mx-auto flex gap-5">
-        <div className="w-1/2 pr-16">
+      <section className="container mx-auto xl:flex xl:gap-5">
+        <div className="xl:w-1/2 xl:pr-16">
           <h3 className="subheading mb-3">
             <span className="heading-primary">Wleness </span>Community
           </h3>
@@ -101,7 +101,7 @@ export default function index() {
           </p>
         </div>
 
-        <div className="w-1/2 grid grid-cols-2">
+        <div className="xl:w-1/2 grid grid-cols-2">
           <div className="bg-primary-400 p-4 rounded-2xl m-3 grid content-between">
             <h4 className="text-xl text-white font-bold text-center">
               Embrace Empathy:
@@ -165,12 +165,12 @@ export default function index() {
           Always remember sharing your struggles only makes you stronger.
         </p>
 
-        <div className="grid grid-cols-3 gap-x-14 gap-y-8 py-12">
+        <div className="grid xl:grid-cols-3 gap-x-14 gap-y-8 py-12">
           {communitySupport.map((value, index) => {
             return (
               <figure
                 key={index}
-                className="border-2 border-primary-300 p-5 rounded-xl rounded-br-[3rem] grid justify-between"
+                className="border-2 border-primary-300 p-5 rounded-xl rounded-br-[3rem] grid justify-between hover:shadow-xl transition-all"
               >
                 <h3 className="text-2xl font-bold text-primary-300 text-center">
                   {value.title}
@@ -189,11 +189,15 @@ export default function index() {
             );
           })}
         </div>
+
+        <div className="text-center pb-8">
+          <button className="btn-one">Join us now</button>
+        </div>
       </section>
 
       <section className="container mx-auto text-center pb-10">
         <h2 className="subheading heading-primary">We are here to help you!</h2>
-        <p className="para mb-4">
+        <p className="para mb-4 xl:w-3/5 mx-auto">
           Helping you connect with like minded people. Find your ultimate
           support network today
         </p>

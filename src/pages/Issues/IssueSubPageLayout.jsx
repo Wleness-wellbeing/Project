@@ -1,11 +1,10 @@
 import React from "react";
-// Data
-import { stressDoctors } from "../../data/doctors";
 // Components
 import HeaderWithButton from "../../components/HeaderWithButton";
 import Symptoms from "../../components/Symptoms";
 import DoctorSlider from "../../components/DoctorSlider";
 import Community from "../../components/Community";
+import IssueQuote from "../../components/IssueQuote";
 
 export default function IssueSubPageLayout({
   header,
@@ -25,8 +24,9 @@ export default function IssueSubPageLayout({
         image={symptoms.image}
         points={symptoms.points}
       />
-      <DoctorSlider data={stressDoctors} />
+      <DoctorSlider data={doctors} />
       <Community />
+      <IssueQuote quote={quote} />
     </>
   );
 }

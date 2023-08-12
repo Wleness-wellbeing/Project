@@ -567,8 +567,9 @@ export { doctorAppointment };
 // Design Elements
 import bgDotsPattern from "./images/designs/bg-dots-pattern.png";
 import bubbleDoodles from "./images/designs/bubble-doodle.png";
+import didYouKnow from "./images/designs/did-you-know.png";
 
-export { bgDotsPattern, bubbleDoodles };
+export { bgDotsPattern, bubbleDoodles, didYouKnow };
 
 // Community
 import communityHeader from "./images/community/community-header.png";
