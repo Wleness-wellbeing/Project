@@ -252,7 +252,7 @@ export const issuesData = [
       "Over 80% of people with depression can experience significant improvement through therapy, medication, or a combination of both.",
   },
   {
-    slug: "/issues/panic-attacks",
+    slug: "/issues/panic-attack",
     header: {
       title: [
         {
