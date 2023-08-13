@@ -1,5 +1,6 @@
 import React from "react";
+import AdminLogin from "../../components/admin/AdminLogin";
 
-export default function Login() {
-  return <div>Login</div>;
+export default function index() {
+  return <AdminLogin />;
 }

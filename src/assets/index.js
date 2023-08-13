@@ -598,11 +598,21 @@ export {
   communitySupport6,
 };
 
+// Icons
+import iconInstagram from "./images/icons/instagram.svg";
+import iconWhatsapp from "./images/icons/whatsapp.svg";
+import iconLinkedin from "./images/icons/linkedin.svg";
+import iconTwitter from "./images/icons/twitter.svg";
+import iconFacebook from "./images/icons/facebook.svg";
+
+export { iconInstagram, iconWhatsapp, iconLinkedin, iconTwitter, iconFacebook };
+
 // Other Images
 import doctorLogin from "./images/doctor-login.png";
 import doctorSignup from "./images/doctor-signup.png";
 import login from "./images/login.png";
 import logo from "./images/logo.png";
+import logoTransparent from "./images/logo-transparent.png";
 import rightBar from "./images/right-bar.jpg";
 import signup from "./images/signup.png";
 import bubbles from "./images/bubbles.png";
@@ -617,4 +627,5 @@ export {
   signup,
   bubbles,
   themeWAve,
+  logoTransparent,
 };

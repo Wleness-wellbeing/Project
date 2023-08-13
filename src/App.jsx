@@ -34,6 +34,7 @@ import Appointment from "./pages/Appointment";
 import Faqs from "./pages/Faqs";
 import Community from "./pages/Community";
 import IssueSubPageLayout from "./pages/Issues/IssueSubPageLayout";
+import Admin from "./pages/Admin";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -294,21 +295,14 @@ function App() {
           }
         />
         {/* Admin Routes */}
-        {/* {adminRoutes.map(
-          ({ component: Component, page: page, slug = slug }, index) => {
-            return (
-              <Route
-                key={index}
-                path={slug}
-                element={
-                  <Layout>
-                    <Component />
-                  </Layout>
-                }
-              />
-            );
+        <Route
+          path="/admin"
+          element={
+            <Layout>
+              <Admin />
+            </Layout>
           }
-        )} */}
+        />
       </Routes>
     </Router>
   );
