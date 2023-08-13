@@ -35,6 +35,14 @@ import Faqs from "./pages/Faqs";
 import Community from "./pages/Community";
 import IssueSubPageLayout from "./pages/Issues/IssueSubPageLayout";
 import Admin from "./pages/Admin";
+import AdminSideBar from "./components/admin/AdminSideBar";
+import IssueCategory from "./pages/Admin/IssueCategory";
+import AdminIssues from "./pages/Admin/AdminIssues";
+import AdminQuestions from "./pages/Admin/AdminQuestions";
+import AdminQueries from "./pages/Admin/AdminQueries";
+import AdminBlogs from "./pages/Admin/AdminBlogs";
+import AdminDoctors from "./pages/Admin/AdminDoctors";
+import AdminUsers from "./pages/Admin/AdminUsers";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -299,7 +307,79 @@ function App() {
           path="/admin"
           element={
             <Layout>
-              <Admin />
+              <AdminLayout>
+                <Admin />
+              </AdminLayout>
+            </Layout>
+          }
+        />
+        <Route
+          path="/admin/issue-category"
+          element={
+            <Layout>
+              <AdminLayout>
+                <IssueCategory />
+              </AdminLayout>
+            </Layout>
+          }
+        />
+        <Route
+          path="/admin/issues"
+          element={
+            <Layout>
+              <AdminLayout>
+                <AdminIssues />
+              </AdminLayout>
+            </Layout>
+          }
+        />
+        <Route
+          path="/admin/questions"
+          element={
+            <Layout>
+              <AdminLayout>
+                <AdminQuestions />
+              </AdminLayout>
+            </Layout>
+          }
+        />
+        <Route
+          path="/admin/queries"
+          element={
+            <Layout>
+              <AdminLayout>
+                <AdminQueries />
+              </AdminLayout>
+            </Layout>
+          }
+        />
+        <Route
+          path="/admin/blogs"
+          element={
+            <Layout>
+              <AdminLayout>
+                <AdminBlogs />
+              </AdminLayout>
+            </Layout>
+          }
+        />
+        <Route
+          path="/admin/doctors"
+          element={
+            <Layout>
+              <AdminLayout>
+                <AdminDoctors />
+              </AdminLayout>
+            </Layout>
+          }
+        />
+        <Route
+          path="/admin/users"
+          element={
+            <Layout>
+              <AdminLayout>
+                <AdminUsers />
+              </AdminLayout>
             </Layout>
           }
         />
@@ -325,6 +405,19 @@ function Layout({ children }) {
 function SignupLayout({ children }) {
   // This layout is specifically for /doctors-signup page, without the Navbar and Footer
   return <div>{children}</div>;
+}
+
+function AdminLayout({ children }) {
+  // This layout is specifically for /admin page
+  return (
+    <section class="container mx-auto grid justify-center py-12">
+      <h1 class="col-span-2 text-3xl font-semibold pb-8 ml-[200px]">
+        Admin Page
+      </h1>
+      <AdminSideBar />
+      {children}
+    </section>
+  );
 }
 
 export default App;

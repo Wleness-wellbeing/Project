@@ -50,3 +50,14 @@ export const footerFrequentIssues = [
   ["Panic Attacks", "/issues/panic-attack"],
   ["Biopolar Disorder", "/issues/biopolar-disorder"],
 ];
+
+// Admin Side bar
+export const adminSidebar = [
+  ["Doctors", "/admin/doctors"],
+  ["Queries", "/admin/queries"],
+  ["Issue Category", "/admin/issue-category"],
+  ["Issues", "/admin/issues"],
+  ["Users", "/admin/users"],
+  ["Questions", "/admin/questions"],
+  ["Blogs", "/admin/blogs"],
+];
