@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCaretRight,
-  faCaretLeft,
-  faPlus,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 // Data
 import {
   headerMobile,
@@ -20,7 +16,6 @@ import {
   iconInternshipCheck,
   iconInternshipHandshake,
   iconInternshipYout,
-  testimonial1,
   community,
   doodle1,
   doodle2,
@@ -34,45 +29,21 @@ import {
   partner3,
   partner4,
   partner5,
-  requestCallback,
   bigLeaf1,
   bigLeaf2,
   smallLeaf1,
   smallLeaf2,
-  homeAnxiety,
-  homeAdsd,
-  homeConfusion,
-  homeDepression,
-  homeHyperTension,
-  homeStress,
 } from "../../assets";
+import { homeFaqs } from "../../data/faqs";
 // Components
 import Assessment from "../../components/Assessment";
 import { Link } from "react-router-dom";
 import RequestForm from "../../components/RequestForm";
 import Feedback from "../../components/Feedback";
-const faqs = [
-  {
-    question: "What is Wleness?",
-    answer:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus tempore blanditiis, dolorem explicabo doloremque debitis aperiam! Exercitationem eaque, cumque accusamus impedit assumenda labore odit, sunt architecto quia, magnam ipsam voluptates?",
-  },
-  {
-    question: "What services does Wleness offer?",
-    answer:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus tempore blanditiis, dolorem explicabo doloremque debitis aperiam! Exercitationem eaque, cumque accusamus impedit assumenda labore odit, sunt architecto quia, magnam ipsam voluptates?",
-  },
-  {
-    question: "What makes Wleness different from others?",
-    answer:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus tempore blanditiis, dolorem explicabo doloremque debitis aperiam! Exercitationem eaque, cumque accusamus impedit assumenda labore odit, sunt architecto quia, magnam ipsam voluptates?",
-  },
-  {
-    question: "How can I benefit from using Wleness?",
-    answer:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus tempore blanditiis, dolorem explicabo doloremque debitis aperiam! Exercitationem eaque, cumque accusamus impedit assumenda labore odit, sunt architecto quia, magnam ipsam voluptates?",
-  },
-];
+import Testimonial from "../../components/testimonial/Testimonial";
+import { issues } from "../../data";
+import IssueCard from "../../components/Cards/IssueCard";
+import { homeTestimonials } from "../../data/testimonials";
 
 export default function Home() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
@@ -173,43 +144,10 @@ export default function Home() {
         </div>
         {/* Issues */}
         <div className="bg-gradient-to-br from-primary-10 to-white pb-6 lg:pb-10 font-quicksand">
-          <div className="container mx-auto grid gap-4 px-4 py-6 grid-cols-2 lg:grid-cols-3 lg:py-12 lg:gap-8 xl:gap-10 xl:py-16 2xl:pb-10">
-            <div className="rounded-2xl bg-[#FAFCE7] p-2 lg:py-6 shadow-md">
-              <img src={homeStress} alt="" className="issue-card" />
-              <h4 className="text-center text-lg lg:text-3xl font-semibold">
-                Stress
-              </h4>
-            </div>
-            <div className="rounded-2xl bg-[#FAFCE7] p-2 lg:py-6 shadow-md">
-              <img src={homeConfusion} alt="" className="issue-card" />
-              <h4 className="text-center text-lg lg:text-3xl font-semibold">
-                Confusion
-              </h4>
-            </div>
-            <div className="rounded-2xl p-2 bg-[#FAFCE7] py-4 lg:py-6 shadow-md">
-              <img src={homeAnxiety} alt="" className="issue-card" />
-              <h4 className="text-center text-lg lg:text-3xl font-semibold">
-                Anxiety
-              </h4>
-            </div>
-            <div className="rounded-2xl p-2 bg-[#FAFCE7] py-4 lg:py-6 shadow-md">
-              <img src={homeDepression} alt="" className="issue-card" />
-              <h4 className="text-center text-lg lg:text-3xl font-semibold">
-                Depression
-              </h4>
-            </div>
-            <div className="rounded-2xl p-2 bg-[#FAFCE7] py-4 lg:py-6 shadow-md">
-              <img src={homeHyperTension} alt="" className="issue-card" />
-              <h4 className="text-center text-lg lg:text-3xl font-semibold">
-                Hypertension
-              </h4>
-            </div>
-            <div className="rounded-2xl p-2 bg-[#FAFCE7] py-4 lg:py-6 shadow-md">
-              <img src={homeAdsd} alt="" className="issue-card" />
-              <h4 className="text-center text-lg lg:text-3xl font-semibold">
-                ADSD
-              </h4>
-            </div>
+          <div className="container grid gap-4 py-6 pt-8 lg:pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-12 xl:gap-10 xl:pb-16 2xl:gap-16 xl:grid-cols-3 mx-auto">
+            {issues.slice(0, 6).map((value, index) => {
+              return <IssueCard key={index} data={value} />;
+            })}
           </div>
           <div className="text-center">
             <Link to="/issues" className="btn-one">
@@ -491,49 +429,7 @@ export default function Home() {
           <span className="heading-primary">Our Testimonials</span>
         </h2>
         <div className="bg-gradient-to-b from-primary-300/20 to-white py-7 lg:py-14">
-          <div className="container mx-auto relative lg:!pr-0 pb-14 lg:pb-0">
-            {/* Testimonials */}
-            <figure className="lg:flex items-center">
-              <div className="lg:w-2/5 p-4">
-                <img
-                  src={testimonial1}
-                  alt=""
-                  className="object-cover w-full"
-                />
-              </div>
-              <figcaption className="lg:pl-24 lg:w-3/5">
-                <h4 className="text-lg font-semibold sm:text-xl lg:text-3xl 2xl:text-4xl">
-                  Soumili
-                </h4>
-                <h6 className="font-medium text-slate-400 2xl:text-xl mb-2">
-                  Full stack web developer
-                </h6>
-                <p className="mb-1 text-sm sm:text-lg md:text-base 2xl:text-xl md:leading-5 text-justify">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt laudantium mollitia id. Incidunt laudantium mollitia
-                  id. id. Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Incidunt laudantium mollitia id. Incidunt laudantium
-                  mollitia id. id. Lorem ipsum dolor sit amet consectetur
-                  adipisicing elit.
-                </p>
-              </figcaption>
-            </figure>
-            {/* Arrow Buttons  */}
-            <div className="absolute translate-x-1/2 right-1/2 lg:right-0 lg:translate-x-0 bottom-0">
-              <button className="w-12 h-12 border-2 border-primary-300 rounded-full mr-6">
-                <FontAwesomeIcon
-                  icon={faCaretRight}
-                  className="text-primary-300 text-4xl"
-                />
-              </button>
-              <button className="bg-primary-300 w-12 h-12 rounded-full">
-                <FontAwesomeIcon
-                  icon={faCaretLeft}
-                  className="text-white text-4xl"
-                />
-              </button>
-            </div>
-          </div>
+          <Testimonial data={homeTestimonials} />
         </div>
       </section>
       {/* ========== Statistics ========== */}
@@ -624,7 +520,7 @@ export default function Home() {
           <button className="btn-one">Goes to FAQ's</button>
         </div>
         <div className="flex flex-col lg:w-1/2 gap-4">
-          {faqs.map((value, index) => {
+          {homeFaqs.map((value, index) => {
             return (
               <details
                 key={index}
