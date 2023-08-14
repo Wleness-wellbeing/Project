@@ -98,6 +98,12 @@ a {
 .para {
   @apply text-sm leading-5  lg:text-lg font-quicksand !text-[#383838] font-semibold;
 }
+.admin-link-active {
+  @apply border-r-4 text-primary-300 border-primary-300 transition-all pr-3;
+}
+.admin-link-hover {
+  @apply hover:border-r-4 hover:text-primary-300 hover:border-primary-300 transition-all hover:pr-3;
+}
 
 /* Buttons */
 .btn-primary {

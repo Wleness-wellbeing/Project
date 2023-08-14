@@ -1,36 +1,23 @@
-import React, { useState } from "react";
-import { GoogleLogin } from "react-google-login";
+import React from "react";
+import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
+import jwt_decode from "jwt-decode";
 
-const clientId =
-  "1051344250432-dqb023v44kpthq3mn2mje13irctkev68.apps.googleusercontent.com";
+const Auth = () => {
+  const handleSuccess = (credentialResponse) => {
+    const decoded = jwt_decode(credentialResponse.idToken);
 
-const GoogleAuth = () => {
-  const [isSignedIn, setIsSignedIn] = useState(false);
-
-  const handleSuccess = (response) => {
-    setIsSignedIn(true);
-    console.log("Logged in user:", response.profileObj);
+    console.log(decoded);
   };
 
-  const handleFailure = (error) => {
-    console.error("Google login error:", error);
+  const handleError = () => {
+    console.log("Login Failed");
   };
 
   return (
-    <div>
-      {isSignedIn ? (
-        <p>You are logged in!</p>
-      ) : (
-        <GoogleLogin
-          clientId={clientId}
-          buttonText="Log in with Google"
-          onSuccess={handleSuccess}
-          onFailure={handleFailure}
-          cookiePolicy={"single_host_origin"}
-        />
-      )}
-    </div>
+    <GoogleOAuthProvider clientId="4613902995-ca2jsu912pnl14afga6te89ulp246c8u.apps.googleusercontent.com">
+      <GoogleLogin onSuccess={handleSuccess} onError={handleError} />
+    </GoogleOAuthProvider>
   );
 };
 
-export default GoogleAuth;
+export default Auth;

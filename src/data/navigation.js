@@ -1,3 +1,11 @@
+import {
+  iconFacebook,
+  iconInstagram,
+  iconLinkedin,
+  iconTwitter,
+  iconWhatsapp,
+} from "../assets";
+
 // Services sub pages
 export const serviceMenuPages = [
   ["Issues", "/issues"],
@@ -24,18 +32,49 @@ export const menuPages = [
   ["Avatar", "/avatar"],
 ];
 
-// Issues subpages
-export const issueSubpages = [
-  ["Stress", "/issues/stress"],
+// Footer Explore Menu
+export const footerExplore = [
+  ["About Us", "/about-us"],
+  ["Therapists", "/therapists"],
+  ["Issues", "/issues"],
+  ["Career", "/career"],
+  ["Activities", "/activities"],
+];
+
+// Footer Quick Links
+export const footerQuickLinks = [
+  ["Contact Us", "/contact-us"],
+  ["Blogs", "/blogs"],
+  ["FAQ's", "/faqs"],
+  ["Privacy Policy", "/privacy-policy"],
+  ["Terms & Conditions", "/terms-and-conditions"],
+];
+
+// Footer Frequent Issues
+export const footerFrequentIssues = [
   ["Depression", "/issues/depression"],
-  ["Panic Attacks", "/issues/panic-attacks"],
   ["Anxiety", "/issues/anxiety"],
-  ["OCD", "/issues/ocd"],
-  ["Biopolar Disorder", "/issues/biopolar-disorder"],
-  ["Schizophrenia", "/issues/schizophrenia"],
-  ["Eating Disorder", "/issues/eating-disorder"],
-  ["Paranoia", "/issues/paranoia"],
   ["ADHD", "/issues/adhd"],
-  ["ODD", "/issues/odd"],
-  ["CD", "/issues/cd"],
+  ["Panic Attacks", "/issues/panic-attack"],
+  ["Biopolar Disorder", "/issues/biopolar-disorder"],
+];
+
+// Footer social links
+export const socialLinks = [
+  [iconWhatsapp, "#"],
+  [iconInstagram, "#"],
+  [iconFacebook, "#"],
+  [iconTwitter, "#"],
+  [iconLinkedin, "#"],
+];
+
+// Admin Side bar
+export const adminSidebar = [
+  ["Doctors", "/admin/doctors"],
+  ["Queries", "/admin/queries"],
+  ["Issue Category", "/admin/issue-category"],
+  ["Issues", "/admin/issues"],
+  ["Users", "/admin/users"],
+  ["Questions", "/admin/questions"],
+  ["Blogs", "/admin/blogs"],
 ];

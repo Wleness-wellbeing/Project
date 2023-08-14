@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { logo, signup } from "../../assets";
 import axios from "axios";
-import GoogleAuth from "../../components/googleAuth/GoogleLogout";
-import FacebookAuth from "../../components/googleAuth/facebookAuth";
-// import { AuthApp } from "../../components/googleAuth/facebookAuth";
-import { FacebookLoginButton } from "react-social-login-buttons";
+import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
+import Facebook from "../../components/googleAuth/facebookAuth";
+import jwt_decode from "jwt-decode";
 
+// import FacebookAuth from "../../components/googleAuth/facebookAuth";
+// import { FacebookLoginButton } from "react-social-login-buttons";
 export default function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -120,9 +121,22 @@ export default function Signup() {
               SIGN UP
             </Link>
           </div>
-          <GoogleAuth />
-          <FacebookAuth />
+          {/* <FacebookAuth />  */}
+          <div>
+            <GoogleOAuthProvider clientId="136465586008-jtls3h0dlbq21bhndomt4911ceqt9077.apps.googleusercontent.com">
+              <GoogleLogin
+                onSuccess={(credentialResponse) => {
+                  var decoded = jwt_decode(credentialResponse.credential);
 
+                  console.log(decoded);
+                }}
+                onError={() => {
+                  console.log("Login Failed");
+                }}
+              />
+            </GoogleOAuthProvider>
+            <Facebook />
+          </div>
           {/* Signup Form */}
           <form onSubmit={handleSubmit} className="mb-4 md:mb-8">
             <label htmlFor="name">

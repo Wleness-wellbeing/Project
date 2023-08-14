@@ -402,8 +402,32 @@ import issuePanicAttack from "./images/issues/issue-panic-attack.png";
 import issueParanoia from "./images/issues/issue-paranoia.png";
 import issueSchizophrenia from "./images/issues/issue-schizophrenia.png";
 import issueStress from "./images/issues/issue-stress.png";
-// Issues >> Subpages header
-// import stressHeader from " "
+// Issues >> Subpages >> Header
+import adhdHeader from "./images/issues/hero/header-adhd.png";
+import anxietyHeader from "./images/issues/hero/header-anxiety.png";
+import biopolarDisorderHeader from "./images/issues/hero/header-biopolar-disorder.png";
+import cdHeader from "./images/issues/hero/header-cd.png";
+import depressionHeader from "./images/issues/hero/header-depression.png";
+import eatingDisorderHeader from "./images/issues/hero/header-eating-disorder.png";
+import ocdHeader from "./images/issues/hero/header-ocd.png";
+import oddHeader from "./images/issues/hero/header-odd.png";
+import panicAttacksHeader from "./images/issues/hero/header-panic-attacks.png";
+import paranoiaHeader from "./images/issues/hero/header-paranoia.png";
+import schizophreniaHeader from "./images/issues/hero/header-schizophrenia.png";
+import stressHeader from "./images/issues/hero/header-stress.png";
+// Issues >> Subpages >> Symptoms
+import symptomsAdhd from "./images/issues/symptoms/symptoms-adhd.png";
+import symptomsAnxiety from "./images/issues/symptoms/symptoms-anxiety.png";
+import symptomsBiopolarDisorder from "./images/issues/symptoms/symptoms-biopolar-disorder.png";
+import symptomsCd from "./images/issues/symptoms/symptoms-cd.png";
+import symptomsDepression from "./images/issues/symptoms/symptoms-depression.png";
+import symptomsEatingDisorder from "./images/issues/symptoms/symptoms-eating-disorder.png";
+import symptomsOcd from "./images/issues/symptoms/symptoms-ocd.png";
+import symptomsOdd from "./images/issues/symptoms/symptoms-odd.png";
+import symptomsPanic from "./images/issues/symptoms/symptoms-panic-attacks.png";
+import symptomsParanoia from "./images/issues/symptoms/symptoms-paranoia.png";
+import symptomsSchizophrenia from "./images/issues/symptoms/symptoms-schizophrenia.png";
+import symptomsStress from "./images/issues/symptoms/symptoms-stress.png";
 
 export {
   issuesHeader,
@@ -419,6 +443,30 @@ export {
   issueParanoia,
   issueSchizophrenia,
   issueStress,
+  adhdHeader,
+  anxietyHeader,
+  biopolarDisorderHeader,
+  cdHeader,
+  depressionHeader,
+  eatingDisorderHeader,
+  ocdHeader,
+  oddHeader,
+  panicAttacksHeader,
+  paranoiaHeader,
+  schizophreniaHeader,
+  stressHeader,
+  symptomsAdhd,
+  symptomsAnxiety,
+  symptomsBiopolarDisorder,
+  symptomsCd,
+  symptomsDepression,
+  symptomsEatingDisorder,
+  symptomsOcd,
+  symptomsOdd,
+  symptomsPanic,
+  symptomsParanoia,
+  symptomsSchizophrenia,
+  symptomsStress,
 };
 
 // Internship images
@@ -519,8 +567,9 @@ export { doctorAppointment };
 // Design Elements
 import bgDotsPattern from "./images/designs/bg-dots-pattern.png";
 import bubbleDoodles from "./images/designs/bubble-doodle.png";
+import didYouKnow from "./images/designs/did-you-know.png";
 
-export { bgDotsPattern, bubbleDoodles };
+export { bgDotsPattern, bubbleDoodles, didYouKnow };
 
 // Community
 import communityHeader from "./images/community/community-header.png";
@@ -549,15 +598,26 @@ export {
   communitySupport6,
 };
 
+// Icons
+import iconInstagram from "./images/icons/instagram.svg";
+import iconWhatsapp from "./images/icons/whatsapp.svg";
+import iconLinkedin from "./images/icons/linkedin.svg";
+import iconTwitter from "./images/icons/twitter.svg";
+import iconFacebook from "./images/icons/facebook.svg";
+
+export { iconInstagram, iconWhatsapp, iconLinkedin, iconTwitter, iconFacebook };
+
 // Other Images
 import doctorLogin from "./images/doctor-login.png";
 import doctorSignup from "./images/doctor-signup.png";
 import login from "./images/login.png";
 import logo from "./images/logo.png";
+import logoTransparent from "./images/logo-transparent.png";
 import rightBar from "./images/right-bar.jpg";
 import signup from "./images/signup.png";
 import bubbles from "./images/bubbles.png";
 import themeWAve from "./images/theme-wave.png";
+import placeholder from "./images/placeholder.jpg";
 
 export {
   doctorLogin,
@@ -568,4 +628,6 @@ export {
   signup,
   bubbles,
   themeWAve,
+  logoTransparent,
+  placeholder,
 };

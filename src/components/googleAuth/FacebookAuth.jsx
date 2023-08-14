@@ -59,25 +59,93 @@
 //   </div>
 // );
 
-import { FacebookLoginButton } from "react-social-login-buttons";
-import { LoginSocialFacebook } from "reactjs-social-login";
+// import { FacebookLoginButton } from "react-social-login-buttons";
+// import { LoginSocialFacebook } from "reactjs-social-login";
 
-function FacebookAuth() {
+// function FacebookAuth() {
+//   return (
+//     <div className="App">
+//       <LoginSocialFacebook
+//         appId="1443309293135308"
+//         onResolve={(response) => {
+//           console.log(response);
+//         }}
+//         onReject={(error) => {
+//           console.log(error);
+//         }}
+//       >
+//         <FacebookLoginButton />
+//       </LoginSocialFacebook>
+//     </div>
+//   );
+// }
+
+// export default FacebookAuth;
+
+import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
+import { FacebookLogin } from "react-facebook-login";
+
+const Facebook = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    // Check if the user is already logged in
+    const userId = localStorage.getItem("userId");
+    if (userId) {
+      setIsLoggedIn(true);
+      setUser(userId);
+    }
+  }, []);
+
+  const handleLogin = () => {
+    const loginData = {
+      appId: "1443309293135308",
+      // The redirect URI is the URL that Facebook will redirect the user to after they login.
+      // It must match the redirect URI that you configured in your Facebook app.
+      redirectUri: "http://localhost:3000/login",
+    };
+
+    const fbLogin = new FacebookLogin(loginData);
+    fbLogin.login(async (response) => {
+      if (response.status === "connected") {
+        // The user is logged in.
+        setIsLoggedIn(true);
+        setUser(response.userID);
+        localStorage.setItem("userId", response.userID);
+      } else {
+        // The user is not logged in.
+        setIsLoggedIn(false);
+        setUser(null);
+      }
+    });
+  };
+
+  const handleLogout = () => {
+    // Log the user out of Facebook.
+    const fbLogin = new FacebookLogin();
+    fbLogin.logout();
+
+    // Remove the user ID from local storage.
+    localStorage.removeItem("userId");
+
+    // Set the user state to null.
+    setUser(null);
+    setIsLoggedIn(false);
+  };
+
   return (
-    <div className="App">
-      <LoginSocialFacebook
-        appId="1443309293135308"
-        onResolve={(response) => {
-          console.log(response);
-        }}
-        onReject={(error) => {
-          console.log(error);
-        }}
-      >
-        <FacebookLoginButton />
-      </LoginSocialFacebook>
+    <div>
+      {isLoggedIn && <h1>Welcome, {user}</h1>}
+      {!isLoggedIn && (
+        <button onClick={handleLogin}>Login with Facebook</button>
+      )}
+      {isLoggedIn && <button onClick={handleLogout}>Logout</button>}
     </div>
   );
-}
+};
 
-export default FacebookAuth;
+const rootElement = document.getElementById("root");
+
+export default Facebook;
