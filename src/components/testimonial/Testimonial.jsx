@@ -1,10 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
-// Swiper Js
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
-
-// Import Swiper styles
+// Swiper Js & Styles
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation } from "swiper/modules";
 import SwiperBtns from "../Buttons/SwiperBtns";

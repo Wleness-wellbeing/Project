@@ -1,13 +1,20 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
-
-import { blogsData } from "../../data";
-
+// Swiper Js & Styles
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
+// Data
 import { blogHeader1, blogHeader2, blogRecent } from "../../assets";
-import { Link } from "react-router-dom";
+import { blogsData } from "../../data";
+// Component
+import BlogCard from "../../components/Cards/BlogCard";
 
 export default function Blogs() {
+  const recentBlogs = [1, 2, 3, 4, 5];
+
   return (
     <>
       <main className="py-6">
@@ -60,31 +67,40 @@ export default function Blogs() {
             </button>
           </div>
 
-          <div className="2xl:flex rounded-xl items-center sm:grid xs:grid">
-            <div className="lg:w-3/5">
-              <img src={blogRecent} className="w-full object-cover"></img>
-            </div>
-            <div className="w-2/5 lg:w-2/5 pl-12 sm:w-full pt-3 xs:w-full ">
-              <h2 className="font-bold pb-6 text-5xl">
-                Maintain a good habit with yourself
-              </h2>
-              <p className="text-lg">
-                Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus
-                eget magna est.Neque turpis faucibus eget magna est.
-                <span className="text-primary-500 font-bold text-base">
-                  Read More
-                </span>
-              </p>
-            </div>
-          </div>
-
-          <div className="flex space-x-1 pt-8 w-fit mx-auto">
-            <span className="w-3 h-3 block rounded-full bg-slate-400" />
-            <span className="w-3 h-3 block rounded-full bg-slate-400" />
-            <span className="w-3 h-3 block rounded-full bg-primary-300" />
-            <span className="w-3 h-3 block rounded-full bg-slate-400" />
-            <span className="w-3 h-3 block rounded-full bg-slate-400" />
-          </div>
+          <Swiper
+            modules={[Pagination]}
+            slidesPerView={1}
+            className="!overflow-x-clip overflow-y-visible pb-12"
+            pagination={{ clickable: true }}
+          >
+            {recentBlogs.map((value, i) => {
+              return (
+                <SwiperSlide key={i}>
+                  <div className="2xl:flex rounded-xl items-center">
+                    <div className="lg:w-3/5">
+                      <img
+                        src={blogRecent}
+                        className="w-full object-cover"
+                      ></img>
+                    </div>
+                    <div className="w-2/5 lg:w-2/5 pl-12 sm:w-full pt-3 xs:w-full ">
+                      <h2 className="font-bold pb-6 text-5xl">
+                        Maintain a good habit with yourself
+                      </h2>
+                      <p className="text-lg">
+                        Lorem ipsum dolor sit amet consectetur. Neque turpis
+                        faucibus eget magna est.Neque turpis faucibus eget magna
+                        est.
+                        <span className="text-primary-500 font-bold text-base">
+                          Read More
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </section>
 
         {/* Filterable Blogs */}
@@ -124,29 +140,13 @@ export default function Blogs() {
           </ul>
 
           {/* ============== Blogs ============= */}
-          <div className=" rounded-xl grid grid-cols-3 gap-4">
-            {blogsData.map((value, index) => (
-              <figure key={index} className="flex flex-col p-2 ">
-                <div>
-                  <img src={value.image} className="w-full" alt="..." />
-                </div>
-                <figcaption>
-                  <h5 className="text-lg text-black font-bold tracking-wider my-2 uppercase">
-                    {value.heading}
-                  </h5>
-                  <p className="text-lg font-medium">{value.subheading}</p>
-                  <Link
-                    to=""
-                    className="bg-primary-400 hover:bg-primary-500 transition-all font-medium text-white px-4 py-2 inline-block mt-4 rounded-3xl"
-                  >
-                    Read more
-                  </Link>
-                </figcaption>
-              </figure>
-            ))}
+          <div className="rounded-xl grid grid-cols-3 gap-4">
+            {blogsData.map((value, i) => {
+              return <BlogCard key={i} data={value} />;
+            })}
           </div>
 
-          {/* dot dot bottom */}
+          {/* Dot Pagination */}
           <div class="flex items-center my-8 pt-4 justify-center">
             <div class="rounded-full bg-primary-500 text-white hover:bg-primary-300  font-sm text-xl h-12 w-12 flex items-center justify-center mr-4">
               1
