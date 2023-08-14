@@ -1,3 +1,11 @@
+import {
+  iconFacebook,
+  iconInstagram,
+  iconLinkedin,
+  iconTwitter,
+  iconWhatsapp,
+} from "../assets";
+
 // Services sub pages
 export const serviceMenuPages = [
   ["Issues", "/issues"],
@@ -49,6 +57,15 @@ export const footerFrequentIssues = [
   ["ADHD", "/issues/adhd"],
   ["Panic Attacks", "/issues/panic-attack"],
   ["Biopolar Disorder", "/issues/biopolar-disorder"],
+];
+
+// Footer social links
+export const socialLinks = [
+  [iconWhatsapp, "#"],
+  [iconInstagram, "#"],
+  [iconFacebook, "#"],
+  [iconTwitter, "#"],
+  [iconLinkedin, "#"],
 ];
 
 // Admin Side bar

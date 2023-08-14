@@ -18,6 +18,7 @@ import {
   footerFrequentIssues,
   footerQuickLinks,
   serviceMenuPages,
+  socialLinks,
 } from "../../data/navigation";
 import { Link } from "react-router-dom";
 
@@ -30,7 +31,7 @@ export default function Footer() {
           <div>
             <img src={logoTransparent} alt="" className="w-44 xl:w-64" />
           </div>
-          <div className="space-y-6 sm:grid sm:grid-cols-2 sm:gap-4 sm:space-y-0 lg:grid-cols-5 xl:pt-12 xl:pb-2">
+          <div className="space-y-6 sm:grid sm:grid-cols-2 sm:gap-4 sm:space-y-0 lg:grid-cols-5 xl:pt-12 xl:pb-0">
             <div>
               <h2 className="text-2xl font-semibold mb-6">Location</h2>
               <ul className="space-y-4">
@@ -100,12 +101,14 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="container mx-auto flex mt-4 lg:justify-end">
-          <img src={iconWhatsapp} alt="whatsapp" className="w-10" />
-          <img src={iconInstagram} alt="instagram" className="w-10" />
-          <img src={iconFacebook} alt="facebook" className="w-10" />
-          <img src={iconTwitter} alt="twitter" className="w-10" />
-          <img src={iconLinkedin} alt="linkedin" className="w-10" />
+        <div className="container mx-auto flex mt-4 xl:mt-0 lg:justify-end">
+          {socialLinks.map((value, i) => {
+            return (
+              <Link to={value[1]} key={i}>
+                <img src={value[0]} alt="whatsapp" className="w-10" />
+              </Link>
+            );
+          })}
         </div>
       </footer>
       <p className="text-center bg-[#8EE5DC] py-3 font-medium">
