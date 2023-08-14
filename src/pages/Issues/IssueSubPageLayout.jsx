@@ -20,7 +20,7 @@ export default function IssueSubPageLayout({
         image={header.image}
       />
       <Symptoms
-        title={symptoms.title}
+        highlight={symptoms.highlight}
         image={symptoms.image}
         points={symptoms.points}
       />

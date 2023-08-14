@@ -17,7 +17,7 @@ export default function HeaderWithButton({ title, desc, image }) {
             {textColorize(title)}
           </h1>
         </hgroup>
-        <div className="pr-12">
+        <div className="xl:pr-12">
           {desc.map((value, index) => {
             return (
               <p className="mb-6 text-justify font-semibold" key={index}>
@@ -26,7 +26,9 @@ export default function HeaderWithButton({ title, desc, image }) {
             );
           })}
         </div>
-        <button className="btn-one">Talk to Therapist</button>
+        <div className="text-center xl:text-left">
+          <button className="btn-one">Talk to Therapist</button>
+        </div>
       </div>
     </header>
   );

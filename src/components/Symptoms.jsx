@@ -1,21 +1,31 @@
 import React from "react";
-import { textColorize } from "../utils";
 
-export default function Symptoms({ title, image, points }) {
+export default function Symptoms({ highlight, image, points }) {
   return (
     <section className="container mx-auto">
-      <h2 className="font-bold text-5xl text-center mb-10">
-        {textColorize(title)}
+      <h2 className="font-bold text-2xl lg:text-4xl xl:text-5xl text-center mb-10">
+        <span>Here's How Generalized</span>
+        <p>
+          <span className="heading-primary">{highlight} </span>
+          <span>May Appear</span>
+        </p>
       </h2>
 
       <div className="relative">
-        <img src={image} alt="" className="object-cover w-fit mx-auto py-10" />
+        <img
+          src={image}
+          alt=""
+          className="object-cover w-40 xl:w-fit mx-auto py-10"
+        />
         {/* Points */}
         {points.map((value, index) => {
           return (
             <p
               key={index}
-              className={"para absolute w-96 text-center " + value[1]}
+              className={
+                "font-medium xl:font-semibold text-xs lg:text-sm xl:text-base absolute w-96 text-center " +
+                value[1]
+              }
             >
               {value[0]}
             </p>

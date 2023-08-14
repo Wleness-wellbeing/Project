@@ -43,6 +43,7 @@ import AdminQueries from "./pages/Admin/AdminQueries";
 import AdminBlogs from "./pages/Admin/AdminBlogs";
 import AdminDoctors from "./pages/Admin/AdminDoctors";
 import AdminUsers from "./pages/Admin/AdminUsers";
+import DoctorDashboard from "./pages/Doctors/DoctorDashboard";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -381,6 +382,14 @@ function App() {
                 <AdminUsers />
               </AdminLayout>
             </Layout>
+          }
+        />
+        <Route
+          path="/doctor/dashboard"
+          element={
+            <SignupLayout>
+              <DoctorDashboard />
+            </SignupLayout>
           }
         />
       </Routes>
