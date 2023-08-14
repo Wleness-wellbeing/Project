@@ -6,6 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import Calendly from "../../components/Calendly";
 
 export default function Appointment() {
   return (
@@ -13,7 +14,7 @@ export default function Appointment() {
       <section className="relative">
         {/* Book Session */}
         <div className="container mx-auto flex justify-end pb-10">
-          <form className="w-[680px] pt-6 hidden">
+          <form className="w-[680px] pt-6">
             <h2 className="text-3xl font-bold text-center mb-4">
               Book Your Session
             </h2>
@@ -127,13 +128,14 @@ export default function Appointment() {
                 </label>
               </div>
             </div>
+            <Calendly />
             <div className="text-center mb-8">
               <button className="btn-one !rounded-lg">Proceed</button>
             </div>
           </form>
 
           {/* Confirm Booking */}
-          <div className="w-fit py-6">
+          <div className="w-fit py-6 hidden">
             <h2 className="text-3xl font-bold text-center mb-4">
               Confirm Booking
             </h2>
