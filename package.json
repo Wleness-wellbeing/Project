@@ -19,7 +19,6 @@
     "react": "^18.2.0",
     "react-calendly": "^4.1.1",
     "react-dom": "^18.2.0",
-    "react-facebook-login": "^4.1.1",
     "react-router-dom": "^6.14.2",
     "recharts": "^2.7.3",
     "swiper": "^10.1.0"
