@@ -1,6 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 export default function InternshipApply({ isOpen, onClose }) {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    address: "",
+    qualification: "",
+    role: "",
+    resume: "",
+    interest: "",
+    agreement: false,
+  });
+
+  const handleChange = (event) => {
+    const { name, value, type, checked } = event.target;
+    const fieldValue = type === "checkbox" ? checked : value;
+
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: fieldValue,
+    }));
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/register", // Update the URL to your backend endpoint
+        formData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (response.status === 200) {
+        // Handle successful submission
+        console.log("Application submitted successfully");
+        alert("Application submitted successfully!");
+
+        onClose();
+      } else {
+        // Handle submission error
+        console.error("An error occurred while submitting the application");
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   if (!isOpen) return null;
 
   return (
@@ -15,7 +68,7 @@ export default function InternshipApply({ isOpen, onClose }) {
           out the form.
         </p>
 
-        <form action="" className="pt-6">
+        <form action="" className="pt-6" onSubmit={handleSubmit}>
           <div className="flex gap-4 mb-4">
             <label htmlFor="" className="self-end w-1/2">
               <span className="font-bold block mb-1 text-primary-300">
@@ -23,8 +76,14 @@ export default function InternshipApply({ isOpen, onClose }) {
               </span>
               <input
                 type="text"
-                name=""
-                id=""
+                name="firstName"
+                value={formData.firstName}
+                onChange={(e) =>
+                  setFormData((prevFormData) => ({
+                    ...prevFormData,
+                    firstName: e.target.value,
+                  }))
+                }
                 placeholder="First Name"
                 className="w-full border-2 border-primary-50 px-4 py-2 rounded-lg outline-none"
               />
@@ -32,8 +91,14 @@ export default function InternshipApply({ isOpen, onClose }) {
             <label htmlFor="" className="self-end w-1/2">
               <input
                 type="text"
-                name=""
-                id=""
+                name="lastName"
+                value={formData.lastName}
+                onChange={(e) =>
+                  setFormData((prevFormData) => ({
+                    ...prevFormData,
+                    lastName: e.target.value,
+                  }))
+                }
                 placeholder="Last Name"
                 className="w-full border-2 border-primary-50 px-4 py-2 rounded-lg outline-none"
               />
@@ -46,8 +111,15 @@ export default function InternshipApply({ isOpen, onClose }) {
               </span>
               <input
                 type="text"
-                name=""
-                id=""
+                name="email"
+                id="email"
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData((prevFormData) => ({
+                    ...prevFormData,
+                    email: e.target.value,
+                  }))
+                }
                 placeholder="Enter email address"
                 className="w-full border-2 border-primary-50 px-4 py-2 rounded-lg outline-none"
               />
@@ -58,8 +130,15 @@ export default function InternshipApply({ isOpen, onClose }) {
               </span>
               <input
                 type="text"
-                name=""
-                id=""
+                name="phoneNumber"
+                id="phoneNumber"
+                value={formData.phoneNumber}
+                onChange={(e) =>
+                  setFormData((prevFormData) => ({
+                    ...prevFormData,
+                    phoneNumber: e.target.value,
+                  }))
+                }
                 placeholder="Enter your phone number"
                 className="w-full border-2 border-primary-50 px-4 py-2 rounded-lg outline-none"
               />
@@ -72,8 +151,15 @@ export default function InternshipApply({ isOpen, onClose }) {
               </span>
               <input
                 type="text"
-                name=""
-                id=""
+                name="address"
+                id="address"
+                value={formData.address}
+                onChange={(e) =>
+                  setFormData((prevFormData) => ({
+                    ...prevFormData,
+                    address: e.target.value,
+                  }))
+                }
                 placeholder="Enter Your Complete Address"
                 className="w-full border-2 border-primary-50 px-4 py-2 rounded-lg outline-none"
               />
@@ -86,8 +172,15 @@ export default function InternshipApply({ isOpen, onClose }) {
               </span>
               <input
                 type="text"
-                name=""
-                id=""
+                name="qualification"
+                id="qualification"
+                value={formData.qualification}
+                onChange={(e) =>
+                  setFormData((prevFormData) => ({
+                    ...prevFormData,
+                    qualification: e.target.value,
+                  }))
+                }
                 placeholder="Enter your degree"
                 className="w-full border-2 border-primary-50 px-4 py-2 rounded-lg outline-none"
               />
@@ -98,8 +191,15 @@ export default function InternshipApply({ isOpen, onClose }) {
               </span>
               <input
                 type="text"
-                name=""
-                id=""
+                name="role"
+                id="role"
+                value={formData.role}
+                onChange={(e) =>
+                  setFormData((prevFormData) => ({
+                    ...prevFormData,
+                    role: e.target.value,
+                  }))
+                }
                 placeholder="Select"
                 className="w-full border-2 border-primary-50 px-4 py-2 rounded-lg outline-none"
               />
@@ -112,9 +212,8 @@ export default function InternshipApply({ isOpen, onClose }) {
               </span>
               <input
                 type="file"
-                name=""
-                id=""
-                placeholder="Enter Your Complete Address"
+                name="resume"
+                id="resume"
                 className="w-full border-2 border-primary-50 px-4 py-2 rounded-lg outline-none"
               />
             </label>
@@ -125,10 +224,17 @@ export default function InternshipApply({ isOpen, onClose }) {
                 Tell us about your interest:
               </span>
               <textarea
-                name=""
-                id=""
+                name="interest"
+                id="interest"
                 cols="30"
                 rows="3"
+                value={formData.interest}
+                onChange={(e) =>
+                  setFormData((prevFormData) => ({
+                    ...prevFormData,
+                    interest: e.target.value,
+                  }))
+                }
                 className="w-full border-2 border-primary-50 px-4 py-2 rounded-lg outline-none"
                 placeholder="Give a brief not more than 300 words"
               ></textarea>
@@ -138,9 +244,9 @@ export default function InternshipApply({ isOpen, onClose }) {
             <label htmlFor="" className="w-full flex items-start">
               <input
                 type="checkbox"
-                name=""
-                id=""
-                placeholder="Enter Your Complete Address"
+                name="agreement"
+                checked={formData.agreement}
+                onChange={handleChange}
                 className="mr-3 mt-1"
               />
               <p className="text-sm font-medium">
