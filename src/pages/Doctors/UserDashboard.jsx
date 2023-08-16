@@ -1,21 +1,29 @@
+import React from "react";
 import {
   faAngleDown,
-  faArrowTrendDown,
-  faArrowTrendUp,
   faBell,
   faComments,
   faEllipsis,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
-import { assessment1, dashboardDoctor } from "../../assets";
-import PatientListItem from "../../components/list/PatientListItem";
-import { patientsList } from "../../data/patients";
-import PatientItem from "../../components/list/PatientItem";
+import {
+  Bar,
+  BarChart,
+  ResponsiveContainer,
+  XAxis,
+  YAxis,
+  Tooltip,
+} from "recharts";
+// Data
+import { assessment1 } from "../../assets";
+import { activityReport, patientsList } from "../../data/patients";
+import { userDashboardData } from "../../data/chart";
+// Components
 import UpcomingMeets from "../../components/list/UpcomingMeets";
+import PatientListItem from "../../components/list/PatientListItem";
 
-export default function DoctorDashboard() {
+export default function UserDashboard() {
   return (
     <main className="flex">
       <aside className="w-[10%] bg-primary-50"></aside>
@@ -60,7 +68,7 @@ export default function DoctorDashboard() {
             </span>
             <span className="flex items-center border-2 py-1 px-2 rounded-xl cursor-pointer hover:bg-slate-100 transition-all">
               <img src={assessment1} alt="" className="w-8 mr-2" />
-              <span className="font-bold text-sm">Dr. Tim</span>
+              <span className="font-bold text-sm">Ken Parker</span>
             </span>
           </div>
         </nav>
@@ -68,61 +76,61 @@ export default function DoctorDashboard() {
         <section className="flex gap-5">
           <div className="w-[65%]">
             {/* Doctor Profile */}
-            <div>
+            <div className="mb-5">
               <h1 className="mb-3">
                 <span className="font-medium text-2xl">Good Morning </span>
                 <span className="text-3xl font-semibold text-primary-300">
-                  Dr. Tim!
+                  Ken
                 </span>
               </h1>
 
-              <div className="flex items-center  bg-slate-200 rounded-3xl px-4 bg-gradient-to-tr from-[#B2E6FD] via-[#9BD8F1] to-[#52D0C2] pr-8">
-                <div className="w-3/4">
-                  <div className="grid mb-4">
-                    <span className="font-semibold text-2xl mb-1">
-                      Visit for Today
-                    </span>
-                    <span className="font-bold text-4xl">104</span>
-                  </div>
-                  <div className="flex gap-5">
-                    <div className="bg-slate-100/50 rounded-xl py-4 px-5 grid relative shadow-xl scale-105">
-                      <span className="font-semibold mb-1">New Patients</span>
-                      <span className="text-2xl font-semibold">40</span>
-                      <span className="absolute -right-2 bottom-2 bg-green-200 text-green-600 p-1 px-2 text-sm rounded-lg shadow-lg border-[1px] border-green-300 font-medium">
-                        <span>51</span>
-                        <span>
-                          % <FontAwesomeIcon icon={faArrowTrendUp} />
-                        </span>
-                      </span>
-                    </div>
-                    <div className="bg-slate-100/50 rounded-xl py-4 px-5 grid relative">
-                      <span className="font-semibold mb-1">Old Patients</span>
-                      <span className="text-2xl font-semibold">64</span>
-                      <span className="absolute -right-2 bottom-2 bg-red-200 text-red-600 p-1 px-2 text-sm rounded-lg shadow-lg border-[1px] border-red-300 font-medium">
-                        <span>20</span>
-                        <span>
-                          % <FontAwesomeIcon icon={faArrowTrendDown} />
-                        </span>
-                      </span>
-                    </div>
-                  </div>
+              <div>
+                <div className="grid mb-4">
+                  <span className="font-bold text-lg">Activity Report</span>
                 </div>
-
-                <div className="w-1/4">
-                  <img
-                    src={dashboardDoctor}
-                    alt=""
-                    className="w-full scale-125 -translate-y-6 h-full object-cover"
-                  />
+                <div className="grid grid-cols-3 gap-5">
+                  {activityReport.map((value, i) => {
+                    return (
+                      <div
+                        key={i}
+                        className="bg-primary-50/50 rounded-xl py-4 px-5 grid relative"
+                      >
+                        <span className="font-semibold mb-1 text-center">
+                          {value[0]}
+                        </span>
+                        <span className="text-3xl font-bold text-center text-primary-400">
+                          {value[1]}
+                        </span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
+            </div>
+
+            <div className="py-5 bg-primary-10 rounded-2xl">
+              <h2 className="text-lg font-bold ml-12 pb-4">
+                Health Performance
+              </h2>
+              <ResponsiveContainer aspect={2.5} width="100%">
+                <BarChart width={400} height={400} data={userDashboardData}>
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Bar
+                    dataKey="score"
+                    barSize={20}
+                    className="fill-primary-300"
+                    radius={20}
+                  />
+                </BarChart>
+              </ResponsiveContainer>
             </div>
 
             {/* Patient List & Consultation */}
             <div className="flex">
               <div className="w-1/2 p-4">
                 <h3 className="flex justify-between pt-2 pb-4">
-                  <span className="text-xl font-bold">Patient List</span>
+                  <span className="text-xl font-bold">Linked Therapist</span>
                   <span className="text-sm flex items-center font-medium text-slate-400">
                     <span className="mr-1">Today </span>
                     <FontAwesomeIcon icon={faAngleDown} />
@@ -130,23 +138,15 @@ export default function DoctorDashboard() {
                 </h3>
 
                 <div className="space-y-3">
-                  {patientsList.map((value, i) => {
-                    return <PatientListItem data={value} key={i} />;
-                  })}
+                  <PatientListItem data={patientsList[0]} />;
                 </div>
-              </div>
-
-              <div className="w-1/2 p-4">
-                <h3 className="text-xl font-bold pt-2 pb-4">Consultation</h3>
-
-                <PatientItem data={patientsList[0]} />
               </div>
             </div>
           </div>
           <div className="w-[35%] p-4">
             <div className="mb-4">
               <h5 className="flex justify-between items-center">
-                <span className="font-semibold">Upcoming Events</span>
+                <span className="font-bold">Upcoming Appointments</span>
                 <span className="text-sm font-semibold py-0.5 px-2 rounded-full bg-slate-200 cursor-pointer hover:bg-slate-300 transition-all">
                   <FontAwesomeIcon icon={faEllipsis} />
                 </span>
@@ -155,7 +155,7 @@ export default function DoctorDashboard() {
 
             <div>
               <h5 className="flex justify-between items-center">
-                <span className="font-semibold">Upcoming Meets & Events</span>
+                <span className="font-bold">Upcoming Events</span>
                 <span className="text-sm font-semibold py-0.5 px-2 rounded-full cursor-pointer text-blue-500 transition-all">
                   View all
                 </span>

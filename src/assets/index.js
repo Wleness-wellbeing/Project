@@ -561,8 +561,9 @@ export {
 
 // Doctor Images
 import doctorAppointment from "./images/doctors/doctor-appointment.png";
+import dashboardDoctor from "./images/doctors/dashboard-doctor.png";
 
-export { doctorAppointment };
+export { doctorAppointment, dashboardDoctor };
 
 // Design Elements
 import bgDotsPattern from "./images/designs/bg-dots-pattern.png";

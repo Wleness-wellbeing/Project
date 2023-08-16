@@ -31,6 +31,7 @@ export const menuPages = [
   ["Faqs", "/faqs"],
   ["Avatar", "/avatar"],
   ["Doctor Dashboard", "/doctor/dashboard"],
+  ["User Dashboard", "/user/dashboard"],
 ];
 
 // Footer Explore Menu
