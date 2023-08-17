@@ -48,6 +48,10 @@ import { homeTestimonials } from "../../data/testimonials";
 export default function Home() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
   const [isFeedbackOpen, setFeedback] = useState(false);
+  const button = {
+    slug: "/experts/all",
+    text: "Find the Experts",
+  };
 
   const openAssessmentModal = () => {
     setShowAssessmentModal(true);
@@ -546,6 +550,7 @@ export default function Home() {
       <Assessment
         isAssessmentOpen={isAssessmentModalOpen}
         onAssessmentClose={closeAssessmentModal}
+        button={button}
       />
 
       <Feedback isOpen={isFeedbackOpen} onClose={closeFeedbackModal} />

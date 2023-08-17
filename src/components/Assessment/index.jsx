@@ -16,7 +16,11 @@ import {
 import AssessmentOption from "./AssessmentOption";
 import AssessmentTextBtn from "./AssessmentTextBtn";
 
-export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
+export default function Assessment({
+  isAssessmentOpen,
+  onAssessmentClose,
+  button,
+}) {
   if (!isAssessmentOpen) return null;
   // Welcome Screen Handling
   const [startAssessment, setStartAssessment] = useState(true);
@@ -330,10 +334,11 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                 Go Back
               </button>
               <Link
-                to="/experts/all"
+                onClick={onAssessmentClose}
+                to={button.slug}
                 className="btn-primary !w-fit !py-2.5 font-semibold inline-block"
               >
-                Find the Experts
+                {button.text}
               </Link>
             </div>
           </div>

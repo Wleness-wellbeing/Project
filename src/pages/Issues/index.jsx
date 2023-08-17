@@ -2,6 +2,7 @@ import React from "react";
 import { issuesHeader } from "../../assets";
 import { issues } from "../../data";
 import { Link } from "react-router-dom";
+import IssueCard from "../../components/Cards/IssueCard";
 
 function Issues() {
   return (
@@ -120,31 +121,11 @@ function Issues() {
             </a>
           </li>
         </ul>
-        {/* https://www.w3schools.com/howto/howto_css_flip_card.asp - Flip card */}
         {/* Issues */}
         <div className="pb-8">
           <div className="grid gap-4 py-6 pt-8 lg:pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-12 xl:gap-10 xl:pb-16 2xl:gap-16 xl:grid-cols-3 mx-auto">
             {issues.map((value, index) => {
-              return (
-                <div
-                  key={index}
-                  className="bg-gradient-to-br p-1 from-secondary to-tertiary rounded-2xl rounded-br-[3rem]"
-                >
-                  <div className="bg-[#FAFCE7] h-full rounded-2xl flex flex-col items-center justify-center py-8 rounded-br-[3rem]">
-                    <h3 className="font-bold text-center text-2xl mb-4">
-                      {value.name}
-                    </h3>
-                    <Link to={value.slug}>
-                      <img
-                        src={value.image}
-                        alt="Avatar"
-                        className="mx-auto block w-24 h-24 lg:h-40 lg:w-40 object-cover rounded-2xl 2xl:w-48 2xl:h-48 mb-4"
-                      />
-                    </Link>
-                    <button className="btn-one">Book Now</button>
-                  </div>
-                </div>
-              );
+              return <IssueCard key={index} data={value} />;
             })}
           </div>
 

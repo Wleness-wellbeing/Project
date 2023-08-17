@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 
-import { cloudWithDots, therapyHeader } from "../assets";
+import { cloudWithDots } from "../assets";
 import Assessment from "../components/Assessment";
+
+const button = {
+  slug: "#experts",
+  text: "Find the Experts",
+};
 export default function GridHeader(props) {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
 
@@ -46,6 +51,7 @@ export default function GridHeader(props) {
       <Assessment
         isAssessmentOpen={isAssessmentModalOpen}
         onAssessmentClose={closeAssessmentModal}
+        button={button}
       />
     </header>
   );

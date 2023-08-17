@@ -15,7 +15,10 @@ export default function IssueCard(props) {
             className="mx-auto block w-24 h-24 lg:h-40 lg:w-40 object-cover rounded-2xl 2xl:w-48 2xl:h-48 mb-4"
           />
         </Link>
-        <button className="btn-one">Book Now</button>
+
+        <Link to="/appointment/checkout" className="btn-one">
+          Book Now
+        </Link>
       </div>
     </div>
   );

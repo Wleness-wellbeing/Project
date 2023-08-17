@@ -8,11 +8,13 @@ export default function DoctorsCard(props) {
   return (
     <figure className="bg-white rounded-2xl transition-all rounded-br-[7rem] border-2 border-primary-300 hover:shadow-lg hover:shadow-primary-50">
       <div className="relative">
-        <img
-          src={props.data.image}
-          alt=""
-          className="w-full object-cover block rounded-t-2xl"
-        />
+        <Link to="/appointment">
+          <img
+            src={props.data.image}
+            alt=""
+            className="w-full object-cover block rounded-t-2xl"
+          />
+        </Link>
         <span className="font-bold bg-white px-2 absolute left-5 text-lg bottom-0 text-primary-300">
           {props.data.profession}
         </span>
@@ -39,7 +41,7 @@ export default function DoctorsCard(props) {
             <FontAwesomeIcon icon={faIndianRupee} className="text-sm mx-1" />
             {props.data.price}
           </h5>
-          <Link to="/appointment" className="btn-one inline-block">
+          <Link to="/appointment/checkout" className="btn-one inline-block">
             Book Now
           </Link>
         </div>

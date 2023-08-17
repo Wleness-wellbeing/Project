@@ -57,8 +57,8 @@ export default function InternshipApply({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <section className="fixed inset-0 z-30 flex justify-center backdrop-brightness-50">
-      <div className="w-[640px] bg-white p-6 overflow-y-scroll">
+    <section className="fixed inset-0 z-40 flex justify-center backdrop-brightness-50 pt-8">
+      <div className="w-[640px] bg-white p-6 overflow-y-scroll rounded-t-lg">
         <h4 className="text-center text-2xl font-bold text-primary-300 mb-4">
           Internship Form
         </h4>
