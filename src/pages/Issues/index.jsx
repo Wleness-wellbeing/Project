@@ -37,7 +37,7 @@ function Issues() {
       </header>
 
       <section className="container mx-auto lg:py-10 p-4 xl:pt-0">
-        <div className="flex flex-wrap justify-center mb-6">
+        {/* <div className="flex flex-wrap justify-center mb-6">
           <span className="text-3xl font-semibold text-primary-300">
             Find a Therapist in
           </span>
@@ -65,7 +65,7 @@ function Issues() {
             <option value="ocd">OCD</option>
             <option value="biopolar-disorder">Biopolar Disorder</option>
           </select>
-        </div>
+        </div> */}
         <h2 className="subheading text-center heading-primary">
           Most Common Health Issues
         </h2>

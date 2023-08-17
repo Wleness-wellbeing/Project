@@ -89,10 +89,10 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
   ]);
   return (
     <div className="fixed inset-0 w-full grid place-items-center backdrop-brightness-50 z-50">
-      <div className="w-[340px] md:w-[720px] lg:w-[1100px] py-4 lg:py-12 mx-auto relative border-2 overflow-hidden bg-white rounded-3xl">
+      <div className="w-[340px] md:w-[720px] lg:w-[920px] py-4 lg:py-12 mx-auto relative border-2 overflow-hidden bg-white rounded-3xl">
         {/* Welcome Page */}
         {startAssessment && (
-          <div className="py-6 lg:py-14">
+          <div className="py-6 lg:py-10">
             <h2 className="subheading text-center mb-2 lg:mb-4">
               <span className="heading-primary">Welcome to Wleness</span>
             </h2>
@@ -141,12 +141,12 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             <img
               src={assessment1}
               alt=""
-              className="w-16 lg:w-32 absolute top-44 lg:top-32 left-4 lg:left-20"
+              className="w-16 lg:w-28 absolute top-44 lg:top-44 left-4 lg:left-24"
             />
             <img
               src={assessment2}
               alt=""
-              className="w-16 lg:w-32 absolute bottom-12 lg:bottom-40 right-2 lg:right-20"
+              className="w-16 lg:w-28 absolute bottom-12 lg:bottom-40 right-2 lg:right-20"
             />
           </div>
         )}
@@ -154,7 +154,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
         {/* Screen 1 */}
         {screenOne && (
           <div className="lg:w-[560px] lg:mx-auto">
-            <h2 className="flex flex-col text-primary-300 text-xl lg:text-4xl font-bold text-center mb-0 lg:mb-8">
+            <h2 className="flex flex-col text-primary-300 text-xl lg:text-3xl font-bold text-center mb-0 lg:mb-8">
               <span>What is in your mind?</span>
               <span>How are you feeling?</span>
             </h2>
@@ -192,18 +192,18 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
         {/* Screen 2 */}
         {screenTwo && (
           <div className="lg:w-[640px] lg:mx-auto">
-            <h2 className="flex flex-col text-primary-300 text-4xl font-bold text-center">
+            <h2 className="flex flex-col text-primary-300 text-3xl font-bold text-center">
               How Long have you been experiencing these issues?
             </h2>
-            <div className="flex justify-center flex-wrap gap-4 my-8">
+            <div className="flex justify-center flex-wrap gap-2 my-6">
               {experiencingIssue.map((value, index) => {
                 return <AssessmentTextBtn key={index} name={value} />;
               })}
             </div>
-            <h2 className="flex flex-col text-primary-300 text-4xl font-bold text-center">
+            <h2 className="flex flex-col text-primary-300 text-3xl font-bold text-center">
               How difficult it is for you to manage all these issues?
             </h2>
-            <div className="flex justify-center flex-wrap gap-4 my-8">
+            <div className="flex justify-center flex-wrap gap-2 my-6">
               {managingDifficulty.map((value, index) => {
                 return <AssessmentTextBtn key={index} name={value} />;
               })}
@@ -229,7 +229,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
         {/* Screen 3 */}
         {screenThree && (
           <div className="lg:w-[600px] lg:mx-auto">
-            <h2 className="flex flex-col text-primary-300 text-4xl font-bold text-center">
+            <h2 className="flex flex-col text-primary-300 text-3xl font-bold text-center">
               Which language are you comfortable?
             </h2>
             <div className="flex flex-wrap justify-center gap-4 my-8">
@@ -237,7 +237,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                 return <AssessmentTextBtn key={index} name={value} />;
               })}
             </div>
-            <h2 className="flex flex-col text-primary-300 text-4xl font-bold text-center">
+            <h2 className="flex flex-col text-primary-300 text-3xl font-bold text-center">
               How old are you?
             </h2>
             <div className="flex justify-center flex-wrap gap-4 my-8">
@@ -340,14 +340,13 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
         )}
 
         {/* Shapes */}
-        <span className="border-8 w-20 h-20 lg:w-40 lg:h-40 border-primary-50 rounded-full absolute -top-14 right-10"></span>
+        <span className="border-8 w-20 h-20 lg:w-40 lg:h-40 border-primary-50 rounded-full absolute -top-14 right-0"></span>
         <span className="border-8 w-20 h-20 lg:w-40 lg:h-40 border-primary-50 rounded-full absolute left-10 -bottom-12 lg:-bottom-8"></span>
-        <span className="border-4 w-6 h-6 lg:w-14 lg:h-14 border-primary-50 rounded-full absolute top-20 lg:top-24 right-14 lg:right-44"></span>
-        <span className="border-4 w-7 h-7 lg:w-16 lg:h-16 border-primary-50 rounded-full absolute left-48 bottom-36 lg:bottom-32"></span>
-        <span className="border-4 w-4 h-4 lg:w-12 lg:h-12 border-primary-50 rounded-full absolute left-48 top-1/2"></span>
-        <span className="w-3 h-3 lg:w-10 lg:h-10 rounded-full bg-primary-50 absolute top-4 lg:top-44 right-40"></span>
-        <span className="w-3 h-3 lg:w-10 lg:h-10 rounded-full bg-primary-50 absolute bottom-12 left-72"></span>
-        <span className="w-3 h-3 lg:w-10 lg:h-10 rounded-full bg-primary-50 absolute top-4 left-80"></span>
+        <span className="border-4 w-6 h-6 lg:w-14 lg:h-14 border-primary-50 rounded-full absolute top-20 right-14 lg:-top-7 lg:right-52"></span>
+        <span className="border-4 w-4 h-4 lg:w-12 lg:h-12 border-primary-50 rounded-full absolute left-24 top-1/2"></span>
+        <span className="w-3 h-3 lg:w-10 lg:h-10 rounded-full bg-primary-50 absolute top-4 lg:top-44 right-28"></span>
+        <span className="w-3 h-3 lg:w-10 lg:h-10 rounded-full bg-primary-50 absolute bottom-12 left-52"></span>
+        <span className="w-3 h-3 lg:w-10 lg:h-10 rounded-full bg-primary-50 absolute top-0 left-52"></span>
         <span className="w-3 h-3 lg:w-10 lg:h-10 rounded-full bg-primary-50 absolute bottom-4 lg:bottom-12 right-10 lg:right-32"></span>
 
         {/* Close */}

@@ -6,7 +6,7 @@ export default function Feedback({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <section className="fixed inset-0 z-30 flex justify-center items-center backdrop-brightness-50">
+    <section className="fixed inset-0 z-40 flex justify-center items-center backdrop-brightness-50">
       <div className="w-[640px] bg-white p-6 h-fit rounded-xl">
         <h4 className="text-center text-2xl font-bold text-primary-300 mb-4">
           Feedback Form

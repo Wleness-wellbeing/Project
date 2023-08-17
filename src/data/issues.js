@@ -520,7 +520,7 @@ export const issuesData = [
       "Effective treatments for OCD, such as Cognitive Behavioral Therapy (CBT) and medication, have success rates of around 70-80%. Seeking help increases your chances of achieving significant improvement.",
   },
   {
-    slug: "/issues/biopolar-disorder",
+    slug: "/issues/bipolar-disorder",
     header: {
       title: [
         {
@@ -1134,7 +1134,7 @@ export const issuesData = [
       "Approximately 70-80% of children with ODD also meet the criteria for another mental health disorder, such as ADHD or conduct disorder.",
   },
   {
-    slug: "/issues/cd",
+    slug: "/issues/contact-disorder",
     header: {
       title: [
         {

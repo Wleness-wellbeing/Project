@@ -85,24 +85,9 @@ import ActivityBlogs from "../components/ActivityBlogs";
 // Issues data for landing page
 export const issues = [
   {
-    name: "Anxiety",
-    image: issueAnxiety,
-    slug: "/issues/anxiety",
-  },
-  {
-    name: "ADHD",
-    image: issueAdhd,
-    slug: "/issues/adhd",
-  },
-  {
-    name: "Bio polar disorder",
-    image: issueBiopolarDisorder,
-    slug: "/issues/biopolar-disorder",
-  },
-  {
-    name: "CD",
-    image: issueCd,
-    slug: "/issues/cd",
+    name: "Stress",
+    image: issueStress,
+    slug: "/issues/stress",
   },
   {
     name: "Depression",
@@ -110,9 +95,14 @@ export const issues = [
     slug: "/issues/depression",
   },
   {
-    name: "Eating Disorder",
-    image: issueEatingDisorder,
-    slug: "/issues/eating-disorder",
+    name: "Panic Attacks",
+    image: issuePanicAttack,
+    slug: "/issues/panic-attack",
+  },
+  {
+    name: "Anxiety",
+    image: issueAnxiety,
+    slug: "/issues/anxiety",
   },
   {
     name: "OCD",
@@ -120,19 +110,9 @@ export const issues = [
     slug: "/issues/ocd",
   },
   {
-    name: "ODD",
-    image: issueOdd,
-    slug: "/issues/odd",
-  },
-  {
-    name: "Panic Attack",
-    image: issuePanicAttack,
-    slug: "/issues/panic-attack",
-  },
-  {
-    name: "Paranoia",
-    image: issueParanoia,
-    slug: "/issues/paranoia",
+    name: "Bipolar Disorder",
+    image: issueBiopolarDisorder,
+    slug: "/issues/bipolar-disorder",
   },
   {
     name: "Schizophrenia",
@@ -140,9 +120,29 @@ export const issues = [
     slug: "/issues/schizophrenia",
   },
   {
-    name: "Stress",
-    image: issueStress,
-    slug: "/issues/stress",
+    name: "Eating Disorder",
+    image: issueEatingDisorder,
+    slug: "/issues/eating-disorder",
+  },
+  {
+    name: "Paranoia",
+    image: issueParanoia,
+    slug: "/issues/paranoia",
+  },
+  {
+    name: "ADHD",
+    image: issueAdhd,
+    slug: "/issues/adhd",
+  },
+  {
+    name: "ODD",
+    image: issueOdd,
+    slug: "/issues/odd",
+  },
+  {
+    name: "Contact Disorder",
+    image: issueCd,
+    slug: "/issues/contact-disorder",
   },
 ];
 

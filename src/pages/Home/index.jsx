@@ -307,7 +307,9 @@ export default function Home() {
                 to share, heal, and grow together. Let's break the stigma and
                 support each other on this journey towards emotional well-being.
               </p>
-              <button className="btn-one">Join Us Now</button>
+              <Link to="/community" className="btn-one inline-block">
+                Join Us Now
+              </Link>
             </article>
             <div className="p-4 lg:px-10 lg:w-2/5">
               <div>
@@ -517,7 +519,9 @@ export default function Home() {
             Everything you need to know right here at Wleness. Ask questions and
             browse around for answers.
           </p>
-          <button className="btn-one">Goes to FAQ's</button>
+          <Link to="/faqs" className="btn-one inline-block">
+            Goes to FAQ's
+          </Link>
         </div>
         <div className="flex flex-col lg:w-1/2 gap-4">
           {homeFaqs.map((value, index) => {

@@ -201,9 +201,6 @@ export default function index() {
           Helping you connect with like minded people. Find your ultimate
           support network today
         </p>
-        <div className="">
-          <button className="btn-one">Explore</button>
-        </div>
       </section>
     </>
   );

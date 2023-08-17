@@ -156,7 +156,8 @@ export default function index() {
             Employees
           </h2>
 
-          <div className="bg-[#FFE0F6] p-2 lg:p-4 grid grid-cols-4 gap-2 lg:gap-6 my-6 lg:my-10 rounded-xl">
+          {/* <div className="bg-[#FFE0F6] p-2 lg:p-4 grid grid-cols-4 gap-2 lg:gap-6 my-6 lg:my-10 rounded-xl"> */}
+          <div className="bg-blue-100 p-2 lg:p-4 grid grid-cols-4 gap-2 lg:gap-6 my-6 lg:my-10 rounded-xl">
             {ourOfferings.map((value, i) => {
               return (
                 <div className="relative z-20 group" key={i}>
