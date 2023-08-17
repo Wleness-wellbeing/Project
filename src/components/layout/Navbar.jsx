@@ -32,7 +32,7 @@ function Navbar() {
   return (
     <>
       {/* ========== Navigation Bar ========== */}
-      <nav className="sticky top-0 left-0 right-0 bg-white z-20">
+      <nav className="sticky top-0 left-0 right-0 bg-white z-40">
         <div className="container mx-auto flex items-center justify-between relative">
           {/* Logo */}
           <div className=" pt-2 w-32 xl:w-48 md:w-56 lg:w-64">

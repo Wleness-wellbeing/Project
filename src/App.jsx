@@ -45,6 +45,7 @@ import AdminDoctors from "./pages/Admin/AdminDoctors";
 import AdminUsers from "./pages/Admin/AdminUsers";
 import DoctorDashboard from "./pages/Doctors/DoctorDashboard";
 import UserDashboard from "./pages/Doctors/UserDashboard";
+import Corporate from "./pages/Corporate";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -285,6 +286,14 @@ function App() {
           element={
             <Layout>
               <CampusAmbassador />
+            </Layout>
+          }
+        />
+        <Route
+          path="/corporate"
+          element={
+            <Layout>
+              <Corporate />
             </Layout>
           }
         />
