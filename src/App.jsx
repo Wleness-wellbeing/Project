@@ -35,7 +35,7 @@ import Faqs from "./pages/Faqs";
 import Community from "./pages/Community";
 import IssueSubPageLayout from "./pages/Issues/IssueSubPageLayout";
 import Admin from "./pages/Admin";
-import AdminSideBar from "./components/admin/AdminSideBar";
+// import AdminSideBar from "./components/admin/AdminSideBar";
 import IssueCategory from "./pages/Admin/IssueCategory";
 import AdminIssues from "./pages/Admin/AdminIssues";
 import AdminQuestions from "./pages/Admin/AdminQuestions";
@@ -441,7 +441,7 @@ function AdminLayout({ children }) {
       <h1 class="col-span-2 text-3xl font-semibold pb-8 ml-[200px]">
         Admin Page
       </h1>
-      <AdminSideBar />
+      {/* <AdminSideBar /> */}
       {children}
     </section>
   );

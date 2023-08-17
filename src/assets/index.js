@@ -20,6 +20,14 @@ export {
   avatarImage6,
 };
 
+// =======================admin =========////
+
+import doctor from "./images/doctor.png"
+import profile from "./images/profile.png"
+import doctorLogIn from "./images/doctorLogIn.png"
+
+export {doctor,profile,doctorLogIn};
+
 // Activities Images
 import brainExercise from "./images/activities/activities-brainExercise.png";
 import goalPlan from "./images/activities/activities-goalPlan.png";
