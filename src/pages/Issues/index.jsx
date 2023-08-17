@@ -2,7 +2,6 @@ import React from "react";
 import { issuesHeader } from "../../assets";
 import { issues } from "../../data";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Issues() {
   return (
@@ -38,7 +37,7 @@ function Issues() {
       </header>
 
       <section className="container mx-auto lg:py-10 p-4 xl:pt-0">
-        <div className="flex justify-center mb-6">
+        <div className="flex flex-wrap justify-center mb-6">
           <span className="text-3xl font-semibold text-primary-300">
             Find a Therapist in
           </span>
@@ -124,47 +123,31 @@ function Issues() {
         {/* https://www.w3schools.com/howto/howto_css_flip_card.asp - Flip card */}
         {/* Issues */}
         <div className="pb-8">
-          <div className="grid gap-4 py-6 pt-8 lg:pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-12 xl:gap-10 xl:pb-16 2xl:gap-16 2xl:w-[95%] mx-auto">
+          <div className="grid gap-4 py-6 pt-8 lg:pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-12 xl:gap-10 xl:pb-16 2xl:gap-16 xl:grid-cols-3 mx-auto">
             {issues.map((value, index) => {
               return (
                 <div
-                  className="flip-card bg-transparent w-80 h-96 perspective-1000"
                   key={index}
+                  className="bg-gradient-to-br p-1 from-secondary to-tertiary rounded-2xl rounded-br-[3rem]"
                 >
-                  <div className="flip-card-inner">
-                    {/* Front */}
-                    <div className="bg-gradient-to-br p-1 from-secondary to-tertiary flip-card-front rounded-2xl">
-                      <div className="bg-[#FAFCE7] h-full rounded-2xl flex flex-col items-center justify-center">
-                        <h3 className="font-bold text-center text-2xl">
-                          {value.name}
-                        </h3>
-                        <img
-                          src={value.image}
-                          alt="Avatar"
-                          className="mx-auto block w-24 h-24 lg:h-40 lg:w-40 object-cover rounded-2xl 2xl:w-48 2xl:h-48 mb-4"
-                        />
-                        <button className="btn-one">Book Now</button>
-                      </div>
-                    </div>
-                    {/* Back */}
-                    <div className="bg-gradient-to-br p-1 from-secondary to-tertiary flip-card-back rounded-2xl">
-                      <div className="bg-[#FAFCE7] h-full rounded-2xl flex flex-col items-center justify-center p-4">
-                        <p className="para mb-6">
-                          Lorem ipsum dolor sit, amet consectetur adipisicing
-                          elit. Dolorum eos maxime quas quisquam sequi quis,
-                          nostrum iste laboriosam corporis amet ad, atque sit
-                          aspernatur ullam, placeat eum! Quis, nesciunt enim?
-                        </p>
-                        <Link to={value.slug} className="btn-one">
-                          Take Assessment
-                        </Link>
-                      </div>
-                    </div>
+                  <div className="bg-[#FAFCE7] h-full rounded-2xl flex flex-col items-center justify-center py-8 rounded-br-[3rem]">
+                    <h3 className="font-bold text-center text-2xl mb-4">
+                      {value.name}
+                    </h3>
+                    <Link to={value.slug}>
+                      <img
+                        src={value.image}
+                        alt="Avatar"
+                        className="mx-auto block w-24 h-24 lg:h-40 lg:w-40 object-cover rounded-2xl 2xl:w-48 2xl:h-48 mb-4"
+                      />
+                    </Link>
+                    <button className="btn-one">Book Now</button>
                   </div>
                 </div>
               );
             })}
           </div>
+
           <div className="text-center">
             <button className="btn-one">View More</button>
           </div>

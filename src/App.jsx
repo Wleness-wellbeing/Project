@@ -34,18 +34,18 @@ import Appointment from "./pages/Appointment";
 import Faqs from "./pages/Faqs";
 import Community from "./pages/Community";
 import IssueSubPageLayout from "./pages/Issues/IssueSubPageLayout";
-// import Admin from "./pages/Admin";
+import Admin from "./pages/Admin";
 // import AdminSideBar from "./components/admin/AdminSideBar";
-// import IssueCategory from "./pages/Admin/IssueCategory";
-// import AdminIssues from "./pages/Admin/AdminIssues";
-// import AdminQuestions from "./pages/Admin/AdminQuestions";
-// import AdminQueries from "./pages/Admin/AdminQueries";
-// import AdminBlogs from "./pages/Admin/AdminBlogs";
-// import AdminDoctors from "./pages/Admin/AdminDoctors";
-// import AdminUsers from "./pages/Admin/AdminUsers";
-import SidebarRouting from "./components/AdminPages/SideBar/SidebarRouting";
-import DocAdminLogin from "./components/AdminPages/DocAdminLogin";
-import ForgotPassword from "./pages/Authentication/Forget";
+import IssueCategory from "./pages/Admin/IssueCategory";
+import AdminIssues from "./pages/Admin/AdminIssues";
+import AdminQuestions from "./pages/Admin/AdminQuestions";
+import AdminQueries from "./pages/Admin/AdminQueries";
+import AdminBlogs from "./pages/Admin/AdminBlogs";
+import AdminDoctors from "./pages/Admin/AdminDoctors";
+import AdminUsers from "./pages/Admin/AdminUsers";
+import DoctorDashboard from "./pages/Doctors/DoctorDashboard";
+import UserDashboard from "./pages/Doctors/UserDashboard";
+import Corporate from "./pages/Corporate";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -274,14 +274,6 @@ function App() {
           }
         />
         <Route
-          path="/forget-password"
-          element={
-            <SignupLayout>
-              <ForgotPassword />
-            </SignupLayout>
-          }
-        />
-        <Route
           path="/signup"
           element={
             <SignupLayout>
@@ -294,6 +286,14 @@ function App() {
           element={
             <Layout>
               <CampusAmbassador />
+            </Layout>
+          }
+        />
+        <Route
+          path="/corporate"
+          element={
+            <Layout>
+              <Corporate />
             </Layout>
           }
         />
@@ -313,10 +313,8 @@ function App() {
             </SignupLayout>
           }
         />
-        <Route path="/admin/*" element={<SidebarRouting />} />
-        <Route path="/admin/doclogin" element={<DocAdminLogin />} />
         {/* Admin Routes */}
-        {/* <Route
+        <Route
           path="/admin"
           element={
             <Layout>
@@ -395,7 +393,23 @@ function App() {
               </AdminLayout>
             </Layout>
           }
-        /> */}
+        />
+        <Route
+          path="/doctor/dashboard"
+          element={
+            <SignupLayout>
+              <DoctorDashboard />
+            </SignupLayout>
+          }
+        />
+        <Route
+          path="/user/dashboard"
+          element={
+            <SignupLayout>
+              <UserDashboard />
+            </SignupLayout>
+          }
+        />
       </Routes>
     </Router>
   );
@@ -427,7 +441,7 @@ function AdminLayout({ children }) {
       <h1 class="col-span-2 text-3xl font-semibold pb-8 ml-[200px]">
         Admin Page
       </h1>
-      <AdminSideBar />
+      {/* <AdminSideBar /> */}
       {children}
     </section>
   );

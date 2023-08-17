@@ -569,8 +569,9 @@ export {
 
 // Doctor Images
 import doctorAppointment from "./images/doctors/doctor-appointment.png";
+import dashboardDoctor from "./images/doctors/dashboard-doctor.png";
 
-export { doctorAppointment };
+export { doctorAppointment, dashboardDoctor };
 
 // Design Elements
 import bgDotsPattern from "./images/designs/bg-dots-pattern.png";
@@ -604,6 +605,31 @@ export {
   communitySupport4,
   communitySupport5,
   communitySupport6,
+};
+
+// Community
+import corporateHeader from "./images/corporate/corporate-header.png";
+import corporatePriority1 from "./images/corporate/corporate-prioritize-1.png";
+import corporatePriority2 from "./images/corporate/corporate-prioritize-2.png";
+import corporatePriority3 from "./images/corporate/corporate-prioritize-3.png";
+import corporatePriority4 from "./images/corporate/corporate-prioritize-4.png";
+import employeeTriangleHub from "./images/corporate/employee-hub-triangle.png";
+import circleArt from "./images/corporate/circle-art.png";
+import blueFlower from "./images/corporate/blue-flower.png";
+import blueDots1 from "./images/corporate/blue-dots-grid-1.png";
+import blueDots2 from "./images/corporate/blue-dots-grid-2.png";
+
+export {
+  corporateHeader,
+  corporatePriority1,
+  corporatePriority2,
+  corporatePriority3,
+  corporatePriority4,
+  employeeTriangleHub,
+  circleArt,
+  blueFlower,
+  blueDots1,
+  blueDots2,
 };
 
 // Icons

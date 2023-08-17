@@ -226,3 +226,27 @@ export const faqs = [
       "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
   },
 ];
+
+// Home page Faqs
+export const homeFaqs = [
+  {
+    question: "What is Wleness?",
+    answer:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus tempore blanditiis, dolorem explicabo doloremque debitis aperiam! Exercitationem eaque, cumque accusamus impedit assumenda labore odit, sunt architecto quia, magnam ipsam voluptates?",
+  },
+  {
+    question: "What services does Wleness offer?",
+    answer:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus tempore blanditiis, dolorem explicabo doloremque debitis aperiam! Exercitationem eaque, cumque accusamus impedit assumenda labore odit, sunt architecto quia, magnam ipsam voluptates?",
+  },
+  {
+    question: "What makes Wleness different from others?",
+    answer:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus tempore blanditiis, dolorem explicabo doloremque debitis aperiam! Exercitationem eaque, cumque accusamus impedit assumenda labore odit, sunt architecto quia, magnam ipsam voluptates?",
+  },
+  {
+    question: "How can I benefit from using Wleness?",
+    answer:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus tempore blanditiis, dolorem explicabo doloremque debitis aperiam! Exercitationem eaque, cumque accusamus impedit assumenda labore odit, sunt architecto quia, magnam ipsam voluptates?",
+  },
+];

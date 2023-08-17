@@ -84,7 +84,7 @@
 
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import { FacebookLogin } from "react-facebook-login";
+// import { FacebookLogin } from "react-facebook-login";
 
 const Facebook = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);

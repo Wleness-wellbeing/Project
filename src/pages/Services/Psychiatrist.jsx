@@ -1,7 +1,7 @@
 import React from "react";
 // Data
 import { psychiatristData } from "../../data/services";
-import { therapyClient } from "../../data/clients";
+import { psychiatristClient } from "../../data/clients";
 // Components
 import GridHeader from "../../components/GridHeader";
 import SelectBest from "../../components/SelectBest";
@@ -49,7 +49,7 @@ export default function Psychiatrist() {
           className="absolute -top-16 left-1/2 -translate-x-1/2 w-32"
         />
       </section>
-      <HappyClient data={therapyClient} />
+      <HappyClient data={psychiatristClient} />
     </>
   );
 }

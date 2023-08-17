@@ -46,20 +46,7 @@ export const issuesData = [
       image: stressHeader,
     },
     symptoms: {
-      title: [
-        {
-          color: false,
-          text: "Here's how Generalized ",
-        },
-        {
-          color: true,
-          text: "Stress Disorder symptoms ",
-        },
-        {
-          color: false,
-          text: "may appear: ",
-        },
-      ],
+      highlight: "Stress Disorder symptoms",
       points: [
         [
           "Feeling constant tiredness even after adequate rest",
@@ -163,20 +150,7 @@ export const issuesData = [
       image: depressionHeader,
     },
     symptoms: {
-      title: [
-        {
-          color: false,
-          text: "Here's how Generalized ",
-        },
-        {
-          color: true,
-          text: "Depression symptoms ",
-        },
-        {
-          color: false,
-          text: "may appear: ",
-        },
-      ],
+      highlight: " Depression symptoms ",
       points: [
         ["Trouble concentrating", " top-0 left-1/4 "],
         ["Facing difficulty in concentrating", " top-28 right-10 "],
@@ -271,20 +245,7 @@ export const issuesData = [
       image: panicAttacksHeader,
     },
     symptoms: {
-      title: [
-        {
-          color: false,
-          text: "Here's how Generalized ",
-        },
-        {
-          color: true,
-          text: "Panic Attack symptoms ",
-        },
-        {
-          color: false,
-          text: "may appear: ",
-        },
-      ],
+      highlight: " Panic Attack symptoms ",
       points: [
         ["Rapid heartbeat or palpitations", " top-0 left-1/4 "],
         ["Shortness of breath", " top-28 right-10 "],
@@ -376,28 +337,15 @@ export const issuesData = [
       image: stressHeader,
     },
     symptoms: {
-      title: [
-        {
-          color: false,
-          text: "Here's how Generalized ",
-        },
-        {
-          color: true,
-          text: "Anxiety symptoms ",
-        },
-        {
-          color: false,
-          text: "may appear: ",
-        },
-      ],
+      highlight: " Anxiety symptoms ",
       points: [
         [
           "Excessive worry and apprehension about everyday events or situations.",
-          " top-0 left-1/4 ",
+          " top-0 left-1/2 -translate-x-1/2 xl:translate-x-0 xl:left-1/4 px-2 xl:px-0 ",
         ],
         [
           "Avoidance of triggering situations or activities.",
-          " top-28 right-10 ",
+          " top-16 xl:top-28 right-0 xl:right-10 w-28 ",
         ],
         [
           "Fatigue or difficulty concentrating due to racing thoughts.",
@@ -405,7 +353,7 @@ export const issuesData = [
         ],
         [
           "Physical symptoms like increased heart rate, sweating, trembling, or muscle tension.",
-          " bottom-0 left-1/4 ",
+          " bottom-0 left-1/2 -translate-x-1/2 xl:translate-x-0 xl:left-1/4 px-2 xl:px-0 ",
         ],
         [
           "Restlessness, feeling on edge, or having difficulty relaxing.",
@@ -499,20 +447,7 @@ export const issuesData = [
       image: ocdHeader,
     },
     symptoms: {
-      title: [
-        {
-          color: false,
-          text: "Here's how Generalized ",
-        },
-        {
-          color: true,
-          text: "OCD symptoms ",
-        },
-        {
-          color: false,
-          text: "may appear: ",
-        },
-      ],
+      highlight: " OCD symptoms ",
       points: [
         ["Intrusive, Distressing Thoughts", " top-0 left-1/4 "],
         ["Repetitive Rituals or Behaviors", " top-28 right-10 "],
@@ -608,20 +543,7 @@ export const issuesData = [
       image: biopolarDisorderHeader,
     },
     symptoms: {
-      title: [
-        {
-          color: false,
-          text: "Here's how Generalized ",
-        },
-        {
-          color: true,
-          text: "Bipolar Disorder symptoms ",
-        },
-        {
-          color: false,
-          text: "may appear: ",
-        },
-      ],
+      highlight: " Bipolar Disorder symptoms ",
       points: [
         ["Intense Euphoria and Energy", " top-0 left-1/4 "],
         ["Severe Irritability or Agitation", " top-28 right-10 "],
@@ -717,20 +639,7 @@ export const issuesData = [
       image: schizophreniaHeader,
     },
     symptoms: {
-      title: [
-        {
-          color: false,
-          text: "Here's how Generalized ",
-        },
-        {
-          color: true,
-          text: "Schizophrenia symptoms ",
-        },
-        {
-          color: false,
-          text: "may appear: ",
-        },
-      ],
+      highlight: " Schizophrenia symptoms ",
       points: [
         ["Hallucinations", " top-0 left-1/4 "],
         ["Impaired Social Functioning", " top-28 right-10 "],
@@ -822,20 +731,7 @@ export const issuesData = [
       image: eatingDisorderHeader,
     },
     symptoms: {
-      title: [
-        {
-          color: false,
-          text: "Here's how Generalized ",
-        },
-        {
-          color: true,
-          text: "Eating Disorder symptoms ",
-        },
-        {
-          color: false,
-          text: "may appear: ",
-        },
-      ],
+      highlight: " Eating Disorder symptoms ",
       points: [
         ["Social Withdrawal and Isolation", " top-0 left-1/4 "],
         ["Obsession with Weight and Body Shape", " top-28 right-10 "],
@@ -931,20 +827,7 @@ export const issuesData = [
       image: paranoiaHeader,
     },
     symptoms: {
-      title: [
-        {
-          color: false,
-          text: "Here's how Generalized ",
-        },
-        {
-          color: true,
-          text: "Paranoia symptoms ",
-        },
-        {
-          color: false,
-          text: "may appear: ",
-        },
-      ],
+      highlight: " Paranoia symptoms ",
       points: [
         ["Social withdrawal due to fear.", " top-0 left-1/4 "],
         ["Persistent mistrust of others' intentions.", " top-28 right-10 "],
@@ -1049,20 +932,7 @@ export const issuesData = [
       image: adhdHeader,
     },
     symptoms: {
-      title: [
-        {
-          color: false,
-          text: "Here's how Generalized ",
-        },
-        {
-          color: true,
-          text: "ADHD symptoms ",
-        },
-        {
-          color: false,
-          text: "may appear: ",
-        },
-      ],
+      highlight: " ADHD symptoms ",
       points: [
         [
           "Poor Time Management: Struggling to manage time effectively.",
@@ -1176,20 +1046,7 @@ export const issuesData = [
       image: oddHeader,
     },
     symptoms: {
-      title: [
-        {
-          color: false,
-          text: "Here's how Generalized ",
-        },
-        {
-          color: true,
-          text: "ODD symptoms ",
-        },
-        {
-          color: false,
-          text: "may appear: ",
-        },
-      ],
+      highlight: " ODD symptoms ",
       points: [
         [
           "Vindictiveness and seeking revenge when feeling wronged.",
@@ -1300,20 +1157,7 @@ export const issuesData = [
       image: cdHeader,
     },
     symptoms: {
-      title: [
-        {
-          color: false,
-          text: "Here's how Generalized ",
-        },
-        {
-          color: true,
-          text: "Conduct Disorder symptoms ",
-        },
-        {
-          color: false,
-          text: "may appear: ",
-        },
-      ],
+      highlight: " Conduct Disorder symptoms ",
       points: [
         ["Aggression towards people and animals.", " top-0 left-1/4 "],
         [
