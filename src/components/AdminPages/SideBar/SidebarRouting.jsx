@@ -12,18 +12,18 @@ import DoctorDetailPage from "../DoctorDetailPage";
 
 const SidebarRouting = () => {
   return (
-        <SideBar>
-        <Routes>
-        <Route exact path="doctordetailpage" element={<DoctorDetailPage/>}/>
-          <Route exact path="doctors" element={<Doctors/>}/>
-          <Route exact path="queries" element={<Queries/>}/>
-          <Route exact path="issues" element={<Issue/>}/>
-          <Route exact path="issuecategory" element={<IssueCategory/>}/>
-          <Route exact path="users" element={<Users/>}/>
-          <Route exact path="questions" element={<Questions/>}/>
-          <Route exact path="blogs" element={<Blog/>}/>
-        </Routes>
-      </SideBar>
+    <SideBar>
+      <Routes>
+        <Route exact path="doctordetailpage" element={<DoctorDetailPage />} />
+        <Route exact path="doctors" element={<Doctors />} />
+        <Route exact path="queries" element={<Queries />} />
+        <Route exact path="issues" element={<Issue />} />
+        <Route exact path="issuecategory" element={<IssueCategory />} />
+        <Route exact path="users" element={<Users />} />
+        <Route exact path="questions" element={<Questions />} />
+        <Route exact path="blogs" element={<Blog />} />
+      </Routes>
+    </SideBar>
   );
 };
 

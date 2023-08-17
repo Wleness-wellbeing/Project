@@ -1,11 +1,11 @@
-import React,{useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
 import AddCard from "./AdminCard/AddCard";
 import CardDetail from "./AdminCard/CardDetail";
 import axios from "axios";
 
 const Issues = () => {
   const ADMIN_TOKEN = sessionStorage.getItem("adminToken");
-  const[fetchData,setFetchData]=useState();
+  const [fetchData, setFetchData] = useState();
 
   useEffect(() => {
     handleData();
@@ -17,10 +17,10 @@ const Issues = () => {
       Authorization: ADMIN_TOKEN,
     };
     axios
-      .get("http://localhost:3000/admin/issues",{ headers: adminHeaders })
+      .get("http://localhost:3000/admin/issues", { headers: adminHeaders })
       .then((res) => {
         const data = res.data;
-        console.log(res)
+        console.log(res);
         setFetchData(data);
       })
       .catch((error) => {

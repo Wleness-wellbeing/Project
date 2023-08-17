@@ -1,9 +1,9 @@
-import React,{useState,useEffect} from "react";
-import ProfileImg from "../../assets/profile.png";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { profile } from "../../assets";
 
 const DoctorDetailPage = () => {
-
-  const[fetchData,setFetchData]=useState();
+  const [fetchData, setFetchData] = useState();
 
   useEffect(() => {
     handleData();
@@ -14,7 +14,7 @@ const DoctorDetailPage = () => {
       .get("")
       .then((res) => {
         const data = res.data.data;
-        setFetchData(data.slice(0,3));
+        setFetchData(data.slice(0, 3));
       })
       .catch((error) => {
         console.error("Error retrieving data:", error);
@@ -25,7 +25,7 @@ const DoctorDetailPage = () => {
     <div class="md:w-4/5 px-4 sm:px-8 py-6 rounded-xl xl:w-[85%]">
       <div class="lg:w-3/4 mx-auto">
         <div>
-          <img src={ProfileImg} alt="" class="w-36 object-cover block" />
+          <img src={profile} alt="" class="w-36 object-cover block" />
         </div>
 
         <form action="#" method="post" class="py-4">

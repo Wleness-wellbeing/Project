@@ -14,9 +14,7 @@ export default function AssessmentOption(props) {
       <button
         onClick={handleClick}
         className={`flex items-center px-5 py-2.5 hover:text-white font-semibold bg-white rounded-md ${
-          isSelected[index]
-            ? "bg-primary-300 text-white"
-            : "hover:bg-primary-300"
+          isSelected[index] ? "bg-red-300 text-black" : "hover:bg-primary-300"
         }`}
       >
         <img src={props.image} alt="" className="w-6 object-contain mr-2" />

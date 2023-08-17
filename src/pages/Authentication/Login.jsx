@@ -82,9 +82,12 @@ export default function Login() {
                 placeholder="Password"
                 className="form-input"
               />
-              <a href="#" className="text-right block mb-10 text-primary-100">
+              <Link
+                to="/forget-password"
+                className="text-right block mb-10 text-primary-100"
+              >
                 Forgot Password?
-              </a>
+              </Link>
             </label>
             <div className="text-center">
               <button

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AddCard from "./AdminCard/AddCard";
 import CardDetail from "./AdminCard/CardDetail";
+import axios from "axios";
 
 const IssueCategory = () => {
   const [fetchData, setFetchData] = useState();
