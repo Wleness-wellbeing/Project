@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 // Data
 import { psychiatristData } from "../../data/services";
 import { psychiatristClient } from "../../data/clients";
@@ -9,10 +9,20 @@ import HappyClient from "../../components/HappyClient";
 import { bulb } from "../../assets";
 
 export default function Psychiatrist() {
+  const ref = useRef(null);
+
+  const handleScrollToComponent = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
-      <GridHeader name={psychiatristData.name} image={psychiatristData.image} />
+      <GridHeader
+        name={psychiatristData.name}
+        image={psychiatristData.image}
+        handleScrollToComponent={() => handleScrollToComponent()}
+      />
       <SelectBest
+        ref={ref}
         name={psychiatristData.name}
         image={psychiatristData.bestTherapist.featureImage}
         features={psychiatristData.bestTherapist.features}

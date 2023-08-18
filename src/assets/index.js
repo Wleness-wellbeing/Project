@@ -22,11 +22,11 @@ export {
 
 // =======================admin =========////
 
-import doctor from "./images/doctor.png"
-import profile from "./images/profile.png"
-import doctorLogIn from "./images/doctorLogIn.png"
+import doctor from "./images/doctor.png";
+import profile from "./images/profile.png";
+import doctorLogIn from "./images/doctorLogIn.png";
 
-export {doctor,profile,doctorLogIn};
+export { doctor, profile, doctorLogIn };
 
 // Activities Images
 import brainExercise from "./images/activities/activities-brainExercise.png";
@@ -106,6 +106,7 @@ import brainGameHunter from "./images/activities/brainExercise/brain-game-turtle
 import Elipse1 from "./images/joinus/Ellipse 1150.png";
 import Elipse2 from "./images/joinus/Ellipse 1151.png";
 import Elipse3 from "./images/joinus/Ellipse 1152.png";
+import Elipse4 from "./images/joinus/Ellipse 1152.png";
 import Bubble from "./images/joinus/Bubble.png";
 // Campus Ambassador
 import campusAmbassadorHeader from "./images/joinus/campusAmbassador/campus-ambassador-header.png";
@@ -127,6 +128,7 @@ export {
   Elipse1,
   Elipse2,
   Elipse3,
+  Elipse4,
   Bubble,
   campusAmbassadorHeader,
   campusAmbassadorTeam,

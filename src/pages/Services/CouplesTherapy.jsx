@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 // Data
 import {
   couplesTherapyData,
@@ -17,17 +17,23 @@ import HappyClient from "../../components/HappyClient";
 import FaqWithImage from "../../components/FaqWithImage";
 
 function CouplesTherapy() {
+  const ref = useRef(null);
+
+  const handleScrollToComponent = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       <ActivityHeader
         title={couplesTherapyData.header.title}
         image={couplesTherapyData.header.image}
         desc={couplesTherapyData.header.desc}
+        handleScrollToComponent={() => handleScrollToComponent()}
       />
       <FeaturesBlock data={couplesTherapyFeatures} />
 
       {/* How Section  */}
-      <section className="container mx-auto !px-0">
+      <section className="container mx-auto !px-0" ref={ref}>
         <h2 className="subheading text-center py-12">
           {textColorize([
             {

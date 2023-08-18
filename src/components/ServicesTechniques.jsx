@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export default function ServicesTechniques(props) {
+const ServicesTechniques = React.forwardRef((props, ref) => {
   const activityTypes = props.types.map((value, index) => {
     return (
       <figure key={index}>
@@ -17,7 +18,12 @@ export default function ServicesTechniques(props) {
           </h4>
           <p className="pb-2 text-justify">{value.desc}</p>
           <div className="text-center mt-2">
-            <button className="btn-one !py-2">Subscribe</button>
+            <Link
+              to="/appointment/checkout"
+              className="btn-one !py-2 inline-block"
+            >
+              Book Now
+            </Link>
           </div>
         </figcaption>
       </figure>
@@ -25,7 +31,7 @@ export default function ServicesTechniques(props) {
   });
 
   return (
-    <section className="container mx-auto pb-6">
+    <section className="container mx-auto pb-6" ref={ref}>
       <div className="lg:my-14 text-center">
         <h2 className="subheading text-primary-400">{props.title}</h2>
         <p className="lg:text-2xl font-semibold">{props.desc}</p>
@@ -35,4 +41,6 @@ export default function ServicesTechniques(props) {
       <div className="grid lg:grid-cols-3 pb-4 gap-6">{activityTypes}</div>
     </section>
   );
-}
+});
+
+export default ServicesTechniques;

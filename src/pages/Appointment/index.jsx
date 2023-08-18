@@ -7,6 +7,8 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import Calendly from "../../components/Calendly";
+// Data
+import { doctorAppointment } from "../../assets";
 
 export default function Appointment() {
   return (
@@ -61,13 +63,13 @@ export default function Appointment() {
               </h5>
               <ul className="grid lg:grid-cols-3 gap-x-5">
                 <li className="text-center font-semibold text-primary-300 border-2 border-primary-300 rounded-lg px-6 py-2.5">
-                  45 min
+                  30 Min
+                </li>
+                <li className="text-center font-semibold text-primary-300 border-2 border-primary-300 rounded-lg px-6 py-2.5">
+                  45 Min
                 </li>
                 <li className="text-center font-semibold text-primary-300 border-2 border-primary-300 rounded-lg px-6 py-2.5">
                   1 Hr
-                </li>
-                <li className="text-center font-semibold text-primary-300 border-2 border-primary-300 rounded-lg px-6 py-2.5">
-                  1.5 Hr
                 </li>
               </ul>
             </div>
@@ -239,6 +241,24 @@ export default function Appointment() {
         <div className="absolute top-0 left-28 bottom-0 w-28 bg-primary-50/60"></div>
         <div className="absolute top-0 left-56 bottom-0 w-28 bg-primary-50/50"></div>
         <div className="absolute top-0 left-[21rem] bottom-0 w-28 bg-primary-50/30"></div>
+
+        <figure className="w-96 mx-auto lg:w-[320px] justify-center gap-x-8 py-6 absolute top-10 left-16">
+          <div>
+            <img
+              src={doctorAppointment}
+              alt=""
+              className="object-cover w-52 mx-auto mb-2"
+            />
+          </div>
+          <figcaption className="w-52 mx-auto">
+            <h4 className="text-3xl font-bold">Dr. Jenny</h4>
+            <h6 className="font-semibold text-xl">6+ yrs of experience</h6>
+            <div className="my-2 font-medium">
+              <p>Expertise: Yoga, Work-life</p>
+              <p>Speaks: German, English</p>
+            </div>
+          </figcaption>
+        </figure>
       </section>
     </>
   );

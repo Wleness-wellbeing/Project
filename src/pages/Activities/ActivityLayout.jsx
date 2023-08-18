@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 // Data
 import { activityFeatures } from "../../data";
 // Components
@@ -9,15 +9,22 @@ import ActivityBlogs from "../../components/ActivityBlogs";
 import FeaturesBlock from "../../components/FeaturesBlock";
 
 export default function ActivityLayout(props) {
+  const ref = useRef(null);
+
+  const handleScrollToComponent = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       <ActivityHeader
         title={props.header.title}
         image={props.header.image}
         desc={props.header.desc}
+        handleScrollToComponent={() => handleScrollToComponent()}
       />
       <FeaturesBlock data={activityFeatures} />
       <ActivityTechniques
+        ref={ref}
         title={props.activities.title}
         desc={props.activities.desc}
         types={props.activities.types}

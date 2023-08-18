@@ -3,10 +3,6 @@ import React, { useState } from "react";
 import { cloudWithDots } from "../assets";
 import Assessment from "../components/Assessment";
 
-const button = {
-  slug: "#experts",
-  text: "Find the Experts",
-};
 export default function GridHeader(props) {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
 
@@ -16,6 +12,11 @@ export default function GridHeader(props) {
 
   const closeAssessmentModal = () => {
     setShowAssessmentModal(false);
+  };
+  const button = {
+    slug: "",
+    text: "Find the Experts",
+    click: props.handleScrollToComponent,
   };
   return (
     <header className="py-10 relative overflow-x-hidden">

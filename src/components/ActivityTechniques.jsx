@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function ActivityTechniques(props) {
+const ActivityTechniques = React.forwardRef((props, ref) => {
   const activityTypes = props.types.map((value, index) => {
     return (
       <figure key={index}>
@@ -31,7 +31,7 @@ export default function ActivityTechniques(props) {
   });
 
   return (
-    <section className="container mx-auto pb-6">
+    <section className="container mx-auto pb-6" ref={ref}>
       <div className="lg:my-14 text-center">
         <h2 className="subheading text-primary-400">{props.title}</h2>
         <p className="lg:text-2xl font-semibold">{props.desc}</p>
@@ -39,6 +39,14 @@ export default function ActivityTechniques(props) {
 
       {/* Meditations */}
       <div className="grid lg:grid-cols-3 pb-4 gap-6">{activityTypes}</div>
+
+      <div className="text-center py-4">
+        <Link to="/appointment/checkout" className="btn-one inline-block">
+          Book Now
+        </Link>
+      </div>
     </section>
   );
-}
+});
+
+export default ActivityTechniques;

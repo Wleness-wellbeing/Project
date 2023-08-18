@@ -3,14 +3,9 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 // Data
-import { Elipse1, Elipse2, Elipse3 } from "../assets";
+import { Elipse1, Elipse2, Elipse3, Elipse4 } from "../assets";
 
 const joinUsList = [
-  {
-    image: Elipse1,
-    name: "Campus Ambassador",
-    slug: "/campus-ambassador",
-  },
   {
     image: Elipse2,
     name: "Therapist",
@@ -20,6 +15,16 @@ const joinUsList = [
     image: Elipse3,
     name: "Psychiatrist",
     slug: "/join-psychiatrist",
+  },
+  {
+    image: Elipse4,
+    name: "Internship",
+    slug: "/internship",
+  },
+  {
+    image: Elipse1,
+    name: "Campus Ambassador",
+    slug: "/campus-ambassador",
   },
 ];
 function JoinUs({ isOpen, onClose }) {
@@ -38,22 +43,26 @@ function JoinUs({ isOpen, onClose }) {
             of an amazing team dedicated to improving mental well-being
             worldwide today.
           </p>
-          <div className="grid lg:grid-cols-3 mt-4 justify-center">
+          <div className="grid lg:grid-cols-4 mt-4 justify-center">
             {joinUsList.map((value, index) => {
               return (
                 <figure key={index}>
-                  <Link to={value.slug} onClick={onClose}>
-                    <img
-                      src={value.image}
-                      alt={value.name}
-                      className="h-24 w-24 md:h-32 md:w-32 mb-1 mx-auto hover:scale-105 transition-all"
-                    />
-                    <figcaption>
-                      <h5 className="text-primary-500 font-semibold text-center text-xs md:text-base">
+                  <div>
+                    <Link to={value.slug} onClick={onClose} className="w-fit">
+                      <img
+                        src={value.image}
+                        alt={value.name}
+                        className="h-24 w-24 md:h-28 md:w-28 mb-1 mx-auto hover:scale-105 transition-all"
+                      />
+                    </Link>
+                  </div>
+                  <figcaption>
+                    <h5 className="text-primary-500 font-semibold text-center text-xs md:text-base">
+                      <Link to={value.slug} onClick={onClose}>
                         {value.name}
-                      </h5>
-                    </figcaption>
-                  </Link>
+                      </Link>
+                    </h5>
+                  </figcaption>
                 </figure>
               );
             })}

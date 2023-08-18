@@ -91,6 +91,13 @@ export default function Assessment({
     false,
     false,
   ]);
+
+  // Close assessment and scroll to doctors
+  const clickAndScroll = () => {
+    button.click();
+    onAssessmentClose();
+  };
+
   return (
     <div className="fixed inset-0 w-full grid place-items-center backdrop-brightness-50 z-50">
       <div className="w-[340px] md:w-[720px] lg:w-[920px] py-4 lg:py-12 mx-auto relative border-2 overflow-hidden bg-white rounded-3xl">
@@ -334,7 +341,9 @@ export default function Assessment({
                 Go Back
               </button>
               <Link
-                onClick={onAssessmentClose}
+                onClick={
+                  button.click ? () => clickAndScroll() : onAssessmentClose
+                }
                 to={button.slug}
                 className="btn-primary !w-fit !py-2.5 font-semibold inline-block"
               >

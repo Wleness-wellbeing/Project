@@ -30,6 +30,12 @@ function Experts() {
   const closeAssessmentModal = () => {
     setShowAssessmentModal(false);
   };
+
+  const button = {
+    slug: "/experts/all",
+    text: "Find the Experts",
+  };
+
   return (
     <>
       {/* ========== Header Bar ========== */}
@@ -259,6 +265,7 @@ function Experts() {
       <Assessment
         isAssessmentOpen={isAssessmentModalOpen}
         onAssessmentClose={closeAssessmentModal}
+        button={button}
       />
     </>
   );

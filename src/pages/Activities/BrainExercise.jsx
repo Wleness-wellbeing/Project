@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 // Data
 import { brainExercise, activityFeatures } from "../../data";
 // Components
@@ -8,6 +8,11 @@ import ActivityBlogs from "../../components/ActivityBlogs";
 import FeaturesBlock from "../../components/FeaturesBlock";
 
 export default function BrainExercise() {
+  const ref = useRef(null);
+
+  const handleScrollToComponent = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       <ActivityHeader
@@ -15,9 +20,11 @@ export default function BrainExercise() {
         title={brainExercise.header.title}
         image={brainExercise.header.image}
         desc={brainExercise.header.desc}
+        handleScrollToComponent={() => handleScrollToComponent()}
       />
       <FeaturesBlock data={activityFeatures} />
-      <section className="container mx-auto pb-6">
+
+      <section className="container mx-auto pb-6" ref={ref}>
         <div className="lg:my-14 text-center">
           <h2 className="subheading text-primary-400">
             {brainExercise.activities.title}

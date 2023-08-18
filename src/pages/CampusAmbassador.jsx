@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // Data
 import {
   bgCircles,
@@ -17,6 +17,7 @@ import {
   roleSMM,
   roleSpreadAwareness,
 } from "../assets";
+import CampusAmbassadorForm from "../components/CampusAmbassadorForm";
 
 const roles = [
   [roleSMM, "Social Media & Public Marketing"],
@@ -26,6 +27,15 @@ const roles = [
 ];
 
 export default function CampusAmbassador() {
+  const [campusModal, setcampusModal] = useState(false);
+
+  const openCampusModal = () => {
+    setcampusModal(true);
+  };
+
+  const closeCampusModal = () => {
+    setcampusModal(false);
+  };
   return (
     <main>
       <header className="py-6 relative overflow-x-hidden overflow-y-auto">
@@ -56,7 +66,9 @@ export default function CampusAmbassador() {
           change on your campus.
         </p>
         <div className="text-center mb-6">
-          <button className="btn-one">Join Us Now</button>
+          <button className="btn-one" onClick={openCampusModal}>
+            Join Us Now
+          </button>
         </div>
         <div>
           <figure className="flex py-12 gap-x-5">
@@ -215,6 +227,8 @@ export default function CampusAmbassador() {
           className="absolute -left-40 bottom-0 w-[400px]"
         />
       </section>
+
+      <CampusAmbassadorForm isOpen={campusModal} onClose={closeCampusModal} />
     </main>
   );
 }

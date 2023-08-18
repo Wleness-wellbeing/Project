@@ -3,7 +3,7 @@ import DoctorsCard from "./DoctorsCard";
 import { themeWAve } from "../assets";
 import { Link } from "react-router-dom";
 
-export default function SelectBest(props) {
+const SelectBest = React.forwardRef((props, ref) => {
   return (
     <section className="py-6">
       <div className="relative overflow-x-hidden">
@@ -45,7 +45,7 @@ export default function SelectBest(props) {
       </div>
 
       {/* Therapy Doctors */}
-      <div className="relative">
+      <div className="relative" ref={ref}>
         <div className="container side-spacing mx-auto p-4 grid grid-cols-[repeat(4, minmax(280, 1fr))] items-center sm:grid-cols-2 gap-5 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-3 3xl:gap-10">
           {props.doctors.map((value, i) => {
             return <DoctorsCard key={i} data={value} />;
@@ -62,4 +62,6 @@ export default function SelectBest(props) {
       </div>
     </section>
   );
-}
+});
+
+export default SelectBest;
