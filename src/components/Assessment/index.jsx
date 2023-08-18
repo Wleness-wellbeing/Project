@@ -126,9 +126,9 @@ export default function Assessment({
                 </button>
               </div>
               <div className="flex items-center gap-3 justify-center my-8">
-                <span className="h-1 w-40 bg-primary-100"></span>
+                <span className="h-[2px] w-40 bg-slate-200"></span>
                 <span>OR</span>
-                <span className="h-1 w-40 bg-primary-100"></span>
+                <span className="h-[2px] w-40 bg-slate-200"></span>
               </div>
               <div className="text-center">
                 <h4 className="text-xl mb-5">
@@ -152,12 +152,12 @@ export default function Assessment({
             <img
               src={assessment1}
               alt=""
-              className="w-16 lg:w-28 absolute top-44 lg:top-44 left-4 lg:left-24"
+              className="w-14 lg:w-28 absolute top-44 lg:top-44 left-4 lg:left-24"
             />
             <img
               src={assessment2}
               alt=""
-              className="w-16 lg:w-28 absolute bottom-12 lg:bottom-40 right-2 lg:right-20"
+              className="w-14 lg:w-28 absolute bottom-12 lg:bottom-40 right-2 lg:right-20"
             />
           </div>
         )}
@@ -359,8 +359,8 @@ export default function Assessment({
         <span className="border-4 w-6 h-6 lg:w-14 lg:h-14 border-primary-50 rounded-full absolute top-20 right-14 lg:-top-7 lg:right-52"></span>
         <span className="border-4 w-4 h-4 lg:w-12 lg:h-12 border-primary-50 rounded-full absolute left-24 top-1/2"></span>
         <span className="w-3 h-3 lg:w-10 lg:h-10 rounded-full bg-primary-50 absolute top-4 lg:top-44 right-28"></span>
-        <span className="w-3 h-3 lg:w-10 lg:h-10 rounded-full bg-primary-50 absolute bottom-12 left-52"></span>
-        <span className="w-3 h-3 lg:w-10 lg:h-10 rounded-full bg-primary-50 absolute top-0 left-52"></span>
+        <span className="w-3 h-3 lg:w-10 lg:h-10 rounded-full bg-primary-50 absolute bottom-12 left-52 hidden lg:inline-block"></span>
+        <span className="w-3 h-3 lg:w-10 lg:h-10 rounded-full bg-primary-50 absolute top-0 left-52 hidden lg:block"></span>
         <span className="w-3 h-3 lg:w-10 lg:h-10 rounded-full bg-primary-50 absolute bottom-4 lg:bottom-12 right-10 lg:right-32"></span>
 
         {/* Close */}

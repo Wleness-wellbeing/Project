@@ -7,14 +7,7 @@ import {
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  Bar,
-  BarChart,
-  ResponsiveContainer,
-  XAxis,
-  YAxis,
-  Tooltip,
-} from "recharts";
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
 // Data
 import { assessment1 } from "../../assets";
 import { activityReport, patientsList } from "../../data/patients";
@@ -26,7 +19,7 @@ import PatientListItem from "../../components/list/PatientListItem";
 export default function UserDashboard() {
   return (
     <main className="flex">
-      <aside className="w-[10%] bg-primary-50"></aside>
+      <aside className="w-[10%] bg-primary-50/50"></aside>
       <section className="w-[90%] pt-5 pb-3 px-8">
         <nav className="flex justify-between mb-5 gap-5">
           <div className="w-[65%]">
@@ -79,9 +72,7 @@ export default function UserDashboard() {
             <div className="mb-5">
               <h1 className="mb-3">
                 <span className="font-medium text-2xl">Good Morning </span>
-                <span className="text-3xl font-semibold text-primary-300">
-                  Ken
-                </span>
+                <span className="text-3xl font-bold text-[#0DCCF6]">Ken</span>
               </h1>
 
               <div>
@@ -93,12 +84,13 @@ export default function UserDashboard() {
                     return (
                       <div
                         key={i}
-                        className="bg-primary-50/50 rounded-xl py-4 px-5 grid relative"
+                        className="rounded-xl py-4 px-5 grid relative"
+                        style={{ background: value[2] }}
                       >
                         <span className="font-semibold mb-1 text-center">
                           {value[0]}
                         </span>
-                        <span className="text-3xl font-bold text-center text-primary-400">
+                        <span className="text-3xl font-bold text-center">
                           {value[1]}
                         </span>
                       </div>
@@ -119,7 +111,7 @@ export default function UserDashboard() {
                   <Bar
                     dataKey="score"
                     barSize={20}
-                    className="fill-primary-300"
+                    className="fill-[#0DCCF6]"
                     radius={20}
                   />
                 </BarChart>

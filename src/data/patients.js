@@ -54,9 +54,9 @@ export const patientsList = [
 ];
 
 export const activityReport = [
-  ["Upcoming Activities", "12"],
-  ["Completed Activities", "06"],
-  ["Happiness Rate", "76%"],
+  ["Upcoming Activities", "12", "rgba(244, 244, 130, 0.77)"],
+  ["Completed Activities", "06", "rgba(255, 191, 129, 0.44)"],
+  ["Happiness Rate", "76%", "rgba(188, 244, 222, 0.83)"],
 ];
 
 export const upcomingMeets = [
