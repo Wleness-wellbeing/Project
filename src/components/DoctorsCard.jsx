@@ -6,26 +6,26 @@ import { Link } from "react-router-dom";
 
 export default function DoctorsCard(props) {
   return (
-    <figure className="bg-white rounded-2xl transition-all rounded-br-[7rem] border-2 border-primary-300 hover:shadow-lg hover:shadow-primary-50">
+    <figure className="rounded-2xl rounded-br-[7rem] border-2 border-primary-300 bg-white transition-all hover:shadow-lg hover:shadow-primary-50">
       <div className="relative">
         <Link to="/appointment">
           <img
             src={props.data.image}
             alt=""
-            className="w-full object-cover block rounded-t-2xl"
+            className="block w-full rounded-t-2xl object-cover"
           />
         </Link>
-        <span className="font-bold bg-white px-2 absolute left-5 text-lg bottom-0 text-primary-300">
+        <span className="absolute bottom-0 left-5 bg-white px-2 text-lg font-bold text-primary-300">
           {props.data.profession}
         </span>
       </div>
       <figcaption className="px-6 py-2 pb-6">
         <hgroup>
-          <h3 className="font-semibold text-2xl xs:text-3xl flex items-center">
+          <h3 className="flex items-center text-2xl font-semibold xs:text-3xl">
             <span className="mr-10">{props.data.name}</span>
             <HeartIcon />
           </h3>
-          <h4 className="text-slate-500 font-semibold text-lg xs:text-xl mb-2">
+          <h4 className="mb-2 text-lg font-semibold text-slate-500 xs:text-xl">
             {props.data.exp}
           </h4>
         </hgroup>
@@ -36,9 +36,9 @@ export default function DoctorsCard(props) {
           <p className="leading-5 text-slate-600">
             Speaks: {props.data.speaks}
           </p>
-          <h5 className="my-2 text-primary-400 text-lg font-semibold">
+          <h5 className="my-2 text-lg font-semibold text-primary-400">
             Session Starts
-            <FontAwesomeIcon icon={faIndianRupee} className="text-sm mx-1" />
+            <FontAwesomeIcon icon={faIndianRupee} className="mx-1 text-sm" />
             {props.data.price}
           </h5>
           <Link to="/appointment/checkout" className="btn-one inline-block">

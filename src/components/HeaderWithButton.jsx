@@ -3,17 +3,17 @@ import { textColorize } from "../utils";
 
 export default function HeaderWithButton({ title, desc, image }) {
   return (
-    <header className="container mx-auto flex flex-col items-center rounded-3xl !px-5 py-2 lg:py-6 lg:flex-row 2xl:justify-between 2xl:py-12 2xl:!px-0">
-      <h1 className="subheading mb-4 text-center lg:text-left lg:leading-[4rem] lg:hidden">
+    <header className="container mx-auto flex flex-col items-center rounded-3xl !px-5 py-2 lg:flex-row lg:py-6 2xl:justify-between 2xl:!px-0 2xl:py-12">
+      <h1 className="subheading mb-4 text-center lg:hidden lg:text-left lg:leading-[4rem]">
         {textColorize(title)}
       </h1>
-      <div className="lg:order-2 lg:w-1/2 2xl:flex 2xl:justify-end mb-6 lg:mb-0">
+      <div className="mb-6 lg:order-2 lg:mb-0 lg:w-1/2 2xl:flex 2xl:justify-end">
         {/* Desktop Image */}
         <img src={image} alt="" className="w-full object-cover" />
       </div>
-      <div className="lg:order-1 mb-6 md:mb-6 lg:mb-0 lg:w-1/2 xl:pl-4 lg:pr-16">
+      <div className="mb-6 md:mb-6 lg:order-1 lg:mb-0 lg:w-1/2 lg:pr-16 xl:pl-4">
         <hgroup className="md:mb-3 xl:mb-8">
-          <h1 className="font-bold text-3xl xl:text-5xl mb-4 text-center lg:text-left hidden lg:block">
+          <h1 className="mb-4 hidden text-center text-3xl font-bold lg:block lg:text-left xl:text-5xl">
             {textColorize(title)}
           </h1>
         </hgroup>

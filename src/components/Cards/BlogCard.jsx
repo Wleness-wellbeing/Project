@@ -8,13 +8,13 @@ export default function BlogCard(props) {
         <img src={props.data.image} className="w-full" alt="..." />
       </div>
       <figcaption>
-        <h5 className="text-lg text-black font-bold tracking-wider my-2 uppercase">
+        <h5 className="my-2 text-lg font-bold uppercase tracking-wider text-black">
           {props.data.heading}
         </h5>
         <p className="text-lg font-medium">{props.data.subheading}</p>
         <Link
           to=""
-          className="bg-primary-400 hover:bg-primary-500 transition-all font-medium text-white px-4 py-2 inline-block mt-4 rounded-3xl"
+          className="mt-4 inline-block rounded-3xl bg-primary-400 px-4 py-2 font-medium text-white transition-all hover:bg-primary-500"
         >
           Read more
         </Link>

@@ -99,24 +99,24 @@ export default function Assessment({
   };
 
   return (
-    <div className="fixed inset-0 w-full grid place-items-center backdrop-brightness-50 z-50">
-      <div className="w-[340px] md:w-[720px] lg:w-[920px] py-4 lg:py-12 mx-auto relative border-2 overflow-hidden bg-white rounded-3xl">
+    <div className="fixed inset-0 z-50 grid w-full place-items-center backdrop-brightness-50">
+      <div className="relative mx-auto w-[340px] overflow-hidden rounded-3xl border-2 bg-white py-4 md:w-[720px] lg:w-[920px] lg:py-12">
         {/* Welcome Page */}
         {startAssessment && (
-          <div className="py-6 lg:py-10">
-            <h2 className="subheading text-center mb-2 lg:mb-4">
+          <div className="py-6 text-center lg:py-10 ">
+            <h2 className="subheading mb-2 lg:mb-4">
               <span className="heading-primary">Welcome to Wleness</span>
             </h2>
 
-            <div className="w-[300px] mx-auto">
+            <div className="mx-auto w-[300px]">
               <div className=" text-center">
-                <h4 className="text-xl mb-5">
+                <h4 className="mb-5 text-xl">
                   <span className="font-semibold">
                     Do you want help finding a
                   </span>
                   <Link
                     to="/services/therapy"
-                    className="text-primary-400 font-bold text-xl inline-block"
+                    className="inline-block text-xl font-bold text-primary-400"
                   >
                     Therapist?
                   </Link>
@@ -125,19 +125,19 @@ export default function Assessment({
                   Find the Therapist
                 </button>
               </div>
-              <div className="flex items-center gap-3 justify-center my-8">
+              <div className="my-8 flex items-center justify-center gap-3">
                 <span className="h-[2px] w-40 bg-slate-200"></span>
                 <span>OR</span>
                 <span className="h-[2px] w-40 bg-slate-200"></span>
               </div>
               <div className="text-center">
-                <h4 className="text-xl mb-5">
-                  <span className="font-semibold mr-1">
+                <h4 className="mb-5 text-xl">
+                  <span className="mr-1 font-semibold">
                     Do you want to browse all our
                   </span>
                   <Link
                     to="/services/therapy"
-                    className="text-primary-400 font-bold text-xl"
+                    className="text-xl font-bold text-primary-400"
                   >
                     Therapist?
                   </Link>
@@ -152,24 +152,24 @@ export default function Assessment({
             <img
               src={assessment1}
               alt=""
-              className="w-14 lg:w-28 absolute top-44 lg:top-44 left-4 lg:left-24"
+              className="absolute left-4 top-44 w-14 lg:left-24 lg:top-44 lg:w-28"
             />
             <img
               src={assessment2}
               alt=""
-              className="w-14 lg:w-28 absolute bottom-12 lg:bottom-40 right-2 lg:right-20"
+              className="absolute bottom-12 right-2 w-14 lg:bottom-40 lg:right-20 lg:w-28"
             />
           </div>
         )}
 
         {/* Screen 1 */}
         {screenOne && (
-          <div className="lg:w-[560px] lg:mx-auto">
-            <h2 className="flex flex-col text-primary-300 text-xl lg:text-3xl font-bold text-center mb-0 lg:mb-8">
+          <div className="lg:mx-auto lg:w-[560px]">
+            <h2 className="mb-0 flex flex-col text-center text-xl font-bold text-primary-300 lg:mb-8 lg:text-3xl">
               <span>What is in your mind?</span>
               <span>How are you feeling?</span>
             </h2>
-            <div className="flex justify-between flex-wrap flex-1 gap-2 lg:gap-4 my-6 px-4 lg:px-0 lg:my-14">
+            <div className="my-6 flex flex-1 flex-wrap justify-between gap-2 px-4 lg:my-14 lg:gap-4 lg:px-0">
               {assessmentFeelings.map((value, index) => {
                 return (
                   <AssessmentOption
@@ -183,10 +183,10 @@ export default function Assessment({
                 );
               })}
             </div>
-            <div className="text-center flex justify-center space-x-4">
+            <div className="flex justify-center space-x-4 text-center">
               <button
                 onClick={openWelcomeScreen}
-                className="btn-primary !w-fit !py-2 font-semibold border-2 border-primary-300 !bg-transparent !text-primary-300"
+                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !py-2 font-semibold !text-primary-300"
               >
                 Go Back
               </button>
@@ -202,28 +202,28 @@ export default function Assessment({
 
         {/* Screen 2 */}
         {screenTwo && (
-          <div className="lg:w-[640px] lg:mx-auto">
-            <h2 className="flex flex-col text-primary-300 text-3xl font-bold text-center">
+          <div className="lg:mx-auto lg:w-[640px]">
+            <h2 className="flex flex-col text-center text-3xl font-bold text-primary-300">
               How Long have you been experiencing these issues?
             </h2>
-            <div className="flex justify-center flex-wrap gap-2 my-6">
+            <div className="my-6 flex flex-wrap justify-center gap-2">
               {experiencingIssue.map((value, index) => {
                 return <AssessmentTextBtn key={index} name={value} />;
               })}
             </div>
-            <h2 className="flex flex-col text-primary-300 text-3xl font-bold text-center">
+            <h2 className="flex flex-col text-center text-3xl font-bold text-primary-300">
               How difficult it is for you to manage all these issues?
             </h2>
-            <div className="flex justify-center flex-wrap gap-2 my-6">
+            <div className="my-6 flex flex-wrap justify-center gap-2">
               {managingDifficulty.map((value, index) => {
                 return <AssessmentTextBtn key={index} name={value} />;
               })}
             </div>
 
-            <div className="text-center flex justify-center space-x-4">
+            <div className="flex justify-center space-x-4 text-center">
               <button
                 onClick={openScreenOne}
-                className="btn-primary !w-fit !py-2 font-semibold border-2 border-primary-300 !bg-transparent !text-primary-300"
+                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !py-2 font-semibold !text-primary-300"
               >
                 Go Back
               </button>
@@ -239,27 +239,27 @@ export default function Assessment({
 
         {/* Screen 3 */}
         {screenThree && (
-          <div className="lg:w-[600px] lg:mx-auto">
-            <h2 className="flex flex-col text-primary-300 text-3xl font-bold text-center">
+          <div className="lg:mx-auto lg:w-[600px]">
+            <h2 className="flex flex-col text-center text-3xl font-bold text-primary-300">
               Which language are you comfortable?
             </h2>
-            <div className="flex flex-wrap justify-center gap-4 my-8">
+            <div className="my-8 flex flex-wrap justify-center gap-4">
               {languages.map((value, index) => {
                 return <AssessmentTextBtn key={index} name={value} />;
               })}
             </div>
-            <h2 className="flex flex-col text-primary-300 text-3xl font-bold text-center">
+            <h2 className="flex flex-col text-center text-3xl font-bold text-primary-300">
               How old are you?
             </h2>
-            <div className="flex justify-center flex-wrap gap-4 my-8">
+            <div className="my-8 flex flex-wrap justify-center gap-4">
               {ageRange.map((value, index) => {
                 return <AssessmentTextBtn key={index} name={value} />;
               })}
             </div>
-            <div className="text-center flex justify-center space-x-4">
+            <div className="flex justify-center space-x-4 text-center">
               <button
                 onClick={openScreenTwo}
-                className="btn-primary !w-fit !py-2 font-semibold border-2 border-primary-300 !bg-transparent !text-primary-300"
+                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !py-2 font-semibold !text-primary-300"
               >
                 Go Back
               </button>
@@ -275,68 +275,68 @@ export default function Assessment({
 
         {/* Screen 4 */}
         {screenFour && (
-          <div className="lg:w-[600px] lg:mx-auto">
-            <h2 className="flex flex-col text-primary-300 text-4xl font-bold text-center">
+          <div className="lg:mx-auto lg:w-[600px]">
+            <h2 className="flex flex-col text-center text-4xl font-bold text-primary-300">
               Thanks you for your response
             </h2>
-            <div className="flex flex-wrap justify-center gap-4 my-8">
-              <div className="bg-primary-100 rounded-xl px-6 py-2 w-full">
+            <div className="my-8 flex flex-wrap justify-center gap-4">
+              <div className="w-full rounded-xl bg-primary-100 px-6 py-2">
                 <h4 className="flex justify-between font-semibold">
                   <span className="text-lg text-white">Your Issues :</span>
                   <span
-                    className="text-white cursor-pointer underline"
+                    className="cursor-pointer text-white underline"
                     onClick={openScreenOne}
                   >
                     Edit
                   </span>
                 </h4>
-                <p className="text-white font-medium">Depression</p>
+                <p className="font-medium text-white">Depression</p>
               </div>
-              <div className="bg-primary-100 rounded-xl px-6 py-2 w-full">
+              <div className="w-full rounded-xl bg-primary-100 px-6 py-2">
                 <h4 className="flex justify-between font-semibold">
                   <span className="text-lg text-white">
                     Duration & difficulty your issue:
                   </span>
                   <span
-                    className="text-white cursor-pointer underline"
+                    className="cursor-pointer text-white underline"
                     onClick={openScreenTwo}
                   >
                     Edit
                   </span>
                 </h4>
-                <p className="text-white font-medium">2 weeks or less</p>
+                <p className="font-medium text-white">2 weeks or less</p>
               </div>
-              <div className="bg-primary-100 rounded-xl px-6 py-2 w-full">
+              <div className="w-full rounded-xl bg-primary-100 px-6 py-2">
                 <h4 className="flex justify-between font-semibold">
                   <span className="text-lg text-white">
                     Language of your choice:
                   </span>
                   <span
-                    className="text-white cursor-pointer underline"
+                    className="cursor-pointer text-white underline"
                     onClick={openScreenThree}
                   >
                     Edit
                   </span>
                 </h4>
-                <p className="text-white font-medium">English & Hindi</p>
+                <p className="font-medium text-white">English & Hindi</p>
               </div>
-              <div className="bg-primary-100 rounded-xl px-6 py-2 w-full">
+              <div className="w-full rounded-xl bg-primary-100 px-6 py-2">
                 <h4 className="flex justify-between font-semibold">
                   <span className="text-lg text-white">Your Age:</span>
                   <span
-                    className="text-white cursor-pointer underline"
+                    className="cursor-pointer text-white underline"
                     onClick={openScreenThree}
                   >
                     Edit
                   </span>
                 </h4>
-                <p className="text-white font-medium">18 - 25 years</p>
+                <p className="font-medium text-white">18 - 25 years</p>
               </div>
             </div>
-            <div className="text-center flex justify-center space-x-4">
+            <div className="flex justify-center space-x-4 text-center">
               <button
                 onClick={openScreenThree}
-                className="btn-primary !w-fit !py-2  font-semibold border-2 border-primary-300 !bg-transparent !text-primary-300"
+                className="btn-primary !w-fit border-2  border-primary-300 !bg-transparent !py-2 font-semibold !text-primary-300"
               >
                 Go Back
               </button>
@@ -345,7 +345,7 @@ export default function Assessment({
                   button.click ? () => clickAndScroll() : onAssessmentClose
                 }
                 to={button.slug}
-                className="btn-primary !w-fit !py-2.5 font-semibold inline-block"
+                className="btn-primary inline-block !w-fit !py-2.5 font-semibold"
               >
                 {button.text}
               </Link>
@@ -354,19 +354,19 @@ export default function Assessment({
         )}
 
         {/* Shapes */}
-        <span className="border-8 w-20 h-20 lg:w-40 lg:h-40 border-primary-50 rounded-full absolute -top-14 right-0"></span>
-        <span className="border-8 w-20 h-20 lg:w-40 lg:h-40 border-primary-50 rounded-full absolute left-10 -bottom-12 lg:-bottom-8"></span>
-        <span className="border-4 w-6 h-6 lg:w-14 lg:h-14 border-primary-50 rounded-full absolute top-20 right-14 lg:-top-7 lg:right-52"></span>
-        <span className="border-4 w-4 h-4 lg:w-12 lg:h-12 border-primary-50 rounded-full absolute left-24 top-1/2"></span>
-        <span className="w-3 h-3 lg:w-10 lg:h-10 rounded-full bg-primary-50 absolute top-4 lg:top-44 right-28"></span>
-        <span className="w-3 h-3 lg:w-10 lg:h-10 rounded-full bg-primary-50 absolute bottom-12 left-52 hidden lg:inline-block"></span>
-        <span className="w-3 h-3 lg:w-10 lg:h-10 rounded-full bg-primary-50 absolute top-0 left-52 hidden lg:block"></span>
-        <span className="w-3 h-3 lg:w-10 lg:h-10 rounded-full bg-primary-50 absolute bottom-4 lg:bottom-12 right-10 lg:right-32"></span>
+        <span className="absolute -top-14 right-0 h-20 w-20 rounded-full border-8 border-primary-50 lg:h-40 lg:w-40"></span>
+        <span className="absolute -bottom-12 left-10 h-20 w-20 rounded-full border-8 border-primary-50 lg:-bottom-8 lg:h-40 lg:w-40"></span>
+        <span className="absolute right-14 top-20 h-6 w-6 rounded-full border-4 border-primary-50 lg:-top-7 lg:right-52 lg:h-14 lg:w-14"></span>
+        <span className="absolute left-24 top-1/2 h-4 w-4 rounded-full border-4 border-primary-50 lg:h-12 lg:w-12"></span>
+        <span className="absolute right-28 top-4 h-3 w-3 rounded-full bg-primary-50 lg:top-44 lg:h-10 lg:w-10"></span>
+        <span className="absolute bottom-12 left-52 hidden h-3 w-3 rounded-full bg-primary-50 lg:inline-block lg:h-10 lg:w-10"></span>
+        <span className="absolute left-52 top-0 hidden h-3 w-3 rounded-full bg-primary-50 lg:block lg:h-10 lg:w-10"></span>
+        <span className="absolute bottom-4 right-10 h-3 w-3 rounded-full bg-primary-50 lg:bottom-12 lg:right-32 lg:h-10 lg:w-10"></span>
 
         {/* Close */}
         <FontAwesomeIcon
           icon={faClose}
-          className="text-3xl lg:text-4xl absolute top-4 right-4 lg:top-8 lg:right-8 text-slate-800 cursor-pointer"
+          className="absolute right-4 top-4 cursor-pointer text-3xl text-slate-800 lg:right-8 lg:top-8 lg:text-4xl"
           onClick={onAssessmentClose}
         />
       </div>

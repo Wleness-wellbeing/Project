@@ -5,17 +5,17 @@ import { Link } from "react-router-dom";
 export default function ActivityHeader(props) {
   return (
     <>
-      <header className="container mx-auto flex flex-col items-center rounded-3xl py-2 lg:py-6 lg:flex-row 2xl:justify-between 2xl:pt-6 2xl:pb-10 relative">
-        <div className="lg:order-2 xl:w-[45%] 2xl:flex 2xl:justify-end mb-6 lg:mb-0">
+      <header className="container relative mx-auto flex flex-col items-center rounded-3xl py-2 lg:flex-row lg:py-6 2xl:justify-between 2xl:pb-10 2xl:pt-6">
+        <div className="mb-6 lg:order-2 lg:mb-0 xl:w-[45%] 2xl:flex 2xl:justify-end">
           {/* Desktop Image */}
           <img src={props.image} alt="" className="w-full object-cover" />
         </div>
-        <div className="lg:order-1 mb-6 md:mb-6 lg:mb-0 xl:w-[55%] xl:pl-0 -m-5 lg:m-0 p-5 rounded-3xl lg:rounded-none">
+        <div className="-m-5 mb-6 rounded-3xl p-5 md:mb-6 lg:order-1 lg:m-0 lg:mb-0 lg:rounded-none xl:w-[55%] xl:pl-0">
           <hgroup className="md:mb-3">
             <h1 className="subheading mb-4 text-center lg:text-left lg:leading-[4rem]">
               {textColorize(props.title)}
             </h1>
-            <h5 className="text-2xl font-semibold mb-8">
+            <h5 className="mb-8 text-2xl font-semibold">
               {textColorize(props.desc)}
             </h5>
           </hgroup>
@@ -27,7 +27,7 @@ export default function ActivityHeader(props) {
           </button>
           <Link
             to="/appointment/checkout"
-            className="btn-one !bg-transparent hover:!bg-primary-400 border-2 hover:!text-white !text-[#383838] !w-full !border-primary-400 lg:!w-fit !py-2 inline-block"
+            className="btn-one inline-block !w-full border-2 !border-primary-400 !bg-transparent !py-2 !text-[#383838] hover:!bg-primary-400 hover:!text-white lg:!w-fit"
           >
             Book Now
           </Link>

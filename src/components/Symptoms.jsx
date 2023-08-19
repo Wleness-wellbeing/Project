@@ -3,7 +3,7 @@ import React from "react";
 export default function Symptoms({ highlight, image, points }) {
   return (
     <section className="container mx-auto">
-      <h2 className="font-bold text-2xl lg:text-4xl xl:text-5xl text-center mb-10">
+      <h2 className="mb-10 text-center text-2xl font-bold lg:text-4xl xl:text-5xl">
         <span>Here's How Generalized</span>
         <p>
           <span className="heading-primary">{highlight} </span>
@@ -15,7 +15,7 @@ export default function Symptoms({ highlight, image, points }) {
         <img
           src={image}
           alt=""
-          className="object-cover w-40 xl:w-fit mx-auto py-10"
+          className="mx-auto w-40 object-cover py-10 xl:w-fit"
         />
         {/* Points */}
         {points.map((value, index) => {
@@ -23,7 +23,7 @@ export default function Symptoms({ highlight, image, points }) {
             <p
               key={index}
               className={
-                "font-medium xl:font-semibold text-xs lg:text-sm xl:text-base absolute w-96 text-center " +
+                "absolute w-96 text-center text-xs font-medium lg:text-sm xl:text-base xl:font-semibold " +
                 value[1]
               }
             >
@@ -33,12 +33,12 @@ export default function Symptoms({ highlight, image, points }) {
         })}
       </div>
 
-      <div className="text-center py-8">
+      <div className="py-8 text-center">
         <button className="btn-one">Find the Therapist</button>
       </div>
 
-      <div className="text-center flex items-center justify-center pb-8">
-        <h5 className="font-semibold text-2xl mr-3">
+      <div className="flex items-center justify-center pb-8 text-center">
+        <h5 className="mr-3 text-2xl font-semibold">
           Doubtful about the symptoms?
         </h5>
         <button className="btn-one">Undergo an evaluation</button>

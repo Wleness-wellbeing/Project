@@ -7,21 +7,21 @@ import IssueCard from "../../components/Cards/IssueCard";
 function Issues() {
   return (
     <>
-      <header className="container mx-auto flex flex-col items-center rounded-3xl !px-5 py-2 lg:py-6 lg:flex-row 2xl:justify-between 2xl:pt-14 2xl:pb-0">
-        <h1 className="subheading mb-4 text-center lg:text-left lg:leading-[4rem] lg:hidden">
-          <span className="heading-primary block lg:inline-block pb-1">
+      <header className="container mx-auto flex flex-col items-center rounded-3xl !px-5 py-2 lg:flex-row lg:py-6 2xl:justify-between 2xl:pb-0 2xl:pt-14">
+        <h1 className="subheading mb-4 text-center lg:hidden lg:text-left lg:leading-[4rem]">
+          <span className="heading-primary block pb-1 lg:inline-block">
             Facing Issues
           </span>
           <span className="text-[#383838] lg:block">Let's Talk</span>
         </h1>
-        <div className="lg:order-2 lg:w-[45%] 2xl:flex 2xl:justify-end mb-6 lg:mb-0">
+        <div className="mb-6 lg:order-2 lg:mb-0 lg:w-[45%] 2xl:flex 2xl:justify-end">
           {/* Desktop Image */}
           <img src={issuesHeader} alt="" className="w-full object-cover" />
         </div>
-        <div className="lg:order-1 mb-6 md:mb-6 lg:mb-0 lg:w-[55%] xl:pl-4 lg:pr-16">
+        <div className="mb-6 md:mb-6 lg:order-1 lg:mb-0 lg:w-[55%] lg:pr-16 xl:pl-4">
           <hgroup className="md:mb-3">
-            <h1 className="subheading mb-4 text-center lg:text-left lg:leading-[4rem] hidden lg:block">
-              <span className="heading-primary block lg:inline-block pb-1">
+            <h1 className="subheading mb-4 hidden text-center lg:block lg:text-left lg:leading-[4rem]">
+              <span className="heading-primary block pb-1 lg:inline-block">
                 Facing Issues
               </span>
               <span className="text-[#383838] lg:block">Let's Talk</span>
@@ -37,7 +37,7 @@ function Issues() {
         </div>
       </header>
 
-      <section className="container mx-auto lg:py-10 p-4 xl:pt-0">
+      <section className="container mx-auto p-4 lg:py-10 xl:pt-0">
         {/* <div className="flex flex-wrap justify-center mb-6">
           <span className="text-3xl font-semibold text-primary-300">
             Find a Therapist in
@@ -67,15 +67,15 @@ function Issues() {
             <option value="biopolar-disorder">Biopolar Disorder</option>
           </select>
         </div> */}
-        <h2 className="subheading text-center heading-primary">
+        <h2 className="subheading heading-primary text-center">
           Most Common Health Issues
         </h2>
 
-        <ul className="flex flex-wrap gap-x-4 gap-y-6 py-4 2xl:pt-8 justify-center">
+        <ul className="flex flex-wrap justify-center gap-x-4 gap-y-6 py-4 2xl:pt-8">
           <li>
             <a
               href="#"
-              className="py-2.5 px-6 text-slate-900 font-bold bg-primary-50 rounded-3xl"
+              className="rounded-3xl bg-primary-50 px-6 py-2.5 font-bold text-slate-900"
             >
               All Categories
             </a>
@@ -83,7 +83,7 @@ function Issues() {
           <li>
             <a
               href="#"
-              className="py-2.5 px-6 text-slate-400 font-bold rounded-3xl hover:text-slate-900 hover:bg-primary-50 transition-all"
+              className="rounded-3xl px-6 py-2.5 font-bold text-slate-400 transition-all hover:bg-primary-50 hover:text-slate-900"
             >
               Social Life
             </a>
@@ -91,7 +91,7 @@ function Issues() {
           <li>
             <a
               href="#"
-              className="py-2.5 px-6 text-slate-400 font-bold rounded-3xl  hover:text-slate-900 hover:bg-primary-50 transition-all"
+              className="rounded-3xl px-6 py-2.5 font-bold text-slate-400  transition-all hover:bg-primary-50 hover:text-slate-900"
             >
               Relationship
             </a>
@@ -99,7 +99,7 @@ function Issues() {
           <li>
             <a
               href="#"
-              className="py-2.5 px-6 text-slate-400 font-bold rounded-3xl  hover:text-slate-900 hover:bg-primary-50 transition-all"
+              className="rounded-3xl px-6 py-2.5 font-bold text-slate-400  transition-all hover:bg-primary-50 hover:text-slate-900"
             >
               Depressed
             </a>
@@ -107,7 +107,7 @@ function Issues() {
           <li>
             <a
               href="#"
-              className="py-2.5 px-6 text-slate-400 font-bold rounded-3xl  hover:text-slate-900 hover:bg-primary-50 transition-all"
+              className="rounded-3xl px-6 py-2.5 font-bold text-slate-400  transition-all hover:bg-primary-50 hover:text-slate-900"
             >
               Stress
             </a>
@@ -115,7 +115,7 @@ function Issues() {
           <li>
             <a
               href="#"
-              className="py-2.5 px-6  font-bold rounded-3xl text-slate-400  hover:text-slate-900 hover:bg-primary-50 transition-all"
+              className="rounded-3xl px-6  py-2.5 font-bold text-slate-400  transition-all hover:bg-primary-50 hover:text-slate-900"
             >
               Health
             </a>
@@ -123,7 +123,7 @@ function Issues() {
         </ul>
         {/* Issues */}
         <div className="pb-8">
-          <div className="grid gap-4 py-6 pt-8 lg:pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-12 xl:gap-10 xl:pb-16 2xl:gap-16 xl:grid-cols-3 mx-auto">
+          <div className="mx-auto grid gap-4 py-6 pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-12 lg:pt-8 xl:grid-cols-3 xl:gap-10 xl:pb-16 2xl:gap-16">
             {issues.map((value, index) => {
               return <IssueCard key={index} data={value} />;
             })}

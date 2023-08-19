@@ -36,26 +36,26 @@ function RequestForm() {
   };
 
   return (
-    <section className="container mx-auto mb-6 lg:mb-28 py-12 px-6 xs:px-8 xs:py-14 grid md:grid-cols-2 rounded-3xl lg:px-8 bg-[#FAFCE7] lg:py-16 2xl:py-20">
-      <div className="md:px-6 md:flex md:flex-col md:justify-between md:h-full">
+    <section className="container mx-auto mb-6 grid rounded-3xl bg-[#FAFCE7] px-6 py-12 xs:px-8 xs:py-14 md:grid-cols-2 lg:mb-20 lg:px-8 lg:py-16 2xl:py-20">
+      <div className="md:flex md:h-full md:flex-col md:justify-between md:px-6">
         <div>
-          <h3 className="font-medium opacity-80 text-[#464646] lg:text-lg">
+          <h3 className="font-medium text-[#464646] opacity-80 lg:text-lg">
             Need a doctor consulting?
           </h3>
-          <h1 className="text-4xl font-bold font-quicksand text-[#464646] opacity-90 xl:text-5xl">
+          <h1 className="font-quicksand text-4xl font-bold text-[#464646] opacity-90 xl:text-5xl">
             Request a Call Back Now
           </h1>
-          <p className="pt-2 pb-4 text-slate-700 opacity-90 lg:text-xl">
+          <p className="pb-4 pt-2 text-slate-700 opacity-90 lg:text-xl">
             Talk to your mental health professional.
           </p>
         </div>
-        <div className="sm:flex items-center">
+        <div className="items-center sm:flex">
           <img
-            className="w-24 object-cover mb-2 sm:mr-6"
+            className="mb-2 w-24 object-cover sm:mr-6"
             src={requestCallback}
             alt="contact"
           />
-          <p className="text-slate-700 font-medium leading-5">
+          <p className="font-medium leading-5 text-slate-700">
             Our Doctors are waiting
             <br />
             for your service.
@@ -63,7 +63,7 @@ function RequestForm() {
         </div>
       </div>
       <form
-        className="flex flex-col md:px-6 pt-10 md:pt-0"
+        className="flex flex-col pt-10 md:px-6 md:pt-0"
         onSubmit={handleSubmit}
       >
         <label className="mb-6">
@@ -72,7 +72,7 @@ function RequestForm() {
             placeholder="Enter Your Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="px-6 block py-4 w-full rounded-md shadow-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:bg-white"
+            className="block w-full rounded-md px-6 py-4 shadow-md focus:ring focus:ring-violet-400 focus:ring-opacity-75 dark:bg-white"
           />
         </label>
         <label className="mb-6">
@@ -81,7 +81,7 @@ function RequestForm() {
             placeholder="Your number"
             value={number}
             onChange={(e) => setNumber(e.target.value)}
-            className="px-6 block py-4 w-full rounded-md shadow-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:bg-white"
+            className="block w-full rounded-md px-6 py-4 shadow-md focus:ring focus:ring-violet-400 focus:ring-opacity-75 dark:bg-white"
           />
         </label>
         <label className="mb-2">
@@ -90,13 +90,13 @@ function RequestForm() {
             placeholder="Date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            className="px-6 block py-4 w-full rounded-md shadow-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:bg-white"
+            className="block w-full rounded-md px-6 py-4 shadow-md focus:ring focus:ring-violet-400 focus:ring-opacity-75 dark:bg-white"
           />
         </label>
         {successMessage && (
-          <p className="text-green-500 text-center">{successMessage}</p>
+          <p className="text-center text-green-500">{successMessage}</p>
         )}
-        <button type="submit" className="btn-one mt-4 mx-auto">
+        <button type="submit" className="btn-one mx-auto mt-4">
           Submit
         </button>
       </form>

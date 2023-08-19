@@ -26,14 +26,14 @@ export default function Footer() {
   return (
     <>
       {/* ========== Footer ========== */}
-      <footer className="bg-[#8EE5DC] pt-14 pb-10 border-b-[1px] font-medium">
+      <footer className="border-b-[1px] bg-[#8EE5DC] pb-10 pt-14 font-medium">
         <div className="container mx-auto">
           <div>
             <img src={logoTransparent} alt="" className="w-44 xl:w-64" />
           </div>
-          <div className="space-y-6 sm:grid sm:grid-cols-2 sm:gap-4 sm:space-y-0 lg:grid-cols-5 xl:pt-12 xl:pb-0">
+          <div className="space-y-6 sm:grid sm:grid-cols-2 sm:gap-4 sm:space-y-0 lg:grid-cols-5 xl:pb-0 xl:pt-12">
             <div>
-              <h2 className="text-2xl font-semibold mb-6">Location</h2>
+              <h2 className="mb-6 text-2xl font-semibold">Location</h2>
               <ul className="space-y-4">
                 <li className="flex items-center">
                   <FontAwesomeIcon icon={faLocationDot} className="mr-3" />
@@ -52,7 +52,7 @@ export default function Footer() {
               </ul>
             </div>
             <div className="lg:pl-7">
-              <h2 className="text-2xl font-semibold mb-6">Our Services</h2>
+              <h2 className="mb-6 text-2xl font-semibold">Our Services</h2>
               <ul className="space-y-1">
                 {serviceMenuPages.map((value, index) => {
                   return (
@@ -64,7 +64,7 @@ export default function Footer() {
               </ul>
             </div>
             <div className="lg:pl-8">
-              <h4 className="text-2xl font-semibold mb-6">Explore</h4>
+              <h4 className="mb-6 text-2xl font-semibold">Explore</h4>
               <ul className="space-y-1">
                 {footerExplore.map((value, index) => {
                   return (
@@ -76,7 +76,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h4 className="text-2xl font-semibold mb-6">Quick Links</h4>
+              <h4 className="mb-6 text-2xl font-semibold">Quick Links</h4>
               <ul className="space-y-1">
                 {footerQuickLinks.map((value, index) => {
                   return (
@@ -88,7 +88,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h4 className="text-2xl font-semibold mb-6">Frequent Issues</h4>
+              <h4 className="mb-6 text-2xl font-semibold">Frequent Issues</h4>
               <ul className="space-y-1">
                 {footerFrequentIssues.map((value, index) => {
                   return (
@@ -101,7 +101,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="container mx-auto flex mt-4 xl:mt-0 lg:justify-end">
+        <div className="container mx-auto mt-4 flex lg:justify-end">
           {socialLinks.map((value, i) => {
             return (
               <Link to={value[1]} key={i}>
@@ -111,7 +111,7 @@ export default function Footer() {
           })}
         </div>
       </footer>
-      <p className="text-center bg-[#8EE5DC] py-3 font-medium">
+      <p className="bg-[#8EE5DC] py-3 text-center font-medium">
         @2023 Wleness || All Rights Reserved
       </p>
     </>

@@ -2,16 +2,16 @@ import React from "react";
 
 export default function FeaturesBlock(props) {
   return (
-    <section className="container mx-auto bg-primary-10 px-6 py-8 grid grid-cols-3 text-center rounded-2xl">
+    <section className="container mx-auto grid grid-cols-3 rounded-2xl bg-primary-10 px-6 py-8 text-center">
       {props.data.map((value, index) => {
         return (
           <div key={index}>
             <img
               src={value.image}
               alt="Icon 2"
-              className="w-16 h-16 object-contain mx-auto"
+              className="mx-auto h-16 w-16 object-contain"
             />
-            <h4 className="font-bold text-lg">{value.name}</h4>
+            <h4 className="text-lg font-bold">{value.name}</h4>
           </div>
         );
       })}

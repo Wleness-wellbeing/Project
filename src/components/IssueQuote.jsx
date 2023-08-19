@@ -5,18 +5,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function IssueQuote({ quote }) {
   return (
-    <section className="pb-14 pt-4 relative overflow-x-hidden overflow-y-clip">
+    <section className="relative overflow-x-hidden overflow-y-clip pb-14 pt-4">
       <div className="relative">
-        <img src={didYouKnow} alt="" className="w-fit mx-auto" />
-        <div className="w-[640px] border-4 border-primary-400 p-12 mx-auto relative">
-          <p className="font-bold text-justify">{quote}</p>
+        <img src={didYouKnow} alt="" className="mx-auto w-fit" />
+        <div className="relative mx-auto w-[640px] border-4 border-primary-400 p-12">
+          <p className="text-justify font-bold">{quote}</p>
           <FontAwesomeIcon
             icon={faQuoteLeft}
-            className="text-6xl text-primary-300 absolute -top-12 -left-14 bg-white p-5 pb-14"
+            className="absolute -left-14 -top-12 bg-white p-5 pb-14 text-6xl text-primary-300"
           />
           <FontAwesomeIcon
             icon={faQuoteRight}
-            className="text-6xl text-primary-300 absolute -right-12 -bottom-10 bg-white p-5 pt-14"
+            className="absolute -bottom-10 -right-12 bg-white p-5 pt-14 text-6xl text-primary-300"
           />
         </div>
       </div>
@@ -25,7 +25,7 @@ export default function IssueQuote({ quote }) {
       <img
         src={cloudWithDots}
         alt=""
-        className="absolute bottom-14 -left-20 w-44 xl:w-80"
+        className="absolute -left-20 bottom-14 w-44 xl:w-80"
       />
     </section>
   );

@@ -6,23 +6,23 @@ import { Link } from "react-router-dom";
 
 export default function DoctorSlider(props) {
   return (
-    <section className="container mx-auto mb-5 relative">
+    <section className="container relative mx-auto mb-5">
       {/* ========== Soul Healers ========== */}
-      <div className="pb-6 sm:pt-6 lg:pb-14 2xl:py-14">
-        <h2 className="subheading text-[1.8rem] sm:pb-0 text-center text-[#383838] lg:mb-4">
+      <div className="pb-6 text-center sm:pt-6 lg:pb-14 2xl:py-14 ">
+        <h2 className="subheading text-[1.8rem] text-[#383838] sm:pb-0 lg:mb-4">
           {textColorize(props.data.heading)}
         </h2>
-        <p className="para text-center">{props.data.desc}</p>
+        <p className="para">{props.data.desc}</p>
       </div>
       {/* Doctors */}
-      <div className="grid lg:grid-cols-5 gap-6 mb-8 lg:mb-12">
+      <div className="mb-8 grid gap-6 lg:mb-12 lg:grid-cols-5">
         {props.data.doctors.map((value, index) => {
           return (
             <div key={index} className={value.size}>
               <img
                 src={value.image}
                 alt="Doctors"
-                className="w-full block object-cover p-1 box-border"
+                className="box-border block w-full object-cover p-1"
               />
             </div>
           );
@@ -30,20 +30,20 @@ export default function DoctorSlider(props) {
       </div>
       {/* Buttons */}
       <div className="pb-6 lg:pb-10">
-        <div className="flex justify-between items-center">
-          <button className="lg:w-12 lg:h-12 w-8 h-8 border-2 border-primary-300 rounded-full mr-6 flex justify-center items-center absolute top-[55%] left-4 -translate-y-[55%] lg:-translate-y-0 lg:static">
+        <div className="flex items-center justify-between">
+          <button className="absolute left-4 top-[55%] mr-6 flex h-8 w-8 -translate-y-[55%] items-center justify-center rounded-full border-2 border-primary-300 lg:static lg:h-12 lg:w-12 lg:-translate-y-0">
             <FontAwesomeIcon
               icon={faCaretLeft}
-              className="text-primary-300 text-2xl lg:text-4xl"
+              className="text-2xl text-primary-300 lg:text-4xl"
             />
           </button>
           <Link to={props.data.button.slug} className="btn-one mx-auto">
             {props.data.button.text}
           </Link>
-          <button className="bg-primary-300 lg:w-12 lg:h-12 w-8 h-8 rounded-full flex justify-center items-center absolute top-[55%] right-4 -translate-y-[55%] lg:-translate-y-0 lg:static">
+          <button className="absolute right-4 top-[55%] flex h-8 w-8 -translate-y-[55%] items-center justify-center rounded-full bg-primary-300 lg:static lg:h-12 lg:w-12 lg:-translate-y-0">
             <FontAwesomeIcon
               icon={faCaretRight}
-              className="text-white text-2xl lg:text-4xl"
+              className="text-2xl text-white lg:text-4xl"
             />
           </button>
         </div>

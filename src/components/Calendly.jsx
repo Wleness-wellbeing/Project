@@ -12,10 +12,10 @@ const Calendly = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
+    <div className="flex h-screen items-center justify-center bg-gray-100">
       <div
         style={widgetStyle}
-        className="bg-white rounded-lg overflow-hidden shadow-lg"
+        className="overflow-hidden rounded-lg bg-white shadow-lg"
       >
         <iframe
           title="Calendly Widget"

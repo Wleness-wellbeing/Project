@@ -32,10 +32,10 @@ function Navbar() {
   return (
     <>
       {/* ========== Navigation Bar ========== */}
-      <nav className="sticky top-0 left-0 right-0 bg-white z-40">
-        <div className="container mx-auto flex items-center justify-between relative">
+      <nav className="sticky left-0 right-0 top-0 z-40 bg-white">
+        <div className="container relative mx-auto flex items-center justify-between">
           {/* Logo */}
-          <div className=" pt-2 w-32 xl:w-48 md:w-56 lg:w-64">
+          <div className=" w-32 pt-2 md:w-56 lg:w-64 xl:w-48">
             <Link to="/" className="outline-none">
               <img src={logo} alt="" className="w-full object-cover" />
             </Link>
@@ -44,16 +44,12 @@ function Navbar() {
           {/* Menu list */}
           <ul
             className={
-              "absolute xl:static w-56 bg-white top-20 right-4 justify-end xl:space-x-5 xl:flex p-6 rounded-xl border-[1px] border-slate-100 xl:p-0 shadow-md xl:shadow-none xl:border-none xl:w-fit" +
+              "absolute right-4 top-20 w-56 justify-end rounded-xl border-[1px] border-slate-100 bg-white p-6 shadow-md xl:static xl:flex xl:w-fit xl:space-x-5 xl:border-none xl:p-0 xl:shadow-none" +
               (isMenuOpen ? " block " : "  hidden xl:flex ")
             }
           >
             <MenuLink url="/about-us" text="About Us" />
-            <SubmenuLink
-              url="javascript:void()"
-              text="Services"
-              pages={serviceMenuPages}
-            />
+            <SubmenuLink url="" text="Services" pages={serviceMenuPages} />
             <MenuLink url="/experts" text="Experts" />
             <MenuLink url="/internship" text="Internship" />
             <MenuLink url="/blogs" text="Blogs" />
@@ -62,24 +58,20 @@ function Navbar() {
               text="Activities"
               pages={activitiesMenuPages}
             />
-            <SubmenuLink
-              url="javascript:void()"
-              text="Pages"
-              pages={menuPages}
-            />
+            <SubmenuLink url="/self-care" text="Self Care" pages={menuPages} />
           </ul>
 
           {/* Authentication */}
           <div className="hidden xl:flex xl:items-center">
             <button
               onClick={handleOpenModal}
-              className="menu-link mr-2 text-primary-400 !font-semibold border-2 px-4 border-primary-400 hover:bg-primary-400 hover:text-white transition-all !py-1.5 rounded-full"
+              className="menu-link mr-2 rounded-full border-2 border-primary-400 !py-1.5 px-4 !font-semibold text-primary-400 transition-all hover:bg-primary-400 hover:text-white"
             >
               Join Us
             </button>
             <Link
               to="/signup"
-              className="btn-primary !w-fit !rounded-full !bg-primary-400 hover:!bg-primary-300 !py-2 font-semibold"
+              className="btn-primary !w-fit !rounded-full !bg-primary-400 !py-2 font-semibold hover:!bg-primary-300"
             >
               Sign Up
             </Link>

@@ -43,7 +43,7 @@ export default function Feedback({ isOpen, onClose }) {
           headers: {
             "Content-Type": "application/json",
           },
-        }
+        },
       );
 
       if (response.status === 200) {
@@ -61,34 +61,34 @@ export default function Feedback({ isOpen, onClose }) {
   };
 
   return (
-    <section className="fixed inset-0 z-40 flex justify-center items-center backdrop-brightness-50">
-      <div className="w-[640px] bg-white p-6 h-fit rounded-xl">
+    <section className="fixed inset-0 z-40 flex items-center justify-center backdrop-brightness-50">
+      <div className="h-fit w-[640px] rounded-xl bg-white p-6">
         {submissionStatus === "success" && (
-          <p className="text-center text-green-500 font-medium mb-4">
+          <p className="mb-4 text-center font-medium text-green-500">
             Feedback submitted successfully!Thank you.
           </p>
         )}
         {submissionStatus === "error" && (
-          <p className="text-center text-red-500 font-medium mb-4">
+          <p className="mb-4 text-center font-medium text-red-500">
             There was an error submitting your feedback. Please try again later.
           </p>
         )}
 
-        <h4 className="text-center text-2xl font-bold text-primary-300 mb-4">
+        <h4 className="mb-4 text-center text-2xl font-bold text-primary-300">
           Feedback Form
         </h4>
-        <p className="text-center font-medium text-sm">
+        <p className="text-center text-sm font-medium">
           Your valuable feedback is important to us!
         </p>
 
         <form onSubmit={handleSubmit} className="pt-6">
           {/* Session Effectiveness Rating */}
-          <div className="flex gap-4 mb-4">
+          <div className="mb-4 flex gap-4">
             <label htmlFor="" className="w-full">
-              <span className="font-bold block mb-1 text-primary-300">
+              <span className="mb-1 block font-bold text-primary-300">
                 How effective was the session*
               </span>
-              <span className="text-center block py-3">
+              <span className="block py-3 text-center">
                 {[1, 2, 3, 4, 5].map((index) => (
                   <FontAwesomeIcon
                     key={index}
@@ -107,12 +107,12 @@ export default function Feedback({ isOpen, onClose }) {
 
           {/* ... other questions and input fields ... */}
           {/* Event Feeling Rating */}
-          <div className="flex gap-4 mb-4">
+          <div className="mb-4 flex gap-4">
             <label htmlFor="" className="w-full">
-              <span className="font-bold block mb-1 text-primary-300">
+              <span className="mb-1 block font-bold text-primary-300">
                 How did you feel about the event?*
               </span>
-              <span className="text-center block py-3">
+              <span className="block py-3 text-center">
                 {[1, 2, 3, 4, 5].map((index) => (
                   <FontAwesomeIcon
                     key={index}
@@ -130,12 +130,12 @@ export default function Feedback({ isOpen, onClose }) {
           </div>
 
           {/* Expert Understanding Rating */}
-          <div className="flex gap-4 mb-4">
+          <div className="mb-4 flex gap-4">
             <label htmlFor="" className="w-full">
-              <span className="font-bold block mb-1 text-primary-300">
+              <span className="mb-1 block font-bold text-primary-300">
                 How well did the expert understand your questions?*
               </span>
-              <span className="text-center block py-3">
+              <span className="block py-3 text-center">
                 {[1, 2, 3, 4, 5].map((index) => (
                   <FontAwesomeIcon
                     key={index}
@@ -153,9 +153,9 @@ export default function Feedback({ isOpen, onClose }) {
           </div>
 
           {/* Comments */}
-          <div className="flex gap-4 mb-4">
+          <div className="mb-4 flex gap-4">
             <label htmlFor="" className="w-full">
-              <span className="font-bold block mb-1 text-primary-300">
+              <span className="mb-1 block font-bold text-primary-300">
                 Tell us about your interest:
               </span>
               <textarea
@@ -165,7 +165,7 @@ export default function Feedback({ isOpen, onClose }) {
                 rows="3"
                 value={comments}
                 onChange={(e) => setComments(e.target.value)}
-                className="w-full border-2 border-primary-50 px-4 py-2 rounded-lg outline-none"
+                className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
                 placeholder="Give your valuable feedback (minimum of 50 words)"
               ></textarea>
             </label>
@@ -176,7 +176,7 @@ export default function Feedback({ isOpen, onClose }) {
             <button
               onClick={() => onClose()} // Call the onClose function when the button is clicked
               type="button"
-              className="btn-one !bg-transparent !border-2 !border-primary-300 !text-black !py-2 mr-3"
+              className="btn-one mr-3 !border-2 !border-primary-300 !bg-transparent !py-2 !text-black"
             >
               Close
             </button>

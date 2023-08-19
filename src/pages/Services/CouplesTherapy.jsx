@@ -34,7 +34,7 @@ function CouplesTherapy() {
 
       {/* How Section  */}
       <section className="container mx-auto !px-0" ref={ref}>
-        <h2 className="subheading text-center py-12">
+        <h2 className="subheading py-12 text-center">
           {textColorize([
             {
               color: false,
@@ -52,7 +52,7 @@ function CouplesTherapy() {
         </h2>
 
         <div>
-          <figure className="flex pt-12 pb-6 gap-x-5">
+          <figure className="flex gap-x-5 pb-6 pt-12">
             <div className="w-2/5">
               <img
                 src={couplesTherapy1}
@@ -61,8 +61,8 @@ function CouplesTherapy() {
               />
             </div>
             <figcaption className="w-3/5 self-center">
-              <div className="border-2 border-primary-50 px-6 py-3 rounded-2xl mr-20">
-                <h6 className="font-bold text-lg text-primary-400">
+              <div className="mr-20 rounded-2xl border-2 border-primary-50 px-6 py-3">
+                <h6 className="text-lg font-bold text-primary-400">
                   Dedicated experts team:
                 </h6>
                 <p className="font-medium">
@@ -72,8 +72,8 @@ function CouplesTherapy() {
                   connection.
                 </p>
               </div>
-              <div className=" bg-primary-50 shadow-lg px-6 py-3 rounded-2xl rounded-br-[4rem] ml-20 -mt-2">
-                <h6 className="font-bold text-lg text-primary-400">
+              <div className=" -mt-2 ml-20 rounded-2xl rounded-br-[4rem] bg-primary-50 px-6 py-3 shadow-lg">
+                <h6 className="text-lg font-bold text-primary-400">
                   Tailored Approach:
                 </h6>
                 <p className="font-medium">
@@ -86,10 +86,10 @@ function CouplesTherapy() {
               </div>
             </figcaption>
           </figure>
-          <figure className="flex py-12 gap-x-5">
+          <figure className="flex gap-x-5 py-12">
             <figcaption className="w-3/5 self-center">
-              <div className="border-2 border-primary-50 px-6 py-3 rounded-2xl mr-20">
-                <h6 className="font-bold text-lg text-primary-400">
+              <div className="mr-20 rounded-2xl border-2 border-primary-50 px-6 py-3">
+                <h6 className="text-lg font-bold text-primary-400">
                   Accessibility:
                 </h6>
                 <p className="font-medium">
@@ -98,8 +98,8 @@ function CouplesTherapy() {
                   deal with your ongoing issues.
                 </p>
               </div>
-              <div className=" bg-primary-50 shadow-lg px-6 py-3 rounded-2xl rounded-br-[4rem] ml-20 -mt-2">
-                <h6 className="font-bold text-lg text-primary-400">
+              <div className=" -mt-2 ml-20 rounded-2xl rounded-br-[4rem] bg-primary-50 px-6 py-3 shadow-lg">
+                <h6 className="text-lg font-bold text-primary-400">
                   Safe and Non-Judgmental Space:
                 </h6>
                 <p className="font-medium">
@@ -114,7 +114,7 @@ function CouplesTherapy() {
               <img
                 src={couplesTherapy2}
                 alt=""
-                className="block w-fit mx-auto object-cover"
+                className="mx-auto block w-fit object-cover"
               />
             </div>
           </figure>

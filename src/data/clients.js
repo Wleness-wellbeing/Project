@@ -208,16 +208,8 @@ export const psychiatristClient = {
 export const internshipClients = {
   heading: [
     {
-      color: false,
-      text: "What Our ",
-    },
-    {
       color: true,
-      text: "Happy Clients ",
-    },
-    {
-      color: false,
-      text: "Say",
+      text: "Listen to their stories.",
     },
   ],
   clients: [

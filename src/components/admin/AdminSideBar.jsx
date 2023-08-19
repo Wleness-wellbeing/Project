@@ -11,7 +11,7 @@ export default function AdminSideBar() {
             <Link
               key={i}
               to={value[1]}
-              className="my-2 text-right block admin-link-hover font-medium"
+              className="admin-link-hover my-2 block text-right font-medium"
             >
               {value[0]}
             </Link>

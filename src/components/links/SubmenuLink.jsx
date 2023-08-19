@@ -12,10 +12,21 @@ export default function SubmenuLink(props) {
       </Link>
 
       {/* Submenu */}
-      <ul className="absolute hidden w-52 xl:w-60 z-10 rounded-xl border-[1px] border-slate-100 bg-white px-6 py-4 shadow-md group-hover:block">
+      <ul className="absolute z-10 hidden w-52 rounded-xl border-[1px] border-slate-100 bg-white px-6 py-4 shadow-md group-hover:block xl:w-60">
         {props.pages.map((value, index) => {
           return <MenuLink key={index} url={value[1]} text={value[0]} />;
         })}
+        <li>
+          <Link to="" className="menu-link">
+            DropDown
+          </Link>
+          {/* Submenu */}
+          <ul className="absolute z-10 hidden w-52 rounded-xl border-[1px] border-slate-100 bg-white px-6 py-4 shadow-md  xl:w-60">
+            {props.pages.map((value, index) => {
+              return <MenuLink key={index} url={value[1]} text={value[0]} />;
+            })}
+          </ul>
+        </li>
       </ul>
     </li>
   );

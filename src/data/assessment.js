@@ -15,16 +15,15 @@ import {
 
 export const assessmentFeelings = [
   [assessmentIconAnxiety, "Anxiety"],
+  [assessmentIconStress, "Stress"],
+  [assessmentIconRelationship, "Relationship Disorder"],
+  [assessmentIconDepression, "Depression"],
+  [assessmentIconAnger, "Anger"],
+  [assessmentIconEatingDisorder, "Eating Disorder"],
+  [assessmentIconPanicAttacks, "Panic Attacks"],
   [assessmentIconOdd, "ODD"],
   [assessmentIconAdhd, "ADHD"],
-  [assessmentIconStress, "Stress"],
-  [assessmentIconPanicAttacks, "Panic Attacks"],
   [assessmentIconOcd, "OCD"],
-  [assessmentIconEatingDisorder, "Eating Disorder"],
-  [assessmentIconAnger, "Anger"],
-  [assessmentIconLgbt, "LGBTQ"],
-  [assessmentIconRelationship, "Relationship"],
-  [assessmentIconDepression, "Depression"],
   [assessmentIconBiopolarDisorder, "Biopolar Disorder"],
   [assessmentIconLgbt, "LGBTQ"],
 ];
@@ -38,7 +37,6 @@ export const experiencingIssue = [
 ];
 
 export const managingDifficulty = [
-  "😁 Not difficult at all",
   "🙂 Somewhat difficult",
   "🙁 Very difficult",
   "☹️ Extremely difficult",

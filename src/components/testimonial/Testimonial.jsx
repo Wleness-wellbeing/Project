@@ -7,7 +7,7 @@ import SwiperBtns from "../Buttons/SwiperBtns";
 
 export default function Testimonial(props) {
   return (
-    <div className="container mx-auto lg:!pr-0 pb-14 lg:pb-0 relative">
+    <div className="container relative mx-auto pb-14 lg:!pr-0 lg:pb-0">
       {/* Testimonials */}
       <Swiper
         navigation={true}
@@ -18,22 +18,22 @@ export default function Testimonial(props) {
         {props.data.map((value, i) => {
           return (
             <SwiperSlide key={i}>
-              <figure className="lg:flex items-center">
-                <div className="lg:w-2/5 p-4">
+              <figure className="items-center lg:flex">
+                <div className="p-4 lg:w-2/5">
                   <img
                     src={value.image}
                     alt={value.name}
-                    className="object-cover w-full"
+                    className="w-full object-cover"
                   />
                 </div>
-                <figcaption className="lg:pl-24 lg:w-3/5">
+                <figcaption className="lg:w-3/5 lg:pl-24">
                   <h4 className="text-lg font-semibold sm:text-xl lg:text-3xl 2xl:text-4xl">
                     {value.name}
                   </h4>
-                  <h6 className="font-medium text-slate-400 2xl:text-xl mb-2">
+                  <h6 className="mb-2 font-medium text-slate-400 2xl:text-xl">
                     {value.profession}
                   </h6>
-                  <p className="mb-1 text-sm sm:text-lg md:text-base 2xl:text-xl md:leading-5 text-justify">
+                  <p className="mb-1 text-justify text-sm sm:text-lg md:text-base md:leading-5 2xl:text-xl">
                     {value.desc}
                   </p>
                 </figcaption>

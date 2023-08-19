@@ -21,6 +21,7 @@ export default function Therapy() {
         image={TherapyData.image}
         handleScrollToComponent={() => handleScrollToComponent()}
       />
+      <WhyChooseGrid data={TherapyData.whyChoose} />
       <SelectBest
         ref={ref}
         name={TherapyData.name}
@@ -29,7 +30,6 @@ export default function Therapy() {
         btn={TherapyData.bestTherapist.startBtn}
         doctors={TherapyData.bestTherapist.doctors}
       />
-      <WhyChooseGrid data={TherapyData.whyChoose} />
       <HappyClient data={therapyClient} />
     </>
   );

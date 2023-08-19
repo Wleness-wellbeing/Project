@@ -7,9 +7,9 @@ export default function AssessmentTextBtn(props) {
   return (
     <div
       onClick={selectOption}
-      className="bg-gradient-to-r from-secondary to-tertiary rounded-lg flex items-stretch p-[3px] box-border group"
+      className="group box-border flex items-stretch rounded-lg bg-gradient-to-r from-secondary to-tertiary p-[3px]"
     >
-      <button className="flex items-center px-5 py-2.5  hover:text-white w-full justify-center font-semibold bg-white rounded-md hover:bg-primary-300">
+      <button className="flex w-full items-center justify-center  rounded-md bg-white px-5 py-2.5 font-semibold hover:bg-primary-300 hover:text-white">
         {props.name}
       </button>
     </div>

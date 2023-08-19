@@ -4,9 +4,9 @@ import React from "react";
 
 export default function Faq({ question, answer }) {
   return (
-    <details className="bg-200/30 p-4 lg:p-6 rounded-lg cursor-pointer bg-primary-50">
-      <summary className="flex justify-between items-center">
-        <h3 className="text-lg font-bold flex justify-between items-center w-full">
+    <details className="bg-200/30 cursor-pointer rounded-lg bg-primary-50 p-4 lg:p-6">
+      <summary className="flex items-center justify-between">
+        <h3 className="flex w-full items-center justify-between text-lg font-bold">
           <span>{question}</span>
           <FontAwesomeIcon icon={faPlus} />
         </h3>

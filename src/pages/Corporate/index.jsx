@@ -12,17 +12,17 @@ import { ourOfferings, prioritizeCorporate } from "../../data/corporate";
 export default function index() {
   return (
     <>
-      <header className="py-6 relative overflow-x-clip">
+      <header className="relative overflow-x-clip py-6">
         <div className="container mx-auto">
-          <h1 className="subheading text-center mb-2">
+          <h1 className="subheading mb-2 text-center">
             <span>Foster a </span>
             <span className="text-[#0A99D6]">Healthy and thriving work </span>
             <span>environment with Wleness</span>
           </h1>
-          <div className="lg:w-4/5 mx-auto pb-2 text-center">
-            <img src={corporateHeader} alt="" className="w-full mb-4" />
+          <div className="mx-auto pb-2 text-center lg:w-4/5">
+            <img src={corporateHeader} alt="" className="mb-4 w-full" />
             <div>
-              <p className="lg:px-24 font-semibold text-xl mb-6">
+              <p className="mb-6 text-xl font-semibold lg:px-24">
                 Create a Mental Health-Friendly Work Environment with Customized
                 Solutions for Your Unique Workplace
               </p>
@@ -37,22 +37,22 @@ export default function index() {
         <img
           src={blueDots1}
           alt=""
-          className="w-44 lg:w-96 absolute -bottom-6 lg:bottom-10 -left-20 z-10"
+          className="absolute -bottom-6 -left-20 z-10 w-44 lg:bottom-10 lg:w-96"
         />
         <img
           src={blueDots2}
           alt=""
-          className="w-44 lg:w-96 absolute top-36 lg:top-20 -right-20 z-10"
+          className="absolute -right-20 top-36 z-10 w-44 lg:top-20 lg:w-96"
         />
       </header>
 
       <section className="container mx-auto pt-6 lg:py-6">
-        <h2 className="subheading text-center lg:px-24 mb-4 lg:mb-8">
+        <h2 className="subheading mb-4 text-center lg:mb-8 lg:px-24">
           <span>Why prioritize </span>
           <span className="text-[#0A99D6]">Corporate Well-being</span>
         </h2>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 lg:gap-12">
           {prioritizeCorporate.map((value, i) => {
             return (
               <figure key={i}>
@@ -60,7 +60,7 @@ export default function index() {
                   <img src={value.image} alt="" className="w-full" />
                 </div>
                 <figcaption>
-                  <p className="font-semibold text-xs md:text-sm lg:text-base text-justify px-2">
+                  <p className="px-2 text-justify text-xs font-semibold md:text-sm lg:text-base">
                     {value.desc.map((element, j) => {
                       return element.status ? (
                         <span className="text-[#0A99D6]">{element.text}</span>
@@ -75,7 +75,7 @@ export default function index() {
           })}
         </div>
 
-        <div className="text-center py-5">
+        <div className="py-5 text-center">
           <button className="btn-one !bg-[#0A99D6] hover:!bg-[#0F7CAB]">
             Join Us Now
           </button>
@@ -85,8 +85,8 @@ export default function index() {
       <section>
         <div className="relative overflow-x-clip">
           <div className="container mx-auto mb-8 lg:py-6">
-            <h2 className="text-xl lg:text-5xl font-bold text-center py-4 grid">
-              <span className="text-[#0A99D6] mr-2">
+            <h2 className="grid py-4 text-center text-xl font-bold lg:text-5xl">
+              <span className="mr-2 text-[#0A99D6]">
                 Navigating from Burnout to Breakthrough:
               </span>
               <span>
@@ -95,7 +95,7 @@ export default function index() {
               </span>
             </h2>
 
-            <p className="font-medium text-lg lg:text-xl text-center py-2 lg:px-8">
+            <p className="py-2 text-center text-lg font-medium lg:px-8 lg:text-xl">
               Nourishing employee health and happiness helps to create a recipe
               for success and unleashes the full potential of a thriving
               workforce. Let our Workplace Wleness reveal the path to a better
@@ -106,7 +106,7 @@ export default function index() {
           <img
             src={blueFlower}
             alt=""
-            className="absolute -top-24 lg:-top-44 -right-20 w-32 lg:w-72"
+            className="absolute -right-20 -top-24 w-32 lg:-top-44 lg:w-72"
           />
 
           <img
@@ -117,21 +117,21 @@ export default function index() {
         </div>
 
         <div className="container mx-auto">
-          <h2 className="subheading text-center grid">
+          <h2 className="subheading grid text-center">
             <span>Comprehensive Employee</span>
             <span className="text-[#0A99D6]"> Well-being Hub</span>
           </h2>
 
-          <div className="lg:flex items-center pb-6">
-            <div className="lg:w-1/2 lg:order-2 py-4 lg:py-0">
+          <div className="items-center pb-6 lg:flex">
+            <div className="py-4 lg:order-2 lg:w-1/2 lg:py-0">
               <img
                 src={employeeTriangleHub}
                 alt=""
-                className="w-4/5 mx-auto object-cover"
+                className="mx-auto w-4/5 object-cover"
               />
             </div>
-            <div className="lg:w-1/2 lg:order-1 text-center">
-              <p className="font-semibold text-sm lg:text-base lg:px-8 pb-6">
+            <div className="text-center lg:order-1 lg:w-1/2">
+              <p className="pb-6 text-sm font-semibold lg:px-8 lg:text-base">
                 Discover a seamless solution for your employee well-being needs
                 with our integrated corporate wellness platform. Equipped with
                 state-of-the-art features, it offers a holistic approach to
@@ -149,7 +149,7 @@ export default function index() {
         </div>
       </section>
 
-      <section className="pb-12 relative overflow-x-clip">
+      <section className="relative overflow-x-clip pb-12">
         <div className="container mx-auto">
           <h2 className="subheading text-center lg:px-24">
             <span className="text-[#0A99D6]">Our Offerings </span>To Your
@@ -157,14 +157,14 @@ export default function index() {
           </h2>
 
           {/* <div className="bg-[#FFE0F6] p-2 lg:p-4 grid grid-cols-4 gap-2 lg:gap-6 my-6 lg:my-10 rounded-xl"> */}
-          <div className="bg-blue-100 p-2 lg:p-4 grid grid-cols-4 gap-2 lg:gap-6 my-6 lg:my-10 rounded-xl">
+          <div className="my-6 grid grid-cols-4 gap-2 rounded-xl bg-blue-100 p-2 lg:my-10 lg:gap-6 lg:p-4">
             {ourOfferings.map((value, i) => {
               return (
-                <div className="relative z-20 group" key={i}>
-                  <div className="bg-white rounded-xl group-hover:text-[#0A99D6] lg:py-4 p-1 lg:px-8 grid place-items-center lg:text-lg text-xs font-semibold text-center cursor-pointer z-20 h-full group-hover:rounded-none">
+                <div className="group relative z-20" key={i}>
+                  <div className="z-20 grid h-full cursor-pointer place-items-center rounded-xl bg-white p-1 text-center text-xs font-semibold group-hover:rounded-none group-hover:text-[#0A99D6] lg:px-8 lg:py-4 lg:text-lg">
                     <span>{value}</span>
                   </div>
-                  <div className="bg-[#0A99D6] absolute transition-all rounded-xl inset-0 group-hover:-inset-y-6 group-hover:lg:-inset-y-10 -z-10"></div>
+                  <div className="absolute inset-0 -z-10 rounded-xl bg-[#0A99D6] transition-all group-hover:-inset-y-6 group-hover:lg:-inset-y-10"></div>
                 </div>
               );
             })}
@@ -180,12 +180,12 @@ export default function index() {
         <img
           src={circleArt}
           alt=""
-          className="absolute -bottom-24 lg:bottom-0 -right-80"
+          className="absolute -bottom-24 -right-80 lg:bottom-0"
         />
         <img
           src={circleArt}
           alt=""
-          className="absolute -top-56 lg:-top-[380px] -left-80"
+          className="absolute -left-80 -top-56 lg:-top-[380px]"
         />
       </section>
     </>

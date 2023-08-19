@@ -8,15 +8,15 @@ export default function ActivityBlogs(props) {
           <img
             src={value.thumbnail}
             alt=""
-            className="w-full object-cover block"
+            className="block w-full object-cover"
           />
         </div>
         <figcaption>
-          <h4 className="font-bold leading-8 text-[22px] py-2">
+          <h4 className="py-2 text-[22px] font-bold leading-8">
             {value.title}
           </h4>
           <p className="pb-2">{value.desc}</p>
-          <button className="font-bold text-lg text-primary-400">
+          <button className="text-lg font-bold text-primary-400">
             Read More
           </button>
         </figcaption>
@@ -26,16 +26,16 @@ export default function ActivityBlogs(props) {
 
   return (
     <section
-      className="container mx-auto border-10 border-solid border-transparent p-15 relative"
+      className="border-10 p-15 container relative mx-auto border-solid border-transparent"
       style={{ borderImage: "url('border.png') 30 stretch" }}
     >
-      <div className="bg-primary-10 px-6 py-12 mb-10 rounded-2xl">
-        <h3 className="lg:text-xl xl:text-3xl font-bold text-center mb-10">
+      <div className="mb-10 rounded-2xl bg-primary-10 px-6 py-12">
+        <h3 className="mb-10 text-center font-bold lg:text-xl xl:text-3xl">
           You cannot always control what goes on outside, but you can always
           control what goes on inside.
         </h3>
 
-        <div className="grid lg:grid-cols-3 gap-6">{blog}</div>
+        <div className="grid gap-6 lg:grid-cols-3">{blog}</div>
       </div>
     </section>
   );

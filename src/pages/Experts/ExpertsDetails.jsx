@@ -9,19 +9,19 @@ import HeartIcon from "../../components/icon/HeartIcon";
 export default function ExpertsDetails() {
   return (
     <main>
-      <header className="flex flex-col lg:flex-row container mx-auto items-center py-4 xl:py-6 2xl:py-8">
+      <header className="container mx-auto flex flex-col items-center py-4 lg:flex-row xl:py-6 2xl:py-8">
         <h1 className="subheading heading-primary lg:w-4/5">
           Meet Our Specialists
         </h1>
 
         {/* Filters */}
-        <div className="flex lg:w-1/5 justify-end items-center">
+        <div className="flex items-center justify-end lg:w-1/5">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               height="1em"
               viewBox="0 0 512 512"
-              className="text-3xl mr-2 cursor-pointer hover:fill-[#FF0E1C] "
+              className="mr-2 cursor-pointer text-3xl hover:fill-[#FF0E1C] "
             >
               {/* Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. */}
               <path d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
@@ -74,30 +74,30 @@ export default function ExpertsDetails() {
 
       {/* Specialist Doctors */}
       <section>
-        <div className="container side-spacing mx-auto p-4 grid grid-cols-[repeat(4, minmax(280, 1fr))] items-center sm:grid-cols-2 gap-5 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-3 3xl:gap-10">
+        <div className="side-spacing grid-cols-[repeat(4, minmax(280, 1fr))] container mx-auto grid items-center gap-5 p-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-3 3xl:gap-10">
           {allExperts.map((value, i) => {
             return <DoctorsCard key={i} data={value} />;
           })}
         </div>
-        <div className="text-center py-6 lg:pb-0">
+        <div className="py-6 text-center lg:pb-0">
           <button className="btn-one">Show More..</button>
         </div>
       </section>
 
       {/* Clients Testimonials */}
-      <section className="pt-7 lg:pt-14 container mx-auto">
+      <section className="container mx-auto pt-7 lg:pt-14">
         <div className="mb-6">
-          <h2 className="subheading mb-4 text-center heading-primary">
+          <h2 className="subheading heading-primary mb-4 text-center">
             What Our Patients Say About Us
           </h2>
-          <p className="text-center leading-5 mx-auto xl:text-lg xl:leading-6 font-medium">
+          <p className="mx-auto text-center font-medium leading-5 xl:text-lg xl:leading-6">
             Hear from our valued patients about their experience with us and the
             impact we've made on their lives. Read their heartfelt testimonials
             and discover the quality of care and support we provide.
           </p>
         </div>
         <div className="md:flex md:items-start md:gap-4 lg:py-10">
-          <div className="md:w-2/5 md:flex">
+          <div className="md:flex md:w-2/5">
             <img
               src={featuredPatient}
               alt="Testimonials"
@@ -105,18 +105,18 @@ export default function ExpertsDetails() {
             />
           </div>
           <div className="md:w-3/5">
-            <figure className="flex items-start rounded-xl rounded-br-[4rem] bg-white p-4 shadow-xl border-2 border-slate-200 sm:rounded-br-[7rem] lg:px-10 h-full lg:py-12">
-              <div className="w-3/12 mr-6">
+            <figure className="flex h-full items-start rounded-xl rounded-br-[4rem] border-2 border-slate-200 bg-white p-4 shadow-xl sm:rounded-br-[7rem] lg:px-10 lg:py-12">
+              <div className="mr-6 w-3/12">
                 <img
                   src={expertClient}
                   alt=""
-                  className="w-full object-cover block"
+                  className="block w-full object-cover"
                 />
               </div>
               <figcaption className="w-3/4">
                 <h4 className="text-lg font-semibold sm:text-xl">John Kuch</h4>
-                <p className="flex items-center mb-2">
-                  <span className="text-lg font-semibold block mr-2">4/5</span>
+                <p className="mb-2 flex items-center">
+                  <span className="mr-2 block text-lg font-semibold">4/5</span>
                   <span>
                     <FontAwesomeIcon
                       icon={faStar}
@@ -136,7 +136,7 @@ export default function ExpertsDetails() {
                     />
                   </span>
                 </p>
-                <p className="mb-1 text-sm xs:pr-3 sm:text-lg md:text-base md:leading-5 font-medium">
+                <p className="mb-1 text-sm font-medium xs:pr-3 sm:text-lg md:text-base md:leading-5">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Incidunt laudantium mollitia id.
                 </p>

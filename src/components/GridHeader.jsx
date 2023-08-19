@@ -19,30 +19,28 @@ export default function GridHeader(props) {
     click: props.handleScrollToComponent,
   };
   return (
-    <header className="py-10 relative overflow-x-hidden">
-      <div className="container mx-auto ">
-        <h1 className="subheading text-center lg:w-[640px] mx-auto">
+    <header className="relative overflow-x-hidden py-10">
+      <div className="container mx-auto text-center">
+        <h1 className="subheading lg:w-[640px]">
           <span>Discover the power of </span>
           <span className="heading-primary">{props.name}</span>
         </h1>
         <div>
           <img src={props.image} alt="" className="w-full" />
         </div>
-        <p className="para text-center mb-8 px-20">
+        <p className="para mb-8 px-20 text-center">
           Discover transformative counseling and online therapy for growth,
           healing, and resilience, empowering you with compassionate support for
           renewed well-being.
         </p>
-        <div className="text-center">
-          <button className="btn-one" onClick={openAssessmentModal}>
-            Book an appointment now
-          </button>
+        <div className="text-center" onClick={props.handleScrollToComponent}>
+          <button className="btn-one">Explore More</button>
         </div>
       </div>
       <img
         src={cloudWithDots}
         alt=""
-        className="absolute top-20 -right-56 -z-10 lg:w-[480px]"
+        className="absolute -right-56 top-20 -z-10 lg:w-[480px]"
       />
       <img
         src={cloudWithDots}

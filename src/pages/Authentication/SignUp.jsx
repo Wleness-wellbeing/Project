@@ -26,7 +26,7 @@ export default function Signup() {
       gender,
       mobile,
       password,
-      confirmPassword
+      confirmPassword,
     );
     if (Object.keys(validationErrors).length === 0) {
       try {
@@ -45,7 +45,7 @@ export default function Signup() {
               Accept: "application/json",
               "Access-Control-Allow-Origin": "*",
             },
-          }
+          },
         );
         console.log(res.data);
         if (res.data.status === "ok") {
@@ -93,27 +93,27 @@ export default function Signup() {
   };
 
   return (
-    <main className="flex md:flex-row flex-col justify-center items-center md:items-stretch h-screen">
+    <main className="flex h-screen flex-col items-center justify-center md:flex-row md:items-stretch">
       {/* Left Sidebar */}
-      <aside className="md:w-1/2 hidden md:flex justify-center items-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-right bg-no-repeat bg-contain">
-        <img src={signup} alt="" className="block object-cover w-[648px]" />
+      <aside className="hidden items-center justify-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-contain bg-right bg-no-repeat md:flex md:w-1/2">
+        <img src={signup} alt="" className="block w-[648px] object-cover" />
       </aside>
       {/* Right Content */}
-      <div className="md:w-1/2 flex justify-center items-center px-4">
-        <div className="sm:w-[440px] w-full">
+      <div className="flex items-center justify-center px-4 md:w-1/2">
+        <div className="w-full sm:w-[440px]">
           {/* Logo */}
-          <div className="sm:w-[320px] w-full mx-auto mb-12">
+          <div className="mx-auto mb-12 w-full sm:w-[320px]">
             <Link to="/">
               <img
                 src={logo}
                 alt="Logo"
-                className="block object-cover w-full"
+                className="block w-full object-cover"
               />
             </Link>
           </div>
 
           {/* Login/Signup Buttons */}
-          <div className="flex justify-between gap-5 mb-10">
+          <div className="mb-10 flex justify-between gap-5">
             <Link to="/login" className="btn-transparent">
               LOGIN
             </Link>
@@ -151,7 +151,7 @@ export default function Signup() {
               />
             </label>
             {errors.name && (
-              <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+              <p className="mt-1 text-sm text-red-500">{errors.name}</p>
             )}
 
             <label htmlFor="email">
@@ -162,12 +162,12 @@ export default function Signup() {
                 onChange={(e) => setEmail(e.target.value)}
                 className={`border ${
                   errors.email ? "border-red-500" : "border-gray-300"
-                } bg-gray-50 border-b-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
+                } block w-full rounded-lg border-b-2 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500`}
                 placeholder="Email Address"
               />
             </label>
             {errors.email && (
-              <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+              <p className="mt-1 text-sm text-red-500">{errors.email}</p>
             )}
 
             <label htmlFor="gender">
@@ -177,7 +177,7 @@ export default function Signup() {
                 onChange={(e) => setGender(e.target.value)}
                 className={`border ${
                   errors.gender ? "border-red-500" : "border-gray-300"
-                } bg-gray-50 border-b-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
+                } block w-full rounded-lg border-b-2 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500`}
               >
                 <option value="">Select Gender</option>
                 <option value="male">Male</option>
@@ -186,7 +186,7 @@ export default function Signup() {
               </select>
             </label>
             {errors.gender && (
-              <p className="text-red-500 text-sm mt-1">{errors.gender}</p>
+              <p className="mt-1 text-sm text-red-500">{errors.gender}</p>
             )}
 
             <label htmlFor="mobile">
@@ -197,12 +197,12 @@ export default function Signup() {
                 onChange={(e) => setMobile(e.target.value)}
                 className={`border ${
                   errors.mobile ? "border-red-500" : "border-gray-300"
-                } bg-gray-50 border-b-2 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`}
+                } block w-full rounded-lg border-b-2 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500`}
                 placeholder="Mobile Number"
               />
             </label>
             {errors.mobile && (
-              <p className="text-red-500 text-sm mt-1">{errors.mobile}</p>
+              <p className="mt-1 text-sm text-red-500">{errors.mobile}</p>
             )}
             <label htmlFor="password">
               <input
@@ -212,12 +212,12 @@ export default function Signup() {
                 onChange={(e) => setPassword(e.target.value)}
                 className={`border ${
                   errors.password ? "border-red-500" : "border-gray-300"
-                } bg-gray-50 ...`}
+                } ... bg-gray-50`}
                 placeholder="Password"
               />
             </label>
             {errors.password && (
-              <p className="text-red-500 text-sm mt-1">{errors.password}</p>
+              <p className="mt-1 text-sm text-red-500">{errors.password}</p>
             )}
 
             {/* Confirm Password input */}
@@ -229,17 +229,17 @@ export default function Signup() {
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 className={`border ${
                   errors.confirmPassword ? "border-red-500" : "border-gray-300"
-                } bg-gray-50 ...`}
+                } ... bg-gray-50`}
                 placeholder="Confirm Password"
               />
             </label>
             {errors.confirmPassword && (
-              <p className="text-red-500 text-sm mt-1">
+              <p className="mt-1 text-sm text-red-500">
                 {errors.confirmPassword}
               </p>
             )}
 
-            <div className="text-center flex gap-2 flex-col justify-center items-center w-64 mx-auto lg:mt-4">
+            <div className="mx-auto flex w-64 flex-col items-center justify-center gap-2 text-center lg:mt-4">
               <button className="btn-primary !w-full">CREATE ACCOUNT</button>
               <button className="btn-transparent !w-full">
                 SIGN UP WITH GOOGLE
@@ -251,7 +251,7 @@ export default function Signup() {
           <p className="text-center">
             <span> Already have an account? </span>
             <Link
-              className="text-primary-100 font-bold hover:text-primary-500"
+              className="font-bold text-primary-100 hover:text-primary-500"
               to="/login"
             >
               Login

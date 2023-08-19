@@ -27,14 +27,14 @@ const Welcome = () => {
         <img
           src={Logo}
           alt=""
-          className="object-cover w-96 md:min-w-fit lg:w-[658px]"
+          className="w-96 object-cover md:min-w-fit lg:w-[658px]"
         />
       </div>
       <div className="text-center">
         <span className="text-6xl font-bold leading-tight">Welcome Back!</span>
-        <p className="text-gray-400 my-6 text-xl w-96 leading-relaxed">
+        <p className="my-6 w-96 text-xl leading-relaxed text-gray-400">
           To stay connected with us, please{" "}
-          <span className="text-teal-400 font-bold">Login</span> with your
+          <span className="font-bold text-teal-400">Login</span> with your
           personal information.
         </p>
       </div>

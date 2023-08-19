@@ -9,18 +9,18 @@ const ServicesTechniques = React.forwardRef((props, ref) => {
           <img
             src={value.thumbnail}
             alt={value.title}
-            className="w-full object-cover block"
+            className="block w-full object-cover"
           />
         </div>
         <figcaption>
-          <h4 className="font-bold text-2xl text-primary-400 py-2">
+          <h4 className="py-2 text-2xl font-bold text-primary-400">
             {value.title}
           </h4>
           <p className="pb-2 text-justify">{value.desc}</p>
-          <div className="text-center mt-2">
+          <div className="mt-2 text-center">
             <Link
               to="/appointment/checkout"
-              className="btn-one !py-2 inline-block"
+              className="btn-one inline-block !py-2"
             >
               Book Now
             </Link>
@@ -32,13 +32,13 @@ const ServicesTechniques = React.forwardRef((props, ref) => {
 
   return (
     <section className="container mx-auto pb-6" ref={ref}>
-      <div className="lg:my-14 text-center">
+      <div className="text-center lg:my-14">
         <h2 className="subheading text-primary-400">{props.title}</h2>
-        <p className="lg:text-2xl font-semibold">{props.desc}</p>
+        <p className="font-semibold lg:text-2xl">{props.desc}</p>
       </div>
 
       {/* Meditations */}
-      <div className="grid lg:grid-cols-3 pb-4 gap-6">{activityTypes}</div>
+      <div className="grid gap-6 pb-4 lg:grid-cols-3">{activityTypes}</div>
     </section>
   );
 });

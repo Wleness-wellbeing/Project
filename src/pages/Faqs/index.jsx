@@ -12,9 +12,9 @@ import { faqs } from "../../data/faqs";
 export default function index() {
   return (
     <>
-      <header className="overflow-x-hidden overflow-y-clip relative">
+      <header className="relative overflow-x-hidden overflow-y-clip">
         <div className="container mx-auto">
-          <h1 className="subheading text-center grid my-8">
+          <h1 className="subheading my-8 grid text-center">
             <span>
               <span>You've got </span>
               <span className="heading-primary">questions</span>
@@ -28,8 +28,8 @@ export default function index() {
           </h1>
 
           <div className="mb-8">
-            <img src={faq3Lg} alt="" className="w-[560px] mx-auto mb-10" />
-            <p className="text-xl font-bold text-center px-44">
+            <img src={faq3Lg} alt="" className="mx-auto mb-10 w-[560px]" />
+            <p className="px-44 text-center text-xl font-bold">
               Everything you need to know right here at Wleness. Ask questions
               and browse around for answers.
             </p>
@@ -40,28 +40,28 @@ export default function index() {
         <img
           src={bgDotsPattern}
           alt=""
-          className="w-72 absolute top-0 -right-10 -z-10"
+          className="absolute -right-10 top-0 -z-10 w-72"
         />
         <img
           src={bgDotsPattern}
           alt=""
-          className="w-80 absolute bottom-32 -left-20 -z-10"
+          className="absolute -left-20 bottom-32 -z-10 w-80"
         />
       </header>
 
-      <section className="container mx-auto pb-5 mb-5">
+      <section className="container mx-auto mb-5 pb-5">
         <div className="grid grid-cols-3 gap-x-6">
-          <div className="px-8 py-4 flex justify-center flex-col items-center rounded-xl bg-gradient-to-br from-secondary/50 to-tertiary/50 border-2 border-transparent">
+          <div className="flex flex-col items-center justify-center rounded-xl border-2 border-transparent bg-gradient-to-br from-secondary/50 to-tertiary/50 px-8 py-4">
             <img src={feature10} alt="" />
-            <h5 className="font-semibold text-lg mt-1">Therapy</h5>
+            <h5 className="mt-1 text-lg font-semibold">Therapy</h5>
           </div>
-          <div className="px-8 py-4 flex justify-center flex-col items-center rounded-xl border-2 border-secondary hover:bg-gradient-to-br hover:from-secondary/50 hover:to-tertiary/50 cursor-pointer">
+          <div className="flex cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-secondary px-8 py-4 hover:bg-gradient-to-br hover:from-secondary/50 hover:to-tertiary/50">
             <img src={feature9} alt="" className="rounded-full" />
-            <h5 className="font-semibold text-lg mt-1">Corporate</h5>
+            <h5 className="mt-1 text-lg font-semibold">Corporate</h5>
           </div>
-          <div className="px-8 py-4 flex justify-center flex-col items-center rounded-xl border-2 border-secondary hover:bg-gradient-to-br hover:from-secondary/50 hover:to-tertiary/50 cursor-pointer">
+          <div className="flex cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-secondary px-8 py-4 hover:bg-gradient-to-br hover:from-secondary/50 hover:to-tertiary/50">
             <img src={feature1} alt="" />
-            <h5 className="font-semibold text-lg mt-1">Yoga & Meditation</h5>
+            <h5 className="mt-1 text-lg font-semibold">Yoga & Meditation</h5>
           </div>
         </div>
 

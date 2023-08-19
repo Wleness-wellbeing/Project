@@ -19,7 +19,7 @@ export default function Blogs() {
     <>
       <main className="py-6">
         {/* ========== Header ============= */}
-        <header className="bg-primary-50/30 py-12 rounded-xl container mx-auto">
+        <header className="container mx-auto rounded-xl bg-primary-50/30 py-12">
           <div className="flex items-center">
             <div className="w-1/4">
               <img src={blogHeader1} className="w-fit object-cover"></img>
@@ -41,15 +41,15 @@ export default function Blogs() {
           </div>
 
           {/* =========search button======= */}
-          <form class="flex items-center justify-between border border-gray-300 w-96 mx-auto bg-white rounded-full">
+          <form class="mx-auto flex w-96 items-center justify-between rounded-full border border-gray-300 bg-white">
             <input
               type="text"
               placeholder="Search..."
-              class="rounded-l-full py-2.5 pl-5 pr-2 outline-none w-full"
+              class="w-full rounded-l-full py-2.5 pl-5 pr-2 outline-none"
             />
             <button
               type="submit"
-              class="bg-primary-400 text-white rounded-full px-4 py-2.5"
+              class="rounded-full bg-primary-400 px-4 py-2.5 text-white"
             >
               <FontAwesomeIcon icon={faSearch} className="text-white" />
             </button>
@@ -59,10 +59,10 @@ export default function Blogs() {
         {/* =========== Recent Blog ========= */}
         <section className="container mx-auto !px-0">
           <div className="flex justify-end py-10">
-            <button className="px-8 py-3 bg-primary-400 font-bold text-white rounded-l-lg">
+            <button className="rounded-l-lg bg-primary-400 px-8 py-3 font-bold text-white">
               Recent
             </button>
-            <button className="px-8 py-3 bg-slate-200 font-bold text-primary-400 rounded-r-lg">
+            <button className="rounded-r-lg bg-slate-200 px-8 py-3 font-bold text-primary-400">
               Popular
             </button>
           </div>
@@ -76,22 +76,22 @@ export default function Blogs() {
             {recentBlogs.map((value, i) => {
               return (
                 <SwiperSlide key={i}>
-                  <div className="2xl:flex rounded-xl items-center">
+                  <div className="items-center rounded-xl 2xl:flex">
                     <div className="lg:w-3/5">
                       <img
                         src={blogRecent}
                         className="w-full object-cover"
                       ></img>
                     </div>
-                    <div className="w-2/5 lg:w-2/5 pl-12 sm:w-full pt-3 xs:w-full ">
-                      <h2 className="font-bold pb-6 text-5xl">
+                    <div className="w-2/5 pl-12 pt-3 xs:w-full sm:w-full lg:w-2/5 ">
+                      <h2 className="pb-6 text-5xl font-bold">
                         Maintain a good habit with yourself
                       </h2>
                       <p className="text-lg">
                         Lorem ipsum dolor sit amet consectetur. Neque turpis
                         faucibus eget magna est.Neque turpis faucibus eget magna
                         est.
-                        <span className="text-primary-500 font-bold text-base">
+                        <span className="text-base font-bold text-primary-500">
                           Read More
                         </span>
                       </p>
@@ -106,58 +106,58 @@ export default function Blogs() {
         {/* Filterable Blogs */}
         <section className="container mx-auto !px-0">
           {/* ============== Filters ============= */}
-          <ul className="flex flex-wrap gap-x-14 gap-y-6 py-4 2xl:py-8 justify-between">
+          <ul className="flex flex-wrap justify-between gap-x-14 gap-y-6 py-4 2xl:py-8">
             <li>
-              <span className="py-2.5 px-6 text-slate-900 font-bold bg-primary-50 rounded-3xl">
+              <span className="rounded-3xl bg-primary-50 px-6 py-2.5 font-bold text-slate-900">
                 All Categories
               </span>
             </li>
             <li>
-              <span className="py-2.5 px-6 text-slate-400 font-bold rounded-3xl hover:text-slate-900 hover:bg-primary-50 transition-all">
+              <span className="rounded-3xl px-6 py-2.5 font-bold text-slate-400 transition-all hover:bg-primary-50 hover:text-slate-900">
                 Mental Peace
               </span>
             </li>
             <li>
-              <span className="py-2.5 px-6 text-slate-400 font-bold rounded-3xl  hover:text-slate-900 hover:bg-primary-50 transition-all">
+              <span className="rounded-3xl px-6 py-2.5 font-bold text-slate-400  transition-all hover:bg-primary-50 hover:text-slate-900">
                 Social Life
               </span>
             </li>
             <li>
-              <span className="py-2.5 px-6 text-slate-400 font-bold rounded-3xl  hover:text-slate-900 hover:bg-primary-50 transition-all">
+              <span className="rounded-3xl px-6 py-2.5 font-bold text-slate-400  transition-all hover:bg-primary-50 hover:text-slate-900">
                 Culture
               </span>
             </li>
             <li>
-              <span className="py-2.5 px-6 text-slate-400 font-bold rounded-3xl  hover:text-slate-900 hover:bg-primary-50 transition-all">
+              <span className="rounded-3xl px-6 py-2.5 font-bold text-slate-400  transition-all hover:bg-primary-50 hover:text-slate-900">
                 Natural
               </span>
             </li>
             <li>
-              <span className="py-2.5 px-6  font-bold rounded-3xl text-slate-400  hover:text-slate-900 hover:bg-primary-50 transition-all">
+              <span className="rounded-3xl px-6  py-2.5 font-bold text-slate-400  transition-all hover:bg-primary-50 hover:text-slate-900">
                 Travel
               </span>
             </li>
           </ul>
 
           {/* ============== Blogs ============= */}
-          <div className="rounded-xl grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-4 rounded-xl">
             {blogsData.map((value, i) => {
               return <BlogCard key={i} data={value} />;
             })}
           </div>
 
           {/* Dot Pagination */}
-          <div class="flex items-center my-8 pt-4 justify-center">
-            <div class="rounded-full bg-primary-500 text-white hover:bg-primary-300  font-sm text-xl h-12 w-12 flex items-center justify-center mr-4">
+          <div class="my-8 flex items-center justify-center pt-4">
+            <div class="font-sm mr-4 flex h-12  w-12 items-center justify-center rounded-full bg-primary-500 text-xl text-white hover:bg-primary-300">
               1
             </div>
-            <div class="rounded-full bg-white text-primary-500  hover:bg-slate-300 border-primary-500 border-2 font-sm text-xl h-12 w-12 flex items-center justify-center mr-4">
+            <div class="font-sm mr-4 flex  h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-white text-xl text-primary-500 hover:bg-slate-300">
               2
             </div>
-            <div class="rounded-full bg-white text-primary-500 border-primary-500 hover:bg-slate-200 border-2 font-sm text-xl h-12 w-12 flex items-center justify-center mr-4">
+            <div class="font-sm mr-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-white text-xl text-primary-500 hover:bg-slate-200">
               3
             </div>
-            <div class="rounded-full bg-primary-500 text-white border-primary-500 hover:bg-slate-200 border-2 font-sm text-xl h-12 w-12 flex items-center justify-center mr-4">
+            <div class="font-sm mr-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-primary-500 text-xl text-white hover:bg-slate-200">
               <FontAwesomeIcon
                 icon={faAnglesRight}
                 className="  hover:text-slate-600"

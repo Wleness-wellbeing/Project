@@ -50,17 +50,17 @@ export default function DoctorAppointment() {
   return (
     <>
       <header className="relative overflow-x-hidden">
-        <div className="container mx-auto pt-12 pb-8">
-          <h1 className="text-4xl font-bold text-center text-primary-400">
+        <div className="container mx-auto pb-8 pt-12">
+          <h1 className="text-center text-4xl font-bold text-primary-400">
             Appointment Booking
           </h1>
-          <figure className="flex items-center w-96 mx-auto lg:w-[590px] justify-center gap-x-8 py-6">
+          <figure className="mx-auto flex w-96 items-center justify-center gap-x-8 py-6 lg:w-[590px]">
             <div className="w-1/2">
               <img src={doctorAppointment} alt="" className="object-cover" />
             </div>
             <figcaption className="w-1/2">
               <h4 className="text-4xl font-bold">Dr. Jenny</h4>
-              <h6 className="font-semibold text-xl">6+ yrs of experience</h6>
+              <h6 className="text-xl font-semibold">6+ yrs of experience</h6>
               <div className="my-2 font-medium">
                 <p>Expertise: Yoga, Work-life</p>
                 <p>Speaks: German, English</p>
@@ -71,34 +71,34 @@ export default function DoctorAppointment() {
             </figcaption>
           </figure>
 
-          <div className="p-6 border-2 border-secondary rounded-3xl">
-            <p className="font-medium text-justify text-lg">
+          <div className="rounded-3xl border-2 border-secondary p-6">
+            <p className="text-justify text-lg font-medium">
               Dr. Michelle Reynolds is a compassionate and dedicated licensed
               clinical psychologist with over a decade of experience in helping
               individuals achieve mental and emotional well-being. With a warm
               and non-judgmental approach, she creates a safe space for clients
               to explore their thoughts, feelings, and challenges.
             </p>
-            <span className="text-lg block text-right font-bold text-primary-400">
+            <span className="block text-right text-lg font-bold text-primary-400">
               View More
             </span>
           </div>
 
-          <div className="text-center pt-10">
+          <div className="pt-10 text-center">
             <Link to="/appointment/checkout" className="btn-one inline-block">
               Book an appointment Now
             </Link>
           </div>
         </div>
-        <img src={bgDotsPattern} alt="" className="absolute top-0 -right-20" />
+        <img src={bgDotsPattern} alt="" className="absolute -right-20 top-0" />
         <img
           src={bgDotsPattern}
           alt=""
-          className="absolute bottom-52 -left-20 w-72"
+          className="absolute -left-20 bottom-52 w-72"
         />
       </header>
 
-      <section className="container mx-auto grid lg:grid-cols-4 items-center justify-between gap-x-20 pb-14">
+      <section className="container mx-auto grid items-center justify-between gap-x-20 pb-14 lg:grid-cols-4">
         <StatisticsBlock number="5/5" suffix="" subtitle="User Rating" />
         <StatisticsBlock number={160} suffix="+" subtitle="Users Recommend" />
         <StatisticsBlock number={2} suffix=" Hr" subtitle="Last Booked" />
@@ -107,15 +107,15 @@ export default function DoctorAppointment() {
 
       <section className="container mx-auto flex gap-x-6">
         <div className="w-1/2">
-          <h2 className="text-4xl font-bold mb-10 text-center">
+          <h2 className="mb-10 text-center text-4xl font-bold">
             Doctor's Main <span className="heading-primary">Forte</span>
           </h2>
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="flex flex-wrap justify-center gap-3">
             {doctorsForte.map((value, index) => {
               return (
                 <span
                   key={index}
-                  className="py-3 px-5 rounded-xl border-2 border-primary-300 font-semibold"
+                  className="rounded-xl border-2 border-primary-300 px-5 py-3 font-semibold"
                 >
                   {value}
                 </span>
@@ -124,15 +124,15 @@ export default function DoctorAppointment() {
           </div>
         </div>
         <div className="w-1/2">
-          <h2 className="text-4xl font-bold mb-10 text-center">
+          <h2 className="mb-10 text-center text-4xl font-bold">
             Doctor's Main <span className="heading-primary">Suggestion's</span>
           </h2>
-          <div className="flex flex-wrap gap-3 justify-center">
+          <div className="flex flex-wrap justify-center gap-3">
             {doctorsSuggestions.map((value, index) => {
               return (
                 <span
                   key={index}
-                  className="py-3 px-5 rounded-xl border-2 text-white border-primary-300 bg-primary-300 font-semibold"
+                  className="rounded-xl border-2 border-primary-300 bg-primary-300 px-5 py-3 font-semibold text-white"
                 >
                   {value}
                 </span>
@@ -143,19 +143,19 @@ export default function DoctorAppointment() {
       </section>
 
       <section className="container mx-auto pt-12">
-        <h4 className="text-4xl font-bold text-center pb-6">
+        <h4 className="pb-6 text-center text-4xl font-bold">
           <span>Looking for different service </span>
-          <Link to="" className="heading-primary underline inline-block">
+          <Link to="" className="heading-primary inline-block underline">
             Click Here
           </Link>
         </h4>
 
         <div className="flex py-10">
           <div className="w-1/2 pr-10">
-            <h2 className="heading-primary text-6xl font-bold inline-block pb-2">
+            <h2 className="heading-primary inline-block pb-2 text-6xl font-bold">
               FAQ's
             </h2>
-            <p className="font-semibold my-5 text-lg">
+            <p className="my-5 text-lg font-semibold">
               Everything you need to know right here at Wleness. Ask questions
               and browse around for answers.
             </p>

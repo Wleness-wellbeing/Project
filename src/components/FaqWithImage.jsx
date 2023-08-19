@@ -8,7 +8,7 @@ export default function FaqWithImage(props) {
   return (
     <>
       <section className="container mx-auto">
-        <hgroup className="subheading text-center mb-2">
+        <hgroup className="subheading mb-2 text-center">
           <h2>{textColorize(props.data.heading1)}</h2>
           <h2>{textColorize(props.data.heading2)}</h2>
         </hgroup>
@@ -21,10 +21,10 @@ export default function FaqWithImage(props) {
               return (
                 <details
                   key={index}
-                  className="bg-200/30 p-4 lg:p-6 rounded-lg cursor-pointer bg-primary-50"
+                  className="bg-200/30 cursor-pointer rounded-lg bg-primary-50 p-4 lg:p-6"
                 >
-                  <summary className="flex justify-between items-center">
-                    <h3 className="text-lg font-bold flex justify-between items-center w-full">
+                  <summary className="flex items-center justify-between">
+                    <h3 className="flex w-full items-center justify-between text-lg font-bold">
                       <span>{value.question}</span>
                       <FontAwesomeIcon icon={faPlus} />
                     </h3>
@@ -38,7 +38,7 @@ export default function FaqWithImage(props) {
             <img
               src={props.data.image}
               alt=""
-              className="w-80 mx-auto block object-cover"
+              className="mx-auto block w-80 object-cover"
             />
           </div>
         </div>

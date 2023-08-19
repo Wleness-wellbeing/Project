@@ -25,17 +25,17 @@ export default function BrainExercise() {
       <FeaturesBlock data={activityFeatures} />
 
       <section className="container mx-auto pb-6" ref={ref}>
-        <div className="lg:my-14 text-center">
+        <div className="text-center lg:my-14">
           <h2 className="subheading text-primary-400">
             {brainExercise.activities.title}
           </h2>
-          <p className="lg:text-2xl font-semibold">
+          <p className="font-semibold lg:text-2xl">
             {brainExercise.activities.desc}
           </p>
         </div>
 
         {/* Meditations */}
-        <div className="pb-4 space-y-10">
+        <div className="space-y-10 pb-4">
           {brainExercise.activities.types.map((value, index) => {
             return (
               <figure key={index} className="flex gap-8">
@@ -47,7 +47,7 @@ export default function BrainExercise() {
                   <img
                     src={value.thumbnail}
                     alt={value.title}
-                    className="w-full object-cover block"
+                    className="block w-full object-cover"
                   />
                 </div>
                 <figcaption
@@ -55,7 +55,7 @@ export default function BrainExercise() {
                     brainExercise.activities.types[index].class[1] + " w-2/5"
                   }
                 >
-                  <h4 className="font-bold text-xl lg:text-2xl 2xl:text-4xl text-primary-400 py-2">
+                  <h4 className="py-2 text-xl font-bold text-primary-400 lg:text-2xl 2xl:text-4xl">
                     {value.title}
                   </h4>
                   <p className="pb-2 text-justify text-lg">{value.desc}</p>

@@ -31,10 +31,10 @@ function JoinUs({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center z-50 backdrop-filter backdrop-blur-none backdrop-brightness-50">
-      <div className="bg-white p-6 md:p-20 rounded-lg shadow-md flex flex-col md:flex-row items-center md:w-1/2 relative">
+    <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-none backdrop-brightness-50 backdrop-filter">
+      <div className="relative flex flex-col items-center rounded-lg bg-white p-6 shadow-md md:w-1/2 md:flex-row md:p-20">
         <div className="">
-          <h2 className="text-primary-500 font-extrabold text-4xl md:text-7xl text-center mb-4">
+          <h2 className="mb-4 text-center text-4xl font-extrabold text-primary-500 md:text-7xl">
             Join Us
           </h2>
           <p className="text-center text-sm font-semibold md:text-base">
@@ -43,7 +43,7 @@ function JoinUs({ isOpen, onClose }) {
             of an amazing team dedicated to improving mental well-being
             worldwide today.
           </p>
-          <div className="grid lg:grid-cols-4 mt-4 justify-center">
+          <div className="mt-4 grid justify-center lg:grid-cols-4">
             {joinUsList.map((value, index) => {
               return (
                 <figure key={index}>
@@ -52,12 +52,12 @@ function JoinUs({ isOpen, onClose }) {
                       <img
                         src={value.image}
                         alt={value.name}
-                        className="h-24 w-24 md:h-28 md:w-28 mb-1 mx-auto hover:scale-105 transition-all"
+                        className="mx-auto mb-1 h-24 w-24 transition-all hover:scale-105 md:h-28 md:w-28"
                       />
                     </Link>
                   </div>
                   <figcaption>
-                    <h5 className="text-primary-500 font-semibold text-center text-xs md:text-base">
+                    <h5 className="text-center text-xs font-semibold text-primary-500 md:text-base">
                       <Link to={value.slug} onClick={onClose}>
                         {value.name}
                       </Link>
@@ -70,7 +70,7 @@ function JoinUs({ isOpen, onClose }) {
         </div>
         <FontAwesomeIcon
           icon={faXmark}
-          className="text-3xl absolute top-5 right-5 cursor-pointer"
+          className="absolute right-5 top-5 cursor-pointer text-3xl"
           onClick={onClose}
         />
       </div>

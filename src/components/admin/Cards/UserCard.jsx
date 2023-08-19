@@ -3,10 +3,10 @@ import { placeholder } from "../../../assets";
 
 export default function UserCard() {
   return (
-    <figure className="p-3 border-[1.4px] border-slate-200 rounded-lg bg-white">
+    <figure className="rounded-lg border-[1.4px] border-slate-200 bg-white p-3">
       <h3 className="pb-2 text-center">Name</h3>
       <div className="mb-2">
-        <img src={placeholder} alt="" className="w-full block object-cover" />
+        <img src={placeholder} alt="" className="block w-full object-cover" />
       </div>
       <figcaption>
         <ul className="mb-3">
@@ -24,10 +24,10 @@ export default function UserCard() {
           </li>
         </ul>
         <div className="text-center">
-          <button className="text-white font-medium px-5 py-1.5 rounded-full bg-primary-300 mb-2">
+          <button className="mb-2 rounded-full bg-primary-300 px-5 py-1.5 font-medium text-white">
             Update
           </button>
-          <button className="font-medium px-5 py-1.5 rounded-full bg-primary-50">
+          <button className="rounded-full bg-primary-50 px-5 py-1.5 font-medium">
             Disable
           </button>
         </div>

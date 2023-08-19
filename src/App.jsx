@@ -438,7 +438,7 @@ function AdminLayout({ children }) {
   // This layout is specifically for /admin page
   return (
     <section className="container mx-auto grid justify-center py-12">
-      <h1 className="col-span-2 text-3xl font-semibold pb-8 ml-[200px]">
+      <h1 className="col-span-2 ml-[200px] pb-8 text-3xl font-semibold">
         Admin Page
       </h1>
       <AdminSideBar />

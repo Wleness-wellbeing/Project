@@ -20,13 +20,13 @@ export default function UserDashboard() {
   return (
     <main className="flex">
       <aside className="w-[10%] bg-primary-50/50"></aside>
-      <section className="w-[90%] pt-5 pb-3 px-8">
-        <nav className="flex justify-between mb-5 gap-5">
+      <section className="w-[90%] px-8 pb-3 pt-5">
+        <nav className="mb-5 flex justify-between gap-5">
           <div className="w-[65%]">
             <form
               action=""
               method="get"
-              className="w-full flex bg-slate-200 rounded-xl"
+              className="flex w-full rounded-xl bg-slate-200"
             >
               <label htmlFor="search" className="w-full">
                 <input
@@ -34,7 +34,7 @@ export default function UserDashboard() {
                   name="search"
                   id="search"
                   placeholder="Search"
-                  className="w-full h-full outline-none bg-transparent rounded-l-xl px-4 py-3"
+                  className="h-full w-full rounded-l-xl bg-transparent px-4 py-3 outline-none"
                 />
               </label>
               <button type="submit" className="bg-transparent">
@@ -46,22 +46,22 @@ export default function UserDashboard() {
             </form>
           </div>
 
-          <div className="w-[35%] justify-end flex items-center gap-5">
+          <div className="flex w-[35%] items-center justify-end gap-5">
             <span>
               <FontAwesomeIcon
                 icon={faComments}
-                className="text-2xl text-slate-400 transition-all hover:text-slate-500 cursor-pointer"
+                className="cursor-pointer text-2xl text-slate-400 transition-all hover:text-slate-500"
               />
             </span>
             <span>
               <FontAwesomeIcon
                 icon={faBell}
-                className="text-2xl text-slate-400 transition-all hover:text-slate-500 cursor-pointer"
+                className="cursor-pointer text-2xl text-slate-400 transition-all hover:text-slate-500"
               />
             </span>
-            <span className="flex items-center border-2 py-1 px-2 rounded-xl cursor-pointer hover:bg-slate-100 transition-all">
-              <img src={assessment1} alt="" className="w-8 mr-2" />
-              <span className="font-bold text-sm">Ken Parker</span>
+            <span className="flex cursor-pointer items-center rounded-xl border-2 px-2 py-1 transition-all hover:bg-slate-100">
+              <img src={assessment1} alt="" className="mr-2 w-8" />
+              <span className="text-sm font-bold">Ken Parker</span>
             </span>
           </div>
         </nav>
@@ -71,26 +71,26 @@ export default function UserDashboard() {
             {/* Doctor Profile */}
             <div className="mb-5">
               <h1 className="mb-3">
-                <span className="font-medium text-2xl">Good Morning </span>
+                <span className="text-2xl font-medium">Good Morning </span>
                 <span className="text-3xl font-bold text-[#0DCCF6]">Ken</span>
               </h1>
 
               <div>
-                <div className="grid mb-4">
-                  <span className="font-bold text-lg">Activity Report</span>
+                <div className="mb-4 grid">
+                  <span className="text-lg font-bold">Activity Report</span>
                 </div>
                 <div className="grid grid-cols-3 gap-5">
                   {activityReport.map((value, i) => {
                     return (
                       <div
                         key={i}
-                        className="rounded-xl py-4 px-5 grid relative"
+                        className="relative grid rounded-xl px-5 py-4"
                         style={{ background: value[2] }}
                       >
-                        <span className="font-semibold mb-1 text-center">
+                        <span className="mb-1 text-center font-semibold">
                           {value[0]}
                         </span>
-                        <span className="text-3xl font-bold text-center">
+                        <span className="text-center text-3xl font-bold">
                           {value[1]}
                         </span>
                       </div>
@@ -100,8 +100,8 @@ export default function UserDashboard() {
               </div>
             </div>
 
-            <div className="py-5 bg-primary-10 rounded-2xl">
-              <h2 className="text-lg font-bold ml-12 pb-4">
+            <div className="rounded-2xl bg-primary-10 py-5">
+              <h2 className="ml-12 pb-4 text-lg font-bold">
                 Health Performance
               </h2>
               <ResponsiveContainer aspect={2.5} width="100%">
@@ -121,9 +121,9 @@ export default function UserDashboard() {
             {/* Patient List & Consultation */}
             <div className="flex">
               <div className="w-1/2 p-4">
-                <h3 className="flex justify-between pt-2 pb-4">
+                <h3 className="flex justify-between pb-4 pt-2">
                   <span className="text-xl font-bold">Linked Therapist</span>
-                  <span className="text-sm flex items-center font-medium text-slate-400">
+                  <span className="flex items-center text-sm font-medium text-slate-400">
                     <span className="mr-1">Today </span>
                     <FontAwesomeIcon icon={faAngleDown} />
                   </span>
@@ -137,23 +137,23 @@ export default function UserDashboard() {
           </div>
           <div className="w-[35%] p-4">
             <div className="mb-4">
-              <h5 className="flex justify-between items-center">
+              <h5 className="flex items-center justify-between">
                 <span className="font-bold">Upcoming Appointments</span>
-                <span className="text-sm font-semibold py-0.5 px-2 rounded-full bg-slate-200 cursor-pointer hover:bg-slate-300 transition-all">
+                <span className="cursor-pointer rounded-full bg-slate-200 px-2 py-0.5 text-sm font-semibold transition-all hover:bg-slate-300">
                   <FontAwesomeIcon icon={faEllipsis} />
                 </span>
               </h5>
             </div>
 
             <div>
-              <h5 className="flex justify-between items-center">
+              <h5 className="flex items-center justify-between">
                 <span className="font-bold">Upcoming Events</span>
-                <span className="text-sm font-semibold py-0.5 px-2 rounded-full cursor-pointer text-blue-500 transition-all">
+                <span className="cursor-pointer rounded-full px-2 py-0.5 text-sm font-semibold text-blue-500 transition-all">
                   View all
                 </span>
               </h5>
 
-              <div className="py-4 space-y-3">
+              <div className="space-y-3 py-4">
                 <UpcomingMeets />
                 <UpcomingMeets />
                 <UpcomingMeets />

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Qna() {
   return (
-    <form className="p-3 border-[1.4px] border-slate-200 rounded-lg bg-white mb-4">
+    <form className="mb-4 rounded-lg border-[1.4px] border-slate-200 bg-white p-3">
       <label htmlFor="question">
         <input
           type="text"

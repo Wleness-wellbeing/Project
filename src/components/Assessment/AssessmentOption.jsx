@@ -10,16 +10,16 @@ export default function AssessmentOption(props) {
   };
 
   return (
-    <div className="bg-gradient-to-r from-secondary to-tertiary rounded-lg flex items-stretch p-[3px] box-border group">
+    <div className="group box-border flex items-stretch rounded-lg bg-gradient-to-r from-secondary to-tertiary p-[3px]">
       <button
         onClick={handleClick}
-        className={`w-full flex items-center text-xs md:text-sm lg:text-base lg:px-5 px-3 py-1.5 lg:py-2.5 hover:text-white font-semibold bg-white rounded-md ${
+        className={`flex w-full items-center rounded-md bg-white px-3 py-1.5 text-xs font-semibold hover:text-white md:text-sm lg:px-5 lg:py-2.5 lg:text-base ${
           isSelected[index]
             ? " !bg-primary-300 text-white"
             : "hover:bg-primary-300"
         }`}
       >
-        <img src={props.image} alt="" className="w-6 object-contain mr-2" />
+        <img src={props.image} alt="" className="mr-2 w-6 object-contain" />
         {props.name}
       </button>
     </div>

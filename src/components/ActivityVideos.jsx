@@ -5,13 +5,13 @@ import { meditationThumbnail } from "../assets";
 export default function ActivityVideos() {
   return (
     <>
-      <section className="container mx-auto bg-gradient-to-b from-primary-10 to-transparent py-10 rounded-t-3xl">
-        <h2 className="subheading heading-primary text-center mb-10">
+      <section className="container mx-auto rounded-t-3xl bg-gradient-to-b from-primary-10 to-transparent py-10">
+        <h2 className="subheading heading-primary mb-10 text-center">
           Latest Videos & Blogs
         </h2>
 
         <div className="mb-12">
-          <img src={meditationThumbnail} alt="" className="w-fit mx-auto" />
+          <img src={meditationThumbnail} alt="" className="mx-auto w-fit" />
         </div>
       </section>
     </>

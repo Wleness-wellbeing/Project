@@ -70,6 +70,14 @@ import {
   vrkasanaVariation1,
   vrkasanaVariation2,
   ustrasanaHeader,
+  iconSafe,
+  iconCommunity,
+  iconEasyAccess,
+  iconEffective,
+  iconSecure,
+  iconExperience,
+  iconCommitment,
+  iconFacilities,
 } from "../assets";
 // Components
 import HeaderWithImage from "../components/HeaderWithImage";
@@ -1175,5 +1183,48 @@ export const blogsData = [
     subheading:
       "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
     image: blogThumbnail3,
+  },
+];
+
+// Home Page data
+// Objectives
+export const objectives = [
+  {
+    name: "Safe",
+    image: iconSafe,
+  },
+  {
+    name: "Secure",
+    image: iconSecure,
+  },
+  {
+    name: "Effective",
+    image: iconEffective,
+  },
+  {
+    name: "Easy Access",
+    image: iconEasyAccess,
+  },
+  {
+    name: "Community",
+    image: iconCommunity,
+  },
+];
+
+export const whyChooseUs = [
+  {
+    title: "Experience",
+    desc: "Expand your skills and knowledge by working alongside experienced professionals.",
+    image: iconExperience,
+  },
+  {
+    title: "Commitment",
+    desc: "Expand your skills and knowledge by working alongside experienced professionals.",
+    image: iconCommitment,
+  },
+  {
+    title: "Facilities",
+    desc: "Expand your skills and knowledge by working alongside experienced professionals.",
+    image: iconFacilities,
   },
 ];

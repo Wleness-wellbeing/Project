@@ -62,7 +62,7 @@ const PsychiatristJoiningForm = () => {
           {
             personalDetails,
             professionalDetails,
-          }
+          },
         );
 
         if (response.status === 200) {
@@ -85,21 +85,21 @@ const PsychiatristJoiningForm = () => {
       <img
         src={Bubble}
         alt="Top Left"
-        className="absolute top-0 left-0 hidden xl:block"
+        className="absolute left-0 top-0 hidden xl:block"
       />
       <form className="container mx-auto" onSubmit={handleFormSubmit}>
         {!showProfessionalDetails ? (
           <>
-            <div className="w-3/4  mx-auto  shadow-lg shadow-slate-300 p-8 rounded-2xl">
-              <h2 className="text-3xl mt-4 text-primary-400 text-center font-bold ">
+            <div className="mx-auto  w-3/4  rounded-2xl p-8 shadow-lg shadow-slate-300">
+              <h2 className="mt-4 text-center text-3xl font-bold text-primary-400 ">
                 Therapist Joining Form - Personal Details
               </h2>
-              <div className="grid grid-cols-2 gap-4 my-10">
+              <div className="my-10 grid grid-cols-2 gap-4">
                 <div>
                   <input
                     type="text"
                     placeholder="First Name"
-                    className="w-full rounded-xl border-2 border-primary-300 outline-none  px-4 py-2.5"
+                    className="w-full rounded-xl border-2 border-primary-300 px-4  py-2.5 outline-none"
                     value={personalDetails.firstName}
                     onChange={(e) =>
                       setPersonalDetails((prev) => ({
@@ -113,7 +113,7 @@ const PsychiatristJoiningForm = () => {
                   <input
                     type="text"
                     placeholder="Last Name"
-                    className="w-full rounded-xl border-2 border-primary-300 outline-none  px-4 py-2.5"
+                    className="w-full rounded-xl border-2 border-primary-300 px-4  py-2.5 outline-none"
                     value={personalDetails.lastName}
                     onChange={(e) =>
                       setPersonalDetails((prev) => ({
@@ -127,7 +127,7 @@ const PsychiatristJoiningForm = () => {
                   <input
                     type="text"
                     placeholder="email"
-                    className="w-full rounded-xl border-2 border-primary-300 outline-none  px-4 py-2.5"
+                    className="w-full rounded-xl border-2 border-primary-300 px-4  py-2.5 outline-none"
                     value={personalDetails.email}
                     onChange={(e) =>
                       setPersonalDetails((prev) => ({
@@ -141,7 +141,7 @@ const PsychiatristJoiningForm = () => {
                   <input
                     type="tel"
                     placeholder="Phonenumber"
-                    className="w-full rounded-xl border-2 border-primary-300 outline-none  px-4 py-2.5"
+                    className="w-full rounded-xl border-2 border-primary-300 px-4  py-2.5 outline-none"
                     value={personalDetails.phoneNumber}
                     onChange={(e) =>
                       setPersonalDetails((prev) => ({
@@ -155,7 +155,7 @@ const PsychiatristJoiningForm = () => {
                   <input
                     type="text"
                     placeholder="address"
-                    className="w-full rounded-xl border-2 border-primary-300 outline-none  px-4 py-2.5"
+                    className="w-full rounded-xl border-2 border-primary-300 px-4  py-2.5 outline-none"
                     value={personalDetails.address}
                     onChange={(e) =>
                       setPersonalDetails((prev) => ({
@@ -169,7 +169,7 @@ const PsychiatristJoiningForm = () => {
                   <input
                     type="text"
                     placeholder="City"
-                    className="w-full rounded-xl border-2 border-primary-300 outline-none  px-4 py-2.5"
+                    className="w-full rounded-xl border-2 border-primary-300 px-4  py-2.5 outline-none"
                     value={personalDetails.city}
                     onChange={(e) =>
                       setPersonalDetails((prev) => ({
@@ -183,7 +183,7 @@ const PsychiatristJoiningForm = () => {
                   <input
                     type="text"
                     placeholder="State"
-                    className="w-full rounded-xl border-2 border-primary-300 outline-none  px-4 py-2.5"
+                    className="w-full rounded-xl border-2 border-primary-300 px-4  py-2.5 outline-none"
                     value={personalDetails.state}
                     onChange={(e) =>
                       setPersonalDetails((prev) => ({
@@ -197,7 +197,7 @@ const PsychiatristJoiningForm = () => {
                   <input
                     type="text"
                     placeholder="Postal/Zip code"
-                    className="w-full rounded-xl border-2 border-primary-300 outline-none  px-4 py-2.5"
+                    className="w-full rounded-xl border-2 border-primary-300 px-4  py-2.5 outline-none"
                     value={personalDetails.postalCode}
                     onChange={(e) =>
                       setPersonalDetails((prev) => ({
@@ -211,7 +211,7 @@ const PsychiatristJoiningForm = () => {
                   <input
                     type="text"
                     placeholder="country"
-                    className="w-full rounded-xl border-2 border-primary-300 outline-none  px-4 py-2.5"
+                    className="w-full rounded-xl border-2 border-primary-300 px-4  py-2.5 outline-none"
                     value={personalDetails.country}
                     onChange={(e) =>
                       setPersonalDetails((prev) => ({
@@ -225,7 +225,7 @@ const PsychiatristJoiningForm = () => {
                   <input
                     type="date"
                     placeholder="Date of Birth"
-                    className="w-full rounded-xl border-2 border-primary-300 outline-none  px-4 py-2.5"
+                    className="w-full rounded-xl border-2 border-primary-300 px-4  py-2.5 outline-none"
                     value={personalDetails.dateOfBirth}
                     onChange={(e) =>
                       setPersonalDetails((prev) => ({
@@ -239,7 +239,7 @@ const PsychiatristJoiningForm = () => {
                   <input
                     type="text"
                     placeholder="Language"
-                    className="w-full rounded-xl border-2 border-primary-300 outline-none  px-4 py-2.5"
+                    className="w-full rounded-xl border-2 border-primary-300 px-4  py-2.5 outline-none"
                     value={personalDetails.language}
                     onChange={(e) =>
                       setPersonalDetails((prev) => ({
@@ -254,7 +254,7 @@ const PsychiatristJoiningForm = () => {
                 <button
                   type="button"
                   onClick={handlePersonalDetailsSaveAndContinue}
-                  className="bg-primary-300    text-white font-semibold py-2.5 px-4 rounded-xl hover:bg-primary-500"
+                  className="rounded-xl    bg-primary-300 px-4 py-2.5 font-semibold text-white hover:bg-primary-500"
                 >
                   Save & Continue
                 </button>
@@ -262,16 +262,16 @@ const PsychiatristJoiningForm = () => {
             </div>
           </>
         ) : (
-          <div className="w-3/4 mx-auto col-span-2 shadow-lg shadow-slate-300 p-2 px-6 rounded-2xl">
-            <h2 className="text-3xl mt-4 text-primary-400 text-center font-bold">
+          <div className="col-span-2 mx-auto w-3/4 rounded-2xl p-2 px-6 shadow-lg shadow-slate-300">
+            <h2 className="mt-4 text-center text-3xl font-bold text-primary-400">
               Psychiatrist Joining Form - Professional Details
             </h2>
-            <div className="grid grid-cols-2 gap-2 my-10">
+            <div className="my-10 grid grid-cols-2 gap-2">
               <div className="col-span-2">
                 <input
                   type="text"
                   placeholder="Degree"
-                  className="w-full rounded-xl border-2 border-primary-300 outline-none px-4 py-2.5"
+                  className="w-full rounded-xl border-2 border-primary-300 px-4 py-2.5 outline-none"
                   value={professionalDetails.degree}
                   onChange={(e) =>
                     setProfessionalDetails((prev) => ({
@@ -285,7 +285,7 @@ const PsychiatristJoiningForm = () => {
                 <input
                   type="text"
                   placeholder="Language"
-                  className="w-full rounded-xl border-2 border-primary-300 outline-none px-4 py-2.5"
+                  className="w-full rounded-xl border-2 border-primary-300 px-4 py-2.5 outline-none"
                   value={professionalDetails.language}
                   onChange={(e) =>
                     setProfessionalDetails((prev) => ({
@@ -299,7 +299,7 @@ const PsychiatristJoiningForm = () => {
                 <input
                   type="text"
                   placeholder="Institute"
-                  className="w-full rounded-xl border-2 border-primary-300 outline-none px-4 py-2.5"
+                  className="w-full rounded-xl border-2 border-primary-300 px-4 py-2.5 outline-none"
                   value={professionalDetails.institute}
                   onChange={(e) =>
                     setProfessionalDetails((prev) => ({
@@ -313,7 +313,7 @@ const PsychiatristJoiningForm = () => {
                 <input
                   type="Number"
                   placeholder="Year of graduation"
-                  className="w-full rounded-xl border-2 border-primary-300 outline-none px-4 py-2.5"
+                  className="w-full rounded-xl border-2 border-primary-300 px-4 py-2.5 outline-none"
                   value={professionalDetails.graduationYear}
                   onChange={(e) =>
                     setProfessionalDetails((prev) => ({
@@ -327,7 +327,7 @@ const PsychiatristJoiningForm = () => {
                 <input
                   type="Number"
                   placeholder="Total (yrs) of Experience"
-                  className="w-full rounded-xl border-2 border-primary-300 outline-none px-4 py-2.5"
+                  className="w-full rounded-xl border-2 border-primary-300 px-4 py-2.5 outline-none"
                   value={professionalDetails.experienceYears}
                   onChange={(e) =>
                     setProfessionalDetails((prev) => ({
@@ -340,7 +340,7 @@ const PsychiatristJoiningForm = () => {
               <div>
                 <label
                   htmlFor="fileInput"
-                  className="block mb-2 font-medium text-gray-700"
+                  className="mb-2 block font-medium text-gray-700"
                 >
                   Upload Degree
                 </label>
@@ -348,9 +348,9 @@ const PsychiatristJoiningForm = () => {
                   type="file"
                   id="fileInput"
                   name="fileInput"
-                  className="w-full rounded-xl border-2 border-primary-300 outline-none px-4 py-2.5"
+                  className="w-full rounded-xl border-2 border-primary-300 px-4 py-2.5 outline-none"
                 />
-                <p className="text-gray-500 text-sm mt-2">
+                <p className="mt-2 text-sm text-gray-500">
                   Please upload your degree in PDF format.
                 </p>
               </div>
@@ -358,7 +358,7 @@ const PsychiatristJoiningForm = () => {
               <div>
                 <label
                   htmlFor="fileInput"
-                  className="block mb-2 font-medium text-gray-700"
+                  className="mb-2 block font-medium text-gray-700"
                 >
                   Upload Degree
                 </label>
@@ -366,16 +366,16 @@ const PsychiatristJoiningForm = () => {
                   type="file"
                   id="fileInput"
                   name="fileInput"
-                  className="w-full rounded-xl border-2 border-primary-300 outline-none px-4 py-2.5"
+                  className="w-full rounded-xl border-2 border-primary-300 px-4 py-2.5 outline-none"
                 />
-                <p className="text-gray-500 text-sm mt-2">
+                <p className="mt-2 text-sm text-gray-500">
                   Please upload your degree in PDF format.
                 </p>
               </div>
               <div>
                 <label
                   htmlFor="fileInput"
-                  className="block mb-2 font-medium text-gray-700"
+                  className="mb-2 block font-medium text-gray-700"
                 >
                   Upload Degree
                 </label>
@@ -384,9 +384,9 @@ const PsychiatristJoiningForm = () => {
                   type="file"
                   id="fileInput"
                   name="fileInput"
-                  className="w-full rounded-xl border-2 border-primary-300 outline-none px-4 py-2.5"
+                  className="w-full rounded-xl border-2 border-primary-300 px-4 py-2.5 outline-none"
                 />
-                <p className="text-gray-500 text-sm mt-2">
+                <p className="mt-2 text-sm text-gray-500">
                   Please upload your degree in PDF format.
                 </p>
               </div>
@@ -394,7 +394,7 @@ const PsychiatristJoiningForm = () => {
                 <input
                   type="Number"
                   placeholder="Current Salary"
-                  className="w-full rounded-xl border-2 border-primary-300 outline-none px-4 py-2.5"
+                  className="w-full rounded-xl border-2 border-primary-300 px-4 py-2.5 outline-none"
                   value={professionalDetails.currentSalary}
                   onChange={(e) =>
                     setProfessionalDetails((prev) => ({
@@ -408,7 +408,7 @@ const PsychiatristJoiningForm = () => {
                 <input
                   type="text"
                   placeholder="Why did you want to join Wleness?"
-                  className="w-full rounded-xl border-2 border-primary-300 outline-none px-4 py-2.5"
+                  className="w-full rounded-xl border-2 border-primary-300 px-4 py-2.5 outline-none"
                   value={professionalDetails.joiningReason}
                   onChange={(e) =>
                     setProfessionalDetails((prev) => ({
@@ -422,7 +422,7 @@ const PsychiatristJoiningForm = () => {
             <div className=" text-center">
               <button
                 type="submit"
-                className="bg-primary-300 text-white font-semibold py-2.5 px-4 rounded-xl hover:bg-primary-500"
+                className="rounded-xl bg-primary-300 px-4 py-2.5 font-semibold text-white hover:bg-primary-500"
               >
                 Submit
               </button>
@@ -451,14 +451,14 @@ const PsychiatristJoiningForm = () => {
         professionalDetails.currentSalary !== "" &&
         professionalDetails.joiningReason !== "" &&
         formSubmitted && (
-          <div className="text-center mt-2 text-green-600">
+          <div className="mt-2 text-center text-green-600">
             Form submitted successfully!
           </div>
         )}
       <img
         src={Bubble}
         alt="Bottom Right"
-        className="absolute bottom-0 right-0 transform scale-x-[-1] hidden xl:block"
+        className="absolute bottom-0 right-0 hidden scale-x-[-1] transform xl:block"
       />
     </div>
   );

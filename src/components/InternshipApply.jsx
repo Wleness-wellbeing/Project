@@ -36,7 +36,7 @@ export default function InternshipApply({ isOpen, onClose }) {
           headers: {
             "Content-Type": "application/json",
           },
-        }
+        },
       );
 
       if (response.status === 200) {
@@ -57,21 +57,21 @@ export default function InternshipApply({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
-    <section className="fixed inset-0 z-40 flex justify-center backdrop-brightness-50 pt-8">
-      <div className="w-[640px] bg-white p-6 overflow-y-scroll rounded-t-lg">
-        <h4 className="text-center text-2xl font-bold text-primary-300 mb-4">
+    <section className="fixed inset-0 z-40 flex justify-center pt-8 backdrop-brightness-50">
+      <div className="w-[640px] overflow-y-scroll rounded-t-lg bg-white p-6">
+        <h4 className="mb-4 text-center text-2xl font-bold text-primary-300">
           Internship Form
         </h4>
-        <p className="text-center font-medium text-sm">
+        <p className="text-center text-sm font-medium">
           Thank you for your interest in working with us. We are always looking
           for the best talent to join our team. Send the application by filling
           out the form.
         </p>
 
         <form action="" className="pt-6" onSubmit={handleSubmit}>
-          <div className="flex gap-4 mb-4">
-            <label htmlFor="" className="self-end w-1/2">
-              <span className="font-bold block mb-1 text-primary-300">
+          <div className="mb-4 flex gap-4">
+            <label htmlFor="" className="w-1/2 self-end">
+              <span className="mb-1 block font-bold text-primary-300">
                 Name:
               </span>
               <input
@@ -85,10 +85,10 @@ export default function InternshipApply({ isOpen, onClose }) {
                   }))
                 }
                 placeholder="First Name"
-                className="w-full border-2 border-primary-50 px-4 py-2 rounded-lg outline-none"
+                className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
               />
             </label>
-            <label htmlFor="" className="self-end w-1/2">
+            <label htmlFor="" className="w-1/2 self-end">
               <input
                 type="text"
                 name="lastName"
@@ -100,13 +100,13 @@ export default function InternshipApply({ isOpen, onClose }) {
                   }))
                 }
                 placeholder="Last Name"
-                className="w-full border-2 border-primary-50 px-4 py-2 rounded-lg outline-none"
+                className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
               />
             </label>
           </div>
-          <div className="flex gap-4 mb-4">
-            <label htmlFor="" className="self-end w-1/2">
-              <span className="font-bold block mb-1 text-primary-300">
+          <div className="mb-4 flex gap-4">
+            <label htmlFor="" className="w-1/2 self-end">
+              <span className="mb-1 block font-bold text-primary-300">
                 Email:
               </span>
               <input
@@ -121,11 +121,11 @@ export default function InternshipApply({ isOpen, onClose }) {
                   }))
                 }
                 placeholder="Enter email address"
-                className="w-full border-2 border-primary-50 px-4 py-2 rounded-lg outline-none"
+                className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
               />
             </label>
-            <label htmlFor="" className="self-end w-1/2">
-              <span className="font-bold block mb-1 text-primary-300">
+            <label htmlFor="" className="w-1/2 self-end">
+              <span className="mb-1 block font-bold text-primary-300">
                 Phone Number:
               </span>
               <input
@@ -140,13 +140,13 @@ export default function InternshipApply({ isOpen, onClose }) {
                   }))
                 }
                 placeholder="Enter your phone number"
-                className="w-full border-2 border-primary-50 px-4 py-2 rounded-lg outline-none"
+                className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
               />
             </label>
           </div>
-          <div className="flex gap-4 mb-4">
+          <div className="mb-4 flex gap-4">
             <label htmlFor="" className="w-full">
-              <span className="font-bold block mb-1 text-primary-300">
+              <span className="mb-1 block font-bold text-primary-300">
                 Address:
               </span>
               <input
@@ -161,13 +161,13 @@ export default function InternshipApply({ isOpen, onClose }) {
                   }))
                 }
                 placeholder="Enter Your Complete Address"
-                className="w-full border-2 border-primary-50 px-4 py-2 rounded-lg outline-none"
+                className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
               />
             </label>
           </div>
-          <div className="flex gap-4 mb-4">
-            <label htmlFor="" className="self-end w-1/2">
-              <span className="font-bold block mb-1 text-primary-300">
+          <div className="mb-4 flex gap-4">
+            <label htmlFor="" className="w-1/2 self-end">
+              <span className="mb-1 block font-bold text-primary-300">
                 Educational Qualification :
               </span>
               <input
@@ -182,11 +182,11 @@ export default function InternshipApply({ isOpen, onClose }) {
                   }))
                 }
                 placeholder="Enter your degree"
-                className="w-full border-2 border-primary-50 px-4 py-2 rounded-lg outline-none"
+                className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
               />
             </label>
-            <label htmlFor="" className="self-end w-1/2">
-              <span className="font-bold block mb-1 text-primary-300">
+            <label htmlFor="" className="w-1/2 self-end">
+              <span className="mb-1 block font-bold text-primary-300">
                 Role you are looking for:
               </span>
               <input
@@ -201,26 +201,26 @@ export default function InternshipApply({ isOpen, onClose }) {
                   }))
                 }
                 placeholder="Select"
-                className="w-full border-2 border-primary-50 px-4 py-2 rounded-lg outline-none"
+                className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
               />
             </label>
           </div>
-          <div className="flex gap-4 mb-4">
+          <div className="mb-4 flex gap-4">
             <label htmlFor="" className="w-full">
-              <span className="font-bold block mb-1 text-primary-300">
+              <span className="mb-1 block font-bold text-primary-300">
                 Resume:
               </span>
               <input
                 type="file"
                 name="resume"
                 id="resume"
-                className="w-full border-2 border-primary-50 px-4 py-2 rounded-lg outline-none"
+                className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
               />
             </label>
           </div>
-          <div className="flex gap-4 mb-4">
+          <div className="mb-4 flex gap-4">
             <label htmlFor="" className="w-full">
-              <span className="font-bold block mb-1 text-primary-300">
+              <span className="mb-1 block font-bold text-primary-300">
                 Tell us about your interest:
               </span>
               <textarea
@@ -235,13 +235,13 @@ export default function InternshipApply({ isOpen, onClose }) {
                     interest: e.target.value,
                   }))
                 }
-                className="w-full border-2 border-primary-50 px-4 py-2 rounded-lg outline-none"
+                className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
                 placeholder="Give a brief not more than 300 words"
               ></textarea>
             </label>
           </div>
-          <div className="flex gap-4 mb-6">
-            <label htmlFor="" className="w-full flex items-start">
+          <div className="mb-6 flex gap-4">
+            <label htmlFor="" className="flex w-full items-start">
               <input
                 type="checkbox"
                 name="agreement"
@@ -260,7 +260,7 @@ export default function InternshipApply({ isOpen, onClose }) {
             <button
               onClick={onClose}
               type="button"
-              className="btn-one !bg-transparent !border-2 !border-primary-300 !text-black !py-2 mr-3"
+              className="btn-one mr-3 !border-2 !border-primary-300 !bg-transparent !py-2 !text-black"
             >
               Close
             </button>

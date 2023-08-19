@@ -7,8 +7,8 @@ export default function LeftImageList(props) {
       <div className="w-full object-cover lg:w-1/2">
         <img src={precautions} alt="" className="w-full object-cover" />
       </div>
-      <div className="lg:p-8 py-4 font-semibold lg:w-1/2">
-        <h2 className="text-2xl font-bold mb-2 lg:mb-4 text-primary-500">
+      <div className="py-4 font-semibold lg:w-1/2 lg:p-8">
+        <h2 className="mb-2 text-2xl font-bold text-primary-500 lg:mb-4">
           Precautions:
         </h2>
         <p className="pt-3">{props.data.desc}</p>
@@ -16,7 +16,7 @@ export default function LeftImageList(props) {
           {props.data.list.map((value, index) => {
             return (
               <li key={index} className="text-gray-800">
-                <span className="text-primary-500 font-bold text-lg mr-1">
+                <span className="mr-1 text-lg font-bold text-primary-500">
                   &#10004;
                 </span>
                 <span>{value}</span>
@@ -24,7 +24,7 @@ export default function LeftImageList(props) {
             );
           })}
         </ul>
-        <p className="text-gray-800 font-semibold mt-4 pt-4">
+        <p className="mt-4 pt-4 font-semibold text-gray-800">
           {props.data.info}
         </p>
       </div>

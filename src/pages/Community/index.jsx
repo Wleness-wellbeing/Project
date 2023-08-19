@@ -50,16 +50,16 @@ const communitySupport = [
 export default function index() {
   return (
     <>
-      <header className="overflow-x-hidden overflow-y-clip relative">
+      <header className="relative overflow-x-hidden overflow-y-clip">
         <div className="container mx-auto">
-          <h1 className="subheading text-center my-8">
+          <h1 className="subheading my-8 text-center">
             <span className="heading-primary">Escape, Heal and Thrive </span>
             <span>with the Wleness Community</span>
           </h1>
 
           <div className="mb-8 text-center">
-            <img src={communityHeader} alt="" className="w-full mb-10" />
-            <p className="text-xl font-bold xl:px-44 mb-5">
+            <img src={communityHeader} alt="" className="mb-10 w-full" />
+            <p className="mb-5 text-xl font-bold xl:px-44">
               Let's come together and build a supportive community where we
               share, grow, and heal as one.
             </p>
@@ -71,12 +71,12 @@ export default function index() {
         <img
           src={bgDotsPattern}
           alt=""
-          className="w-40 xl:w-72 absolute top-24 -right-10 -z-10"
+          className="absolute -right-10 top-24 -z-10 w-40 xl:w-72"
         />
         <img
           src={bgDotsPattern}
           alt=""
-          className="w-44 xl:w-80 absolute bottom-32 -left-20 -z-10"
+          className="absolute -left-20 bottom-32 -z-10 w-44 xl:w-80"
         />
       </header>
 
@@ -86,14 +86,14 @@ export default function index() {
           <h3 className="subheading mb-3">
             <span className="heading-primary">Wleness </span>Community
           </h3>
-          <p className="font-medium text-justify mb-4 text-lg">
+          <p className="mb-4 text-justify text-lg font-medium">
             Through our community, individuals can find solace in knowing they
             are not alone in their struggles. Whether seeking advice, sharing
             stories, or simply finding comfort in the presence of others, our
             platform offers a supportive network that embraces diversity and
             encourages personal growth.
           </p>
-          <p className="font-medium text-justify text-lg">
+          <p className="text-justify text-lg font-medium">
             We believe everyone deserves a space to be heard, understood, and
             supported without judgment. Join us and discover the power of
             community, where you can connect with like-minded individuals and
@@ -101,53 +101,53 @@ export default function index() {
           </p>
         </div>
 
-        <div className="xl:w-1/2 grid grid-cols-2">
-          <div className="bg-primary-400 p-4 rounded-2xl m-3 grid content-between">
-            <h4 className="text-xl text-white font-bold text-center">
+        <div className="grid grid-cols-2 xl:w-1/2">
+          <div className="m-3 grid content-between rounded-2xl bg-primary-400 p-4">
+            <h4 className="text-center text-xl font-bold text-white">
               Embrace Empathy:
             </h4>
             <img
               src={community1}
               alt=""
-              className="mx-auto object-cover my-2"
+              className="mx-auto my-2 object-cover"
             />
-            <p className="text-sm font-semibold text-white text-justify">
+            <p className="text-justify text-sm font-semibold text-white">
               Find a compassionate community that embraces empathy & uplifts you
               through life's ups & downs.
             </p>
           </div>
-          <div className="bg-gradient-to-br from-secondary/50 to-tertiary/50 p-4 rounded-2xl m-3 grid content-between">
-            <h4 className="text-xl font-bold text-center">Share Freely:</h4>
+          <div className="m-3 grid content-between rounded-2xl bg-gradient-to-br from-secondary/50 to-tertiary/50 p-4">
+            <h4 className="text-center text-xl font-bold">Share Freely:</h4>
             <img
               src={community2}
               alt=""
-              className="mx-auto object-cover my-2"
+              className="mx-auto my-2 object-cover"
             />
-            <p className="text-sm font-semibold text-justify">
+            <p className="text-justify text-sm font-semibold">
               Discover the freedom of sharing your struggles in an accepting
               space where authenticity is celebrated.
             </p>
           </div>
-          <div className="bg-gradient-to-br from-secondary/50 to-tertiary/50 p-4 rounded-2xl m-3 grid content-between">
-            <h4 className="text-xl font-bold text-center">Guided Support:</h4>
+          <div className="m-3 grid content-between rounded-2xl bg-gradient-to-br from-secondary/50 to-tertiary/50 p-4">
+            <h4 className="text-center text-xl font-bold">Guided Support:</h4>
             <img
               src={community3}
               alt=""
-              className="mx-auto object-cover my-2"
+              className="mx-auto my-2 object-cover"
             />
-            <p className="text-sm font-semibold text-justify">
+            <p className="text-justify text-sm font-semibold">
               With expert moderation, we ensure a safe haven where genuine
               support is just a message away.
             </p>
           </div>
-          <div className="bg-gradient-to-br from-secondary/50 to-tertiary/50 p-4 rounded-2xl m-3 grid content-between">
-            <h4 className="text-xl font-bold text-center">Grow Together:</h4>
+          <div className="m-3 grid content-between rounded-2xl bg-gradient-to-br from-secondary/50 to-tertiary/50 p-4">
+            <h4 className="text-center text-xl font-bold">Grow Together:</h4>
             <img
               src={community4}
               alt=""
-              className="mx-auto object-cover my-2"
+              className="mx-auto my-2 object-cover"
             />
-            <p className="text-sm font-semibold text-justify">
+            <p className="text-justify text-sm font-semibold">
               Join a vibrant community dedicated to personal growth, where we
               flourish as one united force.
             </p>
@@ -161,25 +161,25 @@ export default function index() {
           <span>Uncover your special heaven of </span>
           <span className="heading-primary">support and belonging</span>
         </h2>
-        <p className="text-center text-lg py-2 font-semibold">
+        <p className="py-2 text-center text-lg font-semibold">
           Always remember sharing your struggles only makes you stronger.
         </p>
 
-        <div className="grid xl:grid-cols-3 gap-x-14 gap-y-8 py-12">
+        <div className="grid gap-x-14 gap-y-8 py-12 xl:grid-cols-3">
           {communitySupport.map((value, index) => {
             return (
               <figure
                 key={index}
-                className="border-2 border-primary-300 p-5 rounded-xl rounded-br-[3rem] grid justify-between hover:shadow-xl transition-all"
+                className="grid justify-between rounded-xl rounded-br-[3rem] border-2 border-primary-300 p-5 transition-all hover:shadow-xl"
               >
-                <h3 className="text-2xl font-bold text-primary-300 text-center">
+                <h3 className="text-center text-2xl font-bold text-primary-300">
                   {value.title}
                 </h3>
-                <div className="mx-auto w-32 h-32">
+                <div className="mx-auto h-32 w-32">
                   <img
                     src={value.image}
                     alt={value.title}
-                    className="w-full object-contain h-full"
+                    className="h-full w-full object-contain"
                   />
                 </div>
                 <figcaption>
@@ -190,14 +190,14 @@ export default function index() {
           })}
         </div>
 
-        <div className="text-center pb-8">
+        <div className="pb-8 text-center">
           <button className="btn-one">Join us now</button>
         </div>
       </section>
 
-      <section className="container mx-auto text-center pb-10">
+      <section className="container mx-auto pb-10 text-center">
         <h2 className="subheading heading-primary">We are here to help you!</h2>
-        <p className="para mb-4 xl:w-3/5 mx-auto">
+        <p className="para mx-auto mb-4 xl:w-3/5">
           Helping you connect with like minded people. Find your ultimate
           support network today
         </p>

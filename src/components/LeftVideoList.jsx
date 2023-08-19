@@ -11,19 +11,19 @@ export default function LeftVideoList(props) {
           frameBorder={0}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen="true"
-          className="rounded-2xl w-fit h-44 mx-auto lg:w-[460px] lg:h-[300px]"
+          className="mx-auto h-44 w-fit rounded-2xl lg:h-[300px] lg:w-[460px]"
         />
       </div>
-      <div className="lg:p-8 py-2 font-semibold lg:w-1/2">
-        <h2 className="text-2xl font-bold mb-4 text-primary-500">
+      <div className="py-2 font-semibold lg:w-1/2 lg:p-8">
+        <h2 className="mb-4 text-2xl font-bold text-primary-500">
           {props.data.title}
         </h2>
         <p>{props.data.desc}</p>
-        <ul className="list-disc pt-4 list-inside">
+        <ul className="list-inside list-disc pt-4">
           {props.data.list.map((value, index) => {
             return (
               <li key={index} className="flex items-start space-x-2">
-                <span className="text-primary-500 font-bold">
+                <span className="font-bold text-primary-500">
                   &#10004; {value.subtitle}
                 </span>
                 <p>{value.desc}</p>

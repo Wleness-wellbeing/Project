@@ -22,7 +22,7 @@ export default function Login() {
             Accept: "application/json",
             "Access-Control-Allow-Origin": "*",
           },
-        }
+        },
       )
       .then((res) => res.data)
       .then((data) => {
@@ -39,20 +39,20 @@ export default function Login() {
       });
   }
   return (
-    <main class="flex md:flex-row flex-col justify-center items-center md:items-stretch h-screen">
-      <aside class="md:w-1/2 hidden md:flex justify-center items-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-right bg-no-repeat bg-contain">
-        <img src={login} alt="" class="block object-cover w-[648px]" />
+    <main class="flex h-screen flex-col items-center justify-center md:flex-row md:items-stretch">
+      <aside class="hidden items-center justify-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-contain bg-right bg-no-repeat md:flex md:w-1/2">
+        <img src={login} alt="" class="block w-[648px] object-cover" />
       </aside>
 
-      <div class="md:w-1/2 flex justify-center items-center px-4">
-        <div class="sm:w-[440px] w-full">
-          <div class="sm:w-[320px] w-full mx-auto mb-12">
+      <div class="flex items-center justify-center px-4 md:w-1/2">
+        <div class="w-full sm:w-[440px]">
+          <div class="mx-auto mb-12 w-full sm:w-[320px]">
             <Link to="/">
-              <img src={logo} alt="Logo" class="block object-cover w-full" />
+              <img src={logo} alt="Logo" class="block w-full object-cover" />
             </Link>
           </div>
 
-          <div class="flex justify-between gap-5 mb-10">
+          <div class="mb-10 flex justify-between gap-5">
             <Link to="/login" class="btn-transparent">
               LOGIN
             </Link>
@@ -84,7 +84,7 @@ export default function Login() {
               />
               <Link
                 to="/forget-password"
-                className="text-right block mb-10 text-primary-100"
+                className="mb-10 block text-right text-primary-100"
               >
                 Forgot Password?
               </Link>
@@ -100,7 +100,7 @@ export default function Login() {
           </form>
           <p className="text-center">
             <span>Don't have an account yet. </span>
-            <Link className="text-primary-100 font-semibold" to="/signup">
+            <Link className="font-semibold text-primary-100" to="/signup">
               Sign Up
             </Link>
           </p>

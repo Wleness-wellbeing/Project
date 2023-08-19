@@ -11,24 +11,40 @@ function DoctorSignup() {
   };
 
   return (
-    <main className="flex md:flex-row flex-col justify-center items-center md:items-stretch h-screen">
-      <aside className="md:w-1/2 hidden md:flex justify-center items-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-right bg-no-repeat bg-contain">
-        <img src={doctorSignup} alt="" className="block object-cover w-[648px]" />
+    <main className="flex h-screen flex-col items-center justify-center md:flex-row md:items-stretch">
+      <aside className="hidden items-center justify-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-contain bg-right bg-no-repeat md:flex md:w-1/2">
+        <img
+          src={doctorSignup}
+          alt=""
+          className="block w-[648px] object-cover"
+        />
       </aside>
 
-      <div className="md:w-1/2 flex justify-center items-center px-4">
-        <div className="sm:w-[440px] w-full">
-          <div className="sm:w-[320px] w-full mx-auto mb-12">
+      <div className="flex items-center justify-center px-4 md:w-1/2">
+        <div className="w-full sm:w-[440px]">
+          <div className="mx-auto mb-12 w-full sm:w-[320px]">
             <Link to="/">
-              <img src={logo} alt="Logo" className="block object-cover w-full" />
+              <img
+                src={logo}
+                alt="Logo"
+                className="block w-full object-cover"
+              />
             </Link>
           </div>
 
-          <div className="flex justify-between gap-5 mb-10">
-            <button className={`btn-transparent ${showLogin ? "" : "text-primary-500"}`} onClick={toggleForm}>
+          <div className="mb-10 flex justify-between gap-5">
+            <button
+              className={`btn-transparent ${
+                showLogin ? "" : "text-primary-500"
+              }`}
+              onClick={toggleForm}
+            >
               LOGIN
             </button>
-            <button className={`btn-primary ${!showLogin ? "" : "text-primary-500"}`} onClick={toggleForm}>
+            <button
+              className={`btn-primary ${!showLogin ? "" : "text-primary-500"}`}
+              onClick={toggleForm}
+            >
               SIGN UP
             </button>
           </div>
@@ -71,7 +87,7 @@ function DoctorSignup() {
                   className="form-input"
                 />
               </label>
-              <div className="text-center flex gap-2 flex-col justify-center items-center w-64 mx-auto lg:mt-4">
+              <div className="mx-auto flex w-64 flex-col items-center justify-center gap-2 text-center lg:mt-4">
                 <button className="btn-primary !w-full">CREATE ACCOUNT</button>
                 <button className="btn-transparent !w-full">
                   SIGN UP WITH GOOGLE
@@ -100,7 +116,7 @@ function DoctorSignup() {
                   placeholder="Password"
                   className="form-input"
                 />
-                <a href="#" className="text-right block mb-10 text-primary-100">
+                <a href="#" className="mb-10 block text-right text-primary-100">
                   Forgot Password?
                 </a>
               </label>
@@ -112,7 +128,10 @@ function DoctorSignup() {
 
           <p className="text-center">
             Already have an account?
-            <Link to="/doctors-login" className="text-primary-100 font-bold hover:text-primary-500">
+            <Link
+              to="/doctors-login"
+              className="font-bold text-primary-100 hover:text-primary-500"
+            >
               Login
             </Link>
           </p>

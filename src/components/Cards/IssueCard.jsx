@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 
 export default function IssueCard(props) {
   return (
-    <div className="bg-gradient-to-br p-1 from-secondary to-tertiary rounded-2xl rounded-br-[3rem]">
-      <div className="bg-[#FAFCE7] h-full rounded-2xl flex flex-col items-center justify-center py-8 rounded-br-[3rem]">
-        <h3 className="font-bold text-center text-2xl mb-4">
+    <div className="rounded-2xl rounded-br-[3rem] bg-gradient-to-br from-secondary to-tertiary p-1">
+      <div className="flex h-full flex-col items-center justify-center rounded-2xl rounded-br-[3rem] bg-[#FAFCE7] py-8">
+        <h3 className="mb-4 text-center text-2xl font-bold xl:mb-6">
           {props.data.name}
         </h3>
         <Link to={props.data.slug}>
           <img
             src={props.data.image}
             alt="Avatar"
-            className="mx-auto block w-24 h-24 lg:h-40 lg:w-40 object-cover rounded-2xl 2xl:w-48 2xl:h-48 mb-4"
+            className="mx-auto mb-4 block h-24 w-24 rounded-2xl object-cover lg:h-40 lg:w-40 3xl:h-44 3xl:w-44"
           />
         </Link>
 

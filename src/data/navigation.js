@@ -8,13 +8,10 @@ import {
 
 // Services sub pages
 export const serviceMenuPages = [
-  ["Issues", "/issues"],
   ["Therapy", "/services/therapy"],
-  ["Psychiatrist", "/services/psychiatrist"],
-  ["Musical Therapy", "/services/musical-therapy"],
   ["Couples Therapy", "/services/couples-therapy"],
-  ["Self-Care", "/services/self-care"],
-  ["Community", "/community"],
+  ["Musical Therapy", "/services/musical-therapy"],
+  ["Our Psychiatrist", "/services/psychiatrist"],
 ];
 
 // Activities sub pages
