@@ -6,31 +6,84 @@ import {
   iconWhatsapp,
 } from "../assets";
 
+// ================= Navigation Bar =================
 // Services sub pages
 export const serviceMenuPages = [
-  ["Therapy", "/services/therapy"],
-  ["Couples Therapy", "/services/couples-therapy"],
-  ["Musical Therapy", "/services/musical-therapy"],
-  ["Our Psychiatrist", "/services/psychiatrist"],
+  {
+    name: "Therapy",
+    slug: "/services/therapy",
+    subPages: [
+      ["Stress", "/issues/stress"],
+      ["Depression", "/issues/depression"],
+      ["Panic Attacks", "/issues/panic-attack"],
+      ["Anxiety", "/issues/anxiety"],
+      ["Bipolar Disorder", "/issues/bipolar-disorder"],
+      ["Schizophrenia", "/issues/schizophrenia"],
+      ["Paranoia", "/issues/paranoia"],
+      ["ADHD", "/issues/adhd"],
+      ["ODD", "/issues/odd"],
+      ["Contact Disorder", "/issues/contact-disorder"],
+    ],
+  },
+  {
+    name: "Couples Therapy",
+    slug: "/services/couples-therapy",
+  },
+  {
+    name: "Musical Therapy",
+    slug: "/services/musical-therapy",
+  },
+  {
+    name: "Our Psychiatrist",
+    slug: "/services/psychiatrist",
+  },
 ];
 
 // Activities sub pages
 export const activitiesMenuPages = [
-  ["Yoga", "/activities/yoga"],
-  ["Meditation", "/activities/meditation"],
-  ["Sadhna", "/activities/sadhna"],
-  ["Brain Exercise", "/activities/brain-exercise"],
+  {
+    name: "Yoga",
+    slug: "/activities/yoga",
+  },
+  {
+    name: "Meditation",
+    slug: "/activities/meditation",
+  },
+  {
+    name: "Sadhna",
+    slug: "/activities/sadhna",
+  },
+  {
+    name: "Brain Exercise",
+    slug: "/activities/brain-exercise",
+  },
 ];
 
 // Menu Pages
 export const menuPages = [
-  ["Corporate", "/corporate"],
-  ["Faqs", "/faqs"],
-  ["Avatar", "/avatar"],
-  ["Doctor Dashboard", "/doctor/dashboard"],
-  ["User Dashboard", "/user/dashboard"],
+  {
+    name: "Corporate",
+    slug: "/corporate",
+  },
+  {
+    name: "Faqs",
+    slug: "/faqs",
+  },
+  {
+    name: "Avatar",
+    slug: "/avatar",
+  },
+  {
+    name: "Doctor Dashboard",
+    slug: "/doctor/dashboard",
+  },
+  {
+    name: "User Dashboard",
+    slug: "/user/dashboard",
+  },
 ];
 
+// ================= Footer Links =================
 // Footer Explore Menu
 export const footerExplore = [
   ["About Us", "/about-us"],
@@ -67,6 +120,7 @@ export const socialLinks = [
   [iconLinkedin, "#"],
 ];
 
+// ================= Admin Links =================
 // Admin Side bar
 export const adminSidebar = [
   ["Doctors", "/admin/doctors"],

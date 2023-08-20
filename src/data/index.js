@@ -54,7 +54,6 @@ import {
   blogThumbnail5,
   blogThumbnail6,
   adhvmukhaHeader,
-  adhvmukhaSteps,
   adhvVariationOne,
   adhvVariationTwo,
   adhvVariationThree,
@@ -87,8 +86,6 @@ import LeftVideoList from "../components/LeftVideoList";
 import RightImageList from "../components/RightImageList";
 import LeftImageList from "../components/LeftImageList";
 import ActivityBlogs from "../components/ActivityBlogs";
-// import YogaLeftList from "../components/YogaLeftList";
-// import YogaRightList from "../components/YogaRightList";
 
 // Issues data for landing page
 export const issues = [

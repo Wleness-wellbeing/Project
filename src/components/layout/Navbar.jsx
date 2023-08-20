@@ -1,17 +1,19 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faBars } from "@fortawesome/free-solid-svg-icons";
 import JoinUs from "../JoinUs";
 // Data
 import { logo } from "../../assets";
-import MenuLink from "../links/MenuLink";
-import SubmenuLink from "../links/SubmenuLink";
 import {
   activitiesMenuPages,
+  footerFrequentIssues,
   menuPages,
   serviceMenuPages,
 } from "../../data/navigation";
+// Components
+import MenuLink from "../links/MenuLink";
+import Dropdown from "../links/Dropdown";
 
 function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -49,16 +51,16 @@ function Navbar() {
             }
           >
             <MenuLink url="/about-us" text="About Us" />
-            <SubmenuLink url="" text="Services" pages={serviceMenuPages} />
+            <Dropdown url="" text="Services" pages={serviceMenuPages} />
             <MenuLink url="/experts" text="Experts" />
             <MenuLink url="/internship" text="Internship" />
             <MenuLink url="/blogs" text="Blogs" />
-            <SubmenuLink
+            <Dropdown
               url="/activities"
               text="Activities"
               pages={activitiesMenuPages}
             />
-            <SubmenuLink url="/self-care" text="Self Care" pages={menuPages} />
+            <Dropdown url="/self-care" text="Self Care" pages={menuPages} />
           </ul>
 
           {/* Authentication */}

@@ -95,6 +95,9 @@ a {
 .menu-link {
   @apply inline-block py-2 font-semibold transition-all hover:text-primary-300;
 }
+.submenu-link {
+  @apply flex justify-between px-6 py-2 font-semibold transition-all hover:text-primary-300;
+}
 .para {
   @apply font-quicksand text-sm  font-semibold leading-5 !text-[#383838] lg:text-lg;
 }
@@ -135,4 +138,9 @@ a {
 }
 .swiper-pagination-bullet-active {
   @apply bg-primary-300;
+}
+
+/* Navigation Dropdown */
+.subdropdown:hover .subdropdown-pages {
+  @apply block;
 }
