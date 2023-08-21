@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 // Data
 import {
   couplesTherapyData,
@@ -15,8 +15,18 @@ import ActivityHeader from "../../components/ActivityHeader";
 import DoctorSlider from "../../components/DoctorSlider";
 import HappyClient from "../../components/HappyClient";
 import FaqWithImage from "../../components/FaqWithImage";
+import Assessment from "../../components/Assessment";
 
 function CouplesTherapy() {
+  const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
+  const openAssessmentModal = () => {
+    setShowAssessmentModal(true);
+  };
+
+  const closeAssessmentModal = () => {
+    setShowAssessmentModal(false);
+  };
+
   const ref = useRef(null);
 
   const handleScrollToComponent = () => {
@@ -29,27 +39,31 @@ function CouplesTherapy() {
         image={couplesTherapyData.header.image}
         desc={couplesTherapyData.header.desc}
         handleScrollToComponent={() => handleScrollToComponent()}
+        openAssessmentModal={openAssessmentModal}
       />
+      <p ref={ref}></p>
       <FeaturesBlock data={couplesTherapyFeatures} />
 
       {/* How Section  */}
-      <section className="container mx-auto !px-0" ref={ref}>
-        <h2 className="subheading py-12 text-center">
-          {textColorize([
-            {
-              color: false,
-              text: "How can ",
-            },
-            {
-              color: true,
-              text: "Wleness ",
-            },
-            {
-              color: false,
-              text: "help you?",
-            },
-          ])}
-        </h2>
+      <section className="container mx-auto !px-0">
+        <div className="text-center">
+          <h2 className="subheading py-12">
+            {textColorize([
+              {
+                color: false,
+                text: "How can ",
+              },
+              {
+                color: true,
+                text: "Wleness ",
+              },
+              {
+                color: false,
+                text: "help you?",
+              },
+            ])}
+          </h2>
+        </div>
 
         <div>
           <figure className="flex gap-x-5 pb-6 pt-12">
@@ -125,6 +139,10 @@ function CouplesTherapy() {
       <DoctorSlider data={couplesTherapyDoctors} />
       <HappyClient data={coupleTherapyClient} />
       <FaqWithImage data={coupleTherapyFaq} />
+      <Assessment
+        isAssessmentOpen={isAssessmentModalOpen}
+        onAssessmentClose={closeAssessmentModal}
+      />
     </>
   );
 }

@@ -2,11 +2,12 @@ import React, { useRef } from "react";
 // Data
 import { psychiatristData } from "../../data/services";
 import { psychiatristClient } from "../../data/clients";
+import { bulb } from "../../assets";
 // Components
 import GridHeader from "../../components/GridHeader";
 import SelectBest from "../../components/SelectBest";
 import HappyClient from "../../components/HappyClient";
-import { bulb } from "../../assets";
+import DoctorsCard from "../../components/DoctorsCard";
 
 export default function Psychiatrist() {
   const ref = useRef(null);
@@ -27,8 +28,16 @@ export default function Psychiatrist() {
         image={psychiatristData.bestTherapist.featureImage}
         features={psychiatristData.bestTherapist.features}
         btn={psychiatristData.bestTherapist.startBtn}
-        doctors={psychiatristData.bestTherapist.doctors}
       />
+      {/* Specialist Doctors */}
+      <section>
+        <div className="side-spacing grid-cols-[repeat(4, minmax(280, 1fr))] container mx-auto grid items-center gap-5 p-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-3 3xl:gap-10">
+          {psychiatristData.bestTherapist.doctors.map((value, i) => {
+            return <DoctorsCard key={i} data={value} />;
+          })}
+        </div>
+      </section>
+
       <section className="container relative mx-auto my-8 mt-20 flex px-8 text-center">
         <div className="grid w-1/2">
           <div className="rounded-t-3xl bg-gradient-to-b from-secondary/50 to-transparent py-14">

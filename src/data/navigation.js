@@ -114,10 +114,10 @@ export const footerFrequentIssues = [
 // Footer social links
 export const socialLinks = [
   [iconWhatsapp, "#"],
-  [iconInstagram, "#"],
-  [iconFacebook, "#"],
-  [iconTwitter, "#"],
-  [iconLinkedin, "#"],
+  [iconInstagram, "https://www.instagram.com/wleness/"],
+  [iconFacebook, "http://facebook.com/profile.php?id=100094475627706"],
+  [iconTwitter, "http://twitter.com/wleness111"],
+  [iconLinkedin, "https://www.linkedin.com/company/wleness/"],
 ];
 
 // ================= Admin Links =================

@@ -97,7 +97,7 @@ export default function Home() {
   return (
     <>
       {/* ========== Header Bar ========== */}
-      <header className="container mx-auto flex flex-col items-center rounded-3xl !px-5 py-2 lg:flex-row lg:bg-primary-50/30 lg:py-6 xl:py-24 2xl:justify-between">
+      <header className="container mx-auto flex flex-col items-center overflow-x-clip rounded-3xl !px-5 py-2 lg:flex-row lg:bg-primary-50/30 lg:py-6 xl:py-24 2xl:justify-between">
         <div className="mb-6 lg:order-2 lg:mb-0 lg:translate-x-20 lg:translate-y-10 xl:w-[45%] 2xl:flex 2xl:justify-end">
           {/* Desktop Image */}
           <img
@@ -136,6 +136,7 @@ export default function Home() {
           </button> */}
         </div>
       </header>
+
       {/* ========== Issues ========== */}
       <section>
         <div className="container mx-auto pb-6 sm:pt-6 lg:pb-14 2xl:py-10">
@@ -156,12 +157,13 @@ export default function Home() {
             })}
           </div>
           <div className="text-center">
-            <Link to="/issues" className="btn-one">
+            <Link to="/services/therapy" className="btn-one">
               Explore More
             </Link>
           </div>
         </div>
       </section>
+
       {/* ========== Objectives ========== */}
       <section className="bg-primary-100/20">
         <div className="container mx-auto grid grid-cols-5 gap-1 py-6 !pl-1 lg:py-6">
@@ -183,6 +185,7 @@ export default function Home() {
           })}
         </div>
       </section>
+
       {/* ========== Internship ========== */}
       <section className="relative my-6 px-4 sm:py-8 3xl:pt-14">
         <div className="relative mx-auto w-fit rounded-[100%] border-2 xl:px-8">

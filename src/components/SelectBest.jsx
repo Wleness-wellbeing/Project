@@ -44,15 +44,6 @@ const SelectBest = React.forwardRef((props, ref) => {
           />
         </div>
       </div>
-
-      {/* Therapies */}
-      <div className="bg-gradient-to-br from-primary-10 to-white font-quicksand">
-        <div className="container mx-auto grid gap-4 py-6 pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pt-12 xl:grid-cols-3 xl:gap-10 2xl:grid-cols-4 2xl:gap-x-8 2xl:gap-y-14">
-          {issues.map((value, index) => {
-            return <IssueCard key={index} data={value} />;
-          })}
-        </div>
-      </div>
     </section>
   );
 });

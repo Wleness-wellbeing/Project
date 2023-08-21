@@ -16,7 +16,7 @@ import {
 export const assessmentFeelings = [
   [assessmentIconAnxiety, "Anxiety"],
   [assessmentIconStress, "Stress"],
-  [assessmentIconRelationship, "Relationship Disorder"],
+  [assessmentIconRelationship, "Relationship"],
   [assessmentIconDepression, "Depression"],
   [assessmentIconAnger, "Anger"],
   [assessmentIconEatingDisorder, "Eating Disorder"],
@@ -24,7 +24,7 @@ export const assessmentFeelings = [
   [assessmentIconOdd, "ODD"],
   [assessmentIconAdhd, "ADHD"],
   [assessmentIconOcd, "OCD"],
-  [assessmentIconBiopolarDisorder, "Biopolar Disorder"],
+  [assessmentIconBiopolarDisorder, "Bipolar Disorder"],
   [assessmentIconLgbt, "LGBTQ"],
 ];
 

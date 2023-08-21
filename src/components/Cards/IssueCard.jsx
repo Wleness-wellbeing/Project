@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Assessment from "../Assessment";
 
 export default function IssueCard(props) {
+  const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
+  const openAssessmentModal = () => {
+    setShowAssessmentModal(true);
+  };
+
+  const closeAssessmentModal = () => {
+    setShowAssessmentModal(false);
+  };
   return (
     <div className="rounded-2xl rounded-br-[3rem] bg-gradient-to-br from-secondary to-tertiary p-1">
       <div className="flex h-full flex-col items-center justify-center rounded-2xl rounded-br-[3rem] bg-[#FAFCE7] py-8">
@@ -16,10 +25,15 @@ export default function IssueCard(props) {
           />
         </Link>
 
-        <Link to="/appointment/checkout" className="btn-one">
+        <button className="btn-one" onClick={openAssessmentModal}>
           Book Now
-        </Link>
+        </button>
       </div>
+
+      <Assessment
+        isAssessmentOpen={isAssessmentModalOpen}
+        onAssessmentClose={closeAssessmentModal}
+      />
     </div>
   );
 }

@@ -16,11 +16,7 @@ import {
 import AssessmentOption from "./AssessmentOption";
 import AssessmentTextBtn from "./AssessmentTextBtn";
 
-export default function Assessment({
-  isAssessmentOpen,
-  onAssessmentClose,
-  button,
-}) {
+export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
   if (!isAssessmentOpen) return null;
   // Welcome Screen Handling
   const [startAssessment, setStartAssessment] = useState(true);
@@ -100,7 +96,7 @@ export default function Assessment({
 
   return (
     <div className="fixed inset-0 z-50 grid w-full place-items-center backdrop-brightness-50">
-      <div className="relative mx-auto w-[340px] overflow-hidden rounded-3xl border-2 bg-white py-4 md:w-[720px] lg:w-[920px] lg:py-12">
+      <div className="absolute mx-auto flex h-full w-full items-center justify-center overflow-hidden border-2 bg-white py-4 md:w-[720px] lg:relative lg:h-fit lg:w-[920px] lg:rounded-3xl lg:py-12">
         {/* Welcome Page */}
         {startAssessment && (
           <div className="py-6 text-center lg:py-10 ">
@@ -121,6 +117,11 @@ export default function Assessment({
                     Therapist?
                   </Link>
                 </h4>
+                <img
+                  src={assessment1}
+                  alt=""
+                  className="left-4 top-44 mx-auto mb-4 w-20 lg:absolute lg:left-24 lg:top-44 lg:w-28"
+                />
                 <button className="btn-primary" onClick={openScreenOne}>
                   Find the Therapist
                 </button>
@@ -142,34 +143,27 @@ export default function Assessment({
                     Therapist?
                   </Link>
                 </h4>
+                <img
+                  src={assessment2}
+                  alt=""
+                  className="bottom-12 right-2 mx-auto mb-4 w-20 lg:absolute lg:bottom-40 lg:right-20 lg:w-28"
+                />
                 <Link to="/experts/all" className="btn-primary lg:block">
                   Browse all Therapist
                 </Link>
               </div>
             </div>
-
-            {/* Images */}
-            <img
-              src={assessment1}
-              alt=""
-              className="absolute left-4 top-44 w-14 lg:left-24 lg:top-44 lg:w-28"
-            />
-            <img
-              src={assessment2}
-              alt=""
-              className="absolute bottom-12 right-2 w-14 lg:bottom-40 lg:right-20 lg:w-28"
-            />
           </div>
         )}
 
         {/* Screen 1 */}
         {screenOne && (
-          <div className="lg:mx-auto lg:w-[560px]">
+          <div className="lg:mx-auto lg:w-[600px]">
             <h2 className="mb-0 flex flex-col text-center text-xl font-bold text-primary-300 lg:mb-8 lg:text-3xl">
               <span>What is in your mind?</span>
               <span>How are you feeling?</span>
             </h2>
-            <div className="my-6 flex flex-1 flex-wrap justify-between gap-2 px-4 lg:my-14 lg:gap-4 lg:px-0">
+            <div className="my-6 grid grid-cols-2 gap-2 px-4 lg:my-14 lg:grid-cols-3 lg:gap-4 lg:px-0">
               {assessmentFeelings.map((value, index) => {
                 return (
                   <AssessmentOption
@@ -202,25 +196,25 @@ export default function Assessment({
 
         {/* Screen 2 */}
         {screenTwo && (
-          <div className="lg:mx-auto lg:w-[640px]">
-            <h2 className="flex flex-col text-center text-3xl font-bold text-primary-300">
+          <div className="px-2 lg:mx-auto lg:w-[640px]">
+            <h2 className="mb-0 flex flex-col text-center text-xl font-bold text-primary-300 lg:mb-8 lg:text-3xl">
               How Long have you been experiencing these issues?
             </h2>
-            <div className="my-6 flex flex-wrap justify-center gap-2">
+            <div className="my-4 flex flex-wrap justify-center gap-2 lg:my-6">
               {experiencingIssue.map((value, index) => {
                 return <AssessmentTextBtn key={index} name={value} />;
               })}
             </div>
-            <h2 className="flex flex-col text-center text-3xl font-bold text-primary-300">
+            <h2 className="mb-0 flex flex-col text-center text-xl font-bold text-primary-300 lg:mb-8 lg:text-3xl">
               How difficult it is for you to manage all these issues?
             </h2>
-            <div className="my-6 flex flex-wrap justify-center gap-2">
+            <div className="my-4 flex flex-col flex-wrap justify-center gap-2 px-4 lg:my-6 lg:flex-row lg:px-0">
               {managingDifficulty.map((value, index) => {
                 return <AssessmentTextBtn key={index} name={value} />;
               })}
             </div>
 
-            <div className="flex justify-center space-x-4 text-center">
+            <div className="mt-8 flex justify-center space-x-4 text-center lg:mt-0">
               <button
                 onClick={openScreenOne}
                 className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !py-2 font-semibold !text-primary-300"
@@ -239,24 +233,24 @@ export default function Assessment({
 
         {/* Screen 3 */}
         {screenThree && (
-          <div className="lg:mx-auto lg:w-[600px]">
-            <h2 className="flex flex-col text-center text-3xl font-bold text-primary-300">
+          <div className="px-2 lg:mx-auto lg:w-[600px] lg:px-0">
+            <h2 className="mb-0 flex flex-col text-center text-xl font-bold text-primary-300 lg:mb-8 lg:text-3xl">
               Which language are you comfortable?
             </h2>
-            <div className="my-8 flex flex-wrap justify-center gap-4">
+            <div className="my-4 flex flex-wrap justify-center gap-2 lg:my-8 lg:gap-4">
               {languages.map((value, index) => {
                 return <AssessmentTextBtn key={index} name={value} />;
               })}
             </div>
-            <h2 className="flex flex-col text-center text-3xl font-bold text-primary-300">
+            <h2 className="mb-0 flex flex-col text-center text-xl font-bold text-primary-300 lg:mb-8 lg:text-3xl">
               How old are you?
             </h2>
-            <div className="my-8 flex flex-wrap justify-center gap-4">
+            <div className="my-4 flex flex-wrap justify-center gap-2 lg:my-8 lg:gap-4">
               {ageRange.map((value, index) => {
                 return <AssessmentTextBtn key={index} name={value} />;
               })}
             </div>
-            <div className="flex justify-center space-x-4 text-center">
+            <div className="mt-8 flex justify-center space-x-4 text-center lg:mt-0">
               <button
                 onClick={openScreenTwo}
                 className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !py-2 font-semibold !text-primary-300"
@@ -275,9 +269,9 @@ export default function Assessment({
 
         {/* Screen 4 */}
         {screenFour && (
-          <div className="lg:mx-auto lg:w-[600px]">
-            <h2 className="flex flex-col text-center text-4xl font-bold text-primary-300">
-              Thanks you for your response
+          <div className="px-4 lg:mx-auto lg:w-[600px] lg:px-0">
+            <h2 className="flex flex-col text-center text-3xl font-bold text-primary-300 lg:text-4xl">
+              Thanks, Let's Begin!
             </h2>
             <div className="my-8 flex flex-wrap justify-center gap-4">
               <div className="w-full rounded-xl bg-primary-100 px-6 py-2">
@@ -341,13 +335,10 @@ export default function Assessment({
                 Go Back
               </button>
               <Link
-                onClick={
-                  button.click ? () => clickAndScroll() : onAssessmentClose
-                }
-                to={button.slug}
+                to="/experts/all"
                 className="btn-primary inline-block !w-fit !py-2.5 font-semibold"
               >
-                {button.text}
+                Find the experts
               </Link>
             </div>
           </div>

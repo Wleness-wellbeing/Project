@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 // Data
 import { servicesFeatures, MusicalTherapyData } from "../../data/services";
 import { musicalTherapyClient } from "../../data/clients";
@@ -9,8 +9,17 @@ import ActivityHeader from "../../components/ActivityHeader";
 import ServicesTechniques from "../../components/ServicesTechniques";
 import HappyClient from "../../components/HappyClient";
 import FaqWithImage from "../../components/FaqWithImage";
+import Assessment from "../../components/Assessment";
 
 export default function MusicalTherapy() {
+  const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
+  const openAssessmentModal = () => {
+    setShowAssessmentModal(true);
+  };
+
+  const closeAssessmentModal = () => {
+    setShowAssessmentModal(false);
+  };
   const ref = useRef(null);
 
   const handleScrollToComponent = () => {
@@ -23,16 +32,22 @@ export default function MusicalTherapy() {
         image={MusicalTherapyData.header.image}
         desc={MusicalTherapyData.header.desc}
         handleScrollToComponent={() => handleScrollToComponent()}
+        openAssessmentModal={openAssessmentModal}
       />
+      <p ref={ref}></p>
       <FeaturesBlock data={servicesFeatures} />
       <ServicesTechniques
         title={MusicalTherapyData.activities.title}
         desc={MusicalTherapyData.activities.desc}
         types={MusicalTherapyData.activities.types}
-        ref={ref}
+        openAssessmentModal={openAssessmentModal}
       />
       <HappyClient data={musicalTherapyClient} />
       <FaqWithImage data={musicalTherapyFaq} />
+      <Assessment
+        isAssessmentOpen={isAssessmentModalOpen}
+        onAssessmentClose={closeAssessmentModal}
+      />
     </>
   );
 }

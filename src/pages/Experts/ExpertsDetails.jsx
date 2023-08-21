@@ -10,8 +10,10 @@ export default function ExpertsDetails() {
   return (
     <main>
       <header className="container mx-auto flex flex-col items-center py-4 lg:flex-row xl:py-6 2xl:py-8">
-        <h1 className="subheading heading-primary lg:w-4/5">
-          Meet Our Specialists
+        <h1 className=" lg:w-4/5">
+          <span className="subheading heading-primary">
+            Meet Our Specialists
+          </span>
         </h1>
 
         {/* Filters */}
@@ -86,8 +88,8 @@ export default function ExpertsDetails() {
 
       {/* Clients Testimonials */}
       <section className="container mx-auto pt-7 lg:pt-14">
-        <div className="mb-6">
-          <h2 className="subheading heading-primary mb-4 text-center">
+        <div className="mb-6  text-center">
+          <h2 className="subheading heading-primary mb-4">
             What Our Patients Say About Us
           </h2>
           <p className="mx-auto text-center font-medium leading-5 xl:text-lg xl:leading-6">

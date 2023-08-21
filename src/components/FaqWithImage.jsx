@@ -8,9 +8,9 @@ export default function FaqWithImage(props) {
   return (
     <>
       <section className="container mx-auto">
-        <hgroup className="subheading mb-2 text-center">
-          <h2>{textColorize(props.data.heading1)}</h2>
-          <h2>{textColorize(props.data.heading2)}</h2>
+        <hgroup className="mb-2 grid text-center">
+          <h2 className="subheading">{textColorize(props.data.heading1)}</h2>
+          <h2 className="subheading">{textColorize(props.data.heading2)}</h2>
         </hgroup>
 
         <p className="para text-center">{props.data.desc}</p>

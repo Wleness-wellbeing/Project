@@ -16,14 +16,14 @@ const ServicesTechniques = React.forwardRef((props, ref) => {
           <h4 className="py-2 text-2xl font-bold text-primary-400">
             {value.title}
           </h4>
-          <p className="pb-2 text-justify">{value.desc}</p>
+          <p className="pb-2 text-justify font-medium">{value.desc}</p>
           <div className="mt-2 text-center">
-            <Link
-              to="/appointment/checkout"
+            <button
+              onClick={props.openAssessmentModal}
               className="btn-one inline-block !py-2"
             >
               Book Now
-            </Link>
+            </button>
           </div>
         </figcaption>
       </figure>

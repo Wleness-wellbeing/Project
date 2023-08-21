@@ -50,8 +50,8 @@ export default function DoctorAppointment() {
   return (
     <>
       <header className="relative overflow-x-hidden">
-        <div className="container mx-auto pb-8 pt-12">
-          <h1 className="text-center text-4xl font-bold text-primary-400">
+        <div className="container mx-auto pb-8 pt-4">
+          <h1 className="pb-4 text-center text-4xl font-bold text-primary-400">
             Appointment Booking
           </h1>
           <figure className="mx-auto flex w-96 items-center justify-center gap-x-8 py-6 lg:w-[590px]">
@@ -79,17 +79,18 @@ export default function DoctorAppointment() {
               and non-judgmental approach, she creates a safe space for clients
               to explore their thoughts, feelings, and challenges.
             </p>
-            <span className="block text-right text-lg font-bold text-primary-400">
+            {/* <span className="block text-right text-lg font-bold text-primary-400">
               View More
-            </span>
+            </span> */}
           </div>
 
-          <div className="pt-10 text-center">
+          <div className="pt-7 text-center">
             <Link to="/appointment/checkout" className="btn-one inline-block">
               Book an appointment Now
             </Link>
           </div>
         </div>
+
         <img src={bgDotsPattern} alt="" className="absolute -right-20 top-0" />
         <img
           src={bgDotsPattern}

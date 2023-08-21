@@ -1,7 +1,12 @@
 import React from "react";
 import { textColorize } from "../utils";
 
-export default function HeaderWithButton({ title, desc, image }) {
+export default function HeaderWithButton({
+  title,
+  desc,
+  image,
+  openAssessmentModal,
+}) {
   return (
     <header className="container mx-auto flex flex-col items-center rounded-3xl !px-5 py-2 lg:flex-row lg:py-6 2xl:justify-between 2xl:!px-0 2xl:py-12">
       <h1 className="subheading mb-4 text-center lg:hidden lg:text-left lg:leading-[4rem]">
@@ -27,7 +32,9 @@ export default function HeaderWithButton({ title, desc, image }) {
           })}
         </div>
         <div className="text-center xl:text-left">
-          <button className="btn-one">Talk to Therapist</button>
+          <button className="btn-one" onClick={openAssessmentModal}>
+            Talk to Therapist
+          </button>
         </div>
       </div>
     </header>

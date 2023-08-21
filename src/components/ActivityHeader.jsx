@@ -1,6 +1,5 @@
 import React from "react";
 import { textColorize } from "../utils";
-import { Link } from "react-router-dom";
 
 export default function ActivityHeader(props) {
   return (
@@ -25,12 +24,12 @@ export default function ActivityHeader(props) {
           >
             Explore More
           </button>
-          <Link
-            to="/appointment/checkout"
+          <button
+            onClick={props.openAssessmentModal}
             className="btn-one inline-block !w-full border-2 !border-primary-400 !bg-transparent !py-2 !text-[#383838] hover:!bg-primary-400 hover:!text-white lg:!w-fit"
           >
             Book Now
-          </Link>
+          </button>
         </div>
 
         {/* BreadCrump */}

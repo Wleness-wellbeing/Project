@@ -13,14 +13,14 @@ export default function AssessmentOption(props) {
     <div className="group box-border flex items-stretch rounded-lg bg-gradient-to-r from-secondary to-tertiary p-[3px]">
       <button
         onClick={handleClick}
-        className={`flex w-full items-center rounded-md bg-white px-3 py-1.5 text-xs font-semibold hover:text-white md:text-sm lg:px-5 lg:py-2.5 lg:text-base ${
+        className={`flex w-full items-center justify-center rounded-md bg-white px-2 py-1.5 text-xs font-semibold hover:text-white md:text-sm lg:px-3 lg:py-2.5 lg:text-base ${
           isSelected[index]
             ? " !bg-primary-300 text-white"
             : "hover:bg-primary-300"
         }`}
       >
         <img src={props.image} alt="" className="mr-2 w-6 object-contain" />
-        {props.name}
+        <span>{props.name}</span>
       </button>
     </div>
   );
