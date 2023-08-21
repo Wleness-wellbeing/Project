@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { logo, signup } from "../../assets";
 import axios from "axios";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
-import Facebook from "../../components/googleAuth/facebookAuth";
+// import Facebook from "../../components/googleAuth/facebookAuth";
 import jwt_decode from "jwt-decode";
 
 // import FacebookAuth from "../../components/googleAuth/facebookAuth";
@@ -135,7 +135,7 @@ export default function Signup() {
                 }}
               />
             </GoogleOAuthProvider>
-            <Facebook />
+            {/* <Facebook /> */}
           </div>
           {/* Signup Form */}
           <form onSubmit={handleSubmit} className="mb-4 md:mb-8">
