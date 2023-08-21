@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 // Data
 import { psychiatristData } from "../../data/services";
 import { psychiatristClient } from "../../data/clients";
@@ -8,8 +8,17 @@ import GridHeader from "../../components/GridHeader";
 import SelectBest from "../../components/SelectBest";
 import HappyClient from "../../components/HappyClient";
 import DoctorsCard from "../../components/DoctorsCard";
+import Assessment from "../../components/Assessment";
 
 export default function Psychiatrist() {
+  const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
+  const openAssessmentModal = () => {
+    setShowAssessmentModal(true);
+  };
+
+  const closeAssessmentModal = () => {
+    setShowAssessmentModal(false);
+  };
   const ref = useRef(null);
 
   const handleScrollToComponent = () => {
@@ -28,6 +37,7 @@ export default function Psychiatrist() {
         image={psychiatristData.bestTherapist.featureImage}
         features={psychiatristData.bestTherapist.features}
         btn={psychiatristData.bestTherapist.startBtn}
+        openAssessmentModal={openAssessmentModal}
       />
       {/* Specialist Doctors */}
       <section>
@@ -69,6 +79,10 @@ export default function Psychiatrist() {
         />
       </section>
       <HappyClient data={psychiatristClient} />
+      <Assessment
+        isAssessmentOpen={isAssessmentModalOpen}
+        onAssessmentClose={closeAssessmentModal}
+      />
     </>
   );
 }

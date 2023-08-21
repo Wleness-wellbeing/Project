@@ -15,7 +15,7 @@ export default function ExpertsCard(props) {
       </div>
       <figcaption className="lg:w-[55%]">
         <Link to={props.data.slug}>
-          <h3 className="mb-3 text-4xl font-bold text-primary-400">
+          <h3 className="mb-3 text-2xl font-bold text-primary-400">
             {props.data.title}
           </h3>
         </Link>

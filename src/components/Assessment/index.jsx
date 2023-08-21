@@ -99,7 +99,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
       <div className="absolute mx-auto flex h-full w-full items-center justify-center overflow-hidden border-2 bg-white py-4 md:w-[720px] lg:relative lg:h-fit lg:w-[920px] lg:rounded-3xl lg:py-12">
         {/* Welcome Page */}
         {startAssessment && (
-          <div className="py-6 text-center lg:py-10 ">
+          <div className="py-6 text-center lg:h-[500px] lg:py-10 ">
             <h2 className="subheading mb-2 lg:mb-4">
               <span className="heading-primary">Welcome to Wleness</span>
             </h2>
@@ -158,7 +158,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
 
         {/* Screen 1 */}
         {screenOne && (
-          <div className="lg:mx-auto lg:w-[600px]">
+          <div className="lg:mx-auto lg:h-[500px] lg:w-[600px]">
             <h2 className="mb-0 flex flex-col text-center text-xl font-bold text-primary-300 lg:mb-8 lg:text-3xl">
               <span>What is in your mind?</span>
               <span>How are you feeling?</span>
@@ -196,7 +196,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
 
         {/* Screen 2 */}
         {screenTwo && (
-          <div className="px-2 lg:mx-auto lg:w-[640px]">
+          <div className="px-2 lg:mx-auto lg:h-[500px] lg:w-[640px]">
             <h2 className="mb-0 flex flex-col text-center text-xl font-bold text-primary-300 lg:mb-8 lg:text-3xl">
               How Long have you been experiencing these issues?
             </h2>
@@ -233,7 +233,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
 
         {/* Screen 3 */}
         {screenThree && (
-          <div className="px-2 lg:mx-auto lg:w-[600px] lg:px-0">
+          <div className="px-2 lg:mx-auto lg:h-[500px] lg:w-[600px] lg:px-0">
             <h2 className="mb-0 flex flex-col text-center text-xl font-bold text-primary-300 lg:mb-8 lg:text-3xl">
               Which language are you comfortable?
             </h2>
@@ -269,7 +269,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
 
         {/* Screen 4 */}
         {screenFour && (
-          <div className="px-4 lg:mx-auto lg:w-[600px] lg:px-0">
+          <div className="px-4 lg:mx-auto lg:h-[500px] lg:w-[600px] lg:px-0">
             <h2 className="flex flex-col text-center text-3xl font-bold text-primary-300 lg:text-4xl">
               Thanks, Let's Begin!
             </h2>

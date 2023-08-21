@@ -61,7 +61,7 @@ export default function Internship() {
       <main className="container mx-auto ">
         <div className="flex flex-col items-center justify-center md:flex-row">
           {/* Text items on the left */}
-          <div className="space-y-2 px-4 text-center md:w-1/2 md:text-left">
+          <div className="px-4 text-center md:w-1/2 md:text-left">
             <h1 className="subheading heading-primary">
               Looking for an Internship.
             </h1>
@@ -73,7 +73,7 @@ export default function Internship() {
               If yes, look no further! Join Wleness to embark on a rewarding
               journey promoting well-being and supporting individuals in need.
             </p>
-            <button className="btn-one !text-lg" onClick={openInternshipModal}>
+            <button className="btn-one" onClick={openInternshipModal}>
               Apply Now
             </button>
           </div>
@@ -154,8 +154,10 @@ export default function Internship() {
 
         {/* Want to know what is like to work at WLENESS */}
         <div className="mb-8">
-          <h1 className="subheading heading-primary text-center">
-            Want to know what it's like to work at WLENESS
+          <h1 className="text-center">
+            <span className="subheading heading-primary">
+              Want to know what it's like to work at WLENESS
+            </span>
           </h1>
 
           <div className="mt-4 grid grid-cols-5 items-center gap-4">

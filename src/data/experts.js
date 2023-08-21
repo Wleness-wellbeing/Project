@@ -18,5 +18,5 @@ export const expertsCoupleTherapy = {
   title: "Couple Therapy",
   desc: "We believe that every couple is unique, and their therapy should reflect that. Our couple therapy approach is tailored to meet the specific needs and dynamics of each relationship.",
   image: expertsWhy3,
-  slug: "/services/couple-therapy",
+  slug: "/services/couples-therapy",
 };

@@ -76,7 +76,7 @@ function Experts() {
               <span className="mr-2"> Mental Health Matters</span>
               <img src={faceIcon} alt="Header Icon" className="w-10" />
             </h3>
-            <h1 className="subheading mb-4 text-center lg:mb-10 lg:text-left lg:leading-[4rem]">
+            <h1 className="subheading mb-4 text-center lg:mb-10 lg:text-left">
               <span className="text-[#383838] lg:block">Unlock your</span>
               <span className="heading-primary">well being </span>
               <span className="text-[#383838]">with </span>
@@ -151,7 +151,7 @@ function Experts() {
           <figure className="mb-12 flex flex-col items-center lg:mb-2 lg:flex-row">
             <figcaption className="order-2 lg:order-1 lg:w-[55%]">
               <Link to={expertsPsychiatrist.slug}>
-                <h3 className="mb-3 text-4xl font-bold text-primary-400">
+                <h3 className="mb-3 text-2xl font-bold text-primary-400">
                   {expertsPsychiatrist.title}
                 </h3>
               </Link>

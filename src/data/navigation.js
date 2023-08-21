@@ -13,16 +13,16 @@ export const serviceMenuPages = [
     name: "Therapy",
     slug: "/services/therapy",
     subPages: [
-      ["Stress", "/issues/stress"],
-      ["Depression", "/issues/depression"],
-      ["Panic Attacks", "/issues/panic-attack"],
-      ["Anxiety", "/issues/anxiety"],
-      ["Bipolar Disorder", "/issues/bipolar-disorder"],
-      ["Schizophrenia", "/issues/schizophrenia"],
-      ["Paranoia", "/issues/paranoia"],
-      ["ADHD", "/issues/adhd"],
-      ["ODD", "/issues/odd"],
-      ["Contact Disorder", "/issues/contact-disorder"],
+      ["Stress", "/therapy/stress"],
+      ["Depression", "/therapy/depression"],
+      ["Panic Attacks", "/therapy/panic-attack"],
+      ["Anxiety", "/therapy/anxiety"],
+      ["Bipolar Disorder", "/therapy/bipolar-disorder"],
+      ["Schizophrenia", "/therapy/schizophrenia"],
+      ["Paranoia", "/therapy/paranoia"],
+      ["ADHD", "/therapy/adhd"],
+      ["ODD", "/therapy/odd"],
+      ["Contact Disorder", "/therapy/contact-disorder"],
     ],
   },
   {
@@ -84,31 +84,41 @@ export const menuPages = [
 ];
 
 // ================= Footer Links =================
-// Footer Explore Menu
-export const footerExplore = [
+// Footer - About Wleness
+export const footerAboutWleness = [
   ["About Us", "/about-us"],
-  ["Therapists", "/therapists"],
-  ["Issues", "/issues"],
   ["Career", "/career"],
-  ["Activities", "/activities"],
-];
-
-// Footer Quick Links
-export const footerQuickLinks = [
   ["Contact Us", "/contact-us"],
-  ["Blogs", "/blogs"],
   ["FAQ's", "/faqs"],
-  ["Privacy Policy", "/privacy-policy"],
-  ["Terms & Conditions", "/terms-and-conditions"],
 ];
 
-// Footer Frequent Issues
-export const footerFrequentIssues = [
-  ["Depression", "/issues/depression"],
-  ["Anxiety", "/issues/anxiety"],
-  ["ADHD", "/issues/adhd"],
-  ["Panic Attacks", "/issues/panic-attack"],
-  ["Biopolar Disorder", "/issues/biopolar-disorder"],
+// Footer - Our Services
+export const footerOurServices = [
+  ["Therapy", "/services/therapy"],
+  ["Executive Coaching", "/executive-coaching"],
+  ["Corporate", "/corporate"],
+  ["Couple Therapy", "/services/couples-therapy"],
+  ["Meditation", "/activities/meditation"],
+  ["Yoga", "/activities/yoga"],
+  ["Musical Thearpy", "/services/musical-therapy"],
+];
+
+// Footer - Focus Areas
+export const footerFocusAreas = [
+  ["Depression", "/therapy/depression"],
+  ["Anxiety", "/therapy/anxiety"],
+  ["Stress", "/therapy/stress"],
+  ["Panic Attack", "/therapy/panic-attack"],
+  ["Bipolar Disorder", "/therapy/bipolar-disorder"],
+  ["Relationship", "/therapy/relationship"],
+  ["Anger Issues", "/therapy/anger-issues"],
+];
+
+// Footer - Our Experts
+export const footerOurExperts = [
+  ["Therapist", "/services/therapy"],
+  ["Psychiatrist", "/services/psychiatrist"],
+  ["Couple Therapist", "/services/couples-therapy"],
 ];
 
 // Footer social links
@@ -126,7 +136,7 @@ export const adminSidebar = [
   ["Doctors", "/admin/doctors"],
   ["Queries", "/admin/queries"],
   ["Issue Category", "/admin/issue-category"],
-  ["Issues", "/admin/issues"],
+  ["Issues", "/admin/therapy"],
   ["Users", "/admin/users"],
   ["Questions", "/admin/questions"],
   ["Blogs", "/admin/blogs"],

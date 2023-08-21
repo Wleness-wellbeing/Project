@@ -87,67 +87,67 @@ import RightImageList from "../components/RightImageList";
 import LeftImageList from "../components/LeftImageList";
 import ActivityBlogs from "../components/ActivityBlogs";
 
-// Issues data for landing page
-export const issues = [
+// Therapies data for landing page
+export const therapies = [
   {
     name: "Stress",
     image: issueStress,
-    slug: "/issues/stress",
+    slug: "/therapy/stress",
   },
   {
     name: "Depression",
     image: issueDepression,
-    slug: "/issues/depression",
+    slug: "/therapy/depression",
   },
   {
     name: "Panic Attacks",
     image: issuePanicAttack,
-    slug: "/issues/panic-attack",
+    slug: "/therapy/panic-attack",
   },
   {
     name: "Anxiety",
     image: issueAnxiety,
-    slug: "/issues/anxiety",
+    slug: "/therapy/anxiety",
   },
   {
     name: "OCD",
     image: issueOcd,
-    slug: "/issues/ocd",
+    slug: "/therapy/ocd",
   },
   {
     name: "Bipolar Disorder",
     image: issueBiopolarDisorder,
-    slug: "/issues/bipolar-disorder",
+    slug: "/therapy/bipolar-disorder",
   },
   {
     name: "Schizophrenia",
     image: issueSchizophrenia,
-    slug: "/issues/schizophrenia",
+    slug: "/therapy/schizophrenia",
   },
   {
     name: "Eating Disorder",
     image: issueEatingDisorder,
-    slug: "/issues/eating-disorder",
+    slug: "/therapy/eating-disorder",
   },
   {
     name: "Paranoia",
     image: issueParanoia,
-    slug: "/issues/paranoia",
+    slug: "/therapy/paranoia",
   },
   {
     name: "ADHD",
     image: issueAdhd,
-    slug: "/issues/adhd",
+    slug: "/therapy/adhd",
   },
   {
     name: "ODD",
     image: issueOdd,
-    slug: "/issues/odd",
+    slug: "/therapy/odd",
   },
   {
     name: "Contact Disorder",
     image: issueCd,
-    slug: "/issues/contact-disorder",
+    slug: "/therapy/contact-disorder",
   },
 ];
 

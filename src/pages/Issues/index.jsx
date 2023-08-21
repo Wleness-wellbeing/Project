@@ -1,6 +1,6 @@
 import React from "react";
 import { issuesHeader } from "../../assets";
-import { issues } from "../../data";
+import { therapies } from "../../data";
 import { Link } from "react-router-dom";
 import IssueCard from "../../components/Cards/IssueCard";
 
@@ -124,7 +124,7 @@ function Issues() {
         {/* Issues */}
         <div className="pb-8">
           <div className="mx-auto grid gap-4 py-6 pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-12 lg:pt-8 xl:grid-cols-3 xl:gap-10 xl:pb-16 2xl:gap-16">
-            {issues.map((value, index) => {
+            {therapies.map((value, index) => {
               return <IssueCard key={index} data={value} />;
             })}
           </div>

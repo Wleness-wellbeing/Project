@@ -25,9 +25,9 @@ import {
   symptomsStress,
 } from "../assets";
 
-export const issuesData = [
+export const therapiesData = [
   {
-    slug: "/issues/stress",
+    slug: "/therapy/stress",
     header: {
       title: [
         {
@@ -131,7 +131,7 @@ export const issuesData = [
       "Research published in the journal JAMA Internal Medicine indicates that practicing stress reduction techniques can lead to a 38% reduction in the likelihood of developing anxiety disorders.",
   },
   {
-    slug: "/issues/depression",
+    slug: "/therapy/depression",
     header: {
       title: [
         {
@@ -226,7 +226,7 @@ export const issuesData = [
       "Over 80% of people with depression can experience significant improvement through therapy, medication, or a combination of both.",
   },
   {
-    slug: "/issues/panic-attack",
+    slug: "/therapy/panic-attack",
     header: {
       title: [
         {
@@ -318,7 +318,7 @@ export const issuesData = [
       "Panic attacks are more common than you might think, affecting approximately 2-3% of the global population at some point in their lives.",
   },
   {
-    slug: "/issues/anxiety",
+    slug: "/therapy/anxiety",
     header: {
       title: [
         {
@@ -428,7 +428,7 @@ export const issuesData = [
       "Research published in the Journal of Consulting and Clinical Psychology demonstrates that therapy interventions for anxiety can lead to significant improvements in as little as 8 to 12 weeks.",
   },
   {
-    slug: "/issues/ocd",
+    slug: "/therapy/ocd",
     header: {
       title: [
         {
@@ -520,7 +520,7 @@ export const issuesData = [
       "Effective treatments for OCD, such as Cognitive Behavioral Therapy (CBT) and medication, have success rates of around 70-80%. Seeking help increases your chances of achieving significant improvement.",
   },
   {
-    slug: "/issues/bipolar-disorder",
+    slug: "/therapy/bipolar-disorder",
     header: {
       title: [
         {
@@ -616,7 +616,7 @@ export const issuesData = [
       "Up to 60% of individuals with bipolar disorder experience co-occurring substance abuse. Seeking help can address these complex challenges.",
   },
   {
-    slug: "/issues/schizophrenia",
+    slug: "/therapy/schizophrenia",
     header: {
       title: [
         {
@@ -712,7 +712,7 @@ export const issuesData = [
       "Many individuals with schizophrenia can achieve significant recovery, with studies indicating that about 20-30% complete remission of symptoms and improved psychosocial functioning over time.",
   },
   {
-    slug: "/issues/eating-disorder",
+    slug: "/therapy/eating-disorder",
     header: {
       title: [
         {
@@ -804,7 +804,7 @@ export const issuesData = [
       "Continued treatment and post-treatment support reduce relapse rates, with studies indicating that relapse rates can be as low as 10% with ongoing care.",
   },
   {
-    slug: "/issues/paranoia",
+    slug: "/therapy/paranoia",
     header: {
       title: [
         {
@@ -909,7 +909,7 @@ export const issuesData = [
       "Virtual therapy has demonstrated a 30-40% reduction in paranoia severity, showcasing the potential of technology-based treatments.",
   },
   {
-    slug: "/issues/adhd",
+    slug: "/therapy/adhd",
     header: {
       title: [
         {
@@ -1023,7 +1023,7 @@ export const issuesData = [
       "Up to 70% of children with ADHD experience academic difficulties, affecting their educational progress and future opportunities.",
   },
   {
-    slug: "/issues/odd",
+    slug: "/therapy/odd",
     header: {
       title: [
         {
@@ -1134,7 +1134,7 @@ export const issuesData = [
       "Approximately 70-80% of children with ODD also meet the criteria for another mental health disorder, such as ADHD or conduct disorder.",
   },
   {
-    slug: "/issues/contact-disorder",
+    slug: "/therapy/contact-disorder",
     header: {
       title: [
         {

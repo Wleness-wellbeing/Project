@@ -21,8 +21,8 @@ export default function DoctorsCard(props) {
       </div>
       <figcaption className="px-6 py-2 pb-6">
         <hgroup>
-          <h3 className="flex items-center text-2xl font-semibold xs:text-3xl">
-            <span className="mr-10">{props.data.name}</span>
+          <h3 className="flex items-center justify-between text-2xl font-semibold">
+            <span>{props.data.name}</span>
             <HeartIcon />
           </h3>
           <h4 className="mb-2 text-lg font-semibold text-slate-500 xs:text-xl">

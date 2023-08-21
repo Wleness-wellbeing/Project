@@ -13,8 +13,8 @@ export default function index() {
   return (
     <>
       <header className="relative overflow-x-clip py-6">
-        <div className="container mx-auto">
-          <h1 className="subheading mb-2 text-center">
+        <div className="container mx-auto  text-center">
+          <h1 className="subheading mb-2">
             <span>Foster a </span>
             <span className="text-[#0A99D6]">Healthy and thriving work </span>
             <span>environment with Wleness</span>
@@ -46,8 +46,8 @@ export default function index() {
         />
       </header>
 
-      <section className="container mx-auto pt-6 lg:py-6">
-        <h2 className="subheading mb-4 text-center lg:mb-8 lg:px-24">
+      <section className="container mx-auto pt-6 text-center lg:py-6 ">
+        <h2 className="subheading mb-4 lg:mb-8 lg:px-24">
           <span>Why prioritize </span>
           <span className="text-[#0A99D6]">Corporate Well-being</span>
         </h2>
@@ -60,7 +60,7 @@ export default function index() {
                   <img src={value.image} alt="" className="w-full" />
                 </div>
                 <figcaption>
-                  <p className="px-2 text-justify text-xs font-semibold md:text-sm lg:text-base">
+                  <p className="px-2 text-xs font-semibold md:text-sm lg:text-base">
                     {value.desc.map((element, j) => {
                       return element.status ? (
                         <span className="text-[#0A99D6]">{element.text}</span>
@@ -85,7 +85,7 @@ export default function index() {
       <section>
         <div className="relative overflow-x-clip">
           <div className="container mx-auto mb-8 lg:py-6">
-            <h2 className="grid py-4 text-center text-xl font-bold lg:text-5xl">
+            <h2 className="grid py-4 text-center text-xl font-bold lg:text-3xl">
               <span className="mr-2 text-[#0A99D6]">
                 Navigating from Burnout to Breakthrough:
               </span>
@@ -117,11 +117,6 @@ export default function index() {
         </div>
 
         <div className="container mx-auto">
-          <h2 className="subheading grid text-center">
-            <span>Comprehensive Employee</span>
-            <span className="text-[#0A99D6]"> Well-being Hub</span>
-          </h2>
-
           <div className="items-center pb-6 lg:flex">
             <div className="py-4 lg:order-2 lg:w-1/2 lg:py-0">
               <img
@@ -130,8 +125,12 @@ export default function index() {
                 className="mx-auto w-4/5 object-cover"
               />
             </div>
-            <div className="text-center lg:order-1 lg:w-1/2">
-              <p className="pb-6 text-sm font-semibold lg:px-8 lg:text-base">
+            <div className="lg:order-1 lg:w-1/2">
+              <h2 className="subheading mb-4 !grid">
+                <span>Comprehensive Employee</span>
+                <span className="text-[#0A99D6]"> Well-being Hub</span>
+              </h2>
+              <p className="pb-6 text-sm font-semibold lg:pr-8 lg:text-base">
                 Discover a seamless solution for your employee well-being needs
                 with our integrated corporate wellness platform. Equipped with
                 state-of-the-art features, it offers a holistic approach to
@@ -150,8 +149,8 @@ export default function index() {
       </section>
 
       <section className="relative overflow-x-clip pb-12">
-        <div className="container mx-auto">
-          <h2 className="subheading text-center lg:px-24">
+        <div className="container mx-auto text-center">
+          <h2 className="subheading  lg:px-24">
             <span className="text-[#0A99D6]">Our Offerings </span>To Your
             Employees
           </h2>

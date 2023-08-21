@@ -11,10 +11,10 @@ export default function ActivityHeader(props) {
         </div>
         <div className="-m-5 mb-6 rounded-3xl p-5 md:mb-6 lg:order-1 lg:m-0 lg:mb-0 lg:rounded-none xl:w-[55%] xl:pl-0">
           <hgroup className="md:mb-3">
-            <h1 className="subheading mb-4 text-center lg:text-left lg:leading-[4rem]">
+            <h1 className="subheading mb-4 text-center lg:text-left">
               {textColorize(props.title)}
             </h1>
-            <h5 className="mb-8 text-2xl font-semibold">
+            <h5 className="mb-8 text-lg font-semibold">
               {textColorize(props.desc)}
             </h5>
           </hgroup>

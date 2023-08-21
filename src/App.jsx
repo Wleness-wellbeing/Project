@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Data
 import { activities, brainExercise } from "./data";
-import { issuesData } from "./data/issues";
+import { therapiesData } from "./data/issues";
 // Components
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -195,7 +195,7 @@ function App() {
           }
         />
         {/* Issues Subpages */}
-        {issuesData.map((value, index) => {
+        {therapiesData.map((value, index) => {
           return (
             <Route
               key={index}

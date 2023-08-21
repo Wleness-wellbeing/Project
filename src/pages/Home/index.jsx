@@ -5,11 +5,6 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import {
   headerMobile,
   headerDesktop,
-  iconCommunity,
-  iconEasyAccess,
-  iconEffective,
-  iconSafe,
-  iconSecure,
   iconInternshipAnnouncement,
   iconInternshipBoy,
   iconInternshipBriefcase,
@@ -19,9 +14,6 @@ import {
   community,
   doodle1,
   doodle2,
-  iconCommitment,
-  iconExperience,
-  iconFacilities,
   leaf1,
   leaf2,
   partner1,
@@ -42,17 +34,13 @@ import { Link } from "react-router-dom";
 import RequestForm from "../../components/RequestForm";
 import Feedback from "../../components/Feedback";
 import Testimonial from "../../components/testimonial/Testimonial";
-import { issues, objectives, whyChooseUs } from "../../data";
+import { objectives, therapies, whyChooseUs } from "../../data";
 import IssueCard from "../../components/Cards/IssueCard";
 import { homeTestimonials } from "../../data/testimonials";
 
 export default function Home() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
   const [isFeedbackOpen, setFeedback] = useState(false);
-  const button = {
-    slug: "/experts/all",
-    text: "Find the Experts",
-  };
 
   const openAssessmentModal = () => {
     setShowAssessmentModal(true);
@@ -151,8 +139,8 @@ export default function Home() {
         </div>
         {/* Issues */}
         <div className="bg-gradient-to-br from-primary-10 to-white pb-6 font-quicksand lg:pb-10">
-          <div className="container mx-auto grid gap-4 py-6 pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-10 lg:pt-12 xl:grid-cols-3 xl:gap-10 2xl:grid-cols-4 2xl:gap-x-8 2xl:gap-y-14">
-            {issues.slice(0, 8).map((value, index) => {
+          <div className="container mx-auto grid gap-4 py-6 pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-10 lg:pt-12 xl:grid-cols-3 xl:gap-10 2xl:grid-cols-4 2xl:gap-5">
+            {therapies.slice(0, 8).map((value, index) => {
               return <IssueCard key={index} data={value} />;
             })}
           </div>
@@ -277,7 +265,7 @@ export default function Home() {
               </Link>
             </article>
             <div className="lg:w-2/5">
-              <div className="3xl:w-72">
+              <div className="lg:w-72">
                 <img src={community} alt="" className="w-full object-cover" />
               </div>
             </div>
@@ -334,7 +322,10 @@ export default function Home() {
             <div className="space-y-3 lg:ml-12">
               {whyChooseUs.map((value, i) => {
                 return (
-                  <figure className="flex rounded-xl rounded-br-[5rem] border-2 border-slate-200 bg-white p-4 shadow-md xs:flex-row lg:items-center lg:p-5 lg:py-3 xl:py-6">
+                  <figure
+                    key={i}
+                    className="flex rounded-xl rounded-br-[5rem] border-2 border-slate-200 bg-white p-4 shadow-md xs:flex-row lg:items-center lg:p-5 lg:py-3 xl:py-6"
+                  >
                     <div className="mr-4 w-1/5 xs:w-1/5 xl:w-1/5 3xl:w-[15%]">
                       <img
                         src={value.image}
@@ -343,7 +334,7 @@ export default function Home() {
                       />
                     </div>
                     <figcaption className="w-4/5 xs:w-4/5 xl:w-4/5 3xl:w-[85%]">
-                      <h4 className="heading-primary mb-1 text-sm font-bold sm:text-2xl">
+                      <h4 className="heading-primary mb-1 text-sm font-bold sm:text-xl">
                         {value.title}
                       </h4>
                       <p className="text-xs font-medium leading-4 text-slate-600 xs:text-xs xs:leading-4 sm:text-base sm:leading-5 lg:pr-5 lg:text-sm lg:leading-4 xl:text-base xl:leading-5">
@@ -479,7 +470,6 @@ export default function Home() {
       <Assessment
         isAssessmentOpen={isAssessmentModalOpen}
         onAssessmentClose={closeAssessmentModal}
-        button={button}
       />
 
       <Feedback isOpen={isFeedbackOpen} onClose={closeFeedbackModal} />

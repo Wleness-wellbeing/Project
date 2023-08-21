@@ -1,8 +1,5 @@
 import React from "react";
 import { themeWAve } from "../assets";
-import { Link } from "react-router-dom";
-import { issues } from "../data";
-import IssueCard from "./Cards/IssueCard";
 
 const SelectBest = React.forwardRef((props, ref) => {
   return (
@@ -32,9 +29,9 @@ const SelectBest = React.forwardRef((props, ref) => {
           </div>
 
           <div className="pb-10 pt-14 text-center" ref={ref}>
-            <Link to={props.btn[1]} className="btn-one">
-              {props.btn[0]}
-            </Link>
+            <button className="btn-one" onClick={props.openAssessmentModal}>
+              Start the Therapy
+            </button>
           </div>
 
           <img

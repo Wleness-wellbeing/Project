@@ -1,12 +1,4 @@
 import React from "react";
-import {
-  iconFacebook,
-  iconInstagram,
-  iconLinkedin,
-  iconTwitter,
-  iconWhatsapp,
-  logoTransparent,
-} from "../../assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faGlobe,
@@ -14,31 +6,29 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import {
-  footerExplore,
-  footerFrequentIssues,
-  footerQuickLinks,
-  serviceMenuPages,
+  footerAboutWleness,
+  footerOurServices,
+  footerFocusAreas,
+  footerOurExperts,
   socialLinks,
 } from "../../data/navigation";
 import { Link } from "react-router-dom";
+import { startUpIndiaLogo } from "../../assets";
 
 export default function Footer() {
   return (
     <>
       {/* ========== Footer ========== */}
-      <footer className="border-b-[1px] bg-[#8EE5DC] pb-10 pt-14 font-medium">
-        <div className="container mx-auto">
-          <div>
-            <img src={logoTransparent} alt="" className="w-44 xl:w-64" />
-          </div>
-          <div className="space-y-6 sm:grid sm:grid-cols-2 sm:gap-4 sm:space-y-0 lg:grid-cols-5 xl:pb-0 xl:pt-12">
+      <footer className="border-b-[1px] bg-[#E9FBF9] font-medium">
+        <div className="container mx-auto py-12">
+          <div className="space-y-6 sm:grid sm:grid-cols-2 sm:gap-4 sm:space-y-0 lg:grid-cols-5 xl:pb-0">
             <div>
-              <h2 className="mb-6 text-2xl font-semibold">Location</h2>
+              <h2 className="mb-4 text-xl font-semibold">Location</h2>
               <ul className="space-y-4">
                 <li className="flex items-center">
                   <FontAwesomeIcon icon={faLocationDot} className="mr-3" />
                   <span className="font-medium">
-                    1, DLF Phase 5, Sec 43, Gurgaon, 122022.
+                    2, Spring House, Sec 43, Golfcourse road, Gurgaon, 122022.
                   </span>
                 </li>
                 <li className="flex items-center">
@@ -52,9 +42,9 @@ export default function Footer() {
               </ul>
             </div>
             <div className="lg:pl-7">
-              <h2 className="mb-6 text-2xl font-semibold">Our Services</h2>
+              <h2 className="mb-4 text-xl font-semibold">About Wleness</h2>
               <ul className="space-y-1">
-                {serviceMenuPages.map((value, index) => {
+                {footerAboutWleness.map((value, index) => {
                   return (
                     <li key={index}>
                       <Link to={value[1]}>{value[0]}</Link>
@@ -63,22 +53,10 @@ export default function Footer() {
                 })}
               </ul>
             </div>
-            <div className="lg:pl-8">
-              <h4 className="mb-6 text-2xl font-semibold">Explore</h4>
+            <div className="lg:pl-3">
+              <h4 className="mb-4 text-xl font-semibold">Our Services</h4>
               <ul className="space-y-1">
-                {footerExplore.map((value, index) => {
-                  return (
-                    <li key={index}>
-                      <Link to={value[1]}>{value[0]}</Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-            <div>
-              <h4 className="mb-6 text-2xl font-semibold">Quick Links</h4>
-              <ul className="space-y-1">
-                {footerQuickLinks.map((value, index) => {
+                {footerOurServices.map((value, index) => {
                   return (
                     <li key={index}>
                       <Link to={value[1]}>{value[0]}</Link>
@@ -88,32 +66,71 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h4 className="mb-6 text-2xl font-semibold">Frequent Issues</h4>
+              <h4 className="mb-4 text-xl font-semibold">Focus Area's</h4>
               <ul className="space-y-1">
-                {footerFrequentIssues.map((value, index) => {
+                {footerFocusAreas.map((value, index) => {
                   return (
                     <li key={index}>
                       <Link to={value[1]}>{value[0]}</Link>
                     </li>
                   );
                 })}
+              </ul>
+            </div>
+            <div>
+              <h4 className="mb-4 text-xl font-semibold">Our Experts</h4>
+              <ul className="space-y-1">
+                {footerOurExperts.map((value, index) => {
+                  return (
+                    <li key={index}>
+                      <Link to={value[1]}>{value[0]}</Link>
+                    </li>
+                  );
+                })}
+              </ul>
+              <h4 className="my-3 text-xl font-semibold">Library</h4>
+              <ul className="space-y-1">
+                <li>
+                  <Link to="/blogs">Blogs</Link>
+                </li>
+                <li>
+                  <Link to="">Assessments</Link>
+                </li>
               </ul>
             </div>
           </div>
         </div>
-        <div className="container mx-auto mt-4 flex lg:justify-end">
-          {socialLinks.map((value, i) => {
-            return (
-              <Link to={value[1]} key={i}>
-                <img src={value[0]} alt="whatsapp" className="w-10" />
-              </Link>
-            );
-          })}
+
+        <div className="container mx-auto pb-4">
+          <div className="pb-2 text-right">
+            <Link to="/privacy-policy" className="text-sm">
+              Privacy Policy
+            </Link>
+            <span> | </span>
+            <Link to="/terms-and-conditions" className="text-sm">
+              Terms & Conditions
+            </Link>
+          </div>
+          <div className="flex items-center justify-between">
+            <div>
+              <img src={startUpIndiaLogo} alt="" />
+            </div>
+            <div className="flex">
+              {socialLinks.map((value, i) => {
+                return (
+                  <Link to={value[1]} key={i}>
+                    <img src={value[0]} alt="whatsapp" className="w-9" />
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
         </div>
+
+        <p className="pb-5 pt-3 text-center text-sm font-medium">
+          @2023 Wleness || All Rights Reserved
+        </p>
       </footer>
-      <p className="bg-[#8EE5DC] py-3 text-center font-medium">
-        @2023 Wleness || All Rights Reserved
-      </p>
     </>
   );
 }

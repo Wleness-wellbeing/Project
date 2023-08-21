@@ -7,7 +7,6 @@ import JoinUs from "../JoinUs";
 import { logo } from "../../assets";
 import {
   activitiesMenuPages,
-  footerFrequentIssues,
   menuPages,
   serviceMenuPages,
 } from "../../data/navigation";
