@@ -28,7 +28,7 @@ export default function GridHeader(props) {
         <div>
           <img src={props.image} alt="" className="w-full" />
         </div>
-        <p className="para mb-8 px-20 text-center">
+        <p className="para mb-8 text-center lg:px-20">
           Discover transformative counseling and online therapy for growth,
           healing, and resilience, empowering you with compassionate support for
           renewed well-being.
@@ -40,12 +40,12 @@ export default function GridHeader(props) {
       <img
         src={cloudWithDots}
         alt=""
-        className="absolute -right-56 top-20 -z-10 lg:w-[480px]"
+        className="absolute -right-20 top-20 -z-10 w-48 lg:-right-56 lg:w-[480px]"
       />
       <img
         src={cloudWithDots}
         alt=""
-        className="absolute bottom-0 left-0 -z-10 lg:w-96"
+        className="absolute -left-14 bottom-0 -z-10 w-44 lg:left-0 lg:w-96"
       />
       <Assessment
         isAssessmentOpen={isAssessmentModalOpen}

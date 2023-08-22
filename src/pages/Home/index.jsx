@@ -103,7 +103,7 @@ export default function Home() {
 
         <div className="-m-5 mb-6 rounded-3xl bg-primary-50/30 p-5 md:mb-6 lg:order-1 lg:m-0 lg:mb-0 lg:rounded-none lg:bg-transparent xl:w-[55%] xl:pl-4 2xl:pl-10">
           <hgroup className="md:mb-3">
-            <h1 className="heading-primary pb-1 font-quicksand text-[1.3rem] font-bold sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-[2.5rem]">
+            <h1 className="heading-primary pb-1 font-quicksand text-2xl font-bold sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-[2.5rem]">
               Partnering Your Well Being
             </h1>
           </hgroup>

@@ -9,9 +9,9 @@ export default function FeaturesBlock(props) {
             <img
               src={value.image}
               alt="Icon 2"
-              className="mx-auto h-12 w-12 object-contain"
+              className="mx-auto mb-2 h-8 w-8 object-contain lg:h-12 lg:w-12"
             />
-            <h4 className="text-lg font-bold">{value.name}</h4>
+            <h4 className="text-xs font-bold lg:text-lg">{value.name}</h4>
           </div>
         );
       })}

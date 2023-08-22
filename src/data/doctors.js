@@ -19,7 +19,7 @@ export const couplesTherapyDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
+      size: "scale-75 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -27,7 +27,7 @@ export const couplesTherapyDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
+      size: "scale-95 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -35,7 +35,7 @@ export const couplesTherapyDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-105",
+      size: "scale-105",
     },
     {
       name: "Dr. Christina",
@@ -43,7 +43,7 @@ export const couplesTherapyDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
+      size: "scale-95 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -51,7 +51,7 @@ export const couplesTherapyDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
+      size: "scale-75 hidden lg:block ",
     },
   ],
   button: {
@@ -83,7 +83,7 @@ export const expertDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
+      size: "scale-75 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -91,7 +91,7 @@ export const expertDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
+      size: "scale-95 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -99,7 +99,7 @@ export const expertDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-105",
+      size: "scale-105",
     },
     {
       name: "Dr. Christina",
@@ -107,7 +107,7 @@ export const expertDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
+      size: "scale-95 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -115,7 +115,7 @@ export const expertDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
+      size: "scale-75 hidden lg:block ",
     },
   ],
   button: {
@@ -271,7 +271,7 @@ export const stressDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
+      size: "scale-75 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -279,7 +279,7 @@ export const stressDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
+      size: "scale-95 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -287,7 +287,7 @@ export const stressDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-105",
+      size: "scale-105",
     },
     {
       name: "Dr. Christina",
@@ -295,7 +295,7 @@ export const stressDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
+      size: "scale-95 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -303,7 +303,7 @@ export const stressDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
+      size: "scale-75 hidden lg:block ",
     },
   ],
   button: {

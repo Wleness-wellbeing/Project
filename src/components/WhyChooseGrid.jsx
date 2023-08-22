@@ -8,19 +8,24 @@ export default function WhyChooseGrid(props) {
         <span className="heading-primary">Therapy</span>
       </h2>
 
-      <div className="container mx-auto grid gap-5 lg:grid-cols-5">
+      <div className="container mx-auto grid grid-cols-2 gap-5 lg:grid-cols-5">
         {props.data.map((value, index) => {
           return (
             <figure key={index}>
               <div>
-                <img src={value.image} alt="" className="mx-auto w-fit" />
+                <img
+                  src={value.image}
+                  alt=""
+                  className="mx-auto w-24 lg:w-fit"
+                />
               </div>
               <figcaption>
-                <h4 className="my-2 px-6 text-center text-xl font-bold text-primary-400">
-                  {/* {console.log(value.title)} */}
+                <h4 className="my-2 px-6 text-center text-lg font-bold leading-6 text-primary-400 lg:text-xl">
                   {value.title}
                 </h4>
-                <p className="text-center font-semibold">{value.desc}</p>
+                <p className="text-center text-sm font-semibold md:text-base">
+                  {value.desc}
+                </p>
               </figcaption>
             </figure>
           );

@@ -8,15 +8,24 @@ export default function FaqWithImage(props) {
   return (
     <>
       <section className="container mx-auto">
-        <hgroup className="mb-2 grid text-center">
-          <h2 className="subheading">{textColorize(props.data.heading1)}</h2>
-          <h2 className="subheading">{textColorize(props.data.heading2)}</h2>
-        </hgroup>
+        <div className="text-center">
+          <hgroup className="subheading mb-2 grid">
+            <h2>{textColorize(props.data.heading1)}</h2>
+            <h2>{textColorize(props.data.heading2)}</h2>
+          </hgroup>
+        </div>
 
         <p className="para text-center">{props.data.desc}</p>
 
         <div className="py-10 lg:flex">
-          <div className="w-1/2 space-y-4">
+          <div className="mb-8 lg:mb-0 lg:w-1/2">
+            <img
+              src={props.data.image}
+              alt=""
+              className="mx-auto block object-cover lg:w-80"
+            />
+          </div>
+          <div className="space-y-4 lg:w-1/2">
             {props.data.qnas.map((value, index) => {
               return (
                 <details
@@ -33,13 +42,6 @@ export default function FaqWithImage(props) {
                 </details>
               );
             })}
-          </div>
-          <div className="w-1/2">
-            <img
-              src={props.data.image}
-              alt=""
-              className="mx-auto block w-80 object-cover"
-            />
           </div>
         </div>
       </section>

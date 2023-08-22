@@ -11,7 +11,7 @@ import { doodle2 } from "../assets";
 
 export default function HappyClient(props) {
   return (
-    <section className="relative py-6 text-center lg:py-10">
+    <section className="relative px-4 py-6 text-center lg:px-0 lg:py-10">
       <h2 className="subheading">{textColorize(props.data.heading)}</h2>
       <div className="container mx-auto py-2 lg:py-4">
         <div className="relative pb-4 lg:!pr-0 lg:pb-0">
@@ -39,7 +39,7 @@ export default function HappyClient(props) {
                       <h6 className="mb-4 text-center font-medium text-slate-400 lg:text-left 2xl:text-xl">
                         {value.profession}
                       </h6>
-                      <p className="mb-1 text-justify sm:text-lg md:text-base md:leading-5 lg:pr-8 2xl:text-xl">
+                      <p className="mb-1 text-center font-medium sm:text-lg md:text-base md:leading-5 lg:pr-8 lg:text-left 2xl:text-xl">
                         {value.review}
                       </p>
                     </figcaption>

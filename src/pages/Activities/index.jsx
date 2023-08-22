@@ -22,13 +22,14 @@ function Activities() {
         </div>
         <div className="-m-5 mb-6 rounded-3xl p-5 md:mb-6 lg:order-1 lg:m-0 lg:mb-0 lg:rounded-none xl:w-[55%] xl:pl-0">
           <hgroup className="md:mb-3">
-            <h1 className="subheading mb-4 text-center lg:mb-10 lg:text-left lg:leading-[4rem]">
+            <h1 className="subheading mb-4 text-center lg:mb-10 lg:text-left">
               <span className="text-[#383838] lg:block">Discover the </span>
               <span className="heading-primary">healing </span>
               <span className="text-[#383838]">power of </span>
               <span className="heading-primary">Meditation</span>
             </h1>
           </hgroup>
+          <button className="btn-one">Book an appointment Now</button>
         </div>
       </header>
 

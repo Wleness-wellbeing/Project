@@ -45,7 +45,7 @@ function CouplesTherapy() {
       <FeaturesBlock data={couplesTherapyFeatures} />
 
       {/* How Section  */}
-      <section className="container mx-auto !px-0">
+      <section className="container mx-auto lg:!px-0">
         <div className="text-center">
           <h2 className="subheading py-12">
             {textColorize([
@@ -66,31 +66,31 @@ function CouplesTherapy() {
         </div>
 
         <div>
-          <figure className="flex gap-x-5 pb-6 pt-12">
-            <div className="w-2/5">
+          <figure className="gap-x-5 pb-6 pt-6 lg:flex lg:pt-12">
+            <div className="mb-6 lg:mb-0 lg:w-2/5">
               <img
                 src={couplesTherapy1}
                 alt=""
                 className="block w-full object-cover"
               />
             </div>
-            <figcaption className="w-3/5 self-center">
-              <div className="mr-20 rounded-2xl border-2 border-primary-50 px-6 py-3">
+            <figcaption className="lg:w-3/5 lg:self-center">
+              <div className="mr-14 rounded-2xl border-2 border-primary-50 px-6 py-3 lg:mr-20">
                 <h6 className="text-lg font-bold text-primary-400">
                   Dedicated experts team:
                 </h6>
-                <p className="font-medium">
+                <p className="text-sm font-medium lg:text-base">
                   With years of specialized training and a compassionate
                   approach, our team of best counselors can guide you through
                   challenges and help you build a stronger, more fulfilling
                   connection.
                 </p>
               </div>
-              <div className=" -mt-2 ml-20 rounded-2xl rounded-br-[4rem] bg-primary-50 px-6 py-3 shadow-lg">
+              <div className="-mt-2 ml-14 rounded-2xl rounded-br-[4rem] bg-primary-50 px-6 py-3 shadow-lg lg:ml-20">
                 <h6 className="text-lg font-bold text-primary-400">
                   Tailored Approach:
                 </h6>
-                <p className="font-medium">
+                <p className="text-sm font-medium lg:text-base">
                   We understand that every couple is unique, and there is no
                   one-size-fits-all solution. Our therapy sessions are
                   customized to address your specific needs, concerns, and
@@ -100,13 +100,20 @@ function CouplesTherapy() {
               </div>
             </figcaption>
           </figure>
-          <figure className="flex gap-x-5 py-12">
-            <figcaption className="w-3/5 self-center">
+          <figure className="gap-x-5 pb-6 pt-6 lg:flex lg:pt-12">
+            <div className="mb-6 lg:order-2 lg:mb-0 lg:w-2/5">
+              <img
+                src={couplesTherapy2}
+                alt=""
+                className="mx-auto block w-fit object-cover"
+              />
+            </div>
+            <figcaption className="lg:order-1 lg:w-3/5 lg:self-center">
               <div className="mr-20 rounded-2xl border-2 border-primary-50 px-6 py-3">
                 <h6 className="text-lg font-bold text-primary-400">
                   Accessibility:
                 </h6>
-                <p className="font-medium">
+                <p className="text-sm font-medium lg:text-base">
                   Get a one-to-one therapy session with the best therapist from
                   the comfort of your home through video, calls or chats, to
                   deal with your ongoing issues.
@@ -116,7 +123,7 @@ function CouplesTherapy() {
                 <h6 className="text-lg font-bold text-primary-400">
                   Safe and Non-Judgmental Space:
                 </h6>
-                <p className="font-medium">
+                <p className="text-sm font-medium lg:text-base">
                   Our therapy environment is a safe haven where you and your
                   partner can express yourselves openly without fear of
                   judgment. We foster a nurturing atmosphere, encouraging honest
@@ -124,13 +131,6 @@ function CouplesTherapy() {
                 </p>
               </div>
             </figcaption>
-            <div className="w-2/5">
-              <img
-                src={couplesTherapy2}
-                alt=""
-                className="mx-auto block w-fit object-cover"
-              />
-            </div>
           </figure>
         </div>
       </section>
