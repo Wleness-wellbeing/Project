@@ -38,8 +38,8 @@ export default function CampusAmbassador() {
   };
   return (
     <main>
-      <header className="relative overflow-y-auto overflow-x-hidden py-6">
-        <h1 className="subheading mb-4 text-center">
+      <header className="relative overflow-y-auto overflow-x-hidden py-6  text-center">
+        <h1 className="subheading mb-4">
           <span className="heading-primary">Campus Ambassador</span>
         </h1>
         <div className="container mx-auto">
@@ -104,8 +104,8 @@ export default function CampusAmbassador() {
       </section>
 
       {/* Why to Apply */}
-      <section className="relative">
-        <h2 className="subheading text-center">
+      <section className="relative  text-center">
+        <h2 className="subheading">
           Why you should <span className="heading-primary">Apply?</span>
         </h2>
         <div className="container relative mx-auto flex pt-8">
@@ -169,8 +169,8 @@ export default function CampusAmbassador() {
       </section>
 
       {/* Roles */}
-      <section className="relative py-10">
-        <h2 className="subheading mb-10 text-center">
+      <section className="relative py-10  text-center">
+        <h2 className="subheading mb-10">
           Roles and <span className="heading-primary">Responsibility</span>
         </h2>
         <div className="container mx-auto flex gap-8">
@@ -203,16 +203,16 @@ export default function CampusAmbassador() {
 
       {/* Who can join */}
       <section className="relative overflow-y-auto overflow-x-hidden py-20">
-        <div className="container mx-auto">
-          <h2 className="subheading mb-4 text-center">
+        <div className="container mx-auto text-center">
+          <h2 className="subheading mb-4">
             Who can join <span className="heading-primary">Wleness</span>
           </h2>
-          <p className="mb-8 px-10 text-center text-xl font-semibold">
+          <p className="mb-8 px-10 text-xl font-semibold">
             An energetic passionate Psychology Students pursuing
             under-graduation & post-graduation from any university or college
             across India.
           </p>
-          <div className="text-center">
+          <div>
             <button className="btn-one">Join Us Now</button>
           </div>
         </div>

@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { Bubble } from "../assets";
 import ProfessionalDetails from "./TherapistProfessionalDetails";
+import { Link } from "react-router-dom";
 
 const TherapistJoiningForm = () => {
   const [personalDetailsSaved, setPersonalDetailsSaved] = useState(false);
 
   const handleSaveAndContinue = () => {
     setPersonalDetailsSaved(true);
+  };
+
+  const handleBack = () => {
+    setPersonalDetailsSaved(false);
   };
   return (
     <div className="container mx-auto  ">
@@ -99,17 +104,23 @@ const TherapistJoiningForm = () => {
               />
             </div>
           </div>
-          <div className="mt-8 text-center">
+          <div className="mt-8 flex items-center justify-center gap-x-4">
+            <Link
+              to="/"
+              className="btn-transparent !w-fit !border-primary-300 !py-2 font-semibold text-primary-400"
+            >
+              Back
+            </Link>
             <button
               onClick={handleSaveAndContinue}
-              className="rounded-xl    bg-primary-300 px-4 py-2.5 font-semibold text-white hover:bg-primary-500"
+              className="rounded-xl bg-primary-300 px-4 py-2.5 font-semibold text-white hover:bg-primary-500"
             >
               Save & Continue
             </button>
           </div>
         </div>
       ) : (
-        <ProfessionalDetails />
+        <ProfessionalDetails handleBack={handleBack} />
       )}
       <img
         src={Bubble}

@@ -5,6 +5,7 @@ import {
   faBell,
   faComments,
   faEllipsis,
+  faHouse,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,11 +15,19 @@ import PatientListItem from "../../components/list/PatientListItem";
 import { patientsList } from "../../data/patients";
 import PatientItem from "../../components/list/PatientItem";
 import UpcomingMeets from "../../components/list/UpcomingMeets";
+import { Link } from "react-router-dom";
 
 export default function DoctorDashboard() {
   return (
     <main className="flex">
-      <aside className="w-[10%] bg-primary-50"></aside>
+      <aside className="w-[10%] bg-primary-50 text-center">
+        <Link to="/">
+          <FontAwesomeIcon
+            icon={faHouse}
+            className="mt-5 cursor-pointer rounded-full border-2 border-primary-300 p-2 text-2xl text-primary-400 transition-colors hover:text-primary-300"
+          />
+        </Link>
+      </aside>
       <section className="w-[90%] px-8 pb-3 pt-5">
         <nav className="mb-5 flex justify-between gap-5">
           <div className="w-[65%]">

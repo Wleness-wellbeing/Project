@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Bubble } from "../assets";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const PsychiatristJoiningForm = () => {
   const [personalDetails, setPersonalDetails] = useState({
@@ -79,7 +80,9 @@ const PsychiatristJoiningForm = () => {
   const handlePersonalDetailsSaveAndContinue = () => {
     setShowProfessionalDetails(true);
   };
-
+  const handleBack = () => {
+    setShowProfessionalDetails(false);
+  };
   return (
     <div className="container mx-auto">
       <img
@@ -92,7 +95,7 @@ const PsychiatristJoiningForm = () => {
           <>
             <div className="mx-auto  w-3/4  rounded-2xl p-8 shadow-lg shadow-slate-300">
               <h2 className="mt-4 text-center text-3xl font-bold text-primary-400 ">
-                Therapist Joining Form - Personal Details
+                Psychiatrist Joining Form - Personal Details
               </h2>
               <div className="my-10 grid grid-cols-2 gap-4">
                 <div>
@@ -250,7 +253,13 @@ const PsychiatristJoiningForm = () => {
                   />
                 </div>
               </div>
-              <div className="mt-8 text-center">
+              <div className="mt-8 flex items-center justify-center gap-x-4">
+                <Link
+                  to="/"
+                  className="btn-transparent !w-fit !border-primary-300 !py-2 font-semibold text-primary-400"
+                >
+                  Back
+                </Link>
                 <button
                   type="button"
                   onClick={handlePersonalDetailsSaveAndContinue}
@@ -419,7 +428,13 @@ const PsychiatristJoiningForm = () => {
                 />
               </div>
             </div>
-            <div className=" text-center">
+            <div className="flex items-center justify-center gap-x-4  ">
+              <button
+                onClick={handleBack}
+                className="btn-transparent !w-fit !border-primary-300 !py-2 font-semibold text-primary-400"
+              >
+                Back
+              </button>
               <button
                 type="submit"
                 className="rounded-xl bg-primary-300 px-4 py-2.5 font-semibold text-white hover:bg-primary-500"

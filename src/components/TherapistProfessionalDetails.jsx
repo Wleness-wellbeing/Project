@@ -1,7 +1,8 @@
 // ProfessionalDetails.js
 import React from "react";
+import { Link } from "react-router-dom";
 
-const ProfessionalDetails = () => {
+const ProfessionalDetails = ({ handleBack }) => {
   return (
     <div className="col-span-2 mx-auto w-3/4 rounded-2xl p-2 px-6 shadow-lg shadow-slate-300">
       <h2 className="mt-4 text-center text-3xl font-bold text-primary-400">
@@ -101,7 +102,13 @@ const ProfessionalDetails = () => {
           />
         </div>
       </div>
-      <div className=" text-center">
+      <div className="flex items-center justify-center gap-x-4">
+        <button
+          onClick={handleBack}
+          className="btn-transparent !w-fit !border-primary-300 !py-2 font-semibold text-primary-400"
+        >
+          Back
+        </button>
         <button className="rounded-xl bg-primary-300 px-4 py-2.5 font-semibold text-white hover:bg-primary-500">
           Submit
         </button>
