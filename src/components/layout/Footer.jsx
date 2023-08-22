@@ -11,6 +11,7 @@ import {
   footerFocusAreas,
   footerOurExperts,
   socialLinks,
+  footerLocation,
 } from "../../data/navigation";
 import { Link } from "react-router-dom";
 import { startUpIndiaLogo } from "../../assets";
@@ -25,20 +26,20 @@ export default function Footer() {
             <div>
               <h2 className="mb-4 text-xl font-semibold">Location</h2>
               <ul className="space-y-4">
-                <li className="flex items-center">
-                  <FontAwesomeIcon icon={faLocationDot} className="mr-3" />
-                  <span className="font-medium">
-                    2, Spring House, Sec 43, Golfcourse road, Gurgaon, 122022.
-                  </span>
-                </li>
-                <li className="flex items-center">
-                  <FontAwesomeIcon icon={faGlobe} className="mr-3" />
-                  <span className="font-medium">www.wleness.com</span>
-                </li>
-                <li className="flex items-center">
-                  <FontAwesomeIcon icon={faPhone} className="mr-3" />
-                  <span className="font-medium">+91 8764387421</span>
-                </li>
+                {footerLocation.map((value, i) => {
+                  return (
+                    <li key={i}>
+                      <Link
+                        to={value[1]}
+                        className="flex items-center"
+                        target="_blank"
+                      >
+                        <FontAwesomeIcon icon={value[2]} className="mr-3" />
+                        <span className="font-medium">{value[0]}</span>
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
             <div className="lg:pl-7">
@@ -88,7 +89,7 @@ export default function Footer() {
                   );
                 })}
               </ul>
-              <h4 className="my-3 text-xl font-semibold">Library</h4>
+              <h4 className="my-2 text-xl font-semibold">Library</h4>
               <ul className="space-y-1">
                 <li>
                   <Link to="/blogs">Blogs</Link>
@@ -115,11 +116,11 @@ export default function Footer() {
             <div>
               <img src={startUpIndiaLogo} alt="" />
             </div>
-            <div className="flex">
+            <div className="flex gap-x-1">
               {socialLinks.map((value, i) => {
                 return (
-                  <Link to={value[1]} key={i}>
-                    <img src={value[0]} alt="whatsapp" className="w-9" />
+                  <Link to={value[1]} key={i} target="_blank">
+                    <img src={value[0]} alt="whatsapp" className="h-7 w-7" />
                   </Link>
                 );
               })}

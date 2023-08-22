@@ -1,4 +1,10 @@
 import {
+  faEnvelope,
+  faGlobe,
+  faLocationDot,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
+import {
   iconFacebook,
   iconInstagram,
   iconLinkedin,
@@ -84,6 +90,18 @@ export const menuPages = [
 ];
 
 // ================= Footer Links =================
+// Footer - Location
+export const footerLocation = [
+  [
+    "2, Spring House, Sec 43, Golfcourse road, Gurgaon, 122022.",
+    "",
+    faLocationDot,
+  ],
+  ["www.wleness.com", "https://wleness.com/", faGlobe],
+  ["+91 8764387421", "tel:+918764387421", faPhone],
+  ["hello@wleness.com", "mailto:hello@wleness.com", faEnvelope],
+];
+
 // Footer - About Wleness
 export const footerAboutWleness = [
   ["About Us", "/about-us"],
@@ -119,6 +137,7 @@ export const footerOurExperts = [
   ["Therapist", "/services/therapy"],
   ["Psychiatrist", "/services/psychiatrist"],
   ["Couple Therapist", "/services/couples-therapy"],
+  ["Coaches", "/coaches"],
 ];
 
 // Footer social links

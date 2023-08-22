@@ -14,7 +14,7 @@ export default function index() {
     <>
       <header className="relative overflow-x-hidden overflow-y-clip">
         <div className="container mx-auto">
-          <h1 className="subheading my-8 grid text-center">
+          <h1 className="subheading my-8 !grid text-center">
             <span>
               <span>You've got </span>
               <span className="heading-primary">questions</span>
