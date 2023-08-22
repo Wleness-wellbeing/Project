@@ -102,8 +102,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="container mx-auto pb-4">
-          <div className="pb-2 text-right">
+        <div className="container mx-auto pb-1 lg:pb-4">
+          <div className="pb-2 text-center lg:text-right">
             <Link to="/privacy-policy" className="text-sm">
               Privacy Policy
             </Link>
@@ -113,14 +113,22 @@ export default function Footer() {
             </Link>
           </div>
           <div className="flex items-center justify-between">
-            <div>
-              <img src={startUpIndiaLogo} alt="" />
+            <div className="w-40">
+              <img
+                src={startUpIndiaLogo}
+                alt=""
+                className="w-full object-cover"
+              />
             </div>
-            <div className="flex gap-x-1">
+            <div className="flex items-center gap-x-1">
               {socialLinks.map((value, i) => {
                 return (
                   <Link to={value[1]} key={i} target="_blank">
-                    <img src={value[0]} alt="whatsapp" className="h-7 w-7" />
+                    <img
+                      src={value[0]}
+                      alt="whatsapp"
+                      className="h-6 w-6 lg:h-7 lg:w-7"
+                    />
                   </Link>
                 );
               })}
@@ -128,7 +136,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="pb-5 pt-3 text-center text-sm font-medium">
+        <p className="pb-5 text-center text-sm font-medium lg:pt-3">
           @2023 Wleness || All Rights Reserved
         </p>
       </footer>
