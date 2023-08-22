@@ -136,128 +136,127 @@ export default function Signup() {
               />
             </GoogleOAuthProvider>
             {/* <Facebook /> */}
-          </div>
-          {/* Signup Form */}
-          <form onSubmit={handleSubmit} className="mb-4 md:mb-8">
-            <label htmlFor="name">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className={`form-input ${errors.name ? "border-red-500" : ""}`}
-              />
-            </label>
-            {errors.name && (
-              <p className="mt-1 text-sm text-red-500">{errors.name}</p>
-            )}
-
-            <label htmlFor="email">
-              <input
-                type="text"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className={`border ${
-                  errors.email ? "border-red-500" : "border-gray-300"
-                } block w-full rounded-lg border-b-2 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500`}
-                placeholder="Email Address"
-              />
-            </label>
-            {errors.email && (
-              <p className="mt-1 text-sm text-red-500">{errors.email}</p>
-            )}
-
-            <label htmlFor="gender">
-              <select
-                id="gender"
-                value={gender}
-                onChange={(e) => setGender(e.target.value)}
-                className={`border ${
-                  errors.gender ? "border-red-500" : "border-gray-300"
-                } block w-full rounded-lg border-b-2 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500`}
-              >
-                <option value="">Select Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-              </select>
-            </label>
-            {errors.gender && (
-              <p className="mt-1 text-sm text-red-500">{errors.gender}</p>
-            )}
-
-            <label htmlFor="mobile">
-              <input
-                type="tel"
-                id="mobile"
-                value={mobile}
-                onChange={(e) => setMobile(e.target.value)}
-                className={`border ${
-                  errors.mobile ? "border-red-500" : "border-gray-300"
-                } block w-full rounded-lg border-b-2 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500`}
-                placeholder="Mobile Number"
-              />
-            </label>
-            {errors.mobile && (
-              <p className="mt-1 text-sm text-red-500">{errors.mobile}</p>
-            )}
-            <label htmlFor="password">
-              <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className={`border ${
-                  errors.password ? "border-red-500" : "border-gray-300"
-                } ... bg-gray-50`}
-                placeholder="Password"
-              />
-            </label>
-            {errors.password && (
-              <p className="mt-1 text-sm text-red-500">{errors.password}</p>
-            )}
-
-            {/* Confirm Password input */}
-            <label htmlFor="confirmPassword">
-              <input
-                type="password"
-                id="confirmPassword"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                className={`border ${
-                  errors.confirmPassword ? "border-red-500" : "border-gray-300"
-                } ... bg-gray-50`}
-                placeholder="Confirm Password"
-              />
-            </label>
-            {errors.confirmPassword && (
-              <p className="mt-1 text-sm text-red-500">
-                {errors.confirmPassword}
-              </p>
-            )}
-
-            <div className="mx-auto flex w-64 flex-col items-center justify-center gap-2 text-center lg:mt-4">
-              <button className="btn-primary !w-full">CREATE ACCOUNT</button>
-              <button className="btn-transparent !w-full">
-                SIGN UP WITH GOOGLE
-              </button>
-            </div>
-          </form>
-
-          {/* Login Link */}
-          <p className="text-center">
-            <span> Already have an account? </span>
-            <Link
-              className="font-bold text-primary-100 hover:text-primary-500"
-              to="/login"
-            >
-              Login
-            </Link>
-          </p>
         </div>
+        {/* Signup Form */}
+        <form onSubmit={handleSubmit} className="mb-4 md:mb-8">
+          <label htmlFor="name">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className={`form-input ${errors.name ? "border-red-500" : ""}`}
+            />
+          </label>
+          {errors.name && (
+            <p className="mt-1 text-sm text-red-500">{errors.name}</p>
+          )}
+
+          <label htmlFor="email">
+            <input
+              type="text"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className={`border ${
+                errors.email ? "border-red-500" : "border-gray-300"
+              } block w-full rounded-lg border-b-2 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500`}
+              placeholder="Email Address"
+            />
+          </label>
+          {errors.email && (
+            <p className="mt-1 text-sm text-red-500">{errors.email}</p>
+          )}
+
+          <label htmlFor="gender">
+            <select
+              id="gender"
+              value={gender}
+              onChange={(e) => setGender(e.target.value)}
+              className={`border ${
+                errors.gender ? "border-red-500" : "border-gray-300"
+              } block w-full rounded-lg border-b-2 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500`}
+            >
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+          {errors.gender && (
+            <p className="mt-1 text-sm text-red-500">{errors.gender}</p>
+          )}
+
+          <label htmlFor="mobile">
+            <input
+              type="tel"
+              id="mobile"
+              value={mobile}
+              onChange={(e) => setMobile(e.target.value)}
+              className={`border ${
+                errors.mobile ? "border-red-500" : "border-gray-300"
+              } block w-full rounded-lg border-b-2 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500`}
+              placeholder="Mobile Number"
+            />
+          </label>
+          {errors.mobile && (
+            <p className="mt-1 text-sm text-red-500">{errors.mobile}</p>
+          )}
+          <label htmlFor="password">
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className={`border ${
+                errors.password ? "border-red-500" : "border-gray-300"
+              } ... bg-gray-50`}
+              placeholder="Password"
+            />
+          </label>
+          {errors.password && (
+            <p className="mt-1 text-sm text-red-500">{errors.password}</p>
+          )}
+
+          {/* Confirm Password input */}
+          <label htmlFor="confirmPassword">
+            <input
+              type="password"
+              id="confirmPassword"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              className={`border ${
+                errors.confirmPassword ? "border-red-500" : "border-gray-300"
+              } ... bg-gray-50`}
+              placeholder="Confirm Password"
+            />
+          </label>
+          {errors.confirmPassword && (
+            <p className="mt-1 text-sm text-red-500">
+              {errors.confirmPassword}
+            </p>
+          )}
+
+          <div className="mx-auto flex w-64 flex-col items-center justify-center gap-2 text-center lg:mt-4">
+            <button className="btn-primary !w-full">CREATE ACCOUNT</button>
+            <button className="btn-transparent !w-full">
+              SIGN UP WITH GOOGLE
+            </button>
+          </div>
+        </form>
+
+        {/* Login Link */}
+        <p className="text-center">
+          <span> Already have an account? </span>
+          <Link
+            className="font-bold text-primary-100 hover:text-primary-500"
+            to="/login"
+          >
+            Login
+          </Link>
+        </p>
       </div>
     </main>
   );
