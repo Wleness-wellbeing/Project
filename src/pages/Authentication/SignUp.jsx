@@ -122,7 +122,7 @@ export default function Signup() {
             </Link>
           </div>
           {/* <FacebookAuth />  */}
-          <div>
+          {/* <div>
             <GoogleOAuthProvider clientId="136465586008-jtls3h0dlbq21bhndomt4911ceqt9077.apps.googleusercontent.com">
               <GoogleLogin
                 onSuccess={(credentialResponse) => {
