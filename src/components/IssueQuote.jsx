@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function IssueQuote({ quote }) {
   return (
-    <section className="relative overflow-x-hidden overflow-y-clip pb-14 pt-4">
+    <section className="relative overflow-x-hidden overflow-y-clip pb-14">
       <div className="relative">
-        <img src={didYouKnow} alt="" className="mx-auto w-fit" />
+        <img src={didYouKnow} alt="" className="mx-auto w-fit xl:w-32" />
         <div className="relative mx-auto w-[640px] border-4 border-primary-400 p-12">
           <p className="text-justify font-bold">{quote}</p>
           <FontAwesomeIcon

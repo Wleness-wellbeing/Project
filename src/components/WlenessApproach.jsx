@@ -1,0 +1,31 @@
+import React from "react";
+import { wlenessApproach } from "../data/issues";
+import ApproachCard from "./Cards/ApproachCard";
+
+export default function WlenessApproach() {
+  return (
+    <section className="my-5 bg-gradient-to-b from-primary-50/40 to-transparent pt-5 xl:mt-10 xl:pt-10">
+      <div className="container mx-auto text-center">
+        <h2 className="subheading">
+          How <span className="heading-primary">Wleness approach</span> helps to
+          treat stress
+        </h2>
+        <p className="text-xl font-medium">
+          Indulge in a rejuvenating journey towards tranquility with our
+          comprehensive stress treatment program at the healthcare center, where
+          relaxation and well-being intertwine
+        </p>
+
+        <div className="my-6 grid grid-cols-4 gap-2 rounded-xl bg-[#FAFCE7] p-2 lg:my-10 lg:gap-6 lg:p-4">
+          {wlenessApproach.map((value, i) => {
+            return <ApproachCard key={i} data={value} />;
+          })}
+        </div>
+
+        <div className="text-center">
+          <button className="btn-one">Start the treatment</button>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -85,7 +85,7 @@ a {
 
 /* Headings */
 .subheading {
-  @apply inline-block pb-2 font-quicksand text-[2rem] font-bold leading-10 sm:text-3xl 4xl:text-6xl;
+  @apply inline-block pb-2 font-quicksand text-[2rem] font-bold leading-10 4xl:text-6xl;
 }
 .heading-primary {
   @apply bg-gradient-to-r from-secondary to-tertiary bg-clip-text text-transparent;

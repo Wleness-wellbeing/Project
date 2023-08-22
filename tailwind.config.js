@@ -32,6 +32,9 @@ module.exports = {
       fontFamily: {
         quicksand: ["Quicksand", "sans-serif"],
       },
+      listStyleType: {
+        square: "square",
+      },
     },
   },
   plugins: [],

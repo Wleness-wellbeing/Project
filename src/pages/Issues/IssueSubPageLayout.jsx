@@ -6,6 +6,7 @@ import DoctorSlider from "../../components/DoctorSlider";
 import Community from "../../components/Community";
 import IssueQuote from "../../components/IssueQuote";
 import Assessment from "../../components/Assessment";
+import WlenessApproach from "../../components/WlenessApproach";
 
 export default function IssueSubPageLayout({
   header,
@@ -35,6 +36,7 @@ export default function IssueSubPageLayout({
         image={symptoms.image}
         points={symptoms.points}
       />
+      <WlenessApproach />
       <DoctorSlider data={doctors} />
       <Community />
       <IssueQuote quote={quote} />

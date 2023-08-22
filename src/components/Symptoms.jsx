@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Symptoms({ highlight, image, points }) {
   return (
-    <section className="container mx-auto">
-      <h2 className="mb-10 text-center text-2xl font-bold lg:text-4xl xl:text-5xl">
+    <section className="container mx-auto text-center">
+      <h2 className="subheading mb-2">
         <span>Here's How Generalized</span>
         <p>
           <span className="heading-primary">{highlight} </span>
@@ -11,36 +11,24 @@ export default function Symptoms({ highlight, image, points }) {
         </p>
       </h2>
 
-      <div className="relative">
-        <img
-          src={image}
-          alt=""
-          className="mx-auto w-40 object-cover py-10 xl:w-fit"
-        />
+      <div className="flex items-center">
+        <div className="lg:order-2 lg:w-1/2">
+          <img src={image} alt="" className="object-cover" />
+        </div>
+
         {/* Points */}
-        {points.map((value, index) => {
-          return (
-            <p
-              key={index}
-              className={
-                "absolute w-96 text-center text-xs font-medium lg:text-sm xl:text-base xl:font-semibold " +
-                value[1]
-              }
-            >
-              {value[0]}
-            </p>
-          );
-        })}
+        <ul className="list-square space-y-3 text-left text-2xl text-primary-300 lg:order-1 lg:w-1/2 xl:pr-16">
+          {points.map((value, index) => {
+            return (
+              <li key={index}>
+                <p className="text-lg font-semibold text-black">{value[0]}</p>
+              </li>
+            );
+          })}
+        </ul>
       </div>
 
-      <div className="py-8 text-center">
-        <button className="btn-one">Find the Therapist</button>
-      </div>
-
-      <div className="flex items-center justify-center pb-8 text-center">
-        <h5 className="mr-3 text-2xl font-semibold">
-          Doubtful about the symptoms?
-        </h5>
+      <div className="py-2 text-center">
         <button className="btn-one">Undergo an evaluation</button>
       </div>
     </section>

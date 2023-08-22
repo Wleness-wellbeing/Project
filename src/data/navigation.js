@@ -98,15 +98,15 @@ export const footerLocation = [
     faLocationDot,
   ],
   ["www.wleness.com", "https://wleness.com/", faGlobe],
-  ["+91 8764387421", "tel:+918764387421", faPhone],
   ["hello@wleness.com", "mailto:hello@wleness.com", faEnvelope],
+  ["+91 8764387421", "tel:+918764387421", faPhone],
 ];
 
 // Footer - About Wleness
 export const footerAboutWleness = [
   ["About Us", "/about-us"],
-  ["Career", "/career"],
   ["Contact Us", "/contact-us"],
+  ["Career", "/career"],
   ["FAQ's", "/faqs"],
 ];
 

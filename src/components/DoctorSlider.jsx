@@ -8,8 +8,8 @@ export default function DoctorSlider(props) {
   return (
     <section className="container relative mx-auto mb-5">
       {/* ========== Soul Healers ========== */}
-      <div className="pb-6 text-center sm:pt-6 lg:pb-14 2xl:py-14 ">
-        <h2 className="subheading text-[1.8rem] text-[#383838] sm:pb-0 lg:mb-4">
+      <div className="pb-6 text-center sm:pt-6 lg:pb-14 2xl:pb-8 ">
+        <h2 className="subheading sm:pb-0 lg:mb-4">
           {textColorize(props.data.heading)}
         </h2>
         <p className="para">{props.data.desc}</p>

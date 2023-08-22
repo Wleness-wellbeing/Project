@@ -23,6 +23,10 @@ import {
   symptomsParanoia,
   symptomsSchizophrenia,
   symptomsStress,
+  wlenessApproachIcon1,
+  wlenessApproachIcon2,
+  wlenessApproachIcon3,
+  wlenessApproachIcon4,
 } from "../assets";
 
 export const therapiesData = [
@@ -1234,5 +1238,24 @@ export const therapiesData = [
     },
     quote:
       "Research indicates that individuals with CD are more likely to develop antisocial personality disorder in adulthood.",
+  },
+];
+
+export const wlenessApproach = [
+  {
+    title: "Talk to the Therapist",
+    image: wlenessApproachIcon1,
+  },
+  {
+    title: "Explore different tools & activities",
+    image: wlenessApproachIcon2,
+  },
+  {
+    title: "Consult the Psychiatrist",
+    image: wlenessApproachIcon3,
+  },
+  {
+    title: "Join the community",
+    image: wlenessApproachIcon4,
   },
 ];

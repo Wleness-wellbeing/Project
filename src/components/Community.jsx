@@ -5,11 +5,11 @@ export default function Community() {
   return (
     <section className="relative overflow-x-hidden overflow-y-clip pb-7">
       <div className="container mx-auto text-center">
-        <h1 className="subheading grid">
+        <h1 className="subheading !grid">
           <span>We are here to help you!</span>
           <span className="heading-primary pb-1">Wleness Community</span>
         </h1>
-        <p className="para pb-6 pt-4 xl:mx-auto xl:w-3/5">
+        <p className="para pb-6 xl:mx-auto xl:w-3/5">
           Helping you connect with like minded people. Find your ultimate
           support network today.
         </p>
