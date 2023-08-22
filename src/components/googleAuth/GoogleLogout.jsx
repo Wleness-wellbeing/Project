@@ -1,16 +1,44 @@
-import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
-import jwt_decode from "jwt-decode";
+import React, { useEffect, useState } from "react";
+import { GoogleLogin } from "react-google-login";
 
-<GoogleOAuthProvider clientId="1051344250432-dqb023v44kpthq3mn2mje13irctkev68.apps.googleusercontent.com">
-  <GoogleLogin
-    onSuccess={(credentialResponse) => {
-      var decoded = jwt_decode(credentialResponse.credential);
+function LoginGoogle() {
+  const [isLoggedIn, setIsLoggedIn] = useState(
+    window.localStorage.getItem("googleId") ? true : false,
+  );
 
-      console.log(decoded);
-    }}
-    onError={() => {
-      console.log("Login Failed");
-    }}
-  />
-  ;
-</GoogleOAuthProvider>;
+  useEffect(() => {}, [isLoggedIn]);
+
+  function successResponse(response) {
+    console.log(response);
+    window.localStorage.setItem("googleId", response.googleId);
+    window.localStorage.setItem("token", response.tokenId);
+    setIsLoggedIn(true);
+  }
+
+  function failureResponse(response) {
+    console.log(response);
+  }
+
+  function logout() {
+    setIsLoggedIn(false);
+    window.localStorage.removeItem("googleId");
+    window.localStorage.removeItem("token");
+  }
+
+  return (
+    <div>
+      {!isLoggedIn && (
+        <GoogleLogin
+          clientId="1051344250432-dqb023v44kpthq3mn2mje13irctkev68.apps.googleusercontent.com"
+          buttonText="Login"
+          onSuccess={successResponse}
+          onFailure={failureResponse}
+          cookiePolicy={"single_host_origin"}
+        />
+      )}
+      {isLoggedIn && <button onClick={logout}>Logout</button>}
+    </div>
+  );
+}
+
+export default LoginGoogle;

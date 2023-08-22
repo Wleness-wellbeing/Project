@@ -4,7 +4,7 @@ import { logo, signup } from "../../assets";
 import axios from "axios";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import Facebook from "../../components/googleAuth/facebookAuth";
-import jwt_decode from "jwt-decode";
+// import jwt_decode from "jwt-decode";
 
 // import FacebookAuth from "../../components/googleAuth/facebookAuth";
 // import { FacebookLoginButton } from "react-social-login-buttons";

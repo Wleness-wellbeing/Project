@@ -26,7 +26,7 @@ function RequestForm() {
       });
 
       if (response.ok) {
-        setSuccessMessage("Form data submitted successfully!"); // Update success message
+        setSuccessMessage("Thanks! We will get back to you soon.🙂"); // Update success message
       } else {
         console.error("Error submitting form data");
       }
@@ -36,7 +36,7 @@ function RequestForm() {
   };
 
   return (
-    <section className="container mx-auto mb-6 grid rounded-3xl bg-[#FAFCE7] px-6 py-12 xs:px-8 xs:py-14 md:grid-cols-2 lg:mb-20 lg:px-8 lg:py-16 2xl:py-20">
+    <section className="container mx-auto mb-6 grid rounded-3xl bg-[#FAFCE7] px-6 py-12 xs:px-8 xs:py-14 md:grid-cols-2 lg:mb-28 lg:px-8 lg:py-16 2xl:py-20">
       <div className="md:flex md:h-full md:flex-col md:justify-between md:px-6">
         <div>
           <h3 className="font-medium text-[#464646] opacity-80 lg:text-lg">

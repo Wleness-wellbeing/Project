@@ -3,7 +3,6 @@ import Card from "../../components/admin/Cards/Card";
 import { placeholder } from "../../assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
-
 export default function AdminBlogs() {
   return (
     <div className="w-[824px] rounded-lg bg-primary-50/50 p-6 xl:w-[900px]">

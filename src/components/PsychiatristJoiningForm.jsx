@@ -28,6 +28,9 @@ const PsychiatristJoiningForm = () => {
     currentSalary: "",
     joiningReason: "",
   });
+  const handleBackButton = () => {
+    setShowProfessionalDetails(false);
+  };
 
   const [showProfessionalDetails, setShowProfessionalDetails] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -75,7 +78,7 @@ const PsychiatristJoiningForm = () => {
       console.error("Error submitting form:", error);
     }
   };
-
+  console.log(personalDetails, professionalDetails);
   const handlePersonalDetailsSaveAndContinue = () => {
     setShowProfessionalDetails(true);
   };
@@ -92,7 +95,7 @@ const PsychiatristJoiningForm = () => {
           <>
             <div className="mx-auto  w-3/4  rounded-2xl p-8 shadow-lg shadow-slate-300">
               <h2 className="mt-4 text-center text-3xl font-bold text-primary-400 ">
-                Therapist Joining Form - Personal Details
+                Psychiatrist Joining Form - Personal Details
               </h2>
               <div className="my-10 grid grid-cols-2 gap-4">
                 <div>
@@ -126,7 +129,7 @@ const PsychiatristJoiningForm = () => {
                 <div className="">
                   <input
                     type="text"
-                    placeholder="email"
+                    placeholder="Email"
                     className="w-full rounded-xl border-2 border-primary-300 px-4  py-2.5 outline-none"
                     value={personalDetails.email}
                     onChange={(e) =>
@@ -140,7 +143,7 @@ const PsychiatristJoiningForm = () => {
                 <div className="">
                   <input
                     type="tel"
-                    placeholder="Phonenumber"
+                    placeholder="Phone Number"
                     className="w-full rounded-xl border-2 border-primary-300 px-4  py-2.5 outline-none"
                     value={personalDetails.phoneNumber}
                     onChange={(e) =>
@@ -154,7 +157,7 @@ const PsychiatristJoiningForm = () => {
                 <div className="col-span-2">
                   <input
                     type="text"
-                    placeholder="address"
+                    placeholder="Address"
                     className="w-full rounded-xl border-2 border-primary-300 px-4  py-2.5 outline-none"
                     value={personalDetails.address}
                     onChange={(e) =>
@@ -210,7 +213,7 @@ const PsychiatristJoiningForm = () => {
                 <div>
                   <input
                     type="text"
-                    placeholder="country"
+                    placeholder="Country"
                     className="w-full rounded-xl border-2 border-primary-300 px-4  py-2.5 outline-none"
                     value={personalDetails.country}
                     onChange={(e) =>
@@ -312,7 +315,7 @@ const PsychiatristJoiningForm = () => {
               <div>
                 <input
                   type="Number"
-                  placeholder="Year of graduation"
+                  placeholder="Year of Graduation"
                   className="w-full rounded-xl border-2 border-primary-300 px-4 py-2.5 outline-none"
                   value={professionalDetails.graduationYear}
                   onChange={(e) =>
@@ -326,7 +329,7 @@ const PsychiatristJoiningForm = () => {
               <div>
                 <input
                   type="Number"
-                  placeholder="Total (yrs) of Experience"
+                  placeholder="Total Experience (in years)"
                   className="w-full rounded-xl border-2 border-primary-300 px-4 py-2.5 outline-none"
                   value={professionalDetails.experienceYears}
                   onChange={(e) =>
@@ -349,6 +352,7 @@ const PsychiatristJoiningForm = () => {
                   id="fileInput"
                   name="fileInput"
                   className="w-full rounded-xl border-2 border-primary-300 px-4 py-2.5 outline-none"
+                  placeholder="Please upload your degree in PDF format."
                 />
                 <p className="mt-2 text-sm text-gray-500">
                   Please upload your degree in PDF format.
@@ -360,7 +364,7 @@ const PsychiatristJoiningForm = () => {
                   htmlFor="fileInput"
                   className="mb-2 block font-medium text-gray-700"
                 >
-                  Upload Degree
+                  Upload Certificate
                 </label>
                 <input
                   type="file"
@@ -369,7 +373,7 @@ const PsychiatristJoiningForm = () => {
                   className="w-full rounded-xl border-2 border-primary-300 px-4 py-2.5 outline-none"
                 />
                 <p className="mt-2 text-sm text-gray-500">
-                  Please upload your degree in PDF format.
+                  Please upload your Certificate in PDF format.
                 </p>
               </div>
               <div>
@@ -377,7 +381,7 @@ const PsychiatristJoiningForm = () => {
                   htmlFor="fileInput"
                   className="mb-2 block font-medium text-gray-700"
                 >
-                  Upload Degree
+                  Upload Resume
                 </label>
 
                 <input
@@ -387,12 +391,13 @@ const PsychiatristJoiningForm = () => {
                   className="w-full rounded-xl border-2 border-primary-300 px-4 py-2.5 outline-none"
                 />
                 <p className="mt-2 text-sm text-gray-500">
-                  Please upload your degree in PDF format.
+                  Please upload your Resume in PDF format.
                 </p>
               </div>
               <div className="mt-8">
                 <input
                   type="Number"
+                  min={0}
                   placeholder="Current Salary"
                   className="w-full rounded-xl border-2 border-primary-300 px-4 py-2.5 outline-none"
                   value={professionalDetails.currentSalary}
@@ -419,7 +424,14 @@ const PsychiatristJoiningForm = () => {
                 />
               </div>
             </div>
-            <div className=" text-center">
+            <div className="mt-8 text-center">
+              <button
+                type="button"
+                onClick={handleBackButton} // Add this line to handle the back button click
+                className="mr-2 rounded-xl border-2 border-primary-300 bg-white px-4 py-2 font-bold hover:bg-primary-300 hover:text-white"
+              >
+                Back
+              </button>
               <button
                 type="submit"
                 className="rounded-xl bg-primary-300 px-4 py-2.5 font-semibold text-white hover:bg-primary-500"
