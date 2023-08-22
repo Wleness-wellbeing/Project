@@ -20,7 +20,7 @@ function Activities() {
           {/* Desktop Image */}
           <img src={activitiesHeader} alt="" className="w-full object-cover" />
         </div>
-        <div className="-m-5 mb-6 rounded-3xl p-5 md:mb-6 lg:order-1 lg:m-0 lg:mb-0 lg:rounded-none xl:w-[55%] xl:pl-0">
+        <div className="-m-5 mb-6 rounded-3xl p-5 text-center md:mb-6 lg:order-1 lg:m-0 lg:mb-0 lg:rounded-none lg:text-left xl:w-[55%] xl:pl-0">
           <hgroup className="md:mb-3">
             <h1 className="subheading mb-4 text-center lg:mb-10 lg:text-left">
               <span className="text-[#383838] lg:block">Discover the </span>
@@ -87,7 +87,7 @@ function Activities() {
         <figure className="mb-12 flex flex-col items-center lg:mb-2 lg:flex-row">
           <figcaption className="order-2 lg:order-1 lg:w-[55%] lg:pr-10">
             <h3 className="heading-primary mb-3 text-4xl font-bold">
-              Challenge Your Body
+              <Link to="/activities/yoga">Challenge Your Body</Link>
             </h3>
             <p className="mb-5 text-justify font-medium lg:mb-10">
               A psychiatry is grounded in the principles of empathy, compassion,
@@ -117,7 +117,7 @@ function Activities() {
           </div>
           <figcaption className="lg:w-[55%] lg:pl-10">
             <h3 className="heading-primary mb-3 text-4xl font-bold">
-              Rejuvenate
+              <Link to="/activities/yoga">Rejuvenate</Link>
             </h3>
             <p className="mb-5 text-justify font-medium lg:mb-10">
               A holistic approach to therapy that considers the whole person –
@@ -133,7 +133,7 @@ function Activities() {
         <figure className="mb-12 flex flex-col items-center lg:mb-2 lg:flex-row">
           <figcaption className="order-2 lg:order-1 lg:w-[55%] lg:pr-10">
             <h3 className="heading-primary mb-3 text-4xl font-bold">
-              Power of self - care
+              <Link to="/activities/yoga">Power of self - care</Link>
             </h3>
             <p className="mb-5 text-justify font-medium lg:mb-10">
               In this fast-paced world, take time for inner balance. Step into a

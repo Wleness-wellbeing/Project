@@ -17,7 +17,7 @@ export default function ExpertsDetails() {
         </h1>
 
         {/* Filters */}
-        <div className="flex items-center justify-end lg:w-1/5">
+        <div className="flex items-center justify-end self-end lg:w-1/5">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -8,45 +8,32 @@ import {
   avatarImage6,
 } from "../../assets";
 
+const avatars = [
+  avatarImage1,
+  avatarImage2,
+  avatarImage3,
+  avatarImage4,
+  avatarImage5,
+  avatarImage6,
+];
+
 export default function Avatar() {
   return (
     <div className="container mx-auto mt-12 grid justify-center">
-      <div className="px-auto items-center">
-        <h1 className="text-5xl font-bold text-primary-500">
-          Choose your Avatar
-        </h1>
+      <div className="text-center">
+        <h1 className="subheading">Choose your Avatar</h1>
       </div>
-      <div className="mx-auto grid w-96 grid-cols-3 pt-4">
-        <img
-          src={avatarImage1}
-          className="rounded-full border-red-500 hover:border-4"
-          alt=""
-        />
-        <img
-          src={avatarImage2}
-          className="rounded-full border-red-500 hover:border-4"
-          alt=""
-        />
-        <img
-          src={avatarImage3}
-          className="rounded-full border-red-500 hover:border-4"
-          alt=""
-        />
-        <img
-          src={avatarImage4}
-          className="rounded-full border-red-500 hover:border-4"
-          alt=""
-        />
-        <img
-          src={avatarImage5}
-          className="rounded-full border-red-500 hover:border-4"
-          alt=""
-        />
-        <img
-          src={avatarImage6}
-          className="rounded-full border-red-500 hover:border-4"
-          alt=""
-        />
+      <div className="mx-auto grid grid-cols-3 pt-4 lg:w-96">
+        {avatars.map((value, i) => {
+          return (
+            <div
+              key={i}
+              className="grid w-fit cursor-pointer place-items-center rounded-full border-red-500 hover:border-4"
+            >
+              <img src={value} className="block w-full rounded-full" alt="" />
+            </div>
+          );
+        })}
       </div>
       <div className="pt-4 ">
         <input

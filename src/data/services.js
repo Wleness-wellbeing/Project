@@ -317,10 +317,14 @@ export const psychiatristData = {
     ],
     featureImage: bestPsychiatrist,
     features: [
-      ["Best Psychiatrist ", "available", " top-6 left-16 "],
-      ["Online ", "Consultations", " top-6 right-28 "],
-      ["Affordable ", "Help", " bottom-0 left-32"],
-      ["Psychiatrist ", "just a all away", " -bottom-4 right-28"],
+      ["Best Psychiatrist ", "available", "left-0 top-0 lg:top-6 lg:left-16 "],
+      ["Online ", "Consultations", " top-0 lg:top-6 right-0 lg:right-28 "],
+      ["Affordable ", "Help", " -bottom-12 lg:bottom-0 left-0 lg:left-32"],
+      [
+        "Psychiatrist ",
+        "just a all away",
+        " -bottom-12 lg:-bottom-4 right-0 lg:right-28",
+      ],
     ],
     startBtn: ["Start the treatment", "/treatments"],
     doctors: [

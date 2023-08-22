@@ -36,14 +36,19 @@ export default function DoctorsCard(props) {
           <p className="leading-5 text-slate-600">
             Speaks: {props.data.speaks}
           </p>
-          <h5 className="my-2 text-lg font-semibold text-primary-400">
+          <h5 className="my-2 mb-5 text-lg font-semibold text-primary-400">
             Session Starts
             <FontAwesomeIcon icon={faIndianRupee} className="mx-1 text-sm" />
             {props.data.price}
           </h5>
-          <Link to="/appointment/checkout" className="btn-one inline-block">
-            Book Now
-          </Link>
+          <div className="space-x-2">
+            <Link to="/appointment" className="btn-one inline-block">
+              View Profile
+            </Link>
+            <Link to="/appointment/checkout" className="btn-one inline-block">
+              Book Now
+            </Link>
+          </div>
         </div>
       </figcaption>
     </figure>

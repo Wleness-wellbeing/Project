@@ -48,23 +48,27 @@ export default function Psychiatrist() {
         </div>
       </section>
 
-      <section className="container relative mx-auto my-8 mt-20 flex px-8 text-center">
-        <div className="grid w-1/2">
+      <section className="container relative mx-auto my-8 mt-20 px-8 text-center lg:flex">
+        <div className="mb-4 grid lg:mb-0 lg:w-1/2">
           <div className="rounded-t-3xl bg-gradient-to-b from-secondary/50 to-transparent py-14">
-            <h2 className="text-5xl font-bold text-primary-500">MYTHS</h2>
+            <h2 className="mt-4 text-3xl font-bold text-primary-500 lg:mt-0 lg:text-4xl">
+              MYTHS
+            </h2>
           </div>
-          <div className="rounded-bl-3xl bg-gradient-to-t from-secondary/50 to-transparent px-10 pb-24">
+          <div className="rounded-b-3xl bg-gradient-to-t from-secondary/50 to-transparent px-10 pb-24 lg:rounded-br-none">
             <p className="text-lg font-medium">
               Psychiatrists only prescribe medications and don't provide
               therapy.
             </p>
           </div>
         </div>
-        <div className="grid w-1/2">
+        <div className="grid lg:w-1/2">
           <div className="rounded-t-3xl bg-gradient-to-b from-secondary/50 to-transparent py-14">
-            <h2 className="text-5xl font-bold text-primary-500">FACTS</h2>
+            <h2 className="mt-4 text-3xl font-bold text-primary-500 lg:mt-0 lg:text-4xl">
+              FACTS
+            </h2>
           </div>
-          <div className="rounded-br-3xl bg-gradient-to-t from-secondary/50 to-transparent px-10 pb-24">
+          <div className="rounded-b-3xl bg-gradient-to-t from-secondary/50 to-transparent px-10 pb-24 lg:rounded-bl-none">
             <p className="text-lg font-medium">
               Psychiatrists are trained in medication management and various
               therapy approaches, offering a comprehensive treatment approach.

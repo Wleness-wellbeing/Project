@@ -32,13 +32,15 @@ const ServicesTechniques = React.forwardRef((props, ref) => {
 
   return (
     <section className="container mx-auto pb-6" ref={ref}>
-      <div className="text-center lg:my-14">
+      <div className="my-6 text-center lg:my-14">
         <h2 className="subheading text-primary-400">{props.title}</h2>
         <p className="font-semibold lg:text-2xl">{props.desc}</p>
       </div>
 
       {/* Meditations */}
-      <div className="grid gap-6 pb-4 lg:grid-cols-3">{activityTypes}</div>
+      <div className="grid gap-6 px-5 pb-4 lg:grid-cols-3 lg:px-0">
+        {activityTypes}
+      </div>
     </section>
   );
 });
