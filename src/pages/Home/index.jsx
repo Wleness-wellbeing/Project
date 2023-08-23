@@ -34,7 +34,7 @@ import { Link } from "react-router-dom";
 import RequestForm from "../../components/RequestForm";
 import Feedback from "../../components/Feedback";
 import Testimonial from "../../components/testimonial/Testimonial";
-import { objectives, therapies, whyChooseUs } from "../../data";
+import { objectives, statistics, therapies, whyChooseUs } from "../../data";
 import IssueCard from "../../components/Cards/IssueCard";
 import { homeTestimonials } from "../../data/testimonials";
 
@@ -359,38 +359,24 @@ export default function Home() {
       </section>
       {/* ========== Statistics ========== */}
       <section className="container mx-auto grid grid-cols-4 gap-2 py-4 lg:gap-8 lg:py-12">
-        <div className="flex flex-col rounded-2xl bg-primary-400 p-2 text-center md:p-8 2xl:py-10">
-          <span className="mb-1 text-xl font-bold md:text-5xl lg:mb-4">
-            24/7
-          </span>
-          <span className="block text-center text-xs leading-3 lg:text-xl lg:font-semibold">
-            Online Support
-          </span>
-        </div>
-        <div className="flex flex-col rounded-2xl bg-primary-50 p-2 text-center md:p-8 2xl:py-10">
-          <span className="mb-1 text-xl font-bold md:text-5xl lg:mb-4">
-            100+
-          </span>
-          <span className="block text-center text-xs leading-3 lg:text-xl lg:font-semibold">
-            Doctors
-          </span>
-        </div>
-        <div className="flex flex-col rounded-2xl bg-primary-400 p-2 text-center md:p-8 2xl:py-10">
-          <span className="mb-1 text-xl font-bold md:text-5xl lg:mb-4">
-            1M+
-          </span>
-          <span className="block text-center text-xs leading-3 lg:text-xl lg:font-semibold">
-            Active Patients
-          </span>
-        </div>
-        <div className="flex flex-col rounded-2xl bg-primary-50 p-2 text-center md:p-8 2xl:py-10">
-          <span className="mb-1 text-xl font-bold md:text-5xl lg:mb-4">
-            5M+
-          </span>
-          <span className="block text-center text-xs leading-3 lg:text-xl lg:font-semibold">
-            Interested
-          </span>
-        </div>
+        {statistics.map((value, i) => {
+          return (
+            <div
+              className={
+                value.background +
+                " flex flex-col rounded-2xl p-2 text-center md:p-4"
+              }
+            >
+              <span className="mb-1 text-xl font-bold md:text-2xl">
+                {value.value}
+                {value.suffix}
+              </span>
+              <span className="block text-center text-xs leading-3 lg:text-base lg:font-semibold">
+                {value.title}
+              </span>
+            </div>
+          );
+        })}
       </section>
       {/* ========== Our Partners ========== */}
       <section className="container mx-auto py-8 lg:py-16">

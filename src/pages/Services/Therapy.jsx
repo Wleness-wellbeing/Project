@@ -31,12 +31,14 @@ export default function Therapy() {
       <GridHeader
         name={TherapyData.name}
         image={TherapyData.image}
+        desc={TherapyData.desc}
         handleScrollToComponent={() => handleScrollToComponent()}
       />
       <WhyChooseGrid data={TherapyData.whyChoose} />
       <SelectBest
         ref={ref}
         name={TherapyData.name}
+        heading={TherapyData.bestTherapist.heading}
         image={TherapyData.bestTherapist.featureImage}
         features={TherapyData.bestTherapist.features}
         btn={TherapyData.bestTherapist.startBtn}

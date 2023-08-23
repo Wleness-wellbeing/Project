@@ -1,5 +1,6 @@
 import React from "react";
 import { themeWAve } from "../assets";
+import { textColorize } from "../utils";
 
 const SelectBest = React.forwardRef((props, ref) => {
   return (
@@ -7,8 +8,7 @@ const SelectBest = React.forwardRef((props, ref) => {
       <div className="relative overflow-x-clip">
         <div className="container mx-auto text-center">
           <h2 className="subheading lg:w-[640px]">
-            <span>Select the best </span>
-            <span className="heading-primary">{props.name}</span>
+            {textColorize(props.heading)}
           </h2>
 
           <div className="relative pt-10">

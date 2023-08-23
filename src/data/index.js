@@ -1216,12 +1216,39 @@ export const whyChooseUs = [
   },
   {
     title: "Commitment",
-    desc: "Expand your skills and knowledge by working alongside experienced professionals.",
+    desc: "We commit to providing personalized care tailored to your unique needs and support you at every step.",
     image: iconCommitment,
   },
   {
     title: "Facilities",
-    desc: "Expand your skills and knowledge by working alongside experienced professionals.",
+    desc: "Experience the convenience and comfort of our state-of-the-art facilities.",
     image: iconFacilities,
+  },
+];
+
+export const statistics = [
+  {
+    value: "24/7",
+    title: "Online Support",
+    suffix: "",
+    background: "bg-primary-400",
+  },
+  {
+    value: "100",
+    title: "Doctors",
+    suffix: "+",
+    background: "bg-primary-50",
+  },
+  {
+    value: "1",
+    title: "Active Patients",
+    suffix: "M+",
+    background: "bg-primary-400",
+  },
+  {
+    value: "5",
+    title: "Interested",
+    suffix: "M+",
+    background: "bg-primary-50",
   },
 ];

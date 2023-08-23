@@ -13,10 +13,10 @@ const ServicesTechniques = React.forwardRef((props, ref) => {
           />
         </div>
         <figcaption>
-          <h4 className="py-2 text-2xl font-bold text-primary-400">
+          <h4 className="py-2 text-xl font-bold text-primary-400">
             {value.title}
           </h4>
-          <p className="pb-2 text-justify font-medium">{value.desc}</p>
+          <p className="pb-2 text-sm font-medium">{value.desc}</p>
           <div className="mt-2 text-center">
             <button
               onClick={props.openAssessmentModal}
@@ -34,11 +34,11 @@ const ServicesTechniques = React.forwardRef((props, ref) => {
     <section className="container mx-auto pb-6" ref={ref}>
       <div className="my-6 text-center lg:my-14">
         <h2 className="subheading text-primary-400">{props.title}</h2>
-        <p className="font-semibold lg:text-2xl">{props.desc}</p>
+        <p className="font-semibold text-slate-700 lg:text-xl">{props.desc}</p>
       </div>
 
       {/* Meditations */}
-      <div className="grid gap-6 px-5 pb-4 lg:grid-cols-3 lg:px-0">
+      <div className="grid gap-6 px-5 pb-4 lg:grid-cols-3 lg:px-0 xl:grid-cols-4">
         {activityTypes}
       </div>
     </section>

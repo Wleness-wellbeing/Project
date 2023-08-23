@@ -80,6 +80,9 @@ a {
 }
 
 /* Links and Paragraphs */
+a {
+  @apply outline-none;
+}
 .menu-link {
   @apply inline-block py-2 font-semibold transition-all hover:text-primary-300;
 }
@@ -109,7 +112,7 @@ a {
 
 /* Form Styles */
 .form-input {
-  @apply mb-3 block w-full rounded-lg border-2  border-slate-200 px-4 py-1.5 text-sm outline-none md:py-2.5 md:text-base lg:py-3.5;
+  @apply mb-3 block w-full rounded-lg border-2  border-slate-200 px-4 py-1.5 text-sm outline-none md:py-2.5 md:text-base;
 }
 
 /* Custom styling */

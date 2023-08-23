@@ -29,11 +29,13 @@ export default function Psychiatrist() {
       <GridHeader
         name={psychiatristData.name}
         image={psychiatristData.image}
+        desc={psychiatristData.desc}
         handleScrollToComponent={() => handleScrollToComponent()}
       />
       <SelectBest
         ref={ref}
         name={psychiatristData.name}
+        heading={psychiatristData.bestTherapist.heading}
         image={psychiatristData.bestTherapist.featureImage}
         features={psychiatristData.bestTherapist.features}
         btn={psychiatristData.bestTherapist.startBtn}

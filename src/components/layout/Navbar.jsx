@@ -49,9 +49,9 @@ function Navbar() {
               (isMenuOpen ? " block " : "  hidden xl:flex ")
             }
           >
-            <MenuLink url="/about-us" text="About Us" />
+            <MenuLink url="/" text="Home" />
             <Dropdown url="" text="Services" pages={serviceMenuPages} />
-            <MenuLink url="/experts" text="Experts" />
+            {/* <MenuLink url="/experts" text="Experts" /> */}
             <MenuLink url="/internship" text="Internship" />
             <MenuLink url="/blogs" text="Blogs" />
             <Dropdown
@@ -60,6 +60,7 @@ function Navbar() {
               pages={activitiesMenuPages}
             />
             <Dropdown url="/self-care" text="Self Care" pages={menuPages} />
+            <MenuLink url="/about-us" text="About Us" />
           </ul>
 
           {/* Authentication */}

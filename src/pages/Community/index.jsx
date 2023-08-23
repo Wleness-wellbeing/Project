@@ -13,6 +13,9 @@ import {
   communitySupport5,
   communitySupport6,
 } from "../../assets";
+import { wlenessCommunity } from "../../data/community";
+import CommunityCard from "../../components/Cards/CommunityCard";
+import CommunitySupportCard from "../../components/Cards/CommunitySupportCard";
 
 const communitySupport = [
   {
@@ -51,13 +54,13 @@ export default function index() {
   return (
     <>
       <header className="relative overflow-x-hidden overflow-y-clip">
-        <div className="container mx-auto">
-          <h1 className="subheading my-8 text-center">
+        <div className="container mx-auto text-center">
+          <h1 className="subheading my-8">
             <span className="heading-primary">Escape, Heal and Thrive </span>
             <span>with the Wleness Community</span>
           </h1>
 
-          <div className="mb-8 text-center">
+          <div className="mb-8">
             <img src={communityHeader} alt="" className="mb-10 w-full" />
             <p className="mb-5 text-xl font-bold xl:px-44">
               Let's come together and build a supportive community where we
@@ -86,14 +89,14 @@ export default function index() {
           <h3 className="subheading mb-3">
             <span className="heading-primary">Wleness </span>Community
           </h3>
-          <p className="mb-4 text-justify text-lg font-medium">
+          <p className="mb-4 text-lg font-medium">
             Through our community, individuals can find solace in knowing they
             are not alone in their struggles. Whether seeking advice, sharing
             stories, or simply finding comfort in the presence of others, our
             platform offers a supportive network that embraces diversity and
             encourages personal growth.
           </p>
-          <p className="text-justify text-lg font-medium">
+          <p className="text-lg font-medium">
             We believe everyone deserves a space to be heard, understood, and
             supported without judgment. Join us and discover the power of
             community, where you can connect with like-minded individuals and
@@ -102,91 +105,25 @@ export default function index() {
         </div>
 
         <div className="grid grid-cols-2 xl:w-1/2">
-          <div className="m-3 grid content-between rounded-2xl bg-primary-400 p-4">
-            <h4 className="text-center text-xl font-bold text-white">
-              Embrace Empathy:
-            </h4>
-            <img
-              src={community1}
-              alt=""
-              className="mx-auto my-2 object-cover"
-            />
-            <p className="text-justify text-sm font-semibold text-white">
-              Find a compassionate community that embraces empathy & uplifts you
-              through life's ups & downs.
-            </p>
-          </div>
-          <div className="m-3 grid content-between rounded-2xl bg-gradient-to-br from-secondary/50 to-tertiary/50 p-4">
-            <h4 className="text-center text-xl font-bold">Share Freely:</h4>
-            <img
-              src={community2}
-              alt=""
-              className="mx-auto my-2 object-cover"
-            />
-            <p className="text-justify text-sm font-semibold">
-              Discover the freedom of sharing your struggles in an accepting
-              space where authenticity is celebrated.
-            </p>
-          </div>
-          <div className="m-3 grid content-between rounded-2xl bg-gradient-to-br from-secondary/50 to-tertiary/50 p-4">
-            <h4 className="text-center text-xl font-bold">Guided Support:</h4>
-            <img
-              src={community3}
-              alt=""
-              className="mx-auto my-2 object-cover"
-            />
-            <p className="text-justify text-sm font-semibold">
-              With expert moderation, we ensure a safe haven where genuine
-              support is just a message away.
-            </p>
-          </div>
-          <div className="m-3 grid content-between rounded-2xl bg-gradient-to-br from-secondary/50 to-tertiary/50 p-4">
-            <h4 className="text-center text-xl font-bold">Grow Together:</h4>
-            <img
-              src={community4}
-              alt=""
-              className="mx-auto my-2 object-cover"
-            />
-            <p className="text-justify text-sm font-semibold">
-              Join a vibrant community dedicated to personal growth, where we
-              flourish as one united force.
-            </p>
-          </div>
+          {wlenessCommunity.map((value, i) => {
+            return <CommunityCard key={i} data={value} />;
+          })}
         </div>
       </section>
 
       {/* Support Section */}
-      <section className="container mx-auto pt-8">
-        <h2 className="subheading text-center">
+      <section className="container mx-auto pt-8 text-center">
+        <h2 className="subheading">
           <span>Uncover your special heaven of </span>
           <span className="heading-primary">support and belonging</span>
         </h2>
-        <p className="py-2 text-center text-lg font-semibold">
+        <p className="py-2 text-lg font-semibold">
           Always remember sharing your struggles only makes you stronger.
         </p>
 
         <div className="grid gap-x-14 gap-y-8 py-12 xl:grid-cols-3">
           {communitySupport.map((value, index) => {
-            return (
-              <figure
-                key={index}
-                className="grid justify-between rounded-xl rounded-br-[3rem] border-2 border-primary-300 p-5 transition-all hover:shadow-xl"
-              >
-                <h3 className="text-center text-2xl font-bold text-primary-300">
-                  {value.title}
-                </h3>
-                <div className="mx-auto h-32 w-32">
-                  <img
-                    src={value.image}
-                    alt={value.title}
-                    className="h-full w-full object-contain"
-                  />
-                </div>
-                <figcaption>
-                  <p className="text-justify font-semibold">{value.desc}</p>
-                </figcaption>
-              </figure>
-            );
+            return <CommunitySupportCard key={index} data={value} />;
           })}
         </div>
 

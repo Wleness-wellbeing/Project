@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { login, logo } from "../../assets";
+import { iconFacebookCircle, iconGoogle, login, logo } from "../../assets";
 import axios from "axios";
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -45,22 +45,12 @@ export default function Login() {
       </aside>
 
       <div class="flex items-center justify-center px-4 md:w-1/2">
-        <div class="w-full sm:w-[440px]">
-          <div class="mx-auto mb-12 w-full sm:w-[320px]">
+        <div class="w-full sm:w-[400px]">
+          <div class="mx-auto mb-4 w-full sm:w-[280px]">
             <Link to="/">
               <img src={logo} alt="Logo" class="block w-full object-cover" />
             </Link>
           </div>
-
-          <div class="mb-10 flex justify-between gap-5">
-            <Link to="/login" class="btn-transparent">
-              LOGIN
-            </Link>
-            <Link to="/signup" class="btn-primary">
-              SIGN UP
-            </Link>
-          </div>
-
           {/* Login Form */}
           <form action="javascript:void()" className="mb-8">
             <label htmlFor="username" className="mb-5 block">
@@ -82,28 +72,46 @@ export default function Login() {
                 placeholder="Password"
                 className="form-input"
               />
+            </label>
+            <div className="text-right">
               <Link
                 to="/forget-password"
-                className="mb-10 block text-right text-primary-100"
+                className="mb-6 inline-block font-medium text-primary-400"
               >
                 Forgot Password?
               </Link>
-            </label>
+            </div>
             <div className="text-center">
               <button
                 onClick={handlesubmit}
-                className="btn-primary !w-fit !px-28"
+                className="btn-primary !w-fit !px-28 !py-3"
               >
                 LOGIN
               </button>
             </div>
           </form>
-          <p className="text-center">
-            <span>Don't have an account yet. </span>
-            <Link className="font-semibold text-primary-100" to="/signup">
-              Sign Up
-            </Link>
-          </p>
+
+          <div className="px-16">
+            <div className="my-4 flex items-center justify-center gap-3">
+              <span className="h-[2px] w-28 bg-slate-200"></span>
+              <span className="text-sm font-medium">OR</span>
+              <span className="h-[2px] w-28 bg-slate-200"></span>
+            </div>
+            <div className="mb-6 flex justify-center gap-x-4">
+              <button className="rounded-lg bg-primary-50/80 px-4 py-2 transition-colors hover:bg-primary-50">
+                <img src={iconGoogle} alt="" className="w-6" />
+              </button>
+              <button className="rounded-lg bg-primary-50/80 px-4 py-2 transition-colors hover:bg-primary-50">
+                <img src={iconFacebookCircle} alt="" className="w-6" />
+              </button>
+            </div>
+            <p className="text-center font-medium">
+              <span>Don't have an account yet. </span>
+              <Link className="font-semibold text-primary-400" to="/signup">
+                Sign Up
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
     </main>

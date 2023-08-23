@@ -28,11 +28,7 @@ export default function GridHeader(props) {
         <div>
           <img src={props.image} alt="" className="w-full" />
         </div>
-        <p className="para mb-8 text-center lg:px-20">
-          Discover transformative counseling and online therapy for growth,
-          healing, and resilience, empowering you with compassionate support for
-          renewed well-being.
-        </p>
+        <p className="para mb-8 text-center lg:px-20">{props.desc}</p>
         <div className="text-center" onClick={props.handleScrollToComponent}>
           <button className="btn-one">Explore More</button>
         </div>

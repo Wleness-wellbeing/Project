@@ -23,9 +23,9 @@ export default function Footer() {
       <footer className="border-b-[1px] bg-[#E9FBF9] font-medium">
         <div className="container mx-auto py-12">
           <div className="space-y-6 sm:grid sm:grid-cols-2 sm:gap-4 sm:space-y-0 lg:grid-cols-5 xl:pb-0">
-            <div>
+            <div className="2xl:pr-5">
               <h2 className="mb-4 text-xl font-semibold">Location</h2>
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {footerLocation.map((value, i) => {
                   return (
                     <li key={i}>
@@ -67,7 +67,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h4 className="mb-4 text-xl font-semibold">Focus Area's</h4>
+              <h4 className="mb-4 text-xl font-semibold">Situations</h4>
               <ul className="space-y-1">
                 {footerFocusAreas.map((value, index) => {
                   return (

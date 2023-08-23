@@ -644,6 +644,8 @@ import iconWhatsapp from "./images/icons/whatsapp.svg";
 import iconLinkedin from "./images/icons/linkedin.svg";
 import iconTwitter from "./images/icons/twitter.svg";
 import iconFacebook from "./images/icons/facebook.svg";
+import iconFacebookCircle from "./images/icons/facebook-circle.svg";
+import iconGoogle from "./images/icons/google.svg";
 import wlenessApproachIcon1 from "./images/icons/wleness-approach-1.png";
 import wlenessApproachIcon2 from "./images/icons/wleness-approach-2.png";
 import wlenessApproachIcon3 from "./images/icons/wleness-approach-3.png";
@@ -659,6 +661,8 @@ export {
   wlenessApproachIcon2,
   wlenessApproachIcon3,
   wlenessApproachIcon4,
+  iconFacebookCircle,
+  iconGoogle,
 };
 
 // Other Images
