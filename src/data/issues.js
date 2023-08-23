@@ -1245,17 +1245,21 @@ export const wlenessApproach = [
   {
     title: "Talk to the Therapist",
     image: wlenessApproachIcon1,
+    slug: "/services/therapy",
   },
   {
     title: "Explore different tools & activities",
     image: wlenessApproachIcon2,
+    slug: "/activities",
   },
   {
     title: "Consult the Psychiatrist",
     image: wlenessApproachIcon3,
+    slug: "/experts/all",
   },
   {
     title: "Join the community",
     image: wlenessApproachIcon4,
+    slug: "/community",
   },
 ];
