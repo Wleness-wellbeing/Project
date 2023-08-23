@@ -49,6 +49,8 @@ import UserDashboard from "./pages/Doctors/UserDashboard";
 import Corporate from "./pages/Corporate";
 import DoctorDetailPage from "./components/admin/DoctorDetailsPage";
 import Calendly from "./components/Calendly";
+import PrivacyPolicy from "./pages/Policies/PrivacyPolicy";
+import TermsAndConditions from "./pages/Policies/TermsAndConditions";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -206,7 +208,7 @@ function App() {
           }
         />
 
-        {/* Issues Subpages */}
+        {/* Therapies Subpages */}
         {therapiesData.map((value, index) => {
           return (
             <Route
@@ -433,6 +435,23 @@ function App() {
             <SignupLayout>
               <UserDashboard />
             </SignupLayout>
+          }
+        />
+        {/* Policies Pages */}
+        <Route
+          path="/privacy-policy"
+          element={
+            <Layout>
+              <PrivacyPolicy />
+            </Layout>
+          }
+        />
+        <Route
+          path="/terms-and-conditions"
+          element={
+            <Layout>
+              <TermsAndConditions />
+            </Layout>
           }
         />
       </Routes>
