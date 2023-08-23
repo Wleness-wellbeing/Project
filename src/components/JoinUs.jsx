@@ -3,30 +3,8 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 // Data
-import { Elipse1, Elipse2, Elipse3, Elipse4 } from "../assets";
+import { joinUsList } from "../data/navigation";
 
-const joinUsList = [
-  {
-    image: Elipse2,
-    name: "Therapist",
-    slug: "/join-therapist",
-  },
-  {
-    image: Elipse3,
-    name: "Psychiatrist",
-    slug: "/join-psychiatrist",
-  },
-  {
-    image: Elipse4,
-    name: "Internship",
-    slug: "/internship",
-  },
-  {
-    image: Elipse1,
-    name: "Campus Ambassador",
-    slug: "/campus-ambassador",
-  },
-];
 function JoinUs({ isOpen, onClose }) {
   if (!isOpen) return null;
 

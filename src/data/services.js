@@ -20,6 +20,7 @@ import {
   whyChooseTherapy4,
   whyChooseTherapy5,
   bestTherapy,
+  specialist1,
   doctor1,
   therapyHeader,
   psychiatristHeader,
@@ -330,7 +331,7 @@ export const psychiatristData = {
     doctors: [
       {
         name: "Dr. Christina",
-        image: doctor1,
+        image: specialist1,
         profession: "Psychiatrist",
         exp: "6+ years of experience",
         expertise: "Yoga, work-life",
@@ -339,7 +340,7 @@ export const psychiatristData = {
       },
       {
         name: "Dr. Christina",
-        image: doctor1,
+        image: specialist1,
         profession: "Psychiatrist",
         exp: "6+ years of experience",
         expertise: "Yoga, work-life",
@@ -348,7 +349,7 @@ export const psychiatristData = {
       },
       {
         name: "Dr. Christina",
-        image: doctor1,
+        image: specialist1,
         profession: "Psychiatrist",
         exp: "6+ years of experience",
         expertise: "Yoga, work-life",
@@ -357,7 +358,7 @@ export const psychiatristData = {
       },
       {
         name: "Dr. Christina",
-        image: doctor1,
+        image: specialist1,
         profession: "Psychiatrist",
         exp: "6+ years of experience",
         expertise: "Yoga, work-life",
@@ -366,7 +367,7 @@ export const psychiatristData = {
       },
       {
         name: "Dr. Christina",
-        image: doctor1,
+        image: specialist1,
         profession: "Psychiatrist",
         exp: "6+ years of experience",
         expertise: "Yoga, work-life",
@@ -375,7 +376,7 @@ export const psychiatristData = {
       },
       {
         name: "Dr. Christina",
-        image: doctor1,
+        image: specialist1,
         profession: "Psychiatrist",
         exp: "6+ years of experience",
         expertise: "Yoga, work-life",

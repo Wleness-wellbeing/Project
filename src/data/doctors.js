@@ -1,4 +1,4 @@
-import { doctor1 } from "../assets";
+import { doctor1, specialist1 } from "../assets";
 
 export const couplesTherapyDoctors = {
   heading: [
@@ -22,7 +22,7 @@ export const couplesTherapyDoctors = {
       size: "scale-75 hidden lg:block ",
     },
     {
-      name: "Dr. Christina",
+      name: "Dr. Sonal",
       image: doctor1,
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
@@ -30,7 +30,7 @@ export const couplesTherapyDoctors = {
       size: "scale-95 hidden lg:block ",
     },
     {
-      name: "Dr. Christina",
+      name: "Dr. Swati",
       image: doctor1,
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
@@ -38,7 +38,7 @@ export const couplesTherapyDoctors = {
       size: "scale-105",
     },
     {
-      name: "Dr. Christina",
+      name: "Dr. Shraddha",
       image: doctor1,
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
@@ -46,12 +46,52 @@ export const couplesTherapyDoctors = {
       size: "scale-95 hidden lg:block ",
     },
     {
-      name: "Dr. Christina",
+      name: "Dr. Strange",
       image: doctor1,
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
       size: "scale-75 hidden lg:block ",
+    },
+    {
+      name: "Dr. Sonal",
+      image: doctor1,
+      exp: "6+ years of experience",
+      expertise: "Yoga, work-life",
+      speaks: "German, English",
+      size: "scale-95 hidden lg:block ",
+    },
+    {
+      name: "Dr. Swati",
+      image: doctor1,
+      exp: "6+ years of experience",
+      expertise: "Yoga, work-life",
+      speaks: "German, English",
+      size: "scale-105",
+    },
+    {
+      name: "Dr. Sonal",
+      image: doctor1,
+      exp: "6+ years of experience",
+      expertise: "Yoga, work-life",
+      speaks: "German, English",
+      size: "scale-95 hidden lg:block ",
+    },
+    {
+      name: "Dr. Swati",
+      image: doctor1,
+      exp: "6+ years of experience",
+      expertise: "Yoga, work-life",
+      speaks: "German, English",
+      size: "scale-105",
+    },
+    {
+      name: "Dr. Swati",
+      image: doctor1,
+      exp: "6+ years of experience",
+      expertise: "Yoga, work-life",
+      speaks: "German, English",
+      size: "scale-105",
     },
   ],
   button: {
@@ -117,6 +157,46 @@ export const expertDoctors = {
       speaks: "German, English",
       size: "scale-75 hidden lg:block ",
     },
+    {
+      name: "Dr. Christina",
+      image: doctor1,
+      exp: "6+ years of experience",
+      expertise: "Yoga, work-life",
+      speaks: "German, English",
+      size: "scale-75 hidden lg:block ",
+    },
+    {
+      name: "Dr. Christina",
+      image: doctor1,
+      exp: "6+ years of experience",
+      expertise: "Yoga, work-life",
+      speaks: "German, English",
+      size: "scale-75 hidden lg:block ",
+    },
+    {
+      name: "Dr. Christina",
+      image: doctor1,
+      exp: "6+ years of experience",
+      expertise: "Yoga, work-life",
+      speaks: "German, English",
+      size: "scale-75 hidden lg:block ",
+    },
+    {
+      name: "Dr. Christina",
+      image: doctor1,
+      exp: "6+ years of experience",
+      expertise: "Yoga, work-life",
+      speaks: "German, English",
+      size: "scale-75 hidden lg:block ",
+    },
+    {
+      name: "Dr. Christina",
+      image: doctor1,
+      exp: "6+ years of experience",
+      expertise: "Yoga, work-life",
+      speaks: "German, English",
+      size: "scale-75 hidden lg:block ",
+    },
   ],
   button: {
     text: "View All",
@@ -127,7 +207,7 @@ export const expertDoctors = {
 export const allExperts = [
   {
     name: "Dr. Christina",
-    image: doctor1,
+    image: specialist1,
     profession: "Therapist",
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
@@ -136,7 +216,7 @@ export const allExperts = [
   },
   {
     name: "Dr. Christina",
-    image: doctor1,
+    image: specialist1,
     profession: "Therapist",
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
@@ -145,7 +225,7 @@ export const allExperts = [
   },
   {
     name: "Dr. Christina",
-    image: doctor1,
+    image: specialist1,
     profession: "Therapist",
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
@@ -154,7 +234,7 @@ export const allExperts = [
   },
   {
     name: "Dr. Christina",
-    image: doctor1,
+    image: specialist1,
     profession: "Therapist",
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
@@ -163,7 +243,7 @@ export const allExperts = [
   },
   {
     name: "Dr. Christina",
-    image: doctor1,
+    image: specialist1,
     profession: "Therapist",
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
@@ -172,7 +252,7 @@ export const allExperts = [
   },
   {
     name: "Dr. Christina",
-    image: doctor1,
+    image: specialist1,
     profession: "Therapist",
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
@@ -180,7 +260,7 @@ export const allExperts = [
   },
   {
     name: "Dr. Christina",
-    image: doctor1,
+    image: specialist1,
     profession: "Therapist",
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
@@ -188,7 +268,7 @@ export const allExperts = [
   },
   {
     name: "Dr. Christina",
-    image: doctor1,
+    image: specialist1,
     profession: "Therapist",
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
@@ -196,7 +276,7 @@ export const allExperts = [
   },
   {
     name: "Dr. Christina",
-    image: doctor1,
+    image: specialist1,
     profession: "Therapist",
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
@@ -204,7 +284,7 @@ export const allExperts = [
   },
   {
     name: "Dr. Christina",
-    image: doctor1,
+    image: specialist1,
     profession: "Therapist",
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
@@ -212,7 +292,7 @@ export const allExperts = [
   },
   {
     name: "Dr. Christina",
-    image: doctor1,
+    image: specialist1,
     profession: "Therapist",
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
@@ -220,7 +300,7 @@ export const allExperts = [
   },
   {
     name: "Dr. Christina",
-    image: doctor1,
+    image: specialist1,
     profession: "Therapist",
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
@@ -228,7 +308,7 @@ export const allExperts = [
   },
   {
     name: "Dr. Christina",
-    image: doctor1,
+    image: specialist1,
     profession: "Therapist",
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
@@ -236,7 +316,7 @@ export const allExperts = [
   },
   {
     name: "Dr. Christina",
-    image: doctor1,
+    image: specialist1,
     profession: "Therapist",
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
@@ -244,7 +324,7 @@ export const allExperts = [
   },
   {
     name: "Dr. Christina",
-    image: doctor1,
+    image: specialist1,
     profession: "Therapist",
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
@@ -267,7 +347,7 @@ export const stressDoctors = {
   doctors: [
     {
       name: "Dr. Christina",
-      image: doctor1,
+      image: specialist1,
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
@@ -275,7 +355,7 @@ export const stressDoctors = {
     },
     {
       name: "Dr. Christina",
-      image: doctor1,
+      image: specialist1,
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
@@ -283,7 +363,7 @@ export const stressDoctors = {
     },
     {
       name: "Dr. Christina",
-      image: doctor1,
+      image: specialist1,
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
@@ -291,7 +371,7 @@ export const stressDoctors = {
     },
     {
       name: "Dr. Christina",
-      image: doctor1,
+      image: specialist1,
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
@@ -299,7 +379,7 @@ export const stressDoctors = {
     },
     {
       name: "Dr. Christina",
-      image: doctor1,
+      image: specialist1,
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",

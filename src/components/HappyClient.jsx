@@ -3,7 +3,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 
 // Data
 import { textColorize } from "../utils";
@@ -16,10 +16,13 @@ export default function HappyClient(props) {
       <div className="container mx-auto py-2 lg:py-4">
         <div className="relative pb-4 lg:!pr-0 lg:pb-0">
           <Swiper
-            modules={[Pagination]}
+            modules={[Pagination, Autoplay]}
             slidesPerView={1}
             className="!overflow-x-clip overflow-y-visible"
             pagination={{ clickable: true }}
+            autoplay={{ delay: 2000 }}
+            speed={400}
+            loop={true}
           >
             {props.data.clients.map((value, i) => {
               return (

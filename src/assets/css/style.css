@@ -127,7 +127,10 @@ a {
 .swiper-pagination-bullet-active {
   @apply bg-primary-300;
 }
-
+/* Doctors Slider Styles */
+.doctorSlider .swiper-wrapper {
+  @apply h-fit;
+}
 /* Navigation Dropdown */
 .subdropdown:hover .subdropdown-pages {
   @apply block;

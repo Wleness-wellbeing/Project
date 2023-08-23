@@ -103,11 +103,20 @@ import brainGameTreasure from "./images/activities/brainExercise/brain-game-trea
 import brainGameHunter from "./images/activities/brainExercise/brain-game-turtle-hunter.png";
 
 // Join us
-import Elipse1 from "./images/joinus/Ellipse 1150.png";
-import Elipse2 from "./images/joinus/Ellipse 1151.png";
-import Elipse3 from "./images/joinus/Ellipse 1152.png";
-import Elipse4 from "./images/joinus/Ellipse 1152.png";
+import JoinUsTherapist from "./images/joinus/joinus-therapist.png";
+import JoinUsPsychiatrist from "./images/joinus/joinus-psychiatrist.png";
+import JoinUsInternship from "./images/joinus/joinus-internship.png";
+import JoinUsCampusAmbassador from "./images/joinus/joinus-campus-ambassador.png";
 import Bubble from "./images/joinus/Bubble.png";
+
+export {
+  JoinUsTherapist,
+  JoinUsPsychiatrist,
+  JoinUsInternship,
+  JoinUsCampusAmbassador,
+  Bubble,
+};
+
 // Campus Ambassador
 import campusAmbassadorHeader from "./images/joinus/campusAmbassador/campus-ambassador-header.png";
 import campusAmbassadorTeam from "./images/joinus/campusAmbassador/campus-ambassador.png";
@@ -125,11 +134,6 @@ import dottedPlane from "./images/joinus/campusAmbassador/dotted-plane.png";
 import bgCircles from "./images/joinus/campusAmbassador/bg-circles.png";
 
 export {
-  Elipse1,
-  Elipse2,
-  Elipse3,
-  Elipse4,
-  Bubble,
   campusAmbassadorHeader,
   campusAmbassadorTeam,
   roleCampus,

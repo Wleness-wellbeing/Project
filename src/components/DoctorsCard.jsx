@@ -42,10 +42,13 @@ export default function DoctorsCard(props) {
             {props.data.price}
           </h5>
           <div className="space-x-2">
-            <Link to="/appointment" className="btn-one inline-block">
+            <Link to="/appointment" className="btn-one inline-block !text-sm">
               View Profile
             </Link>
-            <Link to="/appointment/checkout" className="btn-one inline-block">
+            <Link
+              to="/appointment/checkout"
+              className="btn-one inline-block !text-sm"
+            >
               Book Now
             </Link>
           </div>

@@ -5,6 +5,10 @@ import {
   faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import {
+  JoinUsCampusAmbassador,
+  JoinUsInternship,
+  JoinUsPsychiatrist,
+  JoinUsTherapist,
   iconFacebook,
   iconInstagram,
   iconLinkedin,
@@ -86,6 +90,29 @@ export const menuPages = [
   {
     name: "User Dashboard",
     slug: "/user/dashboard",
+  },
+];
+
+export const joinUsList = [
+  {
+    image: JoinUsTherapist,
+    name: "Therapist",
+    slug: "/join-therapist",
+  },
+  {
+    image: JoinUsPsychiatrist,
+    name: "Psychiatrist",
+    slug: "/join-psychiatrist",
+  },
+  {
+    image: JoinUsInternship,
+    name: "Internship",
+    slug: "/internship",
+  },
+  {
+    image: JoinUsCampusAmbassador,
+    name: "Campus Ambassador",
+    slug: "/campus-ambassador",
   },
 ];
 
