@@ -93,7 +93,7 @@ export const menuPages = [
 // Footer - Location
 export const footerLocation = [
   [
-    "2, Spring House, Sec 43, Golfcourse road, Gurgaon, 122022.",
+    "Spring House, Plot 2, Sec 43, Golf Course Road, Gurgaon, 122002",
     "",
     faLocationDot,
   ],

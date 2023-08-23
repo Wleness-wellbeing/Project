@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 // Data
 import { activities, brainExercise } from "./data";
 import { therapiesData } from "./data/issues";
@@ -46,6 +47,8 @@ import AdminUsers from "./pages/Admin/AdminUsers";
 import DoctorDashboard from "./pages/Doctors/DoctorDashboard";
 import UserDashboard from "./pages/Doctors/UserDashboard";
 import Corporate from "./pages/Corporate";
+import DoctorDetailPage from "./components/admin/DoctorDetailsPage";
+import Calendly from "./components/Calendly";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -194,6 +197,15 @@ function App() {
             </Layout>
           }
         />
+        <Route
+          path="/calendly"
+          element={
+            <Layout>
+              <Calendly />
+            </Layout>
+          }
+        />
+
         {/* Issues Subpages */}
         {therapiesData.map((value, index) => {
           return (
@@ -314,6 +326,8 @@ function App() {
           }
         />
         {/* Admin Routes */}
+
+        <Route path="/" element={<Layout />} />
         <Route
           path="/admin"
           element={
@@ -334,6 +348,7 @@ function App() {
             </Layout>
           }
         />
+
         <Route
           path="/admin/issues"
           element={
@@ -380,6 +395,16 @@ function App() {
             <Layout>
               <AdminLayout>
                 <AdminDoctors />
+              </AdminLayout>
+            </Layout>
+          }
+        />
+        <Route
+          path="/admin/doctordetailpage"
+          element={
+            <Layout>
+              <AdminLayout>
+                <DoctorDetailPage />
               </AdminLayout>
             </Layout>
           }

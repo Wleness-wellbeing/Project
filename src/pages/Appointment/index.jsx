@@ -4,6 +4,7 @@ import {
   faVideo,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import Calendly from "../../components/Calendly";
@@ -130,9 +131,11 @@ export default function Appointment() {
                 </label>
               </div>
             </div>
-            <Calendly />
+
             <div className="mb-8 text-center">
-              <button className="btn-one !rounded-lg">Proceed</button>
+              <Link to="/calendly">
+                <button className="btn-one !rounded-lg">Proceed</button>
+              </Link>
             </div>
           </form>
 
