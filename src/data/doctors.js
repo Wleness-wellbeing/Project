@@ -19,7 +19,6 @@ export const couplesTherapyDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-75 hidden lg:block ",
     },
     {
       name: "Dr. Sonal",
@@ -27,7 +26,6 @@ export const couplesTherapyDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-95 hidden lg:block ",
     },
     {
       name: "Dr. Swati",
@@ -35,7 +33,6 @@ export const couplesTherapyDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-105",
     },
     {
       name: "Dr. Shraddha",
@@ -43,7 +40,6 @@ export const couplesTherapyDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-95 hidden lg:block ",
     },
     {
       name: "Dr. Strange",
@@ -51,7 +47,6 @@ export const couplesTherapyDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-75 hidden lg:block ",
     },
     {
       name: "Dr. Sonal",
@@ -59,7 +54,6 @@ export const couplesTherapyDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-95 hidden lg:block ",
     },
     {
       name: "Dr. Swati",
@@ -67,7 +61,6 @@ export const couplesTherapyDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-105",
     },
     {
       name: "Dr. Sonal",
@@ -75,7 +68,6 @@ export const couplesTherapyDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-95 hidden lg:block ",
     },
     {
       name: "Dr. Swati",
@@ -83,7 +75,6 @@ export const couplesTherapyDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-105",
     },
     {
       name: "Dr. Swati",
@@ -91,7 +82,6 @@ export const couplesTherapyDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-105",
     },
   ],
   button: {
@@ -123,7 +113,6 @@ export const expertDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-75 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -131,7 +120,6 @@ export const expertDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-95 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -139,7 +127,6 @@ export const expertDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-105",
     },
     {
       name: "Dr. Christina",
@@ -147,7 +134,6 @@ export const expertDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-95 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -155,7 +141,6 @@ export const expertDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-75 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -163,7 +148,6 @@ export const expertDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-75 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -171,7 +155,6 @@ export const expertDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-75 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -179,7 +162,6 @@ export const expertDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-75 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -187,7 +169,6 @@ export const expertDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-75 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -195,7 +176,6 @@ export const expertDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-75 hidden lg:block ",
     },
   ],
   button: {
@@ -351,7 +331,6 @@ export const stressDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-75 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -359,7 +338,6 @@ export const stressDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-95 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -367,7 +345,6 @@ export const stressDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-105",
     },
     {
       name: "Dr. Christina",
@@ -375,7 +352,6 @@ export const stressDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-95 hidden lg:block ",
     },
     {
       name: "Dr. Christina",
@@ -383,7 +359,6 @@ export const stressDoctors = {
       exp: "6+ years of experience",
       expertise: "Yoga, work-life",
       speaks: "German, English",
-      size: "scale-75 hidden lg:block ",
     },
   ],
   button: {

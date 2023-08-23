@@ -91,7 +91,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
         {
           name: "Dr. Christina",
@@ -99,7 +98,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -107,7 +105,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-105",
         },
         {
           name: "Dr. Christina",
@@ -115,7 +112,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -123,7 +119,41 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
         },
       ],
       button: {
@@ -186,7 +216,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
         {
           name: "Dr. Christina",
@@ -194,7 +223,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -202,7 +230,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-105",
         },
         {
           name: "Dr. Christina",
@@ -210,7 +237,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -218,7 +244,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
       ],
       button: {
@@ -278,7 +303,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
         {
           name: "Dr. Christina",
@@ -286,7 +310,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -294,7 +317,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-105",
         },
         {
           name: "Dr. Christina",
@@ -302,7 +324,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -310,7 +331,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
       ],
       button: {
@@ -388,7 +408,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
         {
           name: "Dr. Christina",
@@ -396,7 +415,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -404,7 +422,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-105",
         },
         {
           name: "Dr. Christina",
@@ -412,7 +429,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -420,7 +436,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
       ],
       button: {
@@ -480,7 +495,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
         {
           name: "Dr. Christina",
@@ -488,7 +502,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -496,7 +509,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-105",
         },
         {
           name: "Dr. Christina",
@@ -504,7 +516,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -512,7 +523,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
       ],
       button: {
@@ -576,7 +586,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
         {
           name: "Dr. Christina",
@@ -584,7 +593,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -592,7 +600,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-105",
         },
         {
           name: "Dr. Christina",
@@ -600,7 +607,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -608,7 +614,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
       ],
       button: {
@@ -672,7 +677,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
         {
           name: "Dr. Christina",
@@ -680,7 +684,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -688,7 +691,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-105",
         },
         {
           name: "Dr. Christina",
@@ -696,7 +698,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -704,7 +705,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
       ],
       button: {
@@ -764,7 +764,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
         {
           name: "Dr. Christina",
@@ -772,7 +771,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -780,7 +778,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-105",
         },
         {
           name: "Dr. Christina",
@@ -788,7 +785,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -796,7 +792,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
       ],
       button: {
@@ -869,7 +864,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
         {
           name: "Dr. Christina",
@@ -877,7 +871,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -885,7 +878,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-105",
         },
         {
           name: "Dr. Christina",
@@ -893,7 +885,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -901,7 +892,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
       ],
       button: {
@@ -983,7 +973,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
         {
           name: "Dr. Christina",
@@ -991,7 +980,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -999,7 +987,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-105",
         },
         {
           name: "Dr. Christina",
@@ -1007,7 +994,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -1015,7 +1001,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
       ],
       button: {
@@ -1094,7 +1079,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
         {
           name: "Dr. Christina",
@@ -1102,7 +1086,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -1110,7 +1093,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-105",
         },
         {
           name: "Dr. Christina",
@@ -1118,7 +1100,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -1126,7 +1107,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
       ],
       button: {
@@ -1196,7 +1176,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
         {
           name: "Dr. Christina",
@@ -1204,7 +1183,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -1212,7 +1190,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-105",
         },
         {
           name: "Dr. Christina",
@@ -1220,7 +1197,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-95",
         },
         {
           name: "Dr. Christina",
@@ -1228,7 +1204,6 @@ export const therapiesData = [
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
           speaks: "German, English",
-          size: "w-fit hidden lg:block rounded-2xl p-[2px] shadow-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 scale-75",
         },
       ],
       button: {

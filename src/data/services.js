@@ -166,7 +166,7 @@ export const MusicalTherapyData = {
         text: "Unlocking Inner Harmony and Emotional Well-being through Melodic Interventions ",
       },
     ],
-    image: couplesTherapyHeader,
+    image: musicalTherapyHeader,
   },
   activities: {
     title: "MUSICAL THERAPY TECHNIQUES",
