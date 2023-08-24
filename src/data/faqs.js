@@ -95,24 +95,25 @@ export const coupleTherapyFaq = {
   image: faq1,
   qnas: [
     {
-      question: "What is couple therapy?",
+      question: "Why should I choose couples therapy?",
       answer:
-        "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
+        "Wleness offers you the convenience of joining couple therapy from the comfort of your home and accessing professional support. It's flexible, goes with your schedule and from anywhere with an internet connection. It's particularly useful for couples in long-distance relationships or with busy lifestyles.",
     },
     {
-      question: "When should a couple consider therapy?",
+      question: "Are the professionals on Wleness qualified?",
       answer:
-        "Couples should consider therapy when facing communication breakdowns, recurring conflicts, trust issues, or a general sense of disconnect in their relationship.",
+        "Yes, all therapists on Wleness are licensed professionals with experience in couples therapy, relationship counselling, and marriage guidance. Undergoing a rigorous vetting process to ensure our high standards.",
     },
     {
-      question: "How does couple therapy work?",
+      question:
+        "What if my partner and I are in different locations during the session?",
       answer:
-        "Couple therapy typically involves sessions with a trained therapist who facilitates open discussions, provides tools for healthier communication, and guides couples toward a deeper understanding of each other's needs and emotions.",
+        "Wleness unites couples who are distant both emotionally and physically. You and your partner can join the therapy session from your respective devices, and the therapist will facilitate the session virtually.",
     },
     {
-      question: "Can couple therapy help save a troubled relationship?",
+      question: "Is Wleness suitable for all stages of a relationship?",
       answer:
-        "Yes, couple therapy can be highly effective in saving troubled relationships by fostering better communication, addressing underlying issues, and building emotional intimacy. However, it requires commitment and effort from both partners",
+        "Yes, Wleness is curated to help couples at all stages of their relationship, whether you're dating, engaged, married or even seperated. Our experts will tailor an efficient approach to address your specific needs.",
     },
   ],
 };
@@ -151,29 +152,30 @@ export const musicalTherapyFaq = {
   image: faq2,
   qnas: [
     {
-      question: "What Is Musical Therapy?",
+      question: "What is Wleness Music Therapy?",
       answer:
-        "Musical therapy, also known as music therapy, is a form of therapeutic intervention that uses music to address various physical, emotional, cognitive, and social needs of individuals.",
+        "Wleness provides exclusive music therapy for you that offers the opportunity to engage in musical bliss with one of its kind services. Ranging from high binaural beats to soothing notes, we got it all covered for you.",
     },
     {
-      question: "When Should You Take A Musical Therapy?",
+      question: "How does music therapy work on Wleness?",
       answer:
-        "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
+        "Available anytime on the Wleness platform consisting of scientifically tested binaural beats and notes to address various emotional, cognitive, and behavioral goals. The best part is you can get a preview before subscribing.",
     },
     {
-      question: "How Does Couple Therapy Work?",
+      question:
+        "Do I need to have a musical background to benefit from music therapy?",
       answer:
-        "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
+        "No, not at all! All we need is your time and dedication to be your better self. Rest we will ensure to adapt sessions to your level of musical experience, making the process inclusive and comfortable.",
     },
     {
-      question: "Can Musical Therapy Help Save A Troubled Mind?",
+      question: "Can music therapy be helpful for children too?",
       answer:
-        "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
+        "Absolutely! A child's brain develops rapidly. Musical notes and rhythms are scientifically proven to accelerate the process. We at Wleness target the holistic growth of both adults and children.",
     },
   ],
 };
 
-// FAQ's page QNA's
+// FAQ's page
 export const faqs = [
   {
     question: "What Is Musical Therapy?",
@@ -222,21 +224,22 @@ export const homeFaqs = [
   {
     question: "What is Wleness?",
     answer:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus tempore blanditiis, dolorem explicabo doloremque debitis aperiam! Exercitationem eaque, cumque accusamus impedit assumenda labore odit, sunt architecto quia, magnam ipsam voluptates?",
+      "Wleness is an inclusive online platform promoting mental health and wellness. We provide numerous resources to support individuals on their journey towards better mental well-being. Our platform is LGBTQ-friendly, and a safe and inclusive environment for all.",
   },
   {
     question: "What services does Wleness offer?",
     answer:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus tempore blanditiis, dolorem explicabo doloremque debitis aperiam! Exercitationem eaque, cumque accusamus impedit assumenda labore odit, sunt architecto quia, magnam ipsam voluptates?",
+      "Wleness offers a wide range of services to support mental health including online therapy sessions with licensed professionals, self-help resources, articles, guided meditation, exercises etc. and a supportive community forum at your fingertips. We prioritize providing world-class services and the well-being of our users.",
   },
   {
-    question: "What makes Wleness different from others?",
+    question: "How can I get started with Wleness?",
     answer:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus tempore blanditiis, dolorem explicabo doloremque debitis aperiam! Exercitationem eaque, cumque accusamus impedit assumenda labore odit, sunt architecto quia, magnam ipsam voluptates?",
+      "Simply visit Wleness.com and create an account. From there, you can explore the various resources and services available on the platform. We guide you in selecting a therapist and schedule sessions based on your preferences. We offer a plethora of services to suit your needs.",
   },
   {
-    question: "How can I benefit from using Wleness?",
+    question:
+      "Is Wleness suitable for individuals with severe mental health conditions?",
     answer:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus tempore blanditiis, dolorem explicabo doloremque debitis aperiam! Exercitationem eaque, cumque accusamus impedit assumenda labore odit, sunt architecto quia, magnam ipsam voluptates?",
+      "While all therapists on Wleness are licensed professionals who possess the necessary qualifications, it may not be suitable for severe mental health conditions or those in crisis. In such cases, we recommend immediate assistance from emergency services that provide more intensive and prompt support.",
   },
 ];
