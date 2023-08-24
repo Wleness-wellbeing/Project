@@ -114,11 +114,6 @@ export const coupleTherapyFaq = {
       answer:
         "Yes, couple therapy can be highly effective in saving troubled relationships by fostering better communication, addressing underlying issues, and building emotional intimacy. However, it requires commitment and effort from both partners",
     },
-    {
-      question: "Is couple therapy only for married couples?",
-      answer:
-        "No, couple therapy is not exclusive to married couples. It benefits all types of couples, including those dating, engaged, cohabiting, or married.",
-    },
   ],
 };
 
@@ -172,11 +167,6 @@ export const musicalTherapyFaq = {
     },
     {
       question: "Can Musical Therapy Help Save A Troubled Mind?",
-      answer:
-        "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
-    },
-    {
-      question: "Is Musical Therapy Only For Youngsters?",
       answer:
         "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
     },

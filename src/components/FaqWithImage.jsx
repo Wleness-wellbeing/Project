@@ -1,10 +1,17 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from "react";
 // Data
 import { textColorize } from "../utils";
+import Faq from "./layout/Faq";
 
 export default function FaqWithImage(props) {
+  const [openFAQ, setOpenFAQ] = useState(0);
+
+  // Toggle Faq's
+  const toggleFAQ = (index) => {
+    if (index !== openFAQ) {
+      setOpenFAQ(index);
+    }
+  };
   return (
     <>
       <section className="container mx-auto">
@@ -28,18 +35,13 @@ export default function FaqWithImage(props) {
           <div className="space-y-4 lg:w-1/2">
             {props.data.qnas.map((value, index) => {
               return (
-                <details
+                <Faq
                   key={index}
-                  className="bg-200/30 cursor-pointer rounded-lg bg-primary-50 p-4 lg:p-6"
-                >
-                  <summary className="flex items-center justify-between">
-                    <h3 className="flex w-full items-center justify-between text-lg font-bold">
-                      <span>{value.question}</span>
-                      <FontAwesomeIcon icon={faPlus} />
-                    </h3>
-                  </summary>
-                  <p className="font-semibold">{value.answer}</p>
-                </details>
+                  question={value.question}
+                  answer={value.answer}
+                  isOpen={index === openFAQ}
+                  toggleFAQ={() => toggleFAQ(index)}
+                />
               );
             })}
           </div>

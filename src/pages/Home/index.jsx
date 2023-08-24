@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 // Data
 import {
   headerMobile,
@@ -28,20 +27,22 @@ import {
   faq3Lg,
 } from "../../assets";
 import { homeFaqs } from "../../data/faqs";
+import { homeTestimonials } from "../../data/testimonials";
+import { objectives, statistics, therapies, whyChooseUs } from "../../data";
 // Components
 import Assessment from "../../components/Assessment";
-import { Link } from "react-router-dom";
 import RequestForm from "../../components/RequestForm";
 import Feedback from "../../components/Feedback";
 import Testimonial from "../../components/testimonial/Testimonial";
-import { objectives, statistics, therapies, whyChooseUs } from "../../data";
 import IssueCard from "../../components/Cards/IssueCard";
-import { homeTestimonials } from "../../data/testimonials";
+import Faq from "../../components/layout/Faq";
 
 export default function Home() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
   const [isFeedbackOpen, setFeedback] = useState(false);
+  const [openFAQ, setOpenFAQ] = useState(0);
 
+  // Assessment Slides
   const openAssessmentModal = () => {
     setShowAssessmentModal(true);
   };
@@ -56,6 +57,13 @@ export default function Home() {
 
   const closeFeedbackModal = () => {
     setFeedback(false);
+  };
+
+  // Toggle Faq's
+  const toggleFAQ = (index) => {
+    if (index !== openFAQ) {
+      setOpenFAQ(index);
+    }
   };
 
   const [name, setName] = useState("");
@@ -381,6 +389,7 @@ export default function Home() {
         {statistics.map((value, i) => {
           return (
             <div
+              key={i}
               className={
                 value.background +
                 " flex flex-col rounded-2xl p-2 text-center md:p-4"
@@ -452,21 +461,16 @@ export default function Home() {
             Goes to FAQ's
           </Link>
         </div>
-        <div className="flex flex-col gap-4 lg:w-1/2">
+        <div className="flex flex-col gap-4 lg:w-1/2" id="home-page-faqs">
           {homeFaqs.map((value, index) => {
             return (
-              <details
+              <Faq
                 key={index}
-                className="bg-200/30 cursor-pointer rounded-lg bg-[#52D0C2] p-4 lg:p-6"
-              >
-                <summary className="flex items-center justify-between">
-                  <h3 className="flex w-full items-center justify-between text-lg font-bold">
-                    <span>{value.question} </span>
-                    <FontAwesomeIcon icon={faPlus} />
-                  </h3>
-                </summary>
-                <p className="font-medium">{value.answer}</p>
-              </details>
+                question={value.question}
+                answer={value.answer}
+                isOpen={index === openFAQ}
+                toggleFAQ={() => toggleFAQ(index)}
+              />
             );
           })}
         </div>

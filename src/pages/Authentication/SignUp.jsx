@@ -255,7 +255,7 @@ export default function Signup() {
             )} */}
 
             <div className="mt-6 text-center">
-              <button className="btn-primary !w-fit !py-3 !text-sm !font-semibold">
+              <button className="btn-primary !w-fit !px-20 !text-sm !font-semibold">
                 CREATE ACCOUNT
               </button>
             </div>

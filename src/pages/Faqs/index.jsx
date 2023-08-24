@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   bgDotsPattern,
   faq3Lg,
@@ -10,6 +10,14 @@ import Faq from "../../components/layout/Faq";
 import { faqs } from "../../data/faqs";
 
 export default function index() {
+  const [openFAQ, setOpenFAQ] = useState(0);
+
+  // Toggle Faq's
+  const toggleFAQ = (index) => {
+    if (index !== openFAQ) {
+      setOpenFAQ(index);
+    }
+  };
   return (
     <>
       <header className="relative overflow-x-hidden overflow-y-clip">
@@ -73,6 +81,8 @@ export default function index() {
                   key={index}
                   question={value.question}
                   answer={value.answer}
+                  isOpen={index === openFAQ}
+                  toggleFAQ={() => toggleFAQ(index)}
                 />
               );
             })}

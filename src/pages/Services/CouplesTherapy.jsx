@@ -19,6 +19,7 @@ import Assessment from "../../components/Assessment";
 
 function CouplesTherapy() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
+
   const openAssessmentModal = () => {
     setShowAssessmentModal(true);
   };
@@ -32,6 +33,7 @@ function CouplesTherapy() {
   const handleScrollToComponent = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
+
   return (
     <>
       <ActivityHeader
