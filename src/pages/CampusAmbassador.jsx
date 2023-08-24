@@ -37,29 +37,33 @@ export default function CampusAmbassador() {
     setcampusModal(false);
   };
   return (
-    <main>
+    <>
       <header className="relative overflow-y-auto overflow-x-hidden py-6  text-center">
-        <h1 className="subheading mb-4">
-          <span className="heading-primary">Campus Ambassador</span>
-        </h1>
         <div className="container mx-auto">
+          <h1 className="subheading mb-4">
+            <span className="heading-primary">Campus Ambassador</span>
+          </h1>
           <img src={campusAmbassadorHeader} alt="" className="w-full" />
         </div>
         {/* Dots  */}
-        <img src={dots1} alt="" className="absolute left-0 top-20 -z-10 w-96" />
+        <img
+          src={dots1}
+          alt=""
+          className="absolute left-0 top-20 -z-10 w-32 lg:w-96"
+        />
         <img
           src={dots2}
           alt=""
-          className="absolute -right-20 bottom-0 -z-10 w-96"
+          className="absolute -right-20 bottom-0 -z-10 w-32 lg:w-96"
         />
       </header>
 
       {/* Our Program */}
       <section className="container mx-auto pb-10 pt-4">
-        <h2 className="px-44 text-center text-4xl font-bold text-primary-300">
+        <h2 className="text-center text-2xl font-bold text-primary-300 lg:px-44 lg:text-4xl">
           Welcome to our Health and Wellness Campus Ambassador Program!
         </h2>
-        <p className="para my-8 px-12 text-center">
+        <p className="para my-7 text-center lg:my-8 lg:px-12">
           Are you passionate about promoting a peaceful & stress free lifestyle
           and inspiring others to prioritize their well-being? Join our dynamic
           team of Campus Ambassadors and become a driving force for positive
@@ -71,9 +75,16 @@ export default function CampusAmbassador() {
           </button>
         </div>
         <div>
-          <figure className="flex gap-x-5 py-12">
-            <figcaption className="w-3/5 self-center">
-              <div className="mr-20 rounded-2xl border-2 border-primary-50 px-6 py-3">
+          <figure className="lg:flex lg:gap-x-5 lg:py-12">
+            <div className="pb-8 lg:order-2 lg:w-2/5 lg:pb-0">
+              <img
+                src={campusAmbassadorTeam}
+                alt=""
+                className="mx-auto block w-fit object-cover"
+              />
+            </div>
+            <figcaption className="self-center lg:order-1 lg:w-3/5">
+              <div className="mr-10 rounded-2xl border-2 border-primary-50 px-6 py-3 text-sm md:text-base lg:mr-20">
                 <p className="font-medium">
                   As an ambassador, you will have the opportunity to engage with
                   fellow students, organize exciting health-focused events,
@@ -82,7 +93,7 @@ export default function CampusAmbassador() {
                   emotional wellness.
                 </p>
               </div>
-              <div className=" -mt-2 ml-20 rounded-2xl rounded-br-[4rem] bg-primary-50 px-6 py-3 shadow-lg">
+              <div className="-mt-2 ml-10 rounded-2xl rounded-br-[4rem] bg-primary-50 px-6 py-3 text-sm shadow-lg md:text-base lg:ml-20">
                 <p className="font-medium">
                   By becoming a part of our Wellness Campus Ambassador Program,
                   you're not just joining a team - you're joining a movement.
@@ -92,13 +103,6 @@ export default function CampusAmbassador() {
                 </p>
               </div>
             </figcaption>
-            <div className="w-2/5">
-              <img
-                src={campusAmbassadorTeam}
-                alt=""
-                className="mx-auto block w-fit object-cover"
-              />
-            </div>
           </figure>
         </div>
       </section>
@@ -229,6 +233,6 @@ export default function CampusAmbassador() {
       </section>
 
       <CampusAmbassadorForm isOpen={campusModal} onClose={closeCampusModal} />
-    </main>
+    </>
   );
 }
