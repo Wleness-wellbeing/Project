@@ -93,6 +93,18 @@ export const menuPages = [
   },
 ];
 
+// Menu Pages
+export const blogsMenuPages = [
+  {
+    name: "Blogs",
+    slug: "/blogs",
+  },
+  {
+    name: "Videos",
+    slug: "/videos",
+  },
+];
+
 export const joinUsList = [
   {
     image: JoinUsTherapist,

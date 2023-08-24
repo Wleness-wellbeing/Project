@@ -7,6 +7,7 @@ import JoinUs from "../JoinUs";
 import { logo } from "../../assets";
 import {
   activitiesMenuPages,
+  blogsMenuPages,
   menuPages,
   serviceMenuPages,
 } from "../../data/navigation";
@@ -51,15 +52,15 @@ function Navbar() {
           >
             <MenuLink url="/" text="Home" />
             <Dropdown url="" text="Services" pages={serviceMenuPages} />
-            {/* <MenuLink url="/experts" text="Experts" /> */}
-            <MenuLink url="/internship" text="Internship" />
-            <MenuLink url="/blogs" text="Blogs" />
             <Dropdown
               url="/activities"
               text="Activities"
               pages={activitiesMenuPages}
             />
             <Dropdown url="/self-care" text="Self Care" pages={menuPages} />
+            {/* <MenuLink url="/experts" text="Experts" /> */}
+            <MenuLink url="/internship" text="Internship" />
+            <Dropdown url="" text="Resources" pages={blogsMenuPages} />
             <MenuLink url="/about-us" text="About Us" />
           </ul>
 
