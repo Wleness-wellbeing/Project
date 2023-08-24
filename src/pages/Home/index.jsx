@@ -107,8 +107,12 @@ export default function Home() {
               Partnering Your Well Being
             </h1>
           </hgroup>
-          <p className="mb-5 text-base font-[600] !leading-6 md:mb-10 lg:w-80 lg:text-lg">
-            Nurturing mind, body and soul for a lasting fulfillment
+          <p className="mb-5 text-base font-[600] !leading-6 md:mb-8 lg:pr-10 lg:text-lg">
+            Discover your journey to being a better self by nurturing your mind,
+            body and soul for long-lasting fulfilment from within you.
+          </p>
+          <p className="mb-5 text-base font-[600] !leading-6 lg:text-lg">
+            We care for you.
           </p>
           <button
             className="btn-one mx-auto !mr-2 inline-block !w-fit lg:mx-0"
@@ -129,7 +133,9 @@ export default function Home() {
       <section>
         <div className="container mx-auto pb-6 sm:pt-6 lg:pb-14 2xl:py-10">
           <h2 className="subheading sm:pb-0 xl:pb-1">
-            <span className="heading-primary">Seeking Support?</span>
+            <span className="heading-primary">
+              Discover A Path To Well-Being
+            </span>
           </h2>
           <p className="para">
             Discover engaging mental health resources, including articles,
@@ -249,16 +255,29 @@ export default function Home() {
                   <span className="heading-primary">Wleness Community</span>
                 </h2>
                 <p className="para ml-1 text-lg">
-                  Wleness is beginning of happiness of your life.
+                  Wleness is all about the beginning of happiness in your life.
                 </p>
               </hgroup>
               <p className="mb-6 ml-1 text-lg font-medium lg:pr-28">
-                "<span className="font-bold text-primary-300">Embrace</span>,
-                <span className="font-bold text-primary-300">Empower</span>,
-                <span className="font-bold text-primary-300">Elevate</span>:
-                Join our mental health community app and discover a safe space
-                to share, heal, and grow together. Let's break the stigma and
-                support each other on this journey towards emotional well-being.
+                "
+                <span className="mr-1 font-bold text-primary-300">
+                  Embrace yourself,
+                </span>
+                <span className="mr-1 font-bold text-primary-300">
+                  Empower your well-being,
+                </span>
+                <span className="font-bold text-primary-300">
+                  Elevate your mental health
+                </span>
+                : Join our highly curated community dedicated to mental
+                well-being. A safe space for you to share, heal and grow as all
+                your queries will be answered by our top mental health experts
+                available just for you!
+              </p>
+              <p className="mb-6 ml-1 text-lg font-medium lg:pr-28">
+                Let us together break the stigma around mental health support
+                each other and make the journey toward emotional well-being
+                beautiful.
               </p>
               <Link to="/community" className="btn-one inline-block">
                 Join Us Now
