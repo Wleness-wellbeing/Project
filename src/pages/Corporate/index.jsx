@@ -106,13 +106,13 @@ export default function index() {
           <img
             src={blueFlower}
             alt=""
-            className="absolute -right-20 -top-24 w-32 lg:-top-44 lg:w-72"
+            className="absolute -right-20 -top-24 w-32 lg:-top-44 lg:w-56 2xl:w-72"
           />
 
           <img
             src={blueFlower}
             alt=""
-            className="absolute -bottom-44 -left-20 w-32 lg:w-72"
+            className="absolute -bottom-44 -left-20 w-32 lg:w-52 xl:-bottom-28 2xl:w-72"
           />
         </div>
 
@@ -178,12 +178,12 @@ export default function index() {
         <img
           src={circleArt}
           alt=""
-          className="absolute -bottom-24 -right-80 lg:bottom-0"
+          className="absolute -bottom-24 -right-80 lg:-right-[420px] lg:bottom-0 2xl:-right-96"
         />
         <img
           src={circleArt}
           alt=""
-          className="absolute -left-80 -top-56 lg:-top-[380px]"
+          className="absolute -left-80 -top-56 lg:-left-[410px] lg:-top-[380px] 2xl:-left-96"
         />
       </section>
     </>

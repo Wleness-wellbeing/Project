@@ -209,6 +209,7 @@ export const therapiesData = [
           text: " Specialist",
         },
       ],
+
       doctors: [
         {
           name: "Dr. Christina",
@@ -240,6 +241,41 @@ export const therapiesData = [
         },
         {
           name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
           image: doctor1,
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
@@ -296,6 +332,7 @@ export const therapiesData = [
           text: " Specialist",
         },
       ],
+
       doctors: [
         {
           name: "Dr. Christina",
@@ -327,6 +364,41 @@ export const therapiesData = [
         },
         {
           name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
           image: doctor1,
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
@@ -401,6 +473,7 @@ export const therapiesData = [
           text: " Specialist",
         },
       ],
+
       doctors: [
         {
           name: "Dr. Christina",
@@ -432,6 +505,41 @@ export const therapiesData = [
         },
         {
           name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
           image: doctor1,
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
@@ -488,6 +596,7 @@ export const therapiesData = [
           text: " Specialist",
         },
       ],
+
       doctors: [
         {
           name: "Dr. Christina",
@@ -519,6 +628,41 @@ export const therapiesData = [
         },
         {
           name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
           image: doctor1,
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
@@ -579,6 +723,7 @@ export const therapiesData = [
           text: " Specialist",
         },
       ],
+
       doctors: [
         {
           name: "Dr. Christina",
@@ -610,6 +755,41 @@ export const therapiesData = [
         },
         {
           name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
           image: doctor1,
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
@@ -670,6 +850,7 @@ export const therapiesData = [
           text: " Specialist",
         },
       ],
+
       doctors: [
         {
           name: "Dr. Christina",
@@ -701,6 +882,41 @@ export const therapiesData = [
         },
         {
           name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
           image: doctor1,
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
@@ -757,6 +973,7 @@ export const therapiesData = [
           text: " Specialist",
         },
       ],
+
       doctors: [
         {
           name: "Dr. Christina",
@@ -788,6 +1005,41 @@ export const therapiesData = [
         },
         {
           name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
           image: doctor1,
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
@@ -857,6 +1109,7 @@ export const therapiesData = [
           text: " Specialist",
         },
       ],
+
       doctors: [
         {
           name: "Dr. Christina",
@@ -888,6 +1141,41 @@ export const therapiesData = [
         },
         {
           name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
           image: doctor1,
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
@@ -966,6 +1254,7 @@ export const therapiesData = [
           text: " Specialist",
         },
       ],
+
       doctors: [
         {
           name: "Dr. Christina",
@@ -997,6 +1286,41 @@ export const therapiesData = [
         },
         {
           name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
           image: doctor1,
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
@@ -1072,6 +1396,7 @@ export const therapiesData = [
           text: " Specialist",
         },
       ],
+
       doctors: [
         {
           name: "Dr. Christina",
@@ -1103,6 +1428,41 @@ export const therapiesData = [
         },
         {
           name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
           image: doctor1,
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",
@@ -1169,6 +1529,7 @@ export const therapiesData = [
           text: " Specialist",
         },
       ],
+
       doctors: [
         {
           name: "Dr. Christina",
@@ -1200,6 +1561,41 @@ export const therapiesData = [
         },
         {
           name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
           image: doctor1,
           exp: "6+ years of experience",
           expertise: "Yoga, work-life",

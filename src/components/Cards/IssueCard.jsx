@@ -21,12 +21,12 @@ export default function IssueCard(props) {
           <img
             src={props.data.image}
             alt="Avatar"
-            className="mx-auto mb-4 block h-24 w-24 rounded-2xl object-cover lg:h-40 lg:w-40 3xl:h-36 3xl:w-36"
+            className="mx-auto mb-4 block h-24 w-24 rounded-2xl object-contain lg:h-40 lg:w-40 3xl:h-36 3xl:w-36"
           />
         </Link>
 
         <button
-          className="btn-one !py-1.5 !text-sm"
+          className="btn-one bg-gradient-to-r from-secondary to-tertiary !text-sm !font-bold transition-colors hover:bg-gradient-to-br hover:from-tertiary hover:to-secondary hover:shadow-md"
           onClick={openAssessmentModal}
         >
           Book Now

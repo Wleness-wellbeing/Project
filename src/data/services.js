@@ -256,14 +256,10 @@ export const TherapyData = {
     ],
     featureImage: bestTherapy,
     features: [
-      [
-        "Consultations ",
-        "anywhere, anytime",
-        "top-0 lg:top-6 left-0 lg:left-16 ",
-      ],
-      ["Online ", "Consultations", " top-0 lg:top-6 right-0 lg:right-28 "],
-      ["Affordable ", "Help", " -bottom-12 lg:bottom-0 left-0 lg:left-32 "],
-      ["Trusted ", "Therapist", " -bottom-12 lg:bottom-2 right-0 lg:right-36 "],
+      ["Consultations ", "anywhere, anytime"],
+      ["Online ", "Consultations"],
+      ["Trusted ", "Therapist"],
+      ["Affordable ", "Help"],
     ],
     startBtn: ["Start the therapy", "/issues"],
   },

@@ -31,7 +31,7 @@ import { homeTestimonials } from "../../data/testimonials";
 import { objectives, statistics, therapies, whyChooseUs } from "../../data";
 // Components
 import Assessment from "../../components/Assessment";
-import RequestForm from "../../components/RequestForm";
+import RequestForm from "../../components/Forms/RequestForm";
 import Feedback from "../../components/Feedback";
 import Testimonial from "../../components/testimonial/Testimonial";
 import IssueCard from "../../components/Cards/IssueCard";
@@ -446,8 +446,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
       {/* ========== Request Form ========== */}
       <RequestForm />
+
       {/* ========== FAQ's ========== */}
       <section className="container mx-auto my-6 gap-2 px-4 lg:mb-14 lg:flex">
         <div className="mx-auto mb-5 lg:mb-0 lg:w-1/2">
