@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // Data
 import {
-  headerMobile,
-  headerDesktop,
   iconInternshipAnnouncement,
   iconInternshipBoy,
   iconInternshipBriefcase,
@@ -25,6 +23,12 @@ import {
   smallLeaf1,
   smallLeaf2,
   faq3Lg,
+  servicesIcon1,
+  servicesIcon2,
+  servicesIcon3,
+  servicesIcon4,
+  servicesIcon5,
+  servicesIcon6,
 } from "../../assets";
 import { homeFaqs } from "../../data/faqs";
 import { homeTestimonials } from "../../data/testimonials";
@@ -36,6 +40,45 @@ import Feedback from "../../components/Feedback";
 import Testimonial from "../../components/testimonial/Testimonial";
 import IssueCard from "../../components/Cards/IssueCard";
 import Faq from "../../components/layout/Faq";
+import MainHeader from "../../components/headers/MainHeader";
+
+// Our Services
+const services = [
+  [
+    {
+      name: "Lifestyle Coaching",
+      image: servicesIcon1,
+      desc: "Lifestyle coaching empowers well-being, productivity, and balance. It encourages health, reduces stress, boosts motivation, and enhances performance.",
+    },
+    {
+      name: "Executive Coaching",
+      image: servicesIcon2,
+      desc: "Executive coaching elevates leadership, empowers high-level staff, & drives positive results. It maximizes potential, navigates challenges,  enhances performance.",
+    },
+    {
+      name: "Corporate",
+      image: servicesIcon3,
+      desc: "Corporate mental wellness services prioritize employee psychological well-being. They address challenges, reduce stress, and foster emotional resilience in the workplace.",
+    },
+  ],
+  [
+    {
+      name: "Musical Therapy",
+      image: servicesIcon4,
+      desc: "Music therapy addresses diverse needs through music. Therapists use musical interventions to achieve goals, including listening, creating, singing, and playing instruments.",
+    },
+    {
+      name: "Yoga",
+      image: servicesIcon5,
+      desc: "Yoga combines postures, breathing, meditation, and mindfulness for mental wellness. It enhances mental health by nurturing the mind-body connection.",
+    },
+    {
+      name: "Meditation",
+      image: servicesIcon6,
+      desc: "Meditation fosters mental wellness by focusing the mind and reducing cluttered thoughts. It enhances clarity, relaxation, and self-awareness.",
+    },
+  ],
+];
 
 export default function Home() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
@@ -92,56 +135,14 @@ export default function Home() {
 
   return (
     <>
-      {/* ========== Header Bar ========== */}
-      <header className="container mx-auto flex flex-col items-center overflow-x-clip rounded-3xl !px-5 py-2 lg:flex-row lg:bg-primary-50/30 lg:py-6 xl:py-24 2xl:justify-between">
-        <div className="mb-6 lg:order-2 lg:mb-0 lg:translate-x-20 lg:translate-y-10 xl:w-[45%] 2xl:flex 2xl:justify-end">
-          {/* Desktop Image */}
-          <img
-            src={headerDesktop}
-            alt=""
-            className="hidden w-full scale-[1.1] object-cover lg:block xl:scale-[1.3]"
-          />
-          {/* Mobile Image */}
-          <img
-            src={headerMobile}
-            alt=""
-            className="w-full object-cover lg:hidden"
-          />
-        </div>
-
-        <div className="-m-5 mb-6 rounded-3xl bg-primary-50/30 p-5 md:mb-6 lg:order-1 lg:m-0 lg:mb-0 lg:rounded-none lg:bg-transparent xl:w-[55%] xl:pl-4 2xl:pl-10">
-          <hgroup className="md:mb-3">
-            <h1 className="heading-primary pb-1 font-quicksand text-2xl font-bold sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-[2.5rem]">
-              Partnering Your Well Being
-            </h1>
-          </hgroup>
-          <p className="mb-5 text-base font-[600] !leading-6 md:mb-8 lg:pr-10 lg:text-lg">
-            Discover your journey to being a better self by nurturing your mind,
-            body and soul for long-lasting fulfilment from within you.
-          </p>
-          <p className="mb-5 text-base font-[600] !leading-6 lg:text-lg">
-            We care for you.
-          </p>
-          <button
-            className="btn-one mx-auto !mr-2 inline-block !w-fit lg:mx-0"
-            onClick={openAssessmentModal}
-          >
-            Schedule an appointment
-          </button>
-          {/* <button
-            className="btn-one mx-auto inline-block !w-fit lg:mx-0"
-            onClick={openFeedbackModal}
-          >
-            Feedback
-          </button> */}
-        </div>
-      </header>
+      {/* Hero Section */}
+      <MainHeader openAssessmentModal={openAssessmentModal} />
 
       {/* ========== Issues ========== */}
       <section>
-        <div className="container mx-auto pb-6 sm:pt-6 lg:pb-14 2xl:py-10">
-          <h2 className="subheading sm:pb-0 xl:pb-1">
-            <span className="heading-primary">
+        <div className="container mx-auto py-8 text-center sm:pt-6 lg:pb-14 2xl:pb-10">
+          <h2 className="sm:pb-0 xl:pb-1">
+            <span className="subheading heading-primary">
               Discover A Path To Well-Being
             </span>
           </h2>
@@ -153,7 +154,7 @@ export default function Home() {
         </div>
         {/* Issues */}
         <div className="bg-gradient-to-br from-primary-10 to-white pb-6 font-quicksand lg:pb-10">
-          <div className="container mx-auto grid gap-4 py-6 pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-10 lg:pt-12 xl:grid-cols-3 xl:gap-10 2xl:grid-cols-4 2xl:gap-5">
+          <div className="container mx-auto grid gap-4 py-6 pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-10 lg:pt-12 xl:grid-cols-4 2xl:grid-cols-4 2xl:gap-5">
             {therapies.slice(0, 8).map((value, index) => {
               return <IssueCard key={index} data={value} />;
             })}
@@ -188,85 +189,69 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ========== Internship ========== */}
-      <section className="relative my-6 px-4 sm:py-8 3xl:pt-14">
-        <div className="relative mx-auto w-fit rounded-[100%] border-2 xl:px-8">
-          <div className="relative m-4 w-fit rounded-[100%] border-2 sm:m-10 lg:m-16 lg:py-8 xl:mx-10 xl:px-8">
-            <div className="relative m-4 rounded-[100%] border-2 px-2 py-10 text-center sm:m-10 lg:mx-12 lg:my-8 lg:py-20 xl:mx-10 xl:w-fit xl:px-8">
-              <div className="translate-y-3">
-                <h3 className="heading-primary px-2 pb-1 text-center text-lg font-bold sm:text-2xl lg:text-4xl">
-                  Looking for an internship?
-                </h3>
-                <p className="mb-4 px-10 text-xs leading-4 sm:text-base md:mb-4 md:text-lg lg:w-[640px]">
-                  Upload your CV and make a positive impact on peoples life by
-                  joining our internship program.
-                </p>
-                <Link to="/internship" className="btn-one">
-                  Explore More
-                </Link>
-              </div>
-              {/* Figures */}
-              <img
-                src={iconInternshipAnnouncement}
-                alt=""
-                className="absolute left-14 top-0 w-8 object-cover sm:w-12 lg:top-10 lg:w-16"
-              />
-            </div>
-            {/* Figures */}
-            <img
-              src={iconInternshipHandshake}
-              alt=""
-              className="absolute -bottom-2 left-8 w-10 -translate-y-1/2 object-cover sm:w-14 lg:bottom-10 lg:w-20"
-            />
-            <img
-              src={iconInternshipCheck}
-              alt=""
-              className="absolute right-20 top-5 w-6 object-cover sm:w-8 lg:right-40 lg:w-10"
-            />
-            <img
-              src={iconInternshipYout}
-              alt=""
-              className="absolute bottom-12 right-0 w-8 object-cover sm:w-14 lg:bottom-36 lg:w-20"
-            />
+      {/* Our Services */}
+      <section className="py-10">
+        <div className="container mx-auto text-center">
+          <h2 className="subheading heading-primary mb-7">
+            Our services for you
+          </h2>
+          <div className="mb-14 grid gap-y-8 md:grid-cols-3 lg:gap-12 lg:gap-y-0">
+            {services[0].map((value, i) => {
+              return (
+                <figure key={i}>
+                  <div>
+                    <img src={value.image} alt="" className="mx-auto lg:w-28" />
+                  </div>
+                  <figcaption>
+                    <h2 className="mb-3 text-xl font-bold text-primary-400">
+                      {value.name}
+                    </h2>
+                    <p className="font-medium">{value.desc}</p>
+                  </figcaption>
+                </figure>
+              );
+            })}
           </div>
-          {/* Figures */}
-          <img
-            src={iconInternshipBriefcase}
-            alt=""
-            className="absolute -left-5 top-1/2 w-8 -translate-y-1/2 object-cover sm:w-12 lg:-left-10 lg:w-16"
-          />
-          <img
-            src={iconInternshipBoy}
-            alt=""
-            className="absolute right-5 top-8 w-8 object-cover sm:right-10 sm:w-12 lg:right-16 lg:top-20 lg:w-16"
-          />
+          <div className="grid gap-y-8 md:grid-cols-3 lg:gap-12 lg:gap-y-0">
+            {services[1].map((value, i) => {
+              return (
+                <figure key={i}>
+                  <div>
+                    <img src={value.image} alt="" className="mx-auto lg:w-28" />
+                  </div>
+                  <figcaption>
+                    <h2 className="mb-3 text-xl font-bold text-primary-400">
+                      {value.name}
+                    </h2>
+                    <p className="font-medium">{value.desc}</p>
+                  </figcaption>
+                </figure>
+              );
+            })}
+          </div>
         </div>
-        {/* Doodles */}
-        <img
-          src={doodle1}
-          alt=""
-          className="absolute right-0 top-0 -z-10 w-20 object-cover xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80"
-        />
-        <img
-          src={doodle2}
-          alt=""
-          className="absolute bottom-0 left-0 -z-10 w-20 object-cover xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80"
-        />
       </section>
+
       {/* ========== Community ========== */}
       <section className="relative overflow-x-hidden 3xl:py-10">
         <div className="container mx-auto">
           <div className="relative flex flex-col justify-between lg:flex-row lg:items-center">
-            <article className="mx-auto pb-4 lg:w-3/5 lg:pb-10">
-              <hgroup className="mb-6 lg:mb-14">
+            <div className="mb-8 lg:order-2 lg:mb-0 lg:w-2/5">
+              <div className="lg:mx-auto lg:w-72">
+                <img src={community} alt="" className="w-full object-cover" />
+              </div>
+            </div>
+            <article className="mx-auto pb-4 lg:order-1 lg:w-3/5 lg:pb-10">
+              <hgroup className="mb-6 lg:mb-10">
                 <h2 className="subheading">
                   <span className="heading-primary">Wleness Community</span>
                 </h2>
-                <p className="para ml-1 text-lg">
-                  Wleness is all about the beginning of happiness in your life.
-                </p>
+                <p className="para ml-1 text-lg"></p>
               </hgroup>
               <p className="mb-6 ml-1 text-lg font-medium lg:pr-28">
+                <span className="mb-4 mr-1 block font-bold">
+                  Wleness is all about the beginning of happiness in your life.
+                </span>
                 "
                 <span className="mr-1 font-bold text-primary-300">
                   Embrace yourself,
@@ -291,11 +276,6 @@ export default function Home() {
                 Join Us Now
               </Link>
             </article>
-            <div className="lg:w-2/5">
-              <div className="lg:w-72">
-                <img src={community} alt="" className="w-full object-cover" />
-              </div>
-            </div>
           </div>
         </div>
         {/* Doodles */}
@@ -310,71 +290,35 @@ export default function Home() {
           className="absolute bottom-0 left-0 -z-10 w-20 object-cover opacity-20 xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80"
         />
       </section>
+
       {/* ========== Why Choose Us ========== */}
-      <section className="container mx-auto overflow-x-hidden pb-7 pt-10 lg:pt-12">
-        <div className="flex flex-col items-end">
-          <hgroup className="lg:w-3/5 lg:text-center">
-            <h2 className="subheading heading-primary">Why Choose Us?</h2>
-            <p className="para">
-              Our platform is built by psychiatrists, psychologists and mental
-              health experts with immense global experience.
-            </p>
-          </hgroup>
-        </div>
-        <div className="flex flex-col justify-between lg:flex-row lg:items-center">
-          <div className="order-2 box-border p-4 sm:mx-auto sm:w-4/5 lg:order-1 lg:px-10 lg:py-2 2xl:w-[45%] 3xl:px-16">
-            <div className="relative mx-auto grid grid-cols-2 gap-3 sm:gap-5">
-              <div className="grid gap-3">
-                <img src={bigLeaf1} alt="" className="w-full object-cover" />
-                <img src={smallLeaf1} alt="" className="w-full object-cover" />
-              </div>
-              <div className="grid gap-3">
-                <img src={smallLeaf2} alt="" className="w-full object-cover" />
-                <img src={bigLeaf2} alt="" className="w-full object-cover" />
-              </div>
-              {/* Leaves */}
-              <img
-                src={leaf1}
-                alt=""
-                className="absolute -left-14 -top-16 -z-10 w-24 object-cover xs:-left-16 xs:-top-20 md:w-28"
-              />
-              <img
-                src={leaf2}
-                alt=""
-                className="absolute -bottom-6 -right-32 -z-10 w-60 object-cover xs:-right-36 md:w-64"
-              />
-            </div>
+      <section className="py-6">
+        <div className="container mx-auto text-center">
+          <h2 className="subheading heading-primary">Why Choose Us?</h2>
+          <p className="pb-12 font-medium lg:mx-auto lg:w-[720px]">
+            Our platform is built by psychiatrists, psychologists and mental
+            health experts with immense global experience.
+          </p>
+          <div className="mb-14 grid gap-y-8 md:grid-cols-3 lg:gap-12 lg:gap-y-0">
+            {whyChooseUs.map((value, i) => {
+              return (
+                <figure key={i}>
+                  <div>
+                    <img src={value.image} alt="" className="mx-auto lg:w-28" />
+                  </div>
+                  <figcaption>
+                    <h2 className="mb-3 text-xl font-bold text-primary-400">
+                      {value.name}
+                    </h2>
+                    <p className="font-medium">{value.desc}</p>
+                  </figcaption>
+                </figure>
+              );
+            })}
           </div>
-          <article className="order-1 mx-auto pb-10 sm:w-[580px] lg:order-2 2xl:w-[55%] 2xl:pb-0">
-            <div className="space-y-3 lg:ml-12">
-              {whyChooseUs.map((value, i) => {
-                return (
-                  <figure
-                    key={i}
-                    className="flex rounded-xl rounded-br-[5rem] border-2 border-slate-200 bg-white p-4 shadow-md xs:flex-row lg:items-center lg:p-5 lg:py-3 xl:py-6"
-                  >
-                    <div className="mr-4 w-1/5 xs:w-1/5 xl:w-1/5 3xl:w-[15%]">
-                      <img
-                        src={value.image}
-                        alt=""
-                        className="w-full object-cover"
-                      />
-                    </div>
-                    <figcaption className="w-4/5 xs:w-4/5 xl:w-4/5 3xl:w-[85%]">
-                      <h4 className="heading-primary mb-1 text-sm font-bold sm:text-xl">
-                        {value.title}
-                      </h4>
-                      <p className="text-xs font-medium leading-4 text-slate-600 xs:text-xs xs:leading-4 sm:text-base sm:leading-5 lg:pr-5 lg:text-sm lg:leading-4 xl:text-base xl:leading-5">
-                        {value.desc}
-                      </p>
-                    </figcaption>
-                  </figure>
-                );
-              })}
-            </div>
-          </article>
         </div>
       </section>
+
       {/* ========== Our Testimonial ========== */}
       <section>
         <h2 className="mb-8 text-center">

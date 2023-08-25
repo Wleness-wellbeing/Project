@@ -1,8 +1,99 @@
-// Header Images
-import headerMobile from "./images/header/landing-mobile.png";
-import headerDesktop from "./images/header/landing.png";
+// Home Images
+import mainHeaderImage from "./images/home/main-header-image.png";
+import iconCommunity from "./images/home/icons/icon_community.svg";
+import iconEasyAccess from "./images/home/icons/icon_easy-access.svg";
+import iconEffective from "./images/home/icons/icon_effective.svg";
+import iconSafe from "./images/home/icons/icon_safe.svg";
+import iconSecure from "./images/home/icons/icon_secure.svg";
+import iconInternshipAnnouncement from "./images/home/icons/internship_announcements.png";
+import iconInternshipBoy from "./images/home/icons/internship_boy.png";
+import iconInternshipBriefcase from "./images/home/icons/internship_briefcase.png";
+import iconInternshipCheck from "./images/home/icons/internship_check.png";
+import iconInternshipHandshake from "./images/home/icons/internship_handshake.png";
+import iconInternshipYout from "./images/home/icons/internship_youth.png";
+import testimonial1 from "./images/home/testimonials/testimonial-1.png";
+import community from "./images/home/community.png";
+import doodle1 from "./images/home/doodle-1.svg";
+import doodle2 from "./images/home/doodle-2.svg";
+import iconCommitment from "./images/home/icon-commitment.svg";
+import iconExperience from "./images/home/icon-experience.svg";
+import iconFacilities from "./images/home/icon-facilities.svg";
+import leaf1 from "./images/home/leaf-1.svg";
+import leaf2 from "./images/home/leaf-2.svg";
+import partner1 from "./images/home/partner-1.png";
+import partner2 from "./images/home/partner-2.png";
+import partner3 from "./images/home/partner-3.png";
+import partner4 from "./images/home/partner-4.png";
+import partner5 from "./images/home/partner-4.png";
+import requestCallback from "./images/home/request-callback.png";
+import bigLeaf1 from "./images/home/why-lg-1.png";
+import bigLeaf2 from "./images/home/why-lg-2.png";
+import smallLeaf1 from "./images/home/why-sm-1.png";
+import smallLeaf2 from "./images/home/why-sm-2.png";
+import homeAnxiety from "./images/home/issues/anxiety.png";
+import homeAdsd from "./images/home/issues/bio-polar-disorder.png";
+import homeConfusion from "./images/home/issues/confusion.png";
+import homeDepression from "./images/home/issues/depression.png";
+import homeHyperTension from "./images/home/issues/hyper-tension.png";
+import homeStress from "./images/home/issues/stress.png";
+import servicesIcon1 from "./images/home/icons/services-icon-1.png";
+import servicesIcon2 from "./images/home/icons/services-icon-2.png";
+import servicesIcon3 from "./images/home/icons/services-icon-3.png";
+import servicesIcon4 from "./images/home/icons/services-icon-4.png";
+import servicesIcon5 from "./images/home/icons/services-icon-5.png";
+import servicesIcon6 from "./images/home/icons/services-icon-6.png";
+import homeCommitmentIcon from "./images/home/icons/commitment-icon.png";
+import homeExperienceIcon from "./images/home/icons/experience-icon.png";
+import homeFacilitiesIcon from "./images/home/icons/facilities-icon.png";
 
-export { headerDesktop, headerMobile };
+export {
+  mainHeaderImage,
+  iconCommunity,
+  iconEasyAccess,
+  iconEffective,
+  iconSafe,
+  iconSecure,
+  iconInternshipAnnouncement,
+  iconInternshipBoy,
+  iconInternshipBriefcase,
+  iconInternshipCheck,
+  iconInternshipHandshake,
+  iconInternshipYout,
+  testimonial1,
+  community,
+  doodle1,
+  doodle2,
+  iconCommitment,
+  iconExperience,
+  iconFacilities,
+  leaf1,
+  leaf2,
+  partner1,
+  partner2,
+  partner3,
+  partner4,
+  partner5,
+  requestCallback,
+  bigLeaf1,
+  bigLeaf2,
+  smallLeaf1,
+  smallLeaf2,
+  homeAnxiety,
+  homeAdsd,
+  homeConfusion,
+  homeDepression,
+  homeHyperTension,
+  homeStress,
+  servicesIcon1,
+  servicesIcon2,
+  servicesIcon3,
+  servicesIcon4,
+  servicesIcon5,
+  servicesIcon6,
+  homeCommitmentIcon,
+  homeExperienceIcon,
+  homeFacilitiesIcon,
+};
 
 // Avatar images
 import avatarImage1 from "./images/activities/avatar/image 13.png";
@@ -20,8 +111,7 @@ export {
   avatarImage6,
 };
 
-// =======================admin =========////
-
+// ============== Admin ==============
 import doctor from "./images/doctor.png";
 import profile from "./images/profile.png";
 import doctorLogIn from "./images/doctorLogIn.png";
@@ -275,83 +365,6 @@ export {
   specialist1,
   expertClient,
   featuredPatient,
-};
-
-// Home Images
-import iconCommunity from "./images/home/icons/icon_community.svg";
-import iconEasyAccess from "./images/home/icons/icon_easy-access.svg";
-import iconEffective from "./images/home/icons/icon_effective.svg";
-import iconSafe from "./images/home/icons/icon_safe.svg";
-import iconSecure from "./images/home/icons/icon_secure.svg";
-import iconInternshipAnnouncement from "./images/home/icons/internship_announcements.png";
-import iconInternshipBoy from "./images/home/icons/internship_boy.png";
-import iconInternshipBriefcase from "./images/home/icons/internship_briefcase.png";
-import iconInternshipCheck from "./images/home/icons/internship_check.png";
-import iconInternshipHandshake from "./images/home/icons/internship_handshake.png";
-import iconInternshipYout from "./images/home/icons/internship_youth.png";
-import testimonial1 from "./images/home/testimonials/testimonial-1.png";
-import community from "./images/home/community.png";
-import doodle1 from "./images/home/doodle-1.svg";
-import doodle2 from "./images/home/doodle-2.svg";
-import iconCommitment from "./images/home/icon-commitment.svg";
-import iconExperience from "./images/home/icon-experience.svg";
-import iconFacilities from "./images/home/icon-facilities.svg";
-import leaf1 from "./images/home/leaf-1.svg";
-import leaf2 from "./images/home/leaf-2.svg";
-import partner1 from "./images/home/partner-1.png";
-import partner2 from "./images/home/partner-2.png";
-import partner3 from "./images/home/partner-3.png";
-import partner4 from "./images/home/partner-4.png";
-import partner5 from "./images/home/partner-4.png";
-import requestCallback from "./images/home/request-callback.png";
-import bigLeaf1 from "./images/home/why-lg-1.png";
-import bigLeaf2 from "./images/home/why-lg-2.png";
-import smallLeaf1 from "./images/home/why-sm-1.png";
-import smallLeaf2 from "./images/home/why-sm-2.png";
-import homeAnxiety from "./images/home/issues/anxiety.png";
-import homeAdsd from "./images/home/issues/bio-polar-disorder.png";
-import homeConfusion from "./images/home/issues/confusion.png";
-import homeDepression from "./images/home/issues/depression.png";
-import homeHyperTension from "./images/home/issues/hyper-tension.png";
-import homeStress from "./images/home/issues/stress.png";
-
-export {
-  iconCommunity,
-  iconEasyAccess,
-  iconEffective,
-  iconSafe,
-  iconSecure,
-  iconInternshipAnnouncement,
-  iconInternshipBoy,
-  iconInternshipBriefcase,
-  iconInternshipCheck,
-  iconInternshipHandshake,
-  iconInternshipYout,
-  testimonial1,
-  community,
-  doodle1,
-  doodle2,
-  iconCommitment,
-  iconExperience,
-  iconFacilities,
-  leaf1,
-  leaf2,
-  partner1,
-  partner2,
-  partner3,
-  partner4,
-  partner5,
-  requestCallback,
-  bigLeaf1,
-  bigLeaf2,
-  smallLeaf1,
-  smallLeaf2,
-  homeAnxiety,
-  homeAdsd,
-  homeConfusion,
-  homeDepression,
-  homeHyperTension,
-  homeStress,
 };
 
 // Services Images

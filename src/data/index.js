@@ -77,6 +77,9 @@ import {
   iconExperience,
   iconCommitment,
   iconFacilities,
+  homeExperienceIcon,
+  homeCommitmentIcon,
+  homeFacilitiesIcon,
 } from "../assets";
 // Components
 import HeaderWithImage from "../components/HeaderWithImage";
@@ -1211,18 +1214,18 @@ export const objectives = [
 export const whyChooseUs = [
   {
     title: "Experience",
+    image: homeExperienceIcon,
     desc: "Expand your skills and knowledge by working alongside experienced professionals.",
-    image: iconExperience,
   },
   {
     title: "Commitment",
     desc: "We commit to providing personalized care tailored to your unique needs and support you at every step.",
-    image: iconCommitment,
+    image: homeCommitmentIcon,
   },
   {
     title: "Facilities",
     desc: "Experience the convenience and comfort of our state-of-the-art facilities.",
-    image: iconFacilities,
+    image: homeFacilitiesIcon,
   },
 ];
 
