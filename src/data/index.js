@@ -1215,7 +1215,7 @@ export const whyChooseUs = [
   {
     title: "Experience",
     image: homeExperienceIcon,
-    desc: "Expand your skills and knowledge by working alongside experienced professionals.",
+    desc: "We follow international regulations and standards to provide you quality support and care that you deserve.",
   },
   {
     title: "Commitment",
@@ -1224,7 +1224,7 @@ export const whyChooseUs = [
   },
   {
     title: "Facilities",
-    desc: "Experience the convenience and comfort of our state-of-the-art facilities.",
+    desc: "Experience the convenience and comfort of our state-of-the-art facilities at your fingertips.",
     image: homeFacilitiesIcon,
   },
 ];

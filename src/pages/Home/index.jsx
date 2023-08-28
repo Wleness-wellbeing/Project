@@ -41,6 +41,7 @@ import Testimonial from "../../components/testimonial/Testimonial";
 import IssueCard from "../../components/Cards/IssueCard";
 import Faq from "../../components/layout/Faq";
 import MainHeader from "../../components/headers/MainHeader";
+import HomeFaq from "../../components/Faq/HomeFaq";
 
 // Our Services
 const services = [
@@ -83,7 +84,6 @@ const services = [
 export default function Home() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
   const [isFeedbackOpen, setFeedback] = useState(false);
-  const [openFAQ, setOpenFAQ] = useState(0);
 
   // Assessment Slides
   const openAssessmentModal = () => {
@@ -100,13 +100,6 @@ export default function Home() {
 
   const closeFeedbackModal = () => {
     setFeedback(false);
-  };
-
-  // Toggle Faq's
-  const toggleFAQ = (index) => {
-    if (index !== openFAQ) {
-      setOpenFAQ(index);
-    }
   };
 
   const [name, setName] = useState("");
@@ -190,7 +183,7 @@ export default function Home() {
       </section>
 
       {/* Our Services */}
-      <section className="py-10">
+      <section className="relative py-10">
         <div className="container mx-auto text-center">
           <h2 className="subheading heading-primary mb-7">
             Our services for you
@@ -211,6 +204,13 @@ export default function Home() {
                 </figure>
               );
             })}
+
+            {/* Background Lines */}
+            <div className="absolute left-0 right-0 top-40 -z-10 hidden lg:block 4xl:top-44">
+              <div className="mb-2 h-[2px] w-full bg-primary-50"></div>
+              <div className="mb-2 h-[2px] w-full bg-primary-50"></div>
+              <div className="h-[2px] w-full bg-primary-50"></div>
+            </div>
           </div>
           <div className="grid gap-y-8 md:grid-cols-3 lg:gap-12 lg:gap-y-0">
             {services[1].map((value, i) => {
@@ -228,6 +228,13 @@ export default function Home() {
                 </figure>
               );
             })}
+
+            {/* Background Lines */}
+            <div className="absolute bottom-[270px] left-0 right-0 -z-10 hidden lg:block xl:bottom-60 4xl:bottom-56">
+              <div className="mb-2 h-[2px] w-full bg-primary-50"></div>
+              <div className="mb-2 h-[2px] w-full bg-primary-50"></div>
+              <div className="h-[2px] w-full bg-primary-50"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -237,7 +244,7 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="relative flex flex-col justify-between lg:flex-row lg:items-center">
             <div className="mb-8 lg:order-2 lg:mb-0 lg:w-2/5">
-              <div className="lg:mx-auto lg:w-72">
+              <div className="mx-auto w-64 lg:w-72">
                 <img src={community} alt="" className="w-full object-cover" />
               </div>
             </div>
@@ -295,7 +302,7 @@ export default function Home() {
       <section className="py-6">
         <div className="container mx-auto text-center">
           <h2 className="subheading heading-primary">Why Choose Us?</h2>
-          <p className="pb-12 font-medium lg:mx-auto lg:w-[720px]">
+          <p className="pb-12 text-lg font-medium lg:mx-auto lg:w-[720px]">
             Our platform is built by psychiatrists, psychologists and mental
             health experts with immense global experience.
           </p>
@@ -310,7 +317,7 @@ export default function Home() {
                     <h2 className="mb-3 text-xl font-bold text-primary-400">
                       {value.name}
                     </h2>
-                    <p className="font-medium">{value.desc}</p>
+                    <p className="text-lg font-medium">{value.desc}</p>
                   </figcaption>
                 </figure>
               );
@@ -393,34 +400,8 @@ export default function Home() {
 
       {/* ========== Request Form ========== */}
       <RequestForm />
-
       {/* ========== FAQ's ========== */}
-      <section className="container mx-auto my-6 gap-2 px-4 lg:mb-14 lg:flex">
-        <div className="mx-auto mb-5 lg:mb-0 lg:w-1/2">
-          <h2 className="subheading heading-primary mb-2">FAQs</h2>
-          <p className="para mb-4">
-            Everything you need to know right here at Wleness. Ask questions and
-            browse around for answers.
-          </p>
-          <img src={faq3Lg} alt="" />
-          <Link to="/faqs" className="btn-one inline-block">
-            Goes to FAQ's
-          </Link>
-        </div>
-        <div className="flex flex-col gap-4 lg:w-1/2" id="home-page-faqs">
-          {homeFaqs.map((value, index) => {
-            return (
-              <Faq
-                key={index}
-                question={value.question}
-                answer={value.answer}
-                isOpen={index === openFAQ}
-                toggleFAQ={() => toggleFAQ(index)}
-              />
-            );
-          })}
-        </div>
-      </section>
+      <HomeFaq data={homeFaqs} />
 
       <Assessment
         isAssessmentOpen={isAssessmentModalOpen}

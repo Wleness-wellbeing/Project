@@ -8,13 +8,15 @@ export default function StatisticsBlock(props) {
         <div>
           <img src={bubbleDoodles} alt="" className="w-full object-cover" />
         </div>
-        <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-3xl font-bold">
+        <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-2xl font-bold lg:text-3xl">
           <span>{props.number}</span>
           <span>{props.suffix}</span>
         </span>
       </div>
       <figcaption>
-        <h4 className="text-center text-xl font-bold">{props.subtitle}</h4>
+        <h4 className="text-center text-lg font-bold lg:text-xl">
+          {props.subtitle}
+        </h4>
       </figcaption>
     </figure>
   );
