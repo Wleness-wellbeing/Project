@@ -36,13 +36,13 @@ export default function HappyClient(props) {
                       />
                     </div>
                     <figcaption className="lg:w-3/5">
-                      <h4 className="text-center text-2xl font-semibold text-primary-300 lg:text-left lg:text-3xl 2xl:text-4xl">
+                      <h4 className="text-center text-2xl font-semibold text-primary-300 lg:text-left lg:text-3xl">
                         {value.name}
                       </h4>
-                      <h6 className="mb-4 text-center font-medium text-slate-400 lg:text-left 2xl:text-xl">
+                      <h6 className="mb-4 text-center font-medium text-slate-400 lg:text-left xl:text-lg">
                         {value.profession}
                       </h6>
-                      <p className="mb-1 text-center font-medium sm:text-lg md:text-base md:leading-5 lg:pr-8 lg:text-left 2xl:text-xl">
+                      <p className="mb-1 text-center font-medium sm:text-lg md:text-base md:leading-5 lg:pr-8 lg:text-left xl:text-xl">
                         {value.review}
                       </p>
                     </figcaption>

@@ -87,16 +87,7 @@ export const couplesTherapyData = {
         text: "Couples Therapy",
       },
     ],
-    desc: [
-      {
-        color: false,
-        text: "Navigating Life's Challenges Hand in ",
-      },
-      {
-        color: true,
-        text: "Hand for a Stronger Us",
-      },
-    ],
+    desc: "Rediscover the joy of togetherness with Relationship Revive, our personalized couple therapy program. Enhance communication, deepen intimacy, and overcome challenges alongside expert guidance. Invest in your relationship today for a stronger, more fulfilling connection.",
     image: couplesTherapyHeader,
   },
   activities: {
@@ -160,12 +151,7 @@ export const MusicalTherapyData = {
         text: "Musical Therapy",
       },
     ],
-    desc: [
-      {
-        color: false,
-        text: "Unlocking Inner Harmony and Emotional Well-being through Melodic Interventions ",
-      },
-    ],
+    desc: "Explore how music therapy offers a unique way to express emotions and heal. With its rhythms and tones, this therapy helps with different feelings, bringing more balance inside you. Discover profound insights and find more peace through the power of music.",
     image: musicalTherapyHeader,
   },
   activities: {
@@ -305,7 +291,7 @@ export const psychiatristData = {
       },
       {
         color: true,
-        text: "Therapist ",
+        text: "Psychiatrist ",
       },
       {
         color: false,

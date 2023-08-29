@@ -205,20 +205,7 @@ export const activities = [
           text: "Yoga",
         },
       ],
-      desc: [
-        {
-          color: true,
-          text: "Connecting Body, Breath, and Soul ",
-        },
-        {
-          color: true,
-          text: "for InnerPeace ",
-        },
-        {
-          color: false,
-          text: "from within with meditation",
-        },
-      ],
+      desc: "Yoga is a path to feeling better in both your body and mind. Doing yoga regularly makes you less stressed and more mindful and brings balance to your life. Start your journey with yoga for a refreshed body, calm mind, and a more harmonious life.",
       image: yogaHeader,
     },
     activities: {
@@ -857,20 +844,7 @@ export const activities = [
           text: "heals the mind",
         },
       ],
-      desc: [
-        {
-          color: false,
-          text: "Step into the",
-        },
-        {
-          color: true,
-          text: " nirvana of self care ",
-        },
-        {
-          color: false,
-          text: "from within with meditation",
-        },
-      ],
+      desc: "Meditation is like a peaceful escape that can help the mind in our busy world. Science proves it can lower stress and anxiety and help us handle emotions better. Just sitting quietly and looking within can do wonders for the mind, making us feel better overall.",
       image: meditationHeader,
     },
     activities: {
@@ -948,16 +922,7 @@ export const activities = [
           text: "A Journey of Spiritual Growth",
         },
       ],
-      desc: [
-        {
-          color: false,
-          text: "Nurturing the Soul Through ",
-        },
-        {
-          color: true,
-          text: "Inner Journey and Transformation",
-        },
-      ],
+      desc: "Sadhna is like a journey that helps you grow spiritually, connecting you to deeper insights. When you embrace Sadhna, you're on a quest that takes care of your soul, helps you spiritually evolve, and makes your life more meaningful.",
       image: sadhnaHeader,
     },
     activities: {
@@ -1055,16 +1020,7 @@ export const brainExercise = {
         text: "brain exercises",
       },
     ],
-    desc: [
-      {
-        color: false,
-        text: "brain exercises that strengthen cognition and ",
-      },
-      {
-        color: true,
-        text: "improve mental resilience.",
-      },
-    ],
+    desc: "Boost your mental health with our brain exercises program. These fun activities help your thinking and concentration. Join this journey to a sharper mind and more robust mental well-being.",
     image: brainExerciseHeader,
   },
   activities: {

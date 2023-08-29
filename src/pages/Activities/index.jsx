@@ -22,12 +22,18 @@ function Activities() {
         </div>
         <div className="-m-5 mb-6 rounded-3xl p-5 text-center md:mb-6 lg:order-1 lg:m-0 lg:mb-0 lg:rounded-none lg:text-left xl:w-[55%] xl:pl-0">
           <hgroup className="md:mb-3">
-            <h1 className="subheading mb-4 text-center lg:mb-10 lg:text-left">
+            <h1 className="subheading mb-4 text-center lg:text-left">
               <span className="text-[#383838] lg:block">Discover the </span>
               <span className="heading-primary">healing </span>
               <span className="text-[#383838]">power of </span>
               <span className="heading-primary">Meditation</span>
             </h1>
+            <p className="mb-8 text-center text-lg font-semibold lg:text-left">
+              Discover a world of well-being through meditation, sadhana, brain
+              exercises, and more. Nurture your mind, body, and spirit with our
+              diverse activities designed for a balanced and fulfilling life.
+              Start your transformative journey today.
+            </p>
           </hgroup>
           <button className="btn-one">Book an appointment Now</button>
         </div>

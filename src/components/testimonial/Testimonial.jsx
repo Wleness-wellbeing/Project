@@ -2,7 +2,7 @@ import React from "react";
 // Swiper Js & Styles
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import SwiperBtns from "../Buttons/SwiperBtns";
 
 export default function Testimonial(props) {
@@ -11,9 +11,12 @@ export default function Testimonial(props) {
       {/* Testimonials */}
       <Swiper
         navigation={true}
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
         slidesPerView={1}
         className="!overflow-x-clip overflow-y-visible"
+        autoplay={{ delay: 4000 }}
+        speed={400}
+        loop={true}
       >
         {props.data.map((value, i) => {
           return (
@@ -27,13 +30,13 @@ export default function Testimonial(props) {
                   />
                 </div>
                 <figcaption className="lg:w-3/5 lg:pl-24">
-                  <h4 className="text-lg font-semibold sm:text-xl lg:text-3xl 2xl:text-4xl">
+                  <h4 className="text-lg font-semibold sm:text-xl lg:text-3xl">
                     {value.name}
                   </h4>
-                  <h6 className="mb-2 font-medium text-slate-400 2xl:text-xl">
+                  <h6 className="mb-2 font-medium text-slate-400 xl:text-xl">
                     {value.profession}
                   </h6>
-                  <p className="mb-1 text-justify text-sm sm:text-lg md:text-base md:leading-5 2xl:text-xl">
+                  <p className="mb-1 text-justify text-sm font-medium sm:text-lg md:text-base md:leading-5 lg:text-lg">
                     {value.desc}
                   </p>
                 </figcaption>

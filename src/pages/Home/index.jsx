@@ -259,7 +259,6 @@ export default function Home() {
                 <span className="mb-4 mr-1 block font-bold">
                   Wleness is all about the beginning of happiness in your life.
                 </span>
-                "
                 <span className="mr-1 font-bold text-primary-300">
                   Embrace yourself,
                 </span>
@@ -335,6 +334,7 @@ export default function Home() {
           <Testimonial data={homeTestimonials} />
         </div>
       </section>
+
       {/* ========== Statistics ========== */}
       <section className="container mx-auto grid grid-cols-4 gap-2 py-4 lg:gap-8 lg:py-12">
         {statistics.map((value, i) => {
@@ -357,8 +357,9 @@ export default function Home() {
           );
         })}
       </section>
+
       {/* ========== Our Partners ========== */}
-      <section className="container mx-auto py-8 lg:py-16">
+      <section className="container mx-auto pb-8 pt-4 lg:pb-16 lg:pt-6">
         <div className="grid grid-cols-5 gap-2 md:gap-8 xl:gap-12 2xl:gap-20">
           <div className="flex items-center justify-center">
             <img
@@ -400,6 +401,7 @@ export default function Home() {
 
       {/* ========== Request Form ========== */}
       <RequestForm />
+
       {/* ========== FAQ's ========== */}
       <HomeFaq data={homeFaqs} />
 
