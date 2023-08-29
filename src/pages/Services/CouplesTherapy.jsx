@@ -76,8 +76,8 @@ function CouplesTherapy() {
                 className="block w-full object-cover"
               />
             </div>
-            <figcaption className="lg:w-3/5 lg:self-center">
-              <div className="mr-14 rounded-2xl border-2 border-primary-50 px-6 py-3 lg:mr-20">
+            <figcaption className="lg:w-3/5">
+              <div className="mr-8 rounded-2xl border-2 border-primary-50 px-6 py-3 lg:mr-20">
                 <h6 className="text-lg font-bold text-primary-400">
                   Dedicated experts team:
                 </h6>
@@ -88,7 +88,7 @@ function CouplesTherapy() {
                   connection.
                 </p>
               </div>
-              <div className="-mt-2 ml-14 rounded-2xl rounded-br-[4rem] bg-primary-50 px-6 py-3 shadow-lg lg:ml-20">
+              <div className="-mt-2 ml-8 rounded-2xl rounded-br-[4rem] bg-primary-50 px-6 py-3 shadow-lg lg:ml-20">
                 <h6 className="text-lg font-bold text-primary-400">
                   Tailored Approach:
                 </h6>
@@ -107,11 +107,11 @@ function CouplesTherapy() {
               <img
                 src={couplesTherapy2}
                 alt=""
-                className="mx-auto block w-fit object-cover"
+                className="mx-auto block object-cover lg:w-52"
               />
             </div>
-            <figcaption className="lg:order-1 lg:w-3/5 lg:self-center">
-              <div className="mr-20 rounded-2xl border-2 border-primary-50 px-6 py-3">
+            <figcaption className="lg:order-1 lg:w-3/5">
+              <div className="mr-10 rounded-2xl border-2 border-primary-50 px-6 py-3 lg:mr-20">
                 <h6 className="text-lg font-bold text-primary-400">
                   Accessibility:
                 </h6>
@@ -121,7 +121,7 @@ function CouplesTherapy() {
                   deal with your ongoing issues.
                 </p>
               </div>
-              <div className=" -mt-2 ml-20 rounded-2xl rounded-br-[4rem] bg-primary-50 px-6 py-3 shadow-lg">
+              <div className="-mt-2 ml-10 rounded-2xl rounded-br-[4rem] bg-primary-50 px-6 py-3 shadow-lg lg:ml-20">
                 <h6 className="text-lg font-bold text-primary-400">
                   Safe and Non-Judgmental Space:
                 </h6>

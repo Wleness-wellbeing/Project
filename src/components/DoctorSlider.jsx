@@ -1,7 +1,7 @@
 import React from "react";
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Navigation } from "swiper/modules";
+import { EffectCoverflow, Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -54,7 +54,7 @@ export default function DoctorSlider(props) {
             modifier: 1,
             slideShadows: true,
           }}
-          modules={[EffectCoverflow, Navigation]}
+          modules={[EffectCoverflow, Navigation, Autoplay]}
           onSlideChange={hideOtherImages}
           breakpoints={{
             640: {
@@ -68,6 +68,8 @@ export default function DoctorSlider(props) {
               slidesPerView: 5,
             },
           }}
+          autoplay={{ delay: 2000 }}
+          speed={600}
         >
           {props.data.doctors.map((value, index) => {
             return (

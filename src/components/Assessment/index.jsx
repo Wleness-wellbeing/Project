@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
-
 // Data
 import { assessment1, assessment2 } from "../../assets";
 import {
@@ -18,6 +17,49 @@ import AssessmentTextBtn from "./AssessmentTextBtn";
 
 export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
   if (!isAssessmentOpen) return null;
+
+  // Slides States
+  const [selectFeeling, setSelectFeeling] = useState([]);
+  const [selectExperienceIssue, setSelectExperienceIssue] = useState("");
+  const [selectDifficulty, setSelectDifficulty] = useState("");
+  const [selectLanguage, setSelectLanguage] = useState([]);
+  const [selectAge, setSelectAge] = useState("");
+
+  // Screen One - Select Feelings
+  const handleFeeling = (event) => {
+    const exists = selectFeeling.includes(event.target.value);
+    setSelectFeeling(
+      exists
+        ? selectFeeling.filter((element) => element !== event.target.value)
+        : [...selectFeeling, event.target.value],
+    );
+  };
+
+  // Screen Two - Select Experiencing Issue
+  const handleExperienceIssue = (event) => {
+    setSelectExperienceIssue(event.target.value);
+  };
+
+  // Screen Two - Select Difficulty Level
+  const handleDifficultyLevel = (event) => {
+    setSelectDifficulty(event.target.value);
+  };
+
+  // Screen Three - Select Feelings
+  const handleLanguages = (event) => {
+    const exists = selectLanguage.includes(event.target.value);
+    setSelectLanguage(
+      exists
+        ? selectLanguage.filter((element) => element !== event.target.value)
+        : [...selectLanguage, event.target.value],
+    );
+  };
+
+  // Screen Three - Select Age
+  const hangleAge = (event) => {
+    setSelectAge(event.target.value);
+  };
+
   // Welcome Screen Handling
   const [startAssessment, setStartAssessment] = useState(true);
   const [screenOne, setScreenOne] = useState(false);
@@ -71,28 +113,6 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
     setScreenFour(true);
     setFinalScreen(false);
   }
-
-  const [isSelected, setIsSelected] = useState([
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
-
-  // Close assessment and scroll to doctors
-  const clickAndScroll = () => {
-    button.click();
-    onAssessmentClose();
-  };
 
   return (
     <div className="fixed inset-0 z-50 grid w-full place-items-center backdrop-brightness-50">
@@ -170,9 +190,9 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                     key={index}
                     image={value[0]}
                     name={value[1]}
-                    isSelected={isSelected}
-                    setIsSelected={setIsSelected}
                     index={index}
+                    onchange={handleFeeling}
+                    checked={selectFeeling.includes(value[1])}
                   />
                 );
               })}
@@ -202,7 +222,14 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             </h2>
             <div className="my-4 flex flex-wrap justify-center gap-2 lg:my-6">
               {experiencingIssue.map((value, index) => {
-                return <AssessmentTextBtn key={index} name={value} />;
+                return (
+                  <AssessmentTextBtn
+                    key={index}
+                    name={value}
+                    onclick={handleExperienceIssue}
+                    selected={selectExperienceIssue === value}
+                  />
+                );
               })}
             </div>
             <h2 className="mb-0 flex flex-col text-center text-xl font-bold text-primary-300 lg:mb-8 lg:text-3xl">
@@ -210,7 +237,14 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             </h2>
             <div className="my-4 flex flex-col flex-wrap justify-center gap-2 px-4 lg:my-6 lg:flex-row lg:px-0">
               {managingDifficulty.map((value, index) => {
-                return <AssessmentTextBtn key={index} name={value} />;
+                return (
+                  <AssessmentTextBtn
+                    key={index}
+                    name={value}
+                    onclick={handleDifficultyLevel}
+                    selected={selectDifficulty === value}
+                  />
+                );
               })}
             </div>
 
@@ -239,7 +273,14 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             </h2>
             <div className="my-4 flex flex-wrap justify-center gap-2 lg:my-8 lg:gap-4">
               {languages.map((value, index) => {
-                return <AssessmentTextBtn key={index} name={value} />;
+                return (
+                  <AssessmentTextBtn
+                    key={index}
+                    name={value}
+                    onclick={handleLanguages}
+                    selected={selectLanguage.includes(value)}
+                  />
+                );
               })}
             </div>
             <h2 className="mb-0 flex flex-col text-center text-xl font-bold text-primary-300 lg:mb-8 lg:text-3xl">
@@ -247,7 +288,14 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             </h2>
             <div className="my-4 flex flex-wrap justify-center gap-2 lg:my-8 lg:gap-4">
               {ageRange.map((value, index) => {
-                return <AssessmentTextBtn key={index} name={value} />;
+                return (
+                  <AssessmentTextBtn
+                    key={index}
+                    name={value}
+                    onclick={hangleAge}
+                    selected={selectAge === value}
+                  />
+                );
               })}
             </div>
             <div className="mt-8 flex justify-center space-x-4 text-center lg:mt-0">
@@ -284,7 +332,9 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                     Edit
                   </span>
                 </h4>
-                <p className="font-medium text-white">Depression</p>
+                <p className="font-medium text-white">
+                  {selectFeeling.join(", ")}
+                </p>
               </div>
               <div className="w-full rounded-xl bg-primary-100 px-6 py-2">
                 <h4 className="flex justify-between font-semibold">
@@ -298,7 +348,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                     Edit
                   </span>
                 </h4>
-                <p className="font-medium text-white">2 weeks or less</p>
+                <p className="font-medium text-white">{selectDifficulty}</p>
               </div>
               <div className="w-full rounded-xl bg-primary-100 px-6 py-2">
                 <h4 className="flex justify-between font-semibold">
@@ -312,7 +362,9 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                     Edit
                   </span>
                 </h4>
-                <p className="font-medium text-white">English & Hindi</p>
+                <p className="font-medium text-white">
+                  {selectLanguage.join(", ")}
+                </p>
               </div>
               <div className="w-full rounded-xl bg-primary-100 px-6 py-2">
                 <h4 className="flex justify-between font-semibold">
@@ -324,7 +376,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                     Edit
                   </span>
                 </h4>
-                <p className="font-medium text-white">18 - 25 years</p>
+                <p className="font-medium text-white">{selectAge}</p>
               </div>
             </div>
             <div className="flex justify-center space-x-4 text-center">

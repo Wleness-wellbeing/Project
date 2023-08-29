@@ -159,7 +159,7 @@ export const MusicalTherapyData = {
     desc: "Use music to improve mental and emotional well-being through techniques like active listening, improvisation, and songwriting with our top counselors.",
     types: [
       {
-        title: "Guided Imagery and Music (GIM)",
+        title: "Guided Imagery and Music",
         thumbnail: musicalTherapy1,
         desc: "GIM involves listening to carefully selected music while in a relaxed state to explore emotions, memories, and thoughts, helping clients gain insight, reduce stress, and promote self-awareness.",
         slug: "/",
@@ -172,14 +172,14 @@ export const MusicalTherapyData = {
         class: ["order-2", "order-1"],
       },
       {
-        title: "Bonny Method of Guided Imagery and Music (BMGIM)",
+        title: "Bonny Method of Guided Imagery and Music",
         thumbnail: musicalTherapy3,
         desc: "BMGIM utilizes music to facilitate a deep exploration of the unconscious, promoting personal growth & transformation, as clients share their emotional experiences during and after the BMGIM listening sessions.",
         slug: "/",
         class: ["order-1", "order-2"],
       },
       {
-        title: "Neurologic Music Therapy (NMT)",
+        title: "Neurologic Music Therapy",
         thumbnail: musicalTherapy4,
         desc: "This technique applies evidence-based techniques to address neurological conditions, utilizing rhythm, melody, and harmony to improve cognitive, motor, speech functions in individuals with neurological impairments.",
         slug: "/",

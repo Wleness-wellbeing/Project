@@ -186,6 +186,16 @@ export const meditationTypes = [
     title: "Walking Meditation",
     desc: "Walking slowly and attentively, cultivating awareness of present. Unlike seated meditation, it allows individuals to engage their bodies and minds while maintaining tranquility.",
   },
+  {
+    image: meditationType6,
+    title: "Walking Meditation",
+    desc: "Walking slowly and attentively, cultivating awareness of present. Unlike seated meditation, it allows individuals to engage their bodies and minds while maintaining tranquility.",
+  },
+  {
+    image: meditationType6,
+    title: "Walking Meditation",
+    desc: "Walking slowly and attentively, cultivating awareness of present. Unlike seated meditation, it allows individuals to engage their bodies and minds while maintaining tranquility.",
+  },
 ];
 
 // All activities data for activities subpages
@@ -876,7 +886,7 @@ export const activities = [
           slug: "/activities/meditation/zen-meditation",
         },
         {
-          title: "Spiritual meditation",
+          title: "Spiritual Meditation",
           thumbnail: meditationType5,
           desc: "Activating one's consciousness. Spiritual meditation involves bonding at a higher consciencel. Highly beneficial to those seeking spiritual growth and oneness with supreme self.",
           slug: "/activities/meditation/spiritual-meditation",
@@ -886,6 +896,18 @@ export const activities = [
           thumbnail: meditationType6,
           desc: "Walking slowly and attentively, cultivating awareness of present. Unlike seated meditation, it allows individuals to engage their bodies and minds while maintaining tranquility.",
           slug: "/activities/meditation/walking-meditation",
+        },
+        {
+          title: "Vipassana Meditation",
+          thumbnail: meditationType6,
+          desc: "The insight meditation practice of vipassana calls for very attentive observation of feelings, ideas, and sensations. Its goal is to help people comprehend how fleeting and ultimately unsatisfying life is.",
+          slug: "/activities/meditation/vipassana-meditation",
+        },
+        {
+          title: "Concentrate Meditation",
+          thumbnail: meditationType6,
+          desc: "Focusing all your attention on singularity. Train your mind to focus on a particular vibration or sensation, which enhances your capacity for concentration and decreases distractions.",
+          slug: "/activities/meditation/concentrative-meditation",
         },
       ],
     },

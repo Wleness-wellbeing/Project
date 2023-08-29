@@ -30,7 +30,7 @@ export default function ActivityBlogs(props) {
       style={{ borderImage: "url('border.png') 30 stretch" }}
     >
       <div className="mb-10 rounded-2xl bg-primary-10 px-6 py-12">
-        <h3 className="mb-10 text-center font-bold lg:text-xl xl:text-3xl">
+        <h3 className="mb-10 text-center font-bold lg:text-xl xl:text-2xl">
           You cannot always control what goes on outside, but you can always
           control what goes on inside.
         </h3>
