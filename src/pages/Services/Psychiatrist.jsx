@@ -51,6 +51,9 @@ export default function Psychiatrist() {
       </section>
 
       <section className="container relative mx-auto my-8 mt-20 px-8 text-center lg:flex">
+        <div>
+          <div>Myths</div>
+        </div>
         <div className="mb-4 grid lg:mb-0 lg:w-1/2">
           <div className="rounded-t-3xl bg-gradient-to-b from-secondary/50 to-transparent py-14">
             <h2 className="mt-4 text-3xl font-bold text-primary-500 lg:mt-0 lg:text-4xl">
@@ -77,13 +80,8 @@ export default function Psychiatrist() {
             </p>
           </div>
         </div>
-
-        <img
-          src={bulb}
-          alt=""
-          className="absolute -top-16 left-1/2 w-32 -translate-x-1/2"
-        />
       </section>
+
       <HappyClient data={psychiatristClient} />
       <Assessment
         isAssessmentOpen={isAssessmentModalOpen}

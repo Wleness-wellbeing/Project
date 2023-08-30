@@ -178,44 +178,50 @@ export const musicalTherapyFaq = {
 // FAQ's page
 export const faqs = [
   {
-    question: "What Is Musical Therapy?",
+    question: "What is Wleness?",
     answer:
-      "Wleness is an inclusive online platform dedicated to promoting mental health and wellness.",
+      "Wleness is an inclusive online platform promoting mental health and wellness. We provide numerous resources to support individuals on their journey towards better mental well-being. Our platform is LGBTQ-friendly, and a safe and inclusive environment for all.",
   },
   {
     question: "What services does Wleness offer?",
     answer:
-      "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
+      "Wleness offers a wide range of services to support mental health including online therapy sessions with licensed professionals, self-help resources, articles, guided meditation, exercises etc. and a supportive community forum at your fingertips. We prioritize providing world-class services and the well-being of our users.",
   },
   {
-    question: "What makes Wleness different from others?",
+    question: "How can I get started with Wleness?",
     answer:
-      "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
+      "Simply visit Wleness.com and create an account. From there, you can explore the various resources and services available on the platform. We guide you in selecting a therapist and schedule sessions based on your preferences. We offer a plethora of services to suit your needs.",
   },
   {
-    question: "How can I benefit from using Wleness?",
+    question:
+      "Is Wleness suitable for individuals with severe mental health conditions?",
     answer:
-      "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
+      "While all therapists on Wleness are licensed professionals who possess the necessary qualifications, it may not be suitable for severe mental health conditions or those in crisis. In such cases, we recommend immediate assistance from emergency services that provide more intensive and prompt support.",
   },
   {
-    question: "What makes Wleness different from others?",
+    question: "Is my privacy protected on Wleness?",
     answer:
-      "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
+      "Wleness takes privacy and confidentiality seriously. Our platform employs robust security measures to protect user information and adheres to strict privacy policies. Any personal data shared during sessions or forums is strictly confidential, following professional ethics and legal requirements. Your anonymity matters to us!",
   },
   {
-    question: "How can I benefit from using Wleness?",
+    question: "Are the therapists on Wleness licensed and qualified?",
     answer:
-      "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
+      "Yes, all therapists on Wleness are licensed professionals who possess the necessary qualifications to provide mental health services. We carefully select therapists based on their credentials, experience, and adherence to ethical guidelines and prioritize quality over quantity.",
   },
   {
-    question: "What makes Wleness different from others?",
+    question: "Can I cancel or modify my subscription to Wleness?",
     answer:
-      "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
+      "Yes, you may cancel or modify your subscription. Our platform provides customizable options to manage your subscription settings, and you can reach out to our customer support for assistance with any changes you wish to make.",
   },
   {
-    question: "How can I benefit from using Wleness?",
+    question: "How can I contact customer support for further assistance?",
     answer:
-      "Couple therapy, also known as couples counseling, is a specialized form of psychotherapy aimed at helping couples resolve conflicts, improve communication, and strengthen their relationship.",
+      "You can contact Wleness.com's customer support team through our designated contact channels for any inquiries or assistance. We are dedicated to helping users and addressing any concerns or questions you may have. Your well-being is our priority.",
+  },
+  {
+    question: "Is the information on Wleness reliable and trustworthy?",
+    answer:
+      "Wleness is committed to accurate and trustworthy information. We collaborate with licensed mental health experts to ensure content is evidence-based and up-to-date. However, note that the information provided on the website is not a substitute for a professional diagnosis. Rest assured, you are in good hands!",
   },
 ];
 

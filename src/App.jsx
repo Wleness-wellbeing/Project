@@ -50,6 +50,7 @@ import DoctorDetailPage from "./components/admin/DoctorDetailsPage";
 import Calendly from "./components/Calendly";
 import PrivacyPolicy from "./pages/Policies/PrivacyPolicy";
 import TermsAndConditions from "./pages/Policies/TermsAndConditions";
+import Selfcare from "./pages/Selfcare";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -239,6 +240,14 @@ function App() {
           element={
             <Layout>
               <Activities />
+            </Layout>
+          }
+        />
+        <Route
+          path="/self-care"
+          element={
+            <Layout>
+              <Selfcare />
             </Layout>
           }
         />

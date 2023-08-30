@@ -149,6 +149,9 @@ import yogaTrikonasana from "./images/activities/yoga/yoga-trikonasana.png";
 import yogaUstrasana from "./images/activities/yoga/yoga-ustrasana.png";
 import yogaVirbhadrasana from "./images/activities/yoga/yoga-virbhadrasana.png";
 import yogaVrksasna from "./images/activities/yoga/yoga-vrksasna.png";
+import yogaUttanasana from "./images/activities/yoga/yoga-uttanasana.png";
+import yogaArdhaChandrasana from "./images/activities/yoga/yoga-ardha-chandrasana.png";
+import yogaNavasana from "./images/activities/yoga/yoga-navasana.png";
 // Activities >> Yoga >> Adhomukha
 import adhvmukhaHeader from "./images/activities/yoga/adhomukha/adhv-mukha-header.png";
 import adhvmukhaSteps from "./images/activities/yoga/adhomukha/steps-of-adhv-mukha-yoga.png";
@@ -289,6 +292,9 @@ export {
   yogaUstrasana,
   yogaVirbhadrasana,
   yogaVrksasna,
+  yogaUttanasana,
+  yogaArdhaChandrasana,
+  yogaNavasana,
   brainExerciseHeader,
   brainGameGalaxy,
   brainGameTreasure,
@@ -596,8 +602,9 @@ export { doctorAppointment, dashboardDoctor };
 import bgDotsPattern from "./images/designs/bg-dots-pattern.png";
 import bubbleDoodles from "./images/designs/bubble-doodle.png";
 import didYouKnow from "./images/designs/did-you-know.png";
+import designRing from "./images/designs/design-ring.png";
 
-export { bgDotsPattern, bubbleDoodles, didYouKnow };
+export { bgDotsPattern, bubbleDoodles, didYouKnow, designRing };
 
 // Community
 import communityHeader from "./images/community/community-header.png";

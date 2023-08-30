@@ -29,6 +29,7 @@ import {
   servicesIcon4,
   servicesIcon5,
   servicesIcon6,
+  designRing,
 } from "../../assets";
 import { homeFaqs } from "../../data/faqs";
 import { homeTestimonials } from "../../data/testimonials";
@@ -48,17 +49,20 @@ const services = [
   [
     {
       name: "Lifestyle Coaching",
+      slug: "/lifestyle-coaching",
       image: servicesIcon1,
       desc: "Lifestyle coaching empowers well-being, productivity, and balance. It encourages health, reduces stress, boosts motivation, and enhances performance.",
     },
     {
       name: "Executive Coaching",
+      slug: "/executive-coaching",
       image: servicesIcon2,
       desc: "Executive coaching elevates leadership, empowers high-level staff, & drives positive results. It maximizes potential, navigates challenges,  enhances performance.",
     },
     {
       name: "Corporate",
       image: servicesIcon3,
+      slug: "/corporate",
       desc: "Corporate mental wellness services prioritize employee psychological well-being. They address challenges, reduce stress, and foster emotional resilience in the workplace.",
     },
   ],
@@ -66,16 +70,19 @@ const services = [
     {
       name: "Musical Therapy",
       image: servicesIcon4,
+      slug: "/services/musical-therapy",
       desc: "Music therapy addresses diverse needs through music. Therapists use musical interventions to achieve goals, including listening, creating, singing, and playing instruments.",
     },
     {
       name: "Yoga",
       image: servicesIcon5,
+      slug: "/activities/yoga",
       desc: "Yoga combines postures, breathing, meditation, and mindfulness for mental wellness. It enhances mental health by nurturing the mind-body connection.",
     },
     {
       name: "Meditation",
       image: servicesIcon6,
+      slug: "/activities/meditation",
       desc: "Meditation fosters mental wellness by focusing the mind and reducing cluttered thoughts. It enhances clarity, relaxation, and self-awareness.",
     },
   ],
@@ -193,12 +200,20 @@ export default function Home() {
               return (
                 <figure key={i}>
                   <div>
-                    <img src={value.image} alt="" className="mx-auto lg:w-28" />
+                    <Link to={value.slug}>
+                      <img
+                        src={value.image}
+                        alt=""
+                        className="mx-auto inline-block transition-all hover:drop-shadow-md lg:w-28"
+                      />
+                    </Link>
                   </div>
                   <figcaption>
-                    <h2 className="mb-3 text-xl font-bold text-primary-400">
-                      {value.name}
-                    </h2>
+                    <Link to={value.slug}>
+                      <h2 className="mb-3 inline-block text-xl font-bold text-primary-400">
+                        {value.name}
+                      </h2>
+                    </Link>
                     <p className="font-medium">{value.desc}</p>
                   </figcaption>
                 </figure>
@@ -217,12 +232,20 @@ export default function Home() {
               return (
                 <figure key={i}>
                   <div>
-                    <img src={value.image} alt="" className="mx-auto lg:w-28" />
+                    <Link to={value.slug}>
+                      <img
+                        src={value.image}
+                        alt=""
+                        className="mx-auto inline-block transition-all hover:drop-shadow-md lg:w-28"
+                      />
+                    </Link>
                   </div>
                   <figcaption>
-                    <h2 className="mb-3 text-xl font-bold text-primary-400">
-                      {value.name}
-                    </h2>
+                    <Link to={value.slug}>
+                      <h2 className="mb-3 inline-block text-xl font-bold text-primary-400">
+                        {value.name}
+                      </h2>
+                    </Link>
                     <p className="font-medium">{value.desc}</p>
                   </figcaption>
                 </figure>
@@ -240,13 +263,19 @@ export default function Home() {
       </section>
 
       {/* ========== Community ========== */}
-      <section className="relative overflow-x-hidden 3xl:py-10">
+      <section className="relative overflow-x-clip 3xl:py-10">
         <div className="container mx-auto">
           <div className="relative flex flex-col justify-between lg:flex-row lg:items-center">
-            <div className="mb-8 lg:order-2 lg:mb-0 lg:w-2/5">
+            <div className="relative mb-8 lg:order-2 lg:mb-0 lg:w-2/5">
               <div className="mx-auto w-64 lg:w-72">
                 <img src={community} alt="" className="w-full object-cover" />
               </div>
+
+              <img
+                src={designRing}
+                alt=""
+                className="absolute right-0 top-0 -z-10 w-20 object-cover xs:w-32 sm:w-40 md:w-56 lg:top-20 lg:w-[520px] lg:scale-150 xl:-right-20 xl:top-0 xl:scale-125 3xl:scale-150"
+              />
             </div>
             <article className="mx-auto pb-4 lg:order-1 lg:w-3/5 lg:pb-10">
               <hgroup className="mb-6 lg:mb-10">
@@ -285,11 +314,6 @@ export default function Home() {
           </div>
         </div>
         {/* Doodles */}
-        <img
-          src={doodle2}
-          alt=""
-          className="absolute right-0 top-0 -z-10 w-20 -scale-x-[1] object-cover opacity-20 xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80"
-        />
         <img
           src={doodle2}
           alt=""

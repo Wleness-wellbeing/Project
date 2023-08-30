@@ -16,7 +16,9 @@ const ServicesTechniques = React.forwardRef((props, ref) => {
           <h4 className="py-2 text-xl font-bold text-primary-400">
             {value.title}
           </h4>
-          <p className="pb-2 text-sm font-medium">{value.desc}</p>
+          <p className="pb-2 text-sm font-semibold text-slate-800">
+            {value.desc}
+          </p>
           <div className="mt-2 text-center">
             <button
               onClick={props.openAssessmentModal}

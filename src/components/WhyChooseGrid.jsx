@@ -2,7 +2,7 @@ import React from "react";
 
 export default function WhyChooseGrid(props) {
   return (
-    <section className="mb-8 text-center">
+    <section className="mb-8 pt-2 text-center">
       <h2 className="subheading mx-auto mb-8 lg:w-[640px]">
         <span>Why Should I Choose </span>
         <span className="heading-primary">Therapy</span>

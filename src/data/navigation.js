@@ -20,6 +20,10 @@ import {
 // Services sub pages
 export const serviceMenuPages = [
   {
+    name: "Experts",
+    slug: "/experts",
+  },
+  {
     name: "Therapy",
     slug: "/services/therapy",
     subPages: [
@@ -32,7 +36,7 @@ export const serviceMenuPages = [
       ["Bipolar Disorder", "/therapy/bipolar-disorder"],
       ["Schizophrenia", "/therapy/schizophrenia"],
       ["Paranoia", "/therapy/paranoia"],
-      ["Contact Disorder", "/therapy/contact-disorder"],
+      ["Conduct Disorder", "/therapy/conduct-disorder"],
     ],
   },
   {

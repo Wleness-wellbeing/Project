@@ -46,7 +46,7 @@ function Navbar() {
           {/* Menu list */}
           <ul
             className={
-              "absolute right-4 top-20 w-56 justify-end rounded-xl border-[1px] border-slate-100 bg-white p-6 shadow-md xl:static xl:flex xl:w-fit xl:space-x-5 xl:border-none xl:p-0 xl:shadow-none" +
+              "absolute right-4 top-16 w-56 justify-end rounded-xl border-[1px] border-slate-100 bg-white p-6 shadow-md xl:static xl:flex xl:w-fit xl:space-x-5 xl:border-none xl:p-0 xl:shadow-none" +
               (isMenuOpen ? " block " : "  hidden xl:flex ")
             }
           >

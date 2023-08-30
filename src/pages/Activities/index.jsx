@@ -68,9 +68,9 @@ function Activities() {
           </Link>
         </div>
         <div className="absolute left-[335px] top-0 z-10 w-44 drop-shadow-xl transition-all hover:z-20 hover:scale-105 lg:left-[491px] lg:w-64 xl:left-[575px] xl:w-80">
-          <Link to="/activities/goal-plan">
+          <Link to="/activities/self-care">
             <h2 className="pl-8 text-xl font-semibold text-[#f2ceae]">
-              Goal Plan
+              Self Care
             </h2>
             <div className="flex h-44 w-full cursor-pointer rounded-3xl bg-gradient-to-r from-[#FBDFC6] to-[#FED1D2] lg:h-64  xl:h-72">
               <img src={goalPlan} className="m-auto  w-24 lg:w-36" />

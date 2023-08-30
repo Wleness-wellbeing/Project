@@ -50,7 +50,7 @@ export const therapiesData = [
       image: stressHeader,
     },
     symptoms: {
-      highlight: "Stress Disorder symptoms",
+      highlight: "Stress Disorder symptoms ",
       points: [
         [
           "Feeling constant tiredness even after adequate rest",
@@ -1396,7 +1396,6 @@ export const therapiesData = [
           text: " Specialist",
         },
       ],
-
       doctors: [
         {
           name: "Dr. Christina",
@@ -1478,7 +1477,7 @@ export const therapiesData = [
       "Approximately 70-80% of children with ODD also meet the criteria for another mental health disorder, such as ADHD or conduct disorder.",
   },
   {
-    slug: "/therapy/contact-disorder",
+    slug: "/therapy/conduct-disorder",
     header: {
       title: [
         {
@@ -1487,10 +1486,10 @@ export const therapiesData = [
         },
         {
           color: true,
-          text: "Conduct Disorder",
+          text: "Conduct Disorder ",
         },
         {
-          color: true,
+          color: false,
           text: "Effectively",
         },
       ],

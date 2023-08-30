@@ -28,7 +28,6 @@ import {
   sadhnaMeditation,
   sadhnaNature,
   sadhnaSeva,
-  sadhnaTantric,
   sadhnaYoga,
   yogaHeader,
   yogaAdhoMukhaSavanasana,
@@ -74,12 +73,12 @@ import {
   iconEasyAccess,
   iconEffective,
   iconSecure,
-  iconExperience,
-  iconCommitment,
-  iconFacilities,
   homeExperienceIcon,
   homeCommitmentIcon,
   homeFacilitiesIcon,
+  yogaUttanasana,
+  yogaNavasana,
+  yogaArdhaChandrasana,
 } from "../assets";
 // Components
 import HeaderWithImage from "../components/HeaderWithImage";
@@ -148,9 +147,9 @@ export const therapies = [
     slug: "/therapy/odd",
   },
   {
-    name: "Contact Disorder",
+    name: "Conduct Disorder",
     image: issueCd,
-    slug: "/therapy/contact-disorder",
+    slug: "/therapy/conduct-disorder",
   },
 ];
 
@@ -819,6 +818,24 @@ export const activities = [
           desc: "Setu Bandhasana gracefully opens the chest and hip flexors while strengthening the back and glutes. This yoga posture stimulates the spine and brings a sense of balance and stability.",
           slug: "/activities/yoga/setu-bandhasana",
         },
+        {
+          title: "Uttanasana",
+          thumbnail: yogaUttanasana,
+          desc: "Uttanasana involves bending forward from the hips with straight or slightly bent legs, providing a soothing stretch to the lower back and hamstrings. It's often integrated into yoga sequences for its calming and grounding effects",
+          slug: "/activities/yoga/uttanasana",
+        },
+        {
+          title: "Navasana",
+          thumbnail: yogaNavasana,
+          desc: "Navasana involves balancing on the sit bones while lifting the legs and torso to form a 'V' shape. This pose engages the core muscles, strengthens the abdomen, and improves balance.",
+          slug: "/activities/yoga/navasana",
+        },
+        {
+          title: "Ardha Chandrasana",
+          thumbnail: yogaArdhaChandrasana,
+          desc: "Ardha Chandrasana is a balancing yoga asana that involves standing on one leg while extending the opposite arm parallel to the ground. This pose strengthens the legs, improves balance, and enhances core stability.",
+          slug: "/activities/yoga/ardha-chandrasana",
+        },
       ],
     },
     blogs: [
@@ -984,12 +1001,6 @@ export const activities = [
         {
           title: "Kundalini Sadhana",
           thumbnail: sadhnaKundalini,
-          desc: "Walking slowly and attentively, cultivating awareness of present. Unlike seated meditation, it allows individuals to engage their bodies and minds while maintaining tranquility.",
-          slug: "/",
-        },
-        {
-          title: "Tantric Sadhana",
-          thumbnail: sadhnaTantric,
           desc: "Walking slowly and attentively, cultivating awareness of present. Unlike seated meditation, it allows individuals to engage their bodies and minds while maintaining tranquility.",
           slug: "/",
         },
