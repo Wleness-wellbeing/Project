@@ -12,7 +12,7 @@ import { ourOfferings, prioritizeCorporate } from "../../data/corporate";
 export default function index() {
   return (
     <>
-      <header className="relative overflow-x-clip py-6">
+      <header className="relative overflow-x-clip bg-gradient-to-b from-tertiary/10 to-transparent py-6">
         <div className="container mx-auto  text-center">
           <h1 className="subheading mb-2">
             <span>Foster a </span>

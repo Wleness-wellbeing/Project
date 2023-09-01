@@ -40,9 +40,24 @@ const wlenessWork = [
   },
   {
     image: internshipIcon5,
-    title: "The perfect Work-Life balance:",
+    title: "Stigma free zone:",
     desc: "Conquer the stigma,spread love and compassion.",
   },
+];
+
+const whyWleness = [
+  [
+    iconExperience,
+    "Whether you're looking to assist therapists, conducting research or supporting community outreach programs, enjoy customized diverse learning opportunities",
+  ],
+  [
+    iconCommitment,
+    "Our supportive and collaborative environment ensures you'll receive quality guidance and mentorship from experienced professionals dedicated to your growth.",
+  ],
+  [
+    iconFacilities,
+    "Experience holistic growth by working in a multi disciplinary team with a positive work-life balance. There's a place for you wherever you excel.",
+  ],
 ];
 
 export default function Internship() {
@@ -58,27 +73,29 @@ export default function Internship() {
 
   return (
     <>
-      <header className="container mx-auto flex flex-col items-center justify-center md:flex-row">
-        {/* Image on the right */}
-        <div className="md:w-1/2 lg:order-2 lg:p-12">
-          <img src={internshipHeader} alt="header" className="w-full" />
-        </div>
-        {/* Text items on the left */}
-        <div className="px-4 py-4 text-center md:w-1/2 md:text-left lg:order-1">
-          <h1 className="subheading heading-primary">
-            Looking for an Internship.
-          </h1>
-          <h3 className="text-3xl font-bold">Want to join us ?</h3>
-          <p className="para py-4 pb-6">
-            We are seeking passionate individuals who are willing to make a
-            change and contribute to our noble cause. Are you someone who has
-            the zest to combine your passion for mental health with real life?
-            If yes, look no further! Join Wleness to embark on a rewarding
-            journey promoting well-being and supporting individuals in need.
-          </p>
-          <button className="btn-one" onClick={openInternshipModal}>
-            Apply Now
-          </button>
+      <header className="bg-gradient-to-b from-primary-50/30 to-transparent">
+        <div className="container mx-auto flex flex-col items-center justify-center md:flex-row">
+          {/* Image on the right */}
+          <div className="md:w-1/2 lg:order-2 lg:p-12">
+            <img src={internshipHeader} alt="header" className="w-full" />
+          </div>
+          {/* Text items on the left */}
+          <div className="px-4 py-4 text-center md:w-1/2 md:text-left lg:order-1">
+            <h1 className="subheading heading-primary">
+              Looking for an Internship.
+            </h1>
+            <h3 className="text-3xl font-bold">Want to join us ?</h3>
+            <p className="para py-4 pb-6">
+              We are seeking passionate individuals who are willing to make a
+              change and contribute to our noble cause. Are you someone who has
+              the zest to combine your passion for mental health with real life?
+              If yes, look no further! Join Wleness to embark on a rewarding
+              journey promoting well-being and supporting individuals in need.
+            </p>
+            <button className="btn-one" onClick={openInternshipModal}>
+              Apply Now
+            </button>
+          </div>
         </div>
       </header>
 
@@ -97,54 +114,24 @@ export default function Internship() {
           </div>
           <article className="mx-auto pb-10 sm:w-[580px] lg:w-[55%]">
             <div className="space-y-3 lg:ml-12">
-              <figure className="flex rounded-xl rounded-br-[5rem] border-2 border-slate-200 bg-white p-4 shadow-md xs:flex-row lg:items-center lg:p-5 lg:py-3 xl:py-6">
-                <div className="mr-4 w-1/5 xs:w-1/5 xl:w-1/5">
-                  <img
-                    src={iconExperience}
-                    alt=""
-                    className="w-full object-cover"
-                  />
-                </div>
-                <figcaption className="w-4/5 xs:w-4/5 xl:w-4/5">
-                  <p className="text-xs font-medium leading-4 text-slate-600 xs:text-xs xs:leading-4 sm:text-base sm:leading-5 lg:pr-5 lg:text-sm lg:leading-4 xl:text-base xl:leading-5">
-                    Whether you're looking to assist therapists, conducting
-                    research or supporting community outreach programs, enjoy
-                    customized diverse learning opportunities
-                  </p>
-                </figcaption>
-              </figure>
-              <figure className="flex rounded-xl rounded-br-[5rem] border-2 border-slate-200 bg-white p-4 shadow-md xs:flex-row lg:items-center lg:p-5 lg:py-3 xl:py-6">
-                <div className="mr-4 w-1/5 xs:w-1/5 xl:w-1/5">
-                  <img
-                    src={iconCommitment}
-                    alt=""
-                    className="w-full object-cover"
-                  />
-                </div>
-                <figcaption className="w-4/5 xs:w-4/5 xl:w-4/5">
-                  <p className="text-xs font-medium leading-4 text-slate-600 xs:text-xs xs:leading-4 sm:text-base sm:leading-5 lg:pr-5 lg:text-sm lg:leading-4 xl:text-base xl:leading-5">
-                    Our supportive and collaborative environment ensures you'll
-                    receive quality guidance and mentorship from experienced
-                    professionals dedicated to your growth.
-                  </p>
-                </figcaption>
-              </figure>
-              <figure className="flex rounded-xl rounded-br-[5rem] border-2 border-slate-200 bg-white p-4 shadow-md xs:flex-row lg:items-center lg:p-5 lg:py-3 xl:py-6">
-                <div className="mr-4 w-1/5 xs:w-1/5 xl:w-1/5">
-                  <img
-                    src={iconFacilities}
-                    alt=""
-                    className="w-full object-cover"
-                  />
-                </div>
-                <figcaption className="w-4/5 xs:w-4/5 xl:w-4/5">
-                  <p className="text-xs font-medium leading-4 text-slate-600 xs:text-xs xs:leading-4 sm:text-base sm:leading-5 lg:pr-5 lg:text-sm lg:leading-4 xl:text-base xl:leading-5">
-                    Experience holistic growth by working in a multi
-                    disciplinary team with a positive work-life balance. There's
-                    a place for you wherever you excel.
-                  </p>
-                </figcaption>
-              </figure>
+              {whyWleness.map((value, i) => {
+                return (
+                  <figure className="flex cursor-pointer rounded-xl rounded-br-[5rem] border-2 border-slate-200 bg-white p-4 shadow-md transition-all hover:shadow-xl xs:flex-row lg:items-center lg:p-5 lg:py-3 xl:py-6">
+                    <div className="mr-4 w-1/5 xs:w-1/5 xl:w-1/5">
+                      <img
+                        src={value[0]}
+                        alt={value[1]}
+                        className="w-full object-cover"
+                      />
+                    </div>
+                    <figcaption className="w-4/5 xs:w-4/5 xl:w-4/5">
+                      <p className="text-xs font-medium leading-4 text-slate-600 xs:text-xs xs:leading-4 sm:text-base sm:leading-5 lg:pr-5 lg:text-sm lg:leading-4 xl:text-base xl:leading-5">
+                        {value[1]}
+                      </p>
+                    </figcaption>
+                  </figure>
+                );
+              })}
             </div>
           </article>
         </div>

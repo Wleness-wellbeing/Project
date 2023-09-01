@@ -53,7 +53,7 @@ const communitySupport = [
 export default function index() {
   return (
     <>
-      <header className="relative overflow-x-hidden overflow-y-clip">
+      <header className="relative overflow-x-hidden overflow-y-clip bg-gradient-to-b from-primary-50/30 to-transparent">
         <div className="container mx-auto text-center">
           <h1 className="subheading my-8">
             <span className="heading-primary">Escape, Heal and Thrive </span>

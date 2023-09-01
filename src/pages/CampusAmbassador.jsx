@@ -1,23 +1,18 @@
 import React, { useState } from "react";
 // Data
 import {
-  bgCircles,
   campusAmbassadorHeader,
   campusAmbassadorTeam,
   campusWhyToApply,
   cloudWithDots,
   doodle2,
-  dots1,
-  dots2,
-  dottedLinesLarge,
-  dottedLinesSmall,
-  dottedPlane,
   roleCampus,
   roleProgram,
   roleSMM,
   roleSpreadAwareness,
 } from "../assets";
 import CampusAmbassadorForm from "../components/CampusAmbassadorForm";
+import { whyToApplyCampus } from "../data/whyWleness";
 
 const roles = [
   [roleSMM, "Social Media & Public Marketing"],
@@ -38,24 +33,13 @@ export default function CampusAmbassador() {
   };
   return (
     <>
-      <header className="relative overflow-y-auto overflow-x-hidden py-6  text-center">
+      <header className="relative overflow-y-auto overflow-x-hidden bg-gradient-to-b from-primary-50/30 to-transparent py-6 text-center">
         <div className="container mx-auto">
           <h1 className="subheading mb-4">
             <span className="heading-primary">Campus Ambassador</span>
           </h1>
           <img src={campusAmbassadorHeader} alt="" className="w-full" />
         </div>
-        {/* Dots  */}
-        <img
-          src={dots1}
-          alt=""
-          className="absolute left-0 top-20 -z-10 w-32 lg:w-96"
-        />
-        <img
-          src={dots2}
-          alt=""
-          className="absolute -right-20 bottom-0 -z-10 w-32 lg:w-96"
-        />
       </header>
 
       {/* Our Program */}
@@ -108,67 +92,30 @@ export default function CampusAmbassador() {
       </section>
 
       {/* Why to Apply */}
-      <section className="relative  text-center">
+      <section className="container mx-auto text-center">
         <h2 className="subheading">
-          Why you should <span className="heading-primary">Apply?</span>
+          <span>Why you should </span>
+          <span className="heading-primary">Apply?</span>
         </h2>
-        <div className="container relative mx-auto flex pt-8">
-          <div className="w-1/2">
-            <img src={campusWhyToApply} alt="" className="" />
-          </div>
-          <div className="w-1/2">
-            <div className="absolute left-20 top-20 flex md:left-40">
-              <img
-                src={dottedLinesLarge}
-                alt=""
-                className="mr-4 w-32 object-contain md:w-96"
-              />
-              <span className="text-sm font-bold md:text-xl">
-                Learning <span className="heading-primary">Opportunities</span>
-              </span>
-            </div>
-            <div className="absolute left-20 top-60 flex w-28 md:left-80 md:w-fit">
-              <img
-                src={dottedLinesSmall}
-                alt=""
-                className="mr-4 w-72 object-contain"
-              />
-              <span className="text-sm font-bold md:text-xl">
-                Career <span className="heading-primary">Counselling</span>
-              </span>
-            </div>
-            <div className="absolute bottom-60 left-20 flex md:bottom-60 md:left-80">
-              <img
-                src={dottedLinesSmall}
-                alt=""
-                className="mr-4 w-24 object-contain md:w-72"
-              />
-              <span className="text-sm font-bold md:text-xl">
-                Goodies from <span className="heading-primary">Wleness</span>
-              </span>
-            </div>
-            <div className="absolute bottom-16 left-40 flex">
-              <img
-                src={dottedLinesLarge}
-                alt=""
-                className="mr-4 w-96 object-contain"
-              />
-              <span className="text-xl font-bold">
-                Certificate <span className="heading-primary">Leadership</span>
-              </span>
-            </div>
-          </div>
-          <img
-            src={bgCircles}
-            alt=""
-            className="absolute left-1/2 top-1/2 w-52 -translate-x-1/2 -translate-y-1/2 lg:bottom-10 lg:right-40 lg:w-fit"
-          />
+        <div className="flex justify-between py-6">
+          {whyToApplyCampus.map((value, i) => {
+            return (
+              <figure>
+                <div>
+                  <img src={value.image} alt="" className="w-40" />
+                </div>
+                <figcaption>
+                  <h4 className="text-xl font-bold">
+                    <span className="block">{value.title}</span>
+                    <span className="heading-primary block">
+                      {value.highlight}
+                    </span>
+                  </h4>
+                </figcaption>
+              </figure>
+            );
+          })}
         </div>
-        <img
-          src={dottedPlane}
-          alt=""
-          className="absolute right-20 top-10 hidden w-64 md:block"
-        />
         <img
           src={doodle2}
           alt=""
@@ -179,21 +126,22 @@ export default function CampusAmbassador() {
       {/* Roles */}
       <section className="relative py-10  text-center">
         <h2 className="subheading mb-10">
-          Roles and <span className="heading-primary">Responsibility</span>
+          <span>Role and </span>
+          <span className="heading-primary">Responsibility</span>
         </h2>
-        <div className="container mx-auto flex gap-8">
+        <div className="container mx-auto grid grid-cols-2 gap-8 xl:grid-cols-4">
           {roles.map((value, index) => {
             return (
-              <figure key={index}>
+              <figure key={index} className="rounded-2xl bg-primary-50/50 p-5">
                 <div>
                   <img
                     src={value[0]}
-                    alt=""
-                    className="mx-auto h-52 w-56 object-contain"
+                    alt={value[1]}
+                    className="mx-auto h-32 w-32 object-contain"
                   />
                 </div>
                 <figcaption>
-                  <h5 className="text-center text-xl font-bold text-primary-400">
+                  <h5 className="text-center text-lg font-semibold text-primary-400">
                     {value[1]}
                   </h5>
                 </figcaption>
@@ -201,12 +149,6 @@ export default function CampusAmbassador() {
             );
           })}
         </div>
-
-        <img
-          src={dottedPlane}
-          alt=""
-          className="absolute left-0 top-0 w-52 -scale-x-100"
-        />
       </section>
 
       {/* Who can join */}

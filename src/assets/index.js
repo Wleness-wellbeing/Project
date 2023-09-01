@@ -302,7 +302,10 @@ import dottedLinesSmall from "./images/joinus/campusAmbassador/dotted-line-sm.pn
 import dottedLinesLarge from "./images/joinus/campusAmbassador/dotted-line-lg.png";
 import dottedPlane from "./images/joinus/campusAmbassador/dotted-plane.png";
 import bgCircles from "./images/joinus/campusAmbassador/bg-circles.png";
-
+import whyToApply1 from "./images/joinus/campusAmbassador/why-to-apply-1.png";
+import whyToApply2 from "./images/joinus/campusAmbassador/why-to-apply-2.png";
+import whyToApply3 from "./images/joinus/campusAmbassador/why-to-apply-3.png";
+import whyToApply4 from "./images/joinus/campusAmbassador/why-to-apply-4.png";
 export {
   campusAmbassadorHeader,
   campusAmbassadorTeam,
@@ -318,6 +321,10 @@ export {
   dottedLinesLarge,
   dottedPlane,
   bgCircles,
+  whyToApply1,
+  whyToApply2,
+  whyToApply3,
+  whyToApply4,
 };
 
 // Feature Icons

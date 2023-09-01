@@ -26,41 +26,43 @@ export default function Blogs() {
   return (
     <>
       {/* ========== Header ============= */}
-      <header className="container mx-auto rounded-xl bg-primary-50/30 py-14 lg:py-28">
-        <div className="mb-4 flex flex-col items-center lg:mb-0 lg:flex-row">
-          <div className="lg:w-1/4">
-            <img src={blogHeader1} className="w-fit object-cover"></img>
+      <header className="bg-gradient-to-b from-primary-50/30 to-transparent">
+        <div className="container mx-auto rounded-xl py-14 lg:py-28">
+          <div className="mb-4 flex flex-col items-center lg:mb-0 lg:flex-row">
+            <div className="lg:w-1/4">
+              <img src={blogHeader1} className="w-fit object-cover"></img>
+            </div>
+
+            <div className="text-center lg:w-1/2">
+              <h1 className="subheading heading-primary">OUR BLOGS</h1>
+              <p className="text-sm font-medium lg:text-lg">
+                Mental health and physical health are linked, with poor mental
+                health leading to physical health problems and vice versa. This
+                blog post explores the relationship and offers tips for how to
+                prioritize both in daily life.
+              </p>
+            </div>
+
+            <div className="hidden w-1/4 lg:block">
+              <img src={blogHeader2} className="w-full object-cover"></img>
+            </div>
           </div>
 
-          <div className="text-center lg:w-1/2">
-            <h1 className="subheading heading-primary">OUR BLOGS</h1>
-            <p className="text-sm font-medium lg:text-lg">
-              Mental health and physical health are linked, with poor mental
-              health leading to physical health problems and vice versa. This
-              blog post explores the relationship and offers tips for how to
-              prioritize both in daily life.
-            </p>
-          </div>
-
-          <div className="hidden w-1/4 lg:block">
-            <img src={blogHeader2} className="w-full object-cover"></img>
-          </div>
+          {/* =========search button======= */}
+          <form class="mx-auto flex items-center justify-between rounded-full border border-gray-300 bg-white lg:w-96">
+            <input
+              type="text"
+              placeholder="Search..."
+              class="w-full rounded-l-full py-2.5 pl-5 pr-2 outline-none"
+            />
+            <button
+              type="submit"
+              class="rounded-full bg-primary-400 px-4 py-2.5 text-white"
+            >
+              <FontAwesomeIcon icon={faSearch} className="text-white" />
+            </button>
+          </form>
         </div>
-
-        {/* =========search button======= */}
-        <form class="mx-auto flex items-center justify-between rounded-full border border-gray-300 bg-white lg:w-96">
-          <input
-            type="text"
-            placeholder="Search..."
-            class="w-full rounded-l-full py-2.5 pl-5 pr-2 outline-none"
-          />
-          <button
-            type="submit"
-            class="rounded-full bg-primary-400 px-4 py-2.5 text-white"
-          >
-            <FontAwesomeIcon icon={faSearch} className="text-white" />
-          </button>
-        </form>
       </header>
 
       {/* =========== Recent Blog ========= */}

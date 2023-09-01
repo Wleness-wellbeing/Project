@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import JoinUs from "../JoinUs";
 // Data
 import { logo } from "../../assets";
@@ -37,7 +37,7 @@ function Navbar() {
       <nav className="sticky left-0 right-0 top-0 z-40 bg-white">
         <div className="container relative mx-auto flex items-center justify-between">
           {/* Logo */}
-          <div className=" w-32 pt-2 md:w-56 lg:w-64 xl:w-48">
+          <div className="w-32 py-2 md:w-56 lg:w-64 xl:w-44 xl:py-3">
             <Link to="/" className="outline-none">
               <img src={logo} alt="" className="w-full object-cover" />
             </Link>

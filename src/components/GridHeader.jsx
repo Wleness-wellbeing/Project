@@ -19,7 +19,7 @@ export default function GridHeader(props) {
     click: props.handleScrollToComponent,
   };
   return (
-    <header className="relative overflow-x-hidden py-10">
+    <header className="relative overflow-x-hidden bg-gradient-to-b from-primary-50/30 to-transparent py-10">
       <div className="container mx-auto text-center">
         <h1 className="subheading lg:w-[640px]">
           <span>Discover the power of </span>

@@ -16,13 +16,13 @@ export default function MainHeader({ openAssessmentModal }) {
             and soul with our professionally curated services customised by
             industry experts just for you!
           </h3>
-          <h4 className="font-bold text-primary-400 lg:text-xl">
+          <h4 className="text-xl font-bold text-primary-400 xl:text-2xl">
             We Care For You
           </h4>
         </hgroup>
 
         {/* Header Image */}
-        <div className="relative">
+        <div className="relative my-4 lg:my-2">
           <img src={mainHeaderImage} alt="" className="mx-auto w-[620px]" />
         </div>
 
