@@ -137,6 +137,8 @@ import meditationType3 from "./images/activities/meditation/meditation-type-3.pn
 import meditationType4 from "./images/activities/meditation/meditation-type-4.png";
 import meditationType5 from "./images/activities/meditation/meditation-type-5.png";
 import meditationType6 from "./images/activities/meditation/meditation-type-6.png";
+import meditationType7 from "./images/activities/meditation/meditation-type-7.png";
+import meditationType8 from "./images/activities/meditation/meditation-type-8.png";
 import meditationThumbnail from "./images/activities/meditation/meditationThumbnail.png";
 // Activities >> Yoga
 import yogaHeader from "./images/activities/yoga/yoga-header.png";
@@ -194,6 +196,81 @@ import brainExerciseHeader from "./images/activities/brainExercise/brain-exercis
 import brainGameGalaxy from "./images/activities/brainExercise/brain-game-galaxy.png";
 import brainGameTreasure from "./images/activities/brainExercise/brain-game-treasure-chest.png";
 import brainGameHunter from "./images/activities/brainExercise/brain-game-turtle-hunter.png";
+// Others
+import benefits from "./images/activities/yoga/others/benefits.png";
+import precautions from "./images/activities/yoga/others/precautions.png";
+export {
+  adhvmukhaHeader,
+  benefits,
+  precautions,
+  adhvmukhaSteps,
+  adhvVariationOne,
+  adhvVariationTwo,
+  adhvVariationThree,
+  brainExercise,
+  goalPlan,
+  meditation,
+  sadhna,
+  yoga,
+  activitiesHeader,
+  activitiesExplore1,
+  activitiesExplore2,
+  activitiesExplore3,
+  activityBlogThumbnail,
+  meditationHeader,
+  meditationType1,
+  meditationType2,
+  meditationType3,
+  meditationType4,
+  meditationType5,
+  meditationType6,
+  meditationType7,
+  meditationType8,
+  meditationThumbnail,
+  sadhnaHeader,
+  sadhnaBhakti,
+  sadhnaJapa,
+  sadhnaKundalini,
+  sadhnaMantra,
+  sadhnaMeditation,
+  sadhnaNature,
+  sadhnaSeva,
+  sadhnaTantric,
+  sadhnaYoga,
+  yogaHeader,
+  yogaAdhoMukhaSavanasana,
+  yogaMatsyasana,
+  yogaSarvangasana,
+  yogaBandhasana,
+  yogaSirsasana,
+  yogaTrikonasana,
+  yogaUstrasana,
+  yogaVirbhadrasana,
+  yogaVrksasna,
+  yogaUttanasana,
+  yogaArdhaChandrasana,
+  yogaNavasana,
+  brainExerciseHeader,
+  brainGameGalaxy,
+  brainGameTreasure,
+  brainGameHunter,
+  virabhadrasanaHeader,
+  virabhadrasanaVariation1,
+  virabhadrasanaVariation2,
+  virabhadrasanaVariation3,
+  trikonasanaHeader,
+  trikonasanaVariation1,
+  trikonasanaVariation2,
+  trikonasanaVariation3,
+  vrkasanaHeader,
+  vrkasanaVariation1,
+  vrkasanaVariation2,
+  matsyasanaHeader,
+  sarvangasanaHeader,
+  setuBandhasanaHeader,
+  ustrasanaHeader,
+  sirsasanaHeader,
+};
 
 // Join us
 import JoinUsTherapist from "./images/joinus/joinus-therapist.png";
@@ -241,80 +318,6 @@ export {
   dottedLinesLarge,
   dottedPlane,
   bgCircles,
-};
-
-// Others
-import benefits from "./images/activities/yoga/others/benefits.png";
-import precautions from "./images/activities/yoga/others/precautions.png";
-export {
-  adhvmukhaHeader,
-  benefits,
-  precautions,
-  adhvmukhaSteps,
-  adhvVariationOne,
-  adhvVariationTwo,
-  adhvVariationThree,
-  brainExercise,
-  goalPlan,
-  meditation,
-  sadhna,
-  yoga,
-  activitiesHeader,
-  activitiesExplore1,
-  activitiesExplore2,
-  activitiesExplore3,
-  activityBlogThumbnail,
-  meditationHeader,
-  meditationType1,
-  meditationType2,
-  meditationType3,
-  meditationType4,
-  meditationType5,
-  meditationType6,
-  meditationThumbnail,
-  sadhnaHeader,
-  sadhnaBhakti,
-  sadhnaJapa,
-  sadhnaKundalini,
-  sadhnaMantra,
-  sadhnaMeditation,
-  sadhnaNature,
-  sadhnaSeva,
-  sadhnaTantric,
-  sadhnaYoga,
-  yogaHeader,
-  yogaAdhoMukhaSavanasana,
-  yogaMatsyasana,
-  yogaSarvangasana,
-  yogaBandhasana,
-  yogaSirsasana,
-  yogaTrikonasana,
-  yogaUstrasana,
-  yogaVirbhadrasana,
-  yogaVrksasna,
-  yogaUttanasana,
-  yogaArdhaChandrasana,
-  yogaNavasana,
-  brainExerciseHeader,
-  brainGameGalaxy,
-  brainGameTreasure,
-  brainGameHunter,
-  virabhadrasanaHeader,
-  virabhadrasanaVariation1,
-  virabhadrasanaVariation2,
-  virabhadrasanaVariation3,
-  trikonasanaHeader,
-  trikonasanaVariation1,
-  trikonasanaVariation2,
-  trikonasanaVariation3,
-  vrkasanaHeader,
-  vrkasanaVariation1,
-  vrkasanaVariation2,
-  matsyasanaHeader,
-  sarvangasanaHeader,
-  setuBandhasanaHeader,
-  ustrasanaHeader,
-  sirsasanaHeader,
 };
 
 // Feature Icons
@@ -435,6 +438,9 @@ import issuePanicAttack from "./images/issues/issue-panic-attack.png";
 import issueParanoia from "./images/issues/issue-paranoia.png";
 import issueSchizophrenia from "./images/issues/issue-schizophrenia.png";
 import issueStress from "./images/issues/issue-stress.png";
+import issueRelationship from "./images/issues/issue-relationship.png";
+import issueAnger from "./images/issues/issue-anger.png";
+import issueLgbtq from "./images/issues/issue-lgbtq.png";
 // Issues >> Subpages >> Header
 import adhdHeader from "./images/issues/hero/header-adhd.png";
 import anxietyHeader from "./images/issues/hero/header-anxiety.png";
@@ -474,6 +480,9 @@ export {
   issueOdd,
   issuePanicAttack,
   issueParanoia,
+  issueRelationship,
+  issueAnger,
+  issueLgbtq,
   issueSchizophrenia,
   issueStress,
   adhdHeader,
@@ -670,6 +679,11 @@ import wlenessApproachIcon1 from "./images/icons/wleness-approach-1.png";
 import wlenessApproachIcon2 from "./images/icons/wleness-approach-2.png";
 import wlenessApproachIcon3 from "./images/icons/wleness-approach-3.png";
 import wlenessApproachIcon4 from "./images/icons/wleness-approach-4.png";
+import iconAngry from "./images/icons/icon-angry.png";
+import iconEmotional from "./images/icons/icon-emotional.png";
+import iconHappy from "./images/icons/icon-happy.png";
+import iconNeutral from "./images/icons/icon-neutral.png";
+import iconSad from "./images/icons/icon-sad.png";
 
 export {
   iconInstagram,
@@ -683,6 +697,11 @@ export {
   wlenessApproachIcon4,
   iconFacebookCircle,
   iconGoogle,
+  iconAngry,
+  iconEmotional,
+  iconHappy,
+  iconNeutral,
+  iconSad,
 };
 
 // Other Images

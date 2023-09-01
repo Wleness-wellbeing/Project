@@ -117,33 +117,33 @@ export default function CampusAmbassador() {
             <img src={campusWhyToApply} alt="" className="" />
           </div>
           <div className="w-1/2">
-            <div className="absolute left-40 top-20 flex">
+            <div className="absolute left-20 top-20 flex md:left-40">
               <img
                 src={dottedLinesLarge}
                 alt=""
-                className="mr-4 w-96 object-contain"
+                className="mr-4 w-32 object-contain md:w-96"
               />
-              <span className="text-xl font-bold">
+              <span className="text-sm font-bold md:text-xl">
                 Learning <span className="heading-primary">Opportunities</span>
               </span>
             </div>
-            <div className="absolute left-80 top-60 flex">
+            <div className="absolute left-20 top-60 flex w-28 md:left-80 md:w-fit">
               <img
                 src={dottedLinesSmall}
                 alt=""
                 className="mr-4 w-72 object-contain"
               />
-              <span className="text-xl font-bold">
+              <span className="text-sm font-bold md:text-xl">
                 Career <span className="heading-primary">Counselling</span>
               </span>
             </div>
-            <div className="absolute bottom-60 left-80 flex">
+            <div className="absolute bottom-60 left-20 flex md:bottom-60 md:left-80">
               <img
                 src={dottedLinesSmall}
                 alt=""
-                className="mr-4 w-72 object-contain"
+                className="mr-4 w-24 object-contain md:w-72"
               />
-              <span className="text-xl font-bold">
+              <span className="text-sm font-bold md:text-xl">
                 Goodies from <span className="heading-primary">Wleness</span>
               </span>
             </div>
@@ -158,17 +158,21 @@ export default function CampusAmbassador() {
               </span>
             </div>
           </div>
-          <img src={bgCircles} alt="" className="absolute bottom-10 right-40" />
+          <img
+            src={bgCircles}
+            alt=""
+            className="absolute left-1/2 top-1/2 w-52 -translate-x-1/2 -translate-y-1/2 lg:bottom-10 lg:right-40 lg:w-fit"
+          />
         </div>
         <img
           src={dottedPlane}
           alt=""
-          className="absolute right-20 top-10 w-64"
+          className="absolute right-20 top-10 hidden w-64 md:block"
         />
         <img
           src={doodle2}
           alt=""
-          className="absolute -bottom-40 right-0 w-64 -scale-100 opacity-25"
+          className="absolute -bottom-40 right-0 w-32 -scale-100 opacity-25 lg:w-64"
         />
       </section>
 

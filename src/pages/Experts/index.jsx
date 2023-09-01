@@ -7,9 +7,6 @@ import {
   featureIcon1,
   featureIcon2,
   featureIcon3,
-  expertsWhy1,
-  expertsWhy2,
-  expertsWhy3,
   bubbles,
 } from "../../assets";
 import { doctorsPageClient } from "../../data/clients";
@@ -133,6 +130,7 @@ function Experts() {
           </figcaption>
         </figure>
       </section>
+
       {/* ========== Why Us ========== */}
       <section className="relative overflow-x-hidden overflow-y-clip px-5 lg:!px-0 lg:pb-14">
         <div className="container mx-auto mb-16 rounded-t-2xl bg-gradient-to-b from-primary-50/30 to-transparent pt-10 text-center">
@@ -145,7 +143,8 @@ function Experts() {
             goals and improve your well-being.
           </p>
         </div>
-        {/* Our Services */}
+
+        {/* ========== Our Services ========== */}
         <div className="container mx-auto">
           <ExpertsCard data={expertsTherapy} />
           <figure className="mb-12 flex flex-col items-center lg:mb-2 lg:flex-row">
@@ -188,6 +187,7 @@ function Experts() {
           className="absolute -left-96 top-[520px] -z-10 -scale-x-100"
         />
       </section>
+
       {/* ========== Appoinment ========== */}
       <section className="container mx-auto mb-12 rounded-2xl bg-primary-50/30 p-8 text-center lg:p-14">
         <h2 className="subheading mb-2">

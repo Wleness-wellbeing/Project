@@ -12,12 +12,15 @@ export default function IssueCard(props) {
     setShowAssessmentModal(false);
   };
   return (
-    <div className="mx-auto w-64 rounded-2xl rounded-br-[3rem] bg-gradient-to-br from-secondary to-tertiary p-1 lg:w-full">
+    <div
+      className="mx-auto w-64 rounded-2xl rounded-br-[3rem] bg-gradient-to-br from-secondary to-tertiary p-1 lg:w-full"
+      title={props.data.title}
+    >
       <div className="flex h-full flex-col items-center justify-center rounded-2xl rounded-br-[3rem] bg-[#FAFCE7] py-6">
-        <h3 className="mb-4 text-center text-2xl font-bold">
-          {props.data.name}
-        </h3>
         <Link to={props.data.slug}>
+          <h3 className="mb-4 text-center text-2xl font-bold">
+            {props.data.name}
+          </h3>
           <img
             src={props.data.image}
             alt="Avatar"

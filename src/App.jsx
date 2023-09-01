@@ -246,9 +246,9 @@ function App() {
         <Route
           path="/self-care"
           element={
-            <Layout>
+            <SignupLayout>
               <Selfcare />
-            </Layout>
+            </SignupLayout>
           }
         />
         {/* Activity Subpages - Yoga, Meditation, Sadhna */}

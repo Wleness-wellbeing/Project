@@ -124,6 +124,9 @@ a {
 .swiper-pagination {
   @apply !-bottom-8 lg:!bottom-0;
 }
+.mythsAndFacts .swiper-pagination {
+  @apply !-bottom-10;
+}
 .swiper-pagination-bullet {
   @apply h-3 w-3;
 }

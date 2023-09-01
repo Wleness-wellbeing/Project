@@ -1,5 +1,6 @@
 import {
   adhdHeader,
+  anxietyHeader,
   biopolarDisorderHeader,
   cdHeader,
   depressionHeader,
@@ -430,7 +431,7 @@ export const therapiesData = [
         "Anxiety is a feeling of unease, worry, or fear, often accompanied by physical sensations like increased heart rate and tension.",
         "It is a natural stress response, but excessive or persistent anxiety can indicate an anxiety disorder.",
       ],
-      image: stressHeader,
+      image: anxietyHeader,
     },
     symptoms: {
       highlight: " Anxiety symptoms ",

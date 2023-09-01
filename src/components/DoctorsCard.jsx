@@ -19,7 +19,7 @@ export default function DoctorsCard(props) {
           {props.data.profession}
         </span>
       </div>
-      <figcaption className="px-6 py-2 pb-6">
+      <figcaption className="px-4 py-2 pb-6 3xl:px-6">
         <hgroup>
           <h3 className="flex items-center justify-between text-2xl font-semibold">
             <span>{props.data.name}</span>
@@ -29,7 +29,7 @@ export default function DoctorsCard(props) {
             {props.data.exp}
           </h4>
         </hgroup>
-        <div className=" font-medium">
+        <div className="font-medium">
           <p className="leading-5 text-slate-600">
             Expertise: {props.data.expertise}
           </p>
@@ -41,7 +41,7 @@ export default function DoctorsCard(props) {
             <FontAwesomeIcon icon={faIndianRupee} className="mx-1 text-sm" />
             {props.data.price}
           </h5>
-          <div className="space-x-2">
+          <div className="space-x-2 space-y-2">
             <Link to="/appointment" className="btn-one inline-block !text-sm">
               View Profile
             </Link>

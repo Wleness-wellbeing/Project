@@ -189,7 +189,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our Services */}
+      {/* ========== Our Services ========== */}
       <section className="relative py-10">
         <div className="container mx-auto text-center">
           <h2 className="subheading heading-primary mb-7">
@@ -325,7 +325,7 @@ export default function Home() {
       <section className="py-6">
         <div className="container mx-auto text-center">
           <h2 className="subheading heading-primary">Why Choose Us?</h2>
-          <p className="pb-12 text-lg font-medium lg:mx-auto lg:w-[720px]">
+          <p className="pb-12 text-lg font-medium text-slate-500 lg:mx-auto lg:w-[720px]">
             Our platform is built by psychiatrists, psychologists and mental
             health experts with immense global experience.
           </p>
@@ -337,8 +337,8 @@ export default function Home() {
                     <img src={value.image} alt="" className="mx-auto lg:w-28" />
                   </div>
                   <figcaption>
-                    <h2 className="mb-3 text-xl font-bold text-primary-400">
-                      {value.name}
+                    <h2 className="heading-primary mb-3 inline-block text-xl font-bold text-primary-400">
+                      {value.title}
                     </h2>
                     <p className="text-lg font-medium">{value.desc}</p>
                   </figcaption>

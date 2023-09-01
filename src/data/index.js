@@ -79,6 +79,11 @@ import {
   yogaUttanasana,
   yogaNavasana,
   yogaArdhaChandrasana,
+  meditationType7,
+  meditationType8,
+  issueRelationship,
+  issueLgbtq,
+  issueAnger,
 } from "../assets";
 // Components
 import HeaderWithImage from "../components/HeaderWithImage";
@@ -93,63 +98,93 @@ import ActivityBlogs from "../components/ActivityBlogs";
 export const therapies = [
   {
     name: "Stress",
+    title: "Stress",
     image: issueStress,
     slug: "/therapy/stress",
   },
   {
     name: "Depression",
+    title: "Depression",
     image: issueDepression,
     slug: "/therapy/depression",
   },
   {
     name: "Panic Attacks",
+    title: "Panic Attacks",
     image: issuePanicAttack,
     slug: "/therapy/panic-attack",
   },
   {
     name: "Anxiety",
+    title: "Anxiety",
     image: issueAnxiety,
     slug: "/therapy/anxiety",
   },
   {
-    name: "OCD",
-    image: issueOcd,
-    slug: "/therapy/ocd",
-  },
-  {
-    name: "Bipolar Disorder",
-    image: issueBiopolarDisorder,
-    slug: "/therapy/bipolar-disorder",
-  },
-  {
-    name: "Schizophrenia",
-    image: issueSchizophrenia,
-    slug: "/therapy/schizophrenia",
-  },
-  {
     name: "Eating Disorder",
+    title: "Eating Disorder",
     image: issueEatingDisorder,
     slug: "/therapy/eating-disorder",
   },
   {
+    name: "Relationship",
+    title: "Relationship",
+    image: issueRelationship,
+    slug: "/therapy/relationship",
+  },
+  {
+    name: "Bipolar Disorder",
+    title: "Bipolar Disorder",
+    image: issueBiopolarDisorder,
+    slug: "/therapy/bipolar-disorder",
+  },
+  {
+    name: "OCD",
+    title: "Obsessive-compulsive disorder",
+    image: issueOcd,
+    slug: "/therapy/ocd",
+  },
+  {
+    name: "Schizophrenia",
+    title: "Schizophrenia",
+    image: issueSchizophrenia,
+    slug: "/therapy/schizophrenia",
+  },
+  {
     name: "Paranoia",
+    title: "Paranoia",
     image: issueParanoia,
     slug: "/therapy/paranoia",
   },
   {
+    name: "Anger",
+    title: "Anger",
+    image: issueAnger,
+    slug: "/therapy/anger",
+  },
+  {
     name: "ADHD",
+    title: "Attention deficit hyperactivity disorder",
     image: issueAdhd,
     slug: "/therapy/adhd",
   },
   {
     name: "ODD",
+    title: "Oppositional defiant disorder",
     image: issueOdd,
     slug: "/therapy/odd",
   },
   {
     name: "Conduct Disorder",
+    title: "Conduct Disorder",
     image: issueCd,
     slug: "/therapy/conduct-disorder",
+  },
+  {
+    name: "LGBTQ",
+    title: "LGBTQ",
+    image: issueLgbtq,
+    slug: "/therapy/lgbtq",
   },
 ];
 
@@ -916,13 +951,13 @@ export const activities = [
         },
         {
           title: "Vipassana Meditation",
-          thumbnail: meditationType6,
+          thumbnail: meditationType7,
           desc: "The insight meditation practice of vipassana calls for very attentive observation of feelings, ideas, and sensations. Its goal is to help people comprehend how fleeting and ultimately unsatisfying life is.",
           slug: "/activities/meditation/vipassana-meditation",
         },
         {
           title: "Concentrate Meditation",
-          thumbnail: meditationType6,
+          thumbnail: meditationType8,
           desc: "Focusing all your attention on singularity. Train your mind to focus on a particular vibration or sensation, which enhances your capacity for concentration and decreases distractions.",
           slug: "/activities/meditation/concentrative-meditation",
         },
@@ -1204,7 +1239,7 @@ export const whyChooseUs = [
   {
     title: "Experience",
     image: homeExperienceIcon,
-    desc: "We follow international regulations and standards to provide you quality support and care that you deserve.",
+    desc: "Expand your skills and knowledge by working alongside experienced professionals.",
   },
   {
     title: "Commitment",
@@ -1213,7 +1248,7 @@ export const whyChooseUs = [
   },
   {
     title: "Facilities",
-    desc: "Experience the convenience and comfort of our state-of-the-art facilities at your fingertips.",
+    desc: "Experience the convenience and comfort of our state-of-the-art facilities with wleness.",
     image: homeFacilitiesIcon,
   },
 ];

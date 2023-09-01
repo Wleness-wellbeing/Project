@@ -249,3 +249,23 @@ export const homeFaqs = [
       "While all therapists on Wleness are licensed professionals who possess the necessary qualifications, it may not be suitable for severe mental health conditions or those in crisis. In such cases, we recommend immediate assistance from emergency services that provide more intensive and prompt support.",
   },
 ];
+
+// Myths and Facts
+export const mythsAndFacts = [
+  [
+    "Psychiatrists only prescribe medications and don't provide therapy.",
+    "Psychiatrists are trained in medication management and various therapy approaches, offering a comprehensive treatment approach.",
+  ],
+  [
+    "Psychiatrists only prescribe medications and don't provide therapy.",
+    "Psychiatrists are trained in medication management and various therapy approaches, offering a comprehensive treatment approach.",
+  ],
+  [
+    "Psychiatrists only prescribe medications and don't provide therapy.",
+    "Psychiatrists are trained in medication management and various therapy approaches, offering a comprehensive treatment approach.",
+  ],
+  [
+    "Psychiatrists only prescribe medications and don't provide therapy.",
+    "Psychiatrists are trained in medication management and various therapy approaches, offering a comprehensive treatment approach.",
+  ],
+];

@@ -29,9 +29,9 @@ export default function index() {
             </span>
           </h1>
 
-          <div className="mb-4">
-            <img src={faq3Lg} alt="" className="mx-auto w-[560px]" />
-            <p className="px-44 text-center text-xl font-bold">
+          <div className="lg:mb-4">
+            <img src={faq3Lg} alt="" className="mx-auto lg:w-[560px]" />
+            <p className="text-center text-sm font-bold sm:text-base lg:px-44 lg:text-xl">
               Everything you need to know right here at Wleness. Ask questions
               and browse around for answers.
             </p>
@@ -42,12 +42,12 @@ export default function index() {
         <img
           src={bgDotsPattern}
           alt=""
-          className="absolute -right-10 top-0 -z-10 w-72"
+          className="absolute -right-10 top-0 -z-10 hidden w-64 lg:block"
         />
         <img
           src={bgDotsPattern}
           alt=""
-          className="absolute -left-20 bottom-32 -z-10 w-80"
+          className="absolute -left-20 bottom-32 -z-10 w-32 lg:w-64"
         />
       </header>
 

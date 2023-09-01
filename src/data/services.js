@@ -172,20 +172,6 @@ export const MusicalTherapyData = {
         slug: "/",
         class: ["order-1", "order-2"],
       },
-      {
-        title: "New Therapy 1",
-        thumbnail: musicalTherapy6,
-        desc: "A traditional form of musical therapy in Indian classical music, where specific ragas are used to evoke and influence specific emotions, moods, and states of mind.",
-        slug: "/",
-        class: ["order-1", "order-2"],
-      },
-      {
-        title: "New Therapy 2",
-        thumbnail: musicalTherapy6,
-        desc: "A traditional form of musical therapy in Indian classical music, where specific ragas are used to evoke and influence specific emotions, moods, and states of mind.",
-        slug: "/",
-        class: ["order-1", "order-2"],
-      },
     ],
   },
   blogs: [
