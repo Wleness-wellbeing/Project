@@ -33,7 +33,13 @@ import {
 } from "../../assets";
 import { homeFaqs } from "../../data/faqs";
 import { homeTestimonials } from "../../data/testimonials";
-import { objectives, statistics, therapies, whyChooseUs } from "../../data";
+import {
+  homeServices,
+  objectives,
+  statistics,
+  therapies,
+  whyChooseUs,
+} from "../../data";
 // Components
 import Assessment from "../../components/Assessment";
 import RequestForm from "../../components/Forms/RequestForm";
@@ -43,6 +49,9 @@ import IssueCard from "../../components/Cards/IssueCard";
 import Faq from "../../components/layout/Faq";
 import MainHeader from "../../components/headers/MainHeader";
 import HomeFaq from "../../components/Faq/HomeFaq";
+import ServicesCard from "../../components/Cards/ServicesCard";
+import { couplesTherapyDoctors } from "../../data/doctors";
+import DoctorSlider from "../../components/DoctorSlider";
 
 // Our Services
 const services = [
@@ -138,7 +147,7 @@ export default function Home() {
       {/* Hero Section */}
       <MainHeader openAssessmentModal={openAssessmentModal} />
 
-      {/* ========== Issues ========== */}
+      {/* ========== Services ========== */}
       <section>
         <div className="container mx-auto py-8 text-center sm:pt-6 lg:pb-14 2xl:pb-10">
           <h2 className="sm:pb-0 xl:pb-1">
@@ -152,23 +161,18 @@ export default function Home() {
             journey towards better mental health.
           </p>
         </div>
-        {/* Issues */}
+        {/* Services */}
         <div className="bg-gradient-to-br from-primary-10 to-white pb-6 font-quicksand lg:pb-10">
-          <div className="container mx-auto grid gap-4 py-6 pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-10 lg:pt-12 xl:grid-cols-4 2xl:grid-cols-4 2xl:gap-5">
-            {therapies.slice(0, 8).map((value, index) => {
-              return <IssueCard key={index} data={value} />;
+          <div className="container mx-auto grid gap-4 py-6 pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-10 lg:pt-12 xl:gap-x-14 xl:gap-y-20 xl:pt-24">
+            {homeServices.map((value, index) => {
+              return <ServicesCard key={index} data={value} />;
             })}
-          </div>
-          <div className="text-center">
-            <Link to="/services/therapy" className="btn-one">
-              Explore More
-            </Link>
           </div>
         </div>
       </section>
 
       {/* ========== Objectives ========== */}
-      <section className="bg-primary-100/20">
+      <section className="bg-primary-100/20 lg:mb-6">
         <div className="container mx-auto grid grid-cols-5 gap-1 py-6 !pl-1 lg:py-6">
           {objectives.map((value, i) => {
             return (
@@ -189,8 +193,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Doctors Slider */}
+      <DoctorSlider data={couplesTherapyDoctors} />
+
       {/* ========== Our Services ========== */}
-      <section className="relative py-10">
+      {/* <section className="relative py-10">
         <div className="container mx-auto text-center">
           <h2 className="subheading heading-primary mb-7">
             Our services for you
@@ -220,7 +227,6 @@ export default function Home() {
               );
             })}
 
-            {/* Background Lines */}
             <div className="absolute left-0 right-0 top-40 -z-10 hidden lg:block 4xl:top-44">
               <div className="mb-2 h-[2px] w-full bg-primary-50"></div>
               <div className="mb-2 h-[2px] w-full bg-primary-50"></div>
@@ -252,7 +258,6 @@ export default function Home() {
               );
             })}
 
-            {/* Background Lines */}
             <div className="absolute bottom-[270px] left-0 right-0 -z-10 hidden lg:block xl:bottom-60 4xl:bottom-56">
               <div className="mb-2 h-[2px] w-full bg-primary-50"></div>
               <div className="mb-2 h-[2px] w-full bg-primary-50"></div>
@@ -260,10 +265,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ========== Community ========== */}
-      <section className="relative overflow-x-clip 3xl:py-10">
+      <section className="relative overflow-x-clip bg-gradient-to-br from-primary-10 to-transparent 3xl:py-10">
         <div className="container mx-auto">
           <div className="relative flex flex-col justify-between lg:flex-row lg:items-center">
             <div className="relative mb-8 lg:order-2 lg:mb-0 lg:w-2/5">

@@ -84,6 +84,14 @@ import {
   issueRelationship,
   issueLgbtq,
   issueAnger,
+  homeTherapy,
+  homeExecutiveCoaching,
+  homeCorporate,
+  homeLifestyleCoaching,
+  homeYoga,
+  homeMeditation,
+  homeInternship,
+  homeSelfcare,
 } from "../assets";
 // Components
 import HeaderWithImage from "../components/HeaderWithImage";
@@ -1212,6 +1220,53 @@ export const blogsData = [
 
 // Home Page data
 // Objectives
+export const homeServices = [
+  {
+    title: "Therapy",
+    desc: "Transform through therapy with caring, skilled therapists in a supportive, confidential setting. Enhance mental health and personal growth for a happier life.",
+    image: homeTherapy,
+  },
+  {
+    title: "Executive Coaching",
+    desc: "Executive coaching elevates leadership, empowers high-level staff, & drives positive results. It maximizes potential, navigates the challenges, &  enhances performance.",
+    image: homeExecutiveCoaching,
+  },
+  {
+    title: "Corporate",
+    desc: "Corporate mental wellness services focus on employee well-being, and tackling the  challenges, reducing stress, and promoting emotional resilience at work.",
+    image: homeCorporate,
+  },
+  {
+    title: "Lifestyle Coaching",
+    desc: "Lifestyle coaching empowers well-being, productivity, and balance. It encourages health, reduces stress, boosts motivation, and enhances performance.",
+    image: homeLifestyleCoaching,
+  },
+  {
+    title: "Yoga",
+    desc: "Yoga combines postures, breathing, meditation, and mindfulness for mental wellness. It enhances mental health by nurturing the mind-body connection.",
+    image: homeYoga,
+  },
+  {
+    title: "Meditation",
+    desc: "Meditation fosters mental wellness by focusing the mind and reducing cluttered thoughts. It enhances clarity, relaxation, and self-awareness.",
+    image: homeMeditation,
+  },
+  {
+    title: "Musical Therapy",
+    desc: "Music therapy addresses diverse needs through music. Therapists use musical interventions like listening, creating, singing, & playing instruments. ",
+    image: homeMeditation,
+  },
+  {
+    title: "Internship",
+    desc: "Unlock career opportunities & gain experience through our internship programs.  Explore placements that align with your academic  professional goals,  skills & opportunities.",
+    image: homeInternship,
+  },
+  {
+    title: "Self Care",
+    desc: "Prioritize your well-being with our self-care solutions. We offer personalized self-care plans & resources to help you nurture your physical, mental, and emotional health. ",
+    image: homeSelfcare,
+  },
+];
 export const objectives = [
   {
     name: "Safe",

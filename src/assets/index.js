@@ -45,6 +45,16 @@ import servicesIcon6 from "./images/home/icons/services-icon-6.png";
 import homeCommitmentIcon from "./images/home/icons/commitment-icon.png";
 import homeExperienceIcon from "./images/home/icons/experience-icon.png";
 import homeFacilitiesIcon from "./images/home/icons/facilities-icon.png";
+// Services
+import homeTherapy from "./images/home/home-service-1.png";
+import homeExecutiveCoaching from "./images/home/home-service-2.png";
+import homeCorporate from "./images/home/home-service-3.png";
+import homeLifestyleCoaching from "./images/home/home-service-4.png";
+import homeYoga from "./images/home/home-service-5.png";
+import homeMeditation from "./images/home/home-service-6.png";
+import homeMusicalTherapy from "./images/home/home-service-7.png";
+import homeInternship from "./images/home/home-service-8.png";
+import homeSelfcare from "./images/home/home-service-9.png";
 
 export {
   mainHeaderImage,
@@ -93,6 +103,15 @@ export {
   homeCommitmentIcon,
   homeExperienceIcon,
   homeFacilitiesIcon,
+  homeTherapy,
+  homeExecutiveCoaching,
+  homeCorporate,
+  homeLifestyleCoaching,
+  homeYoga,
+  homeMeditation,
+  homeMusicalTherapy,
+  homeInternship,
+  homeSelfcare,
 };
 
 // Avatar images
