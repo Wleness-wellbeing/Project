@@ -721,7 +721,6 @@ import rightBar from "./images/right-bar.jpg";
 import signup from "./images/signup.png";
 import bubbles from "./images/bubbles.png";
 import themeWAve from "./images/theme-wave.png";
-import placeholder from "./images/placeholder.jpg";
 import startUpIndiaLogo from "./images/startup-india-logo.png";
 
 export {
@@ -734,6 +733,5 @@ export {
   bubbles,
   themeWAve,
   logoTransparent,
-  placeholder,
   startUpIndiaLogo,
 };

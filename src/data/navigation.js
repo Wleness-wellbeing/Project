@@ -1,8 +1,13 @@
 import {
+  faClipboardList,
   faEnvelope,
   faGlobe,
+  faHeartCircleCheck,
+  faHome,
   faLocationDot,
   faPhone,
+  faRightFromBracket,
+  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   JoinUsCampusAmbassador,
@@ -202,4 +207,12 @@ export const adminSidebar = [
   ["Users", "/admin/users"],
   ["Questions", "/admin/questions"],
   ["Blogs", "/admin/blogs"],
+];
+
+export const userDashboardLinks = [
+  ["Home", "/user/dashboard", faHome],
+  ["Profile", "/profile", faUser],
+  ["Self Care", "/self-care", faHeartCircleCheck],
+  ["Routine Care", "/routine-care", faClipboardList],
+  // ["Logout", "/logout", faRightFromBracket],
 ];

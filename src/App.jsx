@@ -9,6 +9,8 @@ import DoctorSignup from "./pages/Authentication/DoctorSignup";
 import TherapistJoiningForm from "./components/TherapistJoiningForm.jsx";
 import PsychiatristJoiningForm from "./components/PsychiatristJoiningForm";
 import ScrollToTop from "./components/icon/ScrollToTop";
+import SignupLayout from "./components/layout/SignupLayout";
+import DashboardLayout from "./components/layout/DashboardLayout";
 // Pages
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
@@ -34,23 +36,13 @@ import Appointment from "./pages/Appointment";
 import Faqs from "./pages/Faqs";
 import Community from "./pages/Community";
 import IssueSubPageLayout from "./pages/Issues/IssueSubPageLayout";
-import Admin from "./pages/Admin";
-import AdminSideBar from "./components/admin/AdminSideBar";
-import IssueCategory from "./pages/Admin/IssueCategory";
-import AdminIssues from "./pages/Admin/AdminIssues";
-import AdminQuestions from "./pages/Admin/AdminQuestions";
-import AdminQueries from "./pages/Admin/AdminQueries";
-import AdminBlogs from "./pages/Admin/AdminBlogs";
-import AdminDoctors from "./pages/Admin/AdminDoctors";
-import AdminUsers from "./pages/Admin/AdminUsers";
-import DoctorDashboard from "./pages/Doctors/DoctorDashboard";
-import UserDashboard from "./pages/Doctors/UserDashboard";
+import DoctorDashboard from "./pages/Dashboard/DoctorDashboard";
+import UserDashboard from "./pages/Dashboard/UserDashboard";
 import Corporate from "./pages/Corporate";
-import DoctorDetailPage from "./components/admin/DoctorDetailsPage";
 import Calendly from "./components/Calendly";
 import PrivacyPolicy from "./pages/Policies/PrivacyPolicy";
 import TermsAndConditions from "./pages/Policies/TermsAndConditions";
-import Selfcare from "./pages/Selfcare";
+import Selfcare from "./pages/Dashboard/Selfcare";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -243,14 +235,6 @@ function App() {
             </Layout>
           }
         />
-        <Route
-          path="/self-care"
-          element={
-            <SignupLayout>
-              <Selfcare />
-            </SignupLayout>
-          }
-        />
         {/* Activity Subpages - Yoga, Meditation, Sadhna */}
         {activitiesMenu}
         {/* Inner pages of yoga, meditation and sadhna */}
@@ -335,116 +319,33 @@ function App() {
             </SignupLayout>
           }
         />
-        {/* Admin Routes */}
 
-        <Route path="/" element={<Layout />} />
-        <Route
-          path="/admin"
-          element={
-            <Layout>
-              <AdminLayout>
-                <Admin />
-              </AdminLayout>
-            </Layout>
-          }
-        />
-        <Route
-          path="/admin/issue-category"
-          element={
-            <Layout>
-              <AdminLayout>
-                <IssueCategory />
-              </AdminLayout>
-            </Layout>
-          }
-        />
-
-        <Route
-          path="/admin/issues"
-          element={
-            <Layout>
-              <AdminLayout>
-                <AdminIssues />
-              </AdminLayout>
-            </Layout>
-          }
-        />
-        <Route
-          path="/admin/questions"
-          element={
-            <Layout>
-              <AdminLayout>
-                <AdminQuestions />
-              </AdminLayout>
-            </Layout>
-          }
-        />
-        <Route
-          path="/admin/queries"
-          element={
-            <Layout>
-              <AdminLayout>
-                <AdminQueries />
-              </AdminLayout>
-            </Layout>
-          }
-        />
-        <Route
-          path="/admin/blogs"
-          element={
-            <Layout>
-              <AdminLayout>
-                <AdminBlogs />
-              </AdminLayout>
-            </Layout>
-          }
-        />
-        <Route
-          path="/admin/doctors"
-          element={
-            <Layout>
-              <AdminLayout>
-                <AdminDoctors />
-              </AdminLayout>
-            </Layout>
-          }
-        />
-        <Route
-          path="/admin/doctordetailpage"
-          element={
-            <Layout>
-              <AdminLayout>
-                <DoctorDetailPage />
-              </AdminLayout>
-            </Layout>
-          }
-        />
-        <Route
-          path="/admin/users"
-          element={
-            <Layout>
-              <AdminLayout>
-                <AdminUsers />
-              </AdminLayout>
-            </Layout>
-          }
-        />
+        {/* Dashboard Routes */}
         <Route
           path="/doctor/dashboard"
           element={
-            <SignupLayout>
+            <DashboardLayout>
               <DoctorDashboard />
-            </SignupLayout>
+            </DashboardLayout>
           }
         />
         <Route
           path="/user/dashboard"
           element={
-            <SignupLayout>
+            <DashboardLayout>
               <UserDashboard />
-            </SignupLayout>
+            </DashboardLayout>
           }
         />
+        <Route
+          path="/self-care"
+          element={
+            <DashboardLayout>
+              <Selfcare />
+            </DashboardLayout>
+          }
+        />
+
         {/* Policies Pages */}
         <Route
           path="/privacy-policy"
@@ -468,34 +369,12 @@ function App() {
 }
 
 function Layout({ children }) {
-  // Check if the current path is /doctors-signup or /patient-signup to decide whether to render Navbar and Footer or not
-  const isLoginPage = window.location.pathname === "/login";
-  const isSignUpPage = window.location.pathname === "/signup";
-
   return (
-    <div>
-      {!isLoginPage && !isSignUpPage && <Navbar />}
+    <>
+      <Navbar />
       {children}
-      {!isLoginPage && !isSignUpPage && <Footer />}
-    </div>
-  );
-}
-
-function SignupLayout({ children }) {
-  // This layout is specifically for /doctors-signup page, without the Navbar and Footer
-  return <div>{children}</div>;
-}
-
-function AdminLayout({ children }) {
-  // This layout is specifically for /admin page
-  return (
-    <section className="container mx-auto grid justify-center py-12">
-      <h1 className="col-span-2 ml-[200px] pb-8 text-3xl font-semibold">
-        Admin Page
-      </h1>
-      <AdminSideBar />
-      {children}
-    </section>
+      <Footer />
+    </>
   );
 }
 
