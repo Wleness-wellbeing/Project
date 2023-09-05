@@ -43,6 +43,8 @@ import Calendly from "./components/Calendly";
 import PrivacyPolicy from "./pages/Policies/PrivacyPolicy";
 import TermsAndConditions from "./pages/Policies/TermsAndConditions";
 import Selfcare from "./pages/Dashboard/Selfcare";
+import ContactUs from "./pages/ContactUs";
+import LifeCoching from "./pages/coching/LifeCoching";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -360,6 +362,22 @@ function App() {
           element={
             <Layout>
               <TermsAndConditions />
+            </Layout>
+          }
+        />
+        <Route
+          path="/contactus"
+          element={
+            <Layout>
+              <ContactUs />
+            </Layout>
+          }
+        />
+        <Route
+          path="/life-coching"
+          element={
+            <Layout>
+              <LifeCoching />
             </Layout>
           }
         />

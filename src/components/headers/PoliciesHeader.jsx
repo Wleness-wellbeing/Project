@@ -10,7 +10,7 @@ export default function PoliciesHeader({ heading, desc }) {
       </div>
 
       {/* Dots  */}
-      <img
+      {/* <img
         src={bgDotsPattern}
         alt=""
         className="absolute -right-10 top-5 -z-10 w-60"
@@ -19,7 +19,7 @@ export default function PoliciesHeader({ heading, desc }) {
         src={bgDotsPattern}
         alt=""
         className="absolute -left-20 bottom-0 -z-10 w-60"
-      />
+      /> */}
     </header>
   );
 }

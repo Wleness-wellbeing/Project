@@ -764,3 +764,13 @@ export {
   logoIAF,
   logoISO,
 };
+
+
+// =======contact us=========//
+
+import email from "./images/contactus/Email.png";
+import location from "./images/contactus/Location.png";
+import ringervolume from "./images/contactus/RingerVolume.png";
+export{
+  email,location,ringervolume
+}
