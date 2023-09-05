@@ -1,37 +1,54 @@
 import React, { useState } from "react";
 import { requestCallback } from "../../assets";
+import { REQUEST_CALLBACK_URI } from "../../data/api";
+import axios from "axios";
 
 function RequestForm() {
-  const [name, setName] = useState("");
-  const [number, setNumber] = useState("");
-  const [date, setDate] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
+  const [formInfo, setFormData] = useState({
+    name: "",
+    phone: "",
+  });
+  const [successMessage, setSuccessMessage] = useState({
+    status: "",
+    message: "",
+  });
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formInfo, [name]: value });
+  };
 
-    const formData = {
-      name: name,
-      number: number,
-      date: date,
-    };
+  // Handle Post Request
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    let formData = new FormData();
+    // Append form fields to the FormData object
+    for (const key in formInfo) {
+      formData.append(key, formInfo[key]);
+    }
 
     try {
-      const response = await fetch("http://localhost:3000/submit-form", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json", // Set the content type to JSON
-        },
-        body: JSON.stringify(formData),
+      const response = await axios.post(REQUEST_CALLBACK_URI, formData);
+      console.log(response.data);
+      setSuccessMessage({
+        status: response.data.status,
+        message: response.data.message,
       });
 
-      if (response.ok) {
-        setSuccessMessage("Thanks! We will get back to you soon.🙂"); // Update success message
-      } else {
-        console.error("Error submitting form data");
-      }
+      // Empty form after successfully sending data
+      response.data.status == "success"
+        ? setFormData({
+            name: "",
+            phone: "",
+          })
+        : null;
     } catch (error) {
-      console.error("Error submitting form data:", error);
+      console.error("Error sending data:", error);
+      setSuccessMessage({
+        status: "error",
+        message: error,
+      });
     }
   };
 
@@ -70,8 +87,9 @@ function RequestForm() {
           <input
             type="text"
             placeholder="Enter Your Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={formInfo.name}
+            onChange={handleChange}
+            name="name"
             className="block w-full rounded-md px-6 py-4 shadow-md focus:ring focus:ring-violet-400 focus:ring-opacity-75 dark:bg-white"
           />
         </label>
@@ -79,23 +97,22 @@ function RequestForm() {
           <input
             type="tel" // Use "tel" for phone numbers
             placeholder="Your number"
-            value={number}
-            onChange={(e) => setNumber(e.target.value)}
+            name="phone"
+            value={formInfo.phone}
+            onChange={handleChange}
             className="block w-full rounded-md px-6 py-4 shadow-md focus:ring focus:ring-violet-400 focus:ring-opacity-75 dark:bg-white"
           />
         </label>
-        <label className="mb-2">
-          <input
-            type="date"
-            placeholder="Date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-            className="block w-full rounded-md px-6 py-4 shadow-md focus:ring focus:ring-violet-400 focus:ring-opacity-75 dark:bg-white"
-          />
-        </label>
-        {successMessage && (
-          <p className="text-center text-green-500">{successMessage}</p>
-        )}
+        <p
+          className={`text-center font-semibold ${
+            successMessage.status == "success"
+              ? " text-green-500 "
+              : " text-red-500 "
+          }`}
+        >
+          {successMessage.message}
+        </p>
+
         <button type="submit" className="btn-one mx-auto mt-4">
           Submit
         </button>

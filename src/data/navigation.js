@@ -49,6 +49,38 @@ export const serviceMenuPages = [
     name: "Our Experts",
     slug: "/experts",
   },
+  {
+    name: "Executive Coaching",
+    slug: "/executive-coaching",
+  },
+  {
+    name: "Corporate",
+    slug: "/corporate",
+  },
+  {
+    name: "Lifestyle Coaching",
+    slug: "/lifestyle-coaching",
+  },
+  {
+    name: "Yoga",
+    slug: "/activities/yoga",
+  },
+  {
+    name: "Meditation",
+    slug: "/activities/meditation",
+  },
+  {
+    name: "Musical Healing",
+    slug: "/services/musical-healing",
+  },
+  {
+    name: "Internship",
+    slug: "/internship",
+  },
+  {
+    name: "Self Care",
+    slug: "/self-care",
+  },
 ];
 
 // Activities sub pages
