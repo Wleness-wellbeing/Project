@@ -4,10 +4,9 @@ import { mainHeaderImage } from "../../assets";
 
 export default function MainHeader({ openAssessmentModal }) {
   return (
-    <header className="overflow-x-clip bg-gradient-to-b from-primary-50/30 to-transparent !px-5 py-4 lg:py-10">
+    <header className="overflow-x-clip bg-gradient-to-b from-primary-50/30 to-transparent py-4 lg:!px-5 lg:py-10">
       <div className="container mx-auto text-center">
         <hgroup>
-          {/* <h1 className="heading-primary pb-2 font-quicksand text-2xl font-bold sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl "> */}
           <h1 className="heading-primary subheading pb-2">
             Partnering Your Well Being
           </h1>
@@ -26,7 +25,7 @@ export default function MainHeader({ openAssessmentModal }) {
           <img src={mainHeaderImage} alt="" className="mx-auto w-[620px]" />
         </div>
 
-        <button className="btn-one" onClick={openAssessmentModal}>
+        <button className="btn-one mt-2" onClick={openAssessmentModal}>
           Schedule an appointment
         </button>
       </div>

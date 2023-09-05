@@ -136,7 +136,7 @@ function App() {
           }
         />
         <Route
-          path="/services/musical-therapy"
+          path="/services/musical-healing"
           element={
             <Layout>
               <MusicalTherapy />

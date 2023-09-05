@@ -14,7 +14,7 @@ import {
   footerLocation,
 } from "../../data/navigation";
 import { Link } from "react-router-dom";
-import { startUpIndiaLogo } from "../../assets";
+import { logoIAF, logoISO, startUpIndiaLogo } from "../../assets";
 
 export default function Footer() {
   return (
@@ -113,12 +113,14 @@ export default function Footer() {
             </Link>
           </div>
           <div className="flex items-center justify-between">
-            <div className="w-40">
+            <div className="gap-x-4 lg:flex">
               <img
                 src={startUpIndiaLogo}
                 alt=""
-                className="w-full object-cover"
+                className="w-32 object-contain"
               />
+              <img src={logoIAF} alt="" className="w-14 object-contain" />
+              <img src={logoISO} alt="" className="w-10 object-contain" />
             </div>
             <div className="flex items-center gap-x-1">
               {socialLinks.map((value, i) => {

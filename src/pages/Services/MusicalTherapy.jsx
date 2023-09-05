@@ -1,6 +1,9 @@
 import React, { useRef, useState } from "react";
 // Data
-import { servicesFeatures, MusicalTherapyData } from "../../data/services";
+import {
+  MusicalTherapyData,
+  musicalTherapyFeatures,
+} from "../../data/services";
 import { musicalTherapyClient } from "../../data/clients";
 import { musicalTherapyFaq } from "../../data/faqs";
 // Components
@@ -35,7 +38,7 @@ export default function MusicalTherapy() {
         openAssessmentModal={openAssessmentModal}
       />
       <p ref={ref}></p>
-      <FeaturesBlock data={servicesFeatures} />
+      <FeaturesBlock data={musicalTherapyFeatures} />
       <ServicesTechniques
         title={MusicalTherapyData.activities.title}
         desc={MusicalTherapyData.activities.desc}

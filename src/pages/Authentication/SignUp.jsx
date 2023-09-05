@@ -96,10 +96,10 @@ export default function Signup() {
     <main className="flex h-screen flex-col items-center justify-center md:flex-row md:items-stretch">
       {/* Left Sidebar */}
       <aside className="hidden items-center justify-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-contain bg-right bg-no-repeat md:flex md:w-1/2">
-        <img src={signup} alt="" className="block w-[648px] object-cover" />
+        <img src={signup} alt="" className="block object-cover md:w-[648px]" />
       </aside>
       {/* Right Content */}
-      <div className="flex flex-col items-center justify-center px-4 md:w-1/2">
+      <div className="flex flex-col items-center justify-center px-12 md:w-1/2">
         <div class="w-full sm:w-[400px]">
           <div class="mx-auto mb-4 w-full sm:w-[280px]">
             <Link to="/">
@@ -107,15 +107,6 @@ export default function Signup() {
             </Link>
           </div>
 
-          {/* Login/Signup Buttons */}
-          {/* <div className="mb-10 flex justify-between gap-5">
-            <Link to="/login" className="btn-transparent">
-              LOGIN
-            </Link>
-            <Link to="/signup" className="btn-primary">
-              SIGN UP
-            </Link>
-          </div> */}
           {/* Signup Form */}
           <form onSubmit={handleSubmit} className="mb-4 md:mb-8">
             <label htmlFor="name">
@@ -169,91 +160,6 @@ export default function Signup() {
               />
             </label>
 
-            {/* <label htmlFor="email">
-              <input
-                type="text"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className={`border ${
-                  errors.email ? "border-red-500" : "border-gray-300"
-                } block w-full rounded-lg border-b-2 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500`}
-                placeholder="Email Address"
-              />
-            </label>
-            {errors.email && (
-              <p className="mt-1 text-sm text-red-500">{errors.email}</p>
-            )} */}
-
-            {/* <label htmlFor="gender">
-              <select
-                id="gender"
-                value={gender}
-                onChange={(e) => setGender(e.target.value)}
-                className={`border ${
-                  errors.gender ? "border-red-500" : "border-gray-300"
-                } block w-full rounded-lg border-b-2 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500`}
-              >
-                <option value="">Select Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-              </select>
-            </label>
-            {errors.gender && (
-              <p className="mt-1 text-sm text-red-500">{errors.gender}</p>
-            )} */}
-
-            {/* <label htmlFor="mobile">
-              <input
-                type="tel"
-                id="mobile"
-                value={mobile}
-                onChange={(e) => setMobile(e.target.value)}
-                className={`border ${
-                  errors.mobile ? "border-red-500" : "border-gray-300"
-                } block w-full rounded-lg border-b-2 border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500`}
-                placeholder="Mobile Number"
-              />
-            </label>
-            {errors.mobile && (
-              <p className="mt-1 text-sm text-red-500">{errors.mobile}</p>
-            )} */}
-            {/* <label htmlFor="password">
-              <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className={`border ${
-                  errors.password ? "border-red-500" : "border-gray-300"
-                } ... bg-gray-50`}
-                placeholder="Password"
-              />
-            </label>
-            {errors.password && (
-              <p className="mt-1 text-sm text-red-500">{errors.password}</p>
-            )} */}
-
-            {/* Confirm Password input */}
-            {/* <label htmlFor="confirmPassword">
-              <input
-                type="password"
-                id="confirmPassword"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                className={`border ${
-                  errors.confirmPassword ? "border-red-500" : "border-gray-300"
-                } ... bg-gray-50`}
-                placeholder="Confirm Password"
-              />
-            </label>
-            {errors.confirmPassword && (
-              <p className="mt-1 text-sm text-red-500">
-                {errors.confirmPassword}
-              </p>
-            )} */}
-
             <div className="mt-6 text-center">
               <button className="btn-primary !w-fit !px-20 !text-sm !font-semibold">
                 CREATE ACCOUNT
@@ -275,9 +181,10 @@ export default function Signup() {
                 <img src={iconFacebookCircle} alt="" className="w-6" />
               </button>
             </div>
+
             {/* Login Link */}
             <p className="text-center">
-              <span> Already have an account? </span>
+              <span> Already have an account?</span>
               <Link
                 className="font-bold text-primary-100 hover:text-primary-500"
                 to="/login"

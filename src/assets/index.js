@@ -161,18 +161,18 @@ import meditationType8 from "./images/activities/meditation/meditation-type-8.pn
 import meditationThumbnail from "./images/activities/meditation/meditationThumbnail.png";
 // Activities >> Yoga
 import yogaHeader from "./images/activities/yoga/yoga-header.png";
-import yogaAdhoMukhaSavanasana from "./images/activities/yoga/adho-mukha-savanasana.png";
-import yogaMatsyasana from "./images/activities/yoga/yoga-matsyasana.png";
-import yogaSarvangasana from "./images/activities/yoga/yoga-sarvangasana.png";
-import yogaBandhasana from "./images/activities/yoga/yoga-setu-bandhasana.png";
-import yogaSirsasana from "./images/activities/yoga/yoga-sirsasana.png";
-import yogaTrikonasana from "./images/activities/yoga/yoga-trikonasana.png";
-import yogaUstrasana from "./images/activities/yoga/yoga-ustrasana.png";
-import yogaVirbhadrasana from "./images/activities/yoga/yoga-virbhadrasana.png";
-import yogaVrksasna from "./images/activities/yoga/yoga-vrksasna.png";
-import yogaUttanasana from "./images/activities/yoga/yoga-uttanasana.png";
-import yogaArdhaChandrasana from "./images/activities/yoga/yoga-ardha-chandrasana.png";
-import yogaNavasana from "./images/activities/yoga/yoga-navasana.png";
+import yogaType1 from "./images/activities/yoga/yoga-type-1.png";
+import yogaType2 from "./images/activities/yoga/yoga-type-2.png";
+import yogaType3 from "./images/activities/yoga/yoga-type-3.png";
+import yogaType4 from "./images/activities/yoga/yoga-type-4.png";
+import yogaType5 from "./images/activities/yoga/yoga-type-5.png";
+import yogaType6 from "./images/activities/yoga/yoga-type-6.png";
+import yogaType7 from "./images/activities/yoga/yoga-type-7.png";
+import yogaType8 from "./images/activities/yoga/yoga-type-8.png";
+import yogaType9 from "./images/activities/yoga/yoga-type-9.png";
+import yogaType10 from "./images/activities/yoga/yoga-type-10.png";
+import yogaType11 from "./images/activities/yoga/yoga-type-11.png";
+import yogaType12 from "./images/activities/yoga/yoga-type-12.png";
 // Activities >> Yoga >> Adhomukha
 import adhvmukhaHeader from "./images/activities/yoga/adhomukha/adhv-mukha-header.png";
 import adhvmukhaSteps from "./images/activities/yoga/adhomukha/steps-of-adhv-mukha-yoga.png";
@@ -201,15 +201,14 @@ import ustrasanaHeader from "./images/activities/yoga/others/ustrasana-header.pn
 import sirsasanaHeader from "./images/activities/yoga/others/sirsasana-header.png";
 // Activities >> Sadhna
 import sadhnaHeader from "./images/activities/sadhna/sadhna-header.png";
-import sadhnaBhakti from "./images/activities/sadhna/bhakti-sadhna.png";
-import sadhnaJapa from "./images/activities/sadhna/japa-sadhna.png";
-import sadhnaKundalini from "./images/activities/sadhna/kundalini-sadhna.png";
-import sadhnaMantra from "./images/activities/sadhna/mantra-sadhna.png";
-import sadhnaMeditation from "./images/activities/sadhna/meditation-sadhna.png";
-import sadhnaNature from "./images/activities/sadhna/nature-sadhna.png";
-import sadhnaSeva from "./images/activities/sadhna/seva-sadhna.png";
-import sadhnaTantric from "./images/activities/sadhna/tantric-sadhna.png";
-import sadhnaYoga from "./images/activities/sadhna/yoga-sadhna.png";
+import sadhnaType1 from "./images/activities/sadhna/sadhna-type-1.png";
+import sadhnaType2 from "./images/activities/sadhna/sadhna-type-2.png";
+import sadhnaType3 from "./images/activities/sadhna/sadhna-type-3.png";
+import sadhnaType4 from "./images/activities/sadhna/sadhna-type-4.png";
+import sadhnaType5 from "./images/activities/sadhna/sadhna-type-5.png";
+import sadhnaType6 from "./images/activities/sadhna/sadhna-type-6.png";
+import sadhnaType7 from "./images/activities/sadhna/sadhna-type-7.png";
+import sadhnaType8 from "./images/activities/sadhna/sadhna-type-8.png";
 // Activities >> Brain Exercise
 import brainExerciseHeader from "./images/activities/brainExercise/brain-exercise-header.png";
 import brainGameGalaxy from "./images/activities/brainExercise/brain-game-galaxy.png";
@@ -236,6 +235,7 @@ export {
   activitiesExplore2,
   activitiesExplore3,
   activityBlogThumbnail,
+  // Meditation
   meditationHeader,
   meditationType1,
   meditationType2,
@@ -246,29 +246,31 @@ export {
   meditationType7,
   meditationType8,
   meditationThumbnail,
+  // Sadhna
   sadhnaHeader,
-  sadhnaBhakti,
-  sadhnaJapa,
-  sadhnaKundalini,
-  sadhnaMantra,
-  sadhnaMeditation,
-  sadhnaNature,
-  sadhnaSeva,
-  sadhnaTantric,
-  sadhnaYoga,
+  sadhnaType1,
+  sadhnaType2,
+  sadhnaType3,
+  sadhnaType4,
+  sadhnaType5,
+  sadhnaType6,
+  sadhnaType7,
+  sadhnaType8,
+  // Yoga
   yogaHeader,
-  yogaAdhoMukhaSavanasana,
-  yogaMatsyasana,
-  yogaSarvangasana,
-  yogaBandhasana,
-  yogaSirsasana,
-  yogaTrikonasana,
-  yogaUstrasana,
-  yogaVirbhadrasana,
-  yogaVrksasna,
-  yogaUttanasana,
-  yogaArdhaChandrasana,
-  yogaNavasana,
+  yogaType1,
+  yogaType2,
+  yogaType3,
+  yogaType4,
+  yogaType5,
+  yogaType6,
+  yogaType7,
+  yogaType8,
+  yogaType9,
+  yogaType10,
+  yogaType11,
+  yogaType12,
+  // Brain Exericise
   brainExerciseHeader,
   brainGameGalaxy,
   brainGameTreasure,
@@ -357,6 +359,8 @@ import feature7 from "./images/features/feature-7.png";
 import feature8 from "./images/features/feature-8.png";
 import feature9 from "./images/features/feature-9.png";
 import feature10 from "./images/features/feature-10.png";
+import feature11 from "./images/features/feature-11.png";
+import feature12 from "./images/features/feature-12.png";
 
 export {
   feature1,
@@ -369,6 +373,8 @@ export {
   feature8,
   feature9,
   feature10,
+  feature11,
+  feature12,
 };
 
 // Experts Images
@@ -741,6 +747,8 @@ import signup from "./images/signup.png";
 import bubbles from "./images/bubbles.png";
 import themeWAve from "./images/theme-wave.png";
 import startUpIndiaLogo from "./images/startup-india-logo.png";
+import logoIAF from "./images/logo-iaf.png";
+import logoISO from "./images/logo-iso.png";
 
 export {
   doctorLogin,
@@ -753,4 +761,6 @@ export {
   themeWAve,
   logoTransparent,
   startUpIndiaLogo,
+  logoIAF,
+  logoISO,
 };

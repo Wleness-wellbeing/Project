@@ -25,13 +25,10 @@ import {
 // Services sub pages
 export const serviceMenuPages = [
   {
-    name: "Experts",
-    slug: "/experts",
-  },
-  {
     name: "Therapy",
     slug: "/services/therapy",
     subPages: [
+      ["Couples Therapy", "/services/couples-therapy"],
       ["Stress", "/therapy/stress"],
       ["Depression", "/therapy/depression"],
       ["Anxiety", "/therapy/anxiety"],
@@ -45,16 +42,12 @@ export const serviceMenuPages = [
     ],
   },
   {
-    name: "Couples Therapy",
-    slug: "/services/couples-therapy",
+    name: "Musical Healing",
+    slug: "/services/musical-healing",
   },
   {
-    name: "Musical Therapy",
-    slug: "/services/musical-therapy",
-  },
-  {
-    name: "Our Psychiatrist",
-    slug: "/services/psychiatrist",
+    name: "Our Experts",
+    slug: "/experts",
   },
 ];
 
@@ -79,31 +72,19 @@ export const activitiesMenuPages = [
 ];
 
 // Menu Pages
-export const menuPages = [
+export const seldCareSubpages = [
   {
-    name: "Corporate",
-    slug: "/corporate",
+    name: "Brain Exercise",
+    slug: "/activities/brain-exercise",
   },
   {
-    name: "Faqs",
-    slug: "/faqs",
-  },
-  {
-    name: "Avatar",
-    slug: "/avatar",
-  },
-  {
-    name: "Doctor Dashboard",
-    slug: "/doctor/dashboard",
-  },
-  {
-    name: "User Dashboard",
-    slug: "/user/dashboard",
+    name: "Sadhna",
+    slug: "/activities/sadhna",
   },
 ];
 
 // Menu Pages
-export const blogsMenuPages = [
+export const resourcesSubpages = [
   {
     name: "Blogs",
     slug: "/blogs",
@@ -111,6 +92,10 @@ export const blogsMenuPages = [
   {
     name: "Videos",
     slug: "/videos",
+  },
+  {
+    name: "Community",
+    slug: "/community",
   },
 ];
 
@@ -166,7 +151,7 @@ export const footerOurServices = [
   ["Couple Therapy", "/services/couples-therapy"],
   ["Meditation", "/activities/meditation"],
   ["Yoga", "/activities/yoga"],
-  ["Musical Thearpy", "/services/musical-therapy"],
+  ["Musical Healing", "/services/musical-healing"],
 ];
 
 // Footer - Focus Areas

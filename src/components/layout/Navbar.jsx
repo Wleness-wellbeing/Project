@@ -6,9 +6,8 @@ import JoinUs from "../JoinUs";
 // Data
 import { logo } from "../../assets";
 import {
-  activitiesMenuPages,
-  blogsMenuPages,
-  menuPages,
+  resourcesSubpages,
+  seldCareSubpages,
   serviceMenuPages,
 } from "../../data/navigation";
 // Components
@@ -52,16 +51,19 @@ function Navbar() {
           >
             <MenuLink url="/" text="Home" />
             <Dropdown url="" text="Services" pages={serviceMenuPages} />
-            <Dropdown
+            {/* <Dropdown
               url="/activities"
               text="Activities"
               pages={activitiesMenuPages}
+            /> */}
+            <Dropdown
+              url="/self-care"
+              text="Self Care"
+              pages={seldCareSubpages}
             />
-            <Dropdown url="/self-care" text="Self Care" pages={menuPages} />
-            {/* <MenuLink url="/experts" text="Experts" /> */}
-            <MenuLink url="/internship" text="Internship" />
-            <Dropdown url="" text="Resources" pages={blogsMenuPages} />
+            <Dropdown url="" text="Resources" pages={resourcesSubpages} />
             <MenuLink url="/about-us" text="About Us" />
+            <MenuLink url="/internship" text="Internship" />
           </ul>
 
           {/* Authentication */}

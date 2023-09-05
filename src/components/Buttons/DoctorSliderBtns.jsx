@@ -9,7 +9,7 @@ export default function DoctorSliderBtns({ text, slug }) {
   const swiper = useSwiper();
 
   return (
-    <div className="eft-0 absolute bottom-0 flex w-full items-center justify-between">
+    <div className="absolute bottom-0 left-0 flex w-full items-center justify-between">
       <button
         onClick={() => swiper.slidePrev()}
         className="mr-6 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border-2 border-primary-300 lg:h-12 lg:w-12"

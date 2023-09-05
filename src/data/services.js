@@ -1,10 +1,14 @@
 // Data
 import {
-  feature5,
   activityBlogThumbnail,
   couplesTherapyHeader,
+  feature4,
+  feature5,
+  feature6,
   feature7,
   feature8,
+  feature11,
+  feature12,
   musicalTherapyHeader,
   musicalTherapy1,
   musicalTherapy2,
@@ -12,8 +16,6 @@ import {
   musicalTherapy4,
   musicalTherapy5,
   musicalTherapy6,
-  feature4,
-  feature6,
   whyChooseTherapy1,
   whyChooseTherapy2,
   whyChooseTherapy3,
@@ -21,7 +23,6 @@ import {
   whyChooseTherapy5,
   bestTherapy,
   specialist1,
-  doctor1,
   therapyHeader,
   psychiatristHeader,
   bestPsychiatrist,
@@ -58,15 +59,15 @@ export const couplesTherapyFeatures = [
 ];
 export const musicalTherapyFeatures = [
   {
-    name: "Express Music",
-    image: feature7,
+    name: "Cognitive Enhancement",
+    image: feature11,
   },
   {
-    name: "Inner Peace",
-    image: feature5,
+    name: "Stress Reduction",
+    image: feature12,
   },
   {
-    name: "Emotional Support",
+    name: "Emotional Expression",
     image: feature8,
   },
 ];
@@ -111,8 +112,8 @@ export const couplesTherapyData = {
 
 export const MusicalTherapyData = {
   id: 2,
-  name: "Musical Therapy",
-  slug: "/services/musical-therapy",
+  name: "Musical Healing",
+  slug: "/services/musical-healing",
   header: {
     title: [
       {
@@ -121,14 +122,14 @@ export const MusicalTherapyData = {
       },
       {
         color: true,
-        text: "Musical Therapy",
+        text: "Musical Healing",
       },
     ],
     desc: "Explore how music therapy offers a unique way to express emotions and heal. With its rhythms and tones, this therapy helps with different feelings, bringing more balance inside you. Discover profound insights and find more peace through the power of music.",
     image: musicalTherapyHeader,
   },
   activities: {
-    title: "MUSICAL THERAPY TECHNIQUES",
+    title: "MUSICAL HEALING TECHNIQUES",
     desc: "Use music to improve mental and emotional well-being through techniques like active listening, improvisation, and songwriting with our top counselors.",
     types: [
       {
@@ -168,7 +169,7 @@ export const MusicalTherapyData = {
       {
         title: "Raaga Chikitsa",
         thumbnail: musicalTherapy6,
-        desc: "A traditional form of musical therapy in Indian classical music, where specific ragas are used to evoke and influence specific emotions, moods, and states of mind.",
+        desc: "A traditional form of musical healing in Indian classical music, where specific ragas are used to evoke and influence specific emotions, moods, and states of mind.",
         slug: "/",
         class: ["order-1", "order-2"],
       },

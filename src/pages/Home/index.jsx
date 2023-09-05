@@ -163,7 +163,7 @@ export default function Home() {
         </div>
         {/* Services */}
         <div className="bg-gradient-to-br from-primary-10 to-white pb-6 font-quicksand lg:pb-10">
-          <div className="container mx-auto grid gap-4 py-6 pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-10 lg:pt-12 xl:gap-x-14 xl:gap-y-20 xl:pt-24">
+          <div className="container mx-auto grid gap-y-20 py-6 pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-10 lg:pt-12 xl:gap-x-14 xl:gap-y-20 xl:pt-24">
             {homeServices.map((value, index) => {
               return <ServicesCard key={index} data={value} />;
             })}
@@ -196,79 +196,8 @@ export default function Home() {
       {/* Doctors Slider */}
       <DoctorSlider data={couplesTherapyDoctors} />
 
-      {/* ========== Our Services ========== */}
-      {/* <section className="relative py-10">
-        <div className="container mx-auto text-center">
-          <h2 className="subheading heading-primary mb-7">
-            Our services for you
-          </h2>
-          <div className="mb-14 grid gap-y-8 md:grid-cols-3 lg:gap-12 lg:gap-y-0">
-            {services[0].map((value, i) => {
-              return (
-                <figure key={i}>
-                  <div>
-                    <Link to={value.slug}>
-                      <img
-                        src={value.image}
-                        alt=""
-                        className="mx-auto inline-block transition-all hover:drop-shadow-md lg:w-28"
-                      />
-                    </Link>
-                  </div>
-                  <figcaption>
-                    <Link to={value.slug}>
-                      <h2 className="mb-3 inline-block text-xl font-bold text-primary-400">
-                        {value.name}
-                      </h2>
-                    </Link>
-                    <p className="font-medium">{value.desc}</p>
-                  </figcaption>
-                </figure>
-              );
-            })}
-
-            <div className="absolute left-0 right-0 top-40 -z-10 hidden lg:block 4xl:top-44">
-              <div className="mb-2 h-[2px] w-full bg-primary-50"></div>
-              <div className="mb-2 h-[2px] w-full bg-primary-50"></div>
-              <div className="h-[2px] w-full bg-primary-50"></div>
-            </div>
-          </div>
-          <div className="grid gap-y-8 md:grid-cols-3 lg:gap-12 lg:gap-y-0">
-            {services[1].map((value, i) => {
-              return (
-                <figure key={i}>
-                  <div>
-                    <Link to={value.slug}>
-                      <img
-                        src={value.image}
-                        alt=""
-                        className="mx-auto inline-block transition-all hover:drop-shadow-md lg:w-28"
-                      />
-                    </Link>
-                  </div>
-                  <figcaption>
-                    <Link to={value.slug}>
-                      <h2 className="mb-3 inline-block text-xl font-bold text-primary-400">
-                        {value.name}
-                      </h2>
-                    </Link>
-                    <p className="font-medium">{value.desc}</p>
-                  </figcaption>
-                </figure>
-              );
-            })}
-
-            <div className="absolute bottom-[270px] left-0 right-0 -z-10 hidden lg:block xl:bottom-60 4xl:bottom-56">
-              <div className="mb-2 h-[2px] w-full bg-primary-50"></div>
-              <div className="mb-2 h-[2px] w-full bg-primary-50"></div>
-              <div className="h-[2px] w-full bg-primary-50"></div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
       {/* ========== Community ========== */}
-      <section className="relative overflow-x-clip bg-gradient-to-br from-primary-10 to-transparent 3xl:py-10">
+      <section className="relative overflow-x-clip bg-gradient-to-br from-primary-10 to-transparent pt-6 3xl:py-10">
         <div className="container mx-auto">
           <div className="relative flex flex-col justify-between lg:flex-row lg:items-center">
             <div className="relative mb-8 lg:order-2 lg:mb-0 lg:w-2/5">
@@ -279,7 +208,7 @@ export default function Home() {
               <img
                 src={designRing}
                 alt=""
-                className="absolute right-0 top-0 -z-10 w-20 object-cover xs:w-32 sm:w-40 md:w-56 lg:top-20 lg:w-[520px] lg:scale-150 xl:-right-20 xl:top-0 xl:scale-125 3xl:scale-150"
+                className="absolute right-1/2 top-1/2 -z-10 -translate-y-1/2 translate-x-1/2 scale-125 object-cover xs:w-80 md:w-96 lg:w-[520px] lg:scale-150 xl:scale-125 3xl:scale-150"
               />
             </div>
             <article className="mx-auto pb-4 lg:order-1 lg:w-3/5 lg:pb-10">
@@ -365,7 +294,7 @@ export default function Home() {
       </section>
 
       {/* ========== Statistics ========== */}
-      <section className="container mx-auto grid grid-cols-4 gap-2 py-4 lg:gap-8 lg:py-12">
+      <section className="container mx-auto grid grid-cols-4 gap-2 py-4 pt-6 lg:gap-8 lg:py-12">
         {statistics.map((value, i) => {
           return (
             <div
@@ -388,7 +317,7 @@ export default function Home() {
       </section>
 
       {/* ========== Our Partners ========== */}
-      <section className="container mx-auto pb-8 pt-4 lg:pb-16 lg:pt-6">
+      <section className="container mx-auto pb-14 pt-4 lg:pb-16 lg:pt-6">
         <div className="grid grid-cols-5 gap-2 md:gap-8 xl:gap-12 2xl:gap-20">
           <div className="flex items-center justify-center">
             <img
