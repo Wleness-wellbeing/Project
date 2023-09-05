@@ -45,8 +45,6 @@ import Assessment from "../../components/Assessment";
 import RequestForm from "../../components/Forms/RequestForm";
 import Feedback from "../../components/Feedback";
 import Testimonial from "../../components/testimonial/Testimonial";
-import IssueCard from "../../components/Cards/IssueCard";
-import Faq from "../../components/layout/Faq";
 import MainHeader from "../../components/headers/MainHeader";
 import HomeFaq from "../../components/Faq/HomeFaq";
 import ServicesCard from "../../components/Cards/ServicesCard";

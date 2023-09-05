@@ -142,8 +142,11 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                   alt=""
                   className="left-4 top-44 mx-auto mb-4 w-20 lg:absolute lg:left-24 lg:top-44 lg:w-28"
                 />
-                <button className="btn-primary" onClick={openScreenOne}>
-                  Find the Therapist
+                <button
+                  className="btn-primary !font-semibold"
+                  onClick={openScreenOne}
+                >
+                  Find A Therapist
                 </button>
               </div>
               <div className="my-8 flex items-center justify-center gap-3">
@@ -160,7 +163,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                     to="/services/therapy"
                     className="text-xl font-bold text-primary-400"
                   >
-                    Therapist?
+                    Therapists?
                   </Link>
                 </h4>
                 <img
@@ -168,8 +171,11 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                   alt=""
                   className="bottom-12 right-2 mx-auto mb-4 w-20 lg:absolute lg:bottom-40 lg:right-20 lg:w-28"
                 />
-                <Link to="/experts/all" className="btn-primary lg:block">
-                  Browse all Therapist
+                <Link
+                  to="/experts/all"
+                  className="btn-primary !font-semibold lg:block"
+                >
+                  Browse All Our Therapists
                 </Link>
               </div>
             </div>
