@@ -42,14 +42,6 @@ export const serviceMenuPages = [
     ],
   },
   {
-    name: "Musical Healing",
-    slug: "/services/musical-healing",
-  },
-  {
-    name: "Our Experts",
-    slug: "/experts",
-  },
-  {
     name: "Executive Coaching",
     slug: "/executive-coaching",
   },
@@ -80,6 +72,10 @@ export const serviceMenuPages = [
   {
     name: "Self Care",
     slug: "/self-care",
+  },
+  {
+    name: "Our Experts",
+    slug: "/experts",
   },
 ];
 
