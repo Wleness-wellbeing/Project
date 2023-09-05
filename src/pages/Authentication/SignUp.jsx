@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { iconFacebookCircle, iconGoogle, logo, signup } from "../../assets";
 import axios from "axios";
 import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
+import Input from "../../components/Forms/Input";
 // import Facebook from "../../components/googleAuth/facebookAuth";
 // import jwt_decode from "jwt-decode";
 
@@ -98,12 +99,17 @@ export default function Signup() {
       <aside className="hidden items-center justify-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-contain bg-right bg-no-repeat md:flex md:w-1/2">
         <img src={signup} alt="" className="block object-cover md:w-[648px]" />
       </aside>
+
       {/* Right Content */}
-      <div className="flex flex-col items-center justify-center px-12 md:w-1/2">
-        <div class="w-full sm:w-[400px]">
-          <div class="mx-auto mb-4 w-full sm:w-[280px]">
+      <div className="flex flex-col items-center justify-center md:w-1/2 md:px-12">
+        <div className="w-80 sm:w-[400px]">
+          <div className="mx-auto mb-4 w-64 sm:w-[280px]">
             <Link to="/">
-              <img src={logo} alt="Logo" class="block w-full object-cover" />
+              <img
+                src={logo}
+                alt="Logo"
+                className="block w-full object-cover"
+              />
             </Link>
           </div>
 
@@ -167,7 +173,7 @@ export default function Signup() {
             </div>
           </form>
 
-          <div className="px-16">
+          <div className="md:px-16">
             <div className="my-4 flex items-center justify-center gap-3">
               <span className="h-[2px] w-28 bg-slate-200"></span>
               <span className="text-sm font-medium">OR</span>
@@ -184,7 +190,7 @@ export default function Signup() {
 
             {/* Login Link */}
             <p className="text-center">
-              <span> Already have an account?</span>
+              <span> Already have an account? </span>
               <Link
                 className="font-bold text-primary-100 hover:text-primary-500"
                 to="/login"

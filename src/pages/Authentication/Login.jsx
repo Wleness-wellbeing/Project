@@ -44,9 +44,9 @@ export default function Login() {
         <img src={login} alt="" class="block w-[648px] object-cover" />
       </aside>
 
-      <div class="flex items-center justify-center px-4 md:w-1/2">
-        <div class="w-full sm:w-[400px]">
-          <div class="mx-auto mb-4 w-full sm:w-[280px]">
+      <div class="flex items-center justify-center md:w-1/2 md:px-4">
+        <div class="w-80 sm:w-[400px]">
+          <div class="mx-auto mb-4 w-64 sm:w-[280px]">
             <Link to="/">
               <img src={logo} alt="Logo" class="block w-full object-cover" />
             </Link>
@@ -91,7 +91,7 @@ export default function Login() {
             </div>
           </form>
 
-          <div className="px-16">
+          <div className="md:px-16">
             <div className="my-4 flex items-center justify-center gap-3">
               <span className="h-[2px] w-28 bg-slate-200"></span>
               <span className="text-sm font-medium">OR</span>
