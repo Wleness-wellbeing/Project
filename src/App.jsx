@@ -45,6 +45,8 @@ import TermsAndConditions from "./pages/Policies/TermsAndConditions";
 import Selfcare from "./pages/Dashboard/Selfcare";
 import ContactUs from "./pages/ContactUs";
 import LifeCoching from "./pages/coching/LifeCoching";
+import ExecutiveCoching from "./pages/coching/ExecutiveCoaching";
+import ExecutiveCoaching from "./pages/coching/ExecutiveCoaching";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -378,6 +380,14 @@ function App() {
           element={
             <Layout>
               <LifeCoching />
+            </Layout>
+          }
+        />
+        <Route
+          path="/executive-coaching"
+          element={
+            <Layout>
+              <ExecutiveCoaching />
             </Layout>
           }
         />

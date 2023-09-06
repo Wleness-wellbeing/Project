@@ -92,6 +92,10 @@ import {
   homeMeditation,
   homeInternship,
   homeSelfcare,
+  one,
+  two,
+  three,
+  four,
 } from "../assets";
 // Components
 import HeaderWithImage from "../components/HeaderWithImage";
@@ -1341,5 +1345,31 @@ export const statistics = [
     title: "Interested",
     suffix: "M+",
     background: "bg-primary-50",
+  },
+];
+
+
+export const lifecoching = [
+  {
+    title: "Clarity:",
+    image: one,
+    desc: "Life coaching clarifies your goals, dreams, and aspirations. It helps you see a clear path forward and set achievable objectives. "
+  },
+  {
+    title: "Motivation:",
+    desc: "Feeling stuck or lacking motivation? A life coach can reignite your passion and keep you accountable for your aspirations.",
+    image: two,
+  },
+  {
+    title: "Confidence:",
+    desc: "Fear of failure? It's a common roadblock. Life coaching equips you with the tools to boldly face your fears & move forward.",
+
+    image: three,
+  },
+  {
+    title: "Overcoming Fear:",
+    desc: "Fear of failure? It's a common roadblock. Life coaching equips you with the tools to boldly face your fears & move forward.",
+
+    image: four,
   },
 ];

@@ -774,3 +774,40 @@ import ringervolume from "./images/contactus/RingerVolume.png";
 export{
   email,location,ringervolume
 }
+
+// =======life-coaching=========//
+import grp1 from "./images/lifecoching/grp1.png"
+import grp2 from "./images/lifecoching/grp2.png"
+import grp3 from "./images/lifecoching/grp3.png"
+import rectangle1 from "./images/lifecoching/rectangle1.png"
+import rectangle2 from "./images/lifecoching/rectangle2.png"
+import rectangle3 from "./images/lifecoching/rectangle3.png"
+import one from "./images/lifecoching/1.png"
+import two from "./images/lifecoching/2.png"
+import three from "./images/lifecoching/3.png"
+import four from "./images/lifecoching/4.png"
+
+export{
+  grp1,
+  grp2,
+  grp3,
+  rectangle1,
+  rectangle2,
+  rectangle3,
+  one,
+  two,
+  three,
+  four
+}
+
+// =======executive-coaching=========//
+import header  from "./images/executiveCoching/header1.png"
+import image2  from "./images/executiveCoching/image2.png"
+import image3  from "./images/executiveCoching/image3.png"
+
+export{
+  header,image2,image3
+}
+
+
+
