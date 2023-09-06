@@ -27,7 +27,7 @@ export default function ContactUs() {
               </h2>
               <h3 className="font-bold">hello@wleness.com</h3>
               <p className="font-semibold">
-                We’ll get back to you within 24Hrs
+                We'll get back to you within 24Hrs
               </p>
             </div>
             <div className="text-center">

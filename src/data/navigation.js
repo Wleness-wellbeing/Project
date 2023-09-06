@@ -1,4 +1,5 @@
 import {
+  faBookBookmark,
   faClipboardList,
   faEnvelope,
   faGlobe,
@@ -8,6 +9,7 @@ import {
   faPhone,
   faRightFromBracket,
   faUser,
+  faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   JoinUsCampusAmbassador,
@@ -226,6 +228,7 @@ export const userDashboardLinks = [
   ["Home", "/user/dashboard", faHome],
   ["Profile", "/profile", faUser],
   ["Self Care", "/self-care", faHeartCircleCheck],
-  ["Routine Care", "/routine-care", faClipboardList],
-  // ["Logout", "/logout", faRightFromBracket],
+  ["Routine Care", "/user/routine-care", faBookBookmark],
+  ["Routine Care", "/user/routine-care", faClipboardList],
+  ["Community", "/community", faUsers],
 ];

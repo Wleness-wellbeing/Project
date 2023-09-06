@@ -1,20 +1,11 @@
 import React from "react";
-import {
-  faAngleDown,
-  faBell,
-  faComments,
-  faEllipsis,
-  faHouse,
-  faSearch,
-} from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown, faEllipsis } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Data
-import { assessment1 } from "../../assets";
-import { activityReport, patientsList } from "../../data/patients";
+import { patientsList } from "../../data/patients";
 // Components
 import UpcomingMeets from "../../components/list/UpcomingMeets";
 import PatientListItem from "../../components/list/PatientListItem";
-import { Link } from "react-router-dom";
 import { selfCareConcern, selfCareFeeling } from "../../data/dashboard";
 
 export default function Selfcare() {

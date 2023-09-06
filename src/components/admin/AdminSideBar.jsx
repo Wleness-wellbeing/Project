@@ -20,7 +20,7 @@ export default function AdminSideBar({ isOpen, toggle }) {
       </span>
       <Link
         to="/"
-        className="flex cursor-pointer items-center rounded-full border-2 border-primary-300 px-4 py-2 text-xl text-primary-400 transition-colors hover:text-primary-300 lg:h-14 lg:w-14 lg:justify-center lg:p-0 lg:text-2xl"
+        className="flex cursor-pointer items-center rounded-full border-2 border-primary-300 px-4 py-2 text-xl text-primary-400 transition-colors hover:text-primary-300 lg:h-12 lg:w-12 lg:justify-center lg:p-0 lg:text-xl"
       >
         <FontAwesomeIcon icon={faCircleArrowLeft} className="text-3xl" />
       </Link>
@@ -31,7 +31,7 @@ export default function AdminSideBar({ isOpen, toggle }) {
             <Link
               key={i}
               to={value[1]}
-              className="flex cursor-pointer items-center rounded-full border-2 border-primary-300 px-4 py-2 text-xl text-primary-400 transition-colors hover:text-primary-300 lg:h-14 lg:w-14 lg:justify-center lg:p-0 lg:text-2xl"
+              className="flex cursor-pointer items-center rounded-full border-2 border-primary-300 px-4 py-2 text-xl text-primary-400 transition-colors hover:text-primary-300 lg:h-12 lg:w-12 lg:justify-center lg:p-0 lg:text-xl"
               title={value[0]}
             >
               <FontAwesomeIcon icon={value[2]} className="mr-2 lg:m-0" />
@@ -43,7 +43,7 @@ export default function AdminSideBar({ isOpen, toggle }) {
 
       <Link
         to="/"
-        className="flex cursor-pointer items-center rounded-full border-2 border-primary-300 px-4 py-2 text-xl text-primary-400 transition-all hover:border-primary-300  hover:text-red-500 lg:h-14 lg:w-14 lg:justify-center lg:p-0 lg:text-2xl"
+        className="flex cursor-pointer items-center rounded-full border-2 border-primary-300 px-4 py-2 text-xl text-primary-400 transition-all hover:border-primary-300  hover:text-red-500 lg:h-12 lg:w-12 lg:justify-center lg:p-0 lg:text-xl"
         title="Logout"
       >
         <FontAwesomeIcon icon={faRightFromBracket} className="text-3xl" />

@@ -716,6 +716,8 @@ import iconEmotional from "./images/icons/icon-emotional.png";
 import iconHappy from "./images/icons/icon-happy.png";
 import iconNeutral from "./images/icons/icon-neutral.png";
 import iconSad from "./images/icons/icon-sad.png";
+import iconNight from "./images/icons/icon-night.png";
+import iconDay from "./images/icons/icon-day.png";
 
 export {
   iconInstagram,
@@ -734,6 +736,8 @@ export {
   iconHappy,
   iconNeutral,
   iconSad,
+  iconNight,
+  iconDay,
 };
 
 // Other Images
@@ -765,29 +769,26 @@ export {
   logoISO,
 };
 
-
 // =======contact us=========//
 
 import email from "./images/contactus/Email.png";
 import location from "./images/contactus/Location.png";
 import ringervolume from "./images/contactus/RingerVolume.png";
-export{
-  email,location,ringervolume
-}
+export { email, location, ringervolume };
 
 // =======life-coaching=========//
-import grp1 from "./images/lifecoching/grp1.png"
-import grp2 from "./images/lifecoching/grp2.png"
-import grp3 from "./images/lifecoching/grp3.png"
-import rectangle1 from "./images/lifecoching/rectangle1.png"
-import rectangle2 from "./images/lifecoching/rectangle2.png"
-import rectangle3 from "./images/lifecoching/rectangle3.png"
-import one from "./images/lifecoching/1.png"
-import two from "./images/lifecoching/2.png"
-import three from "./images/lifecoching/3.png"
-import four from "./images/lifecoching/4.png"
+import grp1 from "./images/lifecoching/grp1.png";
+import grp2 from "./images/lifecoching/grp2.png";
+import grp3 from "./images/lifecoching/grp3.png";
+import rectangle1 from "./images/lifecoching/rectangle1.png";
+import rectangle2 from "./images/lifecoching/rectangle2.png";
+import rectangle3 from "./images/lifecoching/rectangle3.png";
+import one from "./images/lifecoching/1.png";
+import two from "./images/lifecoching/2.png";
+import three from "./images/lifecoching/3.png";
+import four from "./images/lifecoching/4.png";
 
-export{
+export {
   grp1,
   grp2,
   grp3,
@@ -797,17 +798,12 @@ export{
   one,
   two,
   three,
-  four
-}
+  four,
+};
 
 // =======executive-coaching=========//
-import header  from "./images/executiveCoching/header1.png"
-import image2  from "./images/executiveCoching/image2.png"
-import image3  from "./images/executiveCoching/image3.png"
+import header from "./images/executiveCoching/header1.png";
+import image2 from "./images/executiveCoching/image2.png";
+import image3 from "./images/executiveCoching/image3.png";
 
-export{
-  header,image2,image3
-}
-
-
-
+export { header, image2, image3 };

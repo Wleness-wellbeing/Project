@@ -24,3 +24,41 @@ export const selfCareConcern = [
   ["Eating Disorder", "rgba(255, 191, 129, 0.44)"],
   ["Anger Issues", "rgba(255, 191, 129, 0.44)"],
 ];
+
+export const RoutineCareChats = [
+  {
+    question: "What is Self - care?",
+    answer:
+      "Self-care refers to the deliberate & conscious actions individuals take to maintain, improve, or restore their physical, mental, and emotional well-being.",
+    user_image: "path/to/image",
+    bg: "bg-[#FDE4CF]",
+  },
+  {
+    question: "What is Self - care?",
+    answer:
+      "Self-care refers to the deliberate & conscious actions individuals take to maintain, improve, or restore their physical, mental, and emotional well-being.",
+    user_image: "path/to/image",
+    bg: "bg-[#D0FDD5]",
+  },
+  {
+    question: "What is Self - care?",
+    answer:
+      "Self-care refers to the deliberate & conscious actions individuals take to maintain, improve, or restore their physical, mental, and emotional well-being.",
+    user_image: "path/to/image",
+    bg: "bg-[#FDE4CF]",
+  },
+  {
+    question: "What is Self - care?",
+    answer:
+      "Self-care refers to the deliberate & conscious actions individuals take to maintain, improve, or restore their physical, mental, and emotional well-being.",
+    user_image: "path/to/image",
+    bg: "bg-[#D0FDD5]",
+  },
+  {
+    question: "What is Self - care?",
+    answer:
+      "Self-care refers to the deliberate & conscious actions individuals take to maintain, improve, or restore their physical, mental, and emotional well-being.",
+    user_image: "path/to/image",
+    bg: "bg-[#FDE4CF]",
+  },
+];

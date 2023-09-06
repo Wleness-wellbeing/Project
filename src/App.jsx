@@ -47,6 +47,7 @@ import ContactUs from "./pages/ContactUs";
 import LifeCoching from "./pages/coching/LifeCoching";
 import ExecutiveCoching from "./pages/coching/ExecutiveCoaching";
 import ExecutiveCoaching from "./pages/coching/ExecutiveCoaching";
+import RoutineCare from "./pages/Dashboard/RoutineCare";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -342,6 +343,14 @@ function App() {
           }
         />
         <Route
+          path="/user/routine-care"
+          element={
+            <DashboardLayout>
+              <RoutineCare />
+            </DashboardLayout>
+          }
+        />
+        <Route
           path="/self-care"
           element={
             <DashboardLayout>
@@ -368,7 +377,7 @@ function App() {
           }
         />
         <Route
-          path="/contactus"
+          path="/contact-us"
           element={
             <Layout>
               <ContactUs />
@@ -376,7 +385,7 @@ function App() {
           }
         />
         <Route
-          path="/life-coching"
+          path="/lifestyle-coaching"
           element={
             <Layout>
               <LifeCoching />

@@ -125,7 +125,7 @@ export default function BookAppointment() {
                   <span>-100</span>
                 </h5>
                 <h5 className="mb-2 flex justify-between font-semibold">
-                  <span>Amount to be pay</span>
+                  <span>Amount to be paid</span>
                   <span className="font-bold">
                     Rs. {filteredPrice.price - 100}
                   </span>
@@ -148,8 +148,8 @@ export default function BookAppointment() {
             className="mb-6 flex cursor-pointer select-none items-center pl-2"
           >
             <input type="checkbox" name="policies" id="policies" />
-            <span className="ml-2 flex flex-wrap text-sm lg:text-base">
-              <span>I have read and agree to the</span>
+            <span className="ml-2 flex flex-wrap text-sm font-medium lg:text-base">
+              <span>I have read and agree with the</span>
               <Link to="" className="mx-1 font-medium text-primary-400">
                 Cancellation
               </Link>
