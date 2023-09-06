@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function ServicesCard(props) {
   return (
     <>
-      <div className="rounded-2xl bg-gradient-to-br from-secondary to-tertiary p-1">
+      <div className="rounded-2xl bg-gradient-to-br from-secondary to-tertiary p-1 transition-all lg:hover:scale-105">
         <Link to={props.data.slug}>
           <figure className="relative flex h-full flex-col justify-between rounded-xl bg-white p-5 transition-all hover:bg-[#FAFCE7] hover:shadow-xl hover:shadow-secondary/30">
             <img

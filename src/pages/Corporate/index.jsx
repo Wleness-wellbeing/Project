@@ -33,17 +33,6 @@ export default function index() {
             </div>
           </div>
         </div>
-        {/* Dots  */}
-        <img
-          src={blueDots1}
-          alt=""
-          className="absolute -bottom-6 -left-20 z-10 w-44 lg:bottom-10 lg:w-96"
-        />
-        <img
-          src={blueDots2}
-          alt=""
-          className="absolute -right-20 top-36 z-10 w-44 lg:top-20 lg:w-96"
-        />
       </header>
 
       <section className="container mx-auto pt-6 text-center lg:py-6 ">

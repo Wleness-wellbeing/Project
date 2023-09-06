@@ -2,27 +2,13 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // Data
 import {
-  iconInternshipAnnouncement,
-  iconInternshipBoy,
-  iconInternshipBriefcase,
-  iconInternshipCheck,
-  iconInternshipHandshake,
-  iconInternshipYout,
   community,
-  doodle1,
   doodle2,
-  leaf1,
-  leaf2,
   partner1,
   partner2,
   partner3,
   partner4,
   partner5,
-  bigLeaf1,
-  bigLeaf2,
-  smallLeaf1,
-  smallLeaf2,
-  faq3Lg,
   servicesIcon1,
   servicesIcon2,
   servicesIcon3,
@@ -33,13 +19,7 @@ import {
 } from "../../assets";
 import { homeFaqs } from "../../data/faqs";
 import { homeTestimonials } from "../../data/testimonials";
-import {
-  homeServices,
-  objectives,
-  statistics,
-  therapies,
-  whyChooseUs,
-} from "../../data";
+import { homeServices, objectives, statistics, whyChooseUs } from "../../data";
 // Components
 import Assessment from "../../components/Assessment";
 import RequestForm from "../../components/Forms/RequestForm";
@@ -51,53 +31,8 @@ import ServicesCard from "../../components/Cards/ServicesCard";
 import { couplesTherapyDoctors } from "../../data/doctors";
 import DoctorSlider from "../../components/DoctorSlider";
 
-// Our Services
-const services = [
-  [
-    {
-      name: "Lifestyle Coaching",
-      slug: "/lifestyle-coaching",
-      image: servicesIcon1,
-      desc: "Lifestyle coaching empowers well-being, productivity, and balance. It encourages health, reduces stress, boosts motivation, and enhances performance.",
-    },
-    {
-      name: "Executive Coaching",
-      slug: "/executive-coaching",
-      image: servicesIcon2,
-      desc: "Executive coaching elevates leadership, empowers high-level staff, & drives positive results. It maximizes potential, navigates challenges,  enhances performance.",
-    },
-    {
-      name: "Corporate",
-      image: servicesIcon3,
-      slug: "/corporate",
-      desc: "Corporate mental wellness services prioritize employee psychological well-being. They address challenges, reduce stress, and foster emotional resilience in the workplace.",
-    },
-  ],
-  [
-    {
-      name: "Musical Therapy",
-      image: servicesIcon4,
-      slug: "/services/musical-therapy",
-      desc: "Music therapy addresses diverse needs through music. Therapists use musical interventions to achieve goals, including listening, creating, singing, and playing instruments.",
-    },
-    {
-      name: "Yoga",
-      image: servicesIcon5,
-      slug: "/activities/yoga",
-      desc: "Yoga combines postures, breathing, meditation, and mindfulness for mental wellness. It enhances mental health by nurturing the mind-body connection.",
-    },
-    {
-      name: "Meditation",
-      image: servicesIcon6,
-      slug: "/activities/meditation",
-      desc: "Meditation fosters mental wellness by focusing the mind and reducing cluttered thoughts. It enhances clarity, relaxation, and self-awareness.",
-    },
-  ],
-];
-
 export default function Home() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
-  const [isFeedbackOpen, setFeedback] = useState(false);
 
   // Assessment Slides
   const openAssessmentModal = () => {
@@ -106,14 +41,6 @@ export default function Home() {
 
   const closeAssessmentModal = () => {
     setShowAssessmentModal(false);
-  };
-
-  const openFeedbackModal = () => {
-    setFeedback(true);
-  };
-
-  const closeFeedbackModal = () => {
-    setFeedback(false);
   };
 
   const [name, setName] = useState("");
@@ -150,7 +77,7 @@ export default function Home() {
         <div className="container mx-auto py-8 text-center sm:pt-6 lg:pb-14 2xl:pb-10">
           <h2 className="sm:pb-0 xl:pb-1">
             <span className="subheading heading-primary">
-              Discover A Path To Well-Being
+              World Is Your Stage
             </span>
           </h2>
           <p className="para">
@@ -159,6 +86,7 @@ export default function Home() {
             engaging resources. Join us on this unique path to well-being.
           </p>
         </div>
+
         {/* Services */}
         <div className="bg-gradient-to-br from-primary-10 to-white pb-6 font-quicksand lg:pb-10">
           <div className="container mx-auto grid gap-y-20 py-6 pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-10 lg:pt-12 xl:gap-x-14 xl:gap-y-20 xl:pt-24">
@@ -366,7 +294,7 @@ export default function Home() {
         onAssessmentClose={closeAssessmentModal}
       />
 
-      <Feedback isOpen={isFeedbackOpen} onClose={closeFeedbackModal} />
+      {/* <Feedback isOpen={isFeedbackOpen} onClose={closeFeedbackModal} /> */}
     </>
   );
 }

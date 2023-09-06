@@ -541,7 +541,7 @@ export const activities = [
         {
           title: "Trikonasana",
           thumbnail: yogaType3,
-          desc: "Trikonasana is a radiant and dynamic yoga posture that stretches and opens the entire body. With its triangular shape, this asana offers a blend of strength, expansion, and tranquility",
+          desc: "Trikonasana is a radiant and dynamic yoga posture that stretches and opens the entire body. With its triangular shape, it offers a blend of strength, expansion, and tranquility",
           slug: "/activities/yoga/trikonasana",
           sections: [
             {
@@ -840,7 +840,7 @@ export const activities = [
         {
           title: "Matsyasana",
           thumbnail: yogaType6,
-          desc: "Matsyasana gracefully arches the back and opens the chest, offering a deep stretch to the neck and throat. This asana symbolizes receptivity and renewal, inviting a sense of tranquility.",
+          desc: "Matsyasana gracefully arches the back and opens the chest, offering a deep stretch to the neck and throat. It symbolizes receptivity and renewal, inviting a sense of tranquility.",
           slug: "/activities/yoga/matsyasana",
         },
         {
@@ -858,25 +858,25 @@ export const activities = [
         {
           title: "Setu Bandhasana",
           thumbnail: yogaType9,
-          desc: "Setu Bandhasana gracefully opens the chest and hip flexors while strengthening the back and glutes. This yoga posture stimulates the spine and brings a sense of balance and stability.",
+          desc: "Setu Bandhasana gracefully opens up the chest and hip flexors while strengthening the back and glutes. This yoga posture stimulates the spine and brings a sense of balance and stability",
           slug: "/activities/yoga/setu-bandhasana",
         },
         {
           title: "Uttanasana",
           thumbnail: yogaType10,
-          desc: "Uttanasana involves bending forward from the hips with straight or slightly bent legs, providing a soothing stretch to the lower back and hamstrings. It's often integrated into yoga sequences for its calming and grounding effects",
+          desc: "Uttanasana involves bending forward with straight or bent legs, providing a stretch to lower back and hamstrings. It's often integrated into yoga  for its calming and grounding effects.",
           slug: "/activities/yoga/uttanasana",
         },
         {
           title: "Navasana",
           thumbnail: yogaType11,
-          desc: "Navasana involves balancing on the sit bones while lifting the legs and torso to form a 'V' shape. This pose engages the core muscles, strengthens the abdomen, and improves balance.",
+          desc: "Navasana involves balancing on the sit bones while lifting the legs and torso to form the 'V' shape. This pose engages the core muscles, strengthens the abdomen, and improves stability.",
           slug: "/activities/yoga/navasana",
         },
         {
           title: "Ardha Chandrasana",
           thumbnail: yogaType12,
-          desc: "Ardha Chandrasana is a balancing yoga asana that involves standing on one leg while extending the opposite arm parallel to the ground. This pose strengthens the legs, improves balance, and enhances core stability.",
+          desc: "Ardha Chandrasana is a balancing yoga standing on one leg while extending the opposite arm parallel to the ground. This pose tones the legs, improves balance, and enhances core stability.",
           slug: "/activities/yoga/ardha-chandrasana",
         },
       ],
@@ -928,7 +928,7 @@ export const activities = [
           slug: "/activities/meditation/mindfulness-meditation",
         },
         {
-          title: "Breath Awareness Meditation",
+          title: "Awareness Meditation",
           thumbnail: meditationType2,
           desc: "Observing the natural rhythm of breath.Close attention to inhalation and exhalation, redirecting the mind back to the breath.Calms mind, enhances focus, and reduces anxiety.",
           slug: "/activities/meditation/breath-awareness-meditation",

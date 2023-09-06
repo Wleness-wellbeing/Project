@@ -82,7 +82,7 @@ export default function Internship() {
           {/* Text items on the left */}
           <div className="px-4 py-4 text-center md:w-1/2 md:text-left lg:order-1">
             <h1 className="subheading heading-primary">
-              Looking for an Internship.
+              Looking for an Internship
             </h1>
             <h3 className="text-3xl font-bold">Want to join us ?</h3>
             <p className="para py-4 pb-6">
@@ -116,7 +116,10 @@ export default function Internship() {
             <div className="space-y-3 lg:ml-12">
               {whyWleness.map((value, i) => {
                 return (
-                  <figure className="flex cursor-pointer rounded-xl rounded-br-[5rem] border-2 border-slate-200 bg-white p-4 shadow-md transition-all hover:shadow-xl xs:flex-row lg:items-center lg:p-5 lg:py-3 xl:py-6">
+                  <figure
+                    key={i}
+                    className="flex cursor-pointer rounded-xl rounded-br-[5rem] border-2 border-slate-200 bg-white p-4 shadow-md transition-all hover:shadow-xl xs:flex-row lg:items-center lg:p-5 lg:py-3 xl:py-6"
+                  >
                     <div className="mr-4 w-1/5 xs:w-1/5 xl:w-1/5">
                       <img
                         src={value[0]}
@@ -125,7 +128,7 @@ export default function Internship() {
                       />
                     </div>
                     <figcaption className="w-4/5 xs:w-4/5 xl:w-4/5">
-                      <p className="text-xs font-medium leading-4 text-slate-600 xs:text-xs xs:leading-4 sm:text-base sm:leading-5 lg:pr-5 lg:text-sm lg:leading-4 xl:text-base xl:leading-5">
+                      <p className="text-xs font-semibold leading-4 text-slate-600 xs:text-xs xs:leading-4 sm:text-base sm:leading-5 lg:pr-5 lg:text-sm lg:leading-4 xl:text-base xl:leading-5">
                         {value[1]}
                       </p>
                     </figcaption>

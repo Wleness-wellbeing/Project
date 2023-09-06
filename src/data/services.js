@@ -135,7 +135,7 @@ export const MusicalTherapyData = {
       {
         title: "Guided Imagery and Music",
         thumbnail: musicalTherapy1,
-        desc: "Involves listening to carefully selected music in a relaxed state to explore emotions, memories, and thoughts, helping clients gain insight, reduce stress, and promote self-awareness.",
+        desc: "Listening to carefully selected music in a relaxed state to explore emotions, memories, and thoughts, gain insight, reduce stress, and promote self-awareness.",
         slug: "/",
       },
       {
@@ -155,7 +155,7 @@ export const MusicalTherapyData = {
       {
         title: "Neurologic Music Therapy",
         thumbnail: musicalTherapy4,
-        desc: "Applies evidence-based techniques to address neurological conditions, utilizing rhythm, melody, and harmony to improve cognitive, motor, and speech in individuals with neurological impairments.",
+        desc: "Applies evidence-based techniques to help neurological issues, utilizing rhythm, melody, and harmony to improve cognitive, motor, and speech in individuals.",
         slug: "/",
         class: ["order-1", "order-2"],
       },
@@ -169,7 +169,7 @@ export const MusicalTherapyData = {
       {
         title: "Raaga Chikitsa",
         thumbnail: musicalTherapy6,
-        desc: "A traditional form of musical healing in Indian classical music, where specific ragas are used to evoke and influence specific emotions, moods, and states of mind.",
+        desc: "A traditional form of musical healing in Indian classical music, where specific ragas and suras are used to evoke and influence specific emotions, moods, and states of mind.",
         slug: "/",
         class: ["order-1", "order-2"],
       },

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
@@ -114,9 +114,26 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
     setFinalScreen(false);
   }
 
+  // Close assessment modal on clicking outside of the box
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (isAssessmentOpen && !event.target.closest(".assessment")) {
+        onAssessmentClose();
+      }
+    };
+
+    if (isAssessmentOpen) {
+      document.addEventListener("mousedown", handleOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [isAssessmentOpen, onAssessmentClose]);
+
   return (
     <div className="fixed inset-0 z-50 grid w-full place-items-center backdrop-brightness-50">
-      <div className="absolute mx-auto flex h-full w-full items-center justify-center overflow-hidden border-2 bg-white py-4 md:w-[720px] lg:relative lg:h-fit lg:w-[920px] lg:rounded-3xl lg:py-12">
+      <div className="assessment absolute mx-auto flex h-full w-full items-center justify-center overflow-hidden border-2 bg-white py-4 md:w-[720px] lg:relative lg:h-fit lg:w-[920px] lg:rounded-3xl lg:py-12">
         {/* Welcome Page */}
         {startAssessment && (
           <div className="py-6 text-center lg:h-[500px] lg:py-10 ">

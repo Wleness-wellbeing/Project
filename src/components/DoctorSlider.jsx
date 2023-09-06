@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Navigation, Autoplay } from "swiper/modules";
+import { EffectCoverflow, Navigation, Autoplay, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -10,6 +10,20 @@ import { textColorize } from "../utils";
 import DoctorSliderBtns from "./Buttons/DoctorSliderBtns";
 
 export default function DoctorSlider(props) {
+  const [swiper, setSwiper] = useState(null); // Store Swiper instance
+
+  const handleMouseEnter = () => {
+    if (swiper) {
+      swiper.autoplay.stop();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (swiper) {
+      swiper.autoplay.start();
+    }
+  };
+
   // Show Active Image content
   const hideOtherImages = (e) => {
     let activeSlide = e.activeIndex;
@@ -34,8 +48,13 @@ export default function DoctorSlider(props) {
       </div>
 
       {/* Doctors */}
-      <div className="doctorSlider relative">
+      <div
+        className="doctorSlider relative"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <Swiper
+          modules={[EffectCoverflow, Navigation, Autoplay]}
           className="mySwiper mb-14 h-96 overflow-y-visible xs:h-[400px] xl:h-[480px]"
           navigation={true}
           effect={"coverflow"}
@@ -54,7 +73,6 @@ export default function DoctorSlider(props) {
             modifier: 1,
             slideShadows: true,
           }}
-          modules={[EffectCoverflow, Navigation, Autoplay]}
           onSlideChange={hideOtherImages}
           breakpoints={{
             640: {
@@ -68,7 +86,8 @@ export default function DoctorSlider(props) {
               slidesPerView: 5,
             },
           }}
-          autoplay={{ delay: 2000 }}
+          autoplay={{ delay: 2000, disableOnInteraction: false }}
+          onSwiper={(swiper) => setSwiper(swiper)} // Store Swiper instance
           speed={600}
         >
           {props.data.doctors.map((value, index) => {

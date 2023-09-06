@@ -33,16 +33,6 @@ export default function GridHeader(props) {
           <button className="btn-one">Explore More</button>
         </div>
       </div>
-      <img
-        src={cloudWithDots}
-        alt=""
-        className="absolute -right-20 top-20 -z-10 w-48 lg:-right-56 lg:w-80 2xl:top-2 2xl:w-96"
-      />
-      <img
-        src={cloudWithDots}
-        alt=""
-        className="absolute -left-14 bottom-0 -z-10 w-44 lg:-left-24 lg:w-72 2xl:-left-14"
-      />
       <Assessment
         isAssessmentOpen={isAssessmentModalOpen}
         onAssessmentClose={closeAssessmentModal}

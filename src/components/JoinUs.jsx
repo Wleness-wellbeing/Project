@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -8,9 +8,25 @@ import { joinUsList } from "../data/navigation";
 function JoinUs({ isOpen, onClose }) {
   if (!isOpen) return null;
 
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (isOpen && !event.target.closest(".joinus")) {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [isOpen, onClose]);
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-none backdrop-brightness-50 backdrop-filter">
-      <div className="relative flex flex-col items-center rounded-lg bg-white p-6 shadow-md md:w-1/2 md:flex-row md:p-20">
+      <div className="joinus relative flex w-[90%] flex-col items-center rounded-lg bg-white p-6 shadow-md md:w-1/2 md:flex-row md:p-20">
         <div className="">
           <h2 className="mb-4 text-center text-4xl font-extrabold text-primary-500 md:text-7xl">
             Join Us
@@ -21,7 +37,7 @@ function JoinUs({ isOpen, onClose }) {
             of an amazing team dedicated to improving mental well-being
             worldwide today.
           </p>
-          <div className="mt-4 grid justify-center lg:grid-cols-4">
+          <div className="mt-4 grid grid-cols-2 justify-center gap-y-4 lg:grid-cols-4">
             {joinUsList.map((value, index) => {
               return (
                 <figure key={index}>
