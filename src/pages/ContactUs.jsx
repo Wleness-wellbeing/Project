@@ -1,7 +1,7 @@
 import React from "react";
 import PoliciesHeader from "../components/headers/PoliciesHeader";
-import RequestForm from "../components/Forms/RequestForm";
 import { email, location, ringervolume } from "../assets";
+import ContactForm from "../components/Forms/ContactForm";
 
 export default function ContactUs() {
   return (
@@ -11,7 +11,7 @@ export default function ContactUs() {
         desc="Reach Out for Support and Guidance"
       />
       <section className="container mx-auto space-y-5 py-8 text-justify font-medium">
-        <RequestForm />
+        <ContactForm />
         <div>
           <div className="my-6 flex items-center justify-center">
             <h1 className="subheading heading-primary text-center">
