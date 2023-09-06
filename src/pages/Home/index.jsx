@@ -154,9 +154,9 @@ export default function Home() {
             </span>
           </h2>
           <p className="para">
-            Discover engaging mental health resources, including articles,
-            videos, self-assessments, and interactive tools, to support your
-            journey towards better mental health.
+            We are the only platform globally offering holistic mental health
+            support with yoga, meditation, musical healing, and a wealth of
+            engaging resources. Join us on this unique path to well-being.
           </p>
         </div>
         {/* Services */}

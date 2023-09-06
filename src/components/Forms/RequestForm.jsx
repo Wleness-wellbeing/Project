@@ -22,32 +22,40 @@ function RequestForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    let formData = new FormData();
-    // Append form fields to the FormData object
-    for (const key in formInfo) {
-      formData.append(key, formInfo[key]);
-    }
+    // Validate if form is filled
+    if (formInfo["name"] && formInfo["phone"]) {
+      let formData = new FormData();
+      // Append form fields to the FormData object
+      for (const key in formInfo) {
+        formData.append(key, formInfo[key]);
+      }
 
-    try {
-      const response = await axios.post(REQUEST_CALLBACK_URI, formData);
-      console.log(response.data);
-      setSuccessMessage({
-        status: response.data.status,
-        message: response.data.message,
-      });
+      try {
+        const response = await axios.post(REQUEST_CALLBACK_URI, formData);
+        console.log(response.data);
+        setSuccessMessage({
+          status: response.data.status,
+          message: response.data.message,
+        });
 
-      // Empty form after successfully sending data
-      response.data.status == "success"
-        ? setFormData({
-            name: "",
-            phone: "",
-          })
-        : null;
-    } catch (error) {
-      console.error("Error sending data:", error);
+        // Empty form after successfully sending data
+        response.data.status == "success"
+          ? setFormData({
+              name: "",
+              phone: "",
+            })
+          : null;
+      } catch (error) {
+        console.error("Error sending data:", error);
+        setSuccessMessage({
+          status: "error",
+          message: "Internal Server Error! Please Try Again later",
+        });
+      }
+    } else {
       setSuccessMessage({
         status: "error",
-        message: error,
+        message: "Please fill your details properly!",
       });
     }
   };

@@ -1303,7 +1303,7 @@ export const whyChooseUs = [
   {
     title: "Experience",
     image: homeExperienceIcon,
-    desc: "Expand your skills and knowledge by working alongside experienced professionals.",
+    desc: "Experience world class services based on international standards for your health",
   },
   {
     title: "Commitment",
