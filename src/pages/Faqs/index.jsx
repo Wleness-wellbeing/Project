@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { bgDotsPattern, faq3Lg } from "../../assets";
+import { bgDotsPattern, faqHeader } from "../../assets";
 import Faq from "../../components/layout/Faq";
 import { faqs } from "../../data/faqs";
 
@@ -30,7 +30,7 @@ export default function index() {
           </h1>
 
           <div className="lg:mb-4">
-            <img src={faq3Lg} alt="" className="mx-auto lg:w-[560px]" />
+            <img src={faqHeader} alt="" className="mx-auto lg:w-[560px]" />
             <p className="text-center text-sm font-bold sm:text-base lg:px-44 lg:text-xl">
               Everything you need to know right here at Wleness. Ask questions
               and browse around for answers.

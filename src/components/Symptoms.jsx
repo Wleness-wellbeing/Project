@@ -21,7 +21,7 @@ export default function Symptoms({ highlight, image, points }) {
           {points.map((value, index) => {
             return (
               <li key={index}>
-                <p className="text-lg font-semibold text-black">{value[0]}</p>
+                <p className="text-lg font-semibold text-black">{value}</p>
               </li>
             );
           })}

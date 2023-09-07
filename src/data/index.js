@@ -99,6 +99,7 @@ import {
   grp1,
   grp2,
   grp3,
+  issueParenting,
 } from "../assets";
 // Components
 import HeaderWithImage from "../components/HeaderWithImage";
@@ -164,6 +165,12 @@ export const therapies = [
     title: "Schizophrenia",
     image: issueSchizophrenia,
     slug: "/therapy/schizophrenia",
+  },
+  {
+    name: "Parenting",
+    title: "Parenting",
+    image: issueParenting,
+    slug: "/therapy/parenting",
   },
   {
     name: "Paranoia",

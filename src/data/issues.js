@@ -1,5 +1,6 @@
 import {
   adhdHeader,
+  angerHeader,
   anxietyHeader,
   biopolarDisorderHeader,
   cdHeader,
@@ -10,9 +11,11 @@ import {
   oddHeader,
   panicAttacksHeader,
   paranoiaHeader,
+  relationshipHeader,
   schizophreniaHeader,
   stressHeader,
   symptomsAdhd,
+  symptomsAnger,
   symptomsAnxiety,
   symptomsBiopolarDisorder,
   symptomsCd,
@@ -22,6 +25,7 @@ import {
   symptomsOdd,
   symptomsPanic,
   symptomsParanoia,
+  symptomsRelationship,
   symptomsSchizophrenia,
   symptomsStress,
   wlenessApproachIcon1,
@@ -53,24 +57,12 @@ export const therapiesData = [
     symptoms: {
       highlight: "Stress Disorder symptoms ",
       points: [
-        [
-          "Feeling constant tiredness even after adequate rest",
-          " top-0 left-1/4 ",
-        ],
-        ["Facing difficulty in concentrating", " top-28 right-10 "],
-        ["Having trouble falling asleep", " bottom-36 right-20 "],
-        [
-          "Noticing muscles tensions or constant headaches",
-          " bottom-0 left-1/4 ",
-        ],
-        [
-          "Either overeating or experiencing a loss of appetite",
-          " bottom-36 -left-20 ",
-        ],
-        [
-          "Feeling easily irritable, frustrated or being short-tempered",
-          " top-44 -left-20 ",
-        ],
+        "Feeling constant tiredness even after adequate rest",
+        "Facing difficulty in concentrating",
+        "Having trouble falling asleep",
+        "Noticing muscles tensions or constant headaches",
+        "Either overeating or experiencing a loss of appetite",
+        "Feeling easily irritable, frustrated or being short-tempered",
       ],
       image: symptomsStress,
     },
@@ -187,15 +179,12 @@ export const therapiesData = [
     symptoms: {
       highlight: " Depression symptoms ",
       points: [
-        ["Trouble concentrating", " top-0 left-1/4 "],
-        ["Facing difficulty in concentrating", " top-28 right-10 "],
-        [
-          "Persistent sadness & Feeling of worthlessness",
-          " bottom-36 right-20 ",
-        ],
-        ["Loss of interest in activities", " bottom-0 left-1/4 "],
-        ["Changes in appetite or weight", " bottom-36 -left-20 "],
-        ["Fatigue or low energy", " top-44 -left-20 "],
+        "Trouble concentrating",
+        "Facing difficulty in concentrating",
+        "Persistent sadness & Feeling of worthlessness",
+        "Loss of interest in activities",
+        "Changes in appetite or weight",
+        "Fatigue or low energy",
       ],
       image: symptomsDepression,
     },
@@ -313,12 +302,12 @@ export const therapiesData = [
     symptoms: {
       highlight: " Panic Attack symptoms ",
       points: [
-        ["Rapid heartbeat or palpitations", " top-0 left-1/4 "],
-        ["Shortness of breath", " top-28 right-10 "],
-        ["Feeling dizzy or lightheaded", " bottom-36 right-20 "],
-        ["Fear of losing control or going crazy", " bottom-0 left-1/4 "],
-        ["Chest pain or discomfort", " bottom-36 -left-20 "],
-        ["Sweating and trembling", " top-44 -left-20 "],
+        "Rapid heartbeat or palpitations",
+        "Shortness of breath",
+        "Feeling dizzy or lightheaded",
+        "Fear of losing control or going crazy",
+        "Chest pain or discomfort",
+        "Sweating and trembling",
       ],
       image: symptomsPanic,
     },
@@ -436,30 +425,12 @@ export const therapiesData = [
     symptoms: {
       highlight: " Anxiety symptoms ",
       points: [
-        [
-          "Excessive worry and apprehension about everyday events or situations.",
-          " top-0 left-1/2 -translate-x-1/2 xl:translate-x-0 xl:left-1/4 px-2 xl:px-0 ",
-        ],
-        [
-          "Avoidance of triggering situations or activities.",
-          " top-16 xl:top-28 right-0 xl:right-10 w-28 ",
-        ],
-        [
-          "Fatigue or difficulty concentrating due to racing thoughts.",
-          " bottom-36 right-20 ",
-        ],
-        [
-          "Physical symptoms like increased heart rate, sweating, trembling, or muscle tension.",
-          " bottom-0 left-1/2 -translate-x-1/2 xl:translate-x-0 xl:left-1/4 px-2 xl:px-0 ",
-        ],
-        [
-          "Restlessness, feeling on edge, or having difficulty relaxing.",
-          " bottom-36 -left-20 ",
-        ],
-        [
-          "Sleep disturbances, such as difficulty falling asleep or staying asleep.",
-          " top-44 -left-20 ",
-        ],
+        "Excessive worry and apprehension about everyday events or situations.",
+        "Avoidance of triggering situations or activities.",
+        "Fatigue or difficulty concentrating due to racing thoughts.",
+        "Physical symptoms like increased heart rate, sweating, trembling, or muscle tension.",
+        "Restlessness, feeling on edge, or having difficulty relaxing.",
+        "Sleep disturbances, such as difficulty falling asleep or staying asleep.",
       ],
       image: symptomsAnxiety,
     },
@@ -577,12 +548,12 @@ export const therapiesData = [
     symptoms: {
       highlight: " OCD symptoms ",
       points: [
-        ["Intrusive, Distressing Thoughts", " top-0 left-1/4 "],
-        ["Repetitive Rituals or Behaviors", " top-28 right-10 "],
-        ["Fear of Contamination or Germs", " bottom-36 right-20 "],
-        ["Need for Symmetry or Order", " bottom-0 left-1/4 "],
-        ["Unwanted Taboo or Aggressive Thoughts", " bottom-36 -left-20 "],
-        ["Excessive Doubting and Checking", " top-44 -left-20 "],
+        "Intrusive, Distressing Thoughts",
+        "Repetitive Rituals or Behaviors",
+        "Fear of Contamination or Germs",
+        "Need for Symmetry or Order",
+        "Unwanted Taboo or Aggressive Thoughts",
+        "Excessive Doubting and Checking",
       ],
       image: symptomsOcd,
     },
@@ -704,12 +675,12 @@ export const therapiesData = [
     symptoms: {
       highlight: " Bipolar Disorder symptoms ",
       points: [
-        ["Intense Euphoria and Energy", " top-0 left-1/4 "],
-        ["Severe Irritability or Agitation", " top-28 right-10 "],
-        ["Decreased Need for Sleep", " bottom-36 right-20 "],
-        ["Changes in Appetite and Weight", " bottom-0 left-1/4 "],
-        ["Grandiose Beliefs or Ideas", " bottom-36 -left-20 "],
-        ["Hopelessness and Fatigue", " top-44 -left-20 "],
+        "Intense Euphoria and Energy",
+        "Severe Irritability or Agitation",
+        "Decreased Need for Sleep",
+        "Changes in Appetite and Weight",
+        "Grandiose Beliefs or Ideas",
+        "Hopelessness and Fatigue",
       ],
       image: symptomsBiopolarDisorder,
     },
@@ -831,12 +802,12 @@ export const therapiesData = [
     symptoms: {
       highlight: " Schizophrenia symptoms ",
       points: [
-        ["Hallucinations", " top-0 left-1/4 "],
-        ["Impaired Social Functioning", " top-28 right-10 "],
-        ["Disorganized Behavior", " bottom-36 right-20 "],
-        ["Negative Symptoms", " bottom-0 left-1/4 "],
-        ["Disorganized Speech", " bottom-36 -left-20 "],
-        ["Delusions", " top-44 -left-20 "],
+        "Hallucinations",
+        "Impaired Social Functioning",
+        "Disorganized Behavior",
+        "Negative Symptoms",
+        "Disorganized Speech",
+        "Delusions",
       ],
       image: symptomsSchizophrenia,
     },
@@ -954,12 +925,12 @@ export const therapiesData = [
     symptoms: {
       highlight: " Eating Disorder symptoms ",
       points: [
-        ["Social Withdrawal and Isolation", " top-0 left-1/4 "],
-        ["Obsession with Weight and Body Shape", " top-28 right-10 "],
-        ["Restrictive Eating or Extreme Dieting", " bottom-36 right-20 "],
-        ["Binge Eating and Loss of Control", " bottom-0 left-1/4 "],
-        ["Compulsive Exercising", " bottom-36 -left-20 "],
-        ["Self-Induced Vomiting or Laxative Use", " top-44 -left-20 "],
+        "Social Withdrawal and Isolation",
+        "Obsession with Weight and Body Shape",
+        "Restrictive Eating or Extreme Dieting",
+        "Binge Eating and Loss of Control",
+        "Compulsive Exercising",
+        "Self-Induced Vomiting or Laxative Use",
       ],
       image: symptomsEatingDisorder,
     },
@@ -1081,21 +1052,12 @@ export const therapiesData = [
     symptoms: {
       highlight: " Paranoia symptoms ",
       points: [
-        ["Social withdrawal due to fear.", " top-0 left-1/4 "],
-        ["Persistent mistrust of others' intentions.", " top-28 right-10 "],
-        [
-          "The constant expectation of betrayal or harm.",
-          " bottom-36 right-20 ",
-        ],
-        [
-          "The firm false belief of being singled out for harm",
-          " bottom-0 left-1/4 ",
-        ],
-        [
-          "Interpreting innocent actions as threatening.",
-          " bottom-36 -left-20 ",
-        ],
-        ["Being excessively watchful and cautious.", " top-44 -left-20 "],
+        "Social withdrawal due to fear.",
+        "Persistent mistrust of others' intentions.",
+        "The constant expectation of betrayal or harm.",
+        "The firm false belief of being singled out for harm",
+        "Interpreting innocent actions as threatening.",
+        "Being excessively watchful and cautious.",
       ],
       image: symptomsParanoia,
     },
@@ -1217,30 +1179,12 @@ export const therapiesData = [
     symptoms: {
       highlight: " ADHD symptoms ",
       points: [
-        [
-          "Poor Time Management: Struggling to manage time effectively.",
-          " top-0 left-1/4 ",
-        ],
-        [
-          "Inattention: Struggling to focus on tasks or details.",
-          " top-28 right-10 ",
-        ],
-        [
-          "Hyperactivity: Being overly restless or constantly active.",
-          " bottom-36 right-20 ",
-        ],
-        [
-          "Impulsivity: Acting without thinking about consequences.",
-          " bottom-0 left-1/4 ",
-        ],
-        [
-          "Disorganization: Needs to be more efficient in organizing tasks or activities.",
-          " bottom-36 -left-20 ",
-        ],
-        [
-          "Forgetfulness: Frequently losing items and forgetting appointments.",
-          " top-44 -left-20 ",
-        ],
+        "Poor Time Management: Struggling to manage time effectively.",
+        "Inattention: Struggling to focus on tasks or details.",
+        "Hyperactivity: Being overly restless or constantly active.",
+        "Impulsivity: Acting without thinking about consequences.",
+        "Disorganization: Needs to be more efficient in organizing tasks or activities.",
+        "Forgetfulness: Frequently losing items and forgetting appointments.",
       ],
       image: symptomsAdhd,
     },
@@ -1362,27 +1306,12 @@ export const therapiesData = [
     symptoms: {
       highlight: " ODD symptoms ",
       points: [
-        [
-          "Vindictiveness and seeking revenge when feeling wronged.",
-          " top-0 left-1/4 ",
-        ],
-        [
-          "Easily angered, resentful, or spiteful behavior.",
-          " top-28 right-10 ",
-        ],
-        ["Blaming others for mistakes or misbehavior.", " bottom-36 right-20 "],
-        [
-          "Deliberate attempts to annoy or provoke others.",
-          " bottom-0 left-1/4 ",
-        ],
-        [
-          "Frequent arguments and conflicts with authority figures.",
-          " bottom-36 -left-20 ",
-        ],
-        [
-          "Persistent defiance and refusal to comply with rules or requests.",
-          " top-44 -left-20 ",
-        ],
+        "Vindictiveness and seeking revenge when feeling wronged.",
+        "Easily angered, resentful, or spiteful behavior.",
+        "Blaming others for mistakes or misbehavior.",
+        "Deliberate attempts to annoy or provoke others.",
+        "Frequent arguments and conflicts with authority figures.",
+        "Persistent defiance and refusal to comply with rules or requests.",
       ],
       image: symptomsOdd,
     },
@@ -1503,18 +1432,12 @@ export const therapiesData = [
     symptoms: {
       highlight: " Conduct Disorder symptoms ",
       points: [
-        ["Aggression towards people and animals.", " top-0 left-1/4 "],
-        [
-          "Frequent bullying, intimidation, or physical fights.",
-          " top-28 right-10 ",
-        ],
-        ["Destruction of property and vandalism.", " bottom-36 right-20 "],
-        ["Deceitfulness, lying, and theft.", " bottom-0 left-1/4 "],
-        ["Serious violations of rules and laws.", " bottom-36 -left-20 "],
-        [
-          "Lack of empathy and disregard for the feelings and rights of others.",
-          " top-44 -left-20 ",
-        ],
+        "Aggression towards people and animals.",
+        "Frequent bullying, intimidation, or physical fights.",
+        "Destruction of property and vandalism.",
+        "Deceitfulness, lying, and theft.",
+        "Serious violations of rules and laws.",
+        "Lack of empathy and disregard for the feelings and rights of others.",
       ],
       image: symptomsCd,
     },
@@ -1609,6 +1532,259 @@ export const therapiesData = [
     },
     quote:
       "Research indicates that individuals with CD are more likely to develop antisocial personality disorder in adulthood.",
+  },
+  {
+    slug: "/therapy/anger",
+    header: {
+      title: [
+        {
+          color: false,
+          text: "Mastering ",
+        },
+        {
+          color: true,
+          text: "Anger: ",
+        },
+        {
+          color: false,
+          text: "A Key to Enhanced Mental Well-Being",
+        },
+      ],
+      desc: [
+        "Anger is a powerful emotion that, when not properly channeled, can significantly affect your overall mental well-being.",
+        "",
+      ],
+      image: angerHeader,
+    },
+    symptoms: {
+      highlight: " Anger symptoms ",
+      points: [
+        "Frequent Irritability: Getting easily annoyed or irritated over small matters regularly.",
+        "Intense or Frequent Outbursts: Displaying explosive anger, which may involve shouting, screaming, or physical aggression.",
+        "Difficulty Forgiving: Holding onto grudges and not letting go of past grievances.",
+        "Physical Symptoms: Experiencing physical reactions such as increased heart rate, muscle tension, or clenched fists when angry.",
+        "Impaired Relationships: Consistently having conflicts with loved ones, friends, or coworkers due to anger.",
+        "Loss of Control: Feeling like you can't control your anger often leads to actions you regret later.",
+      ],
+      image: symptomsAnger,
+    },
+    doctors: {
+      heading: [
+        {
+          color: false,
+          text: "Speak to our ",
+        },
+        {
+          color: true,
+          text: " Specialist",
+        },
+      ],
+
+      doctors: [
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+      ],
+      button: {
+        text: "Book Now",
+        slug: "/experts/all",
+      },
+    },
+    quote:
+      "Approximately 8% of adults, or about 18 million people, have reported experiencing frequent anger issues that significantly affect their daily lives, relationships, and overall well-being.",
+  },
+  {
+    slug: "/therapy/relationship",
+    header: {
+      title: [
+        {
+          color: false,
+          text: "Navigating through ",
+        },
+        {
+          color: true,
+          text: "Relationships: ",
+        },
+        {
+          color: false,
+          text: "When Love Meets Mental Health",
+        },
+      ],
+      desc: [
+        "The intricate interplay between relationships and mental health is fundamental to human well-being. Our connections with others can serve as a source of strength, providing comfort and support during challenging times, yet they can also be a potential trigger for stress and emotional turmoil.",
+        "",
+      ],
+      image: relationshipHeader,
+    },
+    symptoms: {
+      highlight: " Relationship symptoms ",
+      points: [
+        "Infertility: Infertility is the inability to conceive or carry a pregnancy to term after a year of regular unprotected intercourse.",
+        "Infant Loss: Approximately 2.6 million stillbirths occur globally each year, highlighting the tragic reality of infant loss and the need for support and awareness.",
+        "Dating Fatigue: Dating fatigue can be caused by overwhelming choices, and the time and energy investment required in the dating process.",
+        "Separation: Separation refers to two individuals or partners living apart, often following a relationship or marriage breakdown.",
+        "Overcoming heartbreak: Approximately 25% of individuals who go through a significant heartbreak experience symptoms of depression and anxiety",
+      ],
+      image: symptomsRelationship,
+    },
+    doctors: {
+      heading: [
+        {
+          color: false,
+          text: "Speak to our ",
+        },
+        {
+          color: true,
+          text: " Specialist",
+        },
+      ],
+
+      doctors: [
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+      ],
+      button: {
+        text: "Book Now",
+        slug: "/experts/all",
+      },
+    },
+    quote:
+      "According to a survey by Mind and Relate, 77% of people with a mental health problem surveyed actively tell their partners about their mental health, and only 5% of those people said their partners broke up with them when they heard about their condition.",
   },
 ];
 

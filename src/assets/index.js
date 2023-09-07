@@ -479,6 +479,7 @@ import issueStress from "./images/issues/issue-stress.png";
 import issueRelationship from "./images/issues/issue-relationship.png";
 import issueAnger from "./images/issues/issue-anger.png";
 import issueLgbtq from "./images/issues/issue-lgbtq.png";
+import issueParenting from "./images/issues/issue-parenting.png";
 // Issues >> Subpages >> Header
 import adhdHeader from "./images/issues/hero/header-adhd.png";
 import anxietyHeader from "./images/issues/hero/header-anxiety.png";
@@ -492,6 +493,8 @@ import panicAttacksHeader from "./images/issues/hero/header-panic-attacks.png";
 import paranoiaHeader from "./images/issues/hero/header-paranoia.png";
 import schizophreniaHeader from "./images/issues/hero/header-schizophrenia.png";
 import stressHeader from "./images/issues/hero/header-stress.png";
+import relationshipHeader from "./images/issues/hero/header-relationship.png";
+import angerHeader from "./images/issues/hero/header-anger.png";
 // Issues >> Subpages >> Symptoms
 import symptomsAdhd from "./images/issues/symptoms/symptoms-adhd.png";
 import symptomsAnxiety from "./images/issues/symptoms/symptoms-anxiety.png";
@@ -505,6 +508,8 @@ import symptomsPanic from "./images/issues/symptoms/symptoms-panic-attacks.png";
 import symptomsParanoia from "./images/issues/symptoms/symptoms-paranoia.png";
 import symptomsSchizophrenia from "./images/issues/symptoms/symptoms-schizophrenia.png";
 import symptomsStress from "./images/issues/symptoms/symptoms-stress.png";
+import symptomsAnger from "./images/issues/symptoms/symptoms-anger.png";
+import symptomsRelationship from "./images/issues/symptoms/symptoms-relationship.png";
 
 export {
   issuesHeader,
@@ -514,6 +519,7 @@ export {
   issueCd,
   issueDepression,
   issueEatingDisorder,
+  issueParenting,
   issueOcd,
   issueOdd,
   issuePanicAttack,
@@ -524,12 +530,14 @@ export {
   issueSchizophrenia,
   issueStress,
   adhdHeader,
+  angerHeader,
   anxietyHeader,
   biopolarDisorderHeader,
   cdHeader,
   depressionHeader,
   eatingDisorderHeader,
   ocdHeader,
+  relationshipHeader,
   oddHeader,
   panicAttacksHeader,
   paranoiaHeader,
@@ -547,6 +555,8 @@ export {
   symptomsParanoia,
   symptomsSchizophrenia,
   symptomsStress,
+  symptomsAnger,
+  symptomsRelationship,
 };
 
 // Internship images
@@ -576,13 +586,14 @@ import happyClient4 from "./images/clients/happy-client-4.png";
 export { happyClient1, happyClient2, happyClient3, happyClient4 };
 
 // FAQ's Section
+import faqHeader from "./images/faqs/faq-header.png";
 import faq1 from "./images/faqs/faq-1.png";
 import faq2 from "./images/faqs/faq-2.png";
 import faq3 from "./images/faqs/faq-3.png";
 import faq3Lg from "./images/faqs/faq-3-lg.png";
 import faq4 from "./images/faqs/faq-4.png";
 
-export { faq1, faq2, faq3, faq3Lg, faq4 };
+export { faq1, faq2, faq3, faq3Lg, faq4, faqHeader };
 
 // Blogs Images
 import blogHeader1 from "./images/blogs/blogs-header-1.png";
