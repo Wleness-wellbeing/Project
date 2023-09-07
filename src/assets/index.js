@@ -495,6 +495,8 @@ import schizophreniaHeader from "./images/issues/hero/header-schizophrenia.png";
 import stressHeader from "./images/issues/hero/header-stress.png";
 import relationshipHeader from "./images/issues/hero/header-relationship.png";
 import angerHeader from "./images/issues/hero/header-anger.png";
+import lgbtqHeader from "./images/issues/hero/header-lgbtq.png";
+import parentingHeader from "./images/issues/hero/header-parenting.png";
 // Issues >> Subpages >> Symptoms
 import symptomsAdhd from "./images/issues/symptoms/symptoms-adhd.png";
 import symptomsAnxiety from "./images/issues/symptoms/symptoms-anxiety.png";
@@ -510,6 +512,7 @@ import symptomsSchizophrenia from "./images/issues/symptoms/symptoms-schizophren
 import symptomsStress from "./images/issues/symptoms/symptoms-stress.png";
 import symptomsAnger from "./images/issues/symptoms/symptoms-anger.png";
 import symptomsRelationship from "./images/issues/symptoms/symptoms-relationship.png";
+import symptomsParenting from "./images/issues/symptoms/symptoms-parenting.png";
 
 export {
   issuesHeader,
@@ -537,6 +540,8 @@ export {
   depressionHeader,
   eatingDisorderHeader,
   ocdHeader,
+  lgbtqHeader,
+  parentingHeader,
   relationshipHeader,
   oddHeader,
   panicAttacksHeader,
@@ -557,6 +562,7 @@ export {
   symptomsStress,
   symptomsAnger,
   symptomsRelationship,
+  symptomsParenting,
 };
 
 // Internship images

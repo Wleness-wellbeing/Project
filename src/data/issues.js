@@ -7,10 +7,12 @@ import {
   depressionHeader,
   doctor1,
   eatingDisorderHeader,
+  lgbtqHeader,
   ocdHeader,
   oddHeader,
   panicAttacksHeader,
   paranoiaHeader,
+  parentingHeader,
   relationshipHeader,
   schizophreniaHeader,
   stressHeader,
@@ -25,6 +27,7 @@ import {
   symptomsOdd,
   symptomsPanic,
   symptomsParanoia,
+  symptomsParenting,
   symptomsRelationship,
   symptomsSchizophrenia,
   symptomsStress,
@@ -1785,6 +1788,256 @@ export const therapiesData = [
     },
     quote:
       "According to a survey by Mind and Relate, 77% of people with a mental health problem surveyed actively tell their partners about their mental health, and only 5% of those people said their partners broke up with them when they heard about their condition.",
+  },
+  {
+    slug: "/therapy/lgbtq",
+    header: {
+      title: [
+        {
+          color: false,
+          text: "Diverse Journeys, Shared Resilience: ",
+        },
+        {
+          color: true,
+          text: "LGBTQ+ ",
+        },
+        {
+          color: false,
+          text: "Perspectives and Solutions",
+        },
+      ],
+      desc: [
+        "Mental health knows no boundaries, and neither does love. Exploring the intersection of LGBTQIA+ identities and mental well-being is an essential journey toward understanding the unique challenges and resilience of this diverse community.",
+        "",
+      ],
+      image: lgbtqHeader,
+    },
+    symptoms: {
+      highlight: " LGBTQ symptoms ",
+      points: [
+        "Higher Rates of Depression. In LGBTQIA+ individuals often experience higher rates of depression due to stigma and discrimination.",
+        "Anxiety disorders are common, with many facing 'minority stress' due to societal prejudice.",
+        "LGBTQIA+ youth are more likely to contemplate suicide, highlighting the urgent need for support.        ",
+        "Transgender individuals may face gender dysphoria, discrimination, and mental health challenges.",
+        "Family rejection can lead to profound mental health struggles among LGBTQIA+ youth.",
+        "Limited access to LGBTQIA+-friendly mental health services can hinder well-being.",
+      ],
+      image: symptomsRelationship,
+    },
+    doctors: {
+      heading: [
+        {
+          color: false,
+          text: "Speak to our ",
+        },
+        {
+          color: true,
+          text: " Specialist",
+        },
+      ],
+
+      doctors: [
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+      ],
+      button: {
+        text: "Book Now",
+        slug: "/experts/all",
+      },
+    },
+    quote:
+      "LGBTQ+ individuals are approximately 2.5 times more likely to experience depression and anxiety compared to heterosexual individuals.",
+  },
+  {
+    slug: "/therapy/parenting",
+    header: {
+      title: [
+        {
+          color: true,
+          text: "Parenting: ",
+        },
+        {
+          color: false,
+          text: " Nurturing both yours and your child's well being",
+        },
+      ],
+      desc: [
+        "Parenting is a profound journey filled with love and joy, but it also brings unique challenges. The connection between parenting and mental health is crucial, as it affects the well-being of both parents and children, shaping family dynamics.",
+        "",
+      ],
+      image: parentingHeader,
+    },
+    symptoms: {
+      highlight: " Parenting symptoms ",
+      points: [
+        "Postpartum Depression: Many new mothers experience postpartum depression, characterized by persistent feelings of sadness, exhaustion, and anxiety after giving birth.",
+        "Parental Anxiety: Parents often grapple with anxiety, worrying about their children's safety, well-being, and future, which can impact their mental health.",
+        "Parental Stress: The demands of parenting can lead to high levels of stress, affecting parents' mental well-being and potentially their parenting abilities.",
+        "Burnout: Parental burnout, marked by emotional exhaustion and detachment from parenting responsibilities, can develop when the demands of parenting become overwhelming",
+        "Guilt and Self-Doubt: Parents may experience feelings of guilt and self-doubt, wondering if they're doing enough or making the right decisions for their children.",
+        "Children's Mental Health: Parents also face the challenge of supporting their children's mental health, addressing issues like anxiety, depression, or behavioral problems, which can affect the entire family's well-being.",
+      ],
+      image: symptomsParenting,
+    },
+    doctors: {
+      heading: [
+        {
+          color: false,
+          text: "Speak to our ",
+        },
+        {
+          color: true,
+          text: " Specialist",
+        },
+      ],
+
+      doctors: [
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Christina",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+        {
+          name: "Dr. Sonal",
+          image: doctor1,
+          exp: "6+ years of experience",
+          expertise: "Yoga, work-life",
+          speaks: "German, English",
+        },
+      ],
+      button: {
+        text: "Book Now",
+        slug: "/experts/all",
+      },
+    },
+    quote:
+      "Research suggests that parental burnout is not uncommon. Studies have indicated that approximately 12-20% of parents experience symptoms consistent with burnout.",
   },
 ];
 
