@@ -17,16 +17,18 @@ export default function Footer() {
       {/* ========== Footer ========== */}
       <footer className="border-b-[1px] bg-[#E9FBF9] font-medium">
         <div className="container mx-auto py-12">
-          <div className="space-y-6 sm:grid sm:grid-cols-2 sm:gap-4 sm:space-y-0 lg:grid-cols-5 xl:pb-0">
+          <div className="grid grid-cols-2 gap-x-5 gap-y-7 sm:gap-4 sm:space-y-0 lg:grid-cols-5 xl:pb-0">
             <div className="2xl:pr-5">
-              <h2 className="mb-4 text-xl font-semibold">Location</h2>
-              <ul className="space-y-3">
+              <h4 className="mb-2 text-lg font-semibold md:mb-4 lg:text-xl">
+                Location
+              </h4>
+              <ul className="space-y-2 md:space-y-3">
                 {footerLocation.map((value, i) => {
                   return (
                     <li key={i}>
                       <Link
                         to={value[1]}
-                        className="flex items-center"
+                        className="flex items-center text-sm md:text-base"
                         target="_blank"
                       >
                         <FontAwesomeIcon icon={value[2]} className="mr-3" />
@@ -38,61 +40,82 @@ export default function Footer() {
               </ul>
             </div>
             <div className="lg:pl-7">
-              <h2 className="mb-4 text-xl font-semibold">About Wleness</h2>
-              <ul className="space-y-1">
+              <h4 className="mb-2 text-lg font-semibold md:mb-4 lg:text-xl">
+                About Wleness
+              </h4>
+              <ul className="md:space-y-1">
                 {footerAboutWleness.map((value, index) => {
                   return (
                     <li key={index}>
-                      <Link to={value[1]}>{value[0]}</Link>
+                      <Link className="text-sm md:text-base" to={value[1]}>
+                        {value[0]}
+                      </Link>
                     </li>
                   );
                 })}
               </ul>
             </div>
             <div className="lg:pl-3">
-              <h4 className="mb-4 text-xl font-semibold">Our Services</h4>
-              <ul className="space-y-1">
+              <h4 className="mb-2 text-lg font-semibold md:mb-4 lg:text-xl">
+                Our Services
+              </h4>
+              <ul className="md:space-y-1">
                 {footerOurServices.map((value, index) => {
                   return (
                     <li key={index}>
-                      <Link to={value[1]}>{value[0]}</Link>
+                      <Link className="text-sm md:text-base" to={value[1]}>
+                        {value[0]}
+                      </Link>
                     </li>
                   );
                 })}
               </ul>
             </div>
             <div>
-              <h4 className="mb-4 text-xl font-semibold">Situations</h4>
-              <ul className="space-y-1">
+              <h4 className="mb-2 text-lg font-semibold md:mb-4 lg:text-xl">
+                Situations
+              </h4>
+              <ul className="md:space-y-1">
                 {footerFocusAreas.map((value, index) => {
                   return (
                     <li key={index}>
-                      <Link to={value[1]}>{value[0]}</Link>
+                      <Link className="text-sm md:text-base" to={value[1]}>
+                        {value[0]}
+                      </Link>
                     </li>
                   );
                 })}
               </ul>
             </div>
-            <div>
-              <h4 className="mb-4 text-xl font-semibold">Our Experts</h4>
-              <ul className="space-y-1">
-                {footerOurExperts.map((value, index) => {
-                  return (
-                    <li key={index}>
-                      <Link to={value[1]}>{value[0]}</Link>
-                    </li>
-                  );
-                })}
-              </ul>
-              <h4 className="my-2 text-xl font-semibold">Library</h4>
-              <ul className="space-y-1">
-                <li>
-                  <Link to="/blogs">Blogs</Link>
-                </li>
-                <li>
-                  <Link to="">Assessments</Link>
-                </li>
-              </ul>
+            <div className="col-span-2 grid grid-cols-2 lg:col-span-1 lg:grid-cols-none">
+              <div>
+                <h4 className="mb-2 text-lg font-semibold md:mb-4 lg:text-xl">
+                  Our Experts
+                </h4>
+                <ul className="md:space-y-1">
+                  {footerOurExperts.map((value, index) => {
+                    return (
+                      <li key={index}>
+                        <Link className="text-sm md:text-base" to={value[1]}>
+                          {value[0]}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="my-2 text-xl font-semibold">Library</h4>
+                <ul className="md:space-y-1">
+                  <li>
+                    <Link to="/blogs">Blogs</Link>
+                  </li>
+                  <li>
+                    <Link to="">Assessments</Link>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
