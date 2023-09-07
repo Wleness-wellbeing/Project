@@ -67,18 +67,27 @@ export default function LifeCoching() {
           It's like having a trusted partner who helps you navigate life's
           challenges and capitalize on your strengths.
         </p>
-        <div className="mb-14 grid gap-y-8 md:grid-cols-4 lg:gap-6 lg:gap-y-0">
+        <div className="mb-14 grid grid-cols-2 gap-x-3 gap-y-5 md:grid-cols-4 lg:gap-6 xl:gap-10">
           {lifecoching.map((value, i) => {
             return (
-              <figure key={i} className="p-4">
+              <figure
+                key={i}
+                className="rounded-xl border-[1px] border-slate-200 p-3 shadow-xl shadow-slate-300 lg:p-5"
+              >
                 <div>
-                  <img src={value.image} alt="" className="mx-auto mb-2 w-28" />
+                  <img
+                    src={value.image}
+                    alt=""
+                    className="mx-auto mb-2 w-16 lg:w-28"
+                  />
                 </div>
                 <figcaption>
-                  <h2 className="heading-primary mb-3 inline-block text-xl font-bold text-primary-400">
+                  <h2 className="heading-primary mb-1 inline-block font-bold text-primary-400 lg:mb-3 lg:text-xl">
                     {value.title}
                   </h2>
-                  <p className="text-lg font-medium">{value.desc}</p>
+                  <p className="text-xs font-semibold text-slate-500 lg:text-base">
+                    {value.desc}
+                  </p>
                 </figcaption>
               </figure>
             );

@@ -16,7 +16,7 @@ export default function ServicesCard(props) {
               <h2 className="mb-2 text-center text-xl font-semibold">
                 {props.data.title}
               </h2>
-              <p className="text-center font-medium text-slate-600">
+              <p className="text-center font-semibold text-slate-600">
                 {props.data.desc}
               </p>
             </figcaption>

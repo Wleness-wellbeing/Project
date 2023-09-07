@@ -384,7 +384,7 @@ function App() {
           }
         />
         <Route
-          path="/lifestyle-coaching"
+          path="/life-coaching"
           element={
             <Layout>
               <LifeCoching />

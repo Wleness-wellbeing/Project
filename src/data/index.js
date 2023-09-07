@@ -1254,10 +1254,10 @@ export const homeServices = [
     slug: "/corporate",
   },
   {
-    title: "Lifestyle Coaching",
-    desc: "Lifestyle coaching empowers well-being, productivity, and balance. It encourages health, reduces stress, boosts motivation, and enhances performance.",
+    title: "Life Coaching",
+    desc: "Life coaching empowers well-being, productivity, and balance. It encourages health, reduces stress, boosts motivation, and enhances performance.",
     image: homeLifestyleCoaching,
-    slug: "/lifestyle-coaching",
+    slug: "/life-coaching",
   },
   {
     title: "Yoga",
