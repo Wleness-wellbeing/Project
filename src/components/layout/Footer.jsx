@@ -109,10 +109,14 @@ export default function Footer() {
                 <h4 className="my-2 text-xl font-semibold">Library</h4>
                 <ul className="md:space-y-1">
                   <li>
-                    <Link to="/blogs">Blogs</Link>
+                    <Link className="text-sm md:text-base" to="/blogs">
+                      Blogs
+                    </Link>
                   </li>
                   <li>
-                    <Link to="">Assessments</Link>
+                    <Link className="text-sm md:text-base" to="">
+                      Assessments
+                    </Link>
                   </li>
                 </ul>
               </div>
