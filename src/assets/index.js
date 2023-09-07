@@ -299,6 +299,9 @@ import JoinUsPsychiatrist from "./images/joinus/joinus-psychiatrist.png";
 import JoinUsInternship from "./images/joinus/joinus-internship.png";
 import JoinUsCampusAmbassador from "./images/joinus/joinus-campus-ambassador.png";
 import Bubble from "./images/joinus/Bubble.png";
+import therapistApplyHeader from "./images/joinus/therapist-header.png";
+import psychiatristApplyHeader from "./images/joinus/psychiatrist-header.png";
+import doctorDashboard from "./images/joinus/doctor-dashboard.png";
 
 export {
   JoinUsTherapist,
@@ -306,6 +309,9 @@ export {
   JoinUsInternship,
   JoinUsCampusAmbassador,
   Bubble,
+  therapistApplyHeader,
+  doctorDashboard,
+  psychiatristApplyHeader,
 };
 
 // Campus Ambassador
@@ -574,8 +580,9 @@ import faq1 from "./images/faqs/faq-1.png";
 import faq2 from "./images/faqs/faq-2.png";
 import faq3 from "./images/faqs/faq-3.png";
 import faq3Lg from "./images/faqs/faq-3-lg.png";
+import faq4 from "./images/faqs/faq-4.png";
 
-export { faq1, faq2, faq3, faq3Lg };
+export { faq1, faq2, faq3, faq3Lg, faq4 };
 
 // Blogs Images
 import blogHeader1 from "./images/blogs/blogs-header-1.png";

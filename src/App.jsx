@@ -5,9 +5,6 @@ import { therapiesData } from "./data/issues";
 // Components
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
-import DoctorSignup from "./pages/Authentication/DoctorSignup";
-import TherapistJoiningForm from "./components/TherapistJoiningForm.jsx";
-import PsychiatristJoiningForm from "./components/PsychiatristJoiningForm";
 import ScrollToTop from "./components/icon/ScrollToTop";
 import SignupLayout from "./components/layout/SignupLayout";
 import DashboardLayout from "./components/layout/DashboardLayout";
@@ -45,9 +42,11 @@ import TermsAndConditions from "./pages/Policies/TermsAndConditions";
 import Selfcare from "./pages/Dashboard/Selfcare";
 import ContactUs from "./pages/ContactUs";
 import LifeCoching from "./pages/coching/LifeCoching";
-import ExecutiveCoching from "./pages/coching/ExecutiveCoaching";
 import ExecutiveCoaching from "./pages/coching/ExecutiveCoaching";
 import RoutineCare from "./pages/Dashboard/RoutineCare";
+import DoctorSignup from "./pages/Authentication/DoctorSignup";
+import TherapistJoining from "./pages/JoinUs/TherapistJoining";
+import PsychiatristJoining from "./pages/JoinUs/PsychiatristJoining";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -311,17 +310,17 @@ function App() {
         <Route
           path="/join-therapist"
           element={
-            <SignupLayout>
-              <TherapistJoiningForm />
-            </SignupLayout>
+            <Layout>
+              <TherapistJoining />
+            </Layout>
           }
         />
         <Route
           path="/join-psychiatrist"
           element={
-            <SignupLayout>
-              <PsychiatristJoiningForm />
-            </SignupLayout>
+            <Layout>
+              <PsychiatristJoining />
+            </Layout>
           }
         />
 

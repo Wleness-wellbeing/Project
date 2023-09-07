@@ -1,4 +1,4 @@
-import { faq1, faq2 } from "../assets";
+import { faq1, faq2, faq4 } from "../assets";
 
 // Services subpages QNA's
 export const servicesFaq = {
@@ -269,3 +269,63 @@ export const mythsAndFacts = [
     "Psychiatrists are trained in medication management and various therapy approaches, offering a comprehensive treatment approach.",
   ],
 ];
+
+// Lifestyle Coaching Faqs
+
+// Musical Therapy FAQ's
+export const lifeStyleCoachingFaqs = {
+  heading1: [
+    {
+      color: false,
+      text: "You've got ",
+    },
+    {
+      color: true,
+      text: "questions",
+    },
+    {
+      color: false,
+      text: "?",
+    },
+  ],
+  heading2: [
+    {
+      color: false,
+      text: "We've got ",
+    },
+    {
+      color: true,
+      text: "answers",
+    },
+    {
+      color: false,
+      text: "!",
+    },
+  ],
+  desc: "Everything you need to know about the couple therapy and services. Can't find the answers you're looking for? ",
+  image: faq4,
+  qnas: [
+    {
+      question: "Who benefits from Life Coaching?",
+      answer:
+        "Life coaching benefits a diverse spectrum of individuals, including professionals seeking career growth and work-life balance, entrepreneurs aiming to enhance their businesses.",
+    },
+    {
+      question: "What goals can coaching help me with?",
+      answer:
+        "Life coaching benefits a diverse spectrum of individuals, including professionals seeking career growth and work-life balance, entrepreneurs aiming to enhance their businesses.",
+    },
+    {
+      question:
+        "Can I continue coaching to work on new objectives after achieving my initial goals?",
+      answer:
+        "Life coaching benefits a diverse spectrum of individuals, including professionals seeking career growth and work-life balance, entrepreneurs aiming to enhance their businesses.",
+    },
+    {
+      question:
+        "How do I know if I am ready for life coaching,  what should I expect from the process?",
+      answer:
+        "Life coaching benefits a diverse spectrum of individuals, including professionals seeking career growth and work-life balance, entrepreneurs aiming to enhance their businesses.",
+    },
+  ],
+};

@@ -1,90 +1,78 @@
 import React from "react";
 import FaqWithImage from "../../components/FaqWithImage";
-import { musicalTherapyFaq } from "../../data/faqs";
-import PoliciesHeader from "../../components/headers/PoliciesHeader";
-import { lifecoching } from "../../data";
-import {
-  grp1,
-  grp2,
-  grp3,
-  rectangle1,
-  rectangle2,
-  rectangle3,
-} from "../../assets";
+import { lifeStyleCoachingFaqs } from "../../data/faqs";
+import { lifecoching, wlenessLifeCoaching } from "../../data";
+import { rectangle2, rectangle3 } from "../../assets";
 export default function LifeCoching() {
   return (
-    <main>
-      <header className="relative overflow-x-clip bg-gradient-to-b from-secondary/10 to-transparent py-12">
-        <div className=" container mx-auto flex">
-          <div className="w-1/2">
+    <>
+      <header className="relative overflow-x-clip bg-gradient-to-b from-secondary/10 to-transparent pb-8 pt-12 xl:pt-14">
+        <div className="container mx-auto xl:flex xl:items-center xl:gap-x-5">
+          <div className="mb-5 flex justify-end xl:order-2 xl:mr-4 xl:w-1/2">
+            <img
+              className="w-full xl:w-4/5"
+              src={rectangle2}
+              alt="Your Image Alt Text"
+            ></img>
+          </div>
+          <div className="xl:order-1 xl:w-1/2">
             <div>
-              <h1 className="text-4xl font-bold ">
-                Unleash Your Inner Champion
-              </h1>
-              <h2 className="text-2xl font-semibold">
-                Through Wleness &nbsp;
-                <span className="subheading heading-primary ">
-                  Life Coaching
-                </span>
-              </h2>
+              <hgroup className="mb-6 xl:mb-8">
+                <h1 className="subheading">Unleash Your Inner Champion</h1>
+                <h2 className="text-2xl font-semibold">
+                  <span>Through Wleness </span>
+                  <span className="heading-primary font-bold">
+                    Life Coaching
+                  </span>
+                </h2>
+              </hgroup>
             </div>
-            <br></br>
-            <br></br>
 
-            <div>
-              <p className="text-lg font-medium">
+            <div className="!font-semibold xl:text-lg">
+              <p className="mb-6">
                 Do you crave higher growth and confidence in your life,
                 business, and leadership journey?
-              </p>{" "}
-              <br></br>
-              <p className="text-lg font-medium">
+              </p>
+              <p className="para">
                 Discover the absolute confidence to find fulfillment and
                 experience your desired joyous relationships.
               </p>
             </div>
           </div>
-          <div className="mr-4 flex w-1/2 justify-end">
-            <img
-              className="w-auto"
-              src={rectangle2}
-              alt="Your Image Alt Text"
-            ></img>
-          </div>
-        </div>
-        <div className="container mx-auto pt-16 text-center">
-          <p className="text-lg font-medium">
-            How do you silence that inner critic and rise above those beliefs
-            that drag you down?
-          </p>
-          <br />
-          <p className="text-lg font-medium">
-            Identify and shatter the barriers holding you back. We know you know
-            those limiting beliefs and habits, but it's time to break free. It's
-            time to commit to a trans-formative path, ready to shift your
-            consciousness and become the best version of yourself.
-            <span className="font-bold">Are you ready?</span>
-          </p>
         </div>
       </header>
 
-      <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold">
-          How can &nbsp;
-          <span className="subheading heading-primary">life coaching</span>{" "}
-          propel you forward?
-        </h2>{" "}
-        <br></br>
+      <section className="container mx-auto mb-8 pb-4 pt-6 text-center text-lg font-semibold">
+        <h5 className="mb-3">
+          How do you silence that inner critic and rise above those beliefs that
+          drag you down?
+        </h5>
+        <p className="mb-3">
+          Identify and shatter the barriers holding you back. We know you know
+          those limiting beliefs and habits, but it's time to break free. It's
+          time to commit to a trans-formative path, ready to shift your
+          consciousness and become the best version of yourself.
+        </p>
+        <span className="font-bold">Are you ready?</span>
+      </section>
+
+      <section className="container mx-auto text-center">
+        <h2 className="subheading mb-3">
+          <span>How can </span>
+          <span className="heading-primary">life coaching</span>
+          <span> propel you forward?</span>
+        </h2>
         <p className="pb-12 text-lg font-medium lg:mx-auto lg:w-[720px]">
           Life coaching is your personalized journey to growth and fulfillment.
           It's like having a trusted partner who helps you navigate life's
           challenges and capitalize on your strengths.
         </p>
-        <div className="mb-14 grid gap-y-8 md:grid-cols-4 lg:gap-12 lg:gap-y-0">
+        <div className="mb-14 grid gap-y-8 md:grid-cols-4 lg:gap-6 lg:gap-y-0">
           {lifecoching.map((value, i) => {
             return (
-              <figure key={i} className="rounded border p-4">
+              <figure key={i} className="p-4">
                 <div>
-                  <img src={value.image} alt="" className="mx-auto lg:w-28" />
+                  <img src={value.image} alt="" className="mx-auto mb-2 w-28" />
                 </div>
                 <figcaption>
                   <h2 className="heading-primary mb-3 inline-block text-xl font-bold text-primary-400">
@@ -96,133 +84,124 @@ export default function LifeCoching() {
             );
           })}
         </div>
-      </div>
-      <header className="relative overflow-x-clip bg-gradient-to-b from-secondary/10 to-transparent py-6">
+      </section>
+
+      <section className="relative bg-gradient-to-b from-secondary/10 to-transparent py-6">
         <div className="py-4 text-center">
-          <h2 className="text-4xl font-bold">
-            The &nbsp;
-            <span className="subheading heading-primary">results </span> say it
-            all
+          <h2 className="subheading">
+            <span>The </span>
+            <span className=" heading-primary">results </span>
+            <span>say it all</span>
           </h2>
         </div>
-        <div className="container  mx-auto flex">
-          <div className="my-auto w-3/5">
-            <ul className="">
-              <li className="mb-4">
-                <div className="mr-6 inline-block h-2 w-2 rounded-full bg-primary-300"></div>
-                <span className="font-bold">
-                  <span className="text-primary-300">99% </span>of individuals
-                  and companies who hire a coach are satisfied or very satisfied
-                  with the experience.
-                </span>
+        <div className="container mx-auto lg:flex lg:gap-x-5">
+          <div className="mb-6 flex justify-end lg:order-2 lg:w-2/5">
+            <img src={rectangle3} alt="" className="w-full xl:w-[90%]"></img>
+          </div>
+          <div className="my-auto lg:order-1 lg:w-3/5">
+            <ul className="list-outside list-disc px-4 text-primary-300">
+              <li className="mb-4 font-bold">
+                <p className="text-black">
+                  <span className="text-primary-300">99% </span>
+                  <span>
+                    of individuals and companies who hire a coach are satisfied
+                    or very satisfied with the experience.
+                  </span>
+                </p>
+              </li>
+              <li className="mb-4 font-bold">
+                <p className="text-black">
+                  <span className="text-primary-300">80% </span>
+                  <span>
+                    of coaching clients say they improved their self-esteem or
+                    self-confidence thanks to coaching.
+                  </span>
+                </p>
+              </li>
+              <li className="mb-4 font-bold">
+                <p className="text-black">
+                  <span className="text-primary-300">73% </span>
+                  <span>
+                    of coaching clients say that coaching helps them improve
+                    their relationships, communication skills
+                  </span>
+                  <span className="text-primary-300"> (72%), </span>
+                  <span>interpersonal skills </span>
+                  <span className="text-primary-300">(71%), </span>
+                  <span>work performance </span>
+                  <span className="text-primary-300">(70%), </span>
+                  <span>work/life balance </span>
+                  <span className="text-primary-300">(67%), </span>
+                  <span>and wellness </span>
+                  <span className="text-primary-300">(63%).</span>
+                </p>
+              </li>
+              <li className="mb-4 font-bold">
+                <p className="text-black">
+                  <span className="text-primary-300">51%</span>
+                  <span>
+                    of companies with a strong coaching culture have higher
+                    revenues than others
+                  </span>
+                </p>
               </li>
               <li className="mb-4">
-                <div className="mr-6 inline-block h-2 w-2 rounded-full bg-primary-300"></div>
-                <span className="font-bold">
-                  <span className="text-primary-300">80% </span> of coaching
-                  clients say they improved their self-esteem or self-confidence
-                  thanks to coaching.
-                </span>
+                <p className="text-black">
+                  <span className="font-bold">
+                    <span className="text-primary-300">68% </span>
+                    <span>
+                      of individuals who hired coaches could make back their
+                      investment. The median ROI is 7x the investment. Coaching
+                      can have a
+                    </span>
+                    <span className="text-primary-300"> 221% </span>
+                    <span>ROI.</span>
+                  </span>
+                </p>
               </li>
-              <li className="mb-4">
-                <div className="mr-6 inline-block h-2 w-2 rounded-full bg-primary-300"></div>
-                <span className="font-bold">
-                  <span className="text-primary-300">73% </span> of coaching
-                  clients say that coaching helps them improve their
-                  relationships, communication skills{" "}
-                  <span className="text-primary-300">(72%) </span>,
-                  interpersonal skills{" "}
-                  <span className="text-primary-300">(71%)</span>, work
-                  performance <span className="text-primary-300">(70%)</span>,
-                  work/life balance{" "}
-                  <span className="text-primary-300">(67%)</span>, and wellness
-                  <span className="text-primary-300">(63%)</span>.
-                </span>
-              </li>
-              <li className="mb-4">
-                <div className="mr-6 inline-block h-2 w-2 rounded-full bg-primary-300"></div>
-                <span className="font-bold">
-                  <span className="text-primary-300">51%</span> of companies
-                  with a strong coaching culture have higher revenues than
-                  others.
-                </span>
-              </li>
-              <li className="mb-4">
-                <div className="mr-6 inline-block h-2 w-2 rounded-full bg-primary-300"></div>
-                <span className="font-bold">
-                  <span className="text-primary-300">68%</span> of individuals
-                  who hired coaches could make back their investment. The median
-                  ROI is 7x the investment. Coaching can have a{" "}
-                  <span className="text-primary-300">221%</span> ROI.
-                </span>
-              </li>
-              <li className="mb-4">
-                <div className="mr-6 inline-block h-2 w-2 rounded-full bg-primary-300"></div>
-                <span className="font-bold">
-                  Coaching clients report that they experience decreased anxiety
-                  levels <span className="text-primary-300">57.1%</span> and
-                  depression levels{" "}
-                  <span className="text-primary-300">44.3%</span>, as well as
-                  improved workplace relationships{" "}
-                  <span className="text-primary-300">79%</span>.
-                </span>
+              <li className="mb-4 font-bold">
+                <p className="text-black">
+                  <span>
+                    Coaching clients report that they experience decreased
+                    anxiety levels
+                  </span>
+                  <span className="text-primary-300"> 57.1% </span>
+                  <span> and depression levels </span>
+                  <span className="text-primary-300"> 44.3%, </span>
+                  <span> as well as improved workplace relationships </span>
+                  <span className="text-primary-300">79%.</span>
+                </p>
               </li>
             </ul>
           </div>
-          <div className="flex w-2/5 justify-end">
-            <img className="h-full" src={rectangle3}></img>
-          </div>
         </div>
-        <div className="my-10 text-center">
-          <h2 className="text-4xl font-bold">
-            Wleness &nbsp;
-            <span className="subheading heading-primary">life coaching </span>
-          </h2>
-        </div>
-        <div className="container mx-auto grid grid-cols-1 items-center justify-center gap-4 sm:grid-cols-2 md:grid-cols-3 ">
-          <div className="flex flex-col rounded border p-4 text-center">
-            <img className="mx-auto" src={grp1}></img>
-            <h2 className="text-lg font-semibold text-primary-400">
-              One to One power Coaching
-            </h2>
-            <p className="font-semibold">
-              Our transformative approach offers tailored strategies and
-              unwavering personal and professional growth support. With a
-              dedicated life coach, unlock your fullest potential and achieve
-              your goals – advancing your career, enhancing relationships, or
-              overall life improvement.
-            </p>
-          </div>
-          <div className="flex flex-col rounded border p-4 text-center">
-            <img className="mx-auto" src={grp2}></img>
-            <h2 className="text-lg font-semibold text-primary-400">
-              Empowerment Exchange
-            </h2>
-            <p className="font-semibold">
-              Explore the advantages of our Group Life Coaching offering. By
-              joining our community of dedicated individuals, you'll receive
-              expert guidance in pursuing personal growth. Achieve clarity,
-              reach your goals, and experience a more enriching life journey
-              with the help of our experienced coaches.
-            </p>
-          </div>
-          <div className="flex flex-col rounded border p-4 text-center">
-            <img className="mx-auto" src={grp3}></img>
-            <h2 className="text-lg font-semibold text-primary-400">
-              360-degree evaluation
-            </h2>
-            <p className="font-semibold">
-              Our comprehensive approach examines all facets of your life,
-              providing a clear roadmap for growth. Our expert coaches will
-              assess your strengths, identify areas for improvement, & work with
-              you to set & achieve meaningful goals. Elevate every aspect of
-              your life.
-            </p>
-          </div>
-        </div>
-      </header>
+      </section>
 
-      <FaqWithImage data={musicalTherapyFaq} />
-    </main>
+      <section className="container mx-auto my-2 mb-8 text-center">
+        <h2 className="subheading">
+          <span>Wleness </span>
+          <span className=" heading-primary"> life coaching </span>
+        </h2>
+        <div className="container mx-auto mt-6 grid grid-cols-1 items-center justify-center gap-4 sm:grid-cols-2 md:grid-cols-3">
+          {wlenessLifeCoaching.map((value, i) => {
+            return (
+              <figure key={i} className="p-4 text-center">
+                <div>
+                  <img className="mx-auto w-32 xl:w-44" src={value.image} />
+                </div>
+                <figcaption className="font-semibold">
+                  <h2 className="mb-2 text-xl font-bold text-primary-400">
+                    {value.name}
+                  </h2>
+                  <p className="text-sm text-slate-500">{value.desc}</p>
+                </figcaption>
+              </figure>
+            );
+          })}
+        </div>
+      </section>
+
+      <FaqWithImage data={lifeStyleCoachingFaqs} />
+    </>
   );
 }

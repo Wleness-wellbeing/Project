@@ -96,6 +96,9 @@ import {
   two,
   three,
   four,
+  grp1,
+  grp2,
+  grp3,
 } from "../assets";
 // Components
 import HeaderWithImage from "../components/HeaderWithImage";
@@ -1348,28 +1351,45 @@ export const statistics = [
   },
 ];
 
-
+// Life style coaching
 export const lifecoching = [
   {
-    title: "Clarity:",
+    title: "Clarity",
     image: one,
-    desc: "Life coaching clarifies your goals, dreams, and aspirations. It helps you see a clear path forward and set achievable objectives. "
+    desc: "Life coaching clarifies your goals, dreams, and aspirations. It helps you see a clear path forward and set achievable objectives. ",
   },
   {
-    title: "Motivation:",
+    title: "Motivation",
     desc: "Feeling stuck or lacking motivation? A life coach can reignite your passion and keep you accountable for your aspirations.",
     image: two,
   },
   {
-    title: "Confidence:",
+    title: "Confidence",
     desc: "Fear of failure? It's a common roadblock. Life coaching equips you with the tools to boldly face your fears & move forward.",
 
     image: three,
   },
   {
-    title: "Overcoming Fear:",
+    title: "Overcoming Fear",
     desc: "Fear of failure? It's a common roadblock. Life coaching equips you with the tools to boldly face your fears & move forward.",
-
     image: four,
+  },
+];
+
+export const wlenessLifeCoaching = [
+  {
+    name: "One to One Power Coaching",
+    image: grp1,
+    desc: "Our transformative approach offers tailored strategies and unwavering personal and professional growth support. With a dedicated life coach, unlock your fullest potential and achieve your goals – advancing your career, enhancing relationships, or overall life improvement.",
+  },
+  {
+    name: "Empowerment Exchange",
+    image: grp2,
+    desc: "Explore the advantages of our Group Life Coaching offering. By joining our community of dedicated individuals, you'll receive expert guidance in pursuing personal growth. Achieve clarity, reach your goals, and experience a more enriching life journey with the help of our experienced coaches.",
+  },
+  {
+    name: "360-degree evaluation",
+    image: grp3,
+    desc: "Our comprehensive approach examines all facets of your life, providing a clear roadmap for growth. Our expert coaches will assess your strengths, identify areas for improvement, & work with you to set & achieve meaningful goals. Elevate every aspect of your life.",
   },
 ];
