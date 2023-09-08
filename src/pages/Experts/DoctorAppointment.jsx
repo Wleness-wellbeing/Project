@@ -99,12 +99,12 @@ export default function DoctorAppointment() {
         <img
           src={bgDotsPattern}
           alt=""
-          className="absolute -right-20 top-0 w-32 lg:-right-20"
+          className="absolute -right-20 top-0 hidden w-32 lg:-right-20 lg:block lg:w-64"
         />
         <img
           src={bgDotsPattern}
           alt=""
-          className="absolute -left-20 top-12 w-32 lg:bottom-52 lg:w-72"
+          className="absolute -left-20 top-20 w-32 lg:top-40 lg:w-72"
         />
       </header>
 

@@ -1,10 +1,9 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFilter, faHeart, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { expertClient, featuredPatient } from "../../assets";
 import DoctorsCard from "../../components/DoctorsCard";
 import { allExperts } from "../../data/doctors";
-import HeartIcon from "../../components/icon/HeartIcon";
 
 export default function ExpertsDetails() {
   return (
@@ -76,7 +75,7 @@ export default function ExpertsDetails() {
 
       {/* Specialist Doctors */}
       <section>
-        <div className="side-spacing grid-cols-[repeat(4, minmax(280, 1fr))] container mx-auto grid items-center gap-5 p-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-3 3xl:gap-10">
+        <div className="side-spacing grid-cols-[repeat(4, minmax(280, 1fr))] container mx-auto grid items-center gap-5 p-4 sm:grid-cols-2 lg:grid-cols-3  3xl:gap-10">
           {allExperts.map((value, i) => {
             return <DoctorsCard key={i} data={value} />;
           })}

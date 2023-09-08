@@ -162,7 +162,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="container mx-auto mb-5 mt-4 space-y-4 text-xs text-slate-600 lg:mb-0 lg:text-sm">
+        <div className="container mx-auto mb-5 space-y-4 text-xs text-slate-600 lg:mb-0 lg:text-sm">
           <p>
             Wleness does not cover emergencies in medicine or psychology. We do
             not intend to support those in distress, such as when they have

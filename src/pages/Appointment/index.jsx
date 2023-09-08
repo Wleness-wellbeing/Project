@@ -15,6 +15,29 @@ export default function Appointment() {
   return (
     <>
       <section className="relative">
+        <div className="absolute left-0 top-0 -z-10  h-28 w-full bg-primary-50 lg:bottom-0 lg:left-0 lg:top-0 lg:h-auto lg:w-28"></div>
+        <div className="absolute left-0 top-28 -z-10 h-28 w-full bg-primary-50/60 lg:bottom-0 lg:left-28 lg:top-0 lg:h-auto lg:w-28"></div>
+        <div className="absolute left-0 top-56 -z-10 h-28 w-full bg-primary-50/50 lg:bottom-0 lg:left-56 lg:top-0 lg:h-auto lg:w-28"></div>
+        <div className="absolute left-0 top-[21rem] -z-10 h-16 w-full bg-primary-50/30 lg:bottom-0 lg:left-[21rem] lg:top-0 lg:h-auto lg:w-28"></div>
+
+        <figure className="left-16 top-10 mx-auto w-96 justify-center gap-x-8 py-6 lg:absolute lg:w-[320px]">
+          <div>
+            <img
+              src={doctorAppointment}
+              alt=""
+              className="mx-auto mb-2 w-52 object-cover"
+            />
+          </div>
+          <figcaption className="mx-auto w-52">
+            <h4 className="text-3xl font-bold">Dr. Jenny</h4>
+            <h6 className="text-xl font-semibold">6+ yrs of experience</h6>
+            <div className="my-2 font-medium">
+              <p>Expertise: Yoga, Work-life</p>
+              <p>Speaks: German, English</p>
+            </div>
+          </figcaption>
+        </figure>
+
         {/* Book Session */}
         <div className="container mx-auto flex justify-end pb-10">
           <form className="w-[680px] pt-6">
@@ -62,14 +85,14 @@ export default function Appointment() {
               <h5 className="my-5 text-center text-xl font-semibold">
                 2. Select session duration
               </h5>
-              <ul className="grid gap-x-5 lg:grid-cols-3">
-                <li className="rounded-lg border-2 border-primary-300 px-6 py-2.5 text-center font-semibold text-primary-300">
+              <ul className="grid grid-cols-3 gap-x-3 lg:gap-x-5">
+                <li className="rounded-lg border-2 border-primary-300 px-2 py-2.5 text-center font-semibold text-primary-300 lg:px-6">
                   30 Min
                 </li>
-                <li className="rounded-lg border-2 border-primary-300 px-6 py-2.5 text-center font-semibold text-primary-300">
+                <li className="rounded-lg border-2 border-primary-300 px-2 py-2.5 text-center font-semibold text-primary-300 lg:px-6">
                   45 Min
                 </li>
-                <li className="rounded-lg border-2 border-primary-300 px-6 py-2.5 text-center font-semibold text-primary-300">
+                <li className="rounded-lg border-2 border-primary-300 px-2 py-2.5 text-center font-semibold text-primary-300 lg:px-6">
                   1 Hr
                 </li>
               </ul>
@@ -239,29 +262,6 @@ export default function Appointment() {
             </div>
           </div>
         </div>
-
-        <div className="absolute bottom-0 left-0 top-0 w-28 bg-primary-50"></div>
-        <div className="absolute bottom-0 left-28 top-0 w-28 bg-primary-50/60"></div>
-        <div className="absolute bottom-0 left-56 top-0 w-28 bg-primary-50/50"></div>
-        <div className="absolute bottom-0 left-[21rem] top-0 w-28 bg-primary-50/30"></div>
-
-        <figure className="absolute left-16 top-10 mx-auto w-96 justify-center gap-x-8 py-6 lg:w-[320px]">
-          <div>
-            <img
-              src={doctorAppointment}
-              alt=""
-              className="mx-auto mb-2 w-52 object-cover"
-            />
-          </div>
-          <figcaption className="mx-auto w-52">
-            <h4 className="text-3xl font-bold">Dr. Jenny</h4>
-            <h6 className="text-xl font-semibold">6+ yrs of experience</h6>
-            <div className="my-2 font-medium">
-              <p>Expertise: Yoga, Work-life</p>
-              <p>Speaks: German, English</p>
-            </div>
-          </figcaption>
-        </figure>
       </section>
     </>
   );
