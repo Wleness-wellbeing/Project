@@ -7,7 +7,6 @@ import {
   faHome,
   faLocationDot,
   faPhone,
-  faRightFromBracket,
   faUser,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
@@ -70,10 +69,6 @@ export const serviceMenuPages = [
   {
     name: "Internship",
     slug: "/internship",
-  },
-  {
-    name: "Self Care",
-    slug: "/self-care",
   },
   {
     name: "Our Experts",

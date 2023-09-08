@@ -28,7 +28,7 @@ export default function Footer() {
                     <li key={i}>
                       <Link
                         to={value[1]}
-                        className="flex items-center text-sm md:text-base"
+                        className="flex items-center text-xs md:text-base"
                         target="_blank"
                       >
                         <FontAwesomeIcon icon={value[2]} className="mr-3" />
@@ -47,7 +47,7 @@ export default function Footer() {
                 {footerAboutWleness.map((value, index) => {
                   return (
                     <li key={index}>
-                      <Link className="text-sm md:text-base" to={value[1]}>
+                      <Link className="text-xs md:text-base" to={value[1]}>
                         {value[0]}
                       </Link>
                     </li>
@@ -63,7 +63,7 @@ export default function Footer() {
                 {footerOurServices.map((value, index) => {
                   return (
                     <li key={index}>
-                      <Link className="text-sm md:text-base" to={value[1]}>
+                      <Link className="text-xs md:text-base" to={value[1]}>
                         {value[0]}
                       </Link>
                     </li>
@@ -79,7 +79,7 @@ export default function Footer() {
                 {footerFocusAreas.map((value, index) => {
                   return (
                     <li key={index}>
-                      <Link className="text-sm md:text-base" to={value[1]}>
+                      <Link className="text-xs md:text-base" to={value[1]}>
                         {value[0]}
                       </Link>
                     </li>
@@ -96,7 +96,7 @@ export default function Footer() {
                   {footerOurExperts.map((value, index) => {
                     return (
                       <li key={index}>
-                        <Link className="text-sm md:text-base" to={value[1]}>
+                        <Link className="text-xs md:text-base" to={value[1]}>
                           {value[0]}
                         </Link>
                       </li>
@@ -106,15 +106,17 @@ export default function Footer() {
               </div>
 
               <div>
-                <h4 className="my-2 text-xl font-semibold">Library</h4>
+                <h4 className="mb-2 text-lg font-semibold md:my-2 lg:text-xl">
+                  Library
+                </h4>
                 <ul className="md:space-y-1">
                   <li>
-                    <Link className="text-sm md:text-base" to="/blogs">
+                    <Link className="text-xs md:text-base" to="/blogs">
                       Blogs
                     </Link>
                   </li>
                   <li>
-                    <Link className="text-sm md:text-base" to="">
+                    <Link className="text-xs md:text-base" to="">
                       Assessments
                     </Link>
                   </li>
@@ -125,7 +127,7 @@ export default function Footer() {
         </div>
 
         <div className="container mx-auto pb-1 lg:pb-4">
-          <div className="pb-2 text-center lg:text-right">
+          <div className="pb-2 text-center md:text-right">
             <Link to="/privacy-policy" className="text-sm">
               Privacy Policy
             </Link>
@@ -134,8 +136,8 @@ export default function Footer() {
               Terms & Conditions
             </Link>
           </div>
-          <div className="flex items-center justify-between">
-            <div className="gap-x-4 lg:flex">
+          <div className="items-center justify-between md:flex">
+            <div className="flex justify-center gap-x-4">
               <img
                 src={startUpIndiaLogo}
                 alt=""
@@ -144,7 +146,7 @@ export default function Footer() {
               <img src={logoIAF} alt="" className="w-14 object-contain" />
               <img src={logoISO} alt="" className="w-10 object-contain" />
             </div>
-            <div className="flex items-center gap-x-1">
+            <div className="my-3 flex items-center justify-center gap-x-1">
               {socialLinks.map((value, i) => {
                 return (
                   <Link to={value[1]} key={i} target="_blank">
@@ -158,6 +160,39 @@ export default function Footer() {
               })}
             </div>
           </div>
+        </div>
+
+        <div className="container mx-auto mb-5 mt-4 space-y-4 text-xs text-slate-600 lg:mb-0 lg:text-sm">
+          <p>
+            Wleness does not cover emergencies in medicine or psychology. We do
+            not intend to support those in distress, such as when they have
+            suicidal or self-harming thoughts or exhibit signs of severe
+            clinical disorders like schizophrenia and other psychotic ailments.
+            The best type of assistance in these situations is in-person medical
+            assistance. Suppose you believe you are going through any of these
+            issues. In that case, we strongly advise you to go to the hospital
+            or emergency room that is most convenient for you to speak with a
+            therapist, social worker, or psychiatrist in person. We advise
+            including a close relative or friend who can provide support.
+          </p>
+          <p>
+            You can also get in touch with a suicide hotline in your home
+            nation:
+          </p>
+          <ul>
+            <li>
+              <Link
+                className="mb-2 font-semibold hover:text-primary-400"
+                to="http://healthcollective.in/contact/helplines/"
+              >
+                http://healthcollective.in/contact/helplines/
+              </Link>
+            </li>
+            <li className="font-semibold">
+              <span className="text-primary-400">Toll-free number: </span>
+              <span>080 - 4611 0007</span>
+            </li>
+          </ul>
         </div>
 
         <p className="pb-5 text-center text-sm font-medium lg:pt-3">

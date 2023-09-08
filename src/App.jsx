@@ -47,6 +47,7 @@ import RoutineCare from "./pages/Dashboard/RoutineCare";
 import DoctorSignup from "./pages/Authentication/DoctorSignup";
 import TherapistJoining from "./pages/JoinUs/TherapistJoining";
 import PsychiatristJoining from "./pages/JoinUs/PsychiatristJoining";
+import Chatbox from "./pages/Dashboard/Chatbox";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -355,6 +356,14 @@ function App() {
             <DashboardLayout>
               <Selfcare />
             </DashboardLayout>
+          }
+        />
+        <Route
+          path="/chatbox"
+          element={
+            <SignupLayout>
+              <Chatbox />
+            </SignupLayout>
           }
         />
 

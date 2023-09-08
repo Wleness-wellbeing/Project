@@ -15,14 +15,22 @@ export const selfCareFeeling = [
 ];
 
 export const selfCareConcern = [
-  ["Anxiety", "rgba(223, 231, 253)"],
-  ["Stress", "rgba(252, 246, 189, 0.44)"],
-  ["Depression", "rgba(185, 281, 192, 0.44)"],
-  ["Panic Attacks", "rgba(255, 191, 129, 0.44)"],
-  ["Contact Disorder", "rgba(255, 191, 129, 0.44)"],
-  ["Bipolar Disorder", "rgba(255, 191, 129, 0.44)"],
-  ["Eating Disorder", "rgba(255, 191, 129, 0.44)"],
-  ["Anger Issues", "rgba(255, 191, 129, 0.44)"],
+  ["Anxiety", "rgba(223, 231, 253)", "/therapy/anxiety"],
+  ["Stress", "rgba(252, 246, 189, 0.44)", "/therapy/stress"],
+  ["Depression", "rgba(185, 281, 192, 0.44)", "/therapy/depression"],
+  ["Panic Attacks", "rgba(255, 191, 129, 0.44)", "/therapy/panic-attack"],
+  [
+    "Conduct Disorder",
+    "rgba(255, 191, 129, 0.44)",
+    "/therapy/conduct-disorder",
+  ],
+  [
+    "Bipolar Disorder",
+    "rgba(255, 191, 129, 0.44)",
+    "/therapy/bipolar-disorder",
+  ],
+  ["Eating Disorder", "rgba(255, 191, 129, 0.44)", "/therapy/eating-disorder"],
+  ["Anger Issues", "rgba(255, 191, 129, 0.44)", "/therapy/anger"],
 ];
 
 export const RoutineCareChats = [

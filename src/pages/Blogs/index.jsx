@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 // Swiper Js & Styles
@@ -8,21 +8,41 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 // Data
 import { blogHeader1, blogHeader2, blogRecent } from "../../assets";
-import { blogsData } from "../../data";
 // Component
 import BlogCard from "../../components/Cards/BlogCard";
+import {
+  issuesBlogs,
+  medicalBlogs,
+  navigatingMidlifeForWomenBlogs,
+} from "../../data/blogs";
+
+const allBlogs = [
+  ...navigatingMidlifeForWomenBlogs,
+  ...issuesBlogs,
+  ...medicalBlogs,
+];
 
 export default function Blogs() {
+  const [blogs, setBlogs] = useState(allBlogs);
+
   const recentBlogs = [1, 2, 3, 4, 5];
+
+  const blogFilterValues = [
+    allBlogs,
+    navigatingMidlifeForWomenBlogs,
+    issuesBlogs,
+    medicalBlogs,
+  ];
   const blogFilters = [
     "All Categories",
-    "Mental Peace",
-    "Social Life",
-    "Culture",
-    "Natural",
-    "Travel",
+    "Navigating Miflife for Women",
+    "Issues",
+    "Medical",
   ];
-
+  const handleBlogsFilter = (index) => {
+    console.log(index);
+    setBlogs(blogFilterValues[index]);
+  };
   return (
     <>
       {/* ========== Header ============= */}
@@ -117,7 +137,7 @@ export default function Blogs() {
         <ul className="flex flex-wrap justify-center gap-2 pb-8 pt-12 lg:justify-between lg:gap-x-14 lg:gap-y-6 lg:pt-5 2xl:py-8">
           {blogFilters.map((value, index) => {
             return (
-              <li key={index}>
+              <li key={index} onClick={() => handleBlogsFilter(index)}>
                 <span className="inline-block cursor-pointer rounded-3xl bg-primary-50/50 px-6 py-2.5 text-xs font-bold text-slate-900 transition-colors hover:bg-primary-50 md:text-base">
                   {value}
                 </span>
@@ -127,8 +147,8 @@ export default function Blogs() {
         </ul>
 
         {/* ============== Blogs ============= */}
-        <div className="grid gap-4 rounded-xl sm:grid-cols-2 lg:grid-cols-3">
-          {blogsData.map((value, i) => {
+        <div className="grid gap-4 rounded-xl sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+          {blogs.map((value, i) => {
             return <BlogCard key={i} data={value} />;
           })}
         </div>

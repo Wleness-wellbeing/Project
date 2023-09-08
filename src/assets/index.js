@@ -668,8 +668,17 @@ import bgDotsPattern from "./images/designs/bg-dots-pattern.png";
 import bubbleDoodles from "./images/designs/bubble-doodle.png";
 import didYouKnow from "./images/designs/did-you-know.png";
 import designRing from "./images/designs/design-ring.png";
+import placeholderPortrait from "./images/designs/placeholder-portrait.png";
+import placeholderLandscape from "./images/designs/placeholder-landscape.png";
 
-export { bgDotsPattern, bubbleDoodles, didYouKnow, designRing };
+export {
+  bgDotsPattern,
+  bubbleDoodles,
+  didYouKnow,
+  designRing,
+  placeholderPortrait,
+  placeholderLandscape,
+};
 
 // Community
 import communityHeader from "./images/community/community-header.png";

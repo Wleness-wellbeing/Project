@@ -1,14 +1,41 @@
-import React from "react";
-import { faAngleDown, faEllipsis } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from "react";
+import { faAngleDown, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Data
 import { patientsList } from "../../data/patients";
 // Components
-import UpcomingMeets from "../../components/list/UpcomingMeets";
 import PatientListItem from "../../components/list/PatientListItem";
 import { selfCareConcern, selfCareFeeling } from "../../data/dashboard";
+import { Link } from "react-router-dom";
+import { placeholderLandscape, placeholderPortrait } from "../../assets";
 
 export default function Selfcare() {
+  const [thoughts, setThoughts] = useState([]);
+  const [newThought, setNewThought] = useState("");
+
+  // Handle thought form submit
+  const handleThoughtSubmit = (event) => {
+    event.preventDefault();
+
+    if (newThought == "") return;
+
+    setThoughts([...thoughts, newThought]);
+    // empty new thought value after submission
+    setNewThought("");
+  };
+
+  // Add New Thought
+  const updateNewThought = (event) => {
+    setNewThought(event.target.value);
+  };
+
+  // Delete Thought
+  const deleteThought = (index) => {
+    const newArray = [...thoughts];
+    newArray.splice(index, 1);
+    setThoughts(newArray);
+  };
+
   return (
     <section className="flex gap-5">
       <div className="w-[65%]">
@@ -65,7 +92,8 @@ export default function Selfcare() {
           <div className="grid grid-cols-4 gap-5">
             {selfCareConcern.map((value, i) => {
               return (
-                <div
+                <Link
+                  to={value[2]}
                   key={i}
                   className="relative grid rounded-xl px-5 py-4"
                   style={{ background: value[1] }}
@@ -73,52 +101,105 @@ export default function Selfcare() {
                   <span className="mb-1 text-center font-semibold">
                     {value[0]}
                   </span>
-                </div>
+                </Link>
               );
             })}
           </div>
         </div>
 
-        {/* Patient List & Consultation */}
-        <div className="flex">
-          <div className="w-1/2 p-4">
-            <h3 className="flex justify-between pb-4 pt-2">
-              <span className="text-xl font-bold">Linked Therapist</span>
-              <span className="flex items-center text-sm font-medium text-slate-400">
-                <span className="mr-1">Today </span>
-                <FontAwesomeIcon icon={faAngleDown} />
-              </span>
-            </h3>
+        {/* Today's Compilation */}
+        <div>
+          <h3 className="pb-4 pt-2 text-xl font-bold">
+            Today's compilation for you
+          </h3>
 
-            <div className="space-y-3">
-              <PatientListItem data={patientsList[0]} />;
+          <div className="lg:flex lg:gap-5">
+            <div className="rounded-xl border-[1px] border-slate-100 p-8 shadow-lg shadow-slate-300 lg:w-2/5">
+              <h4 className="mb-4 text-xl font-semibold">Today's Article</h4>
+              <p className="mb-6 text-sm font-semibold">
+                Unraveling the Grip of Anxiety: Insights and Strategies to
+                Navigate Life's Challenges with Resilience and Inner Calm.
+              </p>
+              <div className="flex justify-between text-sm font-semibold text-blue-500">
+                <span>5 Min</span>
+                <span>Dr. Sheena Bajaj</span>
+              </div>
+            </div>
+
+            <div className="relative lg:w-1/5">
+              <h4 className="absolute left-3 top-3 font-bold text-white">
+                Stress
+              </h4>
+              <img src={placeholderPortrait} alt="" className="h-full w-full" />
+            </div>
+
+            <div className="relative lg:w-2/5">
+              <div className="absolute bottom-0 left-0 w-full p-5 text-white">
+                <h4 className="mb-2 font-bold">Empowering Self-Assurance</h4>
+                <p className="text-sm font-medium">
+                  Nurturing Lasting Confidence through Purposeful Growth
+                </p>
+              </div>
+              <img
+                src={placeholderLandscape}
+                alt=""
+                className="h-full w-full"
+              />
             </div>
           </div>
         </div>
       </div>
+
       <div className="w-[35%] p-4">
-        <div className="mb-4">
-          <h5 className="flex items-center justify-between">
-            <span className="font-bold">Upcoming Appointments</span>
-            <span className="cursor-pointer rounded-full bg-slate-200 px-2 py-0.5 text-sm font-semibold transition-all hover:bg-slate-300">
-              <FontAwesomeIcon icon={faEllipsis} />
-            </span>
-          </h5>
+        <div className="mb-6 rounded-2xl bg-yellow-300/25 p-4">
+          <h4 className="font-bold">Write Your Thoughts...</h4>
+          {thoughts.map((value, i) => {
+            return (
+              <p
+                key={i}
+                className="group flex justify-between border-b-[1px] border-slate-300 p-2 text-sm font-semibold outline-yellow-300"
+              >
+                <span>{value}</span>
+                <FontAwesomeIcon
+                  className="hidden cursor-pointer text-red-500 hover:text-red-600 group-hover:block"
+                  icon={faTrash}
+                  onClick={() => deleteThought(i)}
+                />
+              </p>
+            );
+          })}
+
+          <form onSubmit={handleThoughtSubmit}>
+            <input
+              name="thought"
+              value={newThought}
+              onChange={updateNewThought}
+              placeholder="Add New Thought"
+              className="w-full border-b-[1px] border-slate-300 bg-transparent p-2 text-sm font-medium outline-yellow-300"
+            />
+            <div className="mt-2 text-right">
+              <button
+                type="submit"
+                className="rounded-lg bg-primary-100 px-4 py-1.5 text-xs font-medium text-white"
+              >
+                Save
+              </button>
+            </div>
+          </form>
         </div>
 
         <div>
           <h5 className="flex items-center justify-between">
-            <span className="font-bold">Upcoming Events</span>
+            <span className="font-bold">Selection of Music for you</span>
             <span className="cursor-pointer rounded-full px-2 py-0.5 text-sm font-semibold text-blue-500 transition-all">
               View all
             </span>
           </h5>
 
           <div className="space-y-3 py-4">
-            <UpcomingMeets />
-            <UpcomingMeets />
-            <UpcomingMeets />
-            <UpcomingMeets />
+            <PatientListItem data={patientsList[0]} />
+            <PatientListItem data={patientsList[0]} />
+            <PatientListItem data={patientsList[0]} />
           </div>
         </div>
       </div>
