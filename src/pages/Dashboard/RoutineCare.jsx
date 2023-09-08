@@ -1,13 +1,66 @@
-import React from "react";
-import { faRightLong } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from "react";
+import { faRightLong, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { RoutineCareChats } from "../../data/dashboard";
 import { iconDay, iconNight } from "../../assets";
 
 export default function RoutineCare() {
+  const [morningRoutine, setMorningRoutine] = useState([]);
+  const [eveningRoutine, setEveningRoutine] = useState([]);
+  const [morningTask, setMorningTask] = useState("");
+  const [eveningTask, setEveningTask] = useState("");
+
+  // ======== Morning ========
+  // Add Morning Task
+  const handleMorningTask = (event) => {
+    event.preventDefault();
+
+    if (morningTask == "") return;
+
+    setMorningRoutine([...morningRoutine, morningTask]);
+    // Empty task
+    setMorningTask("");
+  };
+
+  // Update evening task value
+  const updateMorningTask = (event) => {
+    setMorningTask(event.target.value);
+  };
+
+  // Delete Thought
+  const deleteMorningTask = (index) => {
+    const newArray = [...morningRoutine];
+    newArray.splice(index, 1);
+    setMorningRoutine(newArray);
+  };
+
+  // ======== Evening ========
+  // Add Evening Task
+  const handleEveningTask = (event) => {
+    event.preventDefault();
+
+    if (eveningTask == "") return;
+
+    setEveningRoutine([...eveningRoutine, eveningTask]);
+    // Empty task
+    setEveningTask("");
+  };
+
+  // Update evening task value
+  const updateEveningTask = (event) => {
+    setEveningTask(event.target.value);
+  };
+
+  // Delete Thought
+  const deleteEveningTask = (index) => {
+    const newArray = [...eveningRoutine];
+    newArray.splice(index, 1);
+    setEveningRoutine(newArray);
+  };
+
   return (
-    <section className="flex gap-5">
-      <div className="w-[65%]">
+    <section className="gap-5 lg:flex">
+      <div className="lg:w-[65%]">
         <div className="mb-2">
           <h1>
             <span className="text-2xl font-medium">Good Morning </span>
@@ -22,66 +75,59 @@ export default function RoutineCare() {
         <div className="mb-5 mt-6 space-y-6">
           {RoutineCareChats.map((value, i) => {
             return (
-              <div
-                key={i}
-                className={
-                  "rounded-2xl bg-primary-50/50 px-6 py-2.5 " + value.bg
-                }
-              >
+              <div key={i} className={"rounded-2xl px-6 py-2.5 " + value.bg}>
                 <h4 className="font-bold">{value.question}</h4>
                 <p className="text-sm font-semibold">{value.answer}</p>
                 <p className="text-right">
-                  <span className="text-sm font-semibold text-red-600">
+                  {/* <span className="text-sm font-semibold text-red-600">
                     View More
-                  </span>
+                  </span> */}
                 </p>
               </div>
             );
           })}
         </div>
       </div>
-      <div className="w-[35%] p-4">
-        <div className="relative mb-10 rounded-2xl bg-[#C0F1F8] p-6">
+      <div className="lg:w-[35%] lg:p-4">
+        <div className="relative mb-6 rounded-2xl bg-[#C0F1F8] p-6">
           <h2 className="mb-2 font-semibold">
             Morning Routine <span className="font-bold">AM</span>
           </h2>
           <ul className="space-y-2 font-semibold">
-            <li>
-              <span className="mr-2 text-sky-500">
-                <FontAwesomeIcon icon={faRightLong} />
-              </span>
-              <span>30 Min Books</span>
-            </li>
-            <li>
-              <span className="mr-2 text-sky-500">
-                <FontAwesomeIcon icon={faRightLong} />
-              </span>
-              <span>Brush your tooth</span>
-            </li>
-            <li>
-              <span className="mr-2 text-sky-500">
-                <FontAwesomeIcon icon={faRightLong} />
-              </span>
-              <span>Make Bed</span>
-            </li>
-            <li>
-              <span className="mr-2 text-sky-500">
-                <FontAwesomeIcon icon={faRightLong} />
-              </span>
-              <span>Music</span>
-            </li>
-            <li>
-              <span className="mr-2 text-sky-500">
-                <FontAwesomeIcon icon={faRightLong} />
-              </span>
-              <span>Running</span>
-            </li>
-            <li>
-              <span className="mr-2 text-sky-500">
-                <FontAwesomeIcon icon={faRightLong} />
-              </span>
-              <span>Yoga</span>
-            </li>
+            {morningRoutine.map((value, i) => {
+              return (
+                <li key={i} className="group flex justify-between">
+                  <div>
+                    <span className="mr-2 text-sky-500">
+                      <FontAwesomeIcon icon={faRightLong} />
+                    </span>
+                    <span>{value}</span>
+                  </div>
+                  <FontAwesomeIcon
+                    className="hidden cursor-pointer text-red-500 hover:text-red-600 group-hover:block"
+                    icon={faTrash}
+                    onClick={() => deleteMorningTask(i)}
+                  />
+                </li>
+              );
+            })}
+            <form onSubmit={handleMorningTask}>
+              <input
+                name="morning_task"
+                value={morningTask}
+                onChange={updateMorningTask}
+                placeholder="Add New Task"
+                className="w-full border-b-[1px] border-slate-300 bg-transparent p-2 text-sm font-medium outline-slate-600"
+              />
+              <div className="mt-2 text-right">
+                <button
+                  type="submit"
+                  className="rounded-lg bg-primary-100 px-4 py-1.5 text-xs font-medium text-white"
+                >
+                  Save
+                </button>
+              </div>
+            </form>
           </ul>
 
           <img src={iconDay} alt="" className="absolute -right-5 -top-6 w-20" />
@@ -92,42 +138,40 @@ export default function RoutineCare() {
             Evening Routine <span className="font-bold">AM</span>
           </h2>
           <ul className="space-y-2 font-semibold">
-            <li>
-              <span className="mr-2 text-sky-500">
-                <FontAwesomeIcon icon={faRightLong} />
-              </span>
-              <span>30 Min Books</span>
-            </li>
-            <li>
-              <span className="mr-2 text-sky-500">
-                <FontAwesomeIcon icon={faRightLong} />
-              </span>
-              <span>Brush your tooth</span>
-            </li>
-            <li>
-              <span className="mr-2 text-sky-500">
-                <FontAwesomeIcon icon={faRightLong} />
-              </span>
-              <span>Make Bed</span>
-            </li>
-            <li>
-              <span className="mr-2 text-sky-500">
-                <FontAwesomeIcon icon={faRightLong} />
-              </span>
-              <span>Music</span>
-            </li>
-            <li>
-              <span className="mr-2 text-sky-500">
-                <FontAwesomeIcon icon={faRightLong} />
-              </span>
-              <span>Running</span>
-            </li>
-            <li>
-              <span className="mr-2 text-sky-500">
-                <FontAwesomeIcon icon={faRightLong} />
-              </span>
-              <span>Yoga</span>
-            </li>
+            {eveningRoutine.map((value, i) => {
+              return (
+                <li key={i} className="group flex justify-between">
+                  <div>
+                    <span className="mr-2 text-sky-500">
+                      <FontAwesomeIcon icon={faRightLong} />
+                    </span>
+                    <span>{value}</span>
+                  </div>
+                  <FontAwesomeIcon
+                    className="hidden cursor-pointer text-red-500 hover:text-red-600 group-hover:block"
+                    icon={faTrash}
+                    onClick={() => deleteEveningTask(i)}
+                  />
+                </li>
+              );
+            })}
+            <form onSubmit={handleEveningTask}>
+              <input
+                name="evening_task"
+                value={eveningTask}
+                onChange={updateEveningTask}
+                placeholder="Add New Task"
+                className="w-full border-b-[1px] border-slate-300 bg-transparent p-2 text-sm font-medium outline-slate-600"
+              />
+              <div className="mt-2 text-right">
+                <button
+                  type="submit"
+                  className="rounded-lg bg-primary-100 px-4 py-1.5 text-xs font-medium text-white"
+                >
+                  Save
+                </button>
+              </div>
+            </form>
           </ul>
 
           <img

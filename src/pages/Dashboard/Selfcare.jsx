@@ -37,8 +37,8 @@ export default function Selfcare() {
   };
 
   return (
-    <section className="flex gap-5">
-      <div className="w-[65%]">
+    <section className="gap-5 lg:flex">
+      <div className="lg:w-[65%]">
         <div className="mb-2">
           <h1>
             <span className="text-2xl font-medium">Good Morning </span>
@@ -52,7 +52,7 @@ export default function Selfcare() {
         {/* How you feel */}
         <div className="mb-5">
           <span className="text-lg font-bold">How you feel today...</span>
-          <div className="flex gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-5 lg:gap-5">
             {selfCareFeeling.map((value, i) => {
               return (
                 <div key={i} className="relative grid rounded-xl px-5 py-2">
@@ -70,7 +70,7 @@ export default function Selfcare() {
           <div className="my-7">
             <blockquote
               style={{ background: "rgb(0, 217, 245, 12%)" }}
-              className="mx-auto w-[640px] rounded-lg p-5 text-center"
+              className="mx-auto rounded-lg p-5 text-center lg:w-[640px]"
             >
               <q className="text-lg">
                 It's not the load that breaks you down, it's the way you carry
@@ -89,13 +89,13 @@ export default function Selfcare() {
             </span>
           </div>
 
-          <div className="grid grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-5">
             {selfCareConcern.map((value, i) => {
               return (
                 <Link
                   to={value[2]}
                   key={i}
-                  className="relative grid rounded-xl px-5 py-4"
+                  className="relative grid rounded-xl px-2 py-2 lg:px-5 lg:py-4"
                   style={{ background: value[1] }}
                 >
                   <span className="mb-1 text-center font-semibold">
@@ -113,8 +113,8 @@ export default function Selfcare() {
             Today's compilation for you
           </h3>
 
-          <div className="lg:flex lg:gap-5">
-            <div className="rounded-xl border-[1px] border-slate-100 p-8 shadow-lg shadow-slate-300 lg:w-2/5">
+          <div className="flex flex-col gap-5 lg:flex-row">
+            <div className="rounded-xl border-[1px] border-slate-100 p-5 shadow-lg shadow-slate-300 lg:w-2/5 lg:p-8">
               <h4 className="mb-4 text-xl font-semibold">Today's Article</h4>
               <p className="mb-6 text-sm font-semibold">
                 Unraveling the Grip of Anxiety: Insights and Strategies to
@@ -126,11 +126,15 @@ export default function Selfcare() {
               </div>
             </div>
 
-            <div className="relative lg:w-1/5">
+            <div className="relative mx-auto w-fit lg:w-1/5">
               <h4 className="absolute left-3 top-3 font-bold text-white">
                 Stress
               </h4>
-              <img src={placeholderPortrait} alt="" className="h-full w-full" />
+              <img
+                src={placeholderPortrait}
+                alt=""
+                className="lg:h-full lg:w-full"
+              />
             </div>
 
             <div className="relative lg:w-2/5">
@@ -143,14 +147,14 @@ export default function Selfcare() {
               <img
                 src={placeholderLandscape}
                 alt=""
-                className="h-full w-full"
+                className="rounded-xl object-cover lg:h-full lg:w-full"
               />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="w-[35%] p-4">
+      <div className="mt-5 lg:w-[35%] lg:p-4">
         <div className="mb-6 rounded-2xl bg-yellow-300/25 p-4">
           <h4 className="font-bold">Write Your Thoughts...</h4>
           {thoughts.map((value, i) => {

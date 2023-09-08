@@ -11,13 +11,13 @@ export default function Symptoms({ highlight, image, points }) {
         </p>
       </h2>
 
-      <div className="grid grid-cols-2 items-center">
+      <div className="grid items-center lg:grid-cols-2">
         <div className="lg:order-2">
           <img src={image} alt="" className="object-cover" />
         </div>
 
         {/* Points */}
-        <ul className="flex list-square flex-col justify-between gap-y-4 text-left text-2xl text-primary-300 lg:order-1 lg:py-7 xl:py-12 xl:pl-7 xl:pr-10">
+        <ul className="flex list-square flex-col justify-between gap-y-4 pl-6 text-left text-2xl text-primary-300 lg:order-1 lg:py-7 xl:py-12 xl:pl-7 xl:pr-10">
           {points.map((value, index) => {
             return (
               <li key={index}>
@@ -28,7 +28,7 @@ export default function Symptoms({ highlight, image, points }) {
         </ul>
       </div>
 
-      <div className="py-2 text-center">
+      <div className="mt-5 py-2 text-center lg:mt-3">
         <button className="btn-one">Undergo an evaluation</button>
       </div>
     </section>

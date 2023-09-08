@@ -16,7 +16,7 @@ export default function WlenessApproach() {
           relaxation and well-being intertwine
         </p>
 
-        <div className="my-6 grid grid-cols-4 gap-2 rounded-xl bg-[#FAFCE7] p-2 lg:my-10 lg:gap-6 lg:p-4">
+        <div className="my-6 grid grid-cols-2 gap-6 rounded-xl bg-[#FAFCE7] p-2 lg:my-10 lg:grid-cols-4 lg:gap-6 lg:p-4">
           {wlenessApproach.map((value, i) => {
             return <ApproachCard key={i} data={value} />;
           })}

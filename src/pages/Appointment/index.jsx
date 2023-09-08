@@ -21,13 +21,13 @@ export default function Appointment() {
         <div className="absolute left-0 top-[21rem] -z-10 h-16 w-full bg-primary-50/30 lg:bottom-0 lg:left-[21rem] lg:top-0 lg:h-auto lg:w-28"></div>
 
         <figure className="left-16 top-10 mx-auto w-96 justify-center gap-x-8 py-6 lg:absolute lg:w-[320px]">
-          <div>
+          <Link to="/appointment" className="block">
             <img
               src={doctorAppointment}
               alt=""
               className="mx-auto mb-2 w-52 object-cover"
             />
-          </div>
+          </Link>
           <figcaption className="mx-auto w-52">
             <h4 className="text-3xl font-bold">Dr. Jenny</h4>
             <h6 className="text-xl font-semibold">6+ yrs of experience</h6>

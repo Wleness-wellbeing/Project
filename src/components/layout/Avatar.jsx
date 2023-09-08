@@ -1,21 +1,5 @@
 import React from "react";
-import {
-  avatarImage1,
-  avatarImage2,
-  avatarImage3,
-  avatarImage4,
-  avatarImage5,
-  avatarImage6,
-} from "../../assets";
-
-const avatars = [
-  avatarImage1,
-  avatarImage2,
-  avatarImage3,
-  avatarImage4,
-  avatarImage5,
-  avatarImage6,
-];
+import { avatars } from "../../data/dashboard";
 
 export default function Avatar() {
   return (

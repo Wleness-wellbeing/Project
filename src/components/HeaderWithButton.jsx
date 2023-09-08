@@ -8,11 +8,8 @@ export default function HeaderWithButton({
   openAssessmentModal,
 }) {
   return (
-    <header className="bg-gradient-to-b from-primary-50/40 to-transparent !px-5 py-2 lg:py-6 2xl:!px-0 2xl:py-16">
+    <header className="bg-gradient-to-b from-primary-50/40 to-transparent py-2 lg:py-6 2xl:py-16">
       <div className="container mx-auto flex flex-col items-center lg:flex-row 2xl:justify-between">
-        <h1 className="subheading mb-4 text-center lg:hidden lg:text-left lg:leading-[4rem]">
-          {textColorize(title)}
-        </h1>
         <div className="mb-6 lg:order-2 lg:mb-0 lg:w-1/2 2xl:flex 2xl:justify-end">
           {/* Desktop Image */}
           <img src={image} alt="" className="w-full object-cover" />

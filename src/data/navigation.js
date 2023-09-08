@@ -221,7 +221,7 @@ export const adminSidebar = [
 
 export const userDashboardLinks = [
   ["Home", "/user/dashboard", faHome],
-  ["Profile", "/profile", faUser],
+  ["Profile", "/user/profile", faUser],
   ["Self Care", "/self-care", faHeartCircleCheck],
   ["Routine Care", "/user/routine-care", faBookBookmark],
   ["Routine Care", "/user/routine-care", faClipboardList],

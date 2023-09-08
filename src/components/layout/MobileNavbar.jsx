@@ -67,7 +67,7 @@ export default function MobileNavbar({ toggleJoinUs }) {
           <div className="mt-6 flex flex-col items-center space-y-3 px-4 lg:flex-row lg:px-0 xl:w-fit xl:space-y-0">
             <button
               onClick={toggleJoinUs}
-              className="mr-2 !w-full rounded-full border-2 border-primary-400 !py-1.5 px-4 !font-semibold text-primary-400 transition-all hover:bg-primary-400 hover:text-white xl:!w-fit"
+              className="!w-full rounded-full border-2 border-primary-400 !py-1.5 px-4 !font-semibold text-primary-400 transition-all hover:bg-primary-400 hover:text-white lg:mr-2 xl:!w-fit"
             >
               Join Us
             </button>
