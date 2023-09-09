@@ -53,7 +53,7 @@ const communitySupport = [
 export default function index() {
   return (
     <>
-      <header className="relative overflow-x-hidden overflow-y-clip bg-gradient-to-b from-primary-50/30 to-transparent">
+      <header className="relative overflow-x-hidden overflow-y-clip bg-primary-50/30">
         <div className="container mx-auto text-center">
           <h1 className="subheading my-8">
             <span className="heading-primary">Escape, Heal and Thrive </span>
@@ -84,12 +84,12 @@ export default function index() {
       </header>
 
       {/* Community Section */}
-      <section className="container mx-auto xl:flex xl:gap-5">
-        <div className="xl:w-1/2 xl:pr-16">
-          <h3 className="subheading mb-3">
+      <section className="container mx-auto lg:pt-6 xl:flex xl:items-center xl:gap-5">
+        <div className="pt-5 xl:w-1/2 xl:pr-16">
+          <h3 className="subheading mb-6">
             <span className="heading-primary">Wleness </span>Community
           </h3>
-          <p className="mb-4 text-lg font-medium">
+          <p className="mb-8 text-lg font-medium">
             Through our community, individuals can find solace in knowing they
             are not alone in their struggles. Whether seeking advice, sharing
             stories, or simply finding comfort in the presence of others, our
@@ -112,16 +112,18 @@ export default function index() {
       </section>
 
       {/* Support Section */}
-      <section className="container mx-auto pt-8 text-center">
-        <h2 className="subheading">
-          <span>Uncover your special heaven of </span>
-          <span className="heading-primary">support and belonging</span>
-        </h2>
-        <p className="py-2 text-lg font-semibold">
-          Always remember sharing your struggles only makes you stronger.
-        </p>
+      <section className="pt-8 text-center">
+        <div className="bg-primary-50/40 py-4">
+          <h2 className="subheading">
+            <span>Uncover your special heaven of </span>
+            <span className="heading-primary">support and belonging</span>
+          </h2>
+          <p className="text-lg font-semibold">
+            Always remember sharing your struggles only makes you stronger.
+          </p>
+        </div>
 
-        <div className="grid gap-x-14 gap-y-8 py-12 xl:grid-cols-3">
+        <div className="container mx-auto  grid gap-x-14 gap-y-8 py-12 xl:grid-cols-3">
           {communitySupport.map((value, index) => {
             return <CommunitySupportCard key={index} data={value} />;
           })}
@@ -132,13 +134,13 @@ export default function index() {
         </div>
       </section>
 
-      <section className="container mx-auto pb-10 text-center">
+      {/* <section className="container mx-auto pb-10 text-center">
         <h2 className="subheading heading-primary">We are here to help you!</h2>
         <p className="para mx-auto mb-4 xl:w-3/5">
           Helping you connect with like minded people. Find your ultimate
           support network today
         </p>
-      </section>
+      </section> */}
     </>
   );
 }

@@ -2045,7 +2045,7 @@ export const wlenessApproach = [
   {
     title: "Talk to the Therapist",
     image: wlenessApproachIcon1,
-    slug: "/services/therapy",
+    slug: "/experts/all",
   },
   {
     title: "Explore different tools & activities",

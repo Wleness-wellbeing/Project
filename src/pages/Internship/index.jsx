@@ -49,14 +49,17 @@ const whyWleness = [
   [
     iconExperience,
     "Whether you're looking to assist therapists, conducting research or supporting community outreach programs, enjoy customized diverse learning opportunities",
+    "true",
   ],
   [
     iconCommitment,
     "Our supportive and collaborative environment ensures you'll receive quality guidance and mentorship from experienced professionals dedicated to your growth.",
+    "false",
   ],
   [
     iconFacilities,
     "Experience holistic growth by working in a multi disciplinary team with a positive work-life balance. There's a place for you wherever you excel.",
+    "false",
   ],
 ];
 
@@ -73,10 +76,10 @@ export default function Internship() {
 
   return (
     <>
-      <header className="bg-gradient-to-b from-primary-50/30 to-transparent">
+      <header className="bg-primary-50/30 py-16">
         <div className="container mx-auto flex flex-col items-center justify-center md:flex-row">
           {/* Image on the right */}
-          <div className="md:w-1/2 lg:order-2 lg:p-12">
+          <div className="md:w-1/2 lg:order-2 ">
             <img src={internshipHeader} alt="header" className="w-full" />
           </div>
           {/* Text items on the left */}
@@ -118,7 +121,11 @@ export default function Internship() {
                 return (
                   <figure
                     key={i}
-                    className="flex cursor-pointer rounded-xl rounded-br-[5rem] border-2 border-slate-200 bg-white p-4 shadow-md transition-all hover:shadow-xl xs:flex-row lg:items-center lg:p-5 lg:py-3 xl:py-6"
+                    className={`flex cursor-pointer rounded-xl rounded-br-[5rem] border-2 border-slate-200 p-4 shadow-md transition-all  hover:shadow-xl xs:flex-row lg:items-center lg:p-5 lg:py-3 xl:py-6 ${
+                      value[2] == "true"
+                        ? " border-transparent bg-primary-10"
+                        : " hover:border-transparent hover:bg-primary-10"
+                    }`}
                   >
                     <div className="mr-4 w-1/5 xs:w-1/5 xl:w-1/5">
                       <img
@@ -153,7 +160,7 @@ export default function Internship() {
             return (
               <div
                 key={index}
-                className=" h-full rounded-xl border-2 border-slate-100 p-4 shadow-xl"
+                className=" h-full cursor-pointer rounded-xl border-2 border-slate-100 p-4 shadow-xl hover:border-transparent hover:bg-secondary/20"
               >
                 <div>
                   <img

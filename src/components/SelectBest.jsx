@@ -8,12 +8,14 @@ const SelectBest = React.forwardRef((props, ref) => {
   return (
     <section className="py-3 lg:py-6">
       <div className="relative overflow-x-clip">
-        <div className="container mx-auto text-center">
-          <h2 className="subheading lg:w-[640px]">
-            {textColorize(props.heading)}
-          </h2>
+        <div className="text-center">
+          <div className="bg-[#ddf2ef] py-4">
+            <h2 className="subheading container mx-auto !pb-0">
+              {textColorize(props.heading)}
+            </h2>
+          </div>
 
-          <div className="relative pt-2 md:flex md:gap-x-8 lg:pt-10">
+          <div className="container relative mx-auto pt-2 md:flex md:gap-x-8 lg:pt-10">
             <div className="md:w-1/2">
               <img src={props.image} alt="" className="mx-auto w-full" />
             </div>

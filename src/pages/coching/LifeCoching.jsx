@@ -2,16 +2,16 @@ import React from "react";
 import FaqWithImage from "../../components/FaqWithImage";
 import { lifeStyleCoachingFaqs } from "../../data/faqs";
 import { lifecoching, wlenessLifeCoaching } from "../../data";
-import { rectangle2, rectangle3 } from "../../assets";
+import { lifeCoachingHeader, rectangle2, rectangle3 } from "../../assets";
 export default function LifeCoching() {
   return (
     <>
-      <header className="relative overflow-x-clip bg-gradient-to-b from-secondary/10 to-transparent pb-8 pt-12 xl:pt-14">
+      <header className="relative overflow-x-clip bg-secondary/10 pb-6 pt-12 xl:pb-10 xl:pt-16">
         <div className="container mx-auto xl:flex xl:items-center xl:gap-x-5">
           <div className="mb-5 flex justify-end xl:order-2 xl:mr-4 xl:w-1/2">
             <img
-              className="w-full xl:w-4/5"
-              src={rectangle2}
+              className="w-full"
+              src={lifeCoachingHeader}
               alt="Your Image Alt Text"
             ></img>
           </div>
@@ -28,41 +28,27 @@ export default function LifeCoching() {
               </hgroup>
             </div>
 
-            <div className="!font-semibold xl:text-lg">
-              <p className="mb-6">
+            <ul className="rounded-2xl bg-primary-50 p-3 !font-semibold xl:text-lg">
+              <li className="mb-6">
                 Do you crave higher growth and confidence in your life,
                 business, and leadership journey?
-              </p>
-              <p className="para">
+              </li>
+              <li className="para">
                 Discover the absolute confidence to find fulfillment and
                 experience your desired joyous relationships.
-              </p>
-            </div>
+              </li>
+            </ul>
           </div>
         </div>
       </header>
 
-      <section className="container mx-auto mb-8 pb-4 pt-6 text-center text-lg font-semibold">
-        <h5 className="mb-3">
-          How do you silence that inner critic and rise above those beliefs that
-          drag you down?
-        </h5>
-        <p className="mb-3">
-          Identify and shatter the barriers holding you back. We know you know
-          those limiting beliefs and habits, but it's time to break free. It's
-          time to commit to a trans-formative path, ready to shift your
-          consciousness and become the best version of yourself.
-        </p>
-        <span className="font-bold">Are you ready?</span>
-      </section>
-
       <section className="container mx-auto text-center">
-        <h2 className="subheading mb-3">
+        <h2 className="subheading mb-3 pt-10">
           <span>How can </span>
           <span className="heading-primary">life coaching</span>
           <span> propel you forward?</span>
         </h2>
-        <p className="pb-12 text-lg font-medium lg:mx-auto lg:w-[720px]">
+        <p className="pb-12 text-lg font-medium lg:mx-auto">
           Life coaching is your personalized journey to growth and fulfillment.
           It's like having a trusted partner who helps you navigate life's
           challenges and capitalize on your strengths.
@@ -72,7 +58,7 @@ export default function LifeCoching() {
             return (
               <figure
                 key={i}
-                className="rounded-xl border-[1px] border-slate-200 p-3 shadow-xl shadow-slate-300 lg:p-5"
+                className="cursor-pointer rounded-xl border-[1px] border-slate-200 p-3 shadow-xl shadow-slate-300 hover:bg-primary-10 lg:p-5"
               >
                 <div>
                   <img
@@ -95,21 +81,35 @@ export default function LifeCoching() {
         </div>
       </section>
 
-      <section className="relative bg-gradient-to-b from-secondary/10 to-transparent py-6">
-        <div className="py-4 text-center">
-          <h2 className="subheading">
-            <span>The </span>
-            <span className=" heading-primary">results </span>
-            <span>say it all</span>
-          </h2>
+      <section className="mt-4">
+        <div className="container mx-auto mb-8 rounded-2xl bg-[#fafce7] py-4 text-center font-medium">
+          <h5 className="mb-3">
+            How do you silence that inner critic and rise above those beliefs
+            that drag you down?
+          </h5>
+          <p className="mb-3">
+            Identify and shatter the barriers holding you back. You know those
+            limiting beliefs and habits, but it's time to break free. It's time
+            to commit to a trans-formative path, ready to shift your
+            consciousness and become the best version of yourself.
+          </p>
+          <span className="font-bold">Are you ready?</span>
         </div>
+      </section>
+
+      <section className="relative bg-secondary/10 py-6">
         <div className="container mx-auto lg:flex lg:gap-x-5">
           <div className="mb-6 flex justify-end lg:order-2 lg:w-2/5">
             <img src={rectangle3} alt="" className="w-full xl:w-[90%]"></img>
           </div>
           <div className="my-auto lg:order-1 lg:w-3/5">
-            <ul className="list-outside list-disc px-4 text-primary-300">
-              <li className="mb-4 font-bold">
+            <h2 className="subheading mb-4">
+              <span>The </span>
+              <span className=" heading-primary">results </span>
+              <span>say it all</span>
+            </h2>
+            <ul className="list-outside list-disc px-4 font-semibold  text-primary-300">
+              <li className="mb-4">
                 <p className="text-black">
                   <span className="text-primary-300">99% </span>
                   <span>
@@ -118,7 +118,7 @@ export default function LifeCoching() {
                   </span>
                 </p>
               </li>
-              <li className="mb-4 font-bold">
+              <li className="mb-4">
                 <p className="text-black">
                   <span className="text-primary-300">80% </span>
                   <span>
@@ -127,7 +127,7 @@ export default function LifeCoching() {
                   </span>
                 </p>
               </li>
-              <li className="mb-4 font-bold">
+              <li className="mb-4">
                 <p className="text-black">
                   <span className="text-primary-300">73% </span>
                   <span>
@@ -145,7 +145,7 @@ export default function LifeCoching() {
                   <span className="text-primary-300">(63%).</span>
                 </p>
               </li>
-              <li className="mb-4 font-bold">
+              <li className="mb-4">
                 <p className="text-black">
                   <span className="text-primary-300">51%</span>
                   <span>
@@ -156,7 +156,7 @@ export default function LifeCoching() {
               </li>
               <li className="mb-4">
                 <p className="text-black">
-                  <span className="font-bold">
+                  <span>
                     <span className="text-primary-300">68% </span>
                     <span>
                       of individuals who hired coaches could make back their
@@ -168,7 +168,7 @@ export default function LifeCoching() {
                   </span>
                 </p>
               </li>
-              <li className="mb-4 font-bold">
+              <li className="mb-4">
                 <p className="text-black">
                   <span>
                     Coaching clients report that they experience decreased
@@ -186,15 +186,18 @@ export default function LifeCoching() {
         </div>
       </section>
 
-      <section className="container mx-auto my-2 mb-8 text-center">
+      <section className="container mx-auto my-2 mb-8 pt-4 text-center">
         <h2 className="subheading">
           <span>Wleness </span>
           <span className=" heading-primary"> life coaching </span>
         </h2>
-        <div className="container mx-auto mt-6 grid grid-cols-1 items-center justify-center gap-4 sm:grid-cols-2 md:grid-cols-3">
+        <div className="container mx-auto mt-6 grid grid-cols-1 justify-center gap-4 sm:grid-cols-2 md:grid-cols-3">
           {wlenessLifeCoaching.map((value, i) => {
             return (
-              <figure key={i} className="p-4 text-center">
+              <figure
+                key={i}
+                className="cursor-pointer rounded-2xl p-4 text-center hover:shadow-xl"
+              >
                 <div>
                   <img className="mx-auto w-32 xl:w-44" src={value.image} />
                 </div>

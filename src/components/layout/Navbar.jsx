@@ -25,7 +25,7 @@ function Navbar() {
       <nav className="sticky left-0 right-0 top-0 z-40 bg-white">
         <div className="container relative mx-auto flex items-center justify-between">
           {/* Logo */}
-          <div className="w-40 py-2 md:w-56 lg:w-64 xl:w-52 xl:py-3">
+          <div className="w-40 py-2 md:w-56 lg:w-64 xl:w-48 xl:py-3">
             <Link to="/" className="outline-none">
               <img src={logo} alt="" className="w-full object-cover" />
             </Link>

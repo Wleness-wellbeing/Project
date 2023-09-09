@@ -416,10 +416,18 @@ export {
 
 // Services Images
 // Services >> Couples Therapy
-import couplesTherapyHeader from "./images/services/couplesTherapy/couples-therapy-header.png";
+import couplesTherapyHeader1 from "./images/services/couplesTherapy/couples-therapy-header-1.jpg";
+import couplesTherapyHeader2 from "./images/services/couplesTherapy/couples-therapy-header-2.jpg";
+import couplesTherapyHeader3 from "./images/services/couplesTherapy/couples-therapy-header-3.jpg";
 import couplesTherapy1 from "./images/services/couplesTherapy/couples-therapy-1.png";
 import couplesTherapy2 from "./images/services/couplesTherapy/couples-therapy-2.png";
-export { couplesTherapyHeader, couplesTherapy1, couplesTherapy2 };
+export {
+  couplesTherapyHeader1,
+  couplesTherapyHeader2,
+  couplesTherapyHeader3,
+  couplesTherapy1,
+  couplesTherapy2,
+};
 // Services >> Musical Therapy
 import musicalTherapyHeader from "./images/services/musicalTherapy/musical-therapy-header.png";
 import musicalTherapy1 from "./images/services/musicalTherapy/musical-therapy-1.png";
@@ -670,6 +678,7 @@ import didYouKnow from "./images/designs/did-you-know.png";
 import designRing from "./images/designs/design-ring.png";
 import placeholderPortrait from "./images/designs/placeholder-portrait.png";
 import placeholderLandscape from "./images/designs/placeholder-landscape.png";
+import quoteBg from "./images/quote-bg.jpg";
 
 export {
   bgDotsPattern,
@@ -678,6 +687,7 @@ export {
   designRing,
   placeholderPortrait,
   placeholderLandscape,
+  quoteBg,
 };
 
 // Community
@@ -708,7 +718,7 @@ export {
 };
 
 // Community
-import corporateHeader from "./images/corporate/corporate-header.png";
+import corporateHeader from "./images/corporate/corporate-header.jpg";
 import corporatePriority1 from "./images/corporate/corporate-prioritize-1.png";
 import corporatePriority2 from "./images/corporate/corporate-prioritize-2.png";
 import corporatePriority3 from "./images/corporate/corporate-prioritize-3.png";
@@ -809,7 +819,7 @@ import location from "./images/contactus/Location.png";
 import ringervolume from "./images/contactus/RingerVolume.png";
 export { email, location, ringervolume };
 
-// =======life-coaching=========//
+// ======= Life Coaching =========//
 import grp1 from "./images/lifecoching/grp1.png";
 import grp2 from "./images/lifecoching/grp2.png";
 import grp3 from "./images/lifecoching/grp3.png";
@@ -820,6 +830,7 @@ import one from "./images/lifecoching/1.png";
 import two from "./images/lifecoching/2.png";
 import three from "./images/lifecoching/3.png";
 import four from "./images/lifecoching/4.png";
+import lifeCoachingHeader from "./images/lifecoching/life-coaching-header.png";
 
 export {
   grp1,
@@ -832,6 +843,7 @@ export {
   two,
   three,
   four,
+  lifeCoachingHeader,
 };
 
 // =======executive-coaching=========//

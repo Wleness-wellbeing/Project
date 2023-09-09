@@ -28,9 +28,9 @@ export default function Symptoms({ highlight, image, points }) {
         </ul>
       </div>
 
-      <div className="mt-5 py-2 text-center lg:mt-3">
+      {/* <div className="mt-5 py-2 text-center lg:mt-3">
         <button className="btn-one">Undergo an evaluation</button>
-      </div>
+      </div> */}
     </section>
   );
 }

@@ -48,7 +48,7 @@ function Experts() {
   return (
     <>
       {/* ========== Header Bar ========== */}
-      <header className="bg-gradient-to-b from-primary-50/30 to-transparent">
+      <header className="bg-primary-50/30">
         <div className="container mx-auto flex flex-col items-center rounded-3xl !px-5 py-2 lg:flex-row lg:py-6 2xl:justify-between 2xl:pb-10 2xl:pt-14">
           <div className="mb-6 lg:order-2 lg:mb-0 xl:w-[45%] 2xl:flex 2xl:justify-end">
             <h3 className="heading-primary flex items-center justify-center py-4 text-xl font-bold lg:hidden lg:justify-start">

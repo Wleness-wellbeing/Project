@@ -8,16 +8,16 @@ export default function IssueQuote({ quote }) {
     <section className="relative overflow-x-hidden overflow-y-clip pb-14">
       <div className="relative px-10">
         <img src={didYouKnow} alt="" className="mx-auto w-fit xl:w-32" />
-        <div className="relative mx-auto border-4 border-primary-400 p-6 lg:w-[640px] lg:p-12">
+        <div className="group relative mx-auto rounded-xl border-4 border-primary-400 p-6 hover:bg-[#fafce7] lg:w-[640px] lg:p-12">
           <p className="text-justify font-bold">{quote}</p>
-          <FontAwesomeIcon
+          {/* <FontAwesomeIcon
             icon={faQuoteLeft}
-            className="absolute -left-14 -top-12 bg-white p-5 pb-14 text-4xl text-primary-300 lg:text-6xl"
+            className="absolute -left-14 -top-12 bg-white p-5 pb-14 text-4xl text-primary-300 group-hover:bg-primary-10 lg:text-6xl"
           />
           <FontAwesomeIcon
             icon={faQuoteRight}
-            className="absolute -bottom-10 -right-12 bg-white p-5 pt-14 text-4xl text-primary-300 lg:text-6xl"
-          />
+            className="absolute -bottom-10 -right-12 bg-white p-5 pt-14 text-4xl text-primary-300 group-hover:bg-primary-10 lg:text-6xl"
+          /> */}
         </div>
       </div>
 
@@ -26,6 +26,11 @@ export default function IssueQuote({ quote }) {
         src={cloudWithDots}
         alt=""
         className="absolute -left-20 bottom-14 hidden w-44 lg:block xl:w-80"
+      />
+      <img
+        src={cloudWithDots}
+        alt=""
+        className="absolute -right-20 bottom-14 hidden w-44 lg:block xl:w-80"
       />
     </section>
   );

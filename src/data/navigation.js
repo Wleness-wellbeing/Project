@@ -70,10 +70,6 @@ export const serviceMenuPages = [
     name: "Internship",
     slug: "/internship",
   },
-  {
-    name: "Our Experts",
-    slug: "/experts",
-  },
 ];
 
 // Activities sub pages
@@ -223,7 +219,7 @@ export const userDashboardLinks = [
   ["Home", "/user/dashboard", faHome],
   ["Profile", "/user/profile", faUser],
   ["Self Care", "/self-care", faHeartCircleCheck],
-  ["Routine Care", "/user/routine-care", faBookBookmark],
+  // ["Routine Care", "/user/routine-care", faBookBookmark],
   ["Routine Care", "/user/routine-care", faClipboardList],
-  ["Community", "/community", faUsers],
+  ["Community", "/community/chat", faUsers],
 ];

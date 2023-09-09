@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CommunitySupportCard(props) {
   return (
-    <figure className="grid justify-between rounded-xl rounded-br-[3rem] border-2 border-primary-300 p-5 transition-all hover:shadow-xl">
+    <figure className="grid justify-between rounded-xl rounded-br-[3rem] border-2 border-primary-300 p-5 transition-all hover:bg-primary-50/40 hover:shadow-xl">
       <h3 className="text-center text-2xl font-bold text-primary-300">
         {props.data.title}
       </h3>

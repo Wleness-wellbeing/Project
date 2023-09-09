@@ -46,7 +46,7 @@ export default function Blogs() {
   return (
     <>
       {/* ========== Header ============= */}
-      <header className="bg-gradient-to-b from-primary-50/30 to-transparent">
+      {/* <header className="bg-primary-50/30">
         <div className="container mx-auto rounded-xl py-14 lg:py-28">
           <div className="mb-4 flex flex-col items-center lg:mb-0 lg:flex-row">
             <div className="lg:w-1/4">
@@ -68,7 +68,6 @@ export default function Blogs() {
             </div>
           </div>
 
-          {/* =========search button======= */}
           <form class="mx-auto flex items-center justify-between rounded-full border border-gray-300 bg-white lg:w-96">
             <input
               type="text"
@@ -83,18 +82,38 @@ export default function Blogs() {
             </button>
           </form>
         </div>
+      </header> */}
+
+      <header className="bg-primary-50/40 py-5">
+        <div className="text-center">
+          <h1 className="subheading heading-primary">Our Blogs</h1>
+        </div>
+
+        <form class="mx-auto flex items-center justify-between rounded-full border border-gray-300 bg-white lg:w-96">
+          <input
+            type="text"
+            placeholder="Search..."
+            class="w-full rounded-l-full py-2.5 pl-5 pr-2 outline-none"
+          />
+          <button
+            type="submit"
+            class="rounded-full bg-primary-400 px-4 py-2.5 text-white"
+          >
+            <FontAwesomeIcon icon={faSearch} className="text-white" />
+          </button>
+        </form>
       </header>
 
       {/* =========== Recent Blog ========= */}
-      <section className="container mx-auto py-5 lg:!px-0">
-        <div className="mx-auto flex w-fit justify-end pb-8 lg:w-full lg:py-10">
+      <section className="container mx-auto py-8 lg:!px-0">
+        {/* <div className="mx-auto flex w-fit justify-end pb-8 lg:w-full lg:py-10">
           <button className="rounded-l-lg bg-primary-400 px-8 py-3 font-bold text-white">
             Recent
           </button>
           <button className="rounded-r-lg bg-slate-200 px-8 py-3 font-bold text-primary-400">
             Popular
           </button>
-        </div>
+        </div> */}
 
         <Swiper
           modules={[Pagination]}

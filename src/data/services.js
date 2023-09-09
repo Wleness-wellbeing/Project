@@ -1,7 +1,6 @@
 // Data
 import {
   activityBlogThumbnail,
-  couplesTherapyHeader,
   feature4,
   feature5,
   feature6,
@@ -26,6 +25,9 @@ import {
   therapyHeader,
   psychiatristHeader,
   bestPsychiatrist,
+  couplesTherapyHeader1,
+  couplesTherapyHeader2,
+  couplesTherapyHeader3,
 } from "../assets";
 
 // Services Page Features Blocks
@@ -89,7 +91,11 @@ export const couplesTherapyData = {
       },
     ],
     desc: "Rediscover the joy of togetherness with Relationship Revive, our personalized couple therapy program. Enhance communication, deepen intimacy, and overcome challenges alongside expert guidance. Invest in your relationship today for a stronger, more fulfilling connection.",
-    image: couplesTherapyHeader,
+    images: [
+      couplesTherapyHeader1,
+      couplesTherapyHeader2,
+      couplesTherapyHeader3,
+    ],
   },
   blogs: [
     {

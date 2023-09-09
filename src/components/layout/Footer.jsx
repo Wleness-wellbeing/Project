@@ -28,7 +28,7 @@ export default function Footer() {
                     <li key={i}>
                       <Link
                         to={value[1]}
-                        className="flex items-center text-xs md:text-base"
+                        className="flex items-center text-xs md:text-sm"
                         target="_blank"
                       >
                         <FontAwesomeIcon icon={value[2]} className="mr-3" />
@@ -47,7 +47,7 @@ export default function Footer() {
                 {footerAboutWleness.map((value, index) => {
                   return (
                     <li key={index}>
-                      <Link className="text-xs md:text-base" to={value[1]}>
+                      <Link className="text-xs md:text-sm" to={value[1]}>
                         {value[0]}
                       </Link>
                     </li>
@@ -63,7 +63,7 @@ export default function Footer() {
                 {footerOurServices.map((value, index) => {
                   return (
                     <li key={index}>
-                      <Link className="text-xs md:text-base" to={value[1]}>
+                      <Link className="text-xs md:text-sm" to={value[1]}>
                         {value[0]}
                       </Link>
                     </li>
@@ -79,7 +79,7 @@ export default function Footer() {
                 {footerFocusAreas.map((value, index) => {
                   return (
                     <li key={index}>
-                      <Link className="text-xs md:text-base" to={value[1]}>
+                      <Link className="text-xs md:text-sm" to={value[1]}>
                         {value[0]}
                       </Link>
                     </li>
@@ -96,7 +96,7 @@ export default function Footer() {
                   {footerOurExperts.map((value, index) => {
                     return (
                       <li key={index}>
-                        <Link className="text-xs md:text-base" to={value[1]}>
+                        <Link className="text-xs md:text-sm" to={value[1]}>
                           {value[0]}
                         </Link>
                       </li>
@@ -111,12 +111,12 @@ export default function Footer() {
                 </h4>
                 <ul className="md:space-y-1">
                   <li>
-                    <Link className="text-xs md:text-base" to="/blogs">
+                    <Link className="text-xs md:text-sm" to="/blogs">
                       Blogs
                     </Link>
                   </li>
                   <li>
-                    <Link className="text-xs md:text-base" to="">
+                    <Link className="text-xs md:text-sm" to="">
                       Assessments
                     </Link>
                   </li>
@@ -162,7 +162,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="container mx-auto mb-5 space-y-4 text-xs text-slate-600 lg:mb-0 lg:text-sm">
+        <div className="container mx-auto mb-5 space-y-4 text-justify text-xs text-slate-600 lg:mb-0">
           <p>
             Wleness does not cover emergencies in medicine or psychology. We do
             not intend to support those in distress, such as when they have

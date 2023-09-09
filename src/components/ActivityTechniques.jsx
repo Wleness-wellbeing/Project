@@ -30,21 +30,23 @@ const ActivityTechniques = React.forwardRef((props, ref) => {
   });
 
   return (
-    <section className="container mx-auto pb-6" ref={ref}>
-      <div className="text-center lg:my-14">
-        <h2 className="subheading text-primary-400">{props.title}</h2>
-        <p className="font-semibold lg:text-2xl">{props.desc}</p>
-      </div>
+    <section className=" bg-primary-10 pb-6" ref={ref}>
+      <div className="container mx-auto">
+        <div className="rounded-2xl py-4 pt-8 text-center lg:mb-4 lg:mt-10">
+          <h2 className="subheading heading-primary">{props.title}</h2>
+          <p className="font-semibold lg:text-lg">{props.desc}</p>
+        </div>
 
-      {/* Meditations */}
-      <div className="grid gap-6 pb-4 lg:grid-cols-3 xl:grid-cols-4 xl:gap-0">
-        {activityTypes}
-      </div>
+        {/* Meditations */}
+        <div className="grid gap-6 pb-4 lg:grid-cols-3 xl:grid-cols-4 xl:gap-0">
+          {activityTypes}
+        </div>
 
-      <div className="py-4 text-center">
-        <Link to="/appointment/checkout" className="btn-one inline-block">
-          Book Now
-        </Link>
+        <div className="py-4 text-center">
+          <Link to="/appointment/checkout" className="btn-one inline-block">
+            Book Now
+          </Link>
+        </div>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import React from "react";
 import { wlenessApproach } from "../data/issues";
 import ApproachCard from "./Cards/ApproachCard";
+import { Link } from "react-router-dom";
 
 export default function WlenessApproach() {
   return (
@@ -23,7 +24,9 @@ export default function WlenessApproach() {
         </div>
 
         <div className="text-center">
-          <button className="btn-one">Start the treatment</button>
+          <Link to="/experts/all" className="btn-one mx-auto block w-fit">
+            Start the treatment
+          </Link>
         </div>
       </div>
     </section>

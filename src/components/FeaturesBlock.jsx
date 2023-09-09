@@ -2,7 +2,7 @@ import React from "react";
 
 export default function FeaturesBlock(props) {
   return (
-    <section className="container mx-auto grid grid-cols-3 rounded-2xl bg-primary-10 px-6 py-6 text-center">
+    <section className="container mx-auto my-5 grid  grid-cols-3 rounded-2xl bg-primary-10 px-6 py-4 text-center">
       {props.data.map((value, index) => {
         return (
           <div key={index}>

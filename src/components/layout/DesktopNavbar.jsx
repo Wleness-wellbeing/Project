@@ -11,9 +11,10 @@ import { Link } from "react-router-dom";
 export default function DesktopNavbar({ toggleJoinUs }) {
   return (
     <>
-      <ul className="hidden w-fit justify-end space-x-5 bg-white p-6 xl:flex">
+      <ul className="hidden w-fit justify-end space-x-4 bg-white p-6 xl:flex">
         <MenuLink url="/" text="Home" />
         <Dropdown url="" text="Services" pages={serviceMenuPages} />
+        <MenuLink url="/experts" text="Our Experts" />
         <Dropdown url="/self-care" text="Self Care" pages={seldCareSubpages} />
         <Dropdown url="" text="Resources" pages={resourcesSubpages} />
         <MenuLink url="/about-us" text="About Us" />

@@ -22,7 +22,6 @@ export default function ActivityLayout(props) {
         desc={props.header.desc}
         handleScrollToComponent={() => handleScrollToComponent()}
       />
-      <FeaturesBlock data={activityFeatures} />
       <ActivityTechniques
         ref={ref}
         title={props.activities.title}
@@ -30,6 +29,7 @@ export default function ActivityLayout(props) {
         types={props.activities.types}
         slug={props.activities.types.slug}
       />
+      <FeaturesBlock data={activityFeatures} />
       <ActivityVideos />
       <ActivityBlogs blogs={props.blogs} />
     </>

@@ -86,18 +86,21 @@ export default function ExpertsDetails() {
       </section>
 
       {/* Clients Testimonials */}
-      <section className="container mx-auto pt-7 lg:pt-14">
-        <div className="mb-6  text-center">
-          <h2 className="subheading heading-primary mb-4">
-            What Our Patients Say About Us
-          </h2>
-          <p className="mx-auto text-center font-medium leading-5 xl:text-lg xl:leading-6">
-            Hear from our valued patients about their experience with us and the
-            impact we've made on their lives. Read their heartfelt testimonials
-            and discover the quality of care and support we provide.
-          </p>
+      <section className=" pt-7 lg:pt-14">
+        <div className="bg-primary-50/40 ">
+          <div className="container mx-auto mb-2 py-4 text-center">
+            <h2 className="subheading heading-primary mb-4">
+              What Our Patients Say About Us
+            </h2>
+            <p className="text-center font-medium leading-5 xl:text-lg xl:leading-6">
+              Hear from our valued patients about their experience with us and
+              the impact we've made on their lives. Read their heartfelt
+              testimonials and discover the quality of care and support we
+              provide.
+            </p>
+          </div>
         </div>
-        <div className="md:flex md:items-start md:gap-4 lg:py-10">
+        <div className="container mx-auto md:flex md:items-start md:gap-4 lg:py-10">
           <div className="md:flex md:w-2/5">
             <img
               src={featuredPatient}
