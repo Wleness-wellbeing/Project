@@ -5,8 +5,8 @@ import {
   footerOurServices,
   footerFocusAreas,
   footerOurExperts,
-  socialLinks,
   footerLocation,
+  socialLinks,
 } from "../../data/navigation";
 import { Link } from "react-router-dom";
 import { logoIAF, logoISO, startUpIndiaLogo } from "../../assets";
@@ -146,14 +146,13 @@ export default function Footer() {
               <img src={logoIAF} alt="" className="w-14 object-contain" />
               <img src={logoISO} alt="" className="w-10 object-contain" />
             </div>
-            <div className="my-3 flex items-center justify-center gap-x-1">
+            <div className="my-3 flex items-center justify-center gap-x-2">
               {socialLinks.map((value, i) => {
                 return (
-                  <Link to={value[1]} key={i} target="_blank">
-                    <img
-                      src={value[0]}
-                      alt="whatsapp"
-                      className="h-6 w-6 lg:h-7 lg:w-7"
+                  <Link key={i} to={value[1]} target="_blank">
+                    <FontAwesomeIcon
+                      icon={value[0]}
+                      className="text-2xl hover:text-primary-400"
                     />
                   </Link>
                 );

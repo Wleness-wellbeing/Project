@@ -21,6 +21,13 @@ import {
   iconTwitter,
   iconWhatsapp,
 } from "../assets";
+import {
+  faFacebookSquare,
+  faLinkedin,
+  faSquareInstagram,
+  faSquareWhatsapp,
+  faSquareXTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 // ================= Navigation Bar =================
 // Services sub pages
@@ -196,11 +203,11 @@ export const footerOurExperts = [
 
 // Footer social links
 export const socialLinks = [
-  [iconWhatsapp, "#"],
-  [iconInstagram, "https://www.instagram.com/wleness/"],
-  [iconFacebook, "http://facebook.com/profile.php?id=100094475627706"],
-  [iconTwitter, "http://twitter.com/wleness111"],
-  [iconLinkedin, "https://www.linkedin.com/company/wleness/"],
+  [faSquareWhatsapp, "#"],
+  [faSquareInstagram, "https://www.instagram.com/wleness/"],
+  [faFacebookSquare, "http://facebook.com/profile.php?id=100094475627706"],
+  [faSquareXTwitter, "http://twitter.com/wleness111"],
+  [faLinkedin, "https://www.linkedin.com/company/wleness/"],
 ];
 
 // ================= Admin Links =================

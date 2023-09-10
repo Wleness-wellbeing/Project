@@ -9,12 +9,6 @@ import {
   partner3,
   partner4,
   partner5,
-  servicesIcon1,
-  servicesIcon2,
-  servicesIcon3,
-  servicesIcon4,
-  servicesIcon5,
-  servicesIcon6,
   designRing,
 } from "../../assets";
 import { homeFaqs } from "../../data/faqs";
@@ -242,47 +236,6 @@ export default function Home() {
             </div>
           );
         })}
-      </section>
-
-      {/* ========== Our Partners ========== */}
-      <section className="container mx-auto pb-14 pt-4 lg:pb-16 lg:pt-6">
-        <div className="grid grid-cols-5 gap-2 md:gap-8 xl:gap-12 2xl:gap-20">
-          <div className="flex items-center justify-center">
-            <img
-              src={partner1}
-              className="h-5 object-contain lg:h-8 xl:h-10"
-              alt="Partners"
-            />
-          </div>
-          <div className="flex items-center justify-center">
-            <img
-              src={partner2}
-              className="h-5 object-contain lg:h-8 xl:h-10"
-              alt="Partners"
-            />
-          </div>
-          <div className="flex items-center justify-center">
-            <img
-              src={partner3}
-              className="h-5 object-contain lg:h-8 xl:h-10"
-              alt="Partners"
-            />
-          </div>
-          <div className="flex items-center justify-center">
-            <img
-              src={partner4}
-              className="h-5 object-contain lg:h-8 xl:h-10"
-              alt="Partners"
-            />
-          </div>
-          <div className="flex items-center justify-center">
-            <img
-              src={partner5}
-              className="h-5 object-contain lg:h-8 xl:h-10"
-              alt="Partners"
-            />
-          </div>
-        </div>
       </section>
 
       {/* ========== Request Form ========== */}

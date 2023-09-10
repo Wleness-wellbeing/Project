@@ -16,7 +16,7 @@ export default function WhyChooseGrid(props) {
                 <img
                   src={value.image}
                   alt=""
-                  className="mx-auto w-24 lg:w-fit"
+                  className="mx-auto w-24 lg:w-40"
                 />
               </div>
               <figcaption>
