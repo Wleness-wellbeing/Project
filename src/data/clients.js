@@ -5,6 +5,54 @@ import {
   happyClient4,
 } from "../assets";
 
+export const clientsReviews = [
+  {
+    name: "Omprakash Prajapati",
+    profession: "Fullstack Developer",
+    image: happyClient1,
+    review:
+      "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
+  },
+  {
+    name: "John Kennedy",
+    profession: "Fullstack Developer",
+    image: happyClient2,
+    review:
+      "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
+  },
+  {
+    name: "John Kennedy",
+    profession: "Fullstack Developer",
+    image: happyClient3,
+    review:
+      "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
+  },
+];
+
+export const userReview = [
+  {
+    name: "Sahil Gupta",
+    profession: "",
+    image: happyClient1,
+    review:
+      "Wleness has truly been a game-changer in my mental health journey. The app's uplifting content and exercises have given me a more positive outlook on life. The psychologist sessions are incredibly valuable, providing me with the support and guidance I need. I can't thank the creators of Wleness enough for creating such a helpful and user-friendly resource for mental well-being",
+  },
+  {
+    name: "Paras Shewale",
+    profession: "",
+    image: happyClient2,
+    review:
+      "Wleness has truly been a game-changer in my mental health journey. The app's uplifting content and exercises have given me a more positive outlook on life. The psychologist sessions are incredibly valuable, providing me with the support and guidance I need. I can't thank the creators of Wleness enough for creating such a helpful and user-friendly resource for mental well-being",
+  },
+  {
+    name: "Kiran Kale",
+    profession: "",
+    image: happyClient3,
+    review:
+      "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
+  },
+];
+
 export const doctorsPageClient = {
   heading: [
     {
@@ -20,29 +68,7 @@ export const doctorsPageClient = {
       text: "Say",
     },
   ],
-  clients: [
-    {
-      name: "John Kennedy",
-      profession: "Fullstack Developer",
-      image: happyClient1,
-      review:
-        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
-    },
-    {
-      name: "John Kennedy",
-      profession: "Fullstack Developer",
-      image: happyClient2,
-      review:
-        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
-    },
-    {
-      name: "John Kennedy",
-      profession: "Fullstack Developer",
-      image: happyClient3,
-      review:
-        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
-    },
-  ],
+  clients: userReview,
 };
 
 export const coupleTherapyClient = {
@@ -60,29 +86,7 @@ export const coupleTherapyClient = {
       text: "Say",
     },
   ],
-  clients: [
-    {
-      name: "Ben Parker",
-      profession: "Digital Marketing",
-      image: happyClient2,
-      review:
-        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
-    },
-    {
-      name: "Benjamin Parker",
-      profession: "Social Media Marketer",
-      image: happyClient2,
-      review:
-        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
-    },
-    {
-      name: "Ben Park",
-      profession: "SEO Expert",
-      image: happyClient2,
-      review:
-        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
-    },
-  ],
+  clients: userReview,
 };
 
 export const musicalTherapyClient = {
@@ -100,29 +104,7 @@ export const musicalTherapyClient = {
       text: "Say",
     },
   ],
-  clients: [
-    {
-      name: "Ben Parker",
-      profession: "Digital Marketing",
-      image: happyClient2,
-      review:
-        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
-    },
-    {
-      name: "Benjamin Parker",
-      profession: "Social Media Marketer",
-      image: happyClient2,
-      review:
-        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
-    },
-    {
-      name: "Ben Park",
-      profession: "SEO Expert",
-      image: happyClient2,
-      review:
-        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
-    },
-  ],
+  clients: userReview,
 };
 
 export const therapyClient = {
@@ -140,29 +122,7 @@ export const therapyClient = {
       text: "Say",
     },
   ],
-  clients: [
-    {
-      name: "Ben Parker",
-      profession: "Digital Marketing",
-      image: happyClient2,
-      review:
-        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
-    },
-    {
-      name: "Benjamin Parker",
-      profession: "Social Media Marketer",
-      image: happyClient2,
-      review:
-        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
-    },
-    {
-      name: "Ben Park",
-      profession: "SEO Expert",
-      image: happyClient2,
-      review:
-        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
-    },
-  ],
+  clients: userReview,
 };
 
 export const psychiatristClient = {
@@ -180,29 +140,7 @@ export const psychiatristClient = {
       text: "Say",
     },
   ],
-  clients: [
-    {
-      name: "Tim cook",
-      profession: "Marketing manager",
-      image: happyClient2,
-      review:
-        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
-    },
-    {
-      name: "Elon Musk",
-      profession: "Software Engineer",
-      image: happyClient2,
-      review:
-        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
-    },
-    {
-      name: "Bill Gates",
-      profession: "Chief Marketing Officer",
-      image: happyClient2,
-      review:
-        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
-    },
-  ],
+  clients: userReview,
 };
 
 export const internshipClients = {
@@ -212,27 +150,5 @@ export const internshipClients = {
       text: "Listen to their stories.",
     },
   ],
-  clients: [
-    {
-      name: "Leena Paxton",
-      profession: "Digital Marketing",
-      image: happyClient1,
-      review:
-        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
-    },
-    {
-      name: "Leena Paxton",
-      profession: "Social Media Marketer",
-      image: happyClient2,
-      review:
-        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
-    },
-    {
-      name: "Leena Paxton",
-      profession: "SEO Expert",
-      image: happyClient3,
-      review:
-        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
-    },
-  ],
+  clients: userReview,
 };

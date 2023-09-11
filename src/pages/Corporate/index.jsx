@@ -1,21 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import {
-  blueDots1,
-  blueDots2,
   blueFlower,
   circleArt,
   corporateHeader,
   employeeTriangleHub,
 } from "../../assets";
 import { ourOfferings, prioritizeCorporate } from "../../data/corporate";
+import CorporateForm from "../../components/Forms/CorporateForm";
 
 export default function index() {
+  const [corporateForm, setCorporateForm] = useState(false);
+
+  // Toggle form
+  const toggleForm = () => {
+    setCorporateForm(!corporateForm);
+  };
+
   return (
     <>
-      <header className="relative  overflow-x-clip bg-tertiary/10 py-28">
+      <header className="relative  overflow-x-clip bg-tertiary/10 py-8 lg:py-28">
         <div className="container mx-auto xl:flex xl:items-center">
-          <div className="pr-7 lg:w-1/2">
-            <h1 className="subheading mb-6 pt-3">
+          <div className="mx-auto pb-2 text-center lg:order-2 lg:w-1/2">
+            <img
+              src={corporateHeader}
+              alt=""
+              className="mb-2 w-full rounded-3xl"
+            />
+          </div>
+          <div className="pr-7 lg:order-1 lg:w-1/2">
+            <h1 className="subheading mb-2 pt-3 lg:mb-6">
               <span>Foster a </span>
               <span className="text-[#0A99D6]">Healthy and thriving work </span>
               <span>environment with Wleness</span>
@@ -25,16 +38,12 @@ export default function index() {
               Solutions for Your Unique Workplace
             </p>
 
-            <button className="btn-one !bg-[#0A99D6] hover:!bg-[#0F7CAB]">
+            <button
+              onClick={toggleForm}
+              className="btn-one !bg-[#0A99D6] hover:!bg-[#0F7CAB]"
+            >
               Book Us Now
             </button>
-          </div>
-          <div className="mx-auto pb-2 text-center lg:w-1/2">
-            <img
-              src={corporateHeader}
-              alt=""
-              className="mb-2 w-full rounded-3xl"
-            />
           </div>
         </div>
       </header>
@@ -69,7 +78,10 @@ export default function index() {
         </div>
 
         <div className="py-5 text-center">
-          <button className="btn-one !bg-[#0A99D6] hover:!bg-[#0F7CAB]">
+          <button
+            className="btn-one !bg-[#0A99D6] hover:!bg-[#0F7CAB]"
+            onClick={toggleForm}
+          >
             Join Us Now
           </button>
         </div>
@@ -133,8 +145,11 @@ export default function index() {
                 and engagement through this cutting-edge tool, designed to meet
                 your company's unique requirements.
               </p>
-              <button className="btn-one !bg-[#0A99D6] hover:!bg-[#0F7CAB]">
-                Explore the Packages Now
+              <button
+                className="btn-one !bg-[#0A99D6] hover:!bg-[#0F7CAB]"
+                onClick={toggleForm}
+              >
+                Get a Callback
               </button>
             </div>
           </div>
@@ -162,7 +177,10 @@ export default function index() {
           </div>
 
           <div className="text-center">
-            <button className="btn-one !bg-[#0A99D6] hover:!bg-[#0F7CAB]">
+            <button
+              className="btn-one !bg-[#0A99D6] hover:!bg-[#0F7CAB]"
+              onClick={toggleForm}
+            >
               Book Us Now
             </button>
           </div>
@@ -179,6 +197,8 @@ export default function index() {
           className="absolute -left-80 -top-56 lg:-left-[410px] lg:-top-[380px] 2xl:-left-96"
         />
       </section>
+
+      <CorporateForm isOpen={corporateForm} onClose={toggleForm} />
     </>
   );
 }

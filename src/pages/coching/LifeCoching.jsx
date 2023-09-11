@@ -3,6 +3,29 @@ import FaqWithImage from "../../components/FaqWithImage";
 import { lifeStyleCoachingFaqs } from "../../data/faqs";
 import { lifecoching, wlenessLifeCoaching } from "../../data";
 import { lifeCoachingHeader, rectangle2, rectangle3 } from "../../assets";
+
+const results = [
+  [
+    "51% ",
+    "of companies with a strong coaching culture have higher revenues than others",
+  ],
+  [
+    "80% ",
+    "clients felt improved self-esteem and self-confidence after coaching.",
+  ],
+  [
+    "68% ",
+    "individuals who hired coaches could make back their investment. The median ROI is around 7x the investment.",
+  ],
+  [
+    "",
+    "Clients reported decreased anxiety levels and depression levels, with improved workplace relationships 79%.",
+  ],
+  [
+    "67% ",
+    "clients felt improved work/life balance , and wellness after coaching.",
+  ],
+];
 export default function LifeCoching() {
   return (
     <>
@@ -81,22 +104,6 @@ export default function LifeCoching() {
         </div>
       </section>
 
-      <section className="mt-4">
-        <div className="container mx-auto mb-8 rounded-2xl bg-[#fafce7] py-4 text-center font-medium">
-          <h5 className="mb-3">
-            How do you silence that inner critic and rise above those beliefs
-            that drag you down?
-          </h5>
-          <p className="mb-3">
-            Identify and shatter the barriers holding you back. You know those
-            limiting beliefs and habits, but it's time to break free. It's time
-            to commit to a trans-formative path, ready to shift your
-            consciousness and become the best version of yourself.
-          </p>
-          <span className="font-bold">Are you ready?</span>
-        </div>
-      </section>
-
       <section className="relative bg-secondary/10 py-6">
         <div className="container mx-auto lg:flex lg:gap-x-5">
           <div className="mb-6 flex justify-end lg:order-2 lg:w-2/5">
@@ -109,78 +116,16 @@ export default function LifeCoching() {
               <span>say it all</span>
             </h2>
             <ul className="list-outside list-disc px-4 font-semibold  text-primary-300">
-              <li className="mb-4">
-                <p className="text-black">
-                  <span className="text-primary-300">99% </span>
-                  <span>
-                    of individuals and companies who hire a coach are satisfied
-                    or very satisfied with the experience.
-                  </span>
-                </p>
-              </li>
-              <li className="mb-4">
-                <p className="text-black">
-                  <span className="text-primary-300">80% </span>
-                  <span>
-                    of coaching clients say they improved their self-esteem or
-                    self-confidence thanks to coaching.
-                  </span>
-                </p>
-              </li>
-              <li className="mb-4">
-                <p className="text-black">
-                  <span className="text-primary-300">73% </span>
-                  <span>
-                    of coaching clients say that coaching helps them improve
-                    their relationships, communication skills
-                  </span>
-                  <span className="text-primary-300"> (72%), </span>
-                  <span>interpersonal skills </span>
-                  <span className="text-primary-300">(71%), </span>
-                  <span>work performance </span>
-                  <span className="text-primary-300">(70%), </span>
-                  <span>work/life balance </span>
-                  <span className="text-primary-300">(67%), </span>
-                  <span>and wellness </span>
-                  <span className="text-primary-300">(63%).</span>
-                </p>
-              </li>
-              <li className="mb-4">
-                <p className="text-black">
-                  <span className="text-primary-300">51%</span>
-                  <span>
-                    of companies with a strong coaching culture have higher
-                    revenues than others
-                  </span>
-                </p>
-              </li>
-              <li className="mb-4">
-                <p className="text-black">
-                  <span>
-                    <span className="text-primary-300">68% </span>
-                    <span>
-                      of individuals who hired coaches could make back their
-                      investment. The median ROI is 7x the investment. Coaching
-                      can have a
-                    </span>
-                    <span className="text-primary-300"> 221% </span>
-                    <span>ROI.</span>
-                  </span>
-                </p>
-              </li>
-              <li className="mb-4">
-                <p className="text-black">
-                  <span>
-                    Coaching clients report that they experience decreased
-                    anxiety levels
-                  </span>
-                  <span className="text-primary-300"> 57.1% </span>
-                  <span> and depression levels </span>
-                  <span className="text-primary-300"> 44.3%, </span>
-                  <span> as well as improved workplace relationships </span>
-                  <span className="text-primary-300">79%.</span>
-                </p>
-              </li>
+              {results.map((value, i) => {
+                return (
+                  <li key={i} className="mb-4  p-2">
+                    <p className="text-black">
+                      <span className="text-primary-300">{value[0]}</span>
+                      <span>{value[1]}</span>
+                    </p>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>

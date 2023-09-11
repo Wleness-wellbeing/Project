@@ -12,6 +12,9 @@ import iconInternshipCheck from "./images/home/icons/internship_check.png";
 import iconInternshipHandshake from "./images/home/icons/internship_handshake.png";
 import iconInternshipYout from "./images/home/icons/internship_youth.png";
 import testimonial1 from "./images/home/testimonials/testimonial-1.png";
+import testimonial2 from "./images/home/testimonials/testimonial-2.png";
+import testimonial3 from "./images/home/testimonials/testimonial-3.png";
+import testimonial4 from "./images/home/testimonials/testimonial-4.png";
 import community from "./images/home/community.png";
 import doodle1 from "./images/home/doodle-1.svg";
 import doodle2 from "./images/home/doodle-2.svg";
@@ -70,6 +73,9 @@ export {
   iconInternshipHandshake,
   iconInternshipYout,
   testimonial1,
+  testimonial2,
+  testimonial3,
+  testimonial4,
   community,
   doodle1,
   doodle2,
@@ -521,6 +527,7 @@ import symptomsStress from "./images/issues/symptoms/symptoms-stress.png";
 import symptomsAnger from "./images/issues/symptoms/symptoms-anger.png";
 import symptomsRelationship from "./images/issues/symptoms/symptoms-relationship.png";
 import symptomsParenting from "./images/issues/symptoms/symptoms-parenting.png";
+import symptomsLgbtq from "./images/issues/symptoms/symptoms-lgbtq.png";
 
 export {
   issuesHeader,
@@ -571,6 +578,7 @@ export {
   symptomsAnger,
   symptomsRelationship,
   symptomsParenting,
+  symptomsLgbtq,
 };
 
 // Internship images
@@ -613,6 +621,7 @@ export { faq1, faq2, faq3, faq3Lg, faq4, faqHeader };
 import blogHeader1 from "./images/blogs/blogs-header-1.png";
 import blogHeader2 from "./images/blogs/blogs-header-2.png";
 import blogRecent from "./images/blogs/blogs-recent.png";
+import blogDetailsHero from "./images/blogs/blog-details-hero.png";
 import blogThumbnail1 from "./images/blogs/blogs-thumbnail-1.png";
 import blogThumbnail2 from "./images/blogs/blogs-thumbnail-2.png";
 import blogThumbnail3 from "./images/blogs/blogs-thumbnail-3.png";
@@ -630,6 +639,7 @@ export {
   blogThumbnail4,
   blogThumbnail5,
   blogThumbnail6,
+  blogDetailsHero,
 };
 
 // Assessment Images

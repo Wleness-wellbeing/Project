@@ -23,6 +23,7 @@ import {
   symptomsCd,
   symptomsDepression,
   symptomsEatingDisorder,
+  symptomsLgbtq,
   symptomsOcd,
   symptomsOdd,
   symptomsPanic,
@@ -1822,7 +1823,7 @@ export const therapiesData = [
         "Family rejection can lead to profound mental health struggles among LGBTQIA+ youth.",
         "Limited access to LGBTQIA+-friendly mental health services can hinder well-being.",
       ],
-      image: symptomsRelationship,
+      image: symptomsLgbtq,
     },
     doctors: {
       heading: [

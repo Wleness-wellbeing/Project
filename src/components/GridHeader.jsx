@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import { cloudWithDots } from "../assets";
 import Assessment from "../components/Assessment";
 
 export default function GridHeader(props) {

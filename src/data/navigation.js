@@ -54,8 +54,8 @@ export const serviceMenuPages = [
     slug: "/executive-coaching",
   },
   {
-    name: "Corporate",
-    slug: "/corporate",
+    name: "Corporate Wellbeing",
+    slug: "/corporate-wellbeing",
   },
   {
     name: "Life Coaching",
@@ -117,10 +117,10 @@ export const resourcesSubpages = [
     name: "Blogs",
     slug: "/blogs",
   },
-  {
-    name: "Videos",
-    slug: "/videos",
-  },
+  // {
+  //   name: "Videos",
+  //   slug: "/videos",
+  // },
   {
     name: "Community",
     slug: "/community",

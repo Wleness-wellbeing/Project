@@ -50,6 +50,7 @@ import PsychiatristJoining from "./pages/JoinUs/PsychiatristJoining";
 import Chatbox from "./pages/Dashboard/Chatbox";
 import Profile from "./pages/Dashboard/Profile";
 import Chat from "./pages/Community/Chat";
+import BlogDetails from "./pages/Blogs/BlogDetails";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -263,6 +264,14 @@ function App() {
           }
         />
         <Route
+          path="/blog/blog-details"
+          element={
+            <Layout>
+              <BlogDetails />
+            </Layout>
+          }
+        />
+        <Route
           path="/faqs"
           element={
             <Layout>
@@ -303,7 +312,7 @@ function App() {
           }
         />
         <Route
-          path="/corporate"
+          path="/corporate-wellbeing"
           element={
             <Layout>
               <Corporate />

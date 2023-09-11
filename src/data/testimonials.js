@@ -1,22 +1,33 @@
-import { testimonial1 } from "../assets";
+import {
+  testimonial1,
+  testimonial2,
+  testimonial3,
+  testimonial4,
+} from "../assets";
 
 export const homeTestimonials = [
   {
-    name: "Soumili",
-    profession: "Full stack web developer",
+    name: "Garima Banwala",
+    profession: "",
     image: testimonial1,
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt laudantium mollitia id. Incidunt laudantium mollitia id. id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt laudantium mollitia id. Incidunt laudantium mollitia id. id. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    desc: "My therapy session for stress relief was an invaluable experience that provided me with both immediate relief and lasting tools for managing stress. The therapist's empathetic and tailored approach, combined with the serene atmosphere, created an environment conducive to healing and personal growth. It was a reminder of the power of therapy in promoting mental and emotional well-being.",
   },
   {
-    name: "Garima",
-    profession: "UI/UX Designer",
-    image: testimonial1,
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt laudantium mollitia id. Incidunt laudantium mollitia id. id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt laudantium mollitia id. Incidunt laudantium mollitia id. id. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    name: "Omprakash Prajapati",
+    profession: "",
+    image: testimonial2,
+    desc: "My experience with Wleness therapy was outstanding. They provided a personalized approach, matched me with a skilled therapist, and offered flexible scheduling. The therapy sessions were transformative, using evidence-based techniques with compassion. Wellness promotes self-care and holistic well-being. I highly recommend Wleness for anyone seeking therapy.",
   },
   {
-    name: "Ankita",
-    profession: "Content Writer",
-    image: testimonial1,
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt laudantium mollitia id. Incidunt laudantium mollitia id. id. Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt laudantium mollitia id. Incidunt laudantium mollitia id. id. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    name: "Prabhat Kumar",
+    profession: "",
+    image: testimonial3,
+    desc: "I am extremely impressed with the website of my wellness coach. It is a valuable resource for me, and it has helped me to make significant progress in my journey to better health and well-being. I highly recommend this website to anyone who is looking to improve their overall wellness.",
+  },
+  {
+    name: "Ankita Ghosh",
+    profession: "",
+    image: testimonial4,
+    desc: "Wow, I can't express how grateful I am for my experience with Wellness. It was an absolute game-changer experience in my mental health journey. The doctor's expertise, empathy, and dedication made me feel truly heard and supported. With their guidance, I've made significant progress in managing my anxiety. Wleness is more than just a platform; it's a lifeline for anyone seeking expert help and genuine care.",
   },
 ];
