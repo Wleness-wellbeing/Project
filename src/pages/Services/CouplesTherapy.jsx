@@ -63,77 +63,8 @@ function CouplesTherapy() {
             </h2>
           </div>
 
-          {/* <div>
-            <figure className="gap-x-5 pb-6 pt-6 lg:flex lg:pt-12">
-              <div className="mb-6 lg:mb-0 lg:w-2/5">
-                <img
-                  src={couplesTherapy1}
-                  alt=""
-                  className="block w-full object-cover"
-                />
-              </div>
-              <figcaption className="lg:w-3/5">
-                <div className="mr-8 rounded-2xl border-2 border-primary-50 px-6 py-3 lg:mr-20">
-                  <h6 className="text-lg font-bold text-primary-400">
-                    Dedicated experts team:
-                  </h6>
-                  <p className="text-sm font-medium lg:text-base">
-                    With years of specialized training and a compassionate
-                    approach, our team of best counselors can guide you through
-                    challenges and help you build a stronger, more fulfilling
-                    connection.
-                  </p>
-                </div>
-                <div className="-mt-2 ml-8 rounded-2xl rounded-br-[4rem] bg-primary-50 px-6 py-3 shadow-lg lg:ml-20">
-                  <h6 className="text-lg font-bold text-primary-400">
-                    Tailored Approach:
-                  </h6>
-                  <p className="text-sm font-medium lg:text-base">
-                    We understand that every couple is unique, and there is no
-                    one-size-fits-all solution. Our therapy sessions are
-                    customized to address your specific needs, concerns, and
-                    goals, ensuring you receive personalized support throughout
-                    your journey.
-                  </p>
-                </div>
-              </figcaption>
-            </figure>
-            <figure className="gap-x-5 pb-6 pt-6 lg:flex lg:pt-12">
-              <div className="mb-6 lg:order-2 lg:mb-0 lg:w-2/5">
-                <img
-                  src={couplesTherapy2}
-                  alt=""
-                  className="mx-auto block object-cover lg:w-52"
-                />
-              </div>
-              <figcaption className="lg:order-1 lg:w-3/5">
-                <div className="mr-10 rounded-2xl border-2 border-primary-50 px-6 py-3 lg:mr-20">
-                  <h6 className="text-lg font-bold text-primary-400">
-                    Accessibility:
-                  </h6>
-                  <p className="text-sm font-medium lg:text-base">
-                    Get a one-to-one therapy session with the best therapist
-                    from the comfort of your home through video, calls or chats,
-                    to deal with your ongoing issues.
-                  </p>
-                </div>
-                <div className="-mt-2 ml-10 rounded-2xl rounded-br-[4rem] bg-primary-50 px-6 py-3 shadow-lg lg:ml-20">
-                  <h6 className="text-lg font-bold text-primary-400">
-                    Safe and Non-Judgmental Space:
-                  </h6>
-                  <p className="text-sm font-medium lg:text-base">
-                    Our therapy environment is a safe haven where you and your
-                    partner can express yourselves openly without fear of
-                    judgment. We foster a nurturing atmosphere, encouraging
-                    honest communication and emotional vulnerability.
-                  </p>
-                </div>
-              </figcaption>
-            </figure>
-          </div> */}
-
-          <div className="grid-cols-2 gap-10 pb-6 pt-6 lg:grid lg:pt-12">
-            <div className="cursor-pointer rounded-2xl border-2 border-primary-50 px-6 py-3 hover:bg-primary-50">
+          <div className="grid gap-6 pb-6 pt-6 lg:grid-cols-2 lg:gap-10 lg:pt-12">
+            <div className="cursor-pointer rounded-2xl border-2 border-primary-50  px-6 py-3 shadow-lg hover:bg-primary-50">
               <h6 className="text-lg font-bold">Dedicated experts team:</h6>
               <p className="text-sm font-medium lg:text-base">
                 With years of specialized training and a compassionate approach,
@@ -141,7 +72,7 @@ function CouplesTherapy() {
                 help you build a stronger, more fulfilling connection.
               </p>
             </div>
-            <div className="rounded-2xl rounded-br-[4rem] bg-primary-50 px-6 py-3 shadow-lg">
+            <div className="rounded-2xl rounded-br-[4rem] bg-primary-50 px-6 py-3 shadow-lg hover:bg-transparent">
               <h6 className="text-lg font-bold">Tailored Approach:</h6>
               <p className="text-sm font-medium lg:text-base">
                 We understand that every couple is unique, and there is no
@@ -150,7 +81,7 @@ function CouplesTherapy() {
                 you receive personalized support throughout your journey.
               </p>
             </div>
-            <div className="cursor-pointer rounded-2xl border-2 border-primary-50 px-6 py-3 hover:bg-primary-50">
+            <div className="cursor-pointer  rounded-2xl border-2 border-primary-50 px-6 py-3 shadow-lg hover:bg-primary-50">
               <h6 className="text-lg font-bold ">Accessibility:</h6>
               <p className="text-sm font-medium lg:text-base">
                 Get a one-to-one therapy session with the best therapist from
@@ -158,7 +89,7 @@ function CouplesTherapy() {
                 with your ongoing issues.
               </p>
             </div>
-            <div className="rounded-2xl rounded-br-[4rem] bg-primary-50 px-6 py-3 shadow-lg">
+            <div className="rounded-2xl rounded-br-[4rem] bg-primary-50 px-6 py-3 shadow-lg hover:bg-transparent">
               <h6 className="text-lg font-bold">
                 Safe and Non-Judgmental Space:
               </h6>

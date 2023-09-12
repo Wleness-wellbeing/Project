@@ -76,7 +76,7 @@ export default function Internship() {
 
   return (
     <>
-      <header className="bg-primary-50/30 py-16">
+      <header className="bg-primary-50/30 py-4 lg:py-16">
         <div className="container mx-auto flex flex-col items-center justify-center md:flex-row">
           {/* Image on the right */}
           <div className="md:w-1/2 lg:order-2 ">

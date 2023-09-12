@@ -1339,7 +1339,7 @@ export const statistics = [
     background: "bg-primary-400",
   },
   {
-    value: "100",
+    value: "50",
     title: "Doctors",
     suffix: "+",
     background: "bg-primary-50",

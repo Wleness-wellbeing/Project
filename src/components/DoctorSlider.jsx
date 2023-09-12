@@ -55,7 +55,7 @@ export default function DoctorSlider(props) {
       >
         <Swiper
           modules={[EffectCoverflow, Navigation, Autoplay]}
-          className="mySwiper mb-14 h-96 overflow-y-visible xs:h-[400px] xl:h-[480px]"
+          className="mySwiper mb-16 h-96 overflow-y-visible xs:h-[400px] xl:h-[480px]"
           navigation={true}
           effect={"coverflow"}
           grabCursor={true}

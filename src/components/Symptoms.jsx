@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Symptoms({ highlight, image, points }) {
   return (
-    <section className="container mx-auto text-center">
+    <section className="container mx-auto pt-5 text-center">
       <h2 className="subheading mb-2">
         <span>Here's How Generalized</span>
         <p>

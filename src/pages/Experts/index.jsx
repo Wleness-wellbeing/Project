@@ -49,24 +49,32 @@ function Experts() {
     <>
       {/* ========== Header Bar ========== */}
       <header className="bg-primary-50/30">
-        <div className="container mx-auto flex flex-col items-center rounded-3xl !px-5 py-2 lg:flex-row lg:py-6 2xl:justify-between 2xl:pb-10 2xl:pt-14">
-          <div className="mb-6 lg:order-2 lg:mb-0 xl:w-1/2 2xl:flex 2xl:justify-end">
+        <div className="container mx-auto flex flex-col items-center rounded-3xl !px-5 py-2 lg:flex-row lg:py-6 2xl:justify-between 2xl:py-16">
+          <div className="lg:order-2 lg:mb-0 xl:w-1/2 2xl:flex 2xl:justify-end">
             {/* Desktop Image */}
             <img src={expertsHeader} alt="" className=" w-full object-cover" />
           </div>
-          <div className="-m-5 mb-6 rounded-3xl p-5 md:mb-6 lg:order-1 lg:m-0 lg:mb-0 lg:rounded-none xl:w-1/2 xl:pl-4">
+          <div className="-m-5 mb-6 rounded-3xl p-5 text-center md:mb-6 lg:order-1 lg:m-0 lg:mb-0 lg:rounded-none lg:text-left xl:w-1/2 xl:pl-4">
             <hgroup className="md:mb-3">
-              <h3 className="heading-primary  flex items-center justify-center text-xl font-bold lg:justify-start">
-                <span className="mr-2"> Mental Health Matters</span>
-                <img src={faceIcon} alt="Header Icon" className="w-10" />
-              </h3>
-              <h1 className="subheading mb-4 text-center lg:mb-10 lg:text-left">
+              <h1 className="subheading mb-2 text-center lg:text-left">
+                <span className="heading-primary mr-2">
+                  Mental Health Matters
+                </span>
                 <span className="text-[#383838] lg:block">Unlock your </span>
                 <span className="heading-primary">well being </span>
                 <span className="text-[#383838]">with </span>
                 <span className="heading-primary">wleness</span>
               </h1>
             </hgroup>
+            <p className="para mb-4 lg:mb-8">
+              At Wleness, we provide a holistic approach to unlocking your
+              wellness. Our team of dedicated psychologists and therapists is
+              here to offer personalized guidance and support tailored to your
+              unique needs. Whether you're seeking to manage stress, overcome
+              challenges, or enhance your overall mental health, we're committed
+              to empowering you on your path to wellness. Together, we'll unlock
+              the potential for a healthier and happier you
+            </p>
             <div className="space-y-3 lg:flex lg:space-x-3 lg:space-y-0">
               <button
                 className="btn-one !w-full lg:!w-fit lg:px-6"
@@ -89,7 +97,7 @@ function Experts() {
       <DoctorSlider data={expertDoctors} />
 
       {/* ========== Objectives ========== */}
-      <section className="container mx-auto mb-10 mt-5 grid items-center gap-5 rounded-2xl bg-primary-50/30 lg:grid-cols-3">
+      {/* <section className="container mx-auto mb-10 mt-5 grid items-center gap-5 rounded-2xl bg-primary-50/30 lg:grid-cols-3">
         <figure className="flex items-center px-5 pt-5 lg:py-10">
           <div className="mr-3 w-3/12 lg:w-20">
             <img src={featureIcon1} alt="" className="w-full object-cover" />
@@ -117,7 +125,7 @@ function Experts() {
             24X7 Quality service
           </figcaption>
         </figure>
-      </section>
+      </section> */}
 
       {/* ========== Why Us ========== */}
       <section className="relative overflow-x-hidden overflow-y-clip px-5 lg:!px-0 lg:pb-14">

@@ -16,7 +16,7 @@ export default function ActivityHeader(props) {
               className="w-full scale-105 rounded-2xl object-cover"
             />
           </div>
-          <div className="-m-5 mb-4 rounded-3xl py-5 md:mb-6 lg:order-1 lg:m-0 lg:mb-0 lg:w-[55%] lg:rounded-none xl:pl-0">
+          <div className="mb-4 rounded-3xl py-5 md:mb-6 lg:order-1 lg:m-0 lg:mb-0 lg:w-[55%] lg:rounded-none xl:pl-0">
             <hgroup className="md:mb-3 xl:pr-20">
               <h1 className="subheading mb-4 text-center lg:text-left">
                 {textColorize(props.title)}

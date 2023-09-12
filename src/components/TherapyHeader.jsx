@@ -8,15 +8,15 @@ import { Autoplay, EffectFade } from "swiper/modules";
 export default function TherapyHeader(props) {
   return (
     <>
-      <header className="bg-primary-100/20 py-4">
+      <header className="bg-primary-100/20 py-4 lg:py-10">
         {/* <header className="bg-gradient-to-b from-primary-50/30 to-transparent"> */}
-        <div className="container relative mx-auto flex flex-col items-center rounded-3xl bg-orange-50 py-2 lg:flex-row lg:px-10 lg:py-6 2xl:justify-between 2xl:py-24">
+        <div className="container relative mx-auto flex flex-col items-center rounded-3xl py-2 lg:flex-row lg:bg-orange-50 lg:px-10 lg:py-6 xl:py-14 2xl:justify-between">
           {/* Desktop Image */}
           <Swiper
             modules={[Autoplay, EffectFade]}
             effect={"fade"}
             slidesPerView={1}
-            className="rounded-2xl lg:order-2 lg:w-[55%] 2xl:flex 2xl:justify-end"
+            className="mb-4 w-full rounded-2xl lg:order-2 lg:mb-0 lg:w-[55%] 2xl:flex 2xl:justify-end"
             autoplay={{ delay: 2000 }}
             speed={400}
             loop={true}
@@ -28,19 +28,19 @@ export default function TherapyHeader(props) {
                     key={i}
                     src={value}
                     alt=""
-                    className="block w-full object-cover"
+                    className="block w-fit object-cover"
                   />
                 </SwiperSlide>
               );
             })}
           </Swiper>
 
-          <div className="-m-5 mb-4 rounded-3xl py-5 md:mb-6 lg:order-1 lg:m-0 lg:mb-0 lg:w-[45%] lg:rounded-none xl:pl-0">
+          <div className="mb-4 rounded-3xl py-5 md:mb-6 lg:order-1 lg:m-0 lg:mb-0 lg:w-[45%] lg:rounded-none xl:pl-0">
             <hgroup className="md:mb-3 xl:pr-6">
               <h1 className="subheading mb-4 text-center lg:text-left">
                 {textColorize(props.title)}
               </h1>
-              <h5 className="mb-8 text-center font-medium lg:text-left">
+              <h5 className="mb-8 text-center text-lg font-medium lg:text-left">
                 {props.desc}
               </h5>
             </hgroup>

@@ -131,14 +131,15 @@ export default function Signup() {
               <p className="mt-1 text-sm text-red-500">{errors.name}</p>
             )}
 
-            <label htmlFor="email">
+            <label htmlFor="mobile">
               <input
-                type="text"
-                id="email"
-                name="email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                type="tel"
+                maxLength={10}
+                id="mobile"
+                name="mobile"
+                placeholder="Mobile"
+                value={mobile}
+                onChange={(e) => setMobile(e.target.value)}
                 className={`form-input ${errors.name ? "border-red-500" : ""}`}
               />
             </label>

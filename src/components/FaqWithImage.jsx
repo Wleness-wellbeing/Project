@@ -14,11 +14,10 @@ export default function FaqWithImage(props) {
   };
   return (
     <>
-      <section className="">
-        <div className="bg-primary-50/60 py-4 text-center">
-          <hgroup className="subheading mb-2 !flex !w-full justify-center">
-            <h2>{textColorize(props.data.heading1)} </h2>
-            &nbsp;
+      <section>
+        <div className="bg-primary-50/60 px-4 py-4 text-center lg:px-0">
+          <hgroup className="subheading mb-2 !flex !w-full flex-col justify-center lg:flex-row">
+            <h2 className="lg:md:mr-3">{textColorize(props.data.heading1)}</h2>
             <h2>{textColorize(props.data.heading2)}</h2>
           </hgroup>
           <p className="para text-center">{props.data.desc}</p>

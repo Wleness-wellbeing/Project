@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { iconFacebookCircle, iconGoogle, login, logo } from "../../assets";
 import axios from "axios";
+
 export default function Login() {
-  const [email, setEmail] = useState("");
+  const [mobile, setMobile] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
   function handlesubmit(e) {
     e.preventDefault();
     console.log(email, password);
@@ -58,13 +60,15 @@ export default function Login() {
           </div>
           {/* Login Form */}
           <form action="javascript:void()" className="mb-8">
-            <label htmlFor="username" className="mb-5 block">
+            <label htmlFor="mobile" className="mb-5 block">
               <input
-                type="text"
-                id="username"
-                onChange={(e) => setEmail(e.target.value)}
-                name="username"
-                placeholder="Email or Mobile Number"
+                type="tel"
+                id="mobile"
+                maxLength={10}
+                onChange={(e) => setMobile(e.target.value)}
+                name="mobile"
+                value={mobile}
+                placeholder="Mobile Number"
                 className="form-input"
               />
             </label>

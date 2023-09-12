@@ -122,7 +122,7 @@ export default function index() {
         </div>
 
         <div className="container mx-auto">
-          <div className="items-center pb-6 lg:flex">
+          <div className="items-center pb-6 text-center md:text-left lg:flex">
             <div className="py-2 lg:order-2 lg:w-1/2 lg:py-0">
               <img
                 src={employeeTriangleHub}
@@ -194,7 +194,7 @@ export default function index() {
         <img
           src={circleArt}
           alt=""
-          className="absolute -left-80 -top-56 lg:-left-[410px] lg:-top-[380px] 2xl:-left-96"
+          className="absolute -left-80 -top-56 hidden md:block lg:-left-[410px] lg:-top-[380px] 2xl:-left-96"
         />
       </section>
 

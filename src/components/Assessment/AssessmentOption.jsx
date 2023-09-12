@@ -5,7 +5,7 @@ export default function AssessmentOption(props) {
     <div className="group box-border flex items-stretch">
       <label
         title={props.name}
-        className={`flex w-full cursor-pointer items-center justify-center rounded-md border-2 border-primary-300 bg-gradient-to-b px-2 py-1.5 text-xs font-semibold transition-all hover:border-transparent hover:from-secondary hover:to-tertiary hover:text-white md:text-sm lg:px-3 lg:py-2.5 lg:text-base ${
+        className={`flex w-full cursor-pointer items-center justify-center rounded-md border-2 border-primary-300 bg-white bg-gradient-to-b px-2 py-1.5 text-xs font-semibold transition-all hover:border-transparent hover:from-secondary hover:to-tertiary hover:text-white md:text-sm lg:px-3 lg:py-2.5 lg:text-base ${
           props.checked
             ? " border-transparent from-secondary to-tertiary text-white"
             : ""

@@ -7,7 +7,7 @@ export default function MainHeader({ openAssessmentModal }) {
     <header className="overflow-x-clip bg-[#ddf2ef]  py-4 pb-8 pt-6 lg:!px-5 lg:py-10 xl:py-20">
       <div className="container mx-auto items-center text-center lg:flex lg:text-left">
         {/* Header Image */}
-        <div className="relative my-2 lg:order-2 lg:my-2 lg:w-1/2">
+        <div className="relative mb-2 lg:order-2 lg:my-2 lg:w-1/2">
           <img
             loading="lazy"
             src={mainHeaderImage}

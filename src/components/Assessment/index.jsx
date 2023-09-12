@@ -133,7 +133,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
 
   return (
     <div className="fixed inset-0 z-50 grid w-full place-items-center backdrop-brightness-50">
-      <div className="assessment absolute mx-auto flex h-full w-full items-center justify-center overflow-hidden border-2 bg-white py-4 md:w-[720px] lg:relative lg:h-fit lg:w-[920px] lg:rounded-3xl lg:py-12">
+      <div className="assessment absolute mx-auto flex h-full w-full items-center justify-center overflow-hidden border-2 bg-[#E5FEFB] py-4 md:w-[720px] lg:relative lg:h-fit lg:w-[920px] lg:rounded-3xl lg:py-12">
         {/* Welcome Page */}
         {startAssessment && (
           <div className="flex flex-col justify-center py-6 text-center lg:h-[500px] lg:py-10">
@@ -145,7 +145,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
               loading="lazy"
               src={assessment1}
               alt=""
-              className="mx-auto my-4 mb-8 w-28"
+              className="mx-auto my-4 mb-8 w-28 lg:w-36"
             />
             <button
               className="btn-primary mx-auto bg-gradient-to-r from-secondary to-tertiary !font-semibold"
@@ -179,7 +179,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             <div className="flex justify-center space-x-4 text-center">
               <button
                 onClick={openWelcomeScreen}
-                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !py-2 font-semibold !text-primary-300 transition-all hover:shadow-md"
+                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !bg-white !py-2 font-semibold !text-primary-300 transition-all hover:shadow-md"
               >
                 Go Back
               </button>
@@ -230,7 +230,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             <div className="mt-8 flex justify-center space-x-4 text-center lg:mt-0">
               <button
                 onClick={openScreenOne}
-                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !py-2 font-semibold !text-primary-300 transition-all hover:shadow-md"
+                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !bg-white !py-2 font-semibold !text-primary-300 transition-all hover:shadow-md"
               >
                 Go Back
               </button>
@@ -280,7 +280,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             <div className="mt-8 flex justify-center space-x-4 text-center lg:mt-0">
               <button
                 onClick={openScreenTwo}
-                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !py-2 font-semibold !text-primary-300 transition-all hover:shadow-md"
+                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !bg-white !py-2 font-semibold !text-primary-300 transition-all hover:shadow-md"
               >
                 Go Back
               </button>
@@ -296,7 +296,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
 
         {/* Screen 4 */}
         {screenFour && (
-          <div className="px-4 lg:mx-auto lg:h-[500px] lg:w-[600px] lg:px-0">
+          <div className="flex flex-col justify-center px-4 lg:mx-auto lg:h-[500px] lg:w-[600px] lg:px-0">
             <h2 className="heading-primary flex flex-col text-center text-3xl font-bold lg:text-4xl">
               Thanks, Let's Begin!
             </h2>
@@ -361,7 +361,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             <div className="flex justify-center space-x-4 text-center">
               <button
                 onClick={openScreenThree}
-                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !py-2 font-semibold !text-primary-300 transition-all hover:shadow-md"
+                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !bg-white !py-2 font-semibold !text-primary-300 transition-all hover:shadow-md"
                 s
               >
                 Go Back

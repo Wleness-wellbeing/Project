@@ -77,12 +77,12 @@ export default function index() {
         <img
           src={bgDotsPattern}
           alt=""
-          className="absolute -right-10 top-24 -z-10 w-40 xl:w-72"
+          className="absolute -right-10 top-24 -z-10 hidden w-40 lg:block xl:w-72"
         />
         <img
           src={bgDotsPattern}
           alt=""
-          className="absolute -left-20 bottom-32 -z-10 w-44 xl:w-80"
+          className="absolute -left-20 bottom-32 -z-10 hidden w-44 lg:block xl:w-80"
         />
       </header>
 
@@ -116,7 +116,7 @@ export default function index() {
 
       {/* Support Section */}
       <section className="pt-8 text-center">
-        <div className="bg-primary-50/40 py-4">
+        <div className="bg-primary-50/40 p-4">
           <h2 className="subheading">
             <span>Uncover your special heaven of </span>
             <span className="heading-primary">support and belonging</span>
