@@ -136,77 +136,33 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
       <div className="assessment absolute mx-auto flex h-full w-full items-center justify-center overflow-hidden border-2 bg-white py-4 md:w-[720px] lg:relative lg:h-fit lg:w-[920px] lg:rounded-3xl lg:py-12">
         {/* Welcome Page */}
         {startAssessment && (
-          <div className="py-6 text-center lg:h-[500px] lg:py-10 ">
+          <div className="flex flex-col justify-center py-6 text-center lg:h-[500px] lg:py-10">
             <h2 className="subheading mb-2 lg:mb-4">
               <span className="heading-primary">Welcome to Wleness</span>
             </h2>
 
-            <div className="mx-auto w-[300px]">
-              <div className=" text-center">
-                <h4 className="mb-5 text-xl">
-                  <span className="font-semibold">
-                    Do you want help finding a
-                  </span>
-                  <Link
-                    to="/services/therapy"
-                    className="inline-block text-xl font-bold text-primary-400"
-                  >
-                    Therapist?
-                  </Link>
-                </h4>
-                <img
-                  src={assessment1}
-                  alt=""
-                  className="left-4 top-44 mx-auto mb-4 w-20 lg:absolute lg:left-24 lg:top-44 lg:w-28"
-                />
-                <button
-                  className="btn-primary !font-semibold"
-                  onClick={openScreenOne}
-                >
-                  Find A Therapist
-                </button>
-              </div>
-              <div className="my-8 flex items-center justify-center gap-3">
-                <span className="h-[2px] w-40 bg-slate-200"></span>
-                <span>OR</span>
-                <span className="h-[2px] w-40 bg-slate-200"></span>
-              </div>
-              <div className="text-center">
-                <h4 className="mb-5 text-xl">
-                  <span className="mr-1 font-semibold">
-                    Do you want to browse all our
-                  </span>
-                  <Link
-                    to="/services/therapy"
-                    className="text-xl font-bold text-primary-400"
-                  >
-                    Therapists?
-                  </Link>
-                </h4>
-                <img
-                  src={assessment2}
-                  alt=""
-                  className="bottom-12 right-2 mx-auto mb-4 w-20 lg:absolute lg:bottom-40 lg:right-20 lg:w-28"
-                />
-                <Link
-                  to="/experts/all"
-                  className="btn-primary !font-semibold lg:block"
-                >
-                  Browse All Our Therapists
-                </Link>
-              </div>
-            </div>
+            <img
+              loading="lazy"
+              src={assessment1}
+              alt=""
+              className="mx-auto my-4 mb-8 w-28"
+            />
+            <button
+              className="btn-primary mx-auto bg-gradient-to-r from-secondary to-tertiary !font-semibold"
+              onClick={openScreenOne}
+            >
+              Find a Therapist
+            </button>
           </div>
         )}
 
         {/* Screen 1 */}
         {screenOne && (
-          <div className="lg:mx-auto lg:h-[500px] lg:w-[600px]">
-            <h2 className="mb-0 flex flex-col text-center text-xl font-bold text-primary-300 lg:mb-8 lg:text-3xl">
-              <span>What is in your mind?</span>
-              <span>How are you feeling?</span>
+          <div className="flex flex-col justify-center lg:mx-auto lg:h-[500px] lg:w-[600px]">
+            <h2 className="heading-primary flex flex-col text-center text-xl font-bold lg:text-3xl">
+              How are you feeling?
             </h2>
-            <div className="my-6 grid grid-cols-2 gap-2 px-4 lg:my-14 lg:grid-cols-3 lg:gap-4 lg:px-0">
+            <div className="my-6 grid grid-cols-2 gap-2 px-4 lg:my-10 lg:grid-cols-3 lg:gap-4 lg:px-0">
               {assessmentFeelings.map((value, index) => {
                 return (
                   <AssessmentOption
@@ -223,12 +179,12 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             <div className="flex justify-center space-x-4 text-center">
               <button
                 onClick={openWelcomeScreen}
-                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !py-2 font-semibold !text-primary-300"
+                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !py-2 font-semibold !text-primary-300 transition-all hover:shadow-md"
               >
                 Go Back
               </button>
               <button
-                className="btn-primary !w-fit !py-2.5 font-semibold"
+                className="btn-primary !w-fit bg-gradient-to-r from-secondary to-tertiary !py-2.5 !font-semibold transition-all hover:shadow-md"
                 onClick={openScreenTwo}
               >
                 Save & Next
@@ -240,7 +196,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
         {/* Screen 2 */}
         {screenTwo && (
           <div className="px-2 lg:mx-auto lg:h-[500px] lg:w-[640px]">
-            <h2 className="mb-0 flex flex-col text-center text-xl font-bold text-primary-300 lg:mb-8 lg:text-3xl">
+            <h2 className="heading-primary mb-0 flex flex-col text-center text-xl font-bold lg:mb-8 lg:text-3xl">
               How Long have you been experiencing these issues?
             </h2>
             <div className="my-4 flex flex-wrap justify-center gap-2 lg:my-6">
@@ -255,7 +211,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                 );
               })}
             </div>
-            <h2 className="mb-0 flex flex-col text-center text-xl font-bold text-primary-300 lg:mb-8 lg:text-3xl">
+            <h2 className="heading-primary mb-0 flex flex-col text-center text-xl font-bold lg:mb-8 lg:text-3xl">
               How difficult it is for you to manage all these issues?
             </h2>
             <div className="my-4 flex flex-col flex-wrap justify-center gap-2 px-4 lg:my-6 lg:flex-row lg:px-0">
@@ -274,12 +230,12 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             <div className="mt-8 flex justify-center space-x-4 text-center lg:mt-0">
               <button
                 onClick={openScreenOne}
-                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !py-2 font-semibold !text-primary-300"
+                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !py-2 font-semibold !text-primary-300 transition-all hover:shadow-md"
               >
                 Go Back
               </button>
               <button
-                className="btn-primary !w-fit !py-2.5 font-semibold"
+                className="btn-primary !w-fit bg-gradient-to-r from-secondary to-tertiary !py-2.5 !font-semibold transition-all hover:shadow-md"
                 onClick={openScreenThree}
               >
                 Save & Next
@@ -290,8 +246,8 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
 
         {/* Screen 3 */}
         {screenThree && (
-          <div className="px-2 lg:mx-auto lg:h-[500px] lg:w-[600px] lg:px-0">
-            <h2 className="mb-0 flex flex-col text-center text-xl font-bold text-primary-300 lg:mb-8 lg:text-3xl">
+          <div className="xl px-2 lg:mx-auto lg:h-[500px] lg:w-[640px] lg:px-0 xl:w-[700px]">
+            <h2 className="heading-primary mb-0 flex flex-col text-center text-xl font-bold lg:mb-8 lg:text-3xl">
               Which language are you comfortable?
             </h2>
             <div className="my-4 flex flex-wrap justify-center gap-2 lg:my-8 lg:gap-4">
@@ -306,7 +262,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                 );
               })}
             </div>
-            <h2 className="mb-0 flex flex-col text-center text-xl font-bold text-primary-300 lg:mb-8 lg:text-3xl">
+            <h2 className="heading-primary mb-0 flex flex-col text-center text-xl font-bold lg:mb-8 lg:text-3xl">
               How old are you?
             </h2>
             <div className="my-4 flex flex-wrap justify-center gap-2 lg:my-8 lg:gap-4">
@@ -324,12 +280,12 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             <div className="mt-8 flex justify-center space-x-4 text-center lg:mt-0">
               <button
                 onClick={openScreenTwo}
-                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !py-2 font-semibold !text-primary-300"
+                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !py-2 font-semibold !text-primary-300 transition-all hover:shadow-md"
               >
                 Go Back
               </button>
               <button
-                className="btn-primary !w-fit !py-2.5 font-semibold"
+                className="btn-primary !w-fit bg-gradient-to-r from-secondary to-tertiary !py-2.5 !font-semibold transition-all hover:shadow-md"
                 onClick={openScreenFour}
               >
                 Save & Next
@@ -341,7 +297,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
         {/* Screen 4 */}
         {screenFour && (
           <div className="px-4 lg:mx-auto lg:h-[500px] lg:w-[600px] lg:px-0">
-            <h2 className="flex flex-col text-center text-3xl font-bold text-primary-300 lg:text-4xl">
+            <h2 className="heading-primary flex flex-col text-center text-3xl font-bold lg:text-4xl">
               Thanks, Let's Begin!
             </h2>
             <div className="my-8 flex flex-wrap justify-center gap-4">
@@ -405,13 +361,14 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             <div className="flex justify-center space-x-4 text-center">
               <button
                 onClick={openScreenThree}
-                className="btn-primary !w-fit border-2  border-primary-300 !bg-transparent !py-2 font-semibold !text-primary-300"
+                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !py-2 font-semibold !text-primary-300 transition-all hover:shadow-md"
+                s
               >
                 Go Back
               </button>
               <Link
                 to="/experts/all"
-                className="btn-primary inline-block !w-fit !py-2.5 font-semibold"
+                className="btn-primary !w-fit bg-gradient-to-r from-secondary to-tertiary !py-2.5 !font-semibold transition-all hover:shadow-md"
               >
                 Find the experts
               </Link>
@@ -420,14 +377,14 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
         )}
 
         {/* Shapes */}
-        <span className="absolute -top-14 right-0 h-20 w-20 rounded-full border-8 border-primary-50 lg:h-40 lg:w-40"></span>
+        {/* <span className="absolute -top-14 right-0 h-20 w-20 rounded-full border-8 border-primary-50 lg:h-40 lg:w-40"></span>
         <span className="absolute -bottom-12 left-10 h-20 w-20 rounded-full border-8 border-primary-50 lg:-bottom-8 lg:h-40 lg:w-40"></span>
         <span className="absolute right-14 top-20 h-6 w-6 rounded-full border-4 border-primary-50 lg:-top-7 lg:right-52 lg:h-14 lg:w-14"></span>
         <span className="absolute left-24 top-1/2 h-4 w-4 rounded-full border-4 border-primary-50 lg:h-12 lg:w-12"></span>
         <span className="absolute right-28 top-4 h-3 w-3 rounded-full bg-primary-50 lg:top-44 lg:h-10 lg:w-10"></span>
         <span className="absolute bottom-12 left-52 hidden h-3 w-3 rounded-full bg-primary-50 lg:inline-block lg:h-10 lg:w-10"></span>
         <span className="absolute left-52 top-0 hidden h-3 w-3 rounded-full bg-primary-50 lg:block lg:h-10 lg:w-10"></span>
-        <span className="absolute bottom-4 right-10 h-3 w-3 rounded-full bg-primary-50 lg:bottom-12 lg:right-32 lg:h-10 lg:w-10"></span>
+        <span className="absolute bottom-4 right-10 h-3 w-3 rounded-full bg-primary-50 lg:bottom-12 lg:right-32 lg:h-10 lg:w-10"></span> */}
 
         {/* Close */}
         <FontAwesomeIcon

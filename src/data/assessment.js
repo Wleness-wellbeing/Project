@@ -46,6 +46,7 @@ export const managingDifficulty = [
 export const languages = [
   "English",
   "Hindi",
+  "Bengali",
   "Marathi",
   "Malayalam",
   "Telugu",

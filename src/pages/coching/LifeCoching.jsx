@@ -19,11 +19,12 @@ const results = [
   ],
   [
     "",
-    "Clients reported decreased anxiety levels and depression levels, with improved workplace relationships 79%.",
+    "Clients reported decreased anxiety levels and depression levels with improved workplace relationships",
+    " 79%.",
   ],
   [
     "67% ",
-    "clients felt improved work/life balance , and wellness after coaching.",
+    "clients felt improved work/life balance and wellness after coaching.",
   ],
 ];
 export default function LifeCoching() {
@@ -122,6 +123,7 @@ export default function LifeCoching() {
                     <p className="text-black">
                       <span className="text-primary-300">{value[0]}</span>
                       <span>{value[1]}</span>
+                      <span className="text-primary-300">{value[2]}</span>
                     </p>
                   </li>
                 );

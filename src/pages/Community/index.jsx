@@ -16,6 +16,7 @@ import {
 import { wlenessCommunity } from "../../data/community";
 import CommunityCard from "../../components/Cards/CommunityCard";
 import CommunitySupportCard from "../../components/Cards/CommunitySupportCard";
+import { Link } from "react-router-dom";
 
 const communitySupport = [
   {
@@ -66,7 +67,9 @@ export default function index() {
               Let's come together and build a supportive community where we
               share, grow, and heal as one.
             </p>
-            <button className="btn-one">Join Now</button>
+            <Link to="/community/chat" className="btn-one">
+              Join Now
+            </Link>
           </div>
         </div>
 
@@ -130,7 +133,9 @@ export default function index() {
         </div>
 
         <div className="pb-8 text-center">
-          <button className="btn-one">Join us now</button>
+          <Link to="/community/chat" className="btn-one mx-auto block">
+            Join us now
+          </Link>
         </div>
       </section>
 

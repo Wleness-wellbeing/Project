@@ -19,8 +19,8 @@ export default function DoctorSliderBtns({ text, slug }) {
           className="text-2xl text-primary-300 lg:text-4xl"
         />
       </button>
-      <Link to={slug} className="btn-one mx-auto">
-        {text}
+      <Link to="/appointment/checkout" className="btn-one mx-auto">
+        Book Now
       </Link>
       <button
         onClick={() => swiper.slideNext()}

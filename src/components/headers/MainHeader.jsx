@@ -7,8 +7,13 @@ export default function MainHeader({ openAssessmentModal }) {
     <header className="overflow-x-clip bg-[#ddf2ef]  py-4 pb-8 pt-6 lg:!px-5 lg:py-10 xl:py-20">
       <div className="container mx-auto items-center text-center lg:flex lg:text-left">
         {/* Header Image */}
-        <div className="relative my-4 lg:order-2 lg:my-2 lg:w-1/2">
-          <img src={mainHeaderImage} alt="" className="mx-auto scale-110" />
+        <div className="relative my-2 lg:order-2 lg:my-2 lg:w-1/2">
+          <img
+            loading="lazy"
+            src={mainHeaderImage}
+            alt=""
+            className="mx-auto scale-110"
+          />
         </div>
         <div className="lg:order-1 lg:w-1/2">
           <h1 className="subheading heading-primary px-10 lg:mb-4 lg:px-0">
@@ -17,7 +22,7 @@ export default function MainHeader({ openAssessmentModal }) {
           <h4 className="mb-2 text-xl font-bold text-primary-400 lg:mb-4">
             Take Care Of Yourself
           </h4>
-          <h3 className="mx-auto mb-3 text-base font-semibold text-slate-600 lg:mb-10 lg:text-lg">
+          <h3 className="mx-auto mb-3 text-sm font-semibold text-slate-600 md:text-base lg:mb-10 lg:text-lg">
             Discover your journey to a better self by nurturing your mind, body
             and soul with our professionally curated services customised by
             industry experts just for you!

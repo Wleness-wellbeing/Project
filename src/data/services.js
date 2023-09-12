@@ -19,7 +19,6 @@ import {
   whyChooseTherapy2,
   whyChooseTherapy3,
   whyChooseTherapy4,
-  whyChooseTherapy5,
   bestTherapy,
   specialist1,
   therapyHeader,
@@ -241,19 +240,14 @@ export const TherapyData = {
       image: whyChooseTherapy2,
     },
     {
-      title: "Self Understanding",
-      desc: "Therapy fosters self-awareness of thoughts, behaviors, and patterns",
-      image: whyChooseTherapy3,
-    },
-    {
-      title: "Improved Relationships",
+      title: "Relationships",
       desc: "Therapy can enhance communication and interpersonal skills.",
-      image: whyChooseTherapy4,
+      image: whyChooseTherapy3,
     },
     {
       title: "Mental Wellness",
       desc: "Therapy promotes overall mental health and well-being.",
-      image: whyChooseTherapy5,
+      image: whyChooseTherapy4,
     },
   ],
 };

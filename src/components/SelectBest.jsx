@@ -17,7 +17,12 @@ const SelectBest = React.forwardRef((props, ref) => {
 
           <div className="container relative mx-auto pt-2 md:flex md:gap-x-8 lg:pt-10">
             <div className="md:w-1/2">
-              <img src={props.image} alt="" className="mx-auto w-full" />
+              <img
+                loading="lazy"
+                src={props.image}
+                alt=""
+                className="mx-auto w-full"
+              />
             </div>
             <ul className="grid items-center gap-y-3 pl-5 pt-5 md:w-1/2 md:py-8">
               {props.features.map((value, index) => {
@@ -45,6 +50,7 @@ const SelectBest = React.forwardRef((props, ref) => {
           </div>
 
           <img
+            loading="lazy"
             src={themeWAve}
             alt=""
             className="absolute -right-36 -top-14 w-64 -translate-y-1/2 lg:-right-20 lg:top-1/2 lg:w-[480px]"

@@ -9,6 +9,7 @@ const ServicesTechniques = React.forwardRef((props, ref) => {
           <img
             src={value.thumbnail}
             alt={value.title}
+            loading="lazy"
             className="block w-full object-cover"
           />
         </div>

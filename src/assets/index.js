@@ -449,7 +449,6 @@ import whyChooseTherapy1 from "./images/services/therapy/why-choose-1.png";
 import whyChooseTherapy2 from "./images/services/therapy/why-choose-2.png";
 import whyChooseTherapy3 from "./images/services/therapy/why-choose-3.png";
 import whyChooseTherapy4 from "./images/services/therapy/why-choose-4.png";
-import whyChooseTherapy5 from "./images/services/therapy/why-choose-5.png";
 // Services >> Psychiatrist
 import psychiatristHeader from "./images/services/psychiatrist/psychiatrist-header.png";
 import bestPsychiatrist from "./images/services/psychiatrist/best-psychiatrist.png";
@@ -469,7 +468,6 @@ export {
   whyChooseTherapy2,
   whyChooseTherapy3,
   whyChooseTherapy4,
-  whyChooseTherapy5,
   psychiatristHeader,
   bestPsychiatrist,
   bulb,
@@ -604,18 +602,34 @@ import happyClient1 from "./images/clients/happy-client-1.png";
 import happyClient2 from "./images/clients/happy-client-2.png";
 import happyClient3 from "./images/clients/happy-client-3.png";
 import happyClient4 from "./images/clients/happy-client-4.png";
+import therapyClient1 from "./images/clients/therapy-review-1.jpg";
+import therapyClient2 from "./images/clients/therapy-review-2.jpg";
+import therapyClient3 from "./images/clients/therapy-review-3.jpg";
+import coupleTherapyReview1 from "./images/clients/couple-therapy-review-1.jpg";
+import coupleTherapyReview2 from "./images/clients/couple-therapy-review-2.jpg";
+import coupleTherapyReview3 from "./images/clients/couple-therapy-review-3.jpg";
 
-export { happyClient1, happyClient2, happyClient3, happyClient4 };
+export {
+  happyClient1,
+  happyClient2,
+  happyClient3,
+  happyClient4,
+  therapyClient1,
+  therapyClient2,
+  therapyClient3,
+  coupleTherapyReview1,
+  coupleTherapyReview2,
+  coupleTherapyReview3,
+};
 
 // FAQ's Section
 import faqHeader from "./images/faqs/faq-header.png";
 import faq1 from "./images/faqs/faq-1.png";
 import faq2 from "./images/faqs/faq-2.png";
 import faq3 from "./images/faqs/faq-3.png";
-import faq3Lg from "./images/faqs/faq-3-lg.png";
 import faq4 from "./images/faqs/faq-4.png";
 
-export { faq1, faq2, faq3, faq3Lg, faq4, faqHeader };
+export { faq1, faq2, faq3, faq4, faqHeader };
 
 // Blogs Images
 import blogHeader1 from "./images/blogs/blogs-header-1.png";
@@ -830,9 +844,9 @@ import ringervolume from "./images/contactus/RingerVolume.png";
 export { email, location, ringervolume };
 
 // ======= Life Coaching =========//
-import grp1 from "./images/lifecoching/grp1.png";
-import grp2 from "./images/lifecoching/grp2.png";
-import grp3 from "./images/lifecoching/grp3.png";
+import lifeCoaching1 from "./images/lifecoching/life-coaching-1.png";
+import lifeCoaching2 from "./images/lifecoching/life-coaching-2.png";
+import lifeCoaching3 from "./images/lifecoching/life-coaching-3.png";
 import rectangle1 from "./images/lifecoching/rectangle1.png";
 import rectangle2 from "./images/lifecoching/rectangle2.png";
 import rectangle3 from "./images/lifecoching/rectangle3.png";
@@ -843,9 +857,9 @@ import four from "./images/lifecoching/4.png";
 import lifeCoachingHeader from "./images/lifecoching/life-coaching-header.png";
 
 export {
-  grp1,
-  grp2,
-  grp3,
+  lifeCoaching1,
+  lifeCoaching2,
+  lifeCoaching3,
   rectangle1,
   rectangle2,
   rectangle3,

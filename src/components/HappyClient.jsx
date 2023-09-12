@@ -30,9 +30,10 @@ export default function HappyClient(props) {
                   <figure className="items-center lg:flex">
                     <div className="flex items-center justify-center p-4 lg:w-2/5">
                       <img
+                        loading="lazy"
                         src={value.image}
                         alt=""
-                        className="w-60 object-cover"
+                        className="my-4 w-60 rounded-2xl rounded-br-[4rem] object-cover shadow-[-12px_-16px_2px_4px_rgba(82,208,194,0.27)]"
                       />
                     </div>
                     <figcaption className="lg:w-3/5">
@@ -55,11 +56,13 @@ export default function HappyClient(props) {
         </div>
       </div>
       <img
+        loading="lazy"
         src={doodle2}
         alt=""
         className="absolute right-0 top-0 -z-10 w-20 -scale-x-[1] object-cover opacity-20 xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80"
       />
       <img
+        loading="lazy"
         src={doodle2}
         alt=""
         className="absolute bottom-0 left-0 -z-10 w-20 object-cover opacity-20 xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80"

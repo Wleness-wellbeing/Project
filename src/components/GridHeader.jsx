@@ -25,7 +25,7 @@ export default function GridHeader(props) {
           <span className="heading-primary">{props.name}</span>
         </h1>
         <div>
-          <img src={props.image} alt="" className="w-full" />
+          <img loading="lazy" src={props.image} alt="" className="w-full" />
         </div>
         <p className="para mb-8 text-center lg:px-20">{props.desc}</p>
         <div className="text-center" onClick={props.handleScrollToComponent}>

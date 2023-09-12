@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Faq from "../layout/Faq";
-import { faq3Lg } from "../../assets";
+import { faq3 } from "../../assets";
 
 export default function HomeFaq(props) {
   const [openFAQ, setOpenFAQ] = useState(0);
@@ -21,7 +21,7 @@ export default function HomeFaq(props) {
           Everything you need to know right here at Wleness. Ask questions and
           browse around for answers.
         </p>
-        <img src={faq3Lg} alt="" className="lg:w-4/5" />
+        <img src={faq3} alt="" className="lg:w-4/5" loading="lazy" />
         <Link to="/faqs" className="btn-one inline-block">
           Goes to FAQ's
         </Link>

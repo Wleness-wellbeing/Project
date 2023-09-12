@@ -54,14 +54,9 @@ export default function MobileNavbar({ toggleJoinUs }) {
             <MobileMenuLink url="/" text="Home" />
             <MobileDropdown url="" text="Services" pages={serviceMenuPages} />
             <MobileMenuLink url="/experts" text="Our Experts" />
-            <MobileDropdown
-              url="/self-care"
-              text="Self Care"
-              pages={seldCareSubpages}
-            />
+            <MobileDropdown url="" text="Self Care" pages={seldCareSubpages} />
             <MobileDropdown url="" text="Resources" pages={resourcesSubpages} />
             <MobileMenuLink url="/about-us" text="About Us" />
-            <MobileMenuLink url="/internship" text="Internship" />
           </ul>
 
           {/* Authentication */}

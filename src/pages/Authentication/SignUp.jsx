@@ -107,6 +107,7 @@ export default function Signup() {
             <Link to="/">
               <img
                 src={logo}
+                loading="lazy"
                 alt="Logo"
                 className="block w-full object-cover"
               />

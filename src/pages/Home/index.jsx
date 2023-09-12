@@ -1,16 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // Data
-import {
-  community,
-  doodle2,
-  partner1,
-  partner2,
-  partner3,
-  partner4,
-  partner5,
-  designRing,
-} from "../../assets";
+import { community, doodle2, designRing } from "../../assets";
 import { homeFaqs } from "../../data/faqs";
 import { homeTestimonials } from "../../data/testimonials";
 import { homeServices, objectives, statistics, whyChooseUs } from "../../data";
@@ -99,6 +90,7 @@ export default function Home() {
             return (
               <figure className="self-center" key={i}>
                 <img
+                  loading="lazy"
                   src={value.image}
                   alt=""
                   className="mx-auto mb-2 h-6 w-6 object-cover sm:h-12 sm:w-12 lg:h-14 lg:w-14"
@@ -123,12 +115,18 @@ export default function Home() {
           <div className="relative flex flex-col justify-between lg:flex-row lg:items-center">
             <div className="relative mb-8 lg:order-2 lg:mb-0 lg:w-2/5">
               <div className="mx-auto w-64 lg:w-72">
-                <img src={community} alt="" className="w-full object-cover" />
+                <img
+                  src={community}
+                  alt=""
+                  className="w-full object-cover"
+                  loading="lazy"
+                />
               </div>
 
               <img
                 src={designRing}
                 alt=""
+                loading="lazy"
                 className="absolute right-1/2 top-1/2 -z-10 -translate-y-1/2 translate-x-1/2 scale-125 object-cover xs:w-80 md:w-96 lg:w-[520px] lg:scale-150 xl:scale-125"
               />
             </div>
@@ -170,6 +168,7 @@ export default function Home() {
         </div>
         {/* Doodles */}
         <img
+          loading="lazy"
           src={doodle2}
           alt=""
           className="absolute bottom-0 left-0 -z-10 w-20 object-cover opacity-20 xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80"
@@ -189,7 +188,12 @@ export default function Home() {
               return (
                 <figure key={i}>
                   <div>
-                    <img src={value.image} alt="" className="mx-auto lg:w-28" />
+                    <img
+                      src={value.image}
+                      alt=""
+                      loading="lazy"
+                      className="mx-auto lg:w-28"
+                    />
                   </div>
                   <figcaption>
                     <h2 className="heading-primary mb-3 inline-block text-xl font-bold text-primary-400">

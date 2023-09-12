@@ -135,7 +135,7 @@ export default function RoutineCare() {
 
         <div className="relative mb-10 rounded-2xl bg-[#C0F1F8] p-6">
           <h2 className="mb-2 font-semibold">
-            Evening Routine <span className="font-bold">AM</span>
+            Evening Routine <span className="font-bold">PM</span>
           </h2>
           <ul className="space-y-2 font-semibold">
             {eveningRoutine.map((value, i) => {

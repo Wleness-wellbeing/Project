@@ -48,7 +48,12 @@ export default function Login() {
         <div class="w-80 sm:w-[400px]">
           <div class="mx-auto mb-4 w-64 sm:w-[280px]">
             <Link to="/">
-              <img src={logo} alt="Logo" class="block w-full object-cover" />
+              <img
+                src={logo}
+                alt="Logo"
+                loading="lazy"
+                class="block w-full object-cover"
+              />
             </Link>
           </div>
           {/* Login Form */}

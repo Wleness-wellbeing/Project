@@ -22,6 +22,7 @@ export default function IssueCard(props) {
             {props.data.name}
           </h3>
           <img
+            loading="lazy"
             src={props.data.image}
             alt="Avatar"
             className="mx-auto mb-4 block h-24 w-24 rounded-2xl object-contain lg:h-40 lg:w-40 3xl:h-36 3xl:w-36"

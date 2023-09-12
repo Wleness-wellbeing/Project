@@ -102,6 +102,10 @@ export const activitiesMenuPages = [
 // Menu Pages
 export const seldCareSubpages = [
   {
+    name: "Selfcare Dashbaord",
+    slug: "/self-care",
+  },
+  {
     name: "Brain Exercise",
     slug: "/activities/brain-exercise",
   },
@@ -168,6 +172,7 @@ export const footerAboutWleness = [
   ["About Us", "/about-us"],
   ["Contact Us", "/contact-us"],
   ["Career", "/career"],
+  ["Join Us", "/join-psychiatrist"],
   ["FAQ's", "/faqs"],
 ];
 

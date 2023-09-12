@@ -51,7 +51,7 @@ export default function DashboardLayout({ children }) {
             <form
               action=""
               method="get"
-              className="flex w-full rounded-xl bg-slate-200"
+              className="flex w-full rounded-xl bg-slate-200/60"
             >
               <label htmlFor="search" className="w-full">
                 <input
