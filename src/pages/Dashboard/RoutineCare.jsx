@@ -3,6 +3,7 @@ import { faRightLong, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { RoutineCareChats } from "../../data/dashboard";
 import { iconDay, iconNight } from "../../assets";
+import ShowMoreText from "../../components/Cards/ShowMoreText";
 
 export default function RoutineCare() {
   const [morningRoutine, setMorningRoutine] = useState([]);
@@ -74,25 +75,13 @@ export default function RoutineCare() {
         {/* How you feel */}
         <div className="mb-5 mt-6 space-y-6">
           {RoutineCareChats.map((value, i) => {
-            return (
-              <div key={i} className={"rounded-2xl px-6 py-2.5 " + value.bg}>
-                <h4 className="font-bold">{value.question}</h4>
-                <p className="text-sm font-semibold">{value.answer}</p>
-                <p className="text-right">
-                  {/* <span className="text-sm font-semibold text-red-600">
-                    View More
-                  </span> */}
-                </p>
-              </div>
-            );
+            return <ShowMoreText key={i} data={value} />;
           })}
         </div>
       </div>
       <div className="lg:w-[35%] lg:p-4">
         <div className="relative mb-6 rounded-2xl bg-[#C0F1F8] p-6">
-          <h2 className="mb-2 font-semibold">
-            Morning Routine <span className="font-bold">AM</span>
-          </h2>
+          <h2 className="mb-2 font-semibold">Morning Routine</h2>
           <ul className="space-y-2 font-semibold">
             {morningRoutine.map((value, i) => {
               return (
@@ -134,9 +123,7 @@ export default function RoutineCare() {
         </div>
 
         <div className="relative mb-10 rounded-2xl bg-[#C0F1F8] p-6">
-          <h2 className="mb-2 font-semibold">
-            Evening Routine <span className="font-bold">PM</span>
-          </h2>
+          <h2 className="mb-2 font-semibold">Evening Routine</h2>
           <ul className="space-y-2 font-semibold">
             {eveningRoutine.map((value, i) => {
               return (
