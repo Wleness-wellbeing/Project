@@ -16,6 +16,8 @@ import { internshipClients } from "../../data/clients";
 // Components
 import HappyClient from "../../components/HappyClient";
 import InternshipApply from "../../components/InternshipApply";
+import { internshipFaqs } from "../../data/faqs";
+import FaqWithImage from "../../components/FaqWithImage";
 
 const wlenessWork = [
   {
@@ -184,6 +186,8 @@ export default function Internship() {
       </section>
 
       <HappyClient data={internshipClients} />
+
+      <FaqWithImage data={internshipFaqs} />
 
       <InternshipApply
         isOpen={internshipModal}

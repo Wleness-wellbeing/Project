@@ -175,6 +175,58 @@ export const musicalTherapyFaq = {
   ],
 };
 
+// Internship Faqs
+export const internshipFaqs = {
+  heading1: [
+    {
+      color: false,
+      text: "You've got ",
+    },
+    {
+      color: true,
+      text: "questions",
+    },
+    {
+      color: false,
+      text: "?",
+    },
+  ],
+  heading2: [
+    {
+      color: false,
+      text: "We've got ",
+    },
+    {
+      color: true,
+      text: "answers",
+    },
+    {
+      color: false,
+      text: "!",
+    },
+  ],
+  desc: "Everything you need to know about the internship. Can't find the answers you're looking for? ",
+  image: faq2,
+  qnas: [
+    {
+      question: "How to apply for it ?",
+      answer:
+        "Enumerated herewith are the sequential guidelines to be meticulously adhered to. Please diligently follow each of these steps, and we shall expeditiously make contact with you. Should any lingering uncertainties assail you, do not hesitate to reach out to us at care@wleness.com.",
+    },
+    {
+      question: "I am not From Psychology background. Can I do it ?",
+      answer:
+        "Applying for consideration is restricted solely to individuals of the academic or vocational persuasion within the realm of psychology. Should your aspirations extend beyond these confines, your entreaty shall be summarily declined. To garner our attention, one must boast the status of either a seasoned practitioner or a diligent scholar of psychology or its cognate disciplines.",
+    },
+    {
+      question:
+        "I am presently doing the Master's In Psychology. I need mandatory field work certification. Will this internship certificate help in this case ?",
+      answer:
+        "Indeed, unquestionably so. The certification we confer bears universal recognition and carries substantial weight within the counseling sphere. You possess the liberty to proffer our certificates as a bona fide credential for your obligatory internship or fieldwork undertaking. Rest assured, our communication remains firmly rooted in the English language.",
+    },
+  ],
+};
+
 // FAQ's page
 export const faqs = [
   {

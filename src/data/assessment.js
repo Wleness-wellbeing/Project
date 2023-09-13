@@ -37,10 +37,10 @@ export const experiencingIssue = [
 ];
 
 export const managingDifficulty = [
-  "🙂 Somewhat difficult",
-  "🙁 Very difficult",
-  "☹️ Extremely difficult",
-  "😭 I can't manage",
+  "Somewhat difficult",
+  "Very difficult",
+  "Extremely difficult",
+  "I can't manage",
 ];
 
 export const languages = [

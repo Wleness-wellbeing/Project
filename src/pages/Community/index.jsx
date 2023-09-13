@@ -138,14 +138,6 @@ export default function index() {
           </Link>
         </div>
       </section>
-
-      {/* <section className="container mx-auto pb-10 text-center">
-        <h2 className="subheading heading-primary">We are here to help you!</h2>
-        <p className="para mx-auto mb-4 xl:w-3/5">
-          Helping you connect with like minded people. Find your ultimate
-          support network today
-        </p>
-      </section> */}
     </>
   );
 }

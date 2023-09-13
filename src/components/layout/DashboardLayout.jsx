@@ -29,7 +29,7 @@ export default function DashboardLayout({ children }) {
                 className="cursor-pointer text-2xl text-slate-400 transition-all hover:text-slate-500"
               />
             </span>
-            <span>
+            {/* <span>
               <FontAwesomeIcon
                 icon={faComments}
                 className="cursor-pointer text-2xl text-slate-400 transition-all hover:text-slate-500"
@@ -40,7 +40,7 @@ export default function DashboardLayout({ children }) {
                 icon={faBell}
                 className="cursor-pointer text-2xl text-slate-400 transition-all hover:text-slate-500"
               />
-            </span>
+            </span> */}
             <span className="flex cursor-pointer items-center rounded-xl border-2 px-2 py-1 transition-all hover:bg-slate-100">
               <img src={assessment1} alt="" className="mr-2 w-8" />
               <span className="text-sm font-bold">Ken Parker</span>

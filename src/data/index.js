@@ -100,6 +100,10 @@ import {
   lifeCoaching1,
   lifeCoaching2,
   lifeCoaching3,
+  matsyasanaHeader,
+  sirsasanaHeader,
+  sarvangasanaHeader,
+  setuBandhasanaHeader,
 } from "../assets";
 // Components
 import HeaderWithImage from "../components/HeaderWithImage";
@@ -839,6 +843,7 @@ export const activities = [
           thumbnail: yogaType5,
           desc: "Ustrasana opens the heart center and stimulates the entire front body, offering a profound stretch and release. This bring a sense of liberation & vulnerability, to embrace courage. ",
           slug: "/activities/yoga/ustrasana",
+          variations: false,
           sections: [
             {
               component: HeaderWithImage,
@@ -849,6 +854,93 @@ export const activities = [
                 var: "",
               },
             },
+            {
+              component: LeftVideoList,
+              data: {
+                title: "Steps for Ustrasana: ",
+                desc: "To practice Ustrasana, follow these steps: ",
+                videoUrl: "https://www.youtube.com/embed/cCEK6XrcUx0",
+                list: [
+                  {
+                    subtitle: "",
+                    desc: "Begin by kneeling on the floor with your knees hip-distance apart.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Place your hands on your hips and gently draw your tailbone towards the bottom.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Inhale and lift your chest towards the ceiling, arching your back.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Bring your hands to your lower back and press your palms into your sacrum. Keep your elbows close to your body.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "As you exhale, lean back and reach your hands towards your heels.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Grab your heels with your hands, or place your hands on your lower back.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Hold the pose for 30 seconds to 1 minute, breathing deeply.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "To leave the carriage, release your hands from your heels or lower back and slowly bring your torso back upright.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Benefits of Ustrasana: ",
+                desc: "Ustrasana offers many benefits for the body and mind, including: ",
+                list: [
+                  {
+                    subtitle: "Stretches the Chest and Abdomen: ",
+                    desc: "ThUstrasana is excellent for stretching the chest and abdomen. The pose opens up the ribcage and creates space in the chest, which can help alleviate respiratory problems.",
+                  },
+                  {
+                    subtitle: "Improves Posture: ",
+                    desc: "Ustrasana strengthens the back muscles, which can help improve posture. It also helps to alleviate back pain by opening up the front of the body.",
+                  },
+                  {
+                    subtitle: "Increases Lung Capacity: ",
+                    desc: "This posture expands the chest and lungs, increasing lung capacity and promoting healthy breathing.",
+                  },
+                  {
+                    subtitle: "Calms the Mind: ",
+                    desc: "Ustrasana is a soothing pose that can help relax the mind and relieve stress and anxiety.",
+                  },
+                  {
+                    subtitle: "Stimulates the Digestive System: ",
+                    desc: "This posture stimulates the digestive system, aiding in the proper digestion of food and preventing digestive issues.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList,
+              data: {
+                desc: "While Ustrsasana is a safe and beneficial pose for most people, remember a few precautions: ",
+                info: "Ustrasana is a powerful and effective yoga posture that offers numerous benefits for the mind, body, and spirit. It is a challenging pose, but with practice and patience, it can be mastered. As with any yoga posture, it is essential to approach Ustrasana with respect for your body's limitations and to listen to your body's signals during practice. Doing so lets you experience the full benefits of this beautiful posture and enjoy exploring your practice.",
+                list: [
+                  "Avoid Ustrasana if you have any neck or back injuries.",
+                  "Place a cushion or folded blanket under your knee if you have knee problems.",
+                  "If you experience discomfort or pain while in the pose, come out immediately.",
+                  "Be careful not to strain your neck by keeping your head neutral.",
+                  "Avoid this posture during pregnancy.",
+                  "If you have high or low blood pressure, consult your doctor before practicing Ustrasana.",
+                  "Always warm up your body before attempting Ustrasana.",
+                ],
+              },
+            },
           ],
         },
         {
@@ -856,24 +948,412 @@ export const activities = [
           thumbnail: yogaType6,
           desc: "Matsyasana gracefully arches the back and opens the chest, offering a deep stretch to the neck and throat. It symbolizes receptivity and renewal, inviting a sense of tranquility.",
           slug: "/activities/yoga/matsyasana",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Matsyasana",
+                desc: "Matsyasana, also known as the Fish Pose, is a popular yoga posture practiced by many enthusiasts worldwide. It is a backbend asana named after the Sanskrit word 'Matsya,' which means fish, and 'asana,' which means posture. The pose resembles the shape of a fish, hence the name. Matsyasana is a relatively simple pose that offers numerous benefits for the mind, body, and spirit. It is beneficial in opening up the chest, improving posture, and promoting relaxation.",
+                image: matsyasanaHeader,
+                var: "",
+              },
+            },
+            {
+              component: LeftVideoList,
+              data: {
+                title: "Steps for Matsyasana: ",
+                desc: "To practice Matsyasana, follow these steps: ",
+                videoUrl: "https://www.youtube.com/embed/cCEK6XrcUx0",
+                list: [
+                  {
+                    subtitle: "",
+                    desc: "Begin by lying on your back with your legs straight and your arms by your sides.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Place your hands' palms down under your hips, with your fingertips pointing towards your toes.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Inhale and lift your chest towards the ceiling, arching your back.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Exhale and lower the top of your head to the floor. If your head does not touch the ground, you can use a cushion or folded blanket to support your head.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Press your elbows into the floor and lift your chest towards the ceiling. Keep your legs and buttocks engaged.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Hold the pose for 30 seconds to 1 minute, breathing deeply.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "To leave the pose, gently lower your chest to the floor and lift your head.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Benefits of Matsyasana: ",
+                desc: "Matsyasana offers many benefits for the body and mind, including: ",
+                list: [
+                  {
+                    subtitle: "Opens Up the Chest: ",
+                    desc: "Matsyasana is an excellent asana for stretching and opening up the chest. It can help alleviate respiratory problems by expanding the lungs and improving breathing.",
+                  },
+                  {
+                    subtitle: "Improves Posture: ",
+                    desc: "This posture helps to improve posture by stretching the upper body and strengthening the back muscles.",
+                  },
+                  {
+                    subtitle: "Reduces Stress and Anxiety:",
+                    desc: "Matsyasana is a soothing pose that can help reduce stress and anxiety. It can also help to alleviate symptoms of depression.",
+                  },
+                  {
+                    subtitle: "Stretches the Neck and Shoulders: ",
+                    desc: "This posture stretches the neck and shoulders, releasing tension and alleviating pain.",
+                  },
+                  {
+                    subtitle: "Stimulates the Thyroid Gland: ",
+                    desc: "Matsyasana stimulates the thyroid gland, which can help regulate metabolism and balance hormones.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList,
+              data: {
+                desc: "While Matsyasana is a safe and beneficial pose for most people, remember a few precautions: ",
+                info: "Matsyasana is a powerful and effective yoga posture that offers numerous benefits for the mind, body, and spirit. It is a relatively simple pose that yoga enthusiasts of all levels can practice. As with any yoga posture, it is essential to approach Matsyasana with respect for your body's limitations and to listen to your body's signals during practice. Doing so lets you experience the full benefits of this beautiful posture and enjoy exploring your practice.",
+                list: [
+                  "If you have neck or back injuries, consult your doctor before attempting Matsyasana.",
+                  "If you experience discomfort or pain while in the pose, come out immediately.",
+                  "Be careful not to strain your neck by keeping your head neutral.",
+                  "Avoid this posture during pregnancy.",
+                  "If you have high or low blood pressure, consult your doctor before practicing Matsyasana.",
+                  "Always warm up your body before attempting Matsyasana.",
+                ],
+              },
+            },
+          ],
         },
         {
           title: "Sirsasana",
           thumbnail: yogaType7,
           desc: "Sirsasana is the king of all yoga poses, promoting balance, focus, and inner strength. This inverted posture invigorates the mind while enhancing circulation and building confidence.",
           slug: "/activities/yoga/sirsasana",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Sirsasana",
+                desc: "Sirsasana, also known as the Headstand pose, is a popular yoga posture practiced by many enthusiasts worldwide. It is an inversion asana named after the Sanskrit words 'Sirsa,' which means head, and 'asana,' which means posture. The pose requires the practitioner to balance on their head and forearms, with their legs in the air. Sirsasana is a challenging pose that offers numerous benefits for the mind, body, and spirit. It improves blood flow to the brain, strengthens the upper body, and promotes mental clarity.",
+                image: sirsasanaHeader,
+                var: "",
+              },
+            },
+            {
+              component: LeftVideoList,
+              data: {
+                title: "Steps for Sirsasana: ",
+                desc: "To practice Sirsasana, follow these steps: ",
+                videoUrl: "https://www.youtube.com/embed/cCEK6XrcUx0",
+                list: [
+                  {
+                    subtitle: "",
+                    desc: "Begin by kneeling on the floor and interlocking your fingers. Place your forearms on the floor, keeping your elbows shoulder-width apart.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Place the top of your head on the floor between your palms, ensuring your neck is straight, and your head is supported.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Straighten your legs, lift your hips towards the ceiling, and walk your feet towards your head.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Slowly lift one leg off the floor, bending the knee and bringing it towards your chest. Then, lift the other leg off the floor, straightening both legs towards the ceiling.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Engage your core muscles, and maintain a straight line from your feet to your hips and shoulders..",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Hold the pose for 30 seconds to 1 minute, breathing deeply.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "To leave the pose, lower one leg at a time, bending the knees and bringing your feet back to the floor.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Benefits of Sirsasana: ",
+                desc: "Sirsasana offers many benefits for the body and mind, including: ",
+                list: [
+                  {
+                    subtitle: "Improves Blood Flow to the Brain: ",
+                    desc: "Sirsasana is an excellent asana for improving blood flow to the brain. This can help to improve memory, concentration, and mental clarity.",
+                  },
+                  {
+                    subtitle: "Strengthens the Upper Body: ",
+                    desc: "This posture strengthens the arms, shoulders, and upper back, making it an excellent pose for building strength.",
+                  },
+                  {
+                    subtitle: "Promotes Balance and Stability: ",
+                    desc: "Sirsasana requires a great deal of balance and stability, making it an excellent pose for improving balance and coordination.",
+                  },
+                  {
+                    subtitle: "Calms the Mind: ",
+                    desc: "This posture can help to calm the mind, reduce stress, and alleviate anxiety.",
+                  },
+                  {
+                    subtitle: "Boosts Energy: ",
+                    desc: "Sirsasana can help to increase energy levels, making it an excellent pose to practice in the morning.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList,
+              data: {
+                desc: "While Sirsasana is a safe and beneficial pose for most people, remember a few precautions:",
+                info: "Sirsasana is a powerful and challenging yoga posture that offers numerous benefits for the mind, body, and spirit. It is a pose that requires much practice, patience, and respect for the body's limitations. As with any yoga posture, it is essential to approach Sirsasana with caution and to listen to your body's signals during practice. Doing so lets you experience the full benefits of this beautiful posture and enjoy exploring your practice.",
+                list: [
+                  "If you have neck or back injuries, consult your doctor before attempting Sirsasana.",
+                  "If you experience discomfort or pain while in the pose, come out immediately.",
+                  "Be careful not to strain your neck by keeping your head neutral.",
+                  "Avoid this posture during pregnancy.",
+                  "If you have high or low blood pressure, consult your doctor before practicing Sirsasana.",
+                  "Always warm up your body before attempting Sirsasana.",
+                ],
+              },
+            },
+          ],
         },
         {
           title: "Sarvangasana",
           thumbnail: yogaType8,
           desc: "Sarvangasana is a revered yoga pose that offers many benefits for the body and mind. This promotes rejuvenation, improved circulation, and a calming effect on the nervous system.",
           slug: "/activities/yoga/sarvangasana",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Sarvangasana",
+                desc: "Sarvangasana, or the Shoulderstand pose, is a popular yoga posture practiced by many enthusiasts worldwide. It is an inversion asana named after the Sanskrit words 'Sarva,' which means all, and 'anga,' which implies limb or body part. The pose requires the practitioner to balance on their shoulders and upper arms with their legs in the air. Sarvangasana is a challenging pose that offers numerous benefits for the mind, body, and spirit. It improves blood flow, stimulates the thyroid gland, and promotes mental clarity.",
+                image: sarvangasanaHeader,
+                var: "",
+              },
+            },
+            {
+              component: LeftVideoList,
+              data: {
+                title: "Steps for Sarvangasana: ",
+                desc: "To practice Sarvangasana, follow these steps: ",
+                videoUrl: "https://www.youtube.com/embed/cCEK6XrcUx0",
+                list: [
+                  {
+                    subtitle: "",
+                    desc: "Begin by lying on your back with your arms by your sides and your palms facing down.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Inhale and lift your legs off the floor, keeping them straight and together.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Exhale and lift your hips off the floor, using your hands to support your lower back.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Bring your legs and torso perpendicular to the floor, with your toes pointing towards the ceiling.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Support your back with your hands, keeping your elbows together and your forearms parallel.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Engage your core muscles, and maintain a straight line from your feet to your hips and shoulders.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Hold the pose for 30 seconds to 1 minute, breathing deeply.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "To come out of the pose, exhale and slowly lower your back to the floor, keeping your legs together.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Benefits of Sarvangasana: ",
+                desc: "Sarvangasana offers many benefits for the body and mind, including",
+                list: [
+                  {
+                    subtitle: "Improves Blood Flow: ",
+                    desc: "Sarvangasana is an excellent asana for improving blood flow to the brain and other body parts. This can help to improve memory, concentration, and mental clarity.",
+                  },
+                  {
+                    subtitle: "Stimulates the Thyroid Gland: ",
+                    desc: "This posture stimulates the thyroid gland, which regulates the body's metabolism. This can help to balance the hormones and improve overall health.",
+                  },
+                  {
+                    subtitle: "Strengthens the Upper Body: ",
+                    desc: "This posture strengthens the arms, shoulders, and upper back, making it an excellent pose for building strength.",
+                  },
+                  {
+                    subtitle: "Promotes Digestion: ",
+                    desc: "This posture can help to stimulate the digestive system, promoting healthy digestion and reducing the risk of constipation.",
+                  },
+                  {
+                    subtitle: "Calms the Mind: ",
+                    desc: "This posture can help to calm the mind, reduce stress, and alleviate anxiety.",
+                  },
+                  {
+                    subtitle: "Boosts Energy: ",
+                    desc: "Sarvangasana can help to increase energy levels, making it an excellent pose to practice in the morning.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList,
+              data: {
+                desc: "While Sarvangasana is a safe and beneficial pose for most people, remember a few precautions: ",
+                info: "Sarvangasana is a powerful and challenging yoga posture that offers numerous benefits for the mind, body, and spirit. It is a pose that requires much practice, patience, and respect for the body's limitations. As with any yoga posture, it is essential to approach Sarvangasana with caution and to listen to your body's signals during practice. Doing so lets you experience the full benefits of this beautiful posture and enjoy exploring your practice.",
+                list: [
+                  "If you have neck or back injuries, consult your doctor before attempting Sarvangasana.",
+                  "If you experience discomfort or pain while in the pose, come out immediately.",
+                  "Be careful not to strain your neck by keeping your head neutral.",
+                  "Avoid this posture during pregnancy.",
+                  "If you have high or low blood pressure, consult your doctor before practicing Sarvangasana.",
+                  "Always warm up your body before attempting Sarvangasana.",
+                ],
+              },
+            },
+          ],
         },
         {
           title: "Setu Bandhasana",
           thumbnail: yogaType9,
           desc: "Setu Bandhasana gracefully opens up the chest and hip flexors while strengthening the back and glutes. This yoga posture stimulates the spine and brings a sense of balance and stability",
           slug: "/activities/yoga/setu-bandhasana",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Setu Bandhasana",
+                desc: "Setu Bandhasana, also known as the Bridge pose, is a popular yoga asana practiced by many enthusiasts worldwide. It is a backbend posture named after the Sanskrit words 'setu, which means bridge, and 'bandha,' which means to bind. The pose requires the practitioner to lift their hips and chest towards the ceiling, creating a bridge-like shape with their body. It offers numerous benefits for the mind, body, and spirit. It is beneficial in strengthening the back, improving flexibility, and reducing stress.",
+                image: setuBandhasanaHeader,
+                var: "",
+              },
+            },
+            {
+              component: LeftVideoList,
+              data: {
+                title: "Steps for Setu Bandhasana: ",
+                desc: "To practice Setu Bandhasana, follow these steps: ",
+                videoUrl: "https://www.youtube.com/embed/cCEK6XrcUx0",
+                list: [
+                  {
+                    subtitle: "",
+                    desc: "Begin by lying on your back with your knees bent and your feet flat on the floor, hip-width apart.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Inhale and lift your hips off the floor, pressing into your feet and engaging your glutes and core muscles.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Roll your shoulders back and down, and interlace your fingers underneath your hips.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Press your forearms and elbows into the floor and lift your chest towards your chin.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Support your back with your hands, keeping your elbows together and your forearms parallel.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Keep your thighs parallel and your knees directly over your ankles.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Hold the pose for 30 seconds to 1 minute, breathing deeply.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "To come out of the pose, exhale and slowly lower your hips to the floor.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Benefits of Setu Bandhasana: ",
+                desc: "Setu Bandhasana offers many benefits for the body and mind, including",
+                list: [
+                  {
+                    subtitle: "Strengthens the Back: ",
+                    desc: "Setu Bandhasana is an excellent pose for strengthening the back muscles. This can help to alleviate back pain and improve posture.",
+                  },
+                  {
+                    subtitle: "Improves Flexibility: ",
+                    desc: "This posture can help to enhance the flexibility of the spine, hips, and hamstrings, making it an excellent pose for those who spend long hours sitting.",
+                  },
+                  {
+                    subtitle: "Reduces Stress: ",
+                    desc: "Setu Bandhasana can help to reduce stress and anxiety, making it an excellent pose for those who lead a stressful lifestyle.",
+                  },
+                  {
+                    subtitle: "Stimulates the Thyroid Gland: ",
+                    desc: "This posture can help boost the thyroid gland, which regulates the body's metabolism. This can help to balance the hormones and improve overall health.",
+                  },
+                  {
+                    subtitle: "Relieves Headaches: ",
+                    desc: "Setu Bandhasana can help to relieve headaches by improving blood flow to the brain and reducing tension in the neck and shoulders.",
+                  },
+                  {
+                    subtitle: "Opens the Chest: ",
+                    desc: "This posture can help to open the chest and improve breathing, making it an excellent pose for those with respiratory problems.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList,
+              data: {
+                desc: "While Setu Bandhasana is a safe and beneficial pose for most people, remember a few precautions: ",
+                info: " Setu Bandhasana is a robust and accessible yoga posture that offers numerous benefits for the mind, body, and spirit. It is a pose that requires much practice, patience, and respect for the body's limitations. As with any yoga posture, it is essential to approach Setu Bandhasana with caution and to listen to your body's signals during practice. Doing so lets you experience the full benefits of this beautiful posture and enjoy exploring your practice.",
+                list: [
+                  "If you have neck or back injuries, consult your doctor before attempting Setu Bandhasana..",
+                  "If you experience discomfort or pain while in the pose, come out immediately.",
+                  "Be careful not to strain your neck by keeping your head neutral.",
+                  "Avoid this posture during pregnancy.",
+                  "If you have high or low blood pressure, consult your doctor before practicing Setu Bandhasana..",
+                  "Always warm up your body before attempting Setu Bandhasana..",
+                ],
+              },
+            },
+          ],
         },
         {
           title: "Uttanasana",
@@ -1251,7 +1731,7 @@ export const homeServices = [
     title: "Corporate",
     desc: "Corporate mental wellness services focus on employee well-being, and tackling the  challenges, reducing stress, and promoting emotional resilience at work.",
     image: homeCorporate,
-    slug: "/corporate",
+    slug: "/corporate-wellbeing",
   },
   {
     title: "Life Coaching",

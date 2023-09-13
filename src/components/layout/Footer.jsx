@@ -152,7 +152,7 @@ export default function Footer() {
                   <Link key={i} to={value[1]} target="_blank">
                     <FontAwesomeIcon
                       icon={value[0]}
-                      className="text-2xl hover:text-primary-400"
+                      className="text-2xl text-slate-400 hover:text-primary-400"
                     />
                   </Link>
                 );

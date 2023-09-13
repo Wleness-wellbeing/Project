@@ -22,7 +22,7 @@ export default function MainHeader({ openAssessmentModal }) {
           <h4 className="mb-2 text-xl font-bold text-primary-400 lg:mb-4">
             Take Care Of Yourself
           </h4>
-          <h3 className="mx-auto mb-3 text-sm font-semibold text-slate-600 md:text-base lg:mb-10 lg:text-lg">
+          <h3 className="mx-auto mb-6 text-sm font-semibold text-slate-600 md:text-base lg:mb-10 lg:text-lg">
             Discover your journey to a better self by nurturing your mind, body
             and soul with our professionally curated services customised by
             industry experts just for you!

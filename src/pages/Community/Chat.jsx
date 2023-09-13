@@ -32,12 +32,12 @@ export default function Chat() {
 
   return (
     <section className="h-full gap-5 lg:flex">
-      <div className="flex gap-5 lg:w-[65%]">
+      <div className="flex flex-col gap-5 lg:w-[65%] lg:flex-row">
         {/* Groups and people */}
-        <div className="w-fit">
-          <div className="mb-5 flex flex-col items-center">
+        <div className="grid w-fit">
+          <div className="mb-2 flex flex-col lg:mb-5 lg:items-center">
             <h4 className="mb-2 font-bold text-primary-400">Groups</h4>
-            <ul>
+            <ul className="flex lg:flex-col">
               {[1, 2, 3, 4, 5].map((value, i) => {
                 return (
                   <li key={i}>
@@ -52,9 +52,9 @@ export default function Chat() {
             </ul>
           </div>
 
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col lg:items-center">
             <h4 className="mb-2 font-bold text-primary-400">People</h4>
-            <ul>
+            <ul className="flex lg:flex-col">
               {[1, 2, 3, 4, 5].map((value, i) => {
                 return (
                   <li key={i}>
@@ -71,9 +71,9 @@ export default function Chat() {
         </div>
 
         {/* Chatbox */}
-        <div className="relative h-full w-full rounded-3xl border-[1px] border-slate-100 shadow-xl shadow-slate-300">
-          <div className="">
-            <div className="flex items-center justify-between px-4 py-3">
+        <div className="relative h-full w-full rounded-3xl border-slate-100 shadow-slate-300 md:border-[1px] md:shadow-xl">
+          <div>
+            <div className="flex items-center justify-between py-3 md:px-4">
               <figure className="flex items-start">
                 <img
                   src={profile}
@@ -93,7 +93,7 @@ export default function Chat() {
 
             <hr />
 
-            <div className="h-[460px] overflow-y-scroll px-4">
+            <div className="h-[460px] overflow-y-scroll md:px-4">
               {/* Left Comment */}
               <div className="mt-2 flex items-start">
                 <img src={profile} alt="" className="mr-2 w-8 rounded-full" />
@@ -154,7 +154,7 @@ export default function Chat() {
             </div>
 
             {/* Comment box */}
-            <div className="absolute bottom-0 left-0 flex w-full justify-items-stretch rounded-b-3xl border-t-2 border-slate-200 bg-white px-5 lg:px-6">
+            <div className="absolute bottom-0 left-0 flex w-full justify-items-stretch border-t-2 border-slate-200 bg-white px-5 md:rounded-b-3xl lg:px-6">
               <button className="grid place-items-center px-3 py-2 transition-colors hover:text-slate-400">
                 <FontAwesomeIcon icon={faSmile} />
               </button>

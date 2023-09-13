@@ -21,10 +21,10 @@ export default function WhyChooseGrid(props) {
                 />
               </div>
               <figcaption>
-                <h4 className="my-2 px-6 text-center text-lg font-bold leading-6 text-primary-400 lg:text-xl">
+                <h4 className="my-2 px-2 text-center text-lg font-bold leading-6 text-primary-400 lg:px-6 lg:text-xl">
                   {value.title}
                 </h4>
-                <p className="text-center text-sm font-semibold md:text-base">
+                <p className="text-center text-xs font-semibold md:text-sm lg:text-base">
                   {value.desc}
                 </p>
               </figcaption>

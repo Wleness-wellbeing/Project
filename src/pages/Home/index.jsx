@@ -12,7 +12,7 @@ import Testimonial from "../../components/testimonial/Testimonial";
 import MainHeader from "../../components/headers/MainHeader";
 import HomeFaq from "../../components/Faq/HomeFaq";
 import ServicesCard from "../../components/Cards/ServicesCard";
-import { couplesTherapyDoctors } from "../../data/doctors";
+import { homePageDoctors } from "../../data/doctors";
 import DoctorSlider from "../../components/DoctorSlider";
 
 export default function Home() {
@@ -107,7 +107,7 @@ export default function Home() {
       </section>
 
       {/* Doctors Slider */}
-      <DoctorSlider data={couplesTherapyDoctors} />
+      <DoctorSlider data={homePageDoctors} />
 
       {/* ========== Community ========== */}
       <section className="relative overflow-x-clip bg-primary-10 pt-6 3xl:py-10">
@@ -137,7 +137,7 @@ export default function Home() {
                 </h2>
                 <p className="para ml-1 text-lg"></p>
               </hgroup>
-              <p className="mb-6 ml-1 text-lg font-medium lg:pr-28">
+              <p className="mb-6 ml-1 text-sm font-medium leading-6 lg:pr-28 lg:text-lg">
                 <span className="mb-4 mr-1 block font-bold">
                   Wleness is all about the beginning of happiness in your life.
                 </span>
@@ -155,7 +155,7 @@ export default function Home() {
                 your queries will be answered by our top mental health experts
                 available just for you!
               </p>
-              <p className="mb-6 ml-1 text-lg font-medium lg:pr-28">
+              <p className="mb-6 ml-1 text-sm font-medium leading-6 lg:pr-28 lg:text-lg">
                 Let us together break the stigma around mental health support
                 each other and make the journey toward emotional well-being
                 beautiful.
@@ -192,7 +192,7 @@ export default function Home() {
                       src={value.image}
                       alt=""
                       loading="lazy"
-                      className="mx-auto lg:w-28"
+                      className="mx-auto w-28"
                     />
                   </div>
                   <figcaption>

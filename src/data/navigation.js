@@ -172,7 +172,8 @@ export const footerAboutWleness = [
   ["About Us", "/about-us"],
   ["Contact Us", "/contact-us"],
   ["Career", "/career"],
-  ["Join Us", "/join-psychiatrist"],
+  ["Join Psychiatrist", "/join-psychiatrist"],
+  ["Join Therapist", "/join-therapist"],
   ["FAQ's", "/faqs"],
 ];
 

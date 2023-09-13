@@ -1,8 +1,6 @@
 import React from "react";
 import { bgDotsPattern, doctorAppointment, faq3 } from "../../assets";
-import StatisticsBlock from "../../components/StatisticsBlock";
 import { Link } from "react-router-dom";
-import Faq from "../../components/layout/Faq";
 import BookAppointment from "../../components/Forms/BookAppointment";
 import DoctorStatistics from "../../components/Statistics/DoctorStatistics";
 import HomeFaq from "../../components/Faq/HomeFaq";
@@ -89,11 +87,11 @@ export default function DoctorAppointment() {
             </span> */}
           </div>
 
-          <div className="pt-7 text-center">
+          {/* <div className="pt-7 text-center">
             <Link to="/appointment/checkout" className="btn-one inline-block">
               Book an appointment Now
             </Link>
-          </div>
+          </div> */}
         </div>
 
         <img

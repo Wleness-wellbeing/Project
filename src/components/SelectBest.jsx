@@ -29,7 +29,7 @@ const SelectBest = React.forwardRef((props, ref) => {
                 return (
                   <li
                     key={index}
-                    className="w-fit text-center text-base font-bold lg:text-lg"
+                    className="w-fit text-base font-bold lg:text-lg"
                   >
                     <FontAwesomeIcon
                       icon={faCheck}

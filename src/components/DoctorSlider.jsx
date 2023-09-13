@@ -55,7 +55,7 @@ export default function DoctorSlider(props) {
       >
         <Swiper
           modules={[EffectCoverflow, Navigation, Autoplay]}
-          className="mySwiper mb-16 h-96 overflow-y-visible xs:h-[400px] xl:h-[480px]"
+          className="mySwiper mb-16 h-[425px] overflow-y-visible xl:h-[520px]"
           navigation={true}
           effect={"coverflow"}
           grabCursor={true}
@@ -102,7 +102,7 @@ export default function DoctorSlider(props) {
                     />
                   </div>
                   <figcaption className="doctor-slide-content py-3">
-                    <h4 className="text-center text-lg font-semibold lg:text-2xl">
+                    <h4 className="text-center text-lg font-semibold leading-6 lg:text-2xl">
                       {value.name}
                     </h4>
                     <p className="text-center text-sm font-medium text-slate-500 lg:text-base">

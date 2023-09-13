@@ -692,8 +692,10 @@ export {
 // Doctor Images
 import doctorAppointment from "./images/doctors/doctor-appointment.png";
 import dashboardDoctor from "./images/doctors/dashboard-doctor.png";
+import doctorSwati from "./images/doctors/doctor-swati.png";
+import doctorDebashreeDas from "./images/doctors/doctor-debashree.png";
 
-export { doctorAppointment, dashboardDoctor };
+export { doctorAppointment, dashboardDoctor, doctorSwati, doctorDebashreeDas };
 
 // Design Elements
 import bgDotsPattern from "./images/designs/bg-dots-pattern.png";

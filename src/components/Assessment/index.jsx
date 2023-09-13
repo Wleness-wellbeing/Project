@@ -131,6 +131,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
     };
   }, [isAssessmentOpen, onAssessmentClose]);
 
+  console.log(selectFeeling);
   return (
     <div className="fixed inset-0 z-50 grid w-full place-items-center backdrop-brightness-50">
       <div className="assessment absolute mx-auto flex h-full w-full items-center justify-center overflow-hidden border-2 bg-[#E5FEFB] py-4 md:w-[720px] lg:relative lg:h-fit lg:w-[920px] lg:rounded-3xl lg:py-12">

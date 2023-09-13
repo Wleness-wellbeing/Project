@@ -37,21 +37,13 @@ export default function CorporateForm({ isOpen, onClose }) {
               className="form-input"
             />
           </label>
-          <label htmlFor="website">
+
+          <label htmlFor="email">
             <input
               type="text"
-              name="website"
-              id="website"
-              placeholder="Your Website *"
-              className="form-input"
-            />
-          </label>
-          <label htmlFor="role">
-            <input
-              type="text"
-              name="role"
-              id="role"
-              placeholder="Your Role *"
+              name="email"
+              id="email"
+              placeholder="Professional Email *"
               className="form-input"
             />
           </label>
@@ -64,6 +56,15 @@ export default function CorporateForm({ isOpen, onClose }) {
               className="form-input"
             />
           </label>
+          <label htmlFor="role">
+            <input
+              type="text"
+              name="role"
+              id="role"
+              placeholder="Your Role *"
+              className="form-input"
+            />
+          </label>
           <label htmlFor="phone">
             <input
               type="text"
@@ -73,12 +74,12 @@ export default function CorporateForm({ isOpen, onClose }) {
               className="form-input"
             />
           </label>
-          <label htmlFor="email">
+          <label htmlFor="website">
             <input
               type="text"
-              name="email"
-              id="email"
-              placeholder="Email *"
+              name="website"
+              id="website"
+              placeholder="Your Website *"
               className="form-input"
             />
           </label>
@@ -89,7 +90,7 @@ export default function CorporateForm({ isOpen, onClose }) {
               className="mr-2"
               id="policy-accept"
             />
-            <span className="text-xs font-medium">
+            <span className="text-[8px] font-medium md:text-xs">
               I understand & agree that the information submitted in this form
               will be transmitted to, stored and processed by Wleness, in
               accordance with their &nbsp;

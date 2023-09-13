@@ -1,4 +1,101 @@
-import { doctor1, specialist1 } from "../assets";
+import {
+  doctor1,
+  doctorDebashreeDas,
+  doctorSwati,
+  specialist1,
+} from "../assets";
+
+export const doctorsDetails = [
+  {
+    name: "Swati Ghosal",
+    image: doctorSwati,
+    exp: "8+ years of experience",
+    expertise: "Couple Counselling, Corporate Training",
+    speaks: "Hindi, English & Bengali",
+  },
+  {
+    name: "Debashree	Das Gupta",
+    image: doctorDebashreeDas,
+    exp: "8+ years of experience",
+    expertise: "Musical Healing",
+    speaks: "Hindi, English & Bengali",
+  },
+  {
+    name: "Dr. Swati",
+    image: doctor1,
+    exp: "6+ years of experience",
+    expertise: "Yoga, work-life",
+    speaks: "German, English",
+  },
+  {
+    name: "Dr. Shraddha",
+    image: doctor1,
+    exp: "6+ years of experience",
+    expertise: "Yoga, work-life",
+    speaks: "German, English",
+  },
+  {
+    name: "Dr. Strange",
+    image: doctor1,
+    exp: "6+ years of experience",
+    expertise: "Yoga, work-life",
+    speaks: "German, English",
+  },
+  {
+    name: "Dr. Sonal",
+    image: doctor1,
+    exp: "6+ years of experience",
+    expertise: "Yoga, work-life",
+    speaks: "German, English",
+  },
+  {
+    name: "Dr. Swati",
+    image: doctor1,
+    exp: "6+ years of experience",
+    expertise: "Yoga, work-life",
+    speaks: "German, English",
+  },
+  {
+    name: "Dr. Sonal",
+    image: doctor1,
+    exp: "6+ years of experience",
+    expertise: "Yoga, work-life",
+    speaks: "German, English",
+  },
+  {
+    name: "Dr. Swati",
+    image: doctor1,
+    exp: "6+ years of experience",
+    expertise: "Yoga, work-life",
+    speaks: "German, English",
+  },
+  {
+    name: "Dr. Swati",
+    image: doctor1,
+    exp: "6+ years of experience",
+    expertise: "Yoga, work-life",
+    speaks: "German, English",
+  },
+];
+
+export const homePageDoctors = {
+  heading: [
+    {
+      color: false,
+      text: "Meet Our ",
+    },
+    {
+      color: true,
+      text: "Soul Healers",
+    },
+  ],
+  desc: "",
+  doctors: doctorsDetails,
+  button: {
+    text: "Book Now",
+    slug: "/appointment/checkout",
+  },
+};
 
 export const couplesTherapyDoctors = {
   heading: [
@@ -12,81 +109,10 @@ export const couplesTherapyDoctors = {
     },
   ],
   desc: "",
-  doctors: [
-    {
-      name: "Dr. Christina",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-    {
-      name: "Dr. Sonal",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-    {
-      name: "Dr. Swati",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-    {
-      name: "Dr. Shraddha",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-    {
-      name: "Dr. Strange",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-    {
-      name: "Dr. Sonal",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-    {
-      name: "Dr. Swati",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-    {
-      name: "Dr. Sonal",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-    {
-      name: "Dr. Swati",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-    {
-      name: "Dr. Swati",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-  ],
+  doctors: doctorsDetails,
   button: {
-    text: "View All",
-    slug: "/experts/all",
+    text: "Book Now",
+    slug: "/appointment/checkout",
   },
 };
 
@@ -106,80 +132,10 @@ export const expertDoctors = {
     },
   ],
   desc: "Our team of specialized doctors is committed to providing personalized and comprehensive care to our patients. With a passion for the latest medical advancements, we deliver high-quality treatment in a warm and welcoming environment.",
-  doctors: [
-    {
-      name: "Dr. Christina",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-    {
-      name: "Dr. Christina",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-    {
-      name: "Dr. Christina",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-    {
-      name: "Dr. Christina",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-    {
-      name: "Dr. Christina",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-    {
-      name: "Dr. Christina",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-    {
-      name: "Dr. Christina",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-    {
-      name: "Dr. Christina",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-    {
-      name: "Dr. Christina",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-    {
-      name: "Dr. Christina",
-      image: doctor1,
-      exp: "6+ years of experience",
-      expertise: "Yoga, work-life",
-      speaks: "German, English",
-    },
-  ],
+  doctors: doctorsDetails,
+
   button: {
-    text: "View All",
+    text: "View all",
     slug: "/experts/all",
   },
 };

@@ -23,15 +23,15 @@ export default function FaqWithImage(props) {
           <p className="para text-center">{props.data.desc}</p>
         </div>
 
-        <div className="container mx-auto py-10 lg:flex">
-          <div className="mb-8 lg:mb-0 lg:w-1/2">
+        <div className="container mx-auto py-10">
+          {/* <div className="mb-8 lg:mb-0 lg:w-1/2">
             <img
               src={props.data.image}
               alt=""
               className="mx-auto block object-cover lg:w-80"
             />
-          </div>
-          <div className="space-y-4 lg:w-1/2">
+          </div> */}
+          <div className="space-y-4">
             {props.data.qnas.map((value, index) => {
               return (
                 <Faq

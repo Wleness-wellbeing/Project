@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import AppointmentComponent from "../Appointment";
 
 const timings = [
   {
@@ -19,6 +20,21 @@ const timings = [
   },
 ];
 
+const modes = [
+  {
+    text: "Chat",
+    value: "chat",
+  },
+  {
+    text: "Voice",
+    value: "voice",
+  },
+  {
+    text: "Video",
+    value: "video",
+  },
+];
+
 const timeSlots = [
   "10:30 AM",
   "11:30 AM",
@@ -35,9 +51,14 @@ const timeSlots = [
 ];
 export default function BookAppointment() {
   const [selectDuration, setSelectDuration] = useState(timings[0]["value"]);
+  const [setMode, setSelectMode] = useState(modes[0]["value"]);
 
   const handleDuration = (event) => {
     setSelectDuration(event.target.id);
+  };
+
+  const handleModes = (event) => {
+    setSelectMode(event.target.id);
   };
   return (
     <section className="container mx-auto pb-10 pt-6">
@@ -67,44 +88,36 @@ export default function BookAppointment() {
             );
           })}
         </div>
-        <div className="lg:w-1/2">
-          <select
-            name="mode"
-            id="mode"
-            className="block w-full rounded-full border-2  border-primary-300 px-5 py-2.5 text-center text-primary-300 outline-none"
-          >
-            <option className="block bg-white py-2.5" value="">
-              Mode of session
-            </option>
-            <option className="block bg-white py-2.5" value="online">
-              Online
-            </option>
-            <option className="block bg-white py-2.5" value="offline">
-              Offline
-            </option>
-          </select>
+
+        <div className="mb-4 flex gap-x-2 lg:mb-0 lg:w-1/2 lg:gap-x-5">
+          {modes.map((value, i) => {
+            return (
+              <label
+                key={i}
+                htmlFor={value.value}
+                className={
+                  setMode == value.value
+                    ? "block w-full cursor-pointer rounded-full bg-primary-300 px-5 py-2.5 text-center font-semibold text-white"
+                    : "block w-full cursor-pointer rounded-full border-2 border-primary-300 px-5 py-2.5 text-center font-semibold text-primary-300"
+                }
+              >
+                <input
+                  type="radio"
+                  name="duration"
+                  id={value.value}
+                  checked={setMode == value.value}
+                  onChange={handleModes}
+                  className="hidden"
+                />
+                <span>{value.text}</span>
+              </label>
+            );
+          })}
         </div>
       </div>
 
-      <div className="mb-8 lg:flex lg:gap-x-5">
-        <div className="lg:w-1/2"></div>
-        <div className="lg:w-1/2">
-          <h2 className="mb-4 text-center text-xl font-bold text-slate-700">
-            Select Time Slot
-          </h2>
-          <div className="grid grid-cols-3 gap-2 text-sm lg:gap-3 lg:text-base">
-            {timeSlots.map((value, index) => {
-              return (
-                <span
-                  key={index}
-                  className="cursor-pointer rounded-full border-2 border-primary-300 px-4 py-2.5 text-center font-medium text-primary-300 transition-all hover:bg-primary-300 hover:text-white"
-                >
-                  {value}
-                </span>
-              );
-            })}
-          </div>
-        </div>
+      <div className="mb-8 lg:gap-x-5">
+        <AppointmentComponent />
       </div>
 
       <div className="lg:flex lg:gap-x-5 ">

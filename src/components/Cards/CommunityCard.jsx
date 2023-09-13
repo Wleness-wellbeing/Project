@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CommunityCard(props) {
   return (
-    <div className="grid cursor-pointer content-between rounded-2xl p-4 transition-colors hover:bg-gradient-to-br hover:from-secondary/50 hover:to-tertiary/50 hover:shadow-xl hover:shadow-primary-50">
+    <div className="grid cursor-pointer content-between rounded-2xl p-4 transition-all hover:bg-gradient-to-br hover:from-secondary/50 hover:to-tertiary/50 hover:shadow-xl hover:shadow-primary-50 focus:bg-none">
       <h4 className="text-center text-lg font-bold lg:text-xl">
         {props.data.title}
       </h4>
