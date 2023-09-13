@@ -41,8 +41,8 @@ export default function MobileNavbar({ toggleJoinUs }) {
   return (
     <>
       <div
-        className={`fixed inset-0 xl:hidden xl:w-full ${
-          isMenuOpen ? " block" : " hidden"
+        className={`fixed bottom-0 top-0 w-full pt-20 transition-all duration-500 ease-in-out xl:hidden ${
+          isMenuOpen ? "  left-0" : "  invisible -left-64"
         }`}
       >
         <div className="navbar flex h-full w-56 flex-col  border-slate-100 bg-white shadow-xl xl:h-auto xl:w-full xl:flex-row xl:shadow-none">
@@ -51,12 +51,35 @@ export default function MobileNavbar({ toggleJoinUs }) {
               "divide-y-2 border-[1px] xl:flex xl:h-fit xl:w-fit xl:space-x-5 xl:divide-y-0 xl:self-center xl:border-none xl:shadow-none"
             }
           >
-            <MobileMenuLink url="/" text="Home" />
-            <MobileDropdown url="" text="Services" pages={serviceMenuPages} />
-            <MobileMenuLink url="/experts" text="Our Experts" />
-            <MobileDropdown url="" text="Self Care" pages={seldCareSubpages} />
-            <MobileDropdown url="" text="Resources" pages={resourcesSubpages} />
-            <MobileMenuLink url="/about-us" text="About Us" />
+            <MobileMenuLink url="/" text="Home" onClose={() => closeMenu()} />
+            <MobileDropdown
+              url=""
+              text="Services"
+              pages={serviceMenuPages}
+              onClose={() => closeMenu()}
+            />
+            <MobileMenuLink
+              url="/experts"
+              text="Our Experts"
+              onClose={() => closeMenu()}
+            />
+            <MobileDropdown
+              url=""
+              text="Self Care"
+              onClose={() => closeMenu()}
+              pages={seldCareSubpages}
+            />
+            <MobileDropdown
+              url=""
+              text="Resources"
+              onClose={() => closeMenu()}
+              pages={resourcesSubpages}
+            />
+            <MobileMenuLink
+              url="/about-us"
+              text="About Us"
+              onClose={() => closeMenu()}
+            />
           </ul>
 
           {/* Authentication */}

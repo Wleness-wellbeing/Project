@@ -13,7 +13,7 @@ export default function MobileMenuLink(props) {
   return (
     <li className="relative">
       <div className="xl:px-0; flex justify-between border-slate-200 px-6 py-2.5 text-[15px] font-semibold transition-all hover:text-primary-300">
-        <Link to={props.url}>
+        <Link to={props.url} onClick={props.onClose}>
           <span>{props.text}</span>
         </Link>
         {props.subpages ? (

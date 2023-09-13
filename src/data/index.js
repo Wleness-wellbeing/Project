@@ -1820,18 +1820,18 @@ export const statistics = [
   },
   {
     value: "50",
-    title: "Doctors",
+    title: "Experts",
     suffix: "+",
     background: "bg-primary-50",
   },
   {
-    value: "1",
-    title: "Active Patients",
-    suffix: "M+",
+    value: "10",
+    title: "Active Users",
+    suffix: "k",
     background: "bg-primary-400",
   },
   {
-    value: "5",
+    value: "1",
     title: "Interested",
     suffix: "M+",
     background: "bg-primary-50",

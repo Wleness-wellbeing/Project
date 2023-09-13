@@ -9,14 +9,9 @@ import MobileNavbar from "./MobileNavbar";
 
 function Navbar() {
   const [openJoinUs, setJoinUsModal] = useState(false);
-  const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleJoinUs = () => {
     setJoinUsModal(!openJoinUs);
-  };
-
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
   };
 
   return (

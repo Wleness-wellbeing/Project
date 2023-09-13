@@ -51,6 +51,7 @@ import Chatbox from "./pages/Dashboard/Chatbox";
 import Profile from "./pages/Dashboard/Profile";
 import Chat from "./pages/Community/Chat";
 import BlogDetails from "./pages/Blogs/BlogDetails";
+import Cancellation from "./pages/Policies/Cancellation";
 
 function App() {
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -400,6 +401,14 @@ function App() {
           element={
             <Layout>
               <PrivacyPolicy />
+            </Layout>
+          }
+        />
+        <Route
+          path="/cancellation"
+          element={
+            <Layout>
+              <Cancellation />
             </Layout>
           }
         />

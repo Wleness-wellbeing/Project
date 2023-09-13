@@ -82,12 +82,12 @@ function Experts() {
               >
                 Make an appointment
               </button>
-              <button
+              {/* <button
                 className="btn-one !w-full border-2 !border-primary-400 !bg-transparent !text-[#383838] hover:!bg-primary-400 hover:!text-white lg:!w-fit"
                 onClick={() => handleScrollToComponent()}
               >
                 Explore More
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
@@ -150,14 +150,11 @@ function Experts() {
                   {expertsPsychiatrist.title}
                 </h3>
               </Link>
-              <p className="mb-5 text-justify font-medium">
+              <p className="mb-8 text-justify font-medium">
                 {expertsPsychiatrist.desc}
               </p>
               <p className="text-right">
-                <Link
-                  to={expertsPsychiatrist.slug}
-                  className="font-bold text-primary-300 underline underline-offset-4 transition-all hover:text-primary-500"
-                >
+                <Link to={expertsPsychiatrist.slug} className="btn-one">
                   Get Started
                 </Link>
               </p>

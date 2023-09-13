@@ -253,7 +253,7 @@ export default function InternshipApply({ isOpen, onClose }) {
                   }))
                 }
                 className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
-                placeholder="Give a brief not more than 300 words"
+                placeholder="Give a brief not more than 50 words"
               ></textarea>
             </label>
           </div>

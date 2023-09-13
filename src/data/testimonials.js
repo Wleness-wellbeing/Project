@@ -16,18 +16,18 @@ export const homeTestimonials = [
     name: "Omprakash Prajapati",
     profession: "",
     image: testimonial2,
-    desc: "My experience with Wleness therapy was outstanding. They provided a personalized approach, matched me with a skilled therapist, and offered flexible scheduling. The therapy sessions were transformative, using evidence-based techniques with compassion. Wellness promotes self-care and holistic well-being. I highly recommend Wleness for anyone seeking therapy.",
+    desc: "My experience with Wleness therapy was outstanding. They provided a personalized approach, matched me with a skilled therapist, and offered flexible scheduling. The therapy sessions were transformative, using evidence-based techniques with compassion. Wleness promotes self-care and holistic well-being. I highly recommend Wleness for anyone seeking therapy.",
   },
   {
     name: "Prabhat Kumar",
     profession: "",
     image: testimonial3,
-    desc: "I am extremely impressed with the website of my wellness coach. It is a valuable resource for me, and it has helped me to make significant progress in my journey to better health and well-being. I highly recommend this website to anyone who is looking to improve their overall wellness.",
+    desc: "I am extremely impressed with the website of my Wleness coach. It is a valuable resource for me, and it has helped me to make significant progress in my journey to better health and well-being. I highly recommend this website to anyone who is looking to improve their overall wellness.",
   },
   {
     name: "Ankita Ghosh",
     profession: "",
     image: testimonial4,
-    desc: "Wow, I can't express how grateful I am for my experience with Wellness. It was an absolute game-changer experience in my mental health journey. The doctor's expertise, empathy, and dedication made me feel truly heard and supported. With their guidance, I've made significant progress in managing my anxiety. Wleness is more than just a platform; it's a lifeline for anyone seeking expert help and genuine care.",
+    desc: "Wow, I can't express how grateful I am for my experience with Wleness. It was an absolute game-changer experience in my mental health journey. The doctor's expertise, empathy, and dedication made me feel truly heard and supported. With their guidance, I've made significant progress in managing my anxiety. Wleness is more than just a platform; it's a lifeline for anyone seeking expert help and genuine care.",
   },
 ];

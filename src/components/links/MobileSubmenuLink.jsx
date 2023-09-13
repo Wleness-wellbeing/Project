@@ -13,7 +13,7 @@ export default function MobileSubmenuLink(props) {
   return (
     <li className="relative">
       <div className="submenu-link">
-        <Link to={props.url}>
+        <Link to={props.url} onClick={props.onClose}>
           <span>{props.text}</span>
         </Link>
         {props.subpages ? (
@@ -34,7 +34,12 @@ export default function MobileSubmenuLink(props) {
         >
           {props.subpages.map((value, index) => {
             return (
-              <Link key={index} to={value[1]} className="submenu-link">
+              <Link
+                key={index}
+                to={value[1]}
+                onClick={props.onClose}
+                className="submenu-link"
+              >
                 {value[0]}
               </Link>
             );

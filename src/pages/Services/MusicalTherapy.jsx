@@ -36,6 +36,8 @@ export default function MusicalTherapy() {
         desc={MusicalTherapyData.header.desc}
         handleScrollToComponent={() => handleScrollToComponent()}
         openAssessmentModal={openAssessmentModal}
+        isButton={true}
+        button={["Explore More"]}
       />
       <p ref={ref}></p>
       <FeaturesBlock data={musicalTherapyFeatures} />

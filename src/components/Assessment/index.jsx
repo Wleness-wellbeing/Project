@@ -134,10 +134,14 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
   console.log(selectFeeling);
   return (
     <div className="fixed inset-0 z-50 grid w-full place-items-center backdrop-brightness-50">
-      <div className="assessment absolute mx-auto flex h-full w-full items-center justify-center overflow-hidden border-2 bg-[#E5FEFB] py-4 md:w-[720px] lg:relative lg:h-fit lg:w-[920px] lg:rounded-3xl lg:py-12">
+      <div
+        className={`assessment absolute mx-auto flex h-full w-full items-center justify-center overflow-hidden py-4 md:w-[720px] lg:relative lg:h-fit lg:w-[920px] lg:rounded-3xl lg:border-2 lg:bg-[#E5FEFB] lg:py-12 ${
+          startAssessment ? " " : " bg-[#E5FEFB]"
+        }`}
+      >
         {/* Welcome Page */}
         {startAssessment && (
-          <div className="flex flex-col justify-center py-6 text-center lg:h-[500px] lg:py-10">
+          <div className="flex flex-col justify-center  rounded-3xl bg-[#E5FEFB] px-4 py-6 text-center lg:h-[500px] lg:bg-transparent lg:py-10">
             <h2 className="subheading mb-2 lg:mb-4">
               <span className="heading-primary">Welcome to Wleness</span>
             </h2>
@@ -390,7 +394,9 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
         {/* Close */}
         <FontAwesomeIcon
           icon={faClose}
-          className="absolute right-4 top-4 cursor-pointer text-3xl text-slate-800 lg:right-8 lg:top-8 lg:text-4xl"
+          className={`absolute right-4 top-4 cursor-pointer text-3xl lg:right-8 lg:top-8 lg:text-4xl ${
+            startAssessment ? " text-white lg:text-black " : " text-black "
+          }`}
           onClick={onAssessmentClose}
         />
       </div>

@@ -19,11 +19,12 @@ export default function ExpertsCard(props) {
             {props.data.title}
           </h3>
         </Link>
-        <p className="mb-5 text-justify font-medium">{props.data.desc}</p>
+        <p className="mb-8 text-justify font-medium">{props.data.desc}</p>
         <p className="text-right">
           <Link
             to={props.data.slug}
-            className="font-bold text-primary-400 underline underline-offset-4 transition-all hover:text-primary-500"
+            // className="font-bold text-primary-400 underline underline-offset-4 transition-all hover:text-primary-500"
+            className="btn-one"
           >
             Get Started
           </Link>

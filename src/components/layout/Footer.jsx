@@ -135,6 +135,10 @@ export default function Footer() {
             <Link to="/terms-and-conditions" className="text-sm">
               Terms & Conditions
             </Link>
+            <span> | </span>
+            <Link to="/cancellation" className="text-sm">
+              Cancellation
+            </Link>
           </div>
           <div className="items-center justify-between md:flex">
             <div className="flex justify-center gap-x-4">

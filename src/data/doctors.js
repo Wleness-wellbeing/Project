@@ -7,7 +7,7 @@ import {
 
 export const doctorsDetails = [
   {
-    name: "Swati Ghosal",
+    name: "Swati Ghoshal",
     image: doctorSwati,
     exp: "8+ years of experience",
     expertise: "Couple Counselling, Corporate Training",

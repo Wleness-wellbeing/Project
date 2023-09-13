@@ -22,6 +22,8 @@ export default function BrainExercise() {
         image={brainExercise.header.image}
         desc={brainExercise.header.desc}
         handleScrollToComponent={() => handleScrollToComponent()}
+        isButton={false}
+        button={["Play Now"]}
       />
       <FeaturesBlock data={activityFeatures} />
 

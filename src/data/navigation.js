@@ -181,7 +181,7 @@ export const footerAboutWleness = [
 export const footerOurServices = [
   ["Therapy", "/services/therapy"],
   ["Executive Coaching", "/executive-coaching"],
-  ["Corporate", "/corporate"],
+  ["Corporate", "/corporate-wellbeing"],
   ["Couple Therapy", "/services/couples-therapy"],
   ["Meditation", "/activities/meditation"],
   ["Yoga", "/activities/yoga"],
@@ -196,13 +196,13 @@ export const footerFocusAreas = [
   ["Panic Attack", "/therapy/panic-attack"],
   ["Bipolar Disorder", "/therapy/bipolar-disorder"],
   ["Relationship", "/therapy/relationship"],
-  ["Anger Issues", "/therapy/anger-issues"],
+  ["Anger Issues", "/therapy/anger"],
 ];
 
 // Footer - Our Experts
 export const footerOurExperts = [
   ["Therapist", "/services/therapy"],
-  ["Psychiatrist", "/services/psychiatrist"],
+  // ["Psychiatrist", "/services/psychiatrist"],
   ["Couple Therapist", "/services/couples-therapy"],
   ["Coaches", "/coaches"],
 ];

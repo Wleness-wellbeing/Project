@@ -35,16 +35,14 @@ export default function TherapyHeader(props) {
             })}
           </Swiper>
 
-          <div className="mb-4 rounded-3xl py-5 md:mb-6 lg:order-1 lg:m-0 lg:mb-0 lg:w-[45%] lg:rounded-none xl:pl-0">
+          <div className="mb-4 rounded-3xl py-5 text-center md:mb-6 lg:order-1 lg:m-0 lg:mb-0 lg:w-[45%] lg:rounded-none xl:pl-0">
             <hgroup className="md:mb-3 xl:pr-6">
-              <h1 className="subheading mb-4 text-center lg:text-left">
+              <h1 className="subheading mb-4 lg:text-left">
                 {textColorize(props.title)}
               </h1>
-              <h5 className="mb-8 text-center text-lg font-medium lg:text-left">
-                {props.desc}
-              </h5>
+              <h5 className="mb-8 font-medium lg:text-left">{props.desc}</h5>
             </hgroup>
-            <div className="text-center lg:text-left">
+            <div className="lg:text-left">
               <button
                 className="btn-one mr-2"
                 onClick={props.handleScrollToComponent}
