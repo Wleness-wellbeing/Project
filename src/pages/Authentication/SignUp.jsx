@@ -1,96 +1,63 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { iconFacebookCircle, iconGoogle, logo, signup } from "../../assets";
 import axios from "axios";
-import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
-import Input from "../../components/Forms/Input";
-// import Facebook from "../../components/googleAuth/facebookAuth";
-// import jwt_decode from "jwt-decode";
 
-// import FacebookAuth from "../../components/googleAuth/facebookAuth";
-// import { FacebookLoginButton } from "react-social-login-buttons";
 export default function Signup() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [gender, setGender] = useState("");
-  const [mobile, setMobile] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [errors, setErrors] = useState({});
-  const navigate = useNavigate();
+  const [formInfo, setFormData] = useState({
+    name: "",
+    phone: "",
+  });
+  const [successMessage, setSuccessMessage] = useState({
+    status: "",
+    message: "",
+  });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const validationErrors = validate(
-      name,
-      email,
-      gender,
-      mobile,
-      password,
-      confirmPassword,
-    );
-    if (Object.keys(validationErrors).length === 0) {
-      try {
-        const res = await axios.post(
-          "http://localhost:3000/patient/register",
-          {
-            name,
-            email,
-            gender,
-            mobile,
-            password,
-          },
-          {
-            headers: {
-              "Content-Type": "application/json",
-              Accept: "application/json",
-              "Access-Control-Allow-Origin": "*",
-            },
-          },
-        );
-        console.log(res.data);
-        if (res.data.status === "ok") {
-          alert("Registration Successful! Please proceed to login.");
-          navigate("/login");
-        } else {
-          alert("Something went wrong");
-        }
-      } catch (error) {
-        console.log(error);
-        alert("Something went wrong");
-      }
-    } else {
-      setErrors(validationErrors);
-    }
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formInfo, [name]: value });
   };
 
-  const validate = (name, email, gender, mobile, password) => {
-    const validationErrors = {};
-    if (!name) {
-      validationErrors.name = "Name is required";
+  // Handle Post Request
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // Validate if form is filled
+    if (formInfo["name"] && formInfo["phone"]) {
+      let formData = new FormData();
+      // Append form fields to the FormData object
+      for (const key in formInfo) {
+        formData.append(key, formInfo[key]);
+      }
+
+      try {
+        const response = await axios.post(REQUEST_CALLBACK_URI, formData);
+        console.log(response.data);
+        setSuccessMessage({
+          status: response.data.status,
+          message: response.data.message,
+        });
+
+        // Empty form after successfully sending data
+        response.data.status == "success"
+          ? setFormData({
+              name: "",
+              phone: "",
+            })
+          : null;
+      } catch (error) {
+        console.error("Error sending data:", error);
+        setSuccessMessage({
+          status: "error",
+          message: "Internal Server Error! Please Try Again later",
+        });
+      }
+    } else {
+      setSuccessMessage({
+        status: "error",
+        message: "Please fill your details properly!",
+      });
     }
-    if (!email) {
-      validationErrors.email = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-      validationErrors.email = "Invalid email format";
-    }
-    if (!gender) {
-      validationErrors.gender = "Gender is required";
-    }
-    if (!mobile) {
-      validationErrors.mobile = "Mobile number is required";
-    } else if (!/^\d{10}$/.test(mobile)) {
-      validationErrors.mobile = "Invalid mobile number";
-    }
-    if (!password) {
-      validationErrors.password = "Password is required";
-    } else if (password.length < 8) {
-      validationErrors.password = "Password must be at least 8 characters long";
-    }
-    if (password !== confirmPassword) {
-      validationErrors.confirmPassword = "Passwords do not match";
-    }
-    return validationErrors;
   };
 
   return (
