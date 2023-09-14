@@ -8,8 +8,8 @@ export default function ApplyForm({ name, url }) {
     contact: "",
     full_address: "",
     languages: "",
-    resume: "",
   });
+  const [resume, setResume] = useState(null);
   const [successMessage, setSuccessMessage] = useState({
     status: "",
     message: "",
@@ -24,7 +24,6 @@ export default function ApplyForm({ name, url }) {
   // Handle Post Request
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-
     // Validate if form is filled
     if (
       personalDetails["full_name"] &&
@@ -32,32 +31,39 @@ export default function ApplyForm({ name, url }) {
       personalDetails["contact"] &&
       personalDetails["full_address"] &&
       personalDetails["languages"] &&
-      personalDetails["resume"]
+      resume
     ) {
       let formData = new FormData();
+
       // Append form fields to the FormData object
       for (const key in personalDetails) {
         formData.append(key, personalDetails[key]);
       }
-
+      formData.append("resume", resume);
+      console.log(formData);
       try {
-        const response = await axios.post(url, formData);
+        const response = await axios.post(url, formData, {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        });
         setSuccessMessage({
           status: response.data.status,
           message: response.data.message,
         });
 
         // Empty form after successfully sending data
-        response.data.status == "success"
-          ? setPersonalDetails({
-              full_name: "",
-              email: "",
-              contact: "",
-              full_address: "",
-              languages: "",
-              resume: "",
-            })
-          : null;
+        if (response.data.status == "success") {
+          setPersonalDetails({
+            full_name: "",
+            email: "",
+            contact: "",
+            full_address: "",
+            languages: "",
+          });
+
+          setResume(null);
+        }
       } catch (error) {
         console.error("Error sending data:", error);
         setSuccessMessage({
@@ -181,15 +187,18 @@ export default function ApplyForm({ name, url }) {
             </fieldset>
             <fieldset className="rounded-xl border-2 border-primary-300">
               <legend className="ml-3 px-1">
-                Resume <span className="text-red-500">*</span>
+                Resume
+                <span className="text-red-500">* </span>
+                <small>
+                  {"["} Upload pdf, docx file{"]"}
+                </small>
               </legend>
               <label htmlFor="resume">
                 <input
                   type="file"
                   name="resume"
                   id="resume"
-                  value={personalDetails.resume}
-                  onChange={handleChange}
+                  onChange={(e) => setResume(e.target.files[0])}
                   className="w-full rounded-xl px-4 py-1 pb-3 outline-none"
                 />
               </label>
@@ -210,7 +219,7 @@ export default function ApplyForm({ name, url }) {
           <input
             type="submit"
             value="Submit"
-            className="mx-auto block w-fit rounded-xl bg-primary-300 px-8 py-2.5 font-semibold text-white"
+            className="mx-auto block w-fit cursor-pointer rounded-xl bg-primary-300 px-8 py-2.5 font-semibold text-white transition-all hover:bg-primary-400"
           />
         </div>
       </form>

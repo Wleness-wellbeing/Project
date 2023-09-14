@@ -1,7 +1,11 @@
 import React from "react";
 
 function AboutUs() {
-  return <h1 className="text-3xl">This is About Page</h1>;
+  return (
+    <header className="relative overflow-x-clip bg-gradient-to-b from-secondary/10 to-transparent py-12 text-center">
+      <h1 className="subheading">About Us Page</h1>
+    </header>
+  );
 }
 
 export default AboutUs;

@@ -65,9 +65,11 @@ export default function index() {
                   <p className="px-2 text-xs font-semibold md:text-sm lg:text-base">
                     {value.desc.map((element, j) => {
                       return element.status ? (
-                        <span className="text-[#0A99D6]">{element.text}</span>
+                        <span className="text-[#0A99D6]" key={j}>
+                          {element.text}
+                        </span>
                       ) : (
-                        <span>{element.text}</span>
+                        <span key={j}>{element.text}</span>
                       );
                     })}
                   </p>

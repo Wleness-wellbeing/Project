@@ -1,8 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { Link } from "react-router-dom";
+import { CORPORATE_JOIN_URI } from "../../data/api";
 
 export default function CorporateForm({ isOpen, onClose }) {
   if (!isOpen) return null;
+  // Handle Joining Form
+  const [formInfo, setFormData] = useState({
+    org: "",
+    professional_email: "",
+    full_name: "",
+    role: "",
+    number: "",
+    website: "",
+    policyAccept: "off",
+  });
+  const [successMessage, setSuccessMessage] = useState({
+    status: "",
+    message: "",
+  });
 
   // Close assessment modal on clicking outside of the box
   useEffect(() => {
@@ -21,30 +37,106 @@ export default function CorporateForm({ isOpen, onClose }) {
     };
   }, [isOpen, onClose]);
 
+  // ========== Handle Form Submission ==========
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formInfo, [name]: value });
+  };
+
+  // Handle Post Request
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log(formInfo);
+
+    // Validate if form is filled
+    if (
+      formInfo["org"] &&
+      formInfo["professional_email"] &&
+      formInfo["full_name"] &&
+      formInfo["role"] &&
+      formInfo["number"] &&
+      formInfo["website"] &&
+      formInfo["policyAccept"]
+    ) {
+      let formData = new FormData();
+      // Append form fields to the FormData object
+      for (const key in formInfo) {
+        formData.append(key, formInfo[key]);
+      }
+
+      try {
+        const response = await axios.post(CORPORATE_JOIN_URI, formData);
+        console.log(response.data);
+        setSuccessMessage({
+          status: response.data.status,
+          message: response.data.message,
+        });
+
+        // Empty form after successfully sending data
+        response.data.status == "success"
+          ? setFormData({
+              org: "",
+              professional_email: "",
+              full_name: "",
+              role: "",
+              number: "",
+              website: "",
+              policyAccept: "off",
+            })
+          : null;
+      } catch (error) {
+        console.error("Error sending data:", error);
+        setSuccessMessage({
+          status: "error",
+          message: "Internal Server Error! Please Try Again later",
+        });
+      }
+    } else {
+      setSuccessMessage({
+        status: "error",
+        message: "Please fill your details properly!",
+      });
+    }
+  };
+
   return (
     <section className="fixed inset-0 z-50 grid place-items-center bg-black/20">
       <div className="corporate-form w-4/5 rounded-2xl bg-white p-6 lg:w-[620px]">
         <div className="text-center">
-          <h2 className="subheading mb-4">Corporate Join</h2>
+          <h2 className="subheading">Corporate Join</h2>
         </div>
-        <form action="" method="post">
-          <label htmlFor="org_name">
+
+        <form onSubmit={handleSubmit}>
+          <p
+            className={`mb-2 text-center font-semibold ${
+              successMessage.status == "success"
+                ? " text-green-500 "
+                : " text-red-500 "
+            }`}
+          >
+            {successMessage.message}
+          </p>
+          <label htmlFor="org">
             <input
               type="text"
-              name="org_name"
-              id="org_name"
+              name="org"
+              id="org"
               placeholder="Name of Your Organization *"
               className="form-input"
+              value={formInfo.org}
+              onChange={handleChange}
             />
           </label>
 
-          <label htmlFor="email">
+          <label htmlFor="professional_email">
             <input
               type="text"
-              name="email"
-              id="email"
+              name="professional_email"
+              id="professional_email"
               placeholder="Professional Email *"
               className="form-input"
+              value={formInfo.professional_email}
+              onChange={handleChange}
             />
           </label>
           <label htmlFor="full_name">
@@ -54,6 +146,8 @@ export default function CorporateForm({ isOpen, onClose }) {
               id="full_name"
               placeholder="Full Name *"
               className="form-input"
+              value={formInfo.full_name}
+              onChange={handleChange}
             />
           </label>
           <label htmlFor="role">
@@ -63,15 +157,19 @@ export default function CorporateForm({ isOpen, onClose }) {
               id="role"
               placeholder="Your Role *"
               className="form-input"
+              value={formInfo.role}
+              onChange={handleChange}
             />
           </label>
-          <label htmlFor="phone">
+          <label htmlFor="number">
             <input
               type="text"
-              name="phone"
-              id="phone"
+              name="number"
+              id="number"
               placeholder="Phone Number *"
               className="form-input"
+              value={formInfo.number}
+              onChange={handleChange}
             />
           </label>
           <label htmlFor="website">
@@ -81,14 +179,18 @@ export default function CorporateForm({ isOpen, onClose }) {
               id="website"
               placeholder="Your Website *"
               className="form-input"
+              value={formInfo.website}
+              onChange={handleChange}
             />
           </label>
-          <label htmlFor="policy-accept" className="flex px-2 pb-4">
+          <label htmlFor="policyAccept" className="mb-4 flex px-2">
             <input
               type="checkbox"
-              name="policy-accept"
+              name="policyAccept"
               className="mr-2"
-              id="policy-accept"
+              id="policyAccept"
+              value={formInfo.policyAccept}
+              onChange={handleChange}
             />
             <span className="text-[8px] font-medium md:text-xs">
               I understand & agree that the information submitted in this form

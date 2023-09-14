@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function InternshipApply({ isOpen, onClose }) {
   if (!isOpen) return null;
@@ -258,19 +259,26 @@ export default function InternshipApply({ isOpen, onClose }) {
             </label>
           </div>
           <div className="mb-6 flex gap-4">
-            <label htmlFor="" className="flex w-full items-start">
+            <label htmlFor="agreement" className="flex w-full items-start">
               <input
                 type="checkbox"
                 name="agreement"
+                id="agreement"
                 checked={formData.agreement}
                 onChange={handleChange}
                 className="mr-3 mt-1"
               />
-              <p className="text-sm font-medium">
+              <span className="select-none text-sm font-medium">
                 I understand & agree that the information submitted in this form
                 will be transmitted to, stored and processed by Wleness, in
-                accordance with their Privacy Policy.
-              </p>
+                accordance with their&nbsp;
+                <Link
+                  to="/students-policy"
+                  className="font-semibold text-primary-400"
+                >
+                  Privacy Policy.
+                </Link>
+              </span>
             </label>
           </div>
           <div className="text-center">
