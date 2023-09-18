@@ -23,7 +23,7 @@ export default function DoctorsCard(props) {
         <hgroup>
           <h3 className="flex items-center justify-between text-2xl font-semibold">
             <span>{props.data.name}</span>
-            <HeartIcon />
+            {/* <HeartIcon /> */}
           </h3>
           <h4 className="mb-2 text-lg font-semibold text-slate-500 xs:text-xl">
             {props.data.experience}
@@ -42,14 +42,17 @@ export default function DoctorsCard(props) {
             {props.data.price}
           </h5>
           <div className="space-x-2 space-y-2">
-            <Link to="/appointment" className="btn-one inline-block !text-sm">
-              View Profile
-            </Link>
             <Link
               to="/appointment/checkout"
               className="btn-one inline-block !text-sm"
             >
               Book Now
+            </Link>
+            <Link
+              to="/appointment"
+              className="btn-one inline-block border-2 border-primary-400 !bg-transparent !py-2 !text-sm !text-primary-400"
+            >
+              View Profile
             </Link>
           </div>
         </div>

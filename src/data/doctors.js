@@ -25,16 +25,16 @@ export const doctorsDetails = [
   {
     name: "Purvi Balasaria",
     image: purviBalasariaPortrait,
-    exp: "6+ years of experience",
-    expertise: "Yoga, work-life",
-    speaks: "German, English",
+    exp: "5+ years of experience",
+    expertise: "Approach",
+    speaks: "Eng, Hindi, Bengali",
   },
   {
     name: "Meenakshi Mishra",
     image: meenakshiMishraPortrait,
-    exp: "6+ years of experience",
-    expertise: "Yoga, work-life",
-    speaks: "German, English",
+    exp: "8+ years of experience",
+    expertise: "CBT, BT, Counseling, Mindfulness meditations",
+    speaks: "Hindi, English",
   },
   {
     name: "Dr. Strange",

@@ -1,5 +1,10 @@
 import React from "react";
-import { bgDotsPattern, doctorAppointment, faq3 } from "../../assets";
+import {
+  bgDotsPattern,
+  doctorAppointment,
+  faq3,
+  swatiGhoshalLandscape,
+} from "../../assets";
 import { Link } from "react-router-dom";
 import BookAppointment from "../../components/Forms/BookAppointment";
 import DoctorStatistics from "../../components/Statistics/DoctorStatistics";
@@ -57,16 +62,20 @@ export default function DoctorAppointment() {
           </h1>
           <figure className="mx-auto items-center justify-center gap-x-8 py-3 lg:flex lg:w-[590px] lg:py-6">
             <div className="mx-auto w-48 lg:mx-0 lg:w-1/2">
-              <img src={doctorAppointment} alt="" className="object-cover" />
+              <img
+                src={swatiGhoshalLandscape}
+                alt=""
+                className="h-40 w-40 rounded-full border-4 border-primary-300 object-cover lg:h-56 lg:w-56"
+              />
             </div>
             <figcaption className="mx-auto text-center lg:w-1/2 lg:text-left">
-              <h4 className="text-2xl font-bold lg:text-3xl">Dr. Jenny</h4>
+              <h4 className="text-2xl font-bold lg:text-3xl">Swati Ghoshal</h4>
               <h6 className="text-xl font-semibold lg:text-2xl">
                 6+ yrs of experience
               </h6>
               <div className="my-2 font-medium">
                 <p>Expertise: Yoga, Work-life</p>
-                <p>Speaks: German, English</p>
+                <p>Speaks: Hindi, English</p>
               </div>
               <p className="text-xl font-bold text-primary-400">
                 Starts at $ 500
