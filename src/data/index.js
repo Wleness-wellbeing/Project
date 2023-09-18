@@ -1785,10 +1785,10 @@ export const homeServices = [
     slug: "/activities/meditation",
   },
   {
-    title: "Musical Healing",
-    desc: "Music healing addresses diverse needs through music. Therapists use musical interventions like listening, creating, singing, & playing instruments. ",
+    title: "Music Healing",
+    desc: "A Collection of diverse music based mechanisms, techniques with interdisciplinary approach to maintain, restore and improve- Physical, Psychological, social and holistic health.",
     image: homeMeditation,
-    slug: "/services/musical-healing",
+    slug: "/services/music-healing",
   },
   {
     title: "Internship",

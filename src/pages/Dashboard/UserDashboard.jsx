@@ -1,92 +1,195 @@
-import React from "react";
-import { faAngleDown, faEllipsis } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from "react";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
-// Data
-import { activityReport, patientsList } from "../../data/patients";
-import { userDashboardData } from "../../data/chart";
 // Components
+import { selfCareConcern, selfCareFeeling } from "../../data/dashboard";
+import { Link } from "react-router-dom";
+import { placeholderLandscape, placeholderPortrait } from "../../assets";
 import UpcomingMeets from "../../components/list/UpcomingMeets";
-import PatientListItem from "../../components/list/PatientListItem";
 
-export default function UserDashboard() {
+export default function UserDashboard({ token }) {
+  const [thoughts, setThoughts] = useState([]);
+  const [newThought, setNewThought] = useState("");
+
+  // Handle thought form submit
+  const handleThoughtSubmit = (event) => {
+    event.preventDefault();
+
+    if (newThought == "") return;
+
+    setThoughts([...thoughts, newThought]);
+    // empty new thought value after submission
+    setNewThought("");
+  };
+
+  // Add New Thought
+  const updateNewThought = (event) => {
+    setNewThought(event.target.value);
+  };
+
+  // Delete Thought
+  const deleteThought = (index) => {
+    const newArray = [...thoughts];
+    newArray.splice(index, 1);
+    setThoughts(newArray);
+  };
+
   return (
-    <section className="flex flex-col gap-5 lg:flex-row">
+    <section className="gap-5 lg:flex">
       <div className="lg:w-[65%]">
-        {/* Doctor Profile */}
-        <div className="mb-5">
-          <h1 className="mb-3">
+        <div className="mb-2">
+          <h1>
             <span className="text-2xl font-medium">Good Morning </span>
-            <span className="text-3xl font-bold text-[#0DCCF6]">Ken</span>
+            <span className="text-3xl font-bold text-[#0DCCF6]">Mia</span>
           </h1>
+          <p className="font-medium text-slate-600">
+            Today is the 12th day of your therapy session.
+          </p>
+        </div>
 
-          <div>
-            <div className="mb-4 grid">
-              <span className="text-lg font-bold">Activity Report</span>
-            </div>
-            <div className="grid grid-cols-3 gap-3 lg:gap-5">
-              {activityReport.map((value, i) => {
-                return (
-                  <div
-                    key={i}
-                    className="relative grid rounded-xl px-2 py-4 lg:px-5"
-                    style={{ background: value[2] }}
-                  >
-                    <span className="mb-1 text-center text-sm font-semibold lg:text-base">
-                      {value[0]}
-                    </span>
-                    <span className="text-center text-2xl font-bold lg:text-3xl">
-                      {value[1]}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
+        {/* How you feel */}
+        <div className="mb-5">
+          <span className="text-lg font-bold">How you feel today...</span>
+          <div className="grid grid-cols-2 lg:grid-cols-5 lg:gap-5">
+            {selfCareFeeling.map((value, i) => {
+              return (
+                <div key={i} className="relative grid rounded-xl px-5 py-2">
+                  <img
+                    className="text-center text-3xl font-bold"
+                    src={value[1]}
+                  />
+                  <span className="mb-1 text-center font-semibold">
+                    {value[0]}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+          <div className="my-7">
+            <blockquote
+              style={{ background: "rgb(0, 217, 245, 12%)" }}
+              className="mx-auto rounded-lg p-5 text-center lg:w-[640px]"
+            >
+              <q className="text-lg">
+                It's not the load that breaks you down, it's the way you carry
+                it
+              </q>
+              <h4 className="text-xl font-bold text-sky-500">Lou Holtz</h4>
+            </blockquote>
           </div>
         </div>
 
-        <div className="rounded-2xl bg-primary-10 py-5">
-          <h2 className="ml-12 pb-4 text-lg font-bold">Health Performance</h2>
-          <ResponsiveContainer aspect={2.5} width="100%">
-            <BarChart width={400} height={400} data={userDashboardData}>
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Bar
-                dataKey="score"
-                barSize={20}
-                className="fill-[#0DCCF6]"
-                radius={20}
-              />
-            </BarChart>
-          </ResponsiveContainer>
+        {/* Today's concern */}
+        <div className="mb-5">
+          <div className="mb-4 grid">
+            <span className="text-lg font-bold">
+              Pick your today's concern...
+            </span>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-5">
+            {selfCareConcern.map((value, i) => {
+              return (
+                <Link
+                  to={value[2]}
+                  key={i}
+                  className={
+                    "relative grid rounded-xl px-2 py-2 lg:px-5 lg:py-4 " +
+                    value[1]
+                  }
+                >
+                  <span className="mb-1 text-center font-semibold">
+                    {value[0]}
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
         </div>
 
-        {/* Patient List & Consultation */}
-        <div className="lg:flex">
-          <div className="p-4 pb-0 lg:w-1/2 lg:pb-4">
-            <h3 className="flex justify-between pb-4 pt-2">
-              <span className="text-xl font-bold">Linked Therapist</span>
-              <span className="flex items-center text-sm font-medium text-slate-400">
-                <span className="mr-1">Today </span>
-                <FontAwesomeIcon icon={faAngleDown} />
-              </span>
-            </h3>
+        {/* Today's Compilation */}
+        <div>
+          <h3 className="pb-4 pt-2 text-xl font-bold">
+            Today's compilation for you
+          </h3>
 
-            <div className="space-y-3">
-              <PatientListItem data={patientsList[0]} />;
+          <div className="flex flex-col gap-5 lg:flex-row">
+            <div className="rounded-xl border-[1px] border-slate-100 p-5 shadow-lg shadow-slate-300 lg:w-2/5 lg:p-8">
+              <h4 className="mb-4 text-xl font-semibold">Today's Article</h4>
+              <p className="mb-6 text-sm font-semibold">
+                Unraveling the Grip of Anxiety: Insights and Strategies to
+                Navigate Life's Challenges with Resilience and Inner Calm.
+              </p>
+              <div className="flex justify-between text-sm font-semibold text-blue-500">
+                <span>5 Min</span>
+                <span>Dr. Sheena Bajaj</span>
+              </div>
+            </div>
+
+            <div className="relative mx-auto w-fit lg:w-1/5">
+              <h4 className="absolute left-3 top-3 font-bold text-white">
+                Stress
+              </h4>
+              <img
+                src={placeholderPortrait}
+                alt=""
+                className="lg:h-full lg:w-full"
+              />
+            </div>
+
+            <div className="relative lg:w-2/5">
+              <div className="absolute bottom-0 left-0 w-full p-5 text-white">
+                <h4 className="mb-2 font-bold">Empowering Self-Assurance</h4>
+                <p className="text-sm font-medium">
+                  Nurturing Lasting Confidence through Purposeful Growth
+                </p>
+              </div>
+              <img
+                src={placeholderLandscape}
+                alt=""
+                className="rounded-xl object-cover lg:h-full lg:w-full"
+              />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="p-4 pt-0 lg:w-[35%] lg:pt-4">
-        <div className="mb-4">
-          <h5 className="flex items-center justify-between">
-            <span className="font-bold">Upcoming Appointments</span>
-            <span className="cursor-pointer rounded-full bg-slate-200 px-2 py-0.5 text-sm font-semibold transition-all hover:bg-slate-300">
-              <FontAwesomeIcon icon={faEllipsis} />
-            </span>
-          </h5>
+      <div className="mt-5 lg:w-[35%] lg:p-4">
+        <div className="mb-6 rounded-2xl bg-yellow-300/25 p-4">
+          <h4 className="font-bold">Write Your Thoughts...</h4>
+          {thoughts.map((value, i) => {
+            return (
+              <p
+                key={i}
+                className="group flex justify-between border-b-[1px] border-slate-300 p-2 text-sm font-semibold outline-yellow-300"
+              >
+                <span>{value}</span>
+                <FontAwesomeIcon
+                  className="hidden cursor-pointer text-red-500 hover:text-red-600 group-hover:block"
+                  icon={faTrash}
+                  onClick={() => deleteThought(i)}
+                />
+              </p>
+            );
+          })}
+
+          <form onSubmit={handleThoughtSubmit}>
+            <input
+              name="thought"
+              value={newThought}
+              onChange={updateNewThought}
+              placeholder="Add New Thought"
+              className="w-full border-b-[1px] border-slate-300 bg-transparent p-2 text-sm font-medium outline-yellow-300"
+            />
+            <div className="mt-2 text-right">
+              <button
+                type="submit"
+                className="rounded-lg bg-primary-100 px-4 py-1.5 text-xs font-medium text-white"
+              >
+                Save
+              </button>
+            </div>
+          </form>
         </div>
 
         <div>

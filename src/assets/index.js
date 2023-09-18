@@ -692,10 +692,29 @@ export {
 // Doctor Images
 import doctorAppointment from "./images/doctors/doctor-appointment.png";
 import dashboardDoctor from "./images/doctors/dashboard-doctor.png";
-import doctorSwati from "./images/doctors/doctor-swati.png";
-import doctorDebashreeDas from "./images/doctors/doctor-debashree.png";
+// Portrait Images
+import swatiGhoshalPortrait from "./images/doctors/swati-ghoshal-portrait.png";
+import debashreeDasPortrait from "./images/doctors/debashree-das-portrait.png";
+import purviBalasariaPortrait from "./images/doctors/purvi-balasaria-portrait.png";
+import meenakshiMishraPortrait from "./images/doctors/meenakshi-mishra-portrait.png";
+// Landscape Images
+import swatiGhoshalLandscape from "./images/doctors/swati-ghoshal-landscape.png";
+import debashreeDasLandscape from "./images/doctors/debashree-das-landscape.png";
+import purviBalasariaLandscape from "./images/doctors/purvi-balasaria-landscape.png";
+import meenakshiMishraLandscape from "./images/doctors/meenakshi-mishra-landscape.png";
 
-export { doctorAppointment, dashboardDoctor, doctorSwati, doctorDebashreeDas };
+export {
+  doctorAppointment,
+  dashboardDoctor,
+  swatiGhoshalPortrait,
+  debashreeDasPortrait,
+  purviBalasariaPortrait,
+  swatiGhoshalLandscape,
+  debashreeDasLandscape,
+  purviBalasariaLandscape,
+  meenakshiMishraLandscape,
+  meenakshiMishraPortrait,
+};
 
 // Design Elements
 import bgDotsPattern from "./images/designs/bg-dots-pattern.png";

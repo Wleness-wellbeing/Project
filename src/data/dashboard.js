@@ -21,22 +21,14 @@ export const selfCareFeeling = [
 ];
 
 export const selfCareConcern = [
-  ["Anxiety", "rgba(223, 231, 253)", "/therapy/anxiety"],
-  ["Stress", "rgba(252, 246, 189, 0.44)", "/therapy/stress"],
-  ["Depression", "rgba(185, 281, 192, 0.44)", "/therapy/depression"],
-  ["Panic Attacks", "rgba(255, 191, 129, 0.44)", "/therapy/panic-attack"],
-  [
-    "Conduct Disorder",
-    "rgba(255, 191, 129, 0.44)",
-    "/therapy/conduct-disorder",
-  ],
-  [
-    "Bipolar Disorder",
-    "rgba(255, 191, 129, 0.44)",
-    "/therapy/bipolar-disorder",
-  ],
-  ["Eating Disorder", "rgba(255, 191, 129, 0.44)", "/therapy/eating-disorder"],
-  ["Anger Issues", "rgba(255, 191, 129, 0.44)", "/therapy/anger"],
+  ["Anxiety", " bg-[#DFE7FD] ", "/therapy/anxiety"],
+  ["Stress", " bg-[#FCF6BD] ", "/therapy/stress"],
+  ["Depression", " bg-[#B9FBC0] ", "/therapy/depression"],
+  ["Panic Attacks", " bg-[#9BF6FF] ", "/therapy/panic-attack"],
+  ["Conduct Disorder", " bg-[#FFCFD2] ", "/therapy/conduct-disorder"],
+  ["Bipolar Disorder", " bg-[#98F5E1] ", "/therapy/bipolar-disorder"],
+  ["Eating Disorder", " bg-[#FFDE8C] ", "/therapy/eating-disorder"],
+  ["Anger Issues", " bg-[#C9C0FA] ", "/therapy/anger"],
 ];
 
 export const RoutineCareChats = [

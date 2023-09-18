@@ -70,8 +70,8 @@ export const serviceMenuPages = [
     slug: "/activities/meditation",
   },
   {
-    name: "Musical Healing",
-    slug: "/services/musical-healing",
+    name: "Music Healing",
+    slug: "/services/music-healing",
   },
   {
     name: "Internship",
@@ -103,7 +103,7 @@ export const activitiesMenuPages = [
 export const seldCareSubpages = [
   {
     name: "Selfcare Dashbaord",
-    slug: "/self-care",
+    slug: "/user/dashboard",
   },
   {
     name: "Brain Exercise",
@@ -185,7 +185,7 @@ export const footerOurServices = [
   ["Couple Therapy", "/services/couples-therapy"],
   ["Meditation", "/activities/meditation"],
   ["Yoga", "/activities/yoga"],
-  ["Musical Healing", "/services/musical-healing"],
+  ["Music Healing", "/services/music-healing"],
 ];
 
 // Footer - Focus Areas
@@ -231,7 +231,7 @@ export const adminSidebar = [
 export const userDashboardLinks = [
   ["Home", "/user/dashboard", faHome],
   ["Profile", "/user/profile", faUser],
-  ["Self Care", "/self-care", faHeartCircleCheck],
+  // ["Self Care", "/self-care", faHeartCircleCheck],
   // ["Routine Care", "/user/routine-care", faBookBookmark],
   ["Routine Care", "/user/routine-care", faClipboardList],
   ["Community", "/community/chat", faUsers],

@@ -16,7 +16,7 @@ export default function DoctorsCard(props) {
           />
         </Link>
         <span className="absolute bottom-0 left-5 bg-white px-2 text-lg font-bold text-primary-300">
-          {props.data.profession}
+          Psychiatrist
         </span>
       </div>
       <figcaption className="px-4 py-2 pb-6 3xl:px-6">
@@ -26,7 +26,7 @@ export default function DoctorsCard(props) {
             <HeartIcon />
           </h3>
           <h4 className="mb-2 text-lg font-semibold text-slate-500 xs:text-xl">
-            {props.data.exp}
+            {props.data.experience}
           </h4>
         </hgroup>
         <div className="font-medium">
@@ -34,7 +34,7 @@ export default function DoctorsCard(props) {
             Expertise: {props.data.expertise}
           </p>
           <p className="leading-5 text-slate-600">
-            Speaks: {props.data.speaks}
+            Speaks: {props.data.languages}
           </p>
           <h5 className="my-2 mb-5 text-lg font-semibold text-primary-400">
             Session Starts

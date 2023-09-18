@@ -1,14 +1,6 @@
 import React, { useRef, useState } from "react";
 // Data
-import {
-  faceIcon,
-  expertsHeader,
-  expertsHeaderMobile,
-  featureIcon1,
-  featureIcon2,
-  featureIcon3,
-  bubbles,
-} from "../../assets";
+import { expertsHeader, bubbles } from "../../assets";
 import { doctorsPageClient } from "../../data/clients";
 import { expertDoctors } from "../../data/doctors";
 // Components

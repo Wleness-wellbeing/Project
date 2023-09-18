@@ -1,11 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { expertClient, featuredPatient } from "../../assets";
 import DoctorsCard from "../../components/DoctorsCard";
-import { allExperts } from "../../data/doctors";
+import { EXPERTS_URI } from "../../data/api";
+import axios from "axios";
 
 export default function ExpertsDetails() {
+  const [doctorDetails, setDoctorDetails] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Make a GET request using Axios
+    axios
+      .get(EXPERTS_URI)
+      .then((response) => {
+        // Handle the successful response
+        setDoctorDetails(response.data["experts"]);
+        setLoading(false);
+      })
+      .catch((error) => {
+        // Handle errors
+        console.error("Error fetching doctor details:", error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <div className="mb-5 text-center">Loading...</div>;
+  }
+
   return (
     <main>
       <header className="container mx-auto flex flex-col items-center py-4 lg:flex-row xl:py-6 2xl:py-8">
@@ -76,13 +100,13 @@ export default function ExpertsDetails() {
       {/* Specialist Doctors */}
       <section>
         <div className="side-spacing grid-cols-[repeat(4, minmax(280, 1fr))] container mx-auto grid items-center gap-5 p-4 sm:grid-cols-2 lg:grid-cols-3  3xl:gap-10">
-          {allExperts.map((value, i) => {
+          {doctorDetails.map((value, i) => {
             return <DoctorsCard key={i} data={value} />;
           })}
         </div>
-        <div className="py-6 text-center lg:pb-0">
+        {/* <div className="py-6 text-center lg:pb-0">
           <button className="btn-one">Show More..</button>
-        </div>
+        </div> */}
       </section>
 
       {/* Clients Testimonials */}

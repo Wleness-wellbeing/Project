@@ -40,7 +40,7 @@ import Corporate from "./pages/Corporate";
 import Calendly from "./components/Calendly";
 import PrivacyPolicy from "./pages/Policies/PrivacyPolicy";
 import TermsAndConditions from "./pages/Policies/TermsAndConditions";
-import Selfcare from "./pages/Dashboard/Selfcare";
+// import Selfcare from "./pages/Dashboard/Selfcare";
 import ContactUs from "./pages/ContactUs";
 import LifeCoching from "./pages/coching/LifeCoching";
 import ExecutiveCoaching from "./pages/coching/ExecutiveCoaching";
@@ -54,7 +54,6 @@ import Chat from "./pages/Community/Chat";
 import BlogDetails from "./pages/Blogs/BlogDetails";
 import Cancellation from "./pages/Policies/Cancellation";
 import StudentsPolicy from "./pages/Policies/StudentsPolicy";
-import { useEffect } from "react";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -157,7 +156,7 @@ function App() {
           }
         />
         <Route
-          path="/services/musical-healing"
+          path="/services/music-healing"
           element={
             <Layout>
               <MusicalTherapy />
@@ -300,7 +299,24 @@ function App() {
             </SignupLayout>
           }
         />
-        {!token && token !== "" && token !== undefined ? (
+        <Route
+          path="/login"
+          element={
+            <SignupLayout>
+              <Login />
+            </SignupLayout>
+          }
+        />
+
+        <Route
+          path="/signup"
+          element={
+            <SignupLayout>
+              <SignUp />
+            </SignupLayout>
+          }
+        />
+        {/* {!token && token !== "" && token !== undefined ? (
           <>
             <Route
               path="/login"
@@ -329,7 +345,15 @@ function App() {
               </DashboardLayout>
             }
           />
-        )}
+        )} */}
+        <Route
+          path="/user/dashboard"
+          element={
+            <DashboardLayout>
+              <UserDashboard />
+            </DashboardLayout>
+          }
+        />
         <Route
           path="/campus-ambassador"
           element={
@@ -396,14 +420,14 @@ function App() {
             </DashboardLayout>
           }
         />
-        <Route
+        {/* <Route
           path="/self-care"
           element={
             <DashboardLayout>
               <Selfcare />
             </DashboardLayout>
           }
-        />
+        /> */}
         <Route
           path="/chatbox"
           element={
