@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 * {
-  @apply scroll-smooth;
+  @apply select-none scroll-smooth;
 }
 
 h1,

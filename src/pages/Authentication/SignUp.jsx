@@ -2,20 +2,34 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { iconFacebookCircle, iconGoogle, logo, signup } from "../../assets";
 import axios from "axios";
+import { SIGNUP_USER_URI } from "../../data/api";
 
 export default function Signup() {
   const [formInfo, setFormData] = useState({
     name: "",
     phone: "",
+    password: "",
+    confirm_password: "",
   });
   const [successMessage, setSuccessMessage] = useState({
     status: "",
     message: "",
   });
 
+  const navigate = useNavigate();
+
+  // Update form value
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formInfo, [name]: value });
+  };
+
+  // Set alert message
+  const setMessages = (status, msg) => {
+    setSuccessMessage({
+      status: status,
+      message: msg,
+    });
   };
 
   // Handle Post Request
@@ -23,40 +37,49 @@ export default function Signup() {
     e.preventDefault();
 
     // Validate if form is filled
-    if (formInfo["name"] && formInfo["phone"]) {
-      let formData = new FormData();
+    if (
+      formInfo["name"] &&
+      formInfo["phone"] &&
+      formInfo["password"] &&
+      formInfo["confirm_password"]
+    ) {
+      // Check if passwords matches
+      if (formInfo["password"] !== formInfo["confirm_password"]) {
+        setMessages("error", "Password doesn't match"); // set success message
+        return;
+      }
+
       // Append form fields to the FormData object
+      let formData = new FormData();
       for (const key in formInfo) {
         formData.append(key, formInfo[key]);
       }
 
       try {
-        const response = await axios.post(REQUEST_CALLBACK_URI, formData);
-        console.log(response.data);
-        setSuccessMessage({
-          status: response.data.status,
-          message: response.data.message,
-        });
+        const response = await axios.post(SIGNUP_USER_URI, formData);
+        setMessages(response.data.status, response.data.message); // set success message
 
         // Empty form after successfully sending data
-        response.data.status == "success"
-          ? setFormData({
-              name: "",
-              phone: "",
-            })
-          : null;
+        if (response.data.status == "success") {
+          setFormData({
+            name: "",
+            phone: "",
+            password: "",
+            confirm_password: "",
+          });
+
+          navigate("/login", {
+            state: {
+              successMessage: "Registration successful! Please log in.",
+            },
+          });
+        }
       } catch (error) {
         console.error("Error sending data:", error);
-        setSuccessMessage({
-          status: "error",
-          message: "Internal Server Error! Please Try Again later",
-        });
+        setMessages("error", "Internal Server Error! Please Try Again later"); // set success message
       }
     } else {
-      setSuccessMessage({
-        status: "error",
-        message: "Please fill your details properly!",
-      });
+      setMessages("error", "Please fill your details properly!"); // set success message
     }
   };
 
@@ -89,52 +112,57 @@ export default function Signup() {
                 id="name"
                 name="name"
                 placeholder="Name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className={`form-input ${errors.name ? "border-red-500" : ""}`}
+                value={formInfo.name}
+                onChange={handleChange}
+                className="form-input"
               />
             </label>
-            {errors.name && (
-              <p className="mt-1 text-sm text-red-500">{errors.name}</p>
-            )}
 
-            <label htmlFor="mobile">
+            <label htmlFor="phone">
               <input
                 type="tel"
                 maxLength={10}
-                id="mobile"
-                name="mobile"
+                id="phone"
+                name="phone"
                 placeholder="Mobile"
-                value={mobile}
-                onChange={(e) => setMobile(e.target.value)}
-                className={`form-input ${errors.name ? "border-red-500" : ""}`}
+                value={formInfo.phone}
+                onChange={handleChange}
+                className="form-input"
               />
             </label>
 
             <label htmlFor="password">
               <input
-                type="text"
+                type="password"
                 id="password"
                 name="password"
                 placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className={`form-input ${errors.name ? "border-red-500" : ""}`}
+                value={formInfo.password}
+                onChange={handleChange}
+                className="form-input"
               />
             </label>
 
             <label htmlFor="confirm_password">
               <input
-                type="text"
+                type="password"
                 id="confirm_password"
                 name="confirm_password"
                 placeholder="Confirm Password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                className={`form-input ${errors.name ? "border-red-500" : ""}`}
+                value={formInfo.confirm_password}
+                onChange={handleChange}
+                className="form-input"
               />
             </label>
-
+            <p
+              className={`text-center font-semibold ${
+                successMessage.status == "success"
+                  ? " text-green-500 "
+                  : " text-red-500 "
+              }`}
+            >
+              {successMessage.message}
+            </p>
             <div className="mt-6 text-center">
               <button className="btn-primary !w-fit !px-20 !text-sm !font-semibold">
                 CREATE ACCOUNT

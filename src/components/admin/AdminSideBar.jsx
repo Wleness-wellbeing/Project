@@ -5,10 +5,36 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { userDashboardLinks } from "../../data/navigation";
 import { Link } from "react-router-dom";
+import axios from "axios";
+
+import { userDashboardLinks } from "../../data/navigation";
+import { LOGOUT_USER_URI } from "../../data/api";
+import useToken from "../../utils/useToken";
 
 export default function AdminSideBar({ isOpen, toggle }) {
+  const { removeToken } = useToken();
+
+  const logMeOut = async () => {
+    try {
+      const response = await axios.post(LOGOUT_USER_URI);
+
+      if (response.data.status == "success") {
+        removeToken();
+
+        window.location.href = "/login";
+
+        // navigate("/login", {
+        //   state: {
+        //     successMessage: "Logout successful!",
+        //   },
+        // });
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <aside
       className={`fixed bottom-0 top-0 z-10 flex w-64 flex-col gap-y-4 bg-white p-5 text-center shadow-lg transition-all lg:w-[10%] lg:items-center lg:justify-between lg:bg-primary-50/50 lg:p-0 lg:py-4 lg:shadow-none ${
@@ -41,13 +67,13 @@ export default function AdminSideBar({ isOpen, toggle }) {
         })}
       </ul>
 
-      <Link
-        to="/"
+      <button
+        onClick={logMeOut}
         className="flex cursor-pointer items-center rounded-full border-2 border-primary-300 px-4 py-2 text-xl text-primary-400 transition-all hover:border-primary-300  hover:text-red-500 lg:h-12 lg:w-12 lg:justify-center lg:p-0 lg:text-xl"
         title="Logout"
       >
         <FontAwesomeIcon icon={faRightFromBracket} className="text-3xl" />
-      </Link>
+      </button>
     </aside>
   );
 }

@@ -1,45 +1,70 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { iconFacebookCircle, iconGoogle, login, logo } from "../../assets";
 import axios from "axios";
+import { LOGIN_USER_URI } from "../../data/api";
 
-export default function Login() {
-  const [mobile, setMobile] = useState("");
-  const [password, setPassword] = useState("");
+export default function Login({ setToken }) {
+  const [formInfo, setFormData] = useState({
+    phone: "",
+    password: "",
+  });
+  const [successMessage, setSuccessMessage] = useState({
+    status: "",
+    message: "",
+  });
+
   const navigate = useNavigate();
+  const location = useLocation();
 
-  function handlesubmit(e) {
+  // Update form value
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formInfo, [name]: value });
+  };
+
+  // Set alert message
+  const setMessages = (status, msg) => {
+    setSuccessMessage({
+      status: status,
+      message: msg,
+    });
+  };
+
+  // Handle Post Request
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(email, password);
-    axios
-      .post(
-        "http://localhost:3000/patient/login",
-        {
-          email,
-          password,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-            "Access-Control-Allow-Origin": "*",
-          },
-        },
-      )
-      .then((res) => res.data)
-      .then((data) => {
-        console.log(data);
-        if (data.status == "ok") {
-          alert("login successful");
-          window.localStorage.setItem("token", data.data);
-          window.localStorage.setItem("loggedIn", true);
-          navigate("/");
+
+    // Validate if form is filled
+    if (formInfo["password"] && formInfo["phone"]) {
+      // Append form fields to the FormData object
+      let formData = new FormData();
+      for (const key in formInfo) {
+        formData.append(key, formInfo[key]);
+      }
+
+      try {
+        const response = await axios.post(LOGIN_USER_URI, formData);
+        setMessages(response.data.status, response.data.message); // set success message
+
+        // Empty form after successfully sending data
+        if (response.data.status == "success") {
+          setFormData({
+            phone: "",
+            password: "",
+          });
+          setToken(response.data.access_token);
+
+          navigate("/user/dashboard");
         }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
+      } catch (error) {
+        console.error("Error sending data:", error);
+        setMessages("error", "Internal Server Error! Please Try Again later"); // set success message
+      }
+    } else {
+      setMessages("error", "Please fill your details properly!"); // set success message
+    }
+  };
   return (
     <main class="flex h-screen flex-col items-center justify-center md:flex-row md:items-stretch">
       <aside class="hidden items-center justify-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-contain bg-right bg-no-repeat md:flex md:w-1/2">
@@ -48,7 +73,7 @@ export default function Login() {
 
       <div class="flex items-center justify-center md:w-1/2 md:px-4">
         <div class="w-80 sm:w-[400px]">
-          <div class="mx-auto mb-4 w-64 sm:w-[280px]">
+          <div class="mx-auto mb-3 w-64 sm:w-[280px]">
             <Link to="/">
               <img
                 src={logo}
@@ -58,43 +83,62 @@ export default function Login() {
               />
             </Link>
           </div>
+
           {/* Login Form */}
-          <form action="javascript:void()" className="mb-8">
-            <label htmlFor="mobile" className="mb-5 block">
+          <form onSubmit={handleSubmit} className="mb-8">
+            {successMessage.status == "" ? (
+              location.state &&
+              location.state.successMessage && (
+                <p className="mb-3 text-center font-semibold text-green-500">
+                  {location.state.successMessage}
+                </p>
+              )
+            ) : (
+              <p
+                className={`mb-3 text-center font-semibold ${
+                  successMessage.status == "success"
+                    ? " text-green-500 "
+                    : " text-red-500 "
+                }`}
+              >
+                {successMessage.message}
+              </p>
+            )}
+
+            <label htmlFor="phone" className="mb-5 block">
               <input
                 type="tel"
-                id="mobile"
+                id="phone"
                 maxLength={10}
-                onChange={(e) => setMobile(e.target.value)}
-                name="mobile"
-                value={mobile}
+                name="phone"
                 placeholder="Mobile Number"
                 className="form-input"
+                value={formInfo.phone}
+                onChange={handleChange}
               />
             </label>
             <label htmlFor="password">
               <input
                 type="password"
                 id="password"
-                onChange={(e) => setPassword(e.target.value)}
                 name="password"
                 placeholder="Password"
                 className="form-input"
+                value={formInfo.password}
+                onChange={handleChange}
               />
             </label>
+
             <div className="text-right">
               <Link
-                to="/forget-password"
+                to="/forgot-password"
                 className="mb-6 inline-block font-medium text-primary-400"
               >
                 Forgot Password?
               </Link>
             </div>
             <div className="text-center">
-              <button
-                onClick={handlesubmit}
-                className="btn-primary !w-fit !px-28 !py-3"
-              >
+              <button type="submit" className="btn-primary !w-fit !px-28 !py-3">
                 LOGIN
               </button>
             </div>

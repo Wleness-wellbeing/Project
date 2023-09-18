@@ -7,8 +7,9 @@ import {
   serviceMenuPages,
 } from "../../data/navigation";
 import { Link } from "react-router-dom";
+import { profile } from "../../assets";
 
-export default function DesktopNavbar({ toggleJoinUs }) {
+export default function DesktopNavbar({ toggleJoinUs, token, userName }) {
   return (
     <>
       <ul className="hidden w-fit justify-end space-x-4 bg-white p-6 xl:flex">
@@ -28,12 +29,23 @@ export default function DesktopNavbar({ toggleJoinUs }) {
         >
           Join Us
         </button>
-        <Link
-          to="/signup"
-          className="btn-primary !w-fit !rounded-full !bg-primary-400 !py-2 font-semibold hover:!bg-primary-300"
-        >
-          Sign Up
-        </Link>
+
+        {!token && token !== "" && token !== undefined ? (
+          <Link
+            to="/signup"
+            className="btn-primary !w-fit !rounded-full !bg-primary-400 !py-2 font-semibold hover:!bg-primary-300"
+          >
+            Sign Up
+          </Link>
+        ) : (
+          <Link
+            to="/user/profile"
+            className="btn-primary flex !w-fit !rounded-full !bg-primary-400 !py-2.5 font-semibold hover:!bg-primary-300"
+          >
+            <img src={profile} alt="" className="mr-1 w-5 rounded-full" />
+            <span className="text-sm">{userName}</span>
+          </Link>
+        )}
       </div>
     </>
   );

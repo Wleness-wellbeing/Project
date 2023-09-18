@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Data
 import { activities, brainExercise } from "./data";
 import { therapiesData } from "./data/issues";
+import useToken from "./utils/useToken";
 // Components
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
@@ -53,8 +54,18 @@ import Chat from "./pages/Community/Chat";
 import BlogDetails from "./pages/Blogs/BlogDetails";
 import Cancellation from "./pages/Policies/Cancellation";
 import StudentsPolicy from "./pages/Policies/StudentsPolicy";
+import { useEffect } from "react";
 
 function App() {
+  const { token, removeToken, setToken } = useToken();
+  // Disable right click on website
+  function handleContextMenu(e) {
+    e.preventDefault(); // prevents the default right-click menu from appearing
+  }
+  // add the event listener to the component's root element
+  const rootElement = document.getElementById("root");
+  rootElement.addEventListener("contextmenu", handleContextMenu);
+
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
   const activitiesMenu = activities.map((value, index) => {
     return (
@@ -289,22 +300,36 @@ function App() {
             </SignupLayout>
           }
         />
-        <Route
-          path="/login"
-          element={
-            <SignupLayout>
-              <Login />
-            </SignupLayout>
-          }
-        />
-        <Route
-          path="/signup"
-          element={
-            <SignupLayout>
-              <SignUp />
-            </SignupLayout>
-          }
-        />
+        {!token && token !== "" && token !== undefined ? (
+          <>
+            <Route
+              path="/login"
+              element={
+                <SignupLayout>
+                  <Login setToken={setToken} />
+                </SignupLayout>
+              }
+            />
+
+            <Route
+              path="/signup"
+              element={
+                <SignupLayout>
+                  <SignUp />
+                </SignupLayout>
+              }
+            />
+          </>
+        ) : (
+          <Route
+            path="/user/dashboard"
+            element={
+              <DashboardLayout>
+                <UserDashboard token={token} setToken={setToken} />
+              </DashboardLayout>
+            }
+          />
+        )}
         <Route
           path="/campus-ambassador"
           element={
@@ -352,14 +377,6 @@ function App() {
           element={
             <DashboardLayout>
               <Profile />
-            </DashboardLayout>
-          }
-        />
-        <Route
-          path="/user/dashboard"
-          element={
-            <DashboardLayout>
-              <UserDashboard />
             </DashboardLayout>
           }
         />

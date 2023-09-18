@@ -1360,18 +1360,51 @@ export const activities = [
           thumbnail: yogaType10,
           desc: "Uttanasana involves bending forward with straight or bent legs, providing a stretch to lower back and hamstrings. It's often integrated into yoga  for its calming and grounding effects.",
           slug: "/activities/yoga/uttanasana",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Uttanasana",
+                desc: "Uttanasana, also known as the Standing Forward Fold pose, is a popular yoga asana practiced by many enthusiasts worldwide. It is a forward bending posture often performed as a warm-up or cool-down pose in many yoga sequences. Uttanasana is a simple yet effective pose that offers numerous benefits for the mind, body, and spirit. It is beneficial in reducing stress, improving flexibility, and strengthening the legs and back.",
+                image: sarvangasanaHeader,
+                var: "",
+              },
+            },
+          ],
         },
         {
           title: "Navasana",
           thumbnail: yogaType11,
           desc: "Navasana involves balancing on the sit bones while lifting the legs and torso to form the 'V' shape. This pose engages the core muscles, strengthens the abdomen, and improves stability.",
           slug: "/activities/yoga/navasana",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Navasana",
+                desc: "",
+                image: sarvangasanaHeader,
+                var: "",
+              },
+            },
+          ],
         },
         {
           title: "Ardha Chandrasana",
           thumbnail: yogaType12,
           desc: "Ardha Chandrasana is a balancing yoga standing on one leg while extending the opposite arm parallel to the ground. This pose tones the legs, improves balance, and enhances core stability.",
           slug: "/activities/yoga/ardha-chandrasana",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Ardha Chandrasana",
+                desc: "",
+                image: sarvangasanaHeader,
+                var: "",
+              },
+            },
+          ],
         },
       ],
     },

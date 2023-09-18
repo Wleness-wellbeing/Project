@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import AdminSideBar from "../admin/AdminSideBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBars,
-  faBell,
-  faComments,
-  faSearch,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { assessment1 } from "../../assets";
 
 export default function DashboardLayout({ children }) {

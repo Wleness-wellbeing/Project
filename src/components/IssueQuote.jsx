@@ -9,7 +9,7 @@ export default function IssueQuote({ quote }) {
       <div className="relative px-10">
         <img src={didYouKnow} alt="" className="mx-auto w-fit xl:w-32" />
         <div className="group relative mx-auto rounded-xl border-4 border-primary-400 p-6 hover:bg-[#fafce7] lg:w-[640px] lg:p-12">
-          <p className="text-justify font-bold">{quote}</p>
+          <p className="text-center font-bold">{quote}</p>
           {/* <FontAwesomeIcon
             icon={faQuoteLeft}
             className="absolute -left-14 -top-12 bg-white p-5 pb-14 text-4xl text-primary-300 group-hover:bg-primary-10 lg:text-6xl"

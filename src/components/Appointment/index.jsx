@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import Calendar from "./Calendar";
 
-const AppointmentComponent = () => {
-  const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedTime, setSelectedTime] = useState(null);
-
+const AppointmentComponent = (props) => {
   // Sample appointment data (Replace this with a backend API call)
   function generateAppointmentData(startDate, endDate, timeSlots) {
     const appointmentData = [];
@@ -52,18 +49,18 @@ const AppointmentComponent = () => {
   );
 
   const handleDateSelect = (date) => {
-    setSelectedDate(date);
-    setSelectedTime(null);
+    props.updateDate(date);
+    props.updateTime(null);
   };
 
   const handleTimeSelect = (time) => {
-    setSelectedTime(time);
+    props.updateTime(time);
   };
 
   // Function to check if time slots are available for the selected date
   const areTimeSlotsAvailable = () => {
     const selectedAppointment = appointmentData.find(
-      (appointment) => appointment.date === selectedDate,
+      (appointment) => appointment.date === props.date,
     );
     return selectedAppointment && selectedAppointment.timeSlots.length > 0;
   };
@@ -81,35 +78,35 @@ const AppointmentComponent = () => {
       {/* Time Slot Section */}
       <div className="w-1/2  ">
         <h2 className="mb-4 text-center text-2xl font-medium ">
-          {selectedDate ? (
+          {props.date ? (
             <>
               Available time slots for{" "}
-              <span className="font-bold">{selectedDate}</span>
+              <span className="font-bold">{props.date}</span>
             </>
           ) : (
             "Select a date"
           )}
         </h2>
 
-        {selectedDate && (
+        {props.date && (
           <div>
             {areTimeSlotsAvailable() ? (
               appointmentData.map((appointment) => {
-                if (appointment.date === selectedDate) {
+                if (appointment.date === props.date) {
                   return (
                     <div key={appointment.date}>
                       {appointment.timeSlots.map((timeSlot) => (
-                        <button
+                        <span
                           key={timeSlot}
                           onClick={() => handleTimeSelect(timeSlot)}
-                          className={`mr-2 mt-2 cursor-pointer rounded-full border-2 border-primary-300 px-4 py-2.5 text-center font-medium text-primary-300 transition-all hover:bg-primary-300 hover:text-white ${
-                            selectedTime === timeSlot
+                          className={`mr-2 mt-2 inline-block cursor-pointer rounded-full border-2 border-primary-300 px-4 py-2.5 text-center font-medium text-primary-300 transition-all hover:bg-primary-300 hover:text-white ${
+                            props.time === timeSlot
                               ? "bg-primary-500 text-white"
                               : "bg-white"
                           }`}
                         >
                           {timeSlot}
-                        </button>
+                        </span>
                       ))}
                     </div>
                   );

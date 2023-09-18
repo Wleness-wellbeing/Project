@@ -6,9 +6,25 @@ import { logo } from "../../assets";
 // Components
 import DesktopNavbar from "./DesktopNavbar";
 import MobileNavbar from "./MobileNavbar";
+import useToken from "../../utils/useToken";
 
 function Navbar() {
+  const [userName, setUserName] = useState("User");
   const [openJoinUs, setJoinUsModal] = useState(false);
+  const { token, setToken } = useToken();
+
+  // try {
+  //   const response = axios.get(USER_PROFILE_URI, {
+  //     Authorization: "Bearer" + token,
+  //   });
+  //   const res = response.data;
+  //   if (res.status == "success") {
+  //     res.access_token && setToken(res.access_token);
+  //     setUserName(res.user_name);
+  //   }
+  // } catch (error) {
+  //   console.error(error);
+  // }
 
   const toggleJoinUs = () => {
     setJoinUsModal(!openJoinUs);
@@ -27,10 +43,18 @@ function Navbar() {
           </div>
 
           {/* Desktop Menu */}
-          <DesktopNavbar toggleJoinUs={toggleJoinUs} />
+          <DesktopNavbar
+            token={token}
+            toggleJoinUs={toggleJoinUs}
+            userName={userName}
+          />
 
           {/* Mobile Menu */}
-          <MobileNavbar toggleJoinUs={toggleJoinUs} />
+          <MobileNavbar
+            token={token}
+            toggleJoinUs={toggleJoinUs}
+            userName={userName}
+          />
         </div>
       </nav>
       <JoinUs isOpen={openJoinUs} onClose={toggleJoinUs} />
