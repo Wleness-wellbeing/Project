@@ -80,7 +80,7 @@ export default function ApplyForm({ name, url }) {
   };
 
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto pt-12">
       <div className="mb-6 text-center">
         <h2 className="subheading">
           <span>Join</span>

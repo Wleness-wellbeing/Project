@@ -33,7 +33,7 @@ export default function ExpertsDetails() {
   return (
     <main>
       <header className="container mx-auto flex flex-col items-center py-4 lg:flex-row xl:py-6 2xl:py-8">
-        <h1 className=" lg:w-4/5">
+        <h1 className="lg:w-4/5">
           <span className="subheading heading-primary">
             Meet Our Specialists
           </span>
@@ -97,7 +97,7 @@ export default function ExpertsDetails() {
 
       {/* Specialist Doctors */}
       <section>
-        <div className="side-spacing grid-cols-[repeat(4, minmax(280, 1fr))] container mx-auto grid items-center gap-5 p-4 sm:grid-cols-2 lg:grid-cols-3  3xl:gap-10">
+        <div className="side-spacing grid-cols-[repeat(4, minmax(280, 1fr))] container mx-auto grid items-center gap-5 p-4 sm:grid-cols-2 3xl:gap-6">
           {doctorDetails.map((value, i) => {
             return <DoctorsCard key={i} data={value} />;
           })}

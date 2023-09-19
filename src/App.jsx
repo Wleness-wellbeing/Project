@@ -29,7 +29,6 @@ import Therapy from "./pages/Services/Therapy";
 import ExpertsDetails from "./pages/Experts/ExpertsDetails";
 import SignUp from "./pages/Authentication/SignUp";
 import Login from "./pages/Authentication/Login";
-import DoctorAppointment from "./pages/Experts/DoctorAppointment";
 import Appointment from "./pages/Appointment";
 import Faqs from "./pages/Faqs";
 import Community from "./pages/Community";
@@ -54,6 +53,7 @@ import Chat from "./pages/Community/Chat";
 import BlogDetails from "./pages/Blogs/BlogDetails";
 import Cancellation from "./pages/Policies/Cancellation";
 import StudentsPolicy from "./pages/Policies/StudentsPolicy";
+import ExpertProfile from "./pages/Experts/ExpertProfile";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -188,10 +188,10 @@ function App() {
           }
         />
         <Route
-          path="/appointment"
+          path="/experts/profile/:slug"
           element={
             <Layout>
-              <DoctorAppointment />
+              <ExpertProfile />
             </Layout>
           }
         />

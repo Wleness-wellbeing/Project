@@ -1,14 +1,12 @@
-import React from "react";
-import {
-  bgDotsPattern,
-  doctorAppointment,
-  faq3,
-  swatiGhoshalLandscape,
-} from "../../assets";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { bgDotsPattern, swatiGhoshalLandscape } from "../../assets";
+import { Link, useParams } from "react-router-dom";
+
 import BookAppointment from "../../components/Forms/BookAppointment";
 import DoctorStatistics from "../../components/Statistics/DoctorStatistics";
 import HomeFaq from "../../components/Faq/HomeFaq";
+import axios from "axios";
+import { EXPERTS_URI } from "../../data/api";
 
 const doctorsForte = [
   "Evidence based therapy expertise",
@@ -52,7 +50,32 @@ const faqs = [
   },
 ];
 
-export default function DoctorAppointment() {
+export default function ExpertProfile() {
+  const { slug } = useParams();
+  const [profileDetails, setProfileDetails] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Make a GET request using Axios
+    axios
+      .get(EXPERTS_URI + "/" + slug)
+      .then((response) => {
+        // Handle the successful response
+        setProfileDetails(response.data);
+        console.log(profileDetails);
+        setLoading(false);
+      })
+      .catch((error) => {
+        // Handle errors
+        console.error("Error fetching doctor details:", error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <div className="mb-5 text-center">Loading...</div>;
+  }
+
   return (
     <>
       <header className="relative overflow-x-clip">
@@ -63,22 +86,24 @@ export default function DoctorAppointment() {
           <figure className="mx-auto items-center justify-center gap-x-8 py-3 lg:flex lg:w-[590px] lg:py-6">
             <div className="mx-auto w-48 lg:mx-0 lg:w-1/2">
               <img
-                src={swatiGhoshalLandscape}
+                src={profileDetails.image}
                 alt=""
                 className="h-40 w-40 rounded-full border-4 border-primary-300 object-cover lg:h-56 lg:w-56"
               />
             </div>
             <figcaption className="mx-auto text-center lg:w-1/2 lg:text-left">
-              <h4 className="text-2xl font-bold lg:text-3xl">Swati Ghoshal</h4>
+              <h4 className="text-2xl font-bold lg:text-3xl">
+                {profileDetails.name}
+              </h4>
               <h6 className="text-xl font-semibold lg:text-2xl">
-                6+ yrs of experience
+                {profileDetails.experience}
               </h6>
               <div className="my-2 font-medium">
-                <p>Expertise: Yoga, Work-life</p>
-                <p>Speaks: Hindi, English</p>
+                <p>Expertise: {profileDetails.expertise}</p>
+                <p>Speaks: {profileDetails.languages}</p>
               </div>
               <p className="text-xl font-bold text-primary-400">
-                Starts at $ 500
+                Starts at Rs. {profileDetails.price}
               </p>
             </figcaption>
           </figure>

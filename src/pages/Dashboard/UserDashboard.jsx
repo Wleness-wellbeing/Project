@@ -1,15 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Components
-import { selfCareConcern, selfCareFeeling } from "../../data/dashboard";
+import {
+  dashboardQuotes,
+  selfCareConcern,
+  selfCareFeeling,
+} from "../../data/dashboard";
 import { Link } from "react-router-dom";
 import { placeholderLandscape, placeholderPortrait } from "../../assets";
 import UpcomingMeets from "../../components/list/UpcomingMeets";
 
 export default function UserDashboard({ token }) {
-  const [thoughts, setThoughts] = useState([]);
-  const [newThought, setNewThought] = useState("");
+  const [thoughts, setThoughts] = useState([]); // thoughts list
+  const [newThought, setNewThought] = useState(""); // add new thought in list
+  const [mood, setMood] = useState("");
+  const [activeQuote, setActiveQuote] = useState(0);
+
+  // Display random quote
+  const setRandomQuote = () => {
+    const quote = Math.floor(Math.random() * dashboardQuotes.length);
+    setActiveQuote(quote);
+  };
+  useEffect(() => {
+    setRandomQuote();
+  }, []);
 
   // Handle thought form submit
   const handleThoughtSubmit = (event) => {
@@ -34,6 +49,12 @@ export default function UserDashboard({ token }) {
     setThoughts(newArray);
   };
 
+  // Handle Mood states
+  const handleMood = (i) => {
+    setMood(i);
+    console.log(mood);
+  };
+
   return (
     <section className="gap-5 lg:flex">
       <div className="lg:w-[65%]">
@@ -49,11 +70,19 @@ export default function UserDashboard({ token }) {
 
         {/* How you feel */}
         <div className="mb-5">
-          <span className="text-lg font-bold">How you feel today...</span>
+          <span className="mb-2 inline-block text-lg font-bold">
+            How you feel today...
+          </span>
           <div className="grid grid-cols-2 lg:grid-cols-5 lg:gap-5">
             {selfCareFeeling.map((value, i) => {
               return (
-                <div key={i} className="relative grid rounded-xl px-5 py-2">
+                <div
+                  key={i}
+                  onClick={() => handleMood(value[0])}
+                  className={`relative grid cursor-pointer rounded-xl px-5 py-2 hover:bg-primary-50/60 ${
+                    mood == value[0] ? " bg-primary-50/60 " : ""
+                  }`}
+                >
                   <img
                     className="text-center text-3xl font-bold"
                     src={value[1]}
@@ -70,11 +99,10 @@ export default function UserDashboard({ token }) {
               style={{ background: "rgb(0, 217, 245, 12%)" }}
               className="mx-auto rounded-lg p-5 text-center lg:w-[640px]"
             >
-              <q className="text-lg">
-                It's not the load that breaks you down, it's the way you carry
-                it
-              </q>
-              <h4 className="text-xl font-bold text-sky-500">Lou Holtz</h4>
+              <q className="text-lg">{dashboardQuotes[activeQuote][0]}</q>
+              <h4 className="text-xl font-bold text-sky-500">
+                {dashboardQuotes[activeQuote][1]}
+              </h4>
             </blockquote>
           </div>
         </div>

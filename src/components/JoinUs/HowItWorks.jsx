@@ -5,6 +5,11 @@ export default function HowItWorks() {
   return (
     <section className="bg-gradient-to-b from-primary-50/50 to-transparent py-10">
       <div className="container mx-auto xl:mb-6">
+        <div className="pb-3 text-center">
+          <h2 className="subheading">
+            How it <span className="heading-primary">works</span>
+          </h2>
+        </div>
         <div className="gap-x-6 xl:flex">
           <div className="mb-4 xl:order-2 xl:mb-0 xl:w-1/2">
             <img src={doctorDashboard} alt="" className="drop-shadow-xl" />

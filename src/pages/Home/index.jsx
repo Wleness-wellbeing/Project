@@ -75,7 +75,7 @@ export default function Home() {
 
         {/* Services */}
         <div className="bg-gradient-to-br from-primary-10 to-white pb-6 font-quicksand lg:pb-10">
-          <div className="container mx-auto grid gap-y-20 py-6 pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-10 lg:pt-12 xl:gap-x-14 xl:gap-y-20 xl:pt-24">
+          <div className="container mx-auto grid grid-cols-2 gap-x-2 gap-y-8 py-6 pt-8 lg:grid-cols-3 lg:gap-6 lg:pb-10 lg:pt-12 xl:gap-x-14 xl:gap-y-20 xl:pt-24">
             {homeServices.map((value, index) => {
               return <ServicesCard key={index} data={value} />;
             })}

@@ -27,7 +27,7 @@ export default function index() {
               className="mb-2 w-full rounded-3xl"
             />
           </div>
-          <div className="pr-7 lg:order-1 lg:w-1/2">
+          <div className="text-center lg:order-1 lg:w-1/2 lg:pr-7 lg:text-left">
             <h1 className="subheading mb-2 pt-3 lg:mb-6">
               <span>Foster a </span>
               <span className="text-[#0A99D6]">Healthy and thriving work </span>

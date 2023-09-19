@@ -20,6 +20,43 @@ export const selfCareFeeling = [
   ["Angry", iconAngry],
 ];
 
+export const dashboardQuotes = [
+  [
+    "Mental health...is not a destination, but a process. It's about how you drive, not where you're going.",
+    "Noam Shpancer",
+  ],
+  [
+    "You are enough just as you are. Each emotion you feel, everything in your life, everything you do or do not do...where you are and who you are right now is enough. It is perfect.",
+    "Haemin Sunim",
+  ],
+
+  [
+    "The strongest people are not those who show strength in front of us but those who win battles we know nothing about.",
+    "Jonathan Harnisch",
+  ],
+  [
+    "Your illness does not define you. Your strength and courage does.",
+    "Unknown",
+  ],
+  [
+    "You don't have to be positive all the time. It's perfectly okay to feel sad, angry, annoyed, frustrated, scared, or anxious. Having feelings doesn't make you a negative person. It makes you human.",
+    "Lori Deschene",
+  ],
+  [
+    "Self-care is not selfish. You cannot serve from an empty vessel.",
+    "Eleanor Brownn",
+  ],
+  ["You are the sky. Everything else – it's just the weather.", "Pema Chödrön"],
+  [
+    "It is okay to be at a place of struggle. It is okay to be a work in progress. It is okay to be on a journey.",
+    "Unknown",
+  ],
+  [
+    "You, as much as anybody in the entire universe, deserve your love and affection.",
+    "Buddha",
+  ],
+];
+
 export const selfCareConcern = [
   ["Anxiety", " bg-[#DFE7FD] ", "/therapy/anxiety"],
   ["Stress", " bg-[#FCF6BD] ", "/therapy/stress"],

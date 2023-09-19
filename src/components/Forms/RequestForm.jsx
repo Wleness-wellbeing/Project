@@ -65,7 +65,7 @@ function RequestForm() {
       <div className="md:flex md:h-full md:flex-col md:justify-between md:px-6">
         <div>
           <h3 className="font-medium text-[#464646] opacity-80 lg:text-lg">
-            Need a doctor consulting?
+            Need an expert's consulting?
           </h3>
           <h1 className="font-quicksand text-4xl font-bold leading-tight tracking-tight text-[#464646] opacity-90 xl:text-5xl">
             Request a Call Back Now
@@ -82,7 +82,7 @@ function RequestForm() {
             alt="contact"
           />
           <p className="font-medium leading-5 text-slate-700">
-            Our Doctors are waiting
+            Our Experts are waiting
             <br />
             for your service.
           </p>
