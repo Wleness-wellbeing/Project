@@ -145,6 +145,7 @@ export { doctor, profile, doctorLogIn };
 
 // Activities Images
 import brainExercise from "./images/activities/activities-brainExercise.png";
+import brainheader from './images/activities/brainExercise/bg.png'
 import goalPlan from "./images/activities/activities-goalPlan.png";
 import meditation from "./images/activities/activities-meditation.png";
 import sadhna from "./images/activities/activities-sadhna.png";
@@ -277,6 +278,7 @@ export {
   yogaType11,
   yogaType12,
   // Brain Exericise
+  brainheader,
   brainExerciseHeader,
   brainGameGalaxy,
   brainGameTreasure,

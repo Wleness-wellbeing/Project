@@ -65,6 +65,11 @@ a {
     @apply max-w-[1400px];
   }
 }
+@media (max-width: 767px) {
+  .hidden-on-mobile {
+    display: none;
+  }
+}
 
 /* Headings */
 .subheading {

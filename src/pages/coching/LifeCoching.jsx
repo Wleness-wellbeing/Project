@@ -40,11 +40,18 @@ export default function LifeCoching() {
             ></img>
           </div>
           <div className="xl:order-1 xl:w-1/2">
-            <div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                textAlign: "center",
+              }}
+            >
               <hgroup className="mb-6 xl:mb-8">
                 <h1 className="subheading">Unleash Your Inner Champion</h1>
                 <h2 className="text-2xl font-semibold">
-                  <span>Through Wleness </span>
+                  <span className="">Through Wleness </span>
                   <span className="heading-primary font-bold">
                     Life Coaching
                   </span>
@@ -52,7 +59,7 @@ export default function LifeCoching() {
               </hgroup>
             </div>
 
-            <ul className="rounded-2xl bg-primary-50 p-3 !font-semibold xl:text-lg">
+            <ul className="rounded-2xl bg-primary-50 p-3 text-center font-semibold xl:text-lg">
               <li className="mb-6">
                 Do you crave higher growth and confidence in your life,
                 business, and leadership journey?

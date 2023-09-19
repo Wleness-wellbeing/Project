@@ -4,7 +4,7 @@ import { benefits, precautions, adhvmukhaSteps } from "../assets";
 export default function LeftVideoList(props) {
   return (
     <div className="container mx-auto flex flex-col lg:flex-row lg:items-center">
-      <div className="lg:w-1/2">
+      <div className="hidden lg:block lg:w-1/2">
         <iframe
           src={props.data.videoUrl}
           title="YouTube video player"
@@ -14,6 +14,7 @@ export default function LeftVideoList(props) {
           className="mx-auto h-44 w-fit rounded-2xl lg:h-[300px] lg:w-[460px]"
         />
       </div>
+
       <div className="py-2 font-semibold lg:w-1/2 lg:p-8">
         <h2 className="mb-4 text-2xl font-bold text-primary-500">
           {props.data.title}

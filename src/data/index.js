@@ -104,6 +104,8 @@ import {
   sirsasanaHeader,
   sarvangasanaHeader,
   setuBandhasanaHeader,
+  brainheader,
+  
 } from "../assets";
 // Components
 import HeaderWithImage from "../components/HeaderWithImage";
@@ -1624,7 +1626,7 @@ export const brainExercise = {
       },
     ],
     desc: "Boost your mental health with our brain exercises program. These fun activities help your thinking and concentration. Join this journey to a sharper mind and more robust mental well-being.",
-    image: brainExerciseHeader,
+    image: brainheader,
   },
   activities: {
     title: "Brain Games",

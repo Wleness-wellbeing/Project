@@ -55,8 +55,8 @@ import BlogDetails from "./pages/Blogs/BlogDetails";
 import Cancellation from "./pages/Policies/Cancellation";
 import StudentsPolicy from "./pages/Policies/StudentsPolicy";
 import { useEffect } from "react";
-// import Gauth from "./pages/Authentication/Gauth";
-// import FacebookAuth from "./pages/Authentication/FacebookAuth";
+import Gauth from "./pages/Authentication/Gauth";
+import FacebookAuth from "./pages/Authentication/FacebookAuth";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -134,7 +134,7 @@ function App() {
             </Layout>
           }
         />
-        {/* <Route
+        <Route
           path="/gauth"
           element={
             <Layout>
@@ -149,7 +149,7 @@ function App() {
               <FacebookAuth />
             </Layout>
           }
-        /> */}
+        />
 
         <Route
           path="/services/psychiatrist"
