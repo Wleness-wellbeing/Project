@@ -105,7 +105,7 @@ export default function Footer() {
                 </ul>
               </div>
 
-              <div>
+              <div className="pl-2.5 lg:pl-0">
                 <h4 className="mb-2 text-lg font-semibold md:my-2 lg:text-xl">
                   Library
                 </h4>
