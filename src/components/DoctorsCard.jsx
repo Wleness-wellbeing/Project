@@ -11,7 +11,7 @@ export default function DoctorsCard(props) {
       <div className="relative lg:w-2/5">
         <Link to={slug}>
           <img
-            src={swatiGhoshalPortrait}
+            src={props.data.image}
             alt=""
             className="block w-full rounded-l-2xl object-cover"
           />
@@ -22,18 +22,18 @@ export default function DoctorsCard(props) {
       </div>
       <figcaption className="px-4 py-2 lg:w-3/5 3xl:px-6">
         <hgroup>
-          <h3 className="flex items-center justify-between text-2xl font-semibold">
+          <h3 className="flex items-center justify-between text-xl font-semibold lg:text-2xl">
             <span>{props.data.name}</span>
             {/* <HeartIcon /> */}
           </h3>
           <h5 className="font-semibold text-primary-400">
             {props.data.profession}
           </h5>
-          <h4 className="mb-2 text-lg font-semibold text-slate-500">
+          <h4 className="mb-2 text-sm font-semibold text-slate-500 lg:text-lg">
             {props.data.experience}
           </h4>
         </hgroup>
-        <div className="font-medium">
+        <div className="text-xs font-medium lg:text-base">
           <p className="leading-5 text-slate-600">
             Expertise: {props.data.expertise}
           </p>
@@ -53,7 +53,7 @@ export default function DoctorsCard(props) {
               Book Now
             </Link>
             <Link
-              to="/appointment"
+              to={slug}
               className="btn-one inline-block border-2 border-primary-400 !bg-transparent !py-2 !text-sm !text-primary-400"
             >
               View Profile

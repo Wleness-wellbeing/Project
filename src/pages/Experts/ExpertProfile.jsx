@@ -88,7 +88,7 @@ export default function ExpertProfile() {
               <img
                 src={profileDetails.image}
                 alt=""
-                className="h-40 w-40 rounded-full border-4 border-primary-300 object-cover lg:h-56 lg:w-56"
+                className="h-40 w-40 rounded-full border-4 border-primary-300 object-cover object-top lg:h-56 lg:w-56"
               />
             </div>
             <figcaption className="mx-auto text-center lg:w-1/2 lg:text-left">
