@@ -437,13 +437,33 @@ export {
   couplesTherapy2,
 };
 // Services >> Musical Therapy
-import musicalTherapyHeader from "./images/services/musicalTherapy/musical-therapy-header.png";
+import musicalTherapyHeader from "./images/services/musicalTherapy/musicalHeading.png";
 import musicalTherapy1 from "./images/services/musicalTherapy/musical-therapy-1.png";
 import musicalTherapy2 from "./images/services/musicalTherapy/musical-therapy-2.png";
 import musicalTherapy3 from "./images/services/musicalTherapy/musical-therapy-3.png";
 import musicalTherapy4 from "./images/services/musicalTherapy/musical-therapy-4.png";
 import musicalTherapy5 from "./images/services/musicalTherapy/musical-therapy-5.png";
 import musicalTherapy6 from "./images/services/musicalTherapy/musical-therapy-6.png";
+import g1 from "./images/services/musicalTherapy/g1.png";
+import g2 from "./images/services/musicalTherapy/g2.png";
+import g3 from "./images/services/musicalTherapy/g3.png";
+import g4 from "./images/services/musicalTherapy/g4.png";
+import g5 from "./images/services/musicalTherapy/g5.png";
+import g6 from "./images/services/musicalTherapy/g6.png";
+import g7 from "./images/services/musicalTherapy/g7.png";
+import g8 from "./images/services/musicalTherapy/g8.png";
+import musicalelipse1 from "./images/services/musicalTherapy/musicalElipse1.png";
+import musicalelipse2 from "./images/services/musicalTherapy/musicalElipse2.png";
+import musicalelipse3 from "./images/services/musicalTherapy/musicalElipse3.png";
+
+
+
+
+
+
+
+
+
 // Services >> Therapy
 import therapyHeader from "./images/services/therapy/therapy-header.png";
 import bestTherapy from "./images/services/therapy/best-therapy.png";
@@ -457,6 +477,7 @@ import bestPsychiatrist from "./images/services/psychiatrist/best-psychiatrist.p
 import bulb from "./images/services/psychiatrist/bulb.png";
 import mythsAndFacts from "./images/services/psychiatrist/myths-and-facts.png";
 export {
+  g1,g2,g3,g4,g5,g6,g7,g8,musicalelipse1,musicalelipse2,musicalelipse3,
   musicalTherapyHeader,
   musicalTherapy1,
   musicalTherapy2,
