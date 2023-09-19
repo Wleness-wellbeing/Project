@@ -136,6 +136,7 @@ export const MusicalTherapyData = {
   activities: {
     title: "MUSIC HEALING SERVICES",
     desc: "Use music to improve mental and emotional well-being through techniques like active listening, improvisation, and songwriting with our top counselors.",
+    
     types: [
       {
         title: "Guided Imagery and Music",

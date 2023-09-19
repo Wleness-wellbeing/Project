@@ -162,7 +162,9 @@ export default function Internship() {
             return (
               <div
                 key={index}
-                className=" h-full cursor-pointer rounded-xl border-2 border-slate-100 p-4 shadow-xl hover:border-transparent hover:bg-secondary/20"
+                className={`h-full cursor-pointer rounded-xl border-2 border-slate-100 p-4 shadow-xl hover:border-transparent hover:bg-secondary/20 ${
+                  index === 4 ? "hidden-on-mobile" : ""
+                }`}
               >
                 <div>
                   <img

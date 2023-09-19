@@ -65,6 +65,12 @@ export default function Login({ setToken }) {
       setMessages("error", "Please fill your details properly!"); // set success message
     }
   };
+
+  const handleGoogleLogin = () => {
+    // Redirect to the  /login route for Google OAuth2 authentication
+    window.location.href = "http://127.0.0.1:5000/login";
+  };
+
   return (
     <main class="flex h-screen flex-col items-center justify-center md:flex-row md:items-stretch">
       <aside class="hidden items-center justify-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-contain bg-right bg-no-repeat md:flex md:w-1/2">
@@ -151,7 +157,10 @@ export default function Login({ setToken }) {
               <span className="h-[2px] w-28 bg-slate-200"></span>
             </div>
             <div className="mb-6 flex justify-center gap-x-4">
-              <button className="rounded-lg bg-primary-50/80 px-4 py-2 transition-colors hover:bg-primary-50">
+              <button
+                className="rounded-lg bg-primary-50/80 px-4 py-2 transition-colors hover:bg-primary-50"
+                onClick={handleGoogleLogin}
+              >
                 <img src={iconGoogle} alt="" className="w-6" />
               </button>
               <button className="rounded-lg bg-primary-50/80 px-4 py-2 transition-colors hover:bg-primary-50">
