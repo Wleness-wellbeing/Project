@@ -110,7 +110,7 @@ export const homePageDoctors = {
   doctors: doctorsDetails,
   button: {
     text: "Book Now",
-    slug: "/appointment/checkout",
+    slug: "/experts/booking/swati-ghoshal",
   },
 };
 

@@ -3,10 +3,10 @@ import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 // Data
-import { doctorAppointment } from "../../assets";
 import { modes, timings } from "../../data/doctors";
 import axios from "axios";
 import { EXPERTS_URI } from "../../data/api";
+import { profileMask, swatiGhoshalPortrait } from "../../assets";
 
 export default function Appointment() {
   const { slug } = useParams();
@@ -31,7 +31,6 @@ export default function Appointment() {
       .then((response) => {
         // Handle the successful response
         setProfileDetails(response.data);
-        console.log(profileDetails);
         setLoading(false);
       })
       .catch((error) => {
@@ -51,22 +50,47 @@ export default function Appointment() {
         <div className="absolute left-0 top-0 -z-10  h-28 w-full bg-primary-50 lg:bottom-0 lg:left-0 lg:top-0 lg:h-auto lg:w-28"></div>
         <div className="absolute left-0 top-28 -z-10 h-28 w-full bg-primary-50/60 lg:bottom-0 lg:left-28 lg:top-0 lg:h-auto lg:w-28"></div>
         <div className="absolute left-0 top-56 -z-10 h-28 w-full bg-primary-50/50 lg:bottom-0 lg:left-56 lg:top-0 lg:h-auto lg:w-28"></div>
-        <div className="absolute left-0 top-[21rem] -z-10 h-16 w-full bg-primary-50/30 lg:bottom-0 lg:left-[21rem] lg:top-0 lg:h-auto lg:w-28"></div>
+        <div className="absolute left-0 top-[21rem] -z-10 h-24 w-full bg-primary-50/30 lg:bottom-0 lg:left-[21rem] lg:top-0 lg:h-auto lg:w-28"></div>
 
-        <figure className="left-16 top-10 mx-auto w-96 justify-center gap-x-8 py-6 lg:absolute lg:w-[320px]">
-          <Link to="" className="block">
-            <img
-              src={doctorAppointment}
-              alt=""
-              className="mx-auto mb-2 w-52 object-cover"
-            />
+        <figure className="left-16 top-10 mx-auto w-64 justify-center gap-x-8 py-6 lg:absolute lg:w-[300px]">
+          <Link to={"/experts/profile/" + slug} className="mb-5 block">
+            <div className="relative">
+              <img
+                src={
+                  profileDetails.image
+                    ? profileDetails.image
+                    : swatiGhoshalPortrait
+                }
+                alt=""
+                className="mx-auto mb-2 h-52 w-52 rounded-full object-cover object-top"
+              />
+              <img
+                src={profileMask}
+                alt=""
+                className="absolute left-1/2 top-0 h-52 w-52 -translate-x-[55%] scale-110 object-cover"
+              />
+            </div>
           </Link>
-          <figcaption className="mx-auto w-52">
-            <h4 className="text-3xl font-bold">Dr. Jenny</h4>
-            <h6 className="text-xl font-semibold">6+ yrs of experience</h6>
+          <figcaption className="mx-auto w-60">
+            <h4 className="text-2xl font-bold">{profileDetails.name}</h4>
+            <h6 className="text-xl font-semibold">
+              {profileDetails.experience
+                ? profileDetails.experience
+                : "5+ years of experience"}
+            </h6>
             <div className="my-2 font-medium">
-              <p>Expertise: Yoga, Work-life</p>
-              <p>Speaks: German, English</p>
+              <p>
+                Expertise:{" "}
+                {profileDetails.expertise
+                  ? profileDetails.expertise
+                  : "Yoga, Work-life"}
+              </p>
+              <p>
+                Speaks:{" "}
+                {profileDetails.languages
+                  ? profileDetails.languages
+                  : "English, Hindi"}
+              </p>
             </div>
           </figcaption>
         </figure>

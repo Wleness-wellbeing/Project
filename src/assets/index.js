@@ -129,9 +129,11 @@ import avatarImage5 from "./images/activities/avatar/image 17.png";
 import avatarImage6 from "./images/activities/avatar/image 18.png";
 import cardpic1 from "./images/activities/rect1.png";
 import cardpic2 from "./images/activities/rect2.png";
-import cardpic3 from "./images/activities/rect3.png"
+import cardpic3 from "./images/activities/rect3.png";
 export {
-  cardpic1,cardpic2,cardpic3,
+  cardpic1,
+  cardpic2,
+  cardpic3,
   avatarImage1,
   avatarImage2,
   avatarImage3,
@@ -149,7 +151,7 @@ export { doctor, profile, doctorLogIn };
 
 // Activities Images
 import brainExercise from "./images/activities/activities-brainExercise.png";
-import brainheader from './images/activities/brainExercise/bg.png'
+import brainheader from "./images/activities/brainExercise/bg.png";
 import goalPlan from "./images/activities/activities-goalPlan.png";
 import meditation from "./images/activities/activities-meditation.png";
 import sadhna from "./images/activities/activities-sadhna.png";
@@ -210,6 +212,9 @@ import sarvangasanaHeader from "./images/activities/yoga/others/sarvangasana-hea
 import setuBandhasanaHeader from "./images/activities/yoga/others/setu-bandhasana-header.png";
 import ustrasanaHeader from "./images/activities/yoga/others/ustrasana-header.png";
 import sirsasanaHeader from "./images/activities/yoga/others/sirsasana-header.png";
+import uttanasanaHeader from "./images/activities/yoga/others/uttanasana-header.png";
+import navasanaHeader from "./images/activities/yoga/others/navasana-header.png";
+import ardhChandrasanaHeader from "./images/activities/yoga/others/ardh-chandrasana-header.png";
 // Activities >> Sadhna
 import sadhnaHeader from "./images/activities/sadhna/sadhna-header.png";
 import sadhnaType1 from "./images/activities/sadhna/sadhna-type-1.png";
@@ -238,6 +243,9 @@ export {
   adhvVariationThree,
   brainExercise,
   goalPlan,
+  uttanasanaHeader,
+  navasanaHeader,
+  ardhChandrasanaHeader,
   meditation,
   sadhna,
   yoga,
@@ -460,14 +468,6 @@ import musicalelipse1 from "./images/services/musicalTherapy/musicalElipse1.png"
 import musicalelipse2 from "./images/services/musicalTherapy/musicalElipse2.png";
 import musicalelipse3 from "./images/services/musicalTherapy/musicalElipse3.png";
 
-
-
-
-
-
-
-
-
 // Services >> Therapy
 import therapyHeader from "./images/services/therapy/therapy-header.png";
 import bestTherapy from "./images/services/therapy/best-therapy.png";
@@ -481,7 +481,17 @@ import bestPsychiatrist from "./images/services/psychiatrist/best-psychiatrist.p
 import bulb from "./images/services/psychiatrist/bulb.png";
 import mythsAndFacts from "./images/services/psychiatrist/myths-and-facts.png";
 export {
-  g1,g2,g3,g4,g5,g6,g7,g8,musicalelipse1,musicalelipse2,musicalelipse3,
+  g1,
+  g2,
+  g3,
+  g4,
+  g5,
+  g6,
+  g7,
+  g8,
+  musicalelipse1,
+  musicalelipse2,
+  musicalelipse3,
   musicalTherapyHeader,
   musicalTherapy1,
   musicalTherapy2,
@@ -751,6 +761,7 @@ import designRing from "./images/designs/design-ring.png";
 import placeholderPortrait from "./images/designs/placeholder-portrait.png";
 import placeholderLandscape from "./images/designs/placeholder-landscape.png";
 import quoteBg from "./images/quote-bg.jpg";
+import profileMask from "./images/designs/profile-mask.png";
 
 export {
   bgDotsPattern,
@@ -760,6 +771,7 @@ export {
   placeholderPortrait,
   placeholderLandscape,
   quoteBg,
+  profileMask,
 };
 
 // Community

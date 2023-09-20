@@ -216,6 +216,14 @@ function App() {
           }
         />
         <Route
+          path="/experts/booking/:slug"
+          element={
+            <Layout>
+              <Appointment />
+            </Layout>
+          }
+        />
+        <Route
           path="/appointment/checkout"
           element={
             <Layout>

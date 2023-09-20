@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { bgDotsPattern, swatiGhoshalLandscape } from "../../assets";
+import { bgDotsPattern } from "../../assets";
 import { Link, useParams } from "react-router-dom";
 
 import BookAppointment from "../../components/Forms/BookAppointment";
@@ -54,6 +54,7 @@ export default function ExpertProfile() {
   const { slug } = useParams();
   const [profileDetails, setProfileDetails] = useState({});
   const [loading, setLoading] = useState(true);
+  console.log(slug);
 
   useEffect(() => {
     // Make a GET request using Axios
@@ -62,7 +63,6 @@ export default function ExpertProfile() {
       .then((response) => {
         // Handle the successful response
         setProfileDetails(response.data);
-        console.log(profileDetails);
         setLoading(false);
       })
       .catch((error) => {

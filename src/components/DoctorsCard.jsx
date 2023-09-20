@@ -2,10 +2,10 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIndianRupee } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { swatiGhoshalPortrait } from "../assets";
 
 export default function DoctorsCard(props) {
-  const slug = `/experts/profile/${props.data.slug}`;
+  const slug = `/experts/profile/${props.data.slug}`; // slug for profile
+  const bookNow = `/experts/booking/${props.data.slug}`; // slug for booking
   return (
     <figure className="flex items-center rounded-2xl rounded-br-[5rem] border-2 border-primary-300 bg-white transition-all hover:shadow-lg hover:shadow-primary-50">
       <div className="relative lg:w-2/5">
@@ -46,10 +46,7 @@ export default function DoctorsCard(props) {
             {props.data.price}
           </h5>
           <div className="flex items-center space-x-2">
-            <Link
-              to="/appointment/checkout"
-              className="btn-one inline-block !text-sm"
-            >
+            <Link to={bookNow} className="btn-one inline-block !text-sm">
               Book Now
             </Link>
             <Link
