@@ -11,18 +11,20 @@ import {
   activitiesExplore3,
 } from "../../assets";
 import { Link } from "react-router-dom";
+import ActivityCards from "../../components/ActivityCards";
 
 function Activities() {
   return (
     <>
-      <header className="bg-gradient-to-b from-primary-50/30 to-transparent">
-        <div className="container mx-auto flex flex-col items-center rounded-3xl py-2 lg:flex-row lg:py-6 2xl:justify-between 2xl:pb-10 2xl:pt-14">
-          <div className="mb-6 lg:order-2 lg:mb-0 xl:w-[45%] 2xl:flex 2xl:justify-end">
-            {/* Desktop Image */}
+      <header className="overflow-x-clip bg-[#ddf2ef]  py-4 pb-10 pt-6 lg:!px-5 lg:py-10 xl:py-20">
+        <div className="container mx-auto items-center text-center lg:flex lg:text-left">
+          {/* Header Image */}
+          <div className="relative mb-2 lg:order-2 lg:my-2 lg:w-1/2">
             <img
+              loading="lazy"
               src={activitiesHeader}
               alt=""
-              className="w-full object-cover"
+              className="mx-auto scale-110"
             />
           </div>
           <div className="-m-5 mb-6 rounded-3xl p-5 text-center md:mb-6 lg:order-1 lg:m-0 lg:mb-0 lg:rounded-none lg:text-left xl:w-[55%] xl:pl-0">
@@ -44,9 +46,19 @@ function Activities() {
           </div>
         </div>
       </header>
+      <div className="container mx-auto my-16 text-center">
+        <h1 className="subheading heading-primary">
+          Explore the various forms of meditation
+        </h1>
+        <p className="para">
+          From our wellness experts, discover the profound benefits of
+          meditation for your mind and body. Explore the wisdom they share to
+          guide you on your path to holistic well-being.
+        </p>
+      </div>
 
       {/* Sliders Section */}
-      <section className="container relative mx-auto my-20 hidden h-44 md:flex lg:h-64 xl:h-80">
+      <section className="container relative mx-auto my-8 hidden h-44 md:flex lg:h-64 xl:h-80">
         <div className="absolute left-5 top-0 w-44 drop-shadow-xl transition-all hover:z-20 hover:scale-105 lg:w-64 xl:w-80">
           <Link to="/activities/meditation">
             <h2 className="text-xl font-semibold text-[#bbaef8]">Meditation</h2>
@@ -95,7 +107,7 @@ function Activities() {
         </div>
       </section>
 
-      <section className="container mx-auto">
+      {/* <section className="container mx-auto">
         <figure className="mb-12 flex flex-col items-center lg:mb-2 lg:flex-row">
           <figcaption className="order-2 lg:order-1 lg:w-[55%] lg:pr-10">
             <h3 className="heading-primary mb-3 text-4xl font-bold">
@@ -167,7 +179,20 @@ function Activities() {
             />
           </div>
         </figure>
-      </section>
+      </section> */}
+
+      <div className="container mx-auto my-10 text-center ">
+        <h1 className="subheading">
+          {" "}
+          Empower your{" "}
+          <span className="subheading heading-primary">well being</span>
+        </h1>
+        <p className="para ">
+          Navigate your well-being journey with choices tailored to your needs.
+        </p>
+      </div>
+
+      <ActivityCards />
     </>
   );
 }
