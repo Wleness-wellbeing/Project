@@ -127,7 +127,11 @@ import avatarImage3 from "./images/activities/avatar/image 15.png";
 import avatarImage4 from "./images/activities/avatar/image 16.png";
 import avatarImage5 from "./images/activities/avatar/image 17.png";
 import avatarImage6 from "./images/activities/avatar/image 18.png";
+import cardpic1 from "./images/activities/rect1.png";
+import cardpic2 from "./images/activities/rect2.png";
+import cardpic3 from "./images/activities/rect3.png"
 export {
+  cardpic1,cardpic2,cardpic3,
   avatarImage1,
   avatarImage2,
   avatarImage3,
