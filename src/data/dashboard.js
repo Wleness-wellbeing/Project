@@ -18,6 +18,7 @@ export const selfCareFeeling = [
   ["Emotional", iconEmotional],
   ["Sad", iconSad],
   ["Angry", iconAngry],
+  ["Overwhelming", iconAngry],
 ];
 
 export const dashboardQuotes = [

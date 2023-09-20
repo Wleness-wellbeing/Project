@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // Data
 import {
   campusAmbassadorHeader,
   campusAmbassadorTeam,
-  campusWhyToApply,
-  cloudWithDots,
   doodle2,
   roleCampus,
   roleProgram,
@@ -97,7 +95,7 @@ export default function CampusAmbassador() {
           <span>Why you should </span>
           <span className="heading-primary">Apply?</span>
         </h2>
-        <div className="flex justify-between py-6">
+        <div className="flex flex-wrap justify-between py-6">
           {whyToApplyCampus.map((value, i) => {
             return (
               <figure>
@@ -129,7 +127,7 @@ export default function CampusAmbassador() {
           <span>Role and </span>
           <span className="heading-primary">Responsibility</span>
         </h2>
-        <div className="container mx-auto grid grid-cols-2 gap-8 xl:grid-cols-4">
+        <div className="container mx-auto grid grid-cols-2 gap-4 lg:gap-8 xl:grid-cols-4">
           {roles.map((value, index) => {
             return (
               <figure key={index} className="rounded-2xl bg-primary-50/50 p-5">
@@ -141,7 +139,7 @@ export default function CampusAmbassador() {
                   />
                 </div>
                 <figcaption>
-                  <h5 className="text-center text-lg font-semibold text-primary-400">
+                  <h5 className="text-center text-sm font-semibold text-primary-400 lg:text-lg">
                     {value[1]}
                   </h5>
                 </figcaption>
@@ -152,21 +150,23 @@ export default function CampusAmbassador() {
       </section>
 
       {/* Who can join */}
-      <section className="relative overflow-y-auto overflow-x-hidden py-20">
+      <section className="relative overflow-y-auto overflow-x-hidden py-4 lg:py-8">
         <div className="container mx-auto text-center">
           <h2 className="subheading mb-4">
             Who can join <span className="heading-primary">Wleness</span>
           </h2>
-          <p className="mb-8 px-10 text-xl font-semibold">
+          <p className="mb-8 px-2 text-base font-semibold lg:px-10 lg:text-xl">
             An energetic passionate Psychology Students pursuing
             under-graduation & post-graduation from any university or college
             across India.
           </p>
           <div>
-            <button className="btn-one">Join Us Now</button>
+            <button className="btn-one" onClick={openCampusModal}>
+              Join Us Now
+            </button>
           </div>
         </div>
-        <img
+        {/* <img
           src={cloudWithDots}
           alt=""
           className="absolute -right-40 top-0 w-[400px]"
@@ -175,7 +175,7 @@ export default function CampusAmbassador() {
           src={cloudWithDots}
           alt=""
           className="absolute -left-40 bottom-0 w-[400px]"
-        />
+        /> */}
       </section>
 
       <CampusAmbassadorForm isOpen={campusModal} onClose={closeCampusModal} />

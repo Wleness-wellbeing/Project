@@ -4,6 +4,8 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { expertClient, featuredPatient } from "../../assets";
 import DoctorsCard from "../../components/DoctorsCard";
 import { EXPERTS_URI } from "../../data/api";
+import HappyClient from "../../components/HappyClient";
+import { expertsClients } from "../../data/clients";
 import axios from "axios";
 
 export default function ExpertsDetails() {
@@ -32,8 +34,8 @@ export default function ExpertsDetails() {
 
   return (
     <main>
-      <header className="container mx-auto flex flex-col items-center py-4 lg:flex-row xl:py-6 2xl:py-8">
-        <h1 className="lg:w-4/5">
+      <header className="container mx-auto py-4">
+        <h1 className="text-center">
           <span className="subheading heading-primary">
             Meet Our Specialists
           </span>
@@ -97,7 +99,7 @@ export default function ExpertsDetails() {
 
       {/* Specialist Doctors */}
       <section>
-        <div className="side-spacing grid-cols-[repeat(4, minmax(280, 1fr))] container mx-auto grid items-center gap-5 p-4 sm:grid-cols-2 3xl:gap-6">
+        <div className="side-spacing grid-cols-[repeat(4, minmax(280, 1fr))] container mx-auto grid items-center gap-5 p-4 sm:grid-cols-2 lg:pb-12 3xl:gap-6">
           {doctorDetails.map((value, i) => {
             return <DoctorsCard key={i} data={value} />;
           })}
@@ -108,7 +110,7 @@ export default function ExpertsDetails() {
       </section>
 
       {/* Clients Testimonials */}
-      <section className=" pt-7 lg:pt-14">
+      {/* <section className=" pt-7 lg:pt-14">
         <div className="bg-primary-50/40 ">
           <div className="container mx-auto mb-2 py-4 text-center">
             <h2 className="subheading heading-primary mb-4">
@@ -122,24 +124,17 @@ export default function ExpertsDetails() {
             </p>
           </div>
         </div>
-        <div className="container mx-auto md:flex md:items-start md:gap-4 lg:py-10">
-          <div className="md:flex md:w-2/5">
-            <img
-              src={featuredPatient}
-              alt="Testimonials"
-              className="w-full object-cover"
-            />
-          </div>
-          <div className="md:w-3/5">
-            <figure className="flex h-full items-start rounded-xl rounded-br-[4rem] border-2 border-slate-200 bg-white p-4 shadow-xl sm:rounded-br-[7rem] lg:px-10 lg:py-12">
-              <div className="mr-6 w-3/12">
+        <div className="container mx-auto lg:py-10">
+          <div className="flex pb-6 pt-4">
+            <figure className="flex- flex h-full items-start rounded-xl rounded-br-[4rem] border-2 border-slate-200 bg-white p-4 shadow-xl sm:rounded-br-[7rem] md:flex-row lg:px-10 lg:py-12">
+              <div className="md:w-3/12">
                 <img
                   src={expertClient}
                   alt=""
-                  className="block w-full object-cover"
+                  className="block w-14 object-cover md:w-4/5"
                 />
               </div>
-              <figcaption className="w-3/4">
+              <figcaption className="md:w-3/4">
                 <h4 className="text-lg font-semibold sm:text-xl">John Kuch</h4>
                 <p className="mb-2 flex items-center">
                   <span className="mr-2 block text-lg font-semibold">4/5</span>
@@ -162,15 +157,33 @@ export default function ExpertsDetails() {
                     />
                   </span>
                 </p>
-                <p className="mb-1 text-sm font-medium xs:pr-3 sm:text-lg md:text-base md:leading-5">
+                <p className="mb-1 text-sm font-semibold  xs:pr-3 sm:text-lg md:text-base">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt laudantium mollitia id.
+                  Incidunt laudantium mollitia id. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Incidunt laudantium mollitia id.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Incidunt laudantium mollitia id. Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Incidunt laudantium mollitia id.
                 </p>
               </figcaption>
             </figure>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <div className="bg-primary-50/40">
+        <div className="container mx-auto py-4 text-center">
+          <h2 className="subheading heading-primary">
+            What Our Patients Say About Us
+          </h2>
+          <p className="text-center font-medium leading-5 xl:text-lg xl:leading-6">
+            Hear from our valued patients about their experience with us and the
+            impact we've made on their lives. Read their heartfelt testimonials
+            and discover the quality of care and support we provide.
+          </p>
+        </div>
+      </div>
+      <HappyClient data={expertsClients} />
     </main>
   );
 }

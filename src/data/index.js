@@ -105,7 +105,6 @@ import {
   sarvangasanaHeader,
   setuBandhasanaHeader,
   brainheader,
-  
 } from "../assets";
 // Components
 import HeaderWithImage from "../components/HeaderWithImage";
@@ -1802,7 +1801,13 @@ export const homeServices = [
     title: "Self Care",
     desc: "Prioritize your well-being with our self-care solutions. We offer personalized self-care plans & resources to help you nurture your physical, mental, and emotional health. ",
     image: homeSelfcare,
-    slug: "/self-care",
+    slug: "/user/dashboard",
+  },
+  {
+    title: "Community",
+    desc: "Prioritize your well-being with our self-care solutions. We offer personalized self-care plans & resources to help you nurture your physical, mental, and emotional health. ",
+    image: homeSelfcare,
+    slug: "/community",
   },
 ];
 export const objectives = [

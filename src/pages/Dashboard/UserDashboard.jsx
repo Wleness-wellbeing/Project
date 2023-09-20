@@ -73,18 +73,18 @@ export default function UserDashboard({ token }) {
           <span className="mb-2 inline-block text-lg font-bold">
             How you feel today...
           </span>
-          <div className="grid grid-cols-2 lg:grid-cols-5 lg:gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-6 lg:gap-3">
             {selfCareFeeling.map((value, i) => {
               return (
                 <div
                   key={i}
                   onClick={() => handleMood(value[0])}
-                  className={`relative grid cursor-pointer rounded-xl px-5 py-2 hover:bg-primary-50/60 ${
+                  className={`relative grid cursor-pointer rounded-xl px-3 py-1 hover:bg-primary-50/60 ${
                     mood == value[0] ? " bg-primary-50/60 " : ""
                   }`}
                 >
                   <img
-                    className="text-center text-3xl font-bold"
+                    className="mx-auto w-fit text-center text-3xl font-bold"
                     src={value[1]}
                   />
                   <span className="mb-1 text-center font-semibold">

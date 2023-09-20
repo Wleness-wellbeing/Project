@@ -48,7 +48,7 @@ export default function MobileNavbar({ toggleJoinUs }) {
         <div className="navbar flex h-full w-56 flex-col  border-slate-100 bg-white shadow-xl xl:h-auto xl:w-full xl:flex-row xl:shadow-none">
           <ul
             className={
-              "divide-y-2 border-[1px] xl:flex xl:h-fit xl:w-fit xl:space-x-5 xl:divide-y-0 xl:self-center xl:border-none xl:shadow-none"
+              "divide-y-2 overflow-y-scroll border-[1px] xl:flex xl:h-fit xl:w-fit xl:space-x-5 xl:divide-y-0 xl:self-center xl:border-none xl:shadow-none"
             }
           >
             <MobileMenuLink url="/" text="Home" onClose={() => closeMenu()} />
@@ -83,7 +83,7 @@ export default function MobileNavbar({ toggleJoinUs }) {
           </ul>
 
           {/* Authentication */}
-          <div className="mt-6 flex flex-col items-center space-y-3 px-4 lg:flex-row lg:px-0 xl:w-fit xl:space-y-0">
+          <div className="mt-6 flex flex-col items-center space-y-3 px-4 pb-3 lg:flex-row lg:px-0 xl:w-fit xl:space-y-0">
             <button
               onClick={toggleJoinUs}
               className="!w-full rounded-full border-2 border-primary-400 !py-1.5 px-4 !font-semibold text-primary-400 transition-all hover:bg-primary-400 hover:text-white lg:mr-2 xl:!w-fit"

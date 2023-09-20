@@ -66,9 +66,9 @@ const AppointmentComponent = (props) => {
   };
 
   return (
-    <div className="flex gap-8">
+    <div className="gap-8 lg:flex">
       {/* Calendar Section */}
-      <div className="w-1/2 ">
+      <div className="lg:w-1/2">
         <Calendar
           appointmentData={appointmentData}
           onDateSelect={handleDateSelect}
@@ -76,7 +76,7 @@ const AppointmentComponent = (props) => {
       </div>
 
       {/* Time Slot Section */}
-      <div className="w-1/2  ">
+      <div className="lg:w-1/2">
         <h2 className="mb-4 text-center text-2xl font-medium ">
           {props.date ? (
             <>

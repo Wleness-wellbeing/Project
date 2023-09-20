@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 // Data
-import { assessment1, assessment2 } from "../../assets";
+import { assessment1 } from "../../assets";
 import {
   ageRange,
   assessmentFeelings,

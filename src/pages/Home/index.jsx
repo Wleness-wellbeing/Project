@@ -77,7 +77,11 @@ export default function Home() {
         <div className="bg-gradient-to-br from-primary-10 to-white pb-6 font-quicksand lg:pb-10">
           <div className="container mx-auto grid grid-cols-2 gap-x-2 gap-y-8 py-6 pt-8 lg:grid-cols-3 lg:gap-6 lg:pb-10 lg:pt-12 xl:gap-x-14 xl:gap-y-20 xl:pt-24">
             {homeServices.map((value, index) => {
-              return <ServicesCard key={index} data={value} />;
+              // Show community card only on desktop
+              return value.slug == "/community" &&
+                window.screen.width > 600 ? null : (
+                <ServicesCard key={index} data={value} />
+              );
             })}
           </div>
         </div>
@@ -210,10 +214,10 @@ export default function Home() {
 
       {/* ========== Our Testimonial ========== */}
       <section>
-        <h2 className="mb-8 text-center">
+        <h2 className="mb-4 text-center">
           <span className="subheading heading-primary">Our Testimonials</span>
         </h2>
-        <div className="bg-gradient-to-b from-primary-300/20 to-white py-7 lg:py-8">
+        <div className="bg-gradient-to-b from-primary-300/20 to-white pt-4 lg:py-8">
           <Testimonial data={homeTestimonials} />
         </div>
       </section>

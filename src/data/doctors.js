@@ -1,4 +1,9 @@
 import {
+  faCommentDots,
+  faPhoneVolume,
+  faVideo,
+} from "@fortawesome/free-solid-svg-icons";
+import {
   debashreeDasPortrait,
   doctor1,
   meenakshiMishraPortrait,
@@ -14,6 +19,7 @@ export const doctorsDetails = [
     exp: "8+ years of experience",
     expertise: "Couple Counselling, Corporate Training",
     speaks: "Hindi, English & Bengali",
+    slug: "swati-ghoshal",
   },
   {
     name: "Debashree Das Gupta",
@@ -21,6 +27,7 @@ export const doctorsDetails = [
     exp: "8+ years of experience",
     expertise: "Musical Healing",
     speaks: "Hindi, English & Bengali",
+    slug: "debashree-das-gupta",
   },
   {
     name: "Purvi Balasaria",
@@ -28,6 +35,7 @@ export const doctorsDetails = [
     exp: "5+ years of experience",
     expertise: "Approach",
     speaks: "Eng, Hindi, Bengali",
+    slug: "purvi-balasaria",
   },
   {
     name: "Meenakshi Mishra",
@@ -35,6 +43,7 @@ export const doctorsDetails = [
     exp: "8+ years of experience",
     expertise: "CBT, BT, Counseling, Mindfulness meditations",
     speaks: "Hindi, English",
+    slug: "meenakshi-mishra",
   },
   {
     name: "Dr. Strange",
@@ -42,6 +51,7 @@ export const doctorsDetails = [
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
     speaks: "German, English",
+    slug: "swati-ghoshal",
   },
   {
     name: "Dr. Sonal",
@@ -49,6 +59,7 @@ export const doctorsDetails = [
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
     speaks: "German, English",
+    slug: "swati-ghoshal",
   },
   {
     name: "Dr. Swati",
@@ -56,6 +67,7 @@ export const doctorsDetails = [
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
     speaks: "German, English",
+    slug: "swati-ghoshal",
   },
   {
     name: "Dr. Sonal",
@@ -63,6 +75,7 @@ export const doctorsDetails = [
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
     speaks: "German, English",
+    slug: "swati-ghoshal",
   },
   {
     name: "Dr. Swati",
@@ -70,6 +83,7 @@ export const doctorsDetails = [
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
     speaks: "German, English",
+    slug: "swati-ghoshal",
   },
   {
     name: "Dr. Swati",
@@ -77,6 +91,7 @@ export const doctorsDetails = [
     exp: "6+ years of experience",
     expertise: "Yoga, work-life",
     speaks: "German, English",
+    slug: "swati-ghoshal",
   },
 ];
 
@@ -288,3 +303,39 @@ export const stressDoctors = {
     slug: "/experts/all",
   },
 };
+
+export const timings = [
+  {
+    text: "30 Mins",
+    value: "30_min",
+    price: 450,
+  },
+  {
+    text: "45 Mins",
+    value: "45_min",
+    price: 550,
+  },
+  {
+    text: "60 Mins",
+    value: "60_min",
+    price: 700,
+  },
+];
+
+export const modes = [
+  {
+    text: "Chat",
+    value: "chat",
+    icon: faCommentDots,
+  },
+  {
+    text: "Voice",
+    value: "voice",
+    icon: faPhoneVolume,
+  },
+  {
+    text: "Video",
+    value: "video",
+    icon: faVideo,
+  },
+];

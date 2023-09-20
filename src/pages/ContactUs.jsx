@@ -1,15 +1,19 @@
 import React from "react";
-import PoliciesHeader from "../components/headers/PoliciesHeader";
 import { email, location, ringervolume } from "../assets";
 import ContactForm from "../components/Forms/ContactForm";
 
 export default function ContactUs() {
   return (
     <>
-      <PoliciesHeader
-        heading="Contact Us"
-        desc="Reach Out for Support and Guidance"
-      />
+      <header className="relative overflow-x-clip bg-gradient-to-b from-secondary/10 to-transparent pb-5 pt-12">
+        <div className="container mx-auto text-center">
+          <h1 className="subheading heading-primary">Contact Us</h1>
+          <p className="text-lg font-semibold text-primary-400">
+            Reach Out for Support and Guidance
+          </p>
+        </div>
+      </header>
+
       <section className="container mx-auto space-y-5 py-8 text-justify font-medium">
         <ContactForm />
         <div>

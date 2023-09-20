@@ -7,7 +7,7 @@ import SwiperBtns from "../Buttons/SwiperBtns";
 
 export default function Testimonial(props) {
   return (
-    <div className="container relative mx-auto pb-14 lg:!pr-0 lg:pb-0">
+    <div className="container relative mx-auto lg:!pr-0">
       {/* Testimonials */}
       <Swiper
         navigation={true}
@@ -26,7 +26,7 @@ export default function Testimonial(props) {
                   <img
                     src={value.image}
                     alt={value.name}
-                    className="w-full object-cover"
+                    className="mx-auto w-3/4 object-cover lg:w-full"
                   />
                 </div>
                 <figcaption className="lg:w-3/5 lg:pl-24">
@@ -44,7 +44,7 @@ export default function Testimonial(props) {
             </SwiperSlide>
           );
         })}
-        <SwiperBtns />
+        {/* <SwiperBtns /> */}
       </Swiper>
     </div>
   );
