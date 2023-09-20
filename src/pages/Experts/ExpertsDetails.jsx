@@ -104,72 +104,7 @@ export default function ExpertsDetails() {
             return <DoctorsCard key={i} data={value} />;
           })}
         </div>
-        {/* <div className="py-6 text-center lg:pb-0">
-          <button className="btn-one">Show More..</button>
-        </div> */}
       </section>
-
-      {/* Clients Testimonials */}
-      {/* <section className=" pt-7 lg:pt-14">
-        <div className="bg-primary-50/40 ">
-          <div className="container mx-auto mb-2 py-4 text-center">
-            <h2 className="subheading heading-primary mb-4">
-              What Our Patients Say About Us
-            </h2>
-            <p className="text-center font-medium leading-5 xl:text-lg xl:leading-6">
-              Hear from our valued patients about their experience with us and
-              the impact we've made on their lives. Read their heartfelt
-              testimonials and discover the quality of care and support we
-              provide.
-            </p>
-          </div>
-        </div>
-        <div className="container mx-auto lg:py-10">
-          <div className="flex pb-6 pt-4">
-            <figure className="flex- flex h-full items-start rounded-xl rounded-br-[4rem] border-2 border-slate-200 bg-white p-4 shadow-xl sm:rounded-br-[7rem] md:flex-row lg:px-10 lg:py-12">
-              <div className="md:w-3/12">
-                <img
-                  src={expertClient}
-                  alt=""
-                  className="block w-14 object-cover md:w-4/5"
-                />
-              </div>
-              <figcaption className="md:w-3/4">
-                <h4 className="text-lg font-semibold sm:text-xl">John Kuch</h4>
-                <p className="mb-2 flex items-center">
-                  <span className="mr-2 block text-lg font-semibold">4/5</span>
-                  <span>
-                    <FontAwesomeIcon
-                      icon={faStar}
-                      className="text-yellow-400"
-                    />
-                    <FontAwesomeIcon
-                      icon={faStar}
-                      className="text-yellow-400"
-                    />
-                    <FontAwesomeIcon
-                      icon={faStar}
-                      className="text-yellow-400"
-                    />
-                    <FontAwesomeIcon
-                      icon={faStar}
-                      className="text-yellow-400"
-                    />
-                  </span>
-                </p>
-                <p className="mb-1 text-sm font-semibold  xs:pr-3 sm:text-lg md:text-base">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt laudantium mollitia id. Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit. Incidunt laudantium mollitia id.
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Incidunt laudantium mollitia id. Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit. Incidunt laudantium mollitia id.
-                </p>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section> */}
 
       <div className="bg-primary-50/40">
         <div className="container mx-auto py-4 text-center">

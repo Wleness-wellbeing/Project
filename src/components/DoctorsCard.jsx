@@ -26,9 +26,9 @@ export default function DoctorsCard(props) {
             <span>{props.data.name}</span>
             {/* <HeartIcon /> */}
           </h3>
-          <h5 className="font-semibold text-primary-400">
+          {/* <h5 className="font-semibold text-primary-400">
             {props.data.profession}
-          </h5>
+          </h5> */}
           <h4 className="mb-2 text-sm font-semibold text-slate-500 lg:text-lg">
             {props.data.experience}
           </h4>

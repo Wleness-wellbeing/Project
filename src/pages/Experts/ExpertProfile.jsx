@@ -116,16 +116,7 @@ export default function ExpertProfile() {
               and non-judgmental approach, she creates a safe space for clients
               to explore their thoughts, feelings, and challenges.
             </p>
-            {/* <span className="block text-right text-lg font-bold text-primary-400">
-              View More
-            </span> */}
           </div>
-
-          {/* <div className="pt-7 text-center">
-            <Link to="/appointment/checkout" className="btn-one inline-block">
-              Book an appointment Now
-            </Link>
-          </div> */}
         </div>
 
         <img
