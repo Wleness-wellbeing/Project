@@ -117,8 +117,8 @@ export const couplesTherapyData = {
 
 export const MusicalTherapyData = {
   id: 2,
-  name: "Musical Healing",
-  slug: "/services/musical-healing",
+  name: "Music Healing",
+  slug: "/services/music-healing",
   header: {
     title: [
       {
@@ -127,14 +127,14 @@ export const MusicalTherapyData = {
       },
       {
         color: true,
-        text: "Musical Healing",
+        text: "Music Healing",
       },
     ],
     desc: "Explore how music therapy offers a unique way to express emotions and heal. With its rhythms and tones, this therapy helps with different feelings, bringing more balance inside you. Discover profound insights and find more peace through the power of music.",
     image: musicalTherapyHeader,
   },
   activities: {
-    title: "MUSICAL HEALING TECHNIQUES",
+    title: "MUSIC HEALING SERVICES",
     desc: "Use music to improve mental and emotional well-being through techniques like active listening, improvisation, and songwriting with our top counselors.",
     
     types: [
@@ -149,35 +149,30 @@ export const MusicalTherapyData = {
         thumbnail: musicalTherapy2,
         desc: "Focuses on musical improvisation to enhance communication, skills, and emotional expression, beneficial for children and individuals with developmental problems.",
         slug: "/",
-        class: ["order-2", "order-1"],
       },
       {
         title: "Bonny Method of Guided Imagery and Music",
         thumbnail: musicalTherapy3,
         desc: "Utilizes music to facilitate a deep unconscious, promoting personal growth & transformation,share their emotional experiences during and after the BMGIM listening sessions.",
         slug: "/",
-        class: ["order-1", "order-2"],
       },
       {
         title: "Neurologic Music Therapy",
         thumbnail: musicalTherapy4,
         desc: "Applies evidence-based techniques to help neurological issues, utilizing rhythm, melody, and harmony to improve cognitive, motor, and speech in individuals.",
         slug: "/",
-        class: ["order-1", "order-2"],
       },
       {
         title: "Songwriting Therapy",
         thumbnail: musicalTherapy5,
         desc: "Encourages clients to express through songs, gives an outlet for emotions, fosters creativity & enables personal growth through the process of composing & performing their music.",
         slug: "/",
-        class: ["order-1", "order-2"],
       },
       {
         title: "Raaga Chikitsa",
         thumbnail: musicalTherapy6,
         desc: "A traditional form of musical healing in Indian classical music, where specific ragas and suras are used to evoke and influence specific emotions, moods, and states of mind.",
         slug: "/",
-        class: ["order-1", "order-2"],
       },
     ],
   },

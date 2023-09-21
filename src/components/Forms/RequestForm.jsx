@@ -61,17 +61,17 @@ function RequestForm() {
   };
 
   return (
-    <section className="container mx-auto mb-6 grid rounded-3xl bg-[#FAFCE7] px-6 py-12 xs:px-8 xs:py-14 md:grid-cols-2  lg:px-8 lg:py-16 2xl:py-20">
+    <section className="container mx-auto mb-6 grid rounded-3xl bg-[#FAFCE7] px-6 py-8 xs:px-8 xs:py-14 md:grid-cols-2 lg:px-8 lg:py-16 2xl:py-20">
       <div className="md:flex md:h-full md:flex-col md:justify-between md:px-6">
         <div>
           <h3 className="font-medium text-[#464646] opacity-80 lg:text-lg">
-            Need a doctor consulting?
+            Need an expert's consulting?
           </h3>
-          <h1 className="font-quicksand text-4xl font-bold leading-tight tracking-tight text-[#464646] opacity-90 xl:text-5xl">
+          <h2 className="font-quicksand text-3xl font-bold leading-tight tracking-tight text-[#464646] opacity-90 xl:text-5xl">
             Request a Call Back Now
-          </h1>
+          </h2>
 
-          <p className="pb-4 pt-2 text-slate-700 opacity-90 lg:text-xl">
+          <p className="pb-4 pt-2 font-medium text-slate-700 opacity-90 lg:text-xl">
             Talk to your mental health professional.
           </p>
         </div>
@@ -82,7 +82,7 @@ function RequestForm() {
             alt="contact"
           />
           <p className="font-medium leading-5 text-slate-700">
-            Our Doctors are waiting
+            Our Experts are waiting
             <br />
             for your service.
           </p>

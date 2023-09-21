@@ -21,12 +21,12 @@ const ServicesTechniques = React.forwardRef((props, ref) => {
             {value.desc}
           </p>
           <div className="mt-2 text-center">
-            <button
-              onClick={props.openAssessmentModal}
+            <Link
+              to="/appointment/checkout"
               className="btn-one inline-block !py-2"
             >
               Book Now
-            </button>
+            </Link>
           </div>
         </figcaption>
       </figure>

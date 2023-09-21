@@ -1,39 +1,96 @@
-import {
-  faCommentDots,
-  faPhoneVolume,
-  faVideo,
-  faXmark,
-} from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { faVideo, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
-import Calendly from "../../components/Calendly";
+import React, { useEffect, useState } from "react";
 // Data
-import { doctorAppointment } from "../../assets";
+import { modes, timings } from "../../data/doctors";
+import axios from "axios";
+import { EXPERTS_URI } from "../../data/api";
+import { profileMask, swatiGhoshalPortrait } from "../../assets";
 
 export default function Appointment() {
+  const { slug } = useParams();
+  const [profileDetails, setProfileDetails] = useState({});
+  const [loading, setLoading] = useState(true);
+  // Set Form Data
+  const [selectDuration, setSelectDuration] = useState(timings[0]["value"]);
+  const [setMode, setSelectMode] = useState(modes[0]["value"]);
+
+  const handleDuration = (event) => {
+    setSelectDuration(event.target.id);
+  };
+
+  const handleModes = (event) => {
+    setSelectMode(event.target.id);
+  };
+
+  useEffect(() => {
+    // Make a GET request using Axios
+    axios
+      .get(EXPERTS_URI + "/" + slug)
+      .then((response) => {
+        // Handle the successful response
+        setProfileDetails(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        // Handle errors
+        console.error("Error fetching doctor details:", error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <div className="mb-5 text-center">Loading...</div>;
+  }
+
   return (
     <>
       <section className="relative">
         <div className="absolute left-0 top-0 -z-10  h-28 w-full bg-primary-50 lg:bottom-0 lg:left-0 lg:top-0 lg:h-auto lg:w-28"></div>
         <div className="absolute left-0 top-28 -z-10 h-28 w-full bg-primary-50/60 lg:bottom-0 lg:left-28 lg:top-0 lg:h-auto lg:w-28"></div>
         <div className="absolute left-0 top-56 -z-10 h-28 w-full bg-primary-50/50 lg:bottom-0 lg:left-56 lg:top-0 lg:h-auto lg:w-28"></div>
-        <div className="absolute left-0 top-[21rem] -z-10 h-16 w-full bg-primary-50/30 lg:bottom-0 lg:left-[21rem] lg:top-0 lg:h-auto lg:w-28"></div>
+        <div className="absolute left-0 top-[21rem] -z-10 h-24 w-full bg-primary-50/30 lg:bottom-0 lg:left-[21rem] lg:top-0 lg:h-auto lg:w-28"></div>
 
-        <figure className="left-16 top-10 mx-auto w-96 justify-center gap-x-8 py-6 lg:absolute lg:w-[320px]">
-          <Link to="/appointment" className="block">
-            <img
-              src={doctorAppointment}
-              alt=""
-              className="mx-auto mb-2 w-52 object-cover"
-            />
+        <figure className="left-16 top-10 mx-auto w-64 justify-center gap-x-8 py-6 lg:absolute lg:w-[300px]">
+          <Link to={"/experts/profile/" + slug} className="mb-5 block">
+            <div className="relative">
+              <img
+                src={
+                  profileDetails.image
+                    ? profileDetails.image
+                    : swatiGhoshalPortrait
+                }
+                alt=""
+                className="mx-auto mb-2 h-52 w-52 rounded-full object-cover object-top"
+              />
+              <img
+                src={profileMask}
+                alt=""
+                className="absolute left-1/2 top-0 h-52 w-52 -translate-x-[55%] scale-110 object-cover"
+              />
+            </div>
           </Link>
-          <figcaption className="mx-auto w-52">
-            <h4 className="text-3xl font-bold">Dr. Jenny</h4>
-            <h6 className="text-xl font-semibold">6+ yrs of experience</h6>
+          <figcaption className="mx-auto w-60">
+            <h4 className="text-2xl font-bold">{profileDetails.name}</h4>
+            <h6 className="text-xl font-semibold">
+              {profileDetails.experience
+                ? profileDetails.experience
+                : "5+ years of experience"}
+            </h6>
             <div className="my-2 font-medium">
-              <p>Expertise: Yoga, Work-life</p>
-              <p>Speaks: German, English</p>
+              <p>
+                Expertise:{" "}
+                {profileDetails.expertise
+                  ? profileDetails.expertise
+                  : "Yoga, Work-life"}
+              </p>
+              <p>
+                Speaks:{" "}
+                {profileDetails.languages
+                  ? profileDetails.languages
+                  : "English, Hindi"}
+              </p>
             </div>
           </figcaption>
         </figure>
@@ -47,55 +104,70 @@ export default function Appointment() {
             <p className="para mb-8 text-center">
               Book an appointment to connect with a mental health expert
             </p>
-            <div className="mb-2 grid justify-center">
+            <div className="mb-2 grid justify-center text-center">
               <h5 className="mb-5 text-xl font-semibold">
                 1. Select session mode
               </h5>
-              <ul className="flex gap-x-5">
-                <li className="grid justify-center">
-                  <FontAwesomeIcon
-                    icon={faPhoneVolume}
-                    className="mb-1 rounded-full border-2 border-primary-300 p-5 text-xl"
-                  />
-                  <span className="text-center font-semibold text-primary-300">
-                    Call
-                  </span>
-                </li>
-                <li className="grid justify-center">
-                  <FontAwesomeIcon
-                    icon={faVideo}
-                    className="mb-1 rounded-full border-2 border-primary-300 bg-primary-300 p-5 text-xl text-white"
-                  />
-                  <span className="text-center font-semibold text-primary-300">
-                    Video
-                  </span>
-                </li>
-                <li className="grid justify-center">
-                  <FontAwesomeIcon
-                    icon={faCommentDots}
-                    className="mb-1 rounded-full border-2 border-primary-300 p-5 text-xl"
-                  />
-                  <span className="text-center font-semibold text-primary-300">
-                    Chat
-                  </span>
-                </li>
-              </ul>
+              <div className="mb-4 flex justify-between gap-x-2 lg:mb-0 lg:gap-x-5">
+                {modes.map((value, i) => {
+                  return (
+                    <label
+                      key={i}
+                      htmlFor={value.value}
+                      className="block w-full py-2.5 text-center font-semibold text-primary-300"
+                    >
+                      <input
+                        type="radio"
+                        name="duration"
+                        id={value.value}
+                        checked={setMode == value.value}
+                        onChange={handleModes}
+                        className="hidden"
+                      />
+                      <FontAwesomeIcon
+                        icon={value.icon}
+                        className={`mb-1 cursor-pointer rounded-full border-2 border-primary-300 p-5 text-xl ${
+                          setMode == value.value
+                            ? " bg-primary-300 text-white "
+                            : ""
+                        }`}
+                      />
+                      <span className="block text-center">{value.text}</span>
+                    </label>
+                  );
+                })}
+              </div>
             </div>
-            <div className="mb-4 grid justify-center">
+
+            <div className="mb-4 flex flex-col items-center justify-center">
               <h5 className="my-5 text-center text-xl font-semibold">
                 2. Select session duration
               </h5>
-              <ul className="grid grid-cols-3 gap-x-3 lg:gap-x-5">
-                <li className="rounded-lg border-2 border-primary-300 px-2 py-2.5 text-center font-semibold text-primary-300 lg:px-6">
-                  30 Min
-                </li>
-                <li className="rounded-lg border-2 border-primary-300 px-2 py-2.5 text-center font-semibold text-primary-300 lg:px-6">
-                  45 Min
-                </li>
-                <li className="rounded-lg border-2 border-primary-300 px-2 py-2.5 text-center font-semibold text-primary-300 lg:px-6">
-                  1 Hr
-                </li>
-              </ul>
+              <div className="mb-4 grid grid-cols-3 gap-x-2 lg:mb-0 lg:gap-x-3">
+                {timings.map((value, i) => {
+                  return (
+                    <label
+                      key={i}
+                      htmlFor={value.value}
+                      className={
+                        selectDuration == value.value
+                          ? "block w-full cursor-pointer rounded-2xl bg-primary-300 px-5 py-2.5 text-center font-semibold text-white "
+                          : "block w-full cursor-pointer rounded-2xl border-2 border-primary-300 px-5 py-2.5 text-center font-semibold text-primary-300"
+                      }
+                    >
+                      <input
+                        type="radio"
+                        name="duration"
+                        id={value.value}
+                        checked={selectDuration == value.value}
+                        onChange={handleDuration}
+                        className="hidden"
+                      />
+                      <span className="block">{value.text}</span>
+                    </label>
+                  );
+                })}
+              </div>
             </div>
             <div className="mb-8">
               <h5 className="mb-2 mt-10 text-center text-xl font-semibold">
@@ -156,7 +228,7 @@ export default function Appointment() {
             </div>
 
             <div className="mb-8 text-center">
-              <Link to="/calendly">
+              <Link>
                 <button className="btn-one !rounded-lg">Proceed</button>
               </Link>
             </div>

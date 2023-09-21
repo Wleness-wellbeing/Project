@@ -47,7 +47,7 @@ export default function Therapy() {
 
       {/* Therapies */}
       <section className="bg-primary-10 font-quicksand">
-        <div className="container mx-auto grid gap-4 py-6 pt-8 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pt-12 xl:grid-cols-4 2xl:grid-cols-4 2xl:gap-6">
+        <div className="container mx-auto grid grid-cols-2 gap-2 py-6 pt-8 lg:grid-cols-3 lg:gap-6 lg:pt-12 xl:grid-cols-4 2xl:grid-cols-4 2xl:gap-6">
           {therapies.map((value, index) => {
             return <IssueCard key={index} data={value} />;
           })}

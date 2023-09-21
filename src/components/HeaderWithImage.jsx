@@ -12,12 +12,16 @@ export default function HeaderWithImage(props) {
         </h1>
         <p className="para pt-1 lg:pt-6">{props.data.desc}</p>
 
-        <div className="mb-8">
-          <h2 className="pt-8 text-2xl font-bold text-primary-500 lg:pt-20">
-            Variations:
-          </h2>
-          <p className="para">{props.data.var}</p>
-        </div>
+        {props.data.variations ? (
+          <div className="mb-8">
+            <h2 className="pt-8 text-2xl font-bold text-primary-500 lg:pt-20">
+              Variations:
+            </h2>
+            <p className="para">{props.data.var}</p>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </header>
   );

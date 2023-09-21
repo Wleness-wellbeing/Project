@@ -44,13 +44,13 @@ export default function MusicalTherapy() {
       <p ref={ref}></p>
 
       {/* <FeaturesBlock data={musicalTherapyFeatures} /> */}
-      <div className="container mx-auto mt-6 flex justify-center">
+      {/* <div className="container mx-auto mt-6 flex justify-center">
         <div className="grid grid-cols-3 gap-20">
           <img src={musicalelipse1} alt="Image 1" />
           <img src={musicalelipse2} alt="Image 2" />
           <img src={musicalelipse3} alt="Image 3" />
         </div>
-      </div>
+      </div> */}
       <ServicesTechniques
         title={MusicalTherapyData.activities.title}
         desc={MusicalTherapyData.activities.desc}

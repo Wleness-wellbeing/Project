@@ -45,7 +45,7 @@ export default function BrainExercise() {
         </div>
       </section>
 
-      <ActivityVideos />
+      {/* <ActivityVideos /> */}
       <ActivityBlogs blogs={brainExercise.blogs} />
     </>
   );

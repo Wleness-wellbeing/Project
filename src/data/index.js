@@ -105,8 +105,14 @@ import {
   sarvangasanaHeader,
   setuBandhasanaHeader,
   brainheader,
+<<<<<<< HEAD
   breadthBenefit,breadthHeader,breadthLeft1,breadthRight1,breadthRight2,kundaliniHeader,kundaliniLeft1,kundaliniRight1,mindfulnessHeader,mindfulnessLeft1,mindfulnessLeft2,mindfulnessLeft3,mindfulnessRight1,mindfulnessRight2,spiritualHeader,spiritualLeft1,spiritualRight1,walkingLeft1,walkingRight1,walkingHeader,zenHeader,zenLeft1,zenRight1
   
+=======
+  uttanasanaHeader,
+  navasanaHeader,
+  ardhChandrasanaHeader,
+>>>>>>> 9ad6e025d3ae5c98ac08f7336a65f76d1273541d
 } from "../assets";
 
 
@@ -300,6 +306,7 @@ export const activities = [
                 title: "Adho Mukha Svanasana",
                 desc: "Adho Mukha Svanasana, also known as Downward-Facing Dog Pose, is one of the most recognizable yoga postures. This pose is a great way to stretch your hamstrings, calves, and spine and strengthen your arms, shoulders, and legs. It can also help calm your mind and reduce stress. In this article, we will explore the benefits, techniques, and variations of Adho Mukha Svanasana.",
                 image: adhvmukhaHeader,
+                variations: true,
                 var: "There are several variations of Adho Mukha Svanasana that you can try depending on your skill level and flexibility. Here are a few:",
               },
             },
@@ -433,6 +440,7 @@ export const activities = [
                 title: "Virabhadrasana",
                 desc: "Virabhadrasana II, also known as Warrior II Pose, is a powerful and energizing yoga asana that offers numerous physical and mental benefits. This pose is named after the fierce warrior Virabhadra, who is said to have been created by the god Shiva. In this blog, we will explore the many benefits of Virabhadrasana II, how to practice the pose, and precautions to keep in mind.",
                 image: virabhadrasanaHeader,
+                variations: true,
                 var: "You can try several variations of Virabhadrasana II, depending on your skill level and flexibility. Here are a few:",
               },
             },
@@ -574,6 +582,7 @@ export const activities = [
                 title: "Trikonasana",
                 desc: "Trikonasana, or Triangle Pose, is a foundational yoga asana that offers numerous physical and mental benefits. This pose is named after the shape that your body creates when practicing it, resembling a triangle. In this blog, we will explore the many benefits of Trikonasana, how to practice the pose, and precautions to keep in mind.",
                 image: trikonasanaHeader,
+                variations: true,
                 var: "There are several variations of Trikonasana that you can try depending on your skill level and flexibility. Here are a few:",
               },
             },
@@ -715,6 +724,7 @@ export const activities = [
                 title: "Vrksasna",
                 desc: "Vrksasna, also known as Tree Pose, is a popular yoga asana that offers numerous physical and mental benefits. This pose is named after the shape that your body creates when practicing it, resembling a tree with its roots extending into the ground and its branches reaching up toward the sky. In this blog, we will explore the many benefits of Vrksasana, how to practice the pose, and precautions to keep in mind.",
                 image: vrkasanaHeader,
+                variations: true,
                 var: "There are several variations of Vrksasana that you can try depending on your skill level and flexibility. Here are a few:",
               },
             },
@@ -849,7 +859,6 @@ export const activities = [
           thumbnail: yogaType5,
           desc: "Ustrasana opens the heart center and stimulates the entire front body, offering a profound stretch and release. This bring a sense of liberation & vulnerability, to embrace courage. ",
           slug: "/activities/yoga/ustrasana",
-          variations: false,
           sections: [
             {
               component: HeaderWithImage,
@@ -857,6 +866,7 @@ export const activities = [
                 title: "Ustrasana",
                 desc: "Ustrasana, also known as Camel Pose, is a popular yoga posture practiced by many enthusiasts worldwide. It is a backbend asana named after the Sanskrit word 'ustra,' which means camel, and 'asana,' which means posture. The pose resembles the shape of a camel, hence the name. The Ustrasana posture stretches the entire front of the body, particularly the chest, abdomen, and quadriceps. This posture is beneficial in opening up the heart and increasing lung capacity, which can help alleviate respiratory problems. It also helps to strengthen the back muscles, shoulders, and neck.",
                 image: ustrasanaHeader,
+                variations: false,
                 var: "",
               },
             },
@@ -961,6 +971,7 @@ export const activities = [
                 title: "Matsyasana",
                 desc: "Matsyasana, also known as the Fish Pose, is a popular yoga posture practiced by many enthusiasts worldwide. It is a backbend asana named after the Sanskrit word 'Matsya,' which means fish, and 'asana,' which means posture. The pose resembles the shape of a fish, hence the name. Matsyasana is a relatively simple pose that offers numerous benefits for the mind, body, and spirit. It is beneficial in opening up the chest, improving posture, and promoting relaxation.",
                 image: matsyasanaHeader,
+                variations: false,
                 var: "",
               },
             },
@@ -1060,6 +1071,7 @@ export const activities = [
                 title: "Sirsasana",
                 desc: "Sirsasana, also known as the Headstand pose, is a popular yoga posture practiced by many enthusiasts worldwide. It is an inversion asana named after the Sanskrit words 'Sirsa,' which means head, and 'asana,' which means posture. The pose requires the practitioner to balance on their head and forearms, with their legs in the air. Sirsasana is a challenging pose that offers numerous benefits for the mind, body, and spirit. It improves blood flow to the brain, strengthens the upper body, and promotes mental clarity.",
                 image: sirsasanaHeader,
+                variations: false,
                 var: "",
               },
             },
@@ -1159,6 +1171,7 @@ export const activities = [
                 title: "Sarvangasana",
                 desc: "Sarvangasana, or the Shoulderstand pose, is a popular yoga posture practiced by many enthusiasts worldwide. It is an inversion asana named after the Sanskrit words 'Sarva,' which means all, and 'anga,' which implies limb or body part. The pose requires the practitioner to balance on their shoulders and upper arms with their legs in the air. Sarvangasana is a challenging pose that offers numerous benefits for the mind, body, and spirit. It improves blood flow, stimulates the thyroid gland, and promotes mental clarity.",
                 image: sarvangasanaHeader,
+                variations: false,
                 var: "",
               },
             },
@@ -1266,6 +1279,7 @@ export const activities = [
                 title: "Setu Bandhasana",
                 desc: "Setu Bandhasana, also known as the Bridge pose, is a popular yoga asana practiced by many enthusiasts worldwide. It is a backbend posture named after the Sanskrit words 'setu, which means bridge, and 'bandha,' which means to bind. The pose requires the practitioner to lift their hips and chest towards the ceiling, creating a bridge-like shape with their body. It offers numerous benefits for the mind, body, and spirit. It is beneficial in strengthening the back, improving flexibility, and reducing stress.",
                 image: setuBandhasanaHeader,
+                variations: false,
                 var: "",
               },
             },
@@ -1372,8 +1386,61 @@ export const activities = [
               data: {
                 title: "Uttanasana",
                 desc: "Uttanasana, also known as the Standing Forward Fold pose, is a popular yoga asana practiced by many enthusiasts worldwide. It is a forward bending posture often performed as a warm-up or cool-down pose in many yoga sequences. Uttanasana is a simple yet effective pose that offers numerous benefits for the mind, body, and spirit. It is beneficial in reducing stress, improving flexibility, and strengthening the legs and back.",
-                image: sarvangasanaHeader,
+                image: uttanasanaHeader,
+                variations: false,
                 var: "",
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Benefits of Uttanasana: ",
+                desc: "Uttanasana offers many benefits for the body and mind, including",
+                list: [
+                  {
+                    subtitle: "Reduces Stress: ",
+                    desc: "Uttanasana is an excellent pose for reducing stress and anxiety. It can help to calm the mind and promote a sense of relaxation.",
+                  },
+                  {
+                    subtitle: "Improves Flexibility: ",
+                    desc: "This posture can help to enhance flexibility in the hamstrings, hips, and calves. It is an excellent pose for those who spend long hours sitting.",
+                  },
+                  {
+                    subtitle: "Strengthens the Legs: ",
+                    desc: "Uttanasana can help to strengthen the legs and improve overall posture.",
+                  },
+                  {
+                    subtitle: "Stimulates the Thyroid Gland: ",
+                    desc: "This posture can help boost the thyroid gland, which regulates the body's metabolism. This can help to balance the hormones and improve overall health.",
+                  },
+                  {
+                    subtitle: "Stimulates the Digestive System: ",
+                    desc: "This posture can help to boost the digestive system, improving digestion and relieving constipation.",
+                  },
+                  {
+                    subtitle: "Calms the Nervous System: ",
+                    desc: "Uttanasana can help to calm the nervous system, making it an excellent pose for those who suffer from anxiety or nervousness.",
+                  },
+                  {
+                    subtitle: "Relieves Headaches: ",
+                    desc: "This posture can help to relieve headaches by increasing blood flow to the brain and reducing tension in the neck and shoulders.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList,
+              data: {
+                desc: "While Uttanasana is a safe and beneficial pose for most people, remember a few precautions:",
+                info: "In conclusion, Uttanasana is a simple yet effective yoga posture that offers numerous benefits for the mind, body, and spirit. It is a pose that can be easily incorporated into any yoga practice or daily routine. As with any yoga posture, it is essential to approach Uttanasana with caution and to listen to your body's signals during the course. Doing so lets you experience the full benefits of this beautiful posture and enjoy exploring your practice.",
+                list: [
+                  "If you have back injuries, consult your doctor before attempting Uttanasana.",
+                  "If you experience discomfort or pain in the pose, come out immediately.",
+                  "Be careful not to overextend your hamstrings or strain your lower back.",
+                  "Avoid this posture during pregnancy.",
+                  "If you have high or low blood pressure, consult your doctor before practicing Uttanasana.",
+                  "Always warm up your body before attempting Uttanasana.",
+                ],
               },
             },
           ],
@@ -1388,9 +1455,55 @@ export const activities = [
               component: HeaderWithImage,
               data: {
                 title: "Navasana",
-                desc: "",
-                image: sarvangasanaHeader,
+                desc: "In the vast ocean of yoga poses, Navasana, or Boat Pose, stands out as a powerful posture that challenges our physical strength and offers a boatload of benefits for the body and mind. Derived from the Sanskrit words 'nava' meaning 'boat' and 'asana' meaning 'pose' Navasana is a dynamic asana that demands a sturdy core, a balanced mindset, and a willingness to sail through challenges. ",
+                image: navasanaHeader,
+                variations: false,
                 var: "",
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Benefits of Navasana:",
+                desc: "Navasana offers many benefits for the body and mind, including",
+                list: [
+                  {
+                    subtitle: "Core Strength: ",
+                    desc: "As you balance your sit bones, your abdominal muscles engage significantly, strengthening your core over time.",
+                  },
+                  {
+                    subtitle: "Digestive Stimulation: ",
+                    desc: "Navasana massages the abdominal organs, stimulating digestion and relieving discomfort.",
+                  },
+                  {
+                    subtitle: "Improved Balance: ",
+                    desc: "The pose challenges your balance, enhancing proprioception (body awareness) and coordination.",
+                  },
+                  {
+                    subtitle: "Energy Flow: ",
+                    desc: "Navasana stimulates the Manipura chakra, which is associated with confidence, willpower, and vitality.",
+                  },
+                  {
+                    subtitle: "Mindfulness and Focus: ",
+                    desc: "Balancing in Navasana demands concentration and presence, which can help calm the mind and reduce stress.",
+                  },
+                  {
+                    subtitle: "Strengthens Hip Flexors: ",
+                    desc: "The hip flexor muscles are engaged during leg extension, promoting flexibility and strength.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList,
+              data: {
+                desc: "While Navasana is a safe and beneficial pose for most people, remember a few precautions:",
+                info: "Incorporating Navasana into your yoga practice can steer you towards a stronger core, enhanced balance, and improved overall well-being. Just like navigating a boat through uncharted waters, practicing Navasana requires patience, practice, and a willingness to explore your body's capabilities. As you sail through the challenges and embrace the benefits, you'll discover that this pose not only strengthens your physical body but also anchors your mind in the present moment, fostering a deeper connection to yourself and the practice of yoga.",
+                list: [
+                  "Avoid Strain: If you're new to Navasana, you might find it challenging to lift your legs high. Start with bent knees and gradually work on straightening them as your core strength improves.",
+                  "Back Sensitivity: Individuals with back issues should approach Navasana carefully. Place a prop, like a block, under your feet for support to reduce strain on the lower back.",
+                  "Neck Comfort: Keep your neck relaxed and avoid straining it by gazing straight ahead or slightly upwards",
+                ],
               },
             },
           ],
@@ -1404,10 +1517,56 @@ export const activities = [
             {
               component: HeaderWithImage,
               data: {
-                title: "Ardha Chandrasana",
-                desc: "",
-                image: sarvangasanaHeader,
+                title: "Ardh Chandrasana",
+                desc: 'In the universe of yoga asanas, Ardha Chandrasana, or Half Moon Pose, shines as a captivating blend of strength, balance, and flexibility. Derived from the Sanskrit words "ardha" meaning "half," "chandra" meaning "moon," and "asana" meaning "pose," this pose resembles the graceful shape of a half-moon, reflecting its celestial elegance.',
+                image: ardhChandrasanaHeader,
+                variations: false,
                 var: "",
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Benefits of Ardh Chandrasana:",
+                desc: "Ardh Chandrasana offers many benefits for the body and mind, including",
+                list: [
+                  {
+                    subtitle: "Improved Balance: ",
+                    desc: "This pose is a balance challenge that strengthens the muscles responsible for stability.",
+                  },
+                  {
+                    subtitle: "Core Engagement: ",
+                    desc: "The core muscles maintain equilibrium, contributing to overall core strength.",
+                  },
+                  {
+                    subtitle: "Enhanced Flexibility: ",
+                    desc: "As you extend your leg behind you, the hamstrings, hip flexors, and spine receive a gentle stretch.",
+                  },
+                  {
+                    subtitle: "Spinal Alignment: ",
+                    desc: "Ardha Chandrasana encourages proper alignment and posture by elongating the spine.",
+                  },
+                  {
+                    subtitle: "Mind-Body Connection: ",
+                    desc: "Focusing on balance cultivates mindfulness, allowing you to be fully present in the pose.",
+                  },
+                  {
+                    subtitle: "Digestive Stimulation: ",
+                    desc: "The gentle twist in the abdomen supports digestion and detoxification.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList,
+              data: {
+                desc: "While Ardh Chandrasana is a safe and beneficial pose for most people, remember a few precautions:",
+                info: "Ardha Chandrasana invites practitioners to dance between strength and grace, balance and flexibility. As you elevate one leg and extend one arm, you explore physical boundaries and nurture a deeper connection to your body and breath. Embrace the radiance that Half Moon Pose brings to your practice, and with dedication and patience, you'll discover not only the beauty of the pose but also the inner luminosity it unveils within you. So, step onto the mat, bask in the glow of Ardha Chandrasana, and let its light guide you toward a harmonious union of body, mind, and spirit.",
+                list: [
+                  "Warm-up: Always prepare your body with a warm-up before attempting this pose to prevent strain or injury.",
+                  "Hip Flexibility: Individuals with limited hip flexibility might struggle with leg extension. Use props like blocks for support until your flexibility improves.",
+                  "Balance Challenges: Practicing near a wall or using a chair for support can be helpful, especially if you're new to balancing poses.",
+                ],
               },
             },
           ],
@@ -2379,10 +2538,10 @@ export const homeServices = [
     slug: "/activities/meditation",
   },
   {
-    title: "Musical Healing",
-    desc: "Music healing addresses diverse needs through music. Therapists use musical interventions like listening, creating, singing, & playing instruments. ",
+    title: "Music Healing",
+    desc: "A Collection of diverse music based mechanisms, techniques with interdisciplinary approach to maintain, restore and improve- Physical, Psychological, social and holistic health.",
     image: homeMeditation,
-    slug: "/services/musical-healing",
+    slug: "/services/music-healing",
   },
   {
     title: "Internship",
@@ -2394,7 +2553,13 @@ export const homeServices = [
     title: "Self Care",
     desc: "Prioritize your well-being with our self-care solutions. We offer personalized self-care plans & resources to help you nurture your physical, mental, and emotional health. ",
     image: homeSelfcare,
-    slug: "/self-care",
+    slug: "/user/dashboard",
+  },
+  {
+    title: "Community",
+    desc: "Prioritize your well-being with our self-care solutions. We offer personalized self-care plans & resources to help you nurture your physical, mental, and emotional health. ",
+    image: homeSelfcare,
+    slug: "/community",
   },
 ];
 export const objectives = [

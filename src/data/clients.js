@@ -202,3 +202,43 @@ export const internshipClients = {
   ],
   clients: userReview,
 };
+
+export const expertsClients = {
+  heading: [
+    {
+      color: false,
+      text: "",
+    },
+    {
+      color: true,
+      text: "",
+    },
+    {
+      color: false,
+      text: "",
+    },
+  ],
+  clients: [
+    {
+      name: "Anil Kumar",
+      profession: "",
+      image: coupleTherapyReview1,
+      review:
+        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
+    },
+    {
+      name: "Aditya Sonawane",
+      profession: "",
+      image: coupleTherapyReview2,
+      review:
+        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
+    },
+    {
+      name: "Atharva Shinde",
+      profession: "",
+      image: coupleTherapyReview3,
+      review:
+        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
+    },
+  ],
+};

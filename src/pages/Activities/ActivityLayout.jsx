@@ -32,7 +32,7 @@ export default function ActivityLayout(props) {
         slug={props.activities.types.slug}
       />
       <FeaturesBlock data={activityFeatures} />
-      <ActivityVideos />
+      {/* <ActivityVideos /> */}
       <ActivityBlogs blogs={props.blogs} />
     </>
   );

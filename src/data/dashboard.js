@@ -18,25 +18,55 @@ export const selfCareFeeling = [
   ["Emotional", iconEmotional],
   ["Sad", iconSad],
   ["Angry", iconAngry],
+  ["Overwhelming", iconAngry],
+];
+
+export const dashboardQuotes = [
+  [
+    "Mental health...is not a destination, but a process. It's about how you drive, not where you're going.",
+    "Noam Shpancer",
+  ],
+  [
+    "You are enough just as you are. Each emotion you feel, everything in your life, everything you do or do not do...where you are and who you are right now is enough. It is perfect.",
+    "Haemin Sunim",
+  ],
+
+  [
+    "The strongest people are not those who show strength in front of us but those who win battles we know nothing about.",
+    "Jonathan Harnisch",
+  ],
+  [
+    "Your illness does not define you. Your strength and courage does.",
+    "Unknown",
+  ],
+  [
+    "You don't have to be positive all the time. It's perfectly okay to feel sad, angry, annoyed, frustrated, scared, or anxious. Having feelings doesn't make you a negative person. It makes you human.",
+    "Lori Deschene",
+  ],
+  [
+    "Self-care is not selfish. You cannot serve from an empty vessel.",
+    "Eleanor Brownn",
+  ],
+  ["You are the sky. Everything else – it's just the weather.", "Pema Chödrön"],
+  [
+    "It is okay to be at a place of struggle. It is okay to be a work in progress. It is okay to be on a journey.",
+    "Unknown",
+  ],
+  [
+    "You, as much as anybody in the entire universe, deserve your love and affection.",
+    "Buddha",
+  ],
 ];
 
 export const selfCareConcern = [
-  ["Anxiety", "rgba(223, 231, 253)", "/therapy/anxiety"],
-  ["Stress", "rgba(252, 246, 189, 0.44)", "/therapy/stress"],
-  ["Depression", "rgba(185, 281, 192, 0.44)", "/therapy/depression"],
-  ["Panic Attacks", "rgba(255, 191, 129, 0.44)", "/therapy/panic-attack"],
-  [
-    "Conduct Disorder",
-    "rgba(255, 191, 129, 0.44)",
-    "/therapy/conduct-disorder",
-  ],
-  [
-    "Bipolar Disorder",
-    "rgba(255, 191, 129, 0.44)",
-    "/therapy/bipolar-disorder",
-  ],
-  ["Eating Disorder", "rgba(255, 191, 129, 0.44)", "/therapy/eating-disorder"],
-  ["Anger Issues", "rgba(255, 191, 129, 0.44)", "/therapy/anger"],
+  ["Anxiety", " bg-[#DFE7FD] ", "/therapy/anxiety"],
+  ["Stress", " bg-[#FCF6BD] ", "/therapy/stress"],
+  ["Depression", " bg-[#B9FBC0] ", "/therapy/depression"],
+  ["Panic Attacks", " bg-[#9BF6FF] ", "/therapy/panic-attack"],
+  ["Conduct Disorder", " bg-[#FFCFD2] ", "/therapy/conduct-disorder"],
+  ["Bipolar Disorder", " bg-[#98F5E1] ", "/therapy/bipolar-disorder"],
+  ["Eating Disorder", " bg-[#FFDE8C] ", "/therapy/eating-disorder"],
+  ["Anger Issues", " bg-[#C9C0FA] ", "/therapy/anger"],
 ];
 
 export const RoutineCareChats = [

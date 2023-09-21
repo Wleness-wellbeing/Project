@@ -3,54 +3,8 @@ import { Link } from "react-router-dom";
 import AppointmentComponent from "../Appointment";
 import { APPOINTMENT_BOOK_URI } from "../../data/api";
 import axios from "axios";
+import { modes, timings } from "../../data/doctors";
 
-const timings = [
-  {
-    text: "30 Mins",
-    value: "30_min",
-    price: 450,
-  },
-  {
-    text: "45 Mins",
-    value: "45_min",
-    price: 550,
-  },
-  {
-    text: "60 Mins",
-    value: "60_min",
-    price: 700,
-  },
-];
-
-const modes = [
-  {
-    text: "Chat",
-    value: "chat",
-  },
-  {
-    text: "Voice",
-    value: "voice",
-  },
-  {
-    text: "Video",
-    value: "video",
-  },
-];
-
-const timeSlots = [
-  "10:30 AM",
-  "11:30 AM",
-  "02:30 PM",
-  "04:30 PM",
-  "06:30 PM",
-  "07:30 PM",
-  "08:30 AM",
-  "10:30 AM",
-  "10:30 AM",
-  "10:30 AM",
-  "10:30 AM",
-  "10:30 AM",
-];
 export default function BookAppointment() {
   const [selectDuration, setSelectDuration] = useState(timings[0]["value"]);
   const [setMode, setSelectMode] = useState(modes[0]["value"]);

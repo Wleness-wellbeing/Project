@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 export default function CampusAmbassadorForm({ isOpen, onClose }) {
+  if (!isOpen) return null;
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -54,11 +56,26 @@ export default function CampusAmbassadorForm({ isOpen, onClose }) {
     }
   };
 
-  if (!isOpen) return null;
+  // Close application form on clicking outside of form
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (isOpen && !event.target.closest(".campus-ambassador-form")) {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleOutsideClick);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [isOpen, onClose]);
 
   return (
     <section className="fixed inset-0 z-40 flex justify-center pt-8 backdrop-brightness-50">
-      <div className="w-[640px] overflow-y-scroll rounded-t-lg bg-white p-6">
+      <div className="campus-ambassador-form w-[640px] overflow-y-scroll rounded-t-lg bg-white p-6">
         <h4 className="mb-4 text-center text-2xl font-bold text-primary-300">
           Campus Ambassador Form
         </h4>

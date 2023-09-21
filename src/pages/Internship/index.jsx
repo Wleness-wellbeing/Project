@@ -188,7 +188,6 @@ export default function Internship() {
       </section>
 
       <HappyClient data={internshipClients} />
-
       <FaqWithImage data={internshipFaqs} />
 
       <InternshipApply

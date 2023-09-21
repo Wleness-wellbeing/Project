@@ -5,7 +5,6 @@ import { couplesTherapyDoctors } from "../../data/doctors";
 import { coupleTherapyClient } from "../../data/clients";
 import { coupleTherapyFaq } from "../../data/faqs";
 import { textColorize } from "../../utils";
-import { couplesTherapy1, couplesTherapy2 } from "../../assets";
 // Components
 import DoctorSlider from "../../components/DoctorSlider";
 import HappyClient from "../../components/HappyClient";

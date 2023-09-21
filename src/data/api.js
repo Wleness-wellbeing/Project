@@ -1,5 +1,5 @@
-// const URI = "https://api.wleness.com/";
-const URI = "http://127.0.0.1:5000/";
+const URI = "https://api.wleness.com/";
+// const URI = "http://127.0.0.1:5000/";
 
 // ============= API Endpoints =============
 // Authentication
@@ -7,7 +7,12 @@ export const SIGNUP_USER_URI = URI + "signup-user";
 export const LOGIN_USER_URI = URI + "login-user";
 export const LOGOUT_USER_URI = URI + "logout-user";
 export const USER_PROFILE_URI = URI + "user-profile";
+
+// Leads
 export const REQUEST_CALLBACK_URI = URI + "request-callback";
+
+// Experts
+export const EXPERTS_URI = URI + "get-experts";
 
 // Joining Forms
 export const APPOINTMENT_BOOK_URI = URI + "book-appointment";

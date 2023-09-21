@@ -8,9 +8,11 @@ import "swiper/css/pagination";
 // Data
 import { textColorize } from "../utils";
 import DoctorSliderBtns from "./Buttons/DoctorSliderBtns";
+import { useNavigate } from "react-router-dom";
 
 export default function DoctorSlider(props) {
   const [swiper, setSwiper] = useState(null); // Store Swiper instance
+  const navigate = useNavigate();
 
   const handleMouseEnter = () => {
     if (swiper) {
@@ -38,7 +40,7 @@ export default function DoctorSlider(props) {
   };
 
   return (
-    <section className="container relative mx-auto mb-5 mt-5 lg:mt-0 ">
+    <section className="container relative mx-auto mb-5 mt-5 lg:mt-0">
       {/* ========== Soul Healers ========== */}
       <div className="pb-6 text-center sm:pt-6 lg:pb-14 2xl:pb-8 ">
         <h2 className="subheading sm:pb-0 lg:mb-4">
@@ -54,8 +56,8 @@ export default function DoctorSlider(props) {
         onMouseLeave={handleMouseLeave}
       >
         <Swiper
-          modules={[EffectCoverflow, Navigation, Autoplay]}
-          className="mySwiper mb-16 h-[425px] overflow-y-visible xl:h-[520px]"
+          modules={[EffectCoverflow, Navigation]}
+          className="mySwiper mb-16 h-[425px] overflow-y-visible rounded-2xl xl:h-[520px]"
           navigation={true}
           effect={"coverflow"}
           grabCursor={true}
@@ -93,8 +95,10 @@ export default function DoctorSlider(props) {
           {props.data.doctors.map((value, index) => {
             return (
               <SwiperSlide key={index}>
-                <figure>
-                  <div className="rounded-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 p-1 shadow-md">
+                <figure
+                  onClick={() => navigate(`/experts/profile/${value.slug}`)}
+                >
+                  <div className="rounded-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 p-1">
                     <img
                       src={value.image}
                       alt="Doctors"

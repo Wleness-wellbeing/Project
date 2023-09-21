@@ -13,19 +13,20 @@ export default function IssueCard(props) {
   };
   return (
     <div
-      className="mx-auto w-64 rounded-2xl rounded-br-[3rem] bg-gradient-to-br from-secondary to-tertiary p-1 lg:w-full"
+      className="mx-auto w-full rounded-2xl rounded-br-[3rem] bg-gradient-to-br from-secondary to-tertiary p-1 lg:w-full"
       title={props.data.title}
     >
-      <div className="flex h-full flex-col items-center justify-center rounded-2xl rounded-br-[3rem] bg-[#FAFCE7] py-6">
+      <div className="flex h-full flex-col items-center justify-center rounded-2xl rounded-br-[3rem] bg-[#FAFCE7] py-4 md:py-6">
+        {/* <div className="flex h-full flex-col items-center justify-center rounded-2xl rounded-br-[3rem] bg-green-50 py-4 md:py-6"> */}
         <Link to={props.data.slug}>
-          <h3 className="mb-4 text-center text-2xl font-bold">
+          <h3 className="mb-4 text-center font-bold lg:text-2xl">
             {props.data.name}
           </h3>
           <img
             loading="lazy"
             src={props.data.image}
             alt="Avatar"
-            className="mx-auto mb-4 block h-24 w-24 rounded-2xl object-contain lg:h-40 lg:w-40 3xl:h-36 3xl:w-36"
+            className="mx-auto mb-2 block h-20 w-20 rounded-2xl object-contain md:h-24 md:w-24 lg:h-40 lg:w-40 3xl:h-36 3xl:w-36"
           />
         </Link>
 

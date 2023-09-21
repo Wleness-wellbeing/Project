@@ -68,7 +68,7 @@ export default function index() {
               share, grow, and heal as one.
             </p>
             <Link to="/community/chat" className="btn-one">
-              Join Now
+              Participate Now
             </Link>
           </div>
         </div>
@@ -134,7 +134,7 @@ export default function index() {
 
         <div className="pb-8 text-center">
           <Link to="/community/chat" className="btn-one mx-auto block">
-            Join us now
+            Participate Now
           </Link>
         </div>
       </section>

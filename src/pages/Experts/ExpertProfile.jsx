@@ -1,9 +1,12 @@
-import React from "react";
-import { bgDotsPattern, doctorAppointment, faq3 } from "../../assets";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { bgDotsPattern } from "../../assets";
+import { Link, useParams } from "react-router-dom";
+
 import BookAppointment from "../../components/Forms/BookAppointment";
 import DoctorStatistics from "../../components/Statistics/DoctorStatistics";
 import HomeFaq from "../../components/Faq/HomeFaq";
+import axios from "axios";
+import { EXPERTS_URI } from "../../data/api";
 
 const doctorsForte = [
   "Evidence based therapy expertise",
@@ -47,7 +50,32 @@ const faqs = [
   },
 ];
 
-export default function DoctorAppointment() {
+export default function ExpertProfile() {
+  const { slug } = useParams();
+  const [profileDetails, setProfileDetails] = useState({});
+  const [loading, setLoading] = useState(true);
+  console.log(slug);
+
+  useEffect(() => {
+    // Make a GET request using Axios
+    axios
+      .get(EXPERTS_URI + "/" + slug)
+      .then((response) => {
+        // Handle the successful response
+        setProfileDetails(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        // Handle errors
+        console.error("Error fetching doctor details:", error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <div className="mb-5 text-center">Loading...</div>;
+  }
+
   return (
     <>
       <header className="relative overflow-x-clip">
@@ -57,19 +85,25 @@ export default function DoctorAppointment() {
           </h1>
           <figure className="mx-auto items-center justify-center gap-x-8 py-3 lg:flex lg:w-[590px] lg:py-6">
             <div className="mx-auto w-48 lg:mx-0 lg:w-1/2">
-              <img src={doctorAppointment} alt="" className="object-cover" />
+              <img
+                src={profileDetails.image}
+                alt=""
+                className="h-40 w-40 rounded-full border-4 border-primary-300 object-cover object-top lg:h-56 lg:w-56"
+              />
             </div>
             <figcaption className="mx-auto text-center lg:w-1/2 lg:text-left">
-              <h4 className="text-2xl font-bold lg:text-3xl">Dr. Jenny</h4>
+              <h4 className="text-2xl font-bold lg:text-3xl">
+                {profileDetails.name}
+              </h4>
               <h6 className="text-xl font-semibold lg:text-2xl">
-                6+ yrs of experience
+                {profileDetails.experience}
               </h6>
               <div className="my-2 font-medium">
-                <p>Expertise: Yoga, Work-life</p>
-                <p>Speaks: German, English</p>
+                <p>Expertise: {profileDetails.expertise}</p>
+                <p>Speaks: {profileDetails.languages}</p>
               </div>
               <p className="text-xl font-bold text-primary-400">
-                Starts at $ 500
+                Starts at Rs. {profileDetails.price}
               </p>
             </figcaption>
           </figure>
@@ -82,16 +116,7 @@ export default function DoctorAppointment() {
               and non-judgmental approach, she creates a safe space for clients
               to explore their thoughts, feelings, and challenges.
             </p>
-            {/* <span className="block text-right text-lg font-bold text-primary-400">
-              View More
-            </span> */}
           </div>
-
-          {/* <div className="pt-7 text-center">
-            <Link to="/appointment/checkout" className="btn-one inline-block">
-              Book an appointment Now
-            </Link>
-          </div> */}
         </div>
 
         <img

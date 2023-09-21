@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 // Data
-import { assessment1, assessment2 } from "../../assets";
+import { assessment1 } from "../../assets";
 import {
   ageRange,
   assessmentFeelings,
@@ -134,14 +134,10 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
   console.log(selectFeeling);
   return (
     <div className="fixed inset-0 z-50 grid w-full place-items-center backdrop-brightness-50">
-      <div
-        className={`assessment absolute mx-auto flex h-full w-full items-center justify-center overflow-hidden py-4 md:w-[720px] lg:relative lg:h-fit lg:w-[920px] lg:rounded-3xl lg:border-2 lg:bg-[#E5FEFB] lg:py-12 ${
-          startAssessment ? " " : " bg-[#E5FEFB]"
-        }`}
-      >
+      <div className="assessment absolute mx-auto flex h-full w-full items-center justify-center overflow-hidden bg-[#E5FEFB] py-4 md:w-[720px] lg:relative lg:h-fit lg:w-[920px] lg:rounded-3xl lg:border-2 lg:py-12">
         {/* Welcome Page */}
         {startAssessment && (
-          <div className="flex flex-col justify-center  rounded-3xl bg-[#E5FEFB] px-4 py-6 text-center lg:h-[500px] lg:bg-transparent lg:py-10">
+          <div className="flex flex-col justify-center rounded-3xl bg-[#E5FEFB] px-4 py-6 text-center shadow-xl lg:h-[500px] lg:bg-transparent lg:py-10 lg:shadow-none">
             <h2 className="subheading mb-2 lg:mb-4">
               <span className="heading-primary">Welcome to Wleness</span>
             </h2>
@@ -394,9 +390,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
         {/* Close */}
         <FontAwesomeIcon
           icon={faClose}
-          className={`absolute right-4 top-4 cursor-pointer text-3xl lg:right-8 lg:top-8 lg:text-4xl ${
-            startAssessment ? " text-white lg:text-black " : " text-black "
-          }`}
+          className="absolute right-4 top-4 cursor-pointer text-3xl text-black lg:right-8 lg:top-8 lg:text-4xl"
           onClick={onAssessmentClose}
         />
       </div>

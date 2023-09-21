@@ -10,11 +10,7 @@ import HowItWorks from "../../components/JoinUs/HowItWorks";
 export default function PsychiatristJoining() {
   return (
     <>
-      <ApplyHeader
-        name="Psychiatrist"
-        image={psychiatristApplyHeader}
-        specialist="Dr. Meera"
-      />
+      <ApplyHeader name="Psychiatrist" />
       <ApplyForm name="Psychiatrist" url={PSYCHIATRIST_JOIN_URI} />
       <HowItWorks />
     </>
