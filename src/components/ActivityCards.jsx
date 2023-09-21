@@ -31,7 +31,7 @@ const ActivityCards = () => {
   ];
 
   return (
-    <div className="container mx-auto flex items-center justify-center py-10  ">
+    <div className="container mx-auto flex items-center justify-center py-10 ">
       {cardDataArray.map((cardData, index) => (
         <Link to={cardData.slug} key={index}>
           <div

@@ -105,8 +105,12 @@ import {
   sarvangasanaHeader,
   setuBandhasanaHeader,
   brainheader,
+  breadthBenefit,breadthHeader,breadthLeft1,breadthRight1,breadthRight2,kundaliniHeader,kundaliniLeft1,kundaliniRight1,mindfulnessHeader,mindfulnessLeft1,mindfulnessLeft2,mindfulnessLeft3,mindfulnessRight1,mindfulnessRight2,spiritualHeader,spiritualLeft1,spiritualRight1,walkingLeft1,walkingRight1,walkingHeader,zenHeader,zenLeft1,zenRight1
   
 } from "../assets";
+
+
+
 // Components
 import HeaderWithImage from "../components/HeaderWithImage";
 import RightImage from "../components/RightImage";
@@ -1455,36 +1459,624 @@ export const activities = [
           thumbnail: meditationType1,
           desc: "Originated from Hindu shastras,a practise involving attention to present,focusing on breath and thoughts without judgment fostering heightened awareness, acceptance.",
           slug: "/activities/meditation/mindfulness-meditation",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Mindfulness",
+                desc: "Mindfulness meditation that can help us find peace and clarity amidst the chaos of the modern world. Today we will explore what exactly is mindfulness meditation, the benefits of mindfulness meditation, how to practice it, and how it can improve our overall well-being and health. The good news is, all will be in layman's terms.",
+                image: mindfulnessHeader,
+                variables:false,
+                var: "",
+              },
+            },
+            
+            {
+              component: LeftVideoList,
+              data: {
+                title: "Practicing Mindfulness Meditation: ",
+                desc: "To practice Mindfulness meditation, follow these steps:",
+                videoUrl: mindfulnessRight1,
+                list: [
+                  {
+                    subtitle: "Find a positive Space",
+                    desc: " Choose a quiet and comfortable spot where you can sit or lie down without distractions and focus on yourself.",
+                  },
+                  {
+                    subtitle: "Relax your body:",
+                    desc: "Shut your eyes, take a few deep breaths, and allow your body to relax and settle down. Notice how each inhale and exhale feel as it passes through your body.",
+                  },
+                  {
+                    subtitle: "Inculcate Mindfulness into Daily Life:",
+                    desc: " Practice the cultivation of mindfulness into your daily activities and routine, paying attention to each moment with an open and non-judgmental mindset.",
+                  },
+               
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Benefits of Adho Mukha Svanasana: ",
+                desc: "There are numerous benefits to practicing Adho Mukha Svanasana, including:",
+                list: [
+                  {
+                    subtitle: "Increases flexibility: ",
+                    desc: "This pose stretches the hamstrings, calves, and spine, which can help increase flexibility in these areas.",
+                  },
+                  {
+                    subtitle: "Strengthens the upper body: ",
+                    desc: "Adho Mukha Svanasana is an excellent pose for strengthening the arms, shoulders, and upper back.",
+                  },
+                  {
+                    subtitle: "Relieves stress: ",
+                    desc: "This pose can help calm the mind and reduce stress and anxiety.",
+                  },
+                  {
+                    subtitle: "Improves digestion: ",
+                    desc: "The inversion of the pose can help improve digestion and relieve constipation.",
+                  },
+                  {
+                    subtitle: "Energizes the body: ",
+                    desc: "Adho Mukha Svanasana can help boost energy levels by increasing blood flow to the brain.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList,
+              data: {
+                desc: "While Adho Mukha Svanasana is a safe and beneficial pose for most people, there are a few precautions to remember: ",
+                info: "Adho Mukha Svanasana is a versatile pose that yogis of all skill levels can practice. Whether you want to increase your flexibility, strengthen your upper body, or reduce stress, this pose has much to offer. You can safely practice this pose and enjoy its many benefits by following the proper technique and taking necessary precautions. So next time you step onto your yoga mat, include Adho Mukha Svanasana in your practice!",
+                list: [
+                  "Avoid this pose if you have a wrist, shoulder, or back injury.",
+                  "If you have high blood pressure, keep your head at or above heart level to avoid a sudden increase in blood pressure.",
+                  "If you have a neck injury, keep your head aligned with your spine instead of looking towards your belly button.",
+                  "If you have tight hamstrings, bend your knees slightly to avoid straining your lower back.",
+                ],
+              },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
+          ],
         },
         {
-          title: "Awareness Meditation",
+          title: "Breadth Awareness Meditation",
           thumbnail: meditationType2,
           desc: "Observing the natural rhythm of breath.Close attention to inhalation and exhalation, redirecting the mind back to the breath.Calms mind, enhances focus, and reduces anxiety.",
           slug: "/activities/meditation/breath-awareness-meditation",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Breadth Awareness Meditation",
+                desc: "Breath awareness it is a form of meditation that involves focusing on the rhythm and sensation of our breathing pattern. By turning our attention explicitly to our breath, we can calm down our minds, reduce present stress and anxiety, and improve our overall well-being inside out. In this meditation while closing the eyes you can experience the stillness and focus on the depth of your breathing. meditation that can help us find peace and clarity amidst the chaos of the modern world. Today we will explore what exactly is mindfulness meditation, the benefits of mindfulness meditation, how to practice it, and how it can improve our overall well-being and health. The good news is, all will be in layman's terms.",
+                image: breadthHeader,
+                var: "",
+              },
+            },
+            
+            {
+              component: LeftVideoList,
+              data: {
+                title: "Practicing Mindfulness Meditation: ",
+                desc: "To practice Mindfulness meditation, follow these steps:",
+                videoUrl:breadthLeft1,
+                list: [
+                  {
+                    subtitle: "Find a positive Space",
+                    desc: " Choose a quiet and comfortable spot where you can sit or lie down without distractions and focus on yourself.",
+                  },
+                  {
+                    subtitle: "Relax your body:",
+                    desc: "Shut your eyes, take a few deep breaths, and allow your body to relax and settle down. Notice how each inhale and exhale feel as it passes through your body.",
+                  },
+                  {
+                    subtitle: "Inculcate Mindfulness into Daily Life:",
+                    desc: " Practice the cultivation of mindfulness into your daily activities and routine, paying attention to each moment with an open and non-judgmental mindset.",
+                  },
+               
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Benefits of Adho Mukha Svanasana: ",
+                desc: "There are numerous benefits to practicing Adho Mukha Svanasana, including:",
+                list: [
+                  {
+                    subtitle: "Increases flexibility: ",
+                    desc: "This pose stretches the hamstrings, calves, and spine, which can help increase flexibility in these areas.",
+                  },
+                  {
+                    subtitle: "Strengthens the upper body: ",
+                    desc: "Adho Mukha Svanasana is an excellent pose for strengthening the arms, shoulders, and upper back.",
+                  },
+                  {
+                    subtitle: "Relieves stress: ",
+                    desc: "This pose can help calm the mind and reduce stress and anxiety.",
+                  },
+                  {
+                    subtitle: "Improves digestion: ",
+                    desc: "The inversion of the pose can help improve digestion and relieve constipation.",
+                  },
+                  {
+                    subtitle: "Energizes the body: ",
+                    desc: "Adho Mukha Svanasana can help boost energy levels by increasing blood flow to the brain.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList,
+              data: {
+                desc: "While Adho Mukha Svanasana is a safe and beneficial pose for most people, there are a few precautions to remember: ",
+                info: "Adho Mukha Svanasana is a versatile pose that yogis of all skill levels can practice. Whether you want to increase your flexibility, strengthen your upper body, or reduce stress, this pose has much to offer. You can safely practice this pose and enjoy its many benefits by following the proper technique and taking necessary precautions. So next time you step onto your yoga mat, include Adho Mukha Svanasana in your practice!",
+                list: [
+                  "Avoid this pose if you have a wrist, shoulder, or back injury.",
+                  "If you have high blood pressure, keep your head at or above heart level to avoid a sudden increase in blood pressure.",
+                  "If you have a neck injury, keep your head aligned with your spine instead of looking towards your belly button.",
+                  "If you have tight hamstrings, bend your knees slightly to avoid straining your lower back.",
+                ],
+              },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
+          ],
         },
         {
           title: "Kundalini Meditation",
           thumbnail: meditationType3,
           desc: "Blending the breathwork, chanting, movement, and visualization to awaken the energy within. Power to  Balancethe chakras and achieve heightened spiritual awakening. ",
           slug: "/activities/meditation/kundalini-meditation",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Kundalini Meditation",
+                desc: "Breath Kundalini is a Sanskrit word that refers to the coiled energy located at the base of our spine. It is often represented by a snake. The concept is that through Kundalini meditation, this hidden life energy can be awakened and guided up through the body's energy centres which are 7 in number, known as chakras, leading to a higher state of consciousness and spiritual awakening from within. it is a form of meditation that involves focusing on the rhythm and sensation of our breathing pattern. By turning our attention explicitly to our breath, we can calm down our minds, reduce present stress and anxiety, and improve our overall well-being inside out. In this meditation while closing the eyes you can experience the stillness and focus on the depth of your breathing. meditation that can help us find peace and clarity amidst the chaos of the modern world. Today we will explore what exactly is mindfulness meditation, the benefits of mindfulness meditation, how to practice it, and how it can improve our overall well-being and health. The good news is, all will be in layman's terms.",
+                image: kundaliniHeader,
+                variations:false,
+                var: '',
+              },
+            },
+            
+            {
+              component: LeftVideoList,
+              data: {
+                title: "Practicing Kundalini Meditation: ",
+                desc: "To practice kundalini meditation, follow these steps:",
+                videoUrl:kundaliniLeft1,
+                list: [
+                  {
+                    subtitle: "Find a positive Space",
+                    desc: " Choose a quiet and comfortable spot where you can sit or lie down without distractions and focus on yourself.",
+                  },
+                  {
+                    subtitle: "Relax your body:",
+                    desc: "Shut your eyes, take a few deep breaths, and allow your body to relax and settle down. Notice how each inhale and exhale feel as it passes through your body.",
+                  },
+                  {
+                    subtitle: "Inculcate Mindfulness into Daily Life:",
+                    desc: " Practice the cultivation of mindfulness into your daily activities and routine, paying attention to each moment with an open and non-judgmental mindset.",
+                  },
+               
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Benefits of Adho Mukha Svanasana: ",
+                desc: "There are numerous benefits to practicing Adho Mukha Svanasana, including:",
+                list: [
+                  {
+                    subtitle: "Increases flexibility: ",
+                    desc: "This pose stretches the hamstrings, calves, and spine, which can help increase flexibility in these areas.",
+                  },
+                  {
+                    subtitle: "Strengthens the upper body: ",
+                    desc: "Adho Mukha Svanasana is an excellent pose for strengthening the arms, shoulders, and upper back.",
+                  },
+                  {
+                    subtitle: "Relieves stress: ",
+                    desc: "This pose can help calm the mind and reduce stress and anxiety.",
+                  },
+                  {
+                    subtitle: "Improves digestion: ",
+                    desc: "The inversion of the pose can help improve digestion and relieve constipation.",
+                  },
+                  {
+                    subtitle: "Energizes the body: ",
+                    desc: "Adho Mukha Svanasana can help boost energy levels by increasing blood flow to the brain.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList,
+              data: {
+                desc: "While Adho Mukha Svanasana is a safe and beneficial pose for most people, there are a few precautions to remember: ",
+                info: "Adho Mukha Svanasana is a versatile pose that yogis of all skill levels can practice. Whether you want to increase your flexibility, strengthen your upper body, or reduce stress, this pose has much to offer. You can safely practice this pose and enjoy its many benefits by following the proper technique and taking necessary precautions. So next time you step onto your yoga mat, include Adho Mukha Svanasana in your practice!",
+                list: [
+                  "Avoid this pose if you have a wrist, shoulder, or back injury.",
+                  "If you have high blood pressure, keep your head at or above heart level to avoid a sudden increase in blood pressure.",
+                  "If you have a neck injury, keep your head aligned with your spine instead of looking towards your belly button.",
+                  "If you have tight hamstrings, bend your knees slightly to avoid straining your lower back.",
+                ],
+              },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
+          ],
         },
         {
           title: "Zen Meditation (Zazen)",
           thumbnail: meditationType4,
           desc: "Originates from Buddhism. Sitting in a specific posture, focusing on breath observing thoughts and sensations without attachment or judgment. Cultivate mindfulness,  into true reality.",
           slug: "/activities/meditation/zen-meditation",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Zen Meditation(Zazen)",
+                desc: "Zen meditation is a fundamental practice in Zen Buddhism that usually involves sitting meditation practising mudras. Zazen emphasizes specifically mindfulness of breath and posture to develop a deepened insight into one's true nature and achieve a state of mental clarity and calm away from the chaos leading to a higher state of consciousness and spiritual awakening from within.",
+                image: zenHeader,
+                variations:false,
+                var: '',
+              },
+            },
+            
+            {
+              component: LeftVideoList,
+              data: {
+                title: "Practicing Zen Meditation:",
+                desc: "To practice Zen meditation, follow these steps:",
+                videoUrl:zenLeft1,
+                list: [
+                  {
+                    subtitle: "",
+                    desc: " ChoFind a quiet and peaceful place for meditation. Remove any distractions, like electronic devices, and wear comfortable clothes to feel relaxed.ose a quiet and comfortable spot where you can sit or lie down without distractions and focus on yourself.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Shut Choose a meditation pose from the following options: Half Lotus, Full Lotus, Burmese Pose, or Seiza Pose. Select a pose that feels comfortable for you. eyes, take a few deep breaths, and allow your body to relax and settle down. Notice how each inhale and exhale feel as it passes through your body.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: " Practice the cultivation of mindfulClose your eyes, focus on your breath, and stay with it. If your mind wanders, gently bring your attention back to your breath. Start with 5 minutes and gradually increase the duration.ness into your daily activities and routine, paying attention to each moment with an open and non-judgmental mindset.",
+                  },
+               
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Benefits of Adho Mukha Svanasana: ",
+                desc: "There are numerous benefits to practicing Adho Mukha Svanasana, including:",
+                list: [
+                  {
+                    subtitle: "Increases flexibility: ",
+                    desc: "This pose stretches the hamstrings, calves, and spine, which can help increase flexibility in these areas.",
+                  },
+                  {
+                    subtitle: "Strengthens the upper body: ",
+                    desc: "Adho Mukha Svanasana is an excellent pose for strengthening the arms, shoulders, and upper back.",
+                  },
+                  {
+                    subtitle: "Relieves stress: ",
+                    desc: "This pose can help calm the mind and reduce stress and anxiety.",
+                  },
+                  {
+                    subtitle: "Improves digestion: ",
+                    desc: "The inversion of the pose can help improve digestion and relieve constipation.",
+                  },
+                  {
+                    subtitle: "Energizes the body: ",
+                    desc: "Adho Mukha Svanasana can help boost energy levels by increasing blood flow to the brain.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList,
+              data: {
+                desc: "While Adho Mukha Svanasana is a safe and beneficial pose for most people, there are a few precautions to remember: ",
+                info: "Adho Mukha Svanasana is a versatile pose that yogis of all skill levels can practice. Whether you want to increase your flexibility, strengthen your upper body, or reduce stress, this pose has much to offer. You can safely practice this pose and enjoy its many benefits by following the proper technique and taking necessary precautions. So next time you step onto your yoga mat, include Adho Mukha Svanasana in your practice!",
+                list: [
+                  "Avoid this pose if you have a wrist, shoulder, or back injury.",
+                  "If you have high blood pressure, keep your head at or above heart level to avoid a sudden increase in blood pressure.",
+                  "If you have a neck injury, keep your head aligned with your spine instead of looking towards your belly button.",
+                  "If you have tight hamstrings, bend your knees slightly to avoid straining your lower back.",
+                ],
+              },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
+          ],
         },
         {
           title: "Spiritual Meditation",
           thumbnail: meditationType5,
           desc: "Activating one's consciousness. Spiritual meditation involves bonding at a higher consciencel. Highly beneficial to those seeking spiritual growth and oneness with supreme self.",
           slug: "/activities/meditation/spiritual-meditation",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Spiritual Meditation",
+                desc: "Breath Zen Spiritual meditation is a unique form of contemplative practice that selectively focuses on invoking a deeper connection with one's inner true self, reaching higher consciousness or experiencing a divine presence from within. It is practiced primarily by people from various religious and spiritual backgrounds, as well as those who identify themselves as spiritual but not religious. It is an efficient way to lead away from the chaos leading to a higher state of consciousness and spiritual awakening from within. is a fundamental practice in Zen Buddhism that usually involves sitting meditation practising mudras. Zazen emphasizes specifically mindfulness of breath and posture to develop a deepened insight into one's true nature and achieve a state of mental clarity and calm away from the chaos leading to a higher state of consciousness and spiritual awakening from within. it is a form of meditation that involves focusing on the rhythm and sensation of our breathing pattern. By turning our attention explicitly to our breath, we can calm down our minds, reduce present stress and anxiety, and improve our overall well-being inside out. In this meditation while closing the eyes you can experience the stillness and focus on the depth of your breathing. meditation that can help us find peace and clarity amidst the chaos of the modern world. Today we will explore what exactly is mindfulness meditation, the benefits of mindfulness meditation, how to practice it, and how it can improve our overall well-being and health. The good news is, all will be in layman's terms.",
+                image: spiritualHeader,
+                variations:false,
+                var: '',
+              },
+            },
+            
+            {
+              component: LeftVideoList,
+              data: {
+                title: "Practicing Spiritual Meditation:",
+                desc: "To practice spritiual meditation, follow these steps:",
+                videoUrl:spiritualLeft1,
+                list: [
+                  {
+                    subtitle: "",
+                    desc: " ChoFind a quiet and peaceful place for meditation. Remove any distractions, like electronic devices, and wear comfortable clothes to feel relaxed.ose a quiet and comfortable spot where you can sit or lie down without distractions and focus on yourself.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Shut Choose a meditation pose from the following options: Half Lotus, Full Lotus, Burmese Pose, or Seiza Pose. Select a pose that feels comfortable for you. eyes, take a few deep breaths, and allow your body to relax and settle down. Notice how each inhale and exhale feel as it passes through your body.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: " Practice the cultivation of mindfulClose your eyes, focus on your breath, and stay with it. If your mind wanders, gently bring your attention back to your breath. Start with 5 minutes and gradually increase the duration.ness into your daily activities and routine, paying attention to each moment with an open and non-judgmental mindset.",
+                  },
+               
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Benefits of Adho Mukha Svanasana: ",
+                desc: "There are numerous benefits to practicing Adho Mukha Svanasana, including:",
+                list: [
+                  {
+                    subtitle: "Increases flexibility: ",
+                    desc: "This pose stretches the hamstrings, calves, and spine, which can help increase flexibility in these areas.",
+                  },
+                  {
+                    subtitle: "Strengthens the upper body: ",
+                    desc: "Adho Mukha Svanasana is an excellent pose for strengthening the arms, shoulders, and upper back.",
+                  },
+                  {
+                    subtitle: "Relieves stress: ",
+                    desc: "This pose can help calm the mind and reduce stress and anxiety.",
+                  },
+                  {
+                    subtitle: "Improves digestion: ",
+                    desc: "The inversion of the pose can help improve digestion and relieve constipation.",
+                  },
+                  {
+                    subtitle: "Energizes the body: ",
+                    desc: "Adho Mukha Svanasana can help boost energy levels by increasing blood flow to the brain.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList,
+              data: {
+                desc: "While Adho Mukha Svanasana is a safe and beneficial pose for most people, there are a few precautions to remember: ",
+                info: "Adho Mukha Svanasana is a versatile pose that yogis of all skill levels can practice. Whether you want to increase your flexibility, strengthen your upper body, or reduce stress, this pose has much to offer. You can safely practice this pose and enjoy its many benefits by following the proper technique and taking necessary precautions. So next time you step onto your yoga mat, include Adho Mukha Svanasana in your practice!",
+                list: [
+                  "Avoid this pose if you have a wrist, shoulder, or back injury.",
+                  "If you have high blood pressure, keep your head at or above heart level to avoid a sudden increase in blood pressure.",
+                  "If you have a neck injury, keep your head aligned with your spine instead of looking towards your belly button.",
+                  "If you have tight hamstrings, bend your knees slightly to avoid straining your lower back.",
+                ],
+              },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
+          ],
         },
         {
           title: "Walking Meditation",
           thumbnail: meditationType6,
           desc: "Walking slowly and attentively, cultivating awareness of present. Unlike seated meditation, it allows individuals to engage their bodies and minds while maintaining tranquility.",
           slug: "/activities/meditation/walking-meditation",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Walking Meditation",
+                desc: "Walking Meditation is one of the most popular and beneficial forms of mental health practice. It not only helps to reduce stress and anxiety, but it can also help to improve mindfulness and focus. But did you know that walking meditation is also an excellent way to practice mindfulness and relaxation?",
+                image: walkingHeader,
+            
+                variations:true,
+                var: 'It is an efficient way to lead away from the chaos leading to a higher state of consciousness and spiritual awakening from within ‘walking away from it’.',
+              },
+            },
+            
+            {
+              component: LeftVideoList,
+              data: {
+                title: "Practicing Walking Meditation::",
+                desc: "To practice walking meditation, follow these steps:",
+                videoUrl:walkingLeft1,
+                list: [
+                  {
+                    subtitle: "",
+                    desc: " ChoFind a quiet and peaceful place for meditation. Remove any distractions, like electronic devices, and wear comfortable clothes to feel relaxed.ose a quiet and comfortable spot where you can sit or lie down without distractions and focus on yourself.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Shut Choose a meditation pose from the following options: Half Lotus, Full Lotus, Burmese Pose, or Seiza Pose. Select a pose that feels comfortable for you. eyes, take a few deep breaths, and allow your body to relax and settle down. Notice how each inhale and exhale feel as it passes through your body.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: " Practice the cultivation of mindfulClose your eyes, focus on your breath, and stay with it. If your mind wanders, gently bring your attention back to your breath. Start with 5 minutes and gradually increase the duration.ness into your daily activities and routine, paying attention to each moment with an open and non-judgmental mindset.",
+                  },
+               
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Benefits of Adho Mukha Svanasana: ",
+                desc: "There are numerous benefits to practicing Adho Mukha Svanasana, including:",
+                list: [
+                  {
+                    subtitle: "Increases flexibility: ",
+                    desc: "This pose stretches the hamstrings, calves, and spine, which can help increase flexibility in these areas.",
+                  },
+                  {
+                    subtitle: "Strengthens the upper body: ",
+                    desc: "Adho Mukha Svanasana is an excellent pose for strengthening the arms, shoulders, and upper back.",
+                  },
+                  {
+                    subtitle: "Relieves stress: ",
+                    desc: "This pose can help calm the mind and reduce stress and anxiety.",
+                  },
+                  {
+                    subtitle: "Improves digestion: ",
+                    desc: "The inversion of the pose can help improve digestion and relieve constipation.",
+                  },
+                  {
+                    subtitle: "Energizes the body: ",
+                    desc: "Adho Mukha Svanasana can help boost energy levels by increasing blood flow to the brain.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList,
+              data: {
+                desc: "While Adho Mukha Svanasana is a safe and beneficial pose for most people, there are a few precautions to remember: ",
+                info: "Adho Mukha Svanasana is a versatile pose that yogis of all skill levels can practice. Whether you want to increase your flexibility, strengthen your upper body, or reduce stress, this pose has much to offer. You can safely practice this pose and enjoy its many benefits by following the proper technique and taking necessary precautions. So next time you step onto your yoga mat, include Adho Mukha Svanasana in your practice!",
+                list: [
+                  "Avoid this pose if you have a wrist, shoulder, or back injury.",
+                  "If you have high blood pressure, keep your head at or above heart level to avoid a sudden increase in blood pressure.",
+                  "If you have a neck injury, keep your head aligned with your spine instead of looking towards your belly button.",
+                  "If you have tight hamstrings, bend your knees slightly to avoid straining your lower back.",
+                ],
+              },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
+          ],
         },
         {
           title: "Vipassana Meditation",
