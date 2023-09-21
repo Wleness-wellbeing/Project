@@ -105,17 +105,33 @@ import {
   sarvangasanaHeader,
   setuBandhasanaHeader,
   brainheader,
-<<<<<<< HEAD
-  breadthBenefit,breadthHeader,breadthLeft1,breadthRight1,breadthRight2,kundaliniHeader,kundaliniLeft1,kundaliniRight1,mindfulnessHeader,mindfulnessLeft1,mindfulnessLeft2,mindfulnessLeft3,mindfulnessRight1,mindfulnessRight2,spiritualHeader,spiritualLeft1,spiritualRight1,walkingLeft1,walkingRight1,walkingHeader,zenHeader,zenLeft1,zenRight1
-  
-=======
+  breadthBenefit,
+  breadthHeader,
+  breadthLeft1,
+  breadthRight1,
+  breadthRight2,
+  kundaliniHeader,
+  kundaliniLeft1,
+  kundaliniRight1,
+  mindfulnessHeader,
+  mindfulnessLeft1,
+  mindfulnessLeft2,
+  mindfulnessLeft3,
+  mindfulnessRight1,
+  mindfulnessRight2,
+  spiritualHeader,
+  spiritualLeft1,
+  spiritualRight1,
+  walkingLeft1,
+  walkingRight1,
+  walkingHeader,
+  zenHeader,
+  zenLeft1,
+  zenRight1,
   uttanasanaHeader,
   navasanaHeader,
   ardhChandrasanaHeader,
->>>>>>> 9ad6e025d3ae5c98ac08f7336a65f76d1273541d
 } from "../assets";
-
-
 
 // Components
 import HeaderWithImage from "../components/HeaderWithImage";
@@ -1625,11 +1641,11 @@ export const activities = [
                 title: "Mindfulness",
                 desc: "Mindfulness meditation that can help us find peace and clarity amidst the chaos of the modern world. Today we will explore what exactly is mindfulness meditation, the benefits of mindfulness meditation, how to practice it, and how it can improve our overall well-being and health. The good news is, all will be in layman's terms.",
                 image: mindfulnessHeader,
-                variables:false,
+                variables: false,
                 var: "",
               },
             },
-            
+
             {
               component: LeftVideoList,
               data: {
@@ -1649,7 +1665,6 @@ export const activities = [
                     subtitle: "Inculcate Mindfulness into Daily Life:",
                     desc: " Practice the cultivation of mindfulness into your daily activities and routine, paying attention to each moment with an open and non-judgmental mindset.",
                   },
-               
                 ],
               },
             },
@@ -1732,13 +1747,13 @@ export const activities = [
                 var: "",
               },
             },
-            
+
             {
               component: LeftVideoList,
               data: {
                 title: "Practicing Mindfulness Meditation: ",
                 desc: "To practice Mindfulness meditation, follow these steps:",
-                videoUrl:breadthLeft1,
+                videoUrl: breadthLeft1,
                 list: [
                   {
                     subtitle: "Find a positive Space",
@@ -1752,7 +1767,6 @@ export const activities = [
                     subtitle: "Inculcate Mindfulness into Daily Life:",
                     desc: " Practice the cultivation of mindfulness into your daily activities and routine, paying attention to each moment with an open and non-judgmental mindset.",
                   },
-               
                 ],
               },
             },
@@ -1832,17 +1846,17 @@ export const activities = [
                 title: "Kundalini Meditation",
                 desc: "Breath Kundalini is a Sanskrit word that refers to the coiled energy located at the base of our spine. It is often represented by a snake. The concept is that through Kundalini meditation, this hidden life energy can be awakened and guided up through the body's energy centres which are 7 in number, known as chakras, leading to a higher state of consciousness and spiritual awakening from within. it is a form of meditation that involves focusing on the rhythm and sensation of our breathing pattern. By turning our attention explicitly to our breath, we can calm down our minds, reduce present stress and anxiety, and improve our overall well-being inside out. In this meditation while closing the eyes you can experience the stillness and focus on the depth of your breathing. meditation that can help us find peace and clarity amidst the chaos of the modern world. Today we will explore what exactly is mindfulness meditation, the benefits of mindfulness meditation, how to practice it, and how it can improve our overall well-being and health. The good news is, all will be in layman's terms.",
                 image: kundaliniHeader,
-                variations:false,
-                var: '',
+                variations: false,
+                var: "",
               },
             },
-            
+
             {
               component: LeftVideoList,
               data: {
                 title: "Practicing Kundalini Meditation: ",
                 desc: "To practice kundalini meditation, follow these steps:",
-                videoUrl:kundaliniLeft1,
+                videoUrl: kundaliniLeft1,
                 list: [
                   {
                     subtitle: "Find a positive Space",
@@ -1856,7 +1870,6 @@ export const activities = [
                     subtitle: "Inculcate Mindfulness into Daily Life:",
                     desc: " Practice the cultivation of mindfulness into your daily activities and routine, paying attention to each moment with an open and non-judgmental mindset.",
                   },
-               
                 ],
               },
             },
@@ -1936,17 +1949,17 @@ export const activities = [
                 title: "Zen Meditation(Zazen)",
                 desc: "Zen meditation is a fundamental practice in Zen Buddhism that usually involves sitting meditation practising mudras. Zazen emphasizes specifically mindfulness of breath and posture to develop a deepened insight into one's true nature and achieve a state of mental clarity and calm away from the chaos leading to a higher state of consciousness and spiritual awakening from within.",
                 image: zenHeader,
-                variations:false,
-                var: '',
+                variations: false,
+                var: "",
               },
             },
-            
+
             {
               component: LeftVideoList,
               data: {
                 title: "Practicing Zen Meditation:",
                 desc: "To practice Zen meditation, follow these steps:",
-                videoUrl:zenLeft1,
+                videoUrl: zenLeft1,
                 list: [
                   {
                     subtitle: "",
@@ -1960,7 +1973,6 @@ export const activities = [
                     subtitle: "",
                     desc: " Practice the cultivation of mindfulClose your eyes, focus on your breath, and stay with it. If your mind wanders, gently bring your attention back to your breath. Start with 5 minutes and gradually increase the duration.ness into your daily activities and routine, paying attention to each moment with an open and non-judgmental mindset.",
                   },
-               
                 ],
               },
             },
@@ -2040,17 +2052,17 @@ export const activities = [
                 title: "Spiritual Meditation",
                 desc: "Breath Zen Spiritual meditation is a unique form of contemplative practice that selectively focuses on invoking a deeper connection with one's inner true self, reaching higher consciousness or experiencing a divine presence from within. It is practiced primarily by people from various religious and spiritual backgrounds, as well as those who identify themselves as spiritual but not religious. It is an efficient way to lead away from the chaos leading to a higher state of consciousness and spiritual awakening from within. is a fundamental practice in Zen Buddhism that usually involves sitting meditation practising mudras. Zazen emphasizes specifically mindfulness of breath and posture to develop a deepened insight into one's true nature and achieve a state of mental clarity and calm away from the chaos leading to a higher state of consciousness and spiritual awakening from within. it is a form of meditation that involves focusing on the rhythm and sensation of our breathing pattern. By turning our attention explicitly to our breath, we can calm down our minds, reduce present stress and anxiety, and improve our overall well-being inside out. In this meditation while closing the eyes you can experience the stillness and focus on the depth of your breathing. meditation that can help us find peace and clarity amidst the chaos of the modern world. Today we will explore what exactly is mindfulness meditation, the benefits of mindfulness meditation, how to practice it, and how it can improve our overall well-being and health. The good news is, all will be in layman's terms.",
                 image: spiritualHeader,
-                variations:false,
-                var: '',
+                variations: false,
+                var: "",
               },
             },
-            
+
             {
               component: LeftVideoList,
               data: {
                 title: "Practicing Spiritual Meditation:",
                 desc: "To practice spritiual meditation, follow these steps:",
-                videoUrl:spiritualLeft1,
+                videoUrl: spiritualLeft1,
                 list: [
                   {
                     subtitle: "",
@@ -2064,7 +2076,6 @@ export const activities = [
                     subtitle: "",
                     desc: " Practice the cultivation of mindfulClose your eyes, focus on your breath, and stay with it. If your mind wanders, gently bring your attention back to your breath. Start with 5 minutes and gradually increase the duration.ness into your daily activities and routine, paying attention to each moment with an open and non-judgmental mindset.",
                   },
-               
                 ],
               },
             },
@@ -2144,18 +2155,18 @@ export const activities = [
                 title: "Walking Meditation",
                 desc: "Walking Meditation is one of the most popular and beneficial forms of mental health practice. It not only helps to reduce stress and anxiety, but it can also help to improve mindfulness and focus. But did you know that walking meditation is also an excellent way to practice mindfulness and relaxation?",
                 image: walkingHeader,
-            
-                variations:true,
-                var: 'It is an efficient way to lead away from the chaos leading to a higher state of consciousness and spiritual awakening from within ‘walking away from it’.',
+
+                variations: true,
+                var: "It is an efficient way to lead away from the chaos leading to a higher state of consciousness and spiritual awakening from within ‘walking away from it’.",
               },
             },
-            
+
             {
               component: LeftVideoList,
               data: {
                 title: "Practicing Walking Meditation::",
                 desc: "To practice walking meditation, follow these steps:",
-                videoUrl:walkingLeft1,
+                videoUrl: walkingLeft1,
                 list: [
                   {
                     subtitle: "",
@@ -2169,7 +2180,6 @@ export const activities = [
                     subtitle: "",
                     desc: " Practice the cultivation of mindfulClose your eyes, focus on your breath, and stay with it. If your mind wanders, gently bring your attention back to your breath. Start with 5 minutes and gradually increase the duration.ness into your daily activities and routine, paying attention to each moment with an open and non-judgmental mindset.",
                   },
-               
                 ],
               },
             },
