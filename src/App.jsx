@@ -56,7 +56,6 @@ import StudentsPolicy from "./pages/Policies/StudentsPolicy";
 import ExpertProfile from "./pages/Experts/ExpertProfile";
 import Gauth from "./pages/Authentication/Gauth";
 import FacebookAuth from "./pages/Authentication/FacebookAuth";
-import ActivityCards from "./components/ActivityCards";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -126,6 +125,7 @@ function App() {
             </Layout>
           }
         />
+
         <Route
           path="/avatar"
           element={

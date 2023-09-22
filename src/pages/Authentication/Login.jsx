@@ -3,7 +3,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { iconFacebookCircle, iconGoogle, login, logo } from "../../assets";
 import axios from "axios";
 import { LOGIN_USER_URI } from "../../data/api";
-
+import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
+import { signInWithPopup } from "firebase/auth";
 export default function Login({ setToken }) {
   const [formInfo, setFormData] = useState({
     phone: "",
@@ -13,6 +14,43 @@ export default function Login({ setToken }) {
     status: "",
     message: "",
   });
+
+  const [user, setUser] = useState(null);
+  // ===================Google Login ==========================//
+  const handleGoogleSignIn = () => {
+    signInWithPopup(auth, googleProvider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+
+        // Save user data to localStorage
+        localStorage.setItem("user", JSON.stringify(user));
+
+        // Redirect to the home page
+        navigate("/"); // Replace "/" with the appropriate home page route
+      })
+      .catch((error) => {
+        console.error("Error signing in with Google:", error);
+      });
+  };
+  // ===================Facebook Login ==========================//
+  const handleFacebookSignIn = () => {
+    signInWithPopup(auth, facebookProvider) // Use the Facebook provider
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+
+        // Save user data to localStorage
+        localStorage.setItem("user", JSON.stringify(user));
+
+        // Redirect to the home page
+        navigate("/"); // Replace "/" with the appropriate home page route
+      })
+      .catch((error) => {
+        console.error("Error signing in with Facebook:", error);
+      });
+  };
+  // Set alert message
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -72,20 +110,20 @@ export default function Login({ setToken }) {
   };
 
   return (
-    <main class="flex h-screen flex-col items-center justify-center md:flex-row md:items-stretch">
-      <aside class="hidden items-center justify-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-contain bg-right bg-no-repeat md:flex md:w-1/2">
-        <img src={login} alt="" class="block w-[648px] object-cover" />
+    <main className="flex h-screen flex-col items-center justify-center md:flex-row md:items-stretch">
+      <aside className="hidden items-center justify-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-contain bg-right bg-no-repeat md:flex md:w-1/2">
+        <img src={login} alt="" className="block w-[648px] object-cover" />
       </aside>
 
-      <div class="flex items-center justify-center md:w-1/2 md:px-4">
-        <div class="w-80 sm:w-[400px]">
-          <div class="mx-auto mb-3 w-64 sm:w-[280px]">
+      <div className="flex items-center justify-center md:w-1/2 md:px-4">
+        <div className="w-80 sm:w-[400px]">
+          <div className="mx-auto mb-3 w-64 sm:w-[280px]">
             <Link to="/">
               <img
                 src={logo}
                 alt="Logo"
                 loading="lazy"
-                class="block w-full object-cover"
+                className="block w-full object-cover"
               />
             </Link>
           </div>
@@ -159,11 +197,14 @@ export default function Login({ setToken }) {
             <div className="mb-6 flex justify-center gap-x-4">
               <button
                 className="rounded-lg bg-primary-50/80 px-4 py-2 transition-colors hover:bg-primary-50"
-                onClick={handleGoogleLogin}
+                onClick={handleGoogleSignIn}
               >
                 <img src={iconGoogle} alt="" className="w-6" />
               </button>
-              <button className="rounded-lg bg-primary-50/80 px-4 py-2 transition-colors hover:bg-primary-50">
+              <button
+                className="rounded-lg bg-primary-50/80 px-4 py-2 transition-colors hover:bg-primary-50"
+                onClick={handleFacebookSignIn}
+              >
                 <img src={iconFacebookCircle} alt="" className="w-6" />
               </button>
             </div>

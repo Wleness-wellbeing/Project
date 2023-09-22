@@ -3,7 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { iconFacebookCircle, iconGoogle, logo, signup } from "../../assets";
 import axios from "axios";
 import { SIGNUP_USER_URI } from "../../data/api";
-
+import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
+import { signInWithPopup } from "firebase/auth";
 export default function Signup() {
   const [formInfo, setFormData] = useState({
     name: "",
@@ -23,7 +24,41 @@ export default function Signup() {
     const { name, value } = e.target;
     setFormData({ ...formInfo, [name]: value });
   };
+  const [user, setUser] = useState(null);
+  // ===================Google Login ==========================//
+  const handleGoogleSignIn = () => {
+    signInWithPopup(auth, googleProvider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
 
+        // Save user data to localStorage
+        localStorage.setItem("user", JSON.stringify(user));
+
+        // Redirect to the home page
+        navigate("/"); // Replace "/" with the appropriate home page route
+      })
+      .catch((error) => {
+        console.error("Error signing in with Google:", error);
+      });
+  };
+  // ===================Facebook Login ==========================//
+  const handleFacebookSignIn = () => {
+    signInWithPopup(auth, facebookProvider) // Use the Facebook provider
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+
+        // Save user data to localStorage
+        localStorage.setItem("user", JSON.stringify(user));
+
+        // Redirect to the home page
+        navigate("/"); // Replace "/" with the appropriate home page route
+      })
+      .catch((error) => {
+        console.error("Error signing in with Facebook:", error);
+      });
+  };
   // Set alert message
   const setMessages = (status, msg) => {
     setSuccessMessage({
@@ -81,6 +116,10 @@ export default function Signup() {
     } else {
       setMessages("error", "Please fill your details properly!"); // set success message
     }
+  };
+
+  const handleLogout = () => {
+    setUser(null);
   };
 
   return (
@@ -177,12 +216,41 @@ export default function Signup() {
               <span className="h-[2px] w-28 bg-slate-200"></span>
             </div>
             <div className="mb-6 flex justify-center gap-x-4">
-              <button className="rounded-lg bg-primary-50/80 px-4 py-2 transition-colors hover:bg-primary-50">
-                <img src={iconGoogle} alt="" className="w-6" />
-              </button>
-              <button className="rounded-lg bg-primary-50/80 px-4 py-2 transition-colors hover:bg-primary-50">
-                <img src={iconFacebookCircle} alt="" className="w-6" />
-              </button>
+              {user ? (
+                <>
+                  <button onClick={handleLogout}>Logout</button>
+                  <h3>Welcome {user.displayName}</h3>
+                  <p>{user.email}</p>
+                  <div>
+                    <img src={user.photoURL} alt="dp"></img>
+                  </div>
+                </>
+              ) : (
+                <button
+                  className="rounded-lg bg-primary-50/80 px-4 py-2 transition-colors hover:bg-primary-50"
+                  onClick={handleGoogleSignIn}
+                >
+                  <img src={iconGoogle} alt="" className="w-6" />
+                </button>
+              )}
+
+              {user ? (
+                <>
+                  <button onClick={handleLogout}>Logout</button>
+                  <h3>Welcome {user.displayName}</h3>
+                  <p>{user.email}</p>
+                  <div>
+                    <img src={user.photoURL} alt="dp"></img>
+                  </div>
+                </>
+              ) : (
+                <button
+                  className="rounded-lg bg-primary-50/80 px-4 py-2 transition-colors hover:bg-primary-50"
+                  onClick={handleFacebookSignIn}
+                >
+                  <img src={iconFacebookCircle} alt="" className="w-6" />
+                </button>
+              )}
             </div>
 
             {/* Login Link */}

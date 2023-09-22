@@ -9,7 +9,10 @@ import {
 import { Link } from "react-router-dom";
 import { profile } from "../../assets";
 
-export default function DesktopNavbar({ toggleJoinUs, token, userName }) {
+export default function DesktopNavbar({ toggleJoinUs, token }) {
+  const userDataFromLocalStorage = JSON.parse(localStorage.getItem("user"));
+  console.log(userDataFromLocalStorage);
+
   return (
     <>
       <ul className="hidden w-fit justify-end space-x-4 bg-white p-6 xl:flex">
@@ -30,7 +33,7 @@ export default function DesktopNavbar({ toggleJoinUs, token, userName }) {
           Join Us
         </button>
 
-        {!token && token !== "" && token !== undefined ? (
+        {!token ? (
           <Link
             to="/signup"
             className="btn-primary !w-fit !rounded-full !bg-primary-400 !py-2 font-semibold hover:!bg-primary-300"
@@ -43,7 +46,9 @@ export default function DesktopNavbar({ toggleJoinUs, token, userName }) {
             className="btn-primary flex !w-fit !rounded-full !bg-primary-400 !py-2.5 font-semibold hover:!bg-primary-300"
           >
             <img src={profile} alt="" className="mr-1 w-5 rounded-full" />
-            <span className="text-sm">{userName}</span>
+            <span className="text-sm">
+              {userDataFromLocalStorage?.displayName.slice(0, 1) || "User"}
+            </span>
           </Link>
         )}
       </div>

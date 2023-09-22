@@ -120,6 +120,22 @@ export {
   homeSelfcare,
 };
 
+import about1 from "./images/aboutus/about1.png"
+import about2 from "./images/aboutus/about2.png"
+import about3 from "./images/aboutus/about3.png"
+import about4 from "./images/aboutus/about4.png"
+import about5 from "./images/aboutus/about5.png"
+import about6 from "./images/aboutus/about6.png"
+import meeting from "./images/aboutus/meeting.png"
+
+export {
+  about1,about2,about3,about4,about5,about6,meeting
+}
+
+
+
+
+
 // Avatar images
 import avatarImage1 from "./images/activities/avatar/image 13.png";
 import avatarImage2 from "./images/activities/avatar/image 14.png";
@@ -172,6 +188,33 @@ import meditationType6 from "./images/activities/meditation/meditation-type-6.pn
 import meditationType7 from "./images/activities/meditation/meditation-type-7.png";
 import meditationType8 from "./images/activities/meditation/meditation-type-8.png";
 import meditationThumbnail from "./images/activities/meditation/meditationThumbnail.png";
+// Activities >> Meditation>>subpages
+import breadthBenefit from "./images/activities/meditation/meditationSubpages/breadthBenefit.png";
+import breadthHeader from "./images/activities/meditation/meditationSubpages/breadthHeader.png";
+import breadthLeft1 from "./images/activities/meditation/meditationSubpages/breadthLeft1.png";
+import breadthRight1 from "./images/activities/meditation/meditationSubpages/breadthRight1.png";
+import breadthRight2 from "./images/activities/meditation/meditationSubpages/breadthRight2.png";
+import kundaliniHeader from "./images/activities/meditation/meditationSubpages/kundaliniHeader.png";
+import kundaliniLeft1 from "./images/activities/meditation/meditationSubpages/kundaliniLeft1.png";
+import kundaliniRight1 from "./images/activities/meditation/meditationSubpages/kundaliniRight1.png";
+import mindfulnessHeader from "./images/activities/meditation/meditationSubpages/mindfulnessHeader.png";
+import mindfulnessLeft2 from "./images/activities/meditation/meditationSubpages/mindfulnessLeft2.png";
+import mindfulnessRight1 from "./images/activities/meditation/meditationSubpages/mindfulnessRight1.png";
+import mindfulnessRight2 from "./images/activities/meditation/meditationSubpages/mindfulnessRight2.png";
+import mindfulnessLeft3 from "./images/activities/meditation/meditationSubpages/mindfulnessLeft3.png";
+import mindfulnessLeft1 from "./images/activities/meditation/meditationSubpages/mindfulnessLeft1.png";
+import spiritualHeader from "./images/activities/meditation/meditationSubpages/spiritualHeader.png";
+import spiritualLeft1 from "./images/activities/meditation/meditationSubpages/spiritualLeft1.png";
+import spiritualRight1 from "./images/activities/meditation/meditationSubpages/spiritualRight1.png";
+import walkingHeader from "./images/activities/meditation/meditationSubpages/walking-Header.png";
+import walkingLeft1 from "./images/activities/meditation/meditationSubpages/walkingLeft1.png";
+import walkingRight1 from "./images/activities/meditation/meditationSubpages/walkingRight1.png";
+import zenHeader from "./images/activities/meditation/meditationSubpages/zenHeader.png";
+import zenLeft1 from "./images/activities/meditation/meditationSubpages/zenLeft1.png";
+import zenRight1 from "./images/activities/meditation/meditationSubpages/zenRight1.png";
+
+export{breadthBenefit,breadthHeader,breadthLeft1,breadthRight1,breadthRight2,kundaliniHeader,kundaliniLeft1,kundaliniRight1,mindfulnessHeader,mindfulnessLeft1,mindfulnessLeft2,mindfulnessLeft3,mindfulnessRight1,mindfulnessRight2,spiritualHeader,spiritualLeft1,spiritualRight1,walkingHeader,walkingLeft1,walkingRight1,zenHeader,zenLeft1,zenRight1}
+
 // Activities >> Yoga
 import yogaHeader from "./images/activities/yoga/yoga-header.png";
 import yogaType1 from "./images/activities/yoga/yoga-type-1.png";
