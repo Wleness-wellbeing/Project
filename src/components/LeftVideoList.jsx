@@ -1,5 +1,4 @@
 import React from "react";
-import { benefits, precautions, adhvmukhaSteps } from "../assets";
 
 export default function LeftVideoList(props) {
   return (

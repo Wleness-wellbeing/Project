@@ -108,15 +108,35 @@ import {
   uttanasanaHeader,
   navasanaHeader,
   ardhChandrasanaHeader,
+  activitiesSubpagesProcedure,
+  yogaSadhnaTypes,
+  precautions,
+  conclusionBulb,
+  mantraSadhnaProcedure,
+  mantraSadhnas,
+  japaSadhnas,
+  japaSadhnaProcedure,
+  bhaktiSadhnaProcedure,
+  bhaktiSadhnas,
+  kundaliniSadhnaProcedure,
+  kundaliniSadhnas,
+  sevaSadhnaProcedure,
+  sevaSadhnas,
+  natureSadhnaProcedure,
+  natureSadhnas,
 } from "../assets";
 // Components
 import HeaderWithImage from "../components/HeaderWithImage";
 import RightImage from "../components/RightImage";
 import LeftImage from "../components/LeftImage";
 import LeftVideoList from "../components/LeftVideoList";
+import RightProcedureList from "../components/RightProcedureList";
 import RightImageList from "../components/RightImageList";
 import LeftImageList from "../components/LeftImageList";
 import ActivityBlogs from "../components/ActivityBlogs";
+import LeftImageList3 from "../components/LeftImageList3";
+import SubpagesConclusion from "../components/SubpagesConclusion";
+import RightImageList2 from "../components/RightImageList2";
 
 // Therapies data for landing page
 export const therapies = [
@@ -949,6 +969,26 @@ export const activities = [
                 ],
               },
             },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
           ],
         },
         {
@@ -1049,6 +1089,26 @@ export const activities = [
                 ],
               },
             },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
           ],
         },
         {
@@ -1148,6 +1208,26 @@ export const activities = [
                   "Always warm up your body before attempting Sirsasana.",
                 ],
               },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
             },
           ],
         },
@@ -1257,6 +1337,26 @@ export const activities = [
                 ],
               },
             },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
           ],
         },
         {
@@ -1365,6 +1465,26 @@ export const activities = [
                 ],
               },
             },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
           ],
         },
         {
@@ -1435,6 +1555,26 @@ export const activities = [
                 ],
               },
             },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
           ],
         },
         {
@@ -1498,6 +1638,26 @@ export const activities = [
                 ],
               },
             },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
           ],
         },
         {
@@ -1560,6 +1720,26 @@ export const activities = [
                   "Balance Challenges: Practicing near a wall or using a chair for support can be helpful, especially if you're new to balancing poses.",
                 ],
               },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
             },
           ],
         },
@@ -1699,49 +1879,1165 @@ export const activities = [
           title: "Yoga Sadhana",
           thumbnail: sadhnaType1,
           desc: "Originated from Hindu shastras,a practise involving attention to present,focusing on breath and thoughts without judgment fostering heightened awareness, acceptance.",
-          slug: "/",
+          slug: "/activities/sadhna/yoga-sadhna",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Yoga Sadhana",
+                desc: "Yoga Sadhana, the ancient practice of uniting body, mind, and soul, has been revered for centuries for its trans-formative power. Rooted in the teachings of ancient Indian philosophy, Yoga Sadhana goes beyond the physical postures we often associate with yoga. It encompasses a holistic approach to self-realization, promoting mental clarity, physical well-being, and spiritual growth. ",
+                image: adhvmukhaHeader,
+                variations: false,
+                var: "",
+              },
+            },
+            {
+              component: RightProcedureList,
+              data: {
+                title: "The Procedure of Yoga Sadhana: ",
+                image: activitiesSubpagesProcedure,
+                list: [
+                  {
+                    subtitle: "Finding the Right Environment: ",
+                    desc: "To begin your Yoga Sadhana, it's essential to find a quiet, clean, and peaceful space free from distractions. This will enable you to fully immerse yourself in the practice and connect with your inner self.",
+                  },
+                  {
+                    subtitle: "Asanas (Physical Postures):",
+                    desc: "Yoga Sadhana incorporates various asanas that improve flexibility, strength, and balance. Some common asanas include Mountain Pose (Tadasana), Downward Dog (Adho Mukha Svanasana), and Child's Pose (Balasana). Each posture is performed mindfully, focusing on breath and alignment.",
+                  },
+                  {
+                    subtitle: "Pranayama (Breath Control): ",
+                    desc: "Pranayama involves regulating the breath, harnessing the life force (prana), and calming the mind. Techniques like Ujjayi breathing and Nadi Shodhana (alternate nostril breathing) are commonly practiced during Yoga Sadhana.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList2,
+              data: {
+                image: yogaSadhnaTypes,
+                list: [
+                  {
+                    subtitle: "Dhyana (Meditation): ",
+                    desc: "Meditation is a vital component of Yoga Sadhana, allowing practitioners to quiet the mind, cultivate awareness, and experience inner stillness. Focused meditation on a specific object or concept can lead to heightened mindfulness.",
+                  },
+                  {
+                    subtitle: "Mantra Chanting: ",
+                    desc: "Chanting sacred mantras can induce a sense of tranquillity and spiritual awakening. Repeating a mantra like 'Om' or other chants can create positive vibrations within the body and mind.",
+                  },
+                  {
+                    subtitle: "Niyamas and Yamas: ",
+                    desc: "Yoga Sadhana also emphasizes ethical principles known as Yamas (restraints) and Niyamas (observances). These include non-violence (Ahimsa), truthfulness (Satya), contentment (Santosha), and self-discipline (Tapas), among others.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList3,
+              data: {
+                title: "Benefits of Yoga Sadhana: ",
+                list: [
+                  {
+                    subtitle: "Physical Health: ",
+                    desc: "Regular practice of Yoga Sadhana can enhance flexibility, build muscle strength, improve posture, and boost immunity. It may also alleviate chronic conditions like back pain and arthritis.",
+                  },
+                  {
+                    subtitle: "Mental Well-being: ",
+                    desc: "Yoga Sadhana fosters clarity and reduces stress, anxiety, and depression. Combining breathwork and meditation helps calm the mind, promoting emotional balance and greater self-awareness.",
+                  },
+                  {
+                    subtitle: "Spiritual Growth: ",
+                    desc: "By exploring the depths of their inner selves, practitioners of Yoga Sadhana often experience spiritual growth and a profound connection with their spiritual essence.",
+                  },
+                  {
+                    subtitle: "Improved Concentration: ",
+                    desc: "The focused attention required during Yoga Sadhana translates into enhanced concentration and mental focus in daily life.",
+                  },
+                  {
+                    subtitle: "Enhanced Self-Acceptance: ",
+                    desc: "As Yoga Sadhana encourages non-judgment and self-compassion, practitioners develop a greater sense of self-acceptance and self-love.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Potential Complications and Precautions: ",
+                desc: "While Yoga Sadhana offers numerous benefits, it is essential to approach the practice with mindfulness and care to avoid potential complications:",
+                image: precautions,
+                list: [
+                  {
+                    subtitle: "Physical Strain: ",
+                    desc: "Overexertion or improper alignment during asanas can lead to muscle strains or injuries. Practitioners should listen to their bodies and avoid pushing beyond their limits.",
+                  },
+                  {
+                    subtitle: "Breathing Difficulties: ",
+                    desc: "Incorrect pranayama techniques may lead to breathing difficulties or dizziness. Proper guidance from a qualified instructor is crucial for mastering breath control.",
+                  },
+                  {
+                    subtitle: "Mental Overload: ",
+                    desc: "Attempting intense meditation practices without proper preparation can overwhelm the mind, leading to heightened anxiety or even panic attacks. Start with shorter meditation sessions and gradually increase the duration.",
+                  },
+                  {
+                    subtitle: "Spiritual Imbalance: ",
+                    desc: "While Yoga Sadhana can deepen spiritual connections, pushing oneself too hard to achieve spiritual goals can lead to spiritual imbalances. A balanced and gradual approach is critical.",
+                  },
+                ],
+              },
+            },
+            {
+              component: SubpagesConclusion,
+              data: {
+                title: "Conclusion: ",
+                desc: "Yoga Sadhana is a profound journey of self-discovery and transformation that unites the physical, mental, and spiritual aspects of our being. Through practicing asanas, pranayama, meditation, and ethical principles, practitioners can experience numerous physical and mental benefits. However, it is crucial to approach Yoga Sadhana with patience and self-awareness and under the guidance of a qualified instructor to avoid potential complications. Embrace this ancient practice, and may your journey on the path of Yoga Sadhana be filled with joy, peace, and self-realization.",
+                image: conclusionBulb,
+              },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
+          ],
         },
         {
           title: "Meditation Sadhana",
           thumbnail: sadhnaType2,
           desc: "Observing the natural rhythm of breath.Close attention to inhalation and exhalation, redirecting the mind back to the breath.Calms mind, enhances focus, and reduces anxiety.",
-          slug: "/",
+          slug: "/activities/sadhna/meditation-sadhna",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Meditation Sadhana",
+                desc: "Meditation Sadhana, a practice dating back thousands of years, is a trans formative journey of self-discovery & inner peace. Rooted in ancient traditions and spiritual philosophies, meditation Sadhana aims to quiet the mind, cultivate mindfulness, and unlock our vast reservoir of inner potential. In this blog, we will explore the procedure, benefits, and potential complications of meditation Sadhana, shedding light on why it has become an essential tool for modern individuals seeking balance",
+                image: adhvmukhaHeader,
+                variations: false,
+                var: "",
+              },
+            },
+            {
+              component: RightProcedureList,
+              data: {
+                title: "The Procedure of Meditation Sadhana:",
+                image: activitiesSubpagesProcedure,
+                list: [
+                  {
+                    subtitle: "Finding a Peaceful Space: ",
+                    desc: "To begin Meditation Sadhana, choose a serene and quiet space where you won't be disturbed. Whether it's a corner of your home or a peaceful natural spot, the environment should be conducive to introspection and inner focus.",
+                  },
+                  {
+                    subtitle: "Comfortable Seating: ",
+                    desc: "Sit comfortably on the floor or a cushion with your spine erect, allowing the energy to flow freely. You can also meditate on a chair if sitting on the floor is uncomfortable for extended periods.",
+                  },
+                  {
+                    subtitle: "Focusing the Mind: ",
+                    desc: "Select a focus point for your meditation. It could be your breath, a mantra, a candle flame, or any other object of contemplation. The goal is to anchor your mind and prevent it from wandering.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList2,
+              data: {
+                image: yogaSadhnaTypes,
+                list: [
+                  {
+                    subtitle: "Observing the Breath: ",
+                    desc: "Breath awareness is a common and powerful technique in Meditation Sadhana. Observe the natural flow of your breath without controlling it, bringing your mind back to the breath whenever it drifts away.",
+                  },
+                  {
+                    subtitle: "Cultivating Mindfulness: ",
+                    desc: "Be present at the moment and observe your thoughts and emotions without judgment. Allow them to come and go like passing clouds, maintaining a detached and non-reactive attitude.",
+                  },
+                  {
+                    subtitle: "Gradual Progression: ",
+                    desc: "Start with shorter meditation sessions, gradually increasing the duration as you build your mental stamina. Consistency is critical to experiencing the full benefits of Meditation Sadhana.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList3,
+              data: {
+                title: "Benefits of Meditation Sadhana: ",
+                list: [
+                  {
+                    subtitle: "Stress Reduction: ",
+                    desc: "Regular practice of meditation Sadhana can significantly reduce stress and anxiety levels by calming the mind and promoting relaxation.",
+                  },
+                  {
+                    subtitle: "Enhanced Concentration and Focus: ",
+                    desc: "Meditation strengthens the ability to concentrate, improving productivity and mental clarity in daily activities.",
+                  },
+                  {
+                    subtitle: "Emotional Well-being: ",
+                    desc: "By observing thoughts and emotions without attachment, practitioners develop emotional resilience and experience increased happiness and contentment.",
+                  },
+                  {
+                    subtitle: "Better Sleep Quality: ",
+                    desc: "Meditation Sadhana can improve sleep patterns and alleviate insomnia by promoting relaxation and calming the mind.",
+                  },
+                  {
+                    subtitle: "Physical Health: ",
+                    desc: "Meditation has numerous physical health benefits, such as lowering blood pressure, boosting the immune system, and reducing inflammation.",
+                  },
+                  {
+                    subtitle: "Increased Self-Awareness: ",
+                    desc: "Through meditation Sadhana, individuals gain deeper insights into their thoughts, behaviors, and patterns, leading to heightened self-awareness and personal growth.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Potential Complications and Precautions:",
+                desc: "While Meditation Sadhana offers numerous benefits, it is essential to approach the practice with mindfulness and care to avoid potential complications:",
+                image: precautions,
+                list: [
+                  {
+                    subtitle: "Frustration and Impatience: ",
+                    desc: "Beginners may experience frustration or impatience when their minds wander during meditation. It's crucial to be patient with yourself and recognize that it's normal for thoughts to arise.",
+                  },
+                  {
+                    subtitle: "Emotional Release: ",
+                    desc: "During meditation, suppressed emotions may surface, leading to feelings of sadness, anger, or anxiety. This is a natural part of the process, but seeking support from a counsellor or meditation teacher can be helpful if it becomes overwhelming.",
+                  },
+                  {
+                    subtitle: "Avoidance of Underlying Issues: ",
+                    desc: "Meditation can bring peace and stillness, but it should not be used to avoid underlying emotional or psychological issues. Addressing such matters with appropriate support is essential for long-term well-being.",
+                  },
+                  {
+                    subtitle: "Physical Discomfort: ",
+                    desc: "Sitting for extended periods during meditation may cause physical discomfort. Practitioners with physical limitations can explore alternative meditation positions or use supportive props.",
+                  },
+                ],
+              },
+            },
+            {
+              component: SubpagesConclusion,
+              data: {
+                title: "Conclusion: ",
+                desc: "Meditation Sadhana is a transformative journey that allows individuals to find inner calm, cultivate mindfulness, and discover their true selves. By creating a conducive environment, practicing regular meditation with patience, and embracing the present moment, practitioners can experience various mental, emotional, and physical benefits. However, it's essential to approach Meditation Sadhana with an open heart, acknowledging the potential challenges and seeking guidance when needed. Embrace this ancient practice, and may your meditation Sadhana lead you to a life filled with profound peace and self-awareness.",
+                image: conclusionBulb,
+              },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
+          ],
         },
         {
           title: "Mantra Sadhana",
           thumbnail: sadhnaType3,
           desc: "Blending the breathwork, chanting, movement, and visualization to awaken the energy within. Power to  Balancethe chakras and achieve heightened spiritual awakening. ",
-          slug: "/",
+          slug: "/activities/sadhna/mantra-sadhna",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Mantra Sadhana",
+                desc: "Mantra Sadhana, an ancient spiritual practice, harnesses the power of sacred sounds or phrases to invoke positive energies and spiritual growth. Rooted in various religious and mystical traditions, mantra chanting has been regarded as a potent tool for self-realization and inner transformation. Mantras are sacred syllables, words, or phrases with significant spiritual energy and vibrational frequencies. They are often derived from ancient scriptures and are believed to embody divine powers and deities.",
+                image: adhvmukhaHeader,
+                variations: false,
+                var: "",
+              },
+            },
+            {
+              component: RightProcedureList,
+              data: {
+                title: "The Procedure of Mantra Sadhana:",
+                image: mantraSadhnaProcedure,
+                list: [
+                  {
+                    subtitle: "Selection of the Mantra: ",
+                    desc: "Choose a mantra that resonates with your intentions and spiritual goals. Mantras can be specific to particular deities or have universal themes like peace, love, or enlightenment. Seek guidance from a knowledgeable spiritual mentor or consult scriptures for appropriate mantras.",
+                  },
+                  {
+                    subtitle: "Purification: ",
+                    desc: "Cleanse yourself physically and mentally before beginning Mantra Sadhana. A bath or ablution can purify the body, while meditation or deep breathing helps clear the mind of distractions.",
+                  },
+                  {
+                    subtitle: "Establish a Sacred Space: ",
+                    desc: "Find a serene and quiet space for your practice. Create an altar or sacred spot with items like candles, incense, or images of deities, which symbolize spiritual devotion.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList2,
+              data: {
+                image: mantraSadhnas,
+                list: [
+                  {
+                    subtitle: "Set Intentions: ",
+                    desc: "Before chanting the mantra, set your intentions. Whether seeking inner peace, healing, or spiritual connection, focus your mind on the purpose of your practice.",
+                  },
+                  {
+                    subtitle: "Japa (Chanting): ",
+                    desc: "Sit comfortably meditatively and begin chanting the mantra. You can use a mala (prayer beads) to keep track of the repetitions. Chant with devotion and concentration, allowing the sound to penetrate your being.",
+                  },
+                  {
+                    subtitle: "Regular Practice: ",
+                    desc: "Consistency is key in Mantra Sadhana. Aim to practice daily, dedicating a specific time to your chanting. Gradually increase the duration and repetitions as your practice deepens.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList3,
+              data: {
+                title: "Benefits of Mantra Sadhana: ",
+                list: [
+                  {
+                    subtitle: "Spiritual Connection: ",
+                    desc: "Mantra Sadhana creates a profound connection with the divine, helping practitioners feel closer to their chosen deities or the higher power they resonate with..",
+                  },
+                  {
+                    subtitle: "Stress Reduction: ",
+                    desc: "Chanting mantras induces relaxation and tranquillity, reducing stress and anxiety.",
+                  },
+                  {
+                    subtitle: "Mental Clarity: ",
+                    desc: "Regular practice sharpens focus and clarity, improving decision-making and problem-solving abilities.",
+                  },
+                  {
+                    subtitle: "Emotional Healing: ",
+                    desc: "Mantras can facilitate healing by releasing suppressed emotions and promoting a positive mindset.",
+                  },
+                  {
+                    subtitle: "Increased Energy: ",
+                    desc: "Mantra chanting generates a positive energy flow, revitalizing the body and mind.",
+                  },
+                  {
+                    subtitle: "Protection and Blessings: ",
+                    desc: "Certain mantras are believed to offer protection from negative influences and attract blessings.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Potential Complications and Precautions:",
+                desc: "While Mantra Sadhana can be a transformative practice, it is essential to approach it with care and respect:",
+                image: precautions,
+                list: [
+                  {
+                    subtitle: "Pronunciation: ",
+                    desc: "Incorrect pronunciation of mantras might yield different results. Seek guidance from an experienced teacher to ensure accuracy.",
+                  },
+                  {
+                    subtitle: "Intentions and Humility: ",
+                    desc: "Practice with pure intentions and humility, avoiding ego-driven desires for power or control.",
+                  },
+                  {
+                    subtitle: "Overexertion: ",
+                    desc: "Chanting excessively without proper guidance can lead to physical strain or vocal issues.",
+                  },
+                  {
+                    subtitle: "Respect for Traditions: ",
+                    desc: "When using mantras from specific traditions, respecting and understanding their cultural and religious significance is essential.",
+                  },
+                ],
+              },
+            },
+            {
+              component: SubpagesConclusion,
+              data: {
+                title: "Conclusion: ",
+                desc: "Mantra Sadhana is a sacred journey that allows individuals to tap into the powerful energies of divine vibrations. Through rhythmic chanting and devotion, practitioners can unlock the potential within, leading to spiritual growth, emotional healing, and a deeper connection with the divine. To embark on this transformative path, choose a mantra that resonates with your heart, practice with sincerity, and seek guidance from experienced mentors. Embrace Mantra Sadhana, and may the vibrations of your chants resonate throughout your being, leading you to higher states of consciousness and profound inner peace.",
+                image: conclusionBulb,
+              },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
+          ],
         },
         {
           title: "Japa Sadhana",
           thumbnail: sadhnaType4,
           desc: "Originates from Buddhism. Sitting in a specific posture, focusing on breath observing thoughts and sensations without attachment or judgment. Cultivate mindfulness,  into true reality.",
-          slug: "/",
+          slug: "/activities/sadhna/japa-sadhna",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Japa Sadhana",
+                desc: "Japa Sadhana, an ancient spiritual practice, involves continuously repeating a sacred mantra, name, or prayer to connect with the divine and attain higher states of consciousness. Rooted in various religious and spiritual traditions, Japa Sadhana is a powerful tool for self-realization and inner transformation. Japa Sadhana centers on the meditative repetition of a mantra, divine name, or prayer. The chosen words carry spiritual vibrations, and the continuous repetition helps to focus the mind, purify thoughts, and invoke the divine presence within oneself.",
+                image: adhvmukhaHeader,
+                variations: false,
+                var: "",
+              },
+            },
+            {
+              component: RightProcedureList,
+              data: {
+                title: "The Procedure of Japa Sadhana:",
+                image: japaSadhnaProcedure,
+                list: [
+                  {
+                    subtitle: "Selection of the Mantra: ",
+                    desc: "Choose a mantra or divine name that resonates with your spiritual inclination. It can be a single word or a more extended prayer. Seek guidance from a spiritual teacher or refer to sacred texts for an appropriate mantra.",
+                  },
+                  {
+                    subtitle: "Setting the Intention: ",
+                    desc: "Establish a clear intention for your practice before commencing Japa Sadhana. It could be personal growth, peace, healing, or spiritual insight. Connect with the purpose of your Sadhana.",
+                  },
+                  {
+                    subtitle: "Create a Sacred Space: ",
+                    desc: "Find a peaceful and undisturbed area for your Japa Sadhana. You can create a small altar with symbols of divinity, candles, or incense to set the ambiance.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList2,
+              data: {
+                image: japaSadhnas,
+                list: [
+                  {
+                    subtitle: "Sitting Posture: ",
+                    desc: "Sit in a comfortable and meditative posture, with your spine straight and shoulders relaxed. You can sit on a cushion or chair if you are alert and relaxed.",
+                  },
+                  {
+                    subtitle: "Begin Repetition: ",
+                    desc: "Close your eyes and take a few deep breaths to center yourself. Then, start chanting the chosen mantra or name with focus and devotion. Use a mala (prayer beads) to keep track of the repetitions.",
+                  },
+                  {
+                    subtitle: "Steady Practice: ",
+                    desc: "Consistency is vital in Japa Sadhana. Set aside a dedicated time each day to practice, gradually increasing the duration and repetitions as you progress.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList3,
+              data: {
+                title: "Benefits of Japa Sadhana: ",
+                list: [
+                  {
+                    subtitle: "Mental Clarity: ",
+                    desc: "Japa Sadhana calms the mind and reduces mental chatter, increasing clarity and focus in daily life.",
+                  },
+                  {
+                    subtitle: "Emotional Healing: ",
+                    desc: "The meditative repetition of a mantra helps release emotional blockages, promoting healing and inner peace.",
+                  },
+                  {
+                    subtitle: "Spiritual Connection: ",
+                    desc: "Japa Sadhana deepens the connection with the divine and aids in experiencing profound spiritual insights.",
+                  },
+                  {
+                    subtitle: "Stress Reduction: ",
+                    desc: "Regular practice of Japa Sadhana induces relaxation, reducing stress and anxiety.",
+                  },
+                  {
+                    subtitle: "Self-Discovery: ",
+                    desc: "The continuous repetition of a mantra allows practitioners to delve into their inner selves, leading to self-discovery and self-awareness.",
+                  },
+                  {
+                    subtitle: "Cultivation of Virtues: ",
+                    desc: "Japa Sadhana instills positive qualities like patience, perseverance, and devotion.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Potential Complications and Precautions:",
+                desc: "Although Japa Sadhana is generally safe and beneficial, it is essential to approach it with care:",
+                image: precautions,
+                list: [
+                  {
+                    subtitle: "Correct Pronunciation: ",
+                    desc: "Proper pronunciation of the mantra is crucial to harness its full spiritual power. Seek guidance from a knowledgeable teacher to ensure accuracy.",
+                  },
+                  {
+                    subtitle: "Ego Inflation: ",
+                    desc: "Japa Sadhana should be practiced with humility and sincerity, avoiding ego-driven desires for recognition or powers.",
+                  },
+                  {
+                    subtitle: "Mental Fatigue: ",
+                    desc: "Excessive repetition without proper guidance can lead to mental fatigue or exhaustion.",
+                  },
+                  {
+                    subtitle: "Meaningful Repetition: ",
+                    desc: "Understand the meaning and significance of the mantra or name you are chanting to imbue your practice with deep intent.",
+                  },
+                ],
+              },
+            },
+            {
+              component: SubpagesConclusion,
+              data: {
+                title: "Conclusion: ",
+                desc: "Japa Sadhana is a sacred path that enables practitioners to connect with the divine and unlock the transformative power within. Meditative repetition can attain mental clarity, emotional healing, and spiritual growth. To begin Japa Sadhana, select a mantra that resonates with your heart, set a clear intention, and practice with sincerity and consistency. Embrace this ancient practice, and may your Japa Sadhana journey lead you to profound inner peace and spiritual fulfillment.",
+                image: conclusionBulb,
+              },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
+          ],
         },
         {
           title: "Bhakti Sadhana",
           thumbnail: sadhnaType5,
           desc: "Activating one's consciousness. Spiritual meditation involves bonding at a higher consciencel. Highly beneficial to those seeking spiritual growth and oneness with supreme self.",
-          slug: "/",
+          slug: "/activities/sadhna/bhakti-sadhna",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Bhakti Sadhana",
+                desc: "Bhakti Sadhana, the practice of devotion, is a sacred journey that involves surrendering oneself to the divine with love and unwavering faith. Rooted in various religious and spiritual traditions, Bhakti Sadhana is a powerful means to transcend the ego, experience divine love, and attain spiritual liberation. Bhakti, meaning devotion, is the foundation of Bhakti Sadhana. It is a deep and heartfelt love for the divine, whether conceptualized as a personal deity, formless energy, or an all-pervading consciousness.",
+                image: adhvmukhaHeader,
+                variations: false,
+                var: "",
+              },
+            },
+            {
+              component: RightProcedureList,
+              data: {
+                title: "The Procedure of Bhakti Sadhana: ",
+                image: bhaktiSadhnaProcedure,
+                list: [
+                  {
+                    subtitle: "Choosing a Form of the Divine: ",
+                    desc: "Select a form of the divine that resonates with your heart and aligns with your spiritual beliefs. It can be a specific deity from your tradition or a universal concept of divine love.",
+                  },
+                  {
+                    subtitle: "Setting Up a Sacred Space: ",
+                    desc: "Create an altar or sacred space in your home to offer your prayers and devotion. Decorate it with images, idols, or symbols representing the form of the divine you connect with.",
+                  },
+                  {
+                    subtitle: "Daily Prayers and Offerings: ",
+                    desc: "Dedicate a specific time each day to offer prayers, devotional songs, or hymns to the divine. You can also deliver flowers, incense, or food to symbolize your love and gratitude.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList2,
+              data: {
+                image: bhaktiSadhnas,
+                list: [
+                  {
+                    subtitle: "Chanting and Kirtan: ",
+                    desc: "Engage in chanting the divine names or singing kirtans (devotional songs) that glorify the holy. Let the melodies uplift your soul and immerse yourself in the sweetness of devotion.",
+                  },
+                  {
+                    subtitle: "Reading Sacred Scriptures: ",
+                    desc: "Spend time reading and reflecting on sacred texts and stories that inspire devotion and strengthen your connection with the divine.",
+                  },
+                  {
+                    subtitle: "Selfless Service: ",
+                    desc: "Bhakti Sadhana involves selfless service to the divine, often expressed through acts of kindness and compassion towards all beings.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList3,
+              data: {
+                title: "Benefits of Bhakti Sadhana: ",
+                list: [
+                  {
+                    subtitle: "Divine Connection: ",
+                    desc: "Bhakti Sadhana fosters a deep and intimate connection with the divine, allowing practitioners to experience a sense of oneness and divine love.",
+                  },
+                  {
+                    subtitle: "Inner Peace: ",
+                    desc: "Devotion and surrender bring inner peace and tranquillity, alleviating stress and anxiety.",
+                  },
+                  {
+                    subtitle: "Emotional Healing: ",
+                    desc: "Bhakti Sadhana helps heal emotional wounds by offering solace and comfort through the embrace of divine love.",
+                  },
+                  {
+                    subtitle: "Ego Transcendence: ",
+                    desc: "By surrendering the ego to the divine, Bhakti Sadhana facilitates ego transcendence, leading to spiritual growth.",
+                  },
+                  {
+                    subtitle: "Compassion and Empathy: ",
+                    desc: "Devotion cultivates compassion, empathy, and selflessness towards all living beings.",
+                  },
+                  {
+                    subtitle: "Joy and Bliss: ",
+                    desc: "Bhakti Sadhana fills the heart with joy and bliss, elevating one's consciousness.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Potential Complications and Precautions:",
+                desc: "While Bhakti Sadhana is a beautiful and transformative practice, it is essential to be mindful of specific considerations:",
+                image: precautions,
+                list: [
+                  {
+                    subtitle: "Avoiding Ritualism: ",
+                    desc: "Bhakti Sadhana should not become a mechanical ritual. Embrace it with sincerity, love, and a genuine heart.",
+                  },
+                  {
+                    subtitle: "Balanced Approach: ",
+                    desc: "Emphasize love and devotion but maintain a balanced perspective, incorporating other aspects of spiritual growth, such as self-inquiry and self-discipline.",
+                  },
+                  {
+                    subtitle: "Respect for Diversity: ",
+                    desc: "Embrace the diversity of religious and spiritual paths, acknowledging that different individuals may have unique ways of expressing their devotion.",
+                  },
+                  {
+                    subtitle: "Avoiding Dogmatism: ",
+                    desc: "Avoid rigid beliefs and dogmas, staying open to the universality of divine love that transcends boundaries and labels.",
+                  },
+                ],
+              },
+            },
+            {
+              component: SubpagesConclusion,
+              data: {
+                title: "Conclusion: ",
+                desc: "Bhakti Sadhana is a sacred journey of devotion, love, and surrender to the divine. By engaging in daily prayers, devotional practices, and selfless service, practitioners can experience a profound connection with the heavenly, inner peace, and spiritual growth. To embark on this transformative path, choose a form of the divine that resonates with your heart, practice with sincerity and love, and stay open to the limitless power of Bhakti Sadhana. May your journey of devotion lead you to a life filled with divine love, compassion, and spiritual liberation.",
+                image: conclusionBulb,
+              },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
+          ],
         },
         {
           title: "Kundalini Sadhana",
           thumbnail: sadhnaType6,
           desc: "Walking slowly and attentively, cultivating awareness of present. Unlike seated meditation, it allows individuals to engage their bodies and minds while maintaining tranquility.",
-          slug: "/",
+          slug: "/activities/sadhna/kundalini-sadhna",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Kundalini Sadhana",
+                desc: "Kundalini Sadhana is an ancient spiritual practice that awakens the dormant energy residing at the base of the spine, known as Kundalini. This powerful energy, often depicted as a coiled serpent, holds immense transformative potential and can lead the practitioner toward spiritual awakening and self-realization. ",
+                image: adhvmukhaHeader,
+                variations: false,
+                var: "",
+              },
+            },
+            {
+              component: RightProcedureList,
+              data: {
+                title: "The Procedure of Kundalini Sadhana: ",
+                image: kundaliniSadhnaProcedure,
+                list: [
+                  {
+                    subtitle: "Preparation: ",
+                    desc: "Before beginning Kundalini Sadhana, it is essential to prepare the body and mind. Regular physical exercises, breathing techniques (pranayama), and meditation help to purify the system and create a conducive environment for Kundalini awakening.",
+                  },
+                  {
+                    subtitle: "Kundalini Activation: ",
+                    desc: "The practitioner usually starts with guided meditation and chanting to connect with the divine energy within. Specific mantras and visualizations awaken the dormant energy, drawing it upwards through the central channel (Sushumna Nadi).",
+                  },
+                  {
+                    subtitle: "Asanas: ",
+                    desc: "Certain yoga poses stimulate and balance the chakras, the energy centers in the body. This ensures the smooth flow of Kundalini energy through the spine.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList2,
+              data: {
+                image: kundaliniSadhnas,
+                list: [
+                  {
+                    subtitle: "Pranayama: ",
+                    desc: "Controlled breathing techniques help control the prana (life force energy) and direct it towards Kundalini's awakening.",
+                  },
+                  {
+                    subtitle: "Meditation: ",
+                    desc: "Regular meditation is a fundamental aspect of Kundalini Sadhana. It helps calm the mind, reduce distractions, and deepen the connection with the inner self.",
+                  },
+                  {
+                    subtitle: "Guru Guidance: ",
+                    desc: "It is highly recommended to practice Kundalini Sadhana under the guidance of an experienced guru or teacher. Awakening Kundalini is potent and should be approached with caution and care.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList3,
+              data: {
+                title: "Benefits of Kundalini Sadhana: ",
+                list: [
+                  {
+                    subtitle: "Spiritual Awakening: ",
+                    desc: "The primary goal of Kundalini Sadhana is to achieve spiritual awakening and self-realization. As Kundalini energy rises, it cleanses and purifies the chakras, leading to higher states of consciousness.",
+                  },
+                  {
+                    subtitle: "Enhanced Awareness: ",
+                    desc: "Practitioners often report heightened awareness and increased clarity and intuition.",
+                  },
+                  {
+                    subtitle: "Emotional Healing: ",
+                    desc: "Kundalini Sadhana can help release deep-seated emotional blockages, facilitating emotional healing and balance.",
+                  },
+                  {
+                    subtitle: "Physical Well-being: ",
+                    desc: "The practice involves yoga and meditation, contributing to physical health, flexibility, and overall well-being.",
+                  },
+                  {
+                    subtitle: "Increased Creativity: ",
+                    desc: "Kundalini's awakening is associated with enhanced creative abilities and a broader perspective on life.",
+                  },
+                  {
+                    subtitle: "Inner Peace: ",
+                    desc: "Regular practice of Kundalini Sadhana brings inner peace, even amidst life's challenges.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Potential Complications and Precautions:",
+                desc: "Kundalini's awakening is a profound process that can change an individual's life significantly. However, it is crucial to approach this practice with caution and awareness of potential complications:",
+                image: precautions,
+                list: [
+                  {
+                    subtitle: "Overwhelming Experiences: ",
+                    desc: "Some practitioners may encounter overwhelming physical, emotional, or psychic experiences during Kundalini's awakening. These experiences can be intense and challenging to handle.",
+                  },
+                  {
+                    subtitle: "Unpreparedness: ",
+                    desc: "Without proper preparation and guidance, the sudden awakening of Kundalini can lead to imbalances and difficulties in coping with daily life.",
+                  },
+                  {
+                    subtitle: "Physical Discomfort: ",
+                    desc: "Kundalini energy, when awakened, can cause physical discomfort and even lead to specific health issues if not channelled correctly.",
+                  },
+                  {
+                    subtitle: "Mental Instability: ",
+                    desc: "In some cases, improper Kundalini awakening may result in mental instability or emotional turmoil.",
+                  },
+                  {
+                    subtitle: "Ego Dissolution: ",
+                    desc: "Kundalini awakening can challenge one's ego, creating temporary confusion or loss of identity.",
+                  },
+                ],
+              },
+            },
+            {
+              component: SubpagesConclusion,
+              data: {
+                title: "Conclusion: ",
+                desc: "Kundalini Sadhana is a profound spiritual practice with immense personal growth and transformation potential. While its benefits are significant, practitioners must approach it with caution, preparation, and proper guidance. Kundalini's awakening is not to be taken lightly, as it can profoundly affect an individual's life's physical, emotional, and spiritual aspects. With the right approach and mindset, Kundalini Sadhana can be a transformative journey toward self-discovery and spiritual enlightenment.",
+                image: conclusionBulb,
+              },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
+          ],
         },
         {
           title: "Seva Sadhana",
           thumbnail: sadhnaType7,
           desc: "Walking slowly and attentively, cultivating awareness of present. Unlike seated meditation, it allows individuals to engage their bodies and minds while maintaining tranquility.",
-          slug: "/",
+          slug: "/activities/sadhna/seva-sadhna",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Seva Sadhana",
+                desc: "Seva Sadhna, also known as selfless or voluntary service, is a noble practice deeply ingrained in various spiritual and cultural traditions worldwide. It involves dedicating oneself to helping others without expecting anything in return. Seva Sadhna is not just an act of philanthropy; it is a profound spiritual practice that can lead to personal growth and a deeper connection with humanity. Seva Sadhna is rooted in the principle of selflessness and compassion. 'Seva' comes from Sanskrit, meaning service, and 'Sadhna' refers to a spiritual practice or discipline.",
+                image: adhvmukhaHeader,
+                variations: false,
+                var: "",
+              },
+            },
+            {
+              component: RightProcedureList,
+              data: {
+                title: "The Procedure of Seva Sadhana: ",
+                image: sevaSadhnaProcedure,
+                list: [
+                  {
+                    subtitle: "Identify the Cause: ",
+                    desc: "The first step is identifying a cause or a group of people in need. It could range from supporting underprivileged children and the elderly to providing food, shelter, or healthcare to the marginalized.",
+                  },
+                  {
+                    subtitle: "Volunteering: ",
+                    desc: "Once the cause is identified, individuals can volunteer their time, skills, or resources to contribute to the well-being of those in need.",
+                  },
+                  {
+                    subtitle: "Selfless Giving: ",
+                    desc: "Seva Sadhna involves giving without expecting reward or recognition. The focus is on serving others with a pure heart and genuine compassion.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList2,
+              data: {
+                image: sevaSadhnas,
+                list: [
+                  {
+                    subtitle: "Regular Engagement: ",
+                    desc: "The practice of Seva Sadhna is most effective when done regularly and consistently. It is not a one-time act but a continuous commitment to service.",
+                  },
+                  {
+                    subtitle: "Mindful Presence: ",
+                    desc: "While engaging in Seva, practitioners must be fully present and mindful of their actions and intentions.",
+                  },
+                  {
+                    subtitle: "Humility and Respect: ",
+                    desc: "Practitioners approach Seva Sadhna with humility and respect for the dignity and worth of the individuals they serve.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList3,
+              data: {
+                title: "Benefits of Seva Sadhana: ",
+                list: [
+                  {
+                    subtitle: "Personal Fulfillment: ",
+                    desc: "Engaging in selfless service brings a deep sense of fulfillment and purpose, enhancing the practitioner's overall well-being.",
+                  },
+                  {
+                    subtitle: "Cultivation of Empathy: ",
+                    desc: "By directly interacting with those in need, Seva Sadhna helps cultivate empathy and a deeper understanding of human struggles.",
+                  },
+                  {
+                    subtitle: "Inner Transformation: ",
+                    desc: "Seva Sadhna promotes inner transformation, fostering compassion, kindness, and selflessness.",
+                  },
+                  {
+                    subtitle: "Sense of Unity: ",
+                    desc: "Through service, practitioners realize their interconnectedness with all living beings, fostering a sense of unity and oneness.",
+                  },
+                  {
+                    subtitle: "Stress Reduction: ",
+                    desc: "Volunteering and serving others have been shown to reduce stress and improve mental health.",
+                  },
+                  {
+                    subtitle: "Positive Impact on Society: ",
+                    desc: "Seva Sadhna contributes to building a more compassionate and caring society, fostering positive change and social cohesion.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Potential Complications and Precautions:",
+                desc: "While Seva Sadhna is a noble practice, it is essential to approach it mindfully: ",
+                image: precautions,
+                list: [
+                  {
+                    subtitle: "Burnout: ",
+                    desc: "Practitioners may risk burnout if they overextend themselves or neglect self-care while engaging in Seva Sadhna.",
+                  },
+                  {
+                    subtitle: "Boundary Setting: ",
+                    desc: "Healthy boundaries are crucial to ensure the practitioner's well-being is not compromised while serving others.",
+                  },
+                  {
+                    subtitle: "Avoiding Ego Gratification: ",
+                    desc: "The true essence of Seva Sadhna lies in selflessness. Practitioners must be vigilant to avoid seeking personal recognition or validation for their service.",
+                  },
+                  {
+                    subtitle: "Sustainable Impact: ",
+                    desc: "It is essential to ensure that the service provided is sustainable and has a lasting positive impact on the recipients.",
+                  },
+                  {
+                    subtitle: "Equal Respect: ",
+                    desc: "Practitioners must approach Seva Sadhna with equal respect for the dignity and autonomy of the individuals they serve.",
+                  },
+                ],
+              },
+            },
+            {
+              component: SubpagesConclusion,
+              data: {
+                title: "Conclusion: ",
+                desc: "Seva Sadhna is a powerful spiritual practice that goes beyond philanthropy and transforms the lives of both the giver and the receiver. By serving others selflessly, practitioners tap into the essence of humanity and experience a deeper connection with the world around them. The benefits of Seva Sadhna extend beyond personal fulfillment; they contribute to building a compassionate and caring society, fostering unity and positive change. However, practitioners must approach Seva Sadhna with mindfulness, ensuring their well-being and the sustainability of the service provided. Embracing Seva Sadhna as a way of life can lead to a profound spiritual journey and impact on the world.",
+                image: conclusionBulb,
+              },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
+          ],
         },
         {
           title: "Nature Sadhana",
           thumbnail: sadhnaType8,
           desc: "Walking slowly and attentively, cultivating awareness of present. Unlike seated meditation, it allows individuals to engage their bodies and minds while maintaining tranquility.",
-          slug: "/",
+          slug: "/activities/sadhna/nature-sadhna",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Nature Sadhana",
+                desc: "Nature Sadhna is a spiritual practice that involves cultivating a deep connection with nature and recognizing the inherent unity between humans and the natural world. It is a profound way of experiencing nature's beauty, wisdom, and harmony, leading to a greater sense of peace, purpose, and spiritual awakening. Nature Sadhna is based on the principle that humans are an integral part of nature, and by reconnecting with the natural world, we can rediscover our innate connection with all living beings. ",
+                image: adhvmukhaHeader,
+                variations: false,
+                var: "",
+              },
+            },
+            {
+              component: RightProcedureList,
+              data: {
+                title: "The Procedure of Nature Sadhana: ",
+                image: natureSadhnaProcedure,
+                list: [
+                  {
+                    subtitle: "Mindful Observation: ",
+                    desc: "Nature Sadhna begins with mindful observation of the natural world. This could be as simple as spending time in a park, sitting by a river, or walking through a forest.",
+                  },
+                  {
+                    subtitle: "Connection with the Elements: ",
+                    desc: "Practitioners consciously connect with the five elements of nature - earth, water, fire, air, and ether - and recognize their presence within themselves.",
+                  },
+                  {
+                    subtitle: "Contemplative Practice: ",
+                    desc: "In nature, practitioners engage in reflective practices like meditation, deep breathing, or silent reflection to enhance their connection with the environment.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList2,
+              data: {
+                image: natureSadhnas,
+                list: [
+                  {
+                    subtitle: "Gratitude and Reverence: ",
+                    desc: "Nature Sadhna encourages practitioners to express gratitude and reverence for the abundance and beauty of the natural world.",
+                  },
+                  {
+                    subtitle: "Communion with Plants and Animals: ",
+                    desc: "Engaging in Nature Sadhna often involves direct rapport with plants and animals, fostering a sense of kinship and empathy.",
+                  },
+                  {
+                    subtitle: "Eco-friendly Lifestyle: ",
+                    desc: "Practitioners are encouraged to adopt an eco-friendly lifestyle, making conscious choices to protect and preserve the environment.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList3,
+              data: {
+                title: "Benefits of Nature Sadhana: ",
+                list: [
+                  {
+                    subtitle: "Inner Peace and Stress Reduction: ",
+                    desc: "Immersing oneself in nature can lead to inner peace and reduce stress and anxiety.",
+                  },
+                  {
+                    subtitle: "Spiritual Awakening: ",
+                    desc: "Nature Sadhna provides an opportunity for spiritual awakening and a deeper understanding of the interconnectedness of all life.",
+                  },
+                  {
+                    subtitle: "Improved Mental Health: ",
+                    desc: "Regular practice of Nature Sadhna is linked to improved mental health, including reduced depression and increased happiness.",
+                  },
+                  {
+                    subtitle: "Physical Well-being: ",
+                    desc: "Spending time in nature can boost physical health by reducing blood pressure and promoting overall well-being.",
+                  },
+                  {
+                    subtitle: "Enhanced Creativity and Focus: ",
+                    desc: "Nature Sadhna can stimulate creativity and enhance focus and productivity.",
+                  },
+                  {
+                    subtitle: "Environmental Consciousness: ",
+                    desc: "Practitioners of Nature Sadhna often become more conscious of their environmental impact and strive to adopt sustainable practices.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList,
+              data: {
+                title: "Potential Complications and Precautions:",
+                desc: "While Nature Sadhna is generally safe and beneficial, some considerations should be considered: ",
+                image: precautions,
+                list: [
+                  {
+                    subtitle: "Respect for Wildlife: ",
+                    desc: "When engaging with plants and animals in nature, respecting their space and not disturbing or harming them is essential.",
+                  },
+                  {
+                    subtitle: "Wilderness Awareness: ",
+                    desc: "Practitioners should be aware of potential risks in the wild, such as adverse weather conditions or encounters with wildlife.",
+                  },
+                  {
+                    subtitle: "Sustainable Practices: ",
+                    desc: "It is crucial to adopt sustainable practices and reduce our ecological footprint while engaging in Nature Sadhna.",
+                  },
+                  {
+                    subtitle: "Allergies and Health Conditions: ",
+                    desc: "Individuals with allergies or health conditions in outdoor environments should take necessary precautions.",
+                  },
+                ],
+              },
+            },
+            {
+              component: SubpagesConclusion,
+              data: {
+                title: "Conclusion: ",
+                desc: "Nature Sadhna is a profound and accessible spiritual practice that allows individuals to connect with the natural world and rediscover their inherent oneness with all living beings. By immersing ourselves in nature, we gain insights into the beauty and wisdom of the environment, leading to personal growth, inner peace, and spiritual awakening. Nature Sadhna also fosters environmental consciousness and a profound responsibility toward protecting and preserving the earth. As we embrace Nature Sadhna, we embark on a transformative journey that nurtures our souls and renews our bond with the natural world, fostering harmony, balance, and reverence for all life.",
+                image: conclusionBulb,
+              },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
+          ],
         },
       ],
     },

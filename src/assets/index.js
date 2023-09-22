@@ -225,6 +225,18 @@ import sadhnaType5 from "./images/activities/sadhna/sadhna-type-5.png";
 import sadhnaType6 from "./images/activities/sadhna/sadhna-type-6.png";
 import sadhnaType7 from "./images/activities/sadhna/sadhna-type-7.png";
 import sadhnaType8 from "./images/activities/sadhna/sadhna-type-8.png";
+import mantraSadhnaProcedure from "./images/activities/mantra-sadhna-procedure.png";
+import mantraSadhnas from "./images/activities/mantra-sadhnas.png";
+import japaSadhnaProcedure from "./images/activities/sadhna/japa-sadhna-procedure.png";
+import japaSadhnas from "./images/activities/sadhna/japa-sadhnas.png";
+import kundaliniSadhnaProcedure from "./images/activities/sadhna/kundalini-sadhna-procedure.png";
+import kundaliniSadhnas from "./images/activities/sadhna/kundalini-sadhnas.png";
+import bhaktiSadhnaProcedure from "./images/activities/sadhna/bhakti-sadhna-procedure.png";
+import bhaktiSadhnas from "./images/activities/sadhna/bhakti-sadhnas.png";
+import sevaSadhnaProcedure from "./images/activities/sadhna/seva-sadhna-procedure.png";
+import sevaSadhnas from "./images/activities/sadhna/seva-sadhnas.png";
+import natureSadhnaProcedure from "./images/activities/sadhna/nature-sadhna-procedure.png";
+import natureSadhnas from "./images/activities/sadhna/nature-sadhnas.png";
 // Activities >> Brain Exercise
 import brainExerciseHeader from "./images/activities/brainExercise/brain-exercise-header.png";
 import brainGameGalaxy from "./images/activities/brainExercise/brain-game-galaxy.png";
@@ -233,6 +245,9 @@ import brainGameHunter from "./images/activities/brainExercise/brain-game-turtle
 // Others
 import benefits from "./images/activities/yoga/others/benefits.png";
 import precautions from "./images/activities/yoga/others/precautions.png";
+import activitiesSubpagesProcedure from "./images/activities/activities-subpages-procedure.png";
+import yogaSadhnaTypes from "./images/activities/yoga-sadhna-types.png";
+import conclusionBulb from "./images/activities/conclusion-bulb.png";
 export {
   adhvmukhaHeader,
   benefits,
@@ -242,10 +257,13 @@ export {
   adhvVariationTwo,
   adhvVariationThree,
   brainExercise,
+  conclusionBulb,
   goalPlan,
+  activitiesSubpagesProcedure,
   uttanasanaHeader,
   navasanaHeader,
   ardhChandrasanaHeader,
+  yogaSadhnaTypes,
   meditation,
   sadhna,
   yoga,
@@ -275,6 +293,18 @@ export {
   sadhnaType6,
   sadhnaType7,
   sadhnaType8,
+  mantraSadhnaProcedure,
+  mantraSadhnas,
+  japaSadhnaProcedure,
+  japaSadhnas,
+  kundaliniSadhnaProcedure,
+  kundaliniSadhnas,
+  bhaktiSadhnaProcedure,
+  bhaktiSadhnas,
+  sevaSadhnaProcedure,
+  sevaSadhnas,
+  natureSadhnaProcedure,
+  natureSadhnas,
   // Yoga
   yogaHeader,
   yogaType1,
