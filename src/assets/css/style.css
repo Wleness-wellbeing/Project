@@ -144,7 +144,3 @@ a {
 .doctorSlider .swiper-wrapper {
   @apply h-fit;
 }
-/* Navigation Dropdown */
-.subdropdown:hover .subdropdown-pages {
-  @apply block;
-}

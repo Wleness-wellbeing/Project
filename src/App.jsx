@@ -343,7 +343,6 @@ function App() {
             </SignupLayout>
           }
         />
-
         <Route
           path="/signup"
           element={
@@ -362,7 +361,6 @@ function App() {
                 </SignupLayout>
               }
             />
-
             <Route
               path="/signup"
               element={
