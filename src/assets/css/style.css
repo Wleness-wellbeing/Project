@@ -6,6 +6,7 @@
 
 * {
   @apply select-none scroll-smooth;
+  -webkit-tap-highlight-color: transparent; /* For some mobile browsers like Safari */
 }
 
 h1,

@@ -37,8 +37,8 @@ function Navbar() {
         <div className="container relative mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="w-40 py-2 md:w-56 lg:w-64 xl:w-48 xl:py-3">
-            <Link to="/" className="outline-none">
-              <img src={logo} alt="" className="w-full object-cover" />
+            <Link to="/" className="outline-none visited:bg-green-500">
+              <img src={logo} alt="" className="w-full object-cover " />
             </Link>
           </div>
 
