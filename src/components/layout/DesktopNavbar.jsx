@@ -11,6 +11,7 @@ import { profile } from "../../assets";
 
 export default function DesktopNavbar({ toggleJoinUs, token }) {
   const userDataFromLocalStorage = JSON.parse(localStorage.getItem("user"));
+  console.log(userDataFromLocalStorage);
 
   return (
     <>
@@ -32,7 +33,7 @@ export default function DesktopNavbar({ toggleJoinUs, token }) {
           Join Us
         </button>
 
-        {token ? (
+        {!token ? (
           <Link
             to="/signup"
             className="btn-primary !w-fit !rounded-full !bg-primary-400 !py-2 font-semibold hover:!bg-primary-300"

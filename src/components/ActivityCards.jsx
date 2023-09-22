@@ -31,19 +31,19 @@ const ActivityCards = () => {
   ];
 
   return (
-    <div className="container mx-auto flex items-center justify-center py-10  ">
+    <div className="container mx-auto flex flex-col items-center justify-center py-10 pt-8 2xl:flex">
       {cardDataArray.map((cardData, index) => (
         <Link to={cardData.slug} key={index}>
           <div
             key={index}
-            className="border-gradient-to-tr m-4  rounded-xl border-4 border-cyan-300 shadow-lg "
+            className="border-gradient-to-tr m-12  rounded-xl border-4 border-cyan-300 shadow-lg "
           >
             <img
               src={cardData.image}
               alt="Card Image"
               className="mx-auto -mt-12"
             />
-            <div className="px-6 py-4">
+            <div className="px-6 py-4 ">
               <div className="mb-2 text-center text-xl font-bold text-primary-500">
                 <h2>{cardData.header}</h2>
               </div>

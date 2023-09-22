@@ -118,6 +118,7 @@ function AboutUs() {
           your journey
         </h2>
       </div>
+      {/* journey is begain so lets start  */}
 
       <div className="grid h-full place-items-center py-5">
         <h2 className="subheading">
@@ -150,6 +151,7 @@ function AboutUs() {
             </h2>
             <p className="font-semibold">
               Looking to be part of the Wleness Team?
+              {/* make it responsive to the mobile devices as it is not responsive to the screen of that */}
             </p>
           </div>
         </div>
