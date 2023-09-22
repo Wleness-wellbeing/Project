@@ -120,6 +120,22 @@ export {
   homeSelfcare,
 };
 
+import about1 from "./images/aboutus/about1.png"
+import about2 from "./images/aboutus/about2.png"
+import about3 from "./images/aboutus/about3.png"
+import about4 from "./images/aboutus/about4.png"
+import about5 from "./images/aboutus/about5.png"
+import about6 from "./images/aboutus/about6.png"
+import meeting from "./images/aboutus/meeting.png"
+
+export {
+  about1,about2,about3,about4,about5,about6,meeting
+}
+
+
+
+
+
 // Avatar images
 import avatarImage1 from "./images/activities/avatar/image 13.png";
 import avatarImage2 from "./images/activities/avatar/image 14.png";

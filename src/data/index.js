@@ -1671,29 +1671,22 @@ export const activities = [
             {
               component: RightImageList,
               data: {
-                title: "Benefits of Adho Mukha Svanasana: ",
-                desc: "There are numerous benefits to practicing Adho Mukha Svanasana, including:",
+                title: "Benefits of Mindfulness Meditation: ",
+                desc: "Mindfulness Meditation offers many benefits for the body and mind, including",
                 list: [
                   {
-                    subtitle: "Increases flexibility: ",
-                    desc: "This pose stretches the hamstrings, calves, and spine, which can help increase flexibility in these areas.",
+                    subtitle: "Reduces Stress and Anxiety: ",
+                    desc: " Mindfulness meditation allows us to focus specifically on the present, which helps calm the mind and reduces stress and anxiety as a by-product. It helps lower one's level of the stress hormone named cortisol, reducing overall stress and its negative impacts on the physical and mental body.",
                   },
                   {
-                    subtitle: "Strengthens the upper body: ",
-                    desc: "Adho Mukha Svanasana is an excellent pose for strengthening the arms, shoulders, and upper back.",
+                    subtitle: "Improves Mental Clarity:  ",
+                    desc: "By practising mindfulness meditation one enhances attention span and cognitive abilities, leading to better focus and concentration in daily chores. It can enhance the ability to concentrate, make better decisions, and increase overall mental clarity.",
                   },
                   {
-                    subtitle: "Relieves stress: ",
-                    desc: "This pose can help calm the mind and reduce stress and anxiety.",
+                    subtitle: "Enhances Emotional Stability:",
+                    desc: "Mindfulness meditation teaches us to acknowledge and accept our thoughts and emotions sans judgement, leading to improved emotional stability and well-being. It in turn leads to greater emotional resilience.",
                   },
-                  {
-                    subtitle: "Improves digestion: ",
-                    desc: "The inversion of the pose can help improve digestion and relieve constipation.",
-                  },
-                  {
-                    subtitle: "Energizes the body: ",
-                    desc: "Adho Mukha Svanasana can help boost energy levels by increasing blood flow to the brain.",
-                  },
+                 
                 ],
               },
             },
@@ -1742,7 +1735,7 @@ export const activities = [
               component: HeaderWithImage,
               data: {
                 title: "Breadth Awareness Meditation",
-                desc: "Breath awareness it is a form of meditation that involves focusing on the rhythm and sensation of our breathing pattern. By turning our attention explicitly to our breath, we can calm down our minds, reduce present stress and anxiety, and improve our overall well-being inside out. In this meditation while closing the eyes you can experience the stillness and focus on the depth of your breathing. meditation that can help us find peace and clarity amidst the chaos of the modern world. Today we will explore what exactly is mindfulness meditation, the benefits of mindfulness meditation, how to practice it, and how it can improve our overall well-being and health. The good news is, all will be in layman's terms.",
+                desc: "Breath awareness it is a form of meditation that involves focusing on the rhythm and sensation of our breathing pattern. By turning our attention explicitly to our breath, we can calm down our minds, reduce present stress and anxiety, and improve our overall well-being inside out. In this meditation while closing the eyes you can experience the stillness and focus on the depth of your breathing.",
                 image: breadthHeader,
                 var: "",
               },
@@ -1773,29 +1766,26 @@ export const activities = [
             {
               component: RightImageList,
               data: {
-                title: "Benefits of Adho Mukha Svanasana: ",
-                desc: "There are numerous benefits to practicing Adho Mukha Svanasana, including:",
+                title: "Benefits of Breath Awareness Meditation:",
+                desc:  "Breath Awareness Meditation offers many benefits for the body and mind, including",
                 list: [
                   {
                     subtitle: "Increases flexibility: ",
                     desc: "This pose stretches the hamstrings, calves, and spine, which can help increase flexibility in these areas.",
                   },
                   {
-                    subtitle: "Strengthens the upper body: ",
-                    desc: "Adho Mukha Svanasana is an excellent pose for strengthening the arms, shoulders, and upper back.",
+                    subtitle: "Relaxation and Better Concentration:",
+                    desc: " Breath awareness meditation significantly improves our ability to concentrate on a matter and stay focused, which can enhance productivity and overall mental clarity with time as proven scientifically.",
                   },
                   {
-                    subtitle: "Relieves stress: ",
-                    desc: "This pose can help calm the mind and reduce stress and anxiety.",
+                    subtitle: "Reduce blood pressure:  ",
+                    desc: " Numerous studies have proven the fact that mindfulness meditation can not only help one lower their blood pressure but also help maintain it.",
                   },
                   {
-                    subtitle: "Improves digestion: ",
-                    desc: "The inversion of the pose can help improve digestion and relieve constipation.",
+                    subtitle: "Enhanced Physical Well-being: ",
+                    desc: "Focused and concentrated breathing can uplift our physical as well as mental well-being by reducing tension and inflammation present in our muscles, lowering blood pressure, and improving digestion and mobility.",
                   },
-                  {
-                    subtitle: "Energizes the body: ",
-                    desc: "Adho Mukha Svanasana can help boost energy levels by increasing blood flow to the brain.",
-                  },
+                
                 ],
               },
             },
@@ -1844,7 +1834,7 @@ export const activities = [
               component: HeaderWithImage,
               data: {
                 title: "Kundalini Meditation",
-                desc: "Breath Kundalini is a Sanskrit word that refers to the coiled energy located at the base of our spine. It is often represented by a snake. The concept is that through Kundalini meditation, this hidden life energy can be awakened and guided up through the body's energy centres which are 7 in number, known as chakras, leading to a higher state of consciousness and spiritual awakening from within. it is a form of meditation that involves focusing on the rhythm and sensation of our breathing pattern. By turning our attention explicitly to our breath, we can calm down our minds, reduce present stress and anxiety, and improve our overall well-being inside out. In this meditation while closing the eyes you can experience the stillness and focus on the depth of your breathing. meditation that can help us find peace and clarity amidst the chaos of the modern world. Today we will explore what exactly is mindfulness meditation, the benefits of mindfulness meditation, how to practice it, and how it can improve our overall well-being and health. The good news is, all will be in layman's terms.",
+                desc: "Kundalini is a Sanskrit word that refers to the coiled energy located at the base of our spine. It is often represented by a snake. The concept is that through Kundalini meditation, this hidden life energy can be awakened and guided up through the body's energy centres which are 7 in number, known as chakras, leading to a higher state of consciousness and spiritual awakening from within.",
                 image: kundaliniHeader,
                 variations: false,
                 var: "",
@@ -1876,29 +1866,26 @@ export const activities = [
             {
               component: RightImageList,
               data: {
-                title: "Benefits of Adho Mukha Svanasana: ",
-                desc: "There are numerous benefits to practicing Adho Mukha Svanasana, including:",
+                title: "Benefits of Kundalini Meditation: ",
+                desc: "Kundalini Meditation offers many benefits for the body and mind, including",
                 list: [
                   {
-                    subtitle: "Increases flexibility: ",
-                    desc: "This pose stretches the hamstrings, calves, and spine, which can help increase flexibility in these areas.",
+                    subtitle: "Explore beyond consciousness:  ",
+                    desc: " Kundalini meditation can directly lead to a heightened state of awareness beyond the 5 senses and expanded consciousness merging with the universe, allowing individuals to tap into unlocking their full potential and explore higher realms of existence hidden from the rest of us.",
                   },
                   {
-                    subtitle: "Strengthens the upper body: ",
-                    desc: "Adho Mukha Svanasana is an excellent pose for strengthening the arms, shoulders, and upper back.",
+                    subtitle: "Emotional Uplifting: ",
+                    desc: "With regular practice and consistency, Kundalini meditation can help release emotional baggage and other blockages and traumas stored in the body over time, bringing out the best of you in terms of healing, balance, and a greater sense of well-being inside out.",
                   },
                   {
-                    subtitle: "Relieves stress: ",
-                    desc: "This pose can help calm the mind and reduce stress and anxiety.",
+                    subtitle: "Heightened E Vitality: ",
+                    desc: " Once successfully awakening the Kundalini energy, practitioners may expect to experience a significant increase in their energy, vitality, and a sense of empowerment in their daily lives from within",
                   },
                   {
-                    subtitle: "Improves digestion: ",
-                    desc: "The inversion of the pose can help improve digestion and relieve constipation.",
+                    subtitle: "Enhanced Intuition:  ",
+                    desc: " Kundalini meditation has been proven and well-known to awaken dormant creativity and strengthen our inner intuition, allowing individuals to access the best of their inner wisdom and artistic expression.",
                   },
-                  {
-                    subtitle: "Energizes the body: ",
-                    desc: "Adho Mukha Svanasana can help boost energy levels by increasing blood flow to the brain.",
-                  },
+                 
                 ],
               },
             },
@@ -1979,29 +1966,22 @@ export const activities = [
             {
               component: RightImageList,
               data: {
-                title: "Benefits of Adho Mukha Svanasana: ",
-                desc: "There are numerous benefits to practicing Adho Mukha Svanasana, including:",
+                title: "Benefits of Zen Meditation: ",
+                desc: "Zen Meditation offers many benefits for the body and mind, including",
                 list: [
                   {
-                    subtitle: "Increases flexibility: ",
-                    desc: "This pose stretches the hamstrings, calves, and spine, which can help increase flexibility in these areas.",
+                    subtitle: "Enhanced Creativity: ",
+                    desc: " When we are stressed and overwhelmed, our ability to generate new ideas and be innovative suffers. However, Zen meditation can be a remedy for this issue. By promoting increased blood circulation to the brain and energizing the right side, which is associated with creativity, Zen meditation helps unlock our creative potential.",
                   },
                   {
-                    subtitle: "Strengthens the upper body: ",
-                    desc: "Adho Mukha Svanasana is an excellent pose for strengthening the arms, shoulders, and upper back.",
+                    subtitle: "Improved Mental Well-being: ",
+                    desc: " Zen meditation addresses deep-seated anxiety and depression, offering a path to finding clarity and answers to troubling questions. Moreover, it facilitates reconnection with life, fostering empathy and inner awareness, leading to improved psychological well-being. It promotes our cognitive abilities.",
                   },
                   {
-                    subtitle: "Relieves stress: ",
-                    desc: "This pose can help calm the mind and reduce stress and anxiety.",
+                    subtitle: "Heightened Knowledge and Insight",
+                    desc: " Engaging in Zen meditation fosters a thirst for knowledge and a deeper understanding of life's essence. This practice provides profound insights into one's place and purpose in the world, enabling individuals to detach from societal expectations. As a result, they are better equipped to embrace and enjoy life to the fullest.",
                   },
-                  {
-                    subtitle: "Improves digestion: ",
-                    desc: "The inversion of the pose can help improve digestion and relieve constipation.",
-                  },
-                  {
-                    subtitle: "Energizes the body: ",
-                    desc: "Adho Mukha Svanasana can help boost energy levels by increasing blood flow to the brain.",
-                  },
+                 
                 ],
               },
             },
@@ -2050,7 +2030,7 @@ export const activities = [
               component: HeaderWithImage,
               data: {
                 title: "Spiritual Meditation",
-                desc: "Breath Zen Spiritual meditation is a unique form of contemplative practice that selectively focuses on invoking a deeper connection with one's inner true self, reaching higher consciousness or experiencing a divine presence from within. It is practiced primarily by people from various religious and spiritual backgrounds, as well as those who identify themselves as spiritual but not religious. It is an efficient way to lead away from the chaos leading to a higher state of consciousness and spiritual awakening from within. is a fundamental practice in Zen Buddhism that usually involves sitting meditation practising mudras. Zazen emphasizes specifically mindfulness of breath and posture to develop a deepened insight into one's true nature and achieve a state of mental clarity and calm away from the chaos leading to a higher state of consciousness and spiritual awakening from within. it is a form of meditation that involves focusing on the rhythm and sensation of our breathing pattern. By turning our attention explicitly to our breath, we can calm down our minds, reduce present stress and anxiety, and improve our overall well-being inside out. In this meditation while closing the eyes you can experience the stillness and focus on the depth of your breathing. meditation that can help us find peace and clarity amidst the chaos of the modern world. Today we will explore what exactly is mindfulness meditation, the benefits of mindfulness meditation, how to practice it, and how it can improve our overall well-being and health. The good news is, all will be in layman's terms.",
+                desc: "Spiritual meditation is a unique form of contemplative practice that selectively focuses on invoking a deeper connection with one's inner true self, reaching higher consciousness or experiencing a divine presence from within. It is practiced primarily by people from various religious and spiritual backgrounds, as well as those who identify themselves as spiritual but not religious. It is an efficient way to lead away from the chaos leading to a higher state of consciousness and spiritual awakening from within.",
                 image: spiritualHeader,
                 variations: false,
                 var: "",
@@ -2082,29 +2062,22 @@ export const activities = [
             {
               component: RightImageList,
               data: {
-                title: "Benefits of Adho Mukha Svanasana: ",
-                desc: "There are numerous benefits to practicing Adho Mukha Svanasana, including:",
+                title: "Benefits of Spiritual Meditation:",
+                desc: "Spiritual Meditation offers many benefits for the body and mind, including",
                 list: [
                   {
-                    subtitle: "Increases flexibility: ",
-                    desc: "This pose stretches the hamstrings, calves, and spine, which can help increase flexibility in these areas.",
+                    subtitle: "Increase aura positivity: ",
+                    desc: "When we are stressed and overwhelmed, our ability to generate new ideas and be innovative suffers and our aura dims down. However, spiritual meditation can regenerate inner stillness and peace for this issue. By promoting increased blood circulation beyond the brain and energizing from within to unlock our creative potential.",
                   },
                   {
-                    subtitle: "Strengthens the upper body: ",
-                    desc: "Adho Mukha Svanasana is an excellent pose for strengthening the arms, shoulders, and upper back.",
+                    subtitle: "Improved Neutrality and Equanimity: ",
+                    desc: "With spiritual meditation addresses deep-seated anxiety and depression, offering a path to finding sans judgement ruled by clarity and answers to troubling questions. Moreover, it facilitates reconnection with life, fostering empathy and inner awareness, leading to improved psychological well-being. It promotes our cognitive abilities.",
                   },
                   {
-                    subtitle: "Relieves stress: ",
-                    desc: "This pose can help calm the mind and reduce stress and anxiety.",
+                    subtitle: "Heightened Knowledge and Insight:",
+                    desc: "Abundance, generosity and gratitude are fostered by a thirst for knowledge and a deeper understanding of life's essence. This practice provides profound insights into one's place and purpose in the world, enabling individuals to detach from societal expectations. As a result, they are better equipped to embrace and enjoy life to the fullest.",
                   },
-                  {
-                    subtitle: "Improves digestion: ",
-                    desc: "The inversion of the pose can help improve digestion and relieve constipation.",
-                  },
-                  {
-                    subtitle: "Energizes the body: ",
-                    desc: "Adho Mukha Svanasana can help boost energy levels by increasing blood flow to the brain.",
-                  },
+                
                 ],
               },
             },
@@ -2186,29 +2159,38 @@ export const activities = [
             {
               component: RightImageList,
               data: {
-                title: "Benefits of Adho Mukha Svanasana: ",
-                desc: "There are numerous benefits to practicing Adho Mukha Svanasana, including:",
+                title: "Benefits of Walking Meditation: ",
+                desc: "Walking Meditation offers many benefits for the body and mind, including",
                 list: [
                   {
-                    subtitle: "Increases flexibility: ",
-                    desc: "This pose stretches the hamstrings, calves, and spine, which can help increase flexibility in these areas.",
+                    subtitle: "Stress Reduction:",
+                    desc: "Walking meditation can be a great way to relieve stress and tension. The rhythmic movement and mindful breathing help calm the nervous system, leading to relaxation and ease.",
                   },
                   {
-                    subtitle: "Strengthens the upper body: ",
-                    desc: "Adho Mukha Svanasana is an excellent pose for strengthening the arms, shoulders, and upper back.",
+                    subtitle: "Improved Concentration and Focus:",
+                    desc: " Regular walking meditation enhances concentration and cognitive abilities. It trains the mind to sustain attention on the walking process, which can then be transferred to other tasks and activities in daily life.",
                   },
                   {
-                    subtitle: "Relieves stress: ",
-                    desc: "This pose can help calm the mind and reduce stress and anxiety.",
+                    subtitle: "Physical Exercise: ",
+                    desc: "Walking is a low-impact exercise that can benefit cardiovascular health, strengthen muscles, and improve overall fitness. Incorporating mindfulness into walking adds a meditative dimension to the practice.",
                   },
                   {
-                    subtitle: "Improves digestion: ",
-                    desc: "The inversion of the pose can help improve digestion and relieve constipation.",
+                    subtitle: "Enhanced Self-Awareness: ",
+                    desc: "Walking meditation allows individuals to observe their thoughts, emotions, and bodily sensations as they arise during practice. This heightened self-awareness can lead to a better understanding and acceptance of one's inner experiences.",
                   },
                   {
-                    subtitle: "Energizes the body: ",
-                    desc: "Adho Mukha Svanasana can help boost energy levels by increasing blood flow to the brain.",
+                    subtitle: "Mood Regulation:",
+                    desc: " Engaging in walking meditation can have positive effects on mood and emotional well-being. It has been found to reduce symptoms of anxiety and depression, promoting a more positive outlook on life.",
                   },
+                  {
+                    subtitle: "Connection with Nature: ",
+                    desc: " Walking meditation in natural settings, such as parks or forests, offers the added benefit of connecting with nature. This connection has been shown to enhance feelings of well-being and reduce stress.",
+                  },
+                  {
+                    subtitle: "Mind-Body Integration: ",
+                    desc: "Walking meditation fosters a deeper connection between the mind and body. It allows individuals to be more attuned to the physical sensations of walking, promoting a sense of grounding and embodiment.",
+                  }
+                  
                 ],
               },
             },
