@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import FaqWithImage from "../../components/FaqWithImage";
 import { lifeStyleCoachingFaqs } from "../../data/faqs";
 import { lifecoching, wlenessLifeCoaching } from "../../data";
 import { lifeCoachingHeader, rectangle2, rectangle3 } from "../../assets";
+import LifeCoachingForm from "../../components/Forms/LifecoachingForm";
 
 const results = [
   [
@@ -28,6 +29,13 @@ const results = [
   ],
 ];
 export default function LifeCoching() {
+  const [lifecoachingForm, setLifeCoachingForm] = useState(false);
+
+  // Toggle form
+  const toggleForm = () => {
+    setLifeCoachingForm(!lifecoachingForm);
+  };
+
   return (
     <>
       <header className="relative overflow-x-clip bg-secondary/10 pb-6 pt-12 xl:pb-10 xl:pt-16">
@@ -44,7 +52,7 @@ export default function LifeCoching() {
               <h1 className="subheading">Unleash Your Inner Champion</h1>
               <h2 className="text-2xl font-semibold">
                 <span className="">Through Wleness </span>
-                <span className="heading-primary font-bold">Life Coaching</span>
+                <span className="heading-primary ">Life Coaching</span>
               </h2>
             </hgroup>
 
@@ -60,7 +68,9 @@ export default function LifeCoching() {
             </ul>
 
             <div className="mt-6">
-              <button className="btn-one">Book Us Now</button>
+              <button onClick={toggleForm} className="btn-one">
+                Book Us Now
+              </button>
             </div>
           </div>
         </div>
@@ -161,6 +171,7 @@ export default function LifeCoching() {
       </section>
 
       <FaqWithImage data={lifeStyleCoachingFaqs} />
+      <LifeCoachingForm isOpen={lifecoachingForm} onClose={toggleForm} />
     </>
   );
 }

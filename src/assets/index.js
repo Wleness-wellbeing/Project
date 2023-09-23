@@ -131,6 +131,19 @@ import meeting from "./images/aboutus/meeting.png"
 export {
   about1,about2,about3,about4,about5,about6,meeting
 }
+// executive coaching
+import executiveIcon1 from "./images/executiveCoching/executiveIcon1.png"
+import executiveIcon2 from "./images/executiveCoching/executiveIcon2.png"
+import executiveIcon3 from "./images/executiveCoching/executiveIcon3.png"
+import executiveIcon4 from "./images/executiveCoching/executiveIcon4.png"
+import executiveHeader from "./images/executiveCoching/header1.png"
+import executiveimage2 from "./images/executiveCoching/image2.png"
+import executiveimage3 from "./images/executiveCoching/image3.png"
+
+export{
+  executiveHeader,executiveIcon1,executiveIcon2,executiveIcon3,executiveIcon4,executiveimage2,executiveimage3
+}
+
 
 
 
