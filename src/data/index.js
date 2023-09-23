@@ -177,22 +177,58 @@ export const therapies = [
     slug: "/therapy/depression",
   },
   {
-    name: "Panic Attacks",
-    title: "Panic Attacks",
-    image: issuePanicAttack,
-    slug: "/therapy/panic-attack",
-  },
-  {
     name: "Anxiety",
     title: "Anxiety",
     image: issueAnxiety,
     slug: "/therapy/anxiety",
   },
   {
-    name: "Eating Disorder",
-    title: "Eating Disorder",
-    image: issueEatingDisorder,
-    slug: "/therapy/eating-disorder",
+    name: "Anger",
+    title: "Anger",
+    image: issueAnger,
+    slug: "/therapy/anger",
+  },
+  {
+    name: "Panic Attacks",
+    title: "Panic Attacks",
+    image: issuePanicAttack,
+    slug: "/therapy/panic-attack",
+  },
+  {
+    name: "Bipolar Disorder",
+    title: "Bipolar Disorder",
+    image: issueBiopolarDisorder,
+    slug: "/therapy/bipolar-disorder",
+  },
+  {
+    name: "LGBTQ",
+    title: "LGBTQ",
+    image: issueLgbtq,
+    slug: "/therapy/lgbtq",
+  },
+  {
+    name: "ADHD",
+    title: "Attention deficit hyperactivity disorder",
+    image: issueAdhd,
+    slug: "/therapy/adhd",
+  },
+  {
+    name: "ODD",
+    title: "Oppositional defiant disorder",
+    image: issueOdd,
+    slug: "/therapy/odd",
+  },
+  {
+    name: "Paranoia",
+    title: "Paranoia",
+    image: issueParanoia,
+    slug: "/therapy/paranoia",
+  },
+  {
+    name: "Conduct Disorder",
+    title: "Conduct Disorder",
+    image: issueCd,
+    slug: "/therapy/conduct-disorder",
   },
   {
     name: "Relationship",
@@ -201,10 +237,10 @@ export const therapies = [
     slug: "/therapy/relationship",
   },
   {
-    name: "Bipolar Disorder",
-    title: "Bipolar Disorder",
-    image: issueBiopolarDisorder,
-    slug: "/therapy/bipolar-disorder",
+    name: "Eating Disorder",
+    title: "Eating Disorder",
+    image: issueEatingDisorder,
+    slug: "/therapy/eating-disorder",
   },
   {
     name: "OCD",
@@ -223,42 +259,6 @@ export const therapies = [
     title: "Parenting",
     image: issueParenting,
     slug: "/therapy/parenting",
-  },
-  {
-    name: "Paranoia",
-    title: "Paranoia",
-    image: issueParanoia,
-    slug: "/therapy/paranoia",
-  },
-  {
-    name: "Anger",
-    title: "Anger",
-    image: issueAnger,
-    slug: "/therapy/anger",
-  },
-  {
-    name: "ADHD",
-    title: "Attention deficit hyperactivity disorder",
-    image: issueAdhd,
-    slug: "/therapy/adhd",
-  },
-  {
-    name: "ODD",
-    title: "Oppositional defiant disorder",
-    image: issueOdd,
-    slug: "/therapy/odd",
-  },
-  {
-    name: "Conduct Disorder",
-    title: "Conduct Disorder",
-    image: issueCd,
-    slug: "/therapy/conduct-disorder",
-  },
-  {
-    name: "LGBTQ",
-    title: "LGBTQ",
-    image: issueLgbtq,
-    slug: "/therapy/lgbtq",
   },
 ];
 
@@ -1866,7 +1866,6 @@ export const activities = [
                     subtitle: "Enhances Emotional Stability:",
                     desc: "Mindfulness meditation teaches us to acknowledge and accept our thoughts and emotions sans judgement, leading to improved emotional stability and well-being. It in turn leads to greater emotional resilience.",
                   },
-                 
                 ],
               },
             },
@@ -1947,7 +1946,7 @@ export const activities = [
               component: RightImageList,
               data: {
                 title: "Benefits of Breath Awareness Meditation:",
-                desc:  "Breath Awareness Meditation offers many benefits for the body and mind, including",
+                desc: "Breath Awareness Meditation offers many benefits for the body and mind, including",
                 list: [
                   {
                     subtitle: "Increases flexibility: ",
@@ -1965,7 +1964,6 @@ export const activities = [
                     subtitle: "Enhanced Physical Well-being: ",
                     desc: "Focused and concentrated breathing can uplift our physical as well as mental well-being by reducing tension and inflammation present in our muscles, lowering blood pressure, and improving digestion and mobility.",
                   },
-                
                 ],
               },
             },
@@ -2065,7 +2063,6 @@ export const activities = [
                     subtitle: "Enhanced Intuition:  ",
                     desc: " Kundalini meditation has been proven and well-known to awaken dormant creativity and strengthen our inner intuition, allowing individuals to access the best of their inner wisdom and artistic expression.",
                   },
-                 
                 ],
               },
             },
@@ -2161,7 +2158,6 @@ export const activities = [
                     subtitle: "Heightened Knowledge and Insight",
                     desc: " Engaging in Zen meditation fosters a thirst for knowledge and a deeper understanding of life's essence. This practice provides profound insights into one's place and purpose in the world, enabling individuals to detach from societal expectations. As a result, they are better equipped to embrace and enjoy life to the fullest.",
                   },
-                 
                 ],
               },
             },
@@ -2257,7 +2253,6 @@ export const activities = [
                     subtitle: "Heightened Knowledge and Insight:",
                     desc: "Abundance, generosity and gratitude are fostered by a thirst for knowledge and a deeper understanding of life's essence. This practice provides profound insights into one's place and purpose in the world, enabling individuals to detach from societal expectations. As a result, they are better equipped to embrace and enjoy life to the fullest.",
                   },
-                
                 ],
               },
             },
@@ -2369,8 +2364,7 @@ export const activities = [
                   {
                     subtitle: "Mind-Body Integration: ",
                     desc: "Walking meditation fosters a deeper connection between the mind and body. It allows individuals to be more attuned to the physical sensations of walking, promoting a sense of grounding and embodiment.",
-                  }
-                  
+                  },
                 ],
               },
             },
@@ -3796,13 +3790,19 @@ export const homeServices = [
     slug: "/services/therapy",
   },
   {
+    title: "Music Healing",
+    desc: "A Collection of diverse music based mechanisms, techniques with interdisciplinary approach to maintain, restore and improve- Physical, Psychological, social and holistic health.",
+    image: homeMeditation,
+    slug: "/services/music-healing",
+  },
+  {
     title: "Executive Coaching",
     desc: "Executive coaching elevates leadership, empowers high-level staff, & drives positive results. It maximizes potential, navigates the challenges, &  enhances performance.",
     image: homeExecutiveCoaching,
     slug: "/executive-coaching",
   },
   {
-    title: "Corporate",
+    title: "Corporate Wellbeing",
     desc: "Corporate mental wellness services focus on employee well-being, and tackling the  challenges, reducing stress, and promoting emotional resilience at work.",
     image: homeCorporate,
     slug: "/corporate-wellbeing",
@@ -3812,6 +3812,12 @@ export const homeServices = [
     desc: "Life coaching empowers well-being, productivity, and balance. It encourages health, reduces stress, boosts motivation, and enhances performance.",
     image: homeLifestyleCoaching,
     slug: "/life-coaching",
+  },
+  {
+    title: "Internship",
+    desc: "Unlock career opportunities & gain experience through our internship programs.  Explore placements that align with your academic  professional goals,  skills & opportunities.",
+    image: homeInternship,
+    slug: "/internship",
   },
   {
     title: "Yoga",
@@ -3824,18 +3830,6 @@ export const homeServices = [
     desc: "Meditation fosters mental wellness by focusing the mind and reducing cluttered thoughts. It enhances clarity, relaxation, and self-awareness.",
     image: homeMeditation,
     slug: "/activities/meditation",
-  },
-  {
-    title: "Music Healing",
-    desc: "A Collection of diverse music based mechanisms, techniques with interdisciplinary approach to maintain, restore and improve- Physical, Psychological, social and holistic health.",
-    image: homeMeditation,
-    slug: "/services/music-healing",
-  },
-  {
-    title: "Internship",
-    desc: "Unlock career opportunities & gain experience through our internship programs.  Explore placements that align with your academic  professional goals,  skills & opportunities.",
-    image: homeInternship,
-    slug: "/internship",
   },
   {
     title: "Self Care",

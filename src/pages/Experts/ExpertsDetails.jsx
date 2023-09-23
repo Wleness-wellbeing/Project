@@ -109,10 +109,10 @@ export default function ExpertsDetails() {
       <div className="bg-primary-50/40">
         <div className="container mx-auto py-4 text-center">
           <h2 className="subheading heading-primary">
-            What Our Patients Say About Us
+            What Our Clients Say About Us
           </h2>
           <p className="text-center font-medium leading-5 xl:text-lg xl:leading-6">
-            Hear from our valued patients about their experience with us and the
+            Hear from our valued clients about their experience with us and the
             impact we've made on their lives. Read their heartfelt testimonials
             and discover the quality of care and support we provide.
           </p>

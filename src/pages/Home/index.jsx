@@ -66,8 +66,8 @@ export default function Home() {
               </span>
             </h2>
             <p className="para">
-              We are the only platform globally offering holistic mental health
-              support with yoga, meditation, musical healing, and a wealth of
+              We are the only platform globally offering holistic wellness
+              services with yoga, meditation, musical healing, and a wealth of
               engaging resources. Join us on this unique path to well-being.
             </p>
           </div>

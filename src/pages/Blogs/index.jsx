@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 // Swiper Js & Styles
@@ -15,6 +15,8 @@ import {
   medicalBlogs,
   navigatingMidlifeForWomenBlogs,
 } from "../../data/blogs";
+import { BLOGS_URI } from "../../data/api";
+import axios from "axios";
 
 const allBlogs = [
   ...navigatingMidlifeForWomenBlogs,
@@ -23,7 +25,31 @@ const allBlogs = [
 ];
 
 export default function Blogs() {
-  const [blogs, setBlogs] = useState(allBlogs);
+  const [blogPosts, setBlogPosts] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Make a GET request using Axios
+    axios
+      .get(BLOGS_URI)
+      .then((response) => {
+        if (response.status == 200) {
+          setBlogPosts(response.data.blogs);
+          setLoading(false);
+        } else {
+          console.log(response);
+        }
+      })
+      .catch((error) => {
+        // Handle errors
+        console.error("Error fetching doctor details:", error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <div className="mb-5 text-center">Loading...</div>;
+  }
 
   const recentBlogs = [1, 2, 3, 4, 5];
 
@@ -68,15 +94,15 @@ export default function Blogs() {
             </div>
           </div>
 
-          <form class="mx-auto flex items-center justify-between rounded-full border border-gray-300 bg-white lg:w-96">
+          <form className="mx-auto flex items-center justify-between rounded-full border border-gray-300 bg-white lg:w-96">
             <input
               type="text"
               placeholder="Search..."
-              class="w-full rounded-l-full py-2.5 pl-5 pr-2 outline-none"
+              className="w-full rounded-l-full py-2.5 pl-5 pr-2 outline-none"
             />
             <button
               type="submit"
-              class="rounded-full bg-primary-400 px-4 py-2.5 text-white"
+              className="rounded-full bg-primary-400 px-4 py-2.5 text-white"
             >
               <FontAwesomeIcon icon={faSearch} className="text-white" />
             </button>
@@ -89,15 +115,15 @@ export default function Blogs() {
           <h1 className="subheading heading-primary">Our Blogs</h1>
         </div>
 
-        <form class="mx-auto flex items-center justify-between rounded-full border border-gray-300 bg-white lg:w-96">
+        <form className="mx-auto flex items-center justify-between rounded-full border border-gray-300 bg-white lg:w-96">
           <input
             type="text"
             placeholder="Search..."
-            class="w-full rounded-l-full py-2.5 pl-5 pr-2 outline-none"
+            className="w-full rounded-l-full py-2.5 pl-5 pr-2 outline-none"
           />
           <button
             type="submit"
-            class="rounded-full bg-primary-400 px-4 py-2.5 text-white"
+            className="rounded-full bg-primary-400 px-4 py-2.5 text-white"
           >
             <FontAwesomeIcon icon={faSearch} className="text-white" />
           </button>
@@ -167,23 +193,23 @@ export default function Blogs() {
 
         {/* ============== Blogs ============= */}
         <div className="grid gap-4 rounded-xl sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-          {blogs.map((value, i) => {
+          {blogPosts.map((value, i) => {
             return <BlogCard key={i} data={value} />;
           })}
         </div>
 
         {/* Dot Pagination */}
-        <div class="my-8 flex items-center justify-center pt-4">
-          <div class="font-sm mr-4 flex h-12  w-12 items-center justify-center rounded-full bg-primary-500 text-xl text-white hover:bg-primary-300">
+        <div className="my-8 flex items-center justify-center pt-4">
+          <div className="font-sm mr-4 flex h-12  w-12 items-center justify-center rounded-full bg-primary-500 text-xl text-white hover:bg-primary-300">
             1
           </div>
-          <div class="font-sm mr-4 flex  h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-white text-xl text-primary-500 hover:bg-slate-300">
+          <div className="font-sm mr-4 flex  h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-white text-xl text-primary-500 hover:bg-slate-300">
             2
           </div>
-          <div class="font-sm mr-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-white text-xl text-primary-500 hover:bg-slate-200">
+          <div className="font-sm mr-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-white text-xl text-primary-500 hover:bg-slate-200">
             3
           </div>
-          <div class="font-sm mr-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-primary-500 text-xl text-white hover:bg-slate-200">
+          <div className="font-sm mr-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-primary-500 text-xl text-white hover:bg-slate-200">
             <FontAwesomeIcon
               icon={faAnglesRight}
               className="  hover:text-slate-600"

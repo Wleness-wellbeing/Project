@@ -87,8 +87,8 @@ export default function Footer() {
                 })}
               </ul>
             </div>
-            <div className="col-span-2 grid grid-cols-2 lg:col-span-1 lg:grid-cols-none">
-              <div>
+            <div className="col-span-2 !flex lg:col-span-1 lg:flex-col">
+              <div className="w-1/2 lg:mb-4 lg:w-full">
                 <h4 className="mb-2 text-lg font-semibold md:mb-4 lg:text-xl">
                   Our Experts
                 </h4>
@@ -105,7 +105,7 @@ export default function Footer() {
                 </ul>
               </div>
 
-              <div className="pl-2.5 lg:pl-0">
+              <div className="w-1/2 pl-2.5 lg:w-full lg:pl-0">
                 <h4 className="mb-2 text-lg font-semibold md:my-2 lg:text-xl">
                   Library
                 </h4>
@@ -127,18 +127,10 @@ export default function Footer() {
         </div>
 
         <div className="container mx-auto pb-1 lg:pb-4">
-          <div className="pb-2 text-center md:text-right">
-            <Link to="/privacy-policy" className="text-sm">
-              Privacy Policy
-            </Link>
+          <div className="pb-2 text-center text-[13px] md:text-right">
+            <Link to="/privacy-policy">Privacy Policy</Link>
             <span> | </span>
-            <Link to="/terms-and-conditions" className="text-sm">
-              Terms & Conditions
-            </Link>
-            <span> | </span>
-            <Link to="/cancellation" className="text-sm">
-              Cancellation
-            </Link>
+            <Link to="/terms-and-conditions">Terms & Conditions</Link>
           </div>
           <div className="items-center justify-between md:flex">
             <div className="flex justify-center gap-x-4">

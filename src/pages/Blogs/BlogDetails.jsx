@@ -1,45 +1,54 @@
-import React from "react";
-import { blogDetailsHero } from "../../assets";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import { SINGLE_BLOG_URI } from "../../data/api";
+import { blogDetailsHero } from "../../assets";
 
 export default function BlogDetails() {
+  const { slug } = useParams();
+  const [blogDetails, setBlogDetails] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Make a GET request using Axios
+    axios
+      .get(SINGLE_BLOG_URI + "/" + slug)
+      .then((response) => {
+        // Handle the successful response
+        setBlogDetails(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        // Handle errors
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <div className="mb-5 text-center">Loading...</div>;
+  }
+
   return (
     <>
       <main className="container mx-auto lg:flex">
-        <article className="lg:w-[70%]">
+        <article className="pb-5 lg:w-[70%]">
           <div className="mb-3">
-            <img src={blogDetailsHero} alt="" className="w-full rounded-3xl" />
+            <img
+              src={blogDetails.image}
+              alt=""
+              className="h-72 w-full rounded-3xl object-cover object-top"
+            />
           </div>
-          <h1 className="subheading">Blog Heading Goes Here</h1>
+          <h1 className="subheading">{blogDetails.title}</h1>
 
-          <p className="mb-4 font-medium">
-            The sun hung low in the sky, casting a warm golden hue over the
-            tranquil meadow. Birds sang melodious tunes from the branches of
-            ancient oak trees, their notes blending with the gentle rustling of
-            leaves in the breeze. A babbling brook wound its way through the
-            lush green grass, its crystal-clear waters reflecting the clear blue
-            sky above. In the distance, a small cottage nestled among the
-            wildflowers, its chimney releasing thin tendrils of smoke into the
-            air. It was a scene of serene beauty, a snapshot of nature's perfect
-            harmony.
-          </p>
-          <div>
-            <h2 className="mb-2 text-2xl font-bold">
-              Other blog heading goes here
-            </h2>
-            <p className="font-medium">
-              The sun hung low in the sky, casting a warm golden hue over the
-              tranquil meadow. Birds sang melodious tunes from the branches of
-              ancient oak trees, their notes blending with the gentle rustling
-              of leaves in the breeze. A babbling brook wound its way through
-              the lush green grass, its crystal-clear waters reflecting the
-              clear blue sky above. In the distance, a small cottage nestled
-              among the wildflowers, its chimney releasing thin tendrils of
-              smoke into the air. It was a scene of serene beauty, a snapshot of
-              nature's perfect harmony.
-            </p>
-          </div>
+          <p className="mb-4 font-medium">{blogDetails.desc}</p>
+          <div
+            id="blog-content"
+            className="space-y-6"
+            dangerouslySetInnerHTML={{ __html: blogDetails.content }}
+          />
         </article>
 
         <section className="px-5 lg:w-[30%]">
@@ -64,22 +73,18 @@ export default function BlogDetails() {
           </form>
 
           <div className="mt-4 space-y-3">
-            <p className="w-full rounded-xl bg-primary-50/80 px-4 py-2 font-medium">
-              Mental health
+            <p className="w-full rounded-xl bg-primary-50/80 px-4 py-2 font-semibold">
+              All Categories
             </p>
-            <p className="w-full rounded-xl bg-primary-50/80 px-4 py-2 font-medium">
-              Issues
-            </p>
-            <p className="w-full rounded-xl bg-primary-50/80 px-4 py-2 font-medium">
+            <p className="px-4 font-medium hover:text-slate-900">Issues</p>
+            <p className="px-4 font-medium hover:text-slate-900">
               Relationship
             </p>
-            <p className="w-full rounded-xl bg-primary-50/80 px-4 py-2 font-medium">
-              Travel
-            </p>
-            <p className="w-full rounded-xl bg-primary-50/80 px-4 py-2 font-medium">
+            <p className="px-4 font-medium hover:text-slate-900">Travel</p>
+            <p className="px-4 font-medium hover:text-slate-900">
               Eating Disorder
             </p>
-            <p className="w-full rounded-xl bg-primary-50/80 px-4 py-2 font-medium">
+            <p className="px-4 font-medium hover:text-slate-900">
               Health Routine
             </p>
           </div>

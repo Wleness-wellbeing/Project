@@ -40,14 +40,19 @@ export const serviceMenuPages = [
       ["Stress", "/therapy/stress"],
       ["Depression", "/therapy/depression"],
       ["Anxiety", "/therapy/anxiety"],
+      ["Anger", "/therapy/anger"],
+      ["Panic Attack", "/therapy/panic-attack"],
+      ["Bipolar Disorder", "/therapy/bipolar-disorder"],
+      ["LGBTQ", "/therapy/lgbtq"],
       ["ADHD", "/therapy/adhd"],
       ["ODD", "/therapy/odd"],
-      ["Panic Attacks", "/therapy/panic-attack"],
-      ["Bipolar Disorder", "/therapy/bipolar-disorder"],
-      ["Schizophrenia", "/therapy/schizophrenia"],
       ["Paranoia", "/therapy/paranoia"],
       ["Conduct Disorder", "/therapy/conduct-disorder"],
     ],
+  },
+  {
+    name: "Music Healing",
+    slug: "/services/music-healing",
   },
   {
     name: "Executive Coaching",
@@ -62,20 +67,16 @@ export const serviceMenuPages = [
     slug: "/life-coaching",
   },
   {
+    name: "Internship",
+    slug: "/internship",
+  },
+  {
     name: "Yoga",
     slug: "/activities/yoga",
   },
   {
     name: "Meditation",
     slug: "/activities/meditation",
-  },
-  {
-    name: "Music Healing",
-    slug: "/services/music-healing",
-  },
-  {
-    name: "Internship",
-    slug: "/internship",
   },
 ];
 
@@ -180,23 +181,30 @@ export const footerAboutWleness = [
 // Footer - Our Services
 export const footerOurServices = [
   ["Therapy", "/services/therapy"],
-  ["Executive Coaching", "/executive-coaching"],
-  ["Corporate", "/corporate-wellbeing"],
-  ["Couple Therapy", "/services/couples-therapy"],
-  ["Meditation", "/activities/meditation"],
-  ["Yoga", "/activities/yoga"],
   ["Music Healing", "/services/music-healing"],
+  ["Executive Coaching", "/executive-coaching"],
+  ["Corporate Wellbeing", "/corporate-wellbeing"],
+  ["Life Coaching", "/life-coaching"],
+  ["Internship", "/internship"],
+  ["Yoga", "/activities/yoga"],
+  // ["Meditation", "/activities/meditation"],
+  // ["Internship", "/activities/internship"],
 ];
 
 // Footer - Focus Areas
 export const footerFocusAreas = [
+  ["Couples Therapy", "/services/couples-therapy"],
+  ["Stress", "/therapy/stress"],
   ["Depression", "/therapy/depression"],
   ["Anxiety", "/therapy/anxiety"],
-  ["Stress", "/therapy/stress"],
+  ["Anger Issues", "/therapy/anger"],
   ["Panic Attack", "/therapy/panic-attack"],
   ["Bipolar Disorder", "/therapy/bipolar-disorder"],
-  ["Relationship", "/therapy/relationship"],
-  ["Anger Issues", "/therapy/anger"],
+  // ["LGBTQ", "/therapy/lgbtq"],
+  // ["ADHD", "/therapy/adhd"],
+  // ["ODD", "/therapy/odd"],
+  // ["Paranoia", "/therapy/paranoia"],
+  // ["Conduct Disorder", "/therapy/conduct-disorder"],
 ];
 
 // Footer - Our Experts

@@ -54,7 +54,6 @@ export default function ExpertProfile() {
   const { slug } = useParams();
   const [profileDetails, setProfileDetails] = useState({});
   const [loading, setLoading] = useState(true);
-  console.log(slug);
 
   useEffect(() => {
     // Make a GET request using Axios

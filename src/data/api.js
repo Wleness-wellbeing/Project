@@ -14,6 +14,10 @@ export const REQUEST_CALLBACK_URI = URI + "request-callback";
 // Experts
 export const EXPERTS_URI = URI + "get-experts";
 
+// Blogs
+export const BLOGS_URI = URI + "get-blogs";
+export const SINGLE_BLOG_URI = URI + "blog";
+
 // Joining Forms
 export const APPOINTMENT_BOOK_URI = URI + "book-appointment";
 export const CORPORATE_JOIN_URI = URI + "join-corporate";

@@ -148,7 +148,7 @@ export const expertDoctors = {
       text: "Team",
     },
   ],
-  desc: "Our team of specialized doctors is committed to providing personalized and comprehensive care to our patients. With a passion for the latest medical advancements, we deliver high-quality treatment in a warm and welcoming environment.",
+  desc: "Our team of specialized doctors is committed to providing personalized and comprehensive care to our clients. With a passion for the latest medical advancements, we deliver high-quality treatment in a warm and welcoming environment.",
   doctors: doctorsDetails,
 
   button: {
