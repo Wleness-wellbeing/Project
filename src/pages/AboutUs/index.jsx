@@ -7,6 +7,7 @@ import {
   about5,
   about6,
   image3,
+  mainHeaderImage,
   meeting,
 } from "../../assets";
 
@@ -41,7 +42,7 @@ function AboutUs() {
           </p>
         </div>
         <div className="pl-2 lg:w-1/2">
-          <img src={about2} alt="Wleness" className="h-auto w-full" />
+          <img src={mainHeaderImage} alt="Wleness" className="h-auto w-full" />
         </div>
       </div>
 

@@ -423,7 +423,7 @@ export const therapiesData = [
     },
     doctors: doctors,
     quote:
-      "Up to 70% of children with ADHD experience academic difficulties, affecting their educational progress and future opportunities.",
+      "Approximately 70% of children diagnosed with ADHD encounter challenges in their academic journey, impacting both their educational advancement and prospects for the future",
   },
   {
     slug: "/therapy/odd",

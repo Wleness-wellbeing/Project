@@ -24,6 +24,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
   const [selectDifficulty, setSelectDifficulty] = useState("");
   const [selectLanguage, setSelectLanguage] = useState([]);
   const [selectAge, setSelectAge] = useState("");
+  const [Alert, setAlert] = useState("");
 
   // Screen One - Select Feelings
   const handleFeeling = (event) => {
@@ -86,26 +87,43 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
   }
 
   function openScreenTwo() {
+    // Validate if field is selected
+    if (selectFeeling.length == 0) {
+      setAlert("Please select to continue");
+      return null;
+    }
     setStartAssessment(false);
     setScreenOne(false);
     setScreenTwo(true);
     setScreenThree(false);
     setScreenFour(false);
     setFinalScreen(false);
+    setAlert("");
   }
 
   // Handle first and second screen
   function openScreenThree() {
+    // Validate if field is selected
+    if (selectExperienceIssue == "" || selectDifficulty == "") {
+      setAlert("Please select to continue");
+      return null;
+    }
     setStartAssessment(false);
     setScreenOne(false);
     setScreenTwo(false);
     setScreenThree(true);
     setScreenFour(false);
     setFinalScreen(false);
+    setAlert("");
   }
 
   // Handle first and second screen
   function openScreenFour() {
+    // Validate if field is selected
+    if (selectLanguage.length == 0 || selectAge == "") {
+      setAlert("Please select to continue");
+      return null;
+    }
     setStartAssessment(false);
     setScreenOne(false);
     setScreenTwo(false);
@@ -131,7 +149,6 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
     };
   }, [isAssessmentOpen, onAssessmentClose]);
 
-  console.log(selectFeeling);
   return (
     <div className="fixed inset-0 z-50 grid w-full place-items-center backdrop-brightness-50">
       <div className="assessment absolute mx-auto flex h-full w-full items-center justify-center overflow-hidden bg-[#E5FEFB] py-4 md:w-[720px] lg:relative lg:h-fit lg:w-[920px] lg:rounded-3xl lg:border-2 lg:py-12">
@@ -163,6 +180,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             <h2 className="heading-primary flex flex-col text-center text-xl font-bold lg:text-3xl">
               How are you feeling?
             </h2>
+
             <div className="my-6 grid grid-cols-2 gap-2 px-4 lg:my-10 lg:grid-cols-3 lg:gap-4 lg:px-0">
               {assessmentFeelings.map((value, index) => {
                 return (
@@ -177,6 +195,12 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                 );
               })}
             </div>
+
+            {Alert && (
+              <p className="pb-2 text-center font-semibold text-red-500">
+                {Alert}
+              </p>
+            )}
             <div className="flex justify-center space-x-4 text-center">
               <button
                 onClick={openWelcomeScreen}
@@ -215,7 +239,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             <h2 className="heading-primary mb-0 flex flex-col text-center text-xl font-bold lg:mb-8 lg:text-3xl">
               How difficult it is for you to manage all these issues?
             </h2>
-            <div className="my-4 flex flex-col flex-wrap justify-center gap-2 px-4 lg:my-6 lg:flex-row lg:px-0">
+            <div className="my-4 flex flex-col flex-wrap justify-center gap-2 px-4 lg:my-6 lg:mb-3 lg:flex-row lg:px-0">
               {managingDifficulty.map((value, index) => {
                 return (
                   <AssessmentTextBtn
@@ -228,6 +252,11 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
               })}
             </div>
 
+            {Alert && (
+              <p className="pb-2 text-center font-semibold text-red-500">
+                {Alert}
+              </p>
+            )}
             <div className="mt-8 flex justify-center space-x-4 text-center lg:mt-0">
               <button
                 onClick={openScreenOne}
@@ -278,6 +307,11 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                 );
               })}
             </div>
+            {Alert && (
+              <p className="pb-2 text-center font-semibold text-red-500">
+                {Alert}
+              </p>
+            )}
             <div className="mt-8 flex justify-center space-x-4 text-center lg:mt-0">
               <button
                 onClick={openScreenTwo}
