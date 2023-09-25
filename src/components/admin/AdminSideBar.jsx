@@ -5,7 +5,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 import { userDashboardLinks } from "../../data/navigation";
@@ -14,21 +14,17 @@ import useToken from "../../utils/useToken";
 
 export default function AdminSideBar({ isOpen, toggle }) {
   const { removeToken } = useToken();
+  const navigate = useNavigate();
+
   const logMeOut = async () => {
     try {
       const response = await axios.post(LOGOUT_USER_URI);
-
       if (response.data.status === "success") {
         // Clear user data from local storage
-        localStorage.clear();
-
-        // Redirect to login page
-        window.location.href = "/login";
-
-        // Alternatively, you can use React Router's history to navigate
-        // import { useHistory } from "react-router-dom";
-        // const history = useHistory();
-        // history.push("/login");
+        removeToken();
+        localStorage.removeItem("phone");
+        window.location = "/";
+        // navigate("/login");
       }
     } catch (error) {
       console.error(error);

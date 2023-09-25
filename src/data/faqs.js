@@ -148,27 +148,27 @@ export const musicalTherapyFaq = {
       text: "!",
     },
   ],
-  desc: "Everything you need to know about the couple therapy and services. Can't find the answers you're looking for? ",
+  desc: "Everything you need to know about the Music Healing and services. Can't find the answers you're looking for? ",
   image: faq2,
   qnas: [
     {
-      question: "What is Wleness Music Therapy?",
+      question: "What is Wleness Music Healing?",
       answer:
-        "Wleness provides exclusive music therapy for you that offers the opportunity to engage in musical bliss with one of its kind services. Ranging from high binaural beats to soothing notes, we got it all covered for you.",
+        "Wleness provides exclusive Music Healing for you that offers the opportunity to engage in musical bliss with one of its kind services. Ranging from high binaural beats to soothing notes, we got it all covered for you.",
     },
     {
-      question: "How does music therapy work on Wleness?",
+      question: "How does Music Healing work on Wleness?",
       answer:
         "Available anytime on the Wleness platform consisting of scientifically tested binaural beats and notes to address various emotional, cognitive, and behavioral goals. The best part is you can get a preview before subscribing.",
     },
     {
       question:
-        "Do I need to have a musical background to benefit from music therapy?",
+        "Do I need to have a musical background to benefit from Music Healing?",
       answer:
         "No, not at all! All we need is your time and dedication to be your better self. Rest we will ensure to adapt sessions to your level of musical experience, making the process inclusive and comfortable.",
     },
     {
-      question: "Can music therapy be helpful for children too?",
+      question: "Can Music Healing be helpful for children too?",
       answer:
         "Absolutely! A child's brain develops rapidly. Musical notes and rhythms are scientifically proven to accelerate the process. We at Wleness target the holistic growth of both adults and children.",
     },

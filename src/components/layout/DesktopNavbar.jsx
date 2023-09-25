@@ -10,8 +10,7 @@ import { Link } from "react-router-dom";
 import { profile } from "../../assets";
 
 export default function DesktopNavbar({ toggleJoinUs, token }) {
-  const userDataFromLocalStorage = JSON.parse(localStorage.getItem("user"));
-  console.log(userDataFromLocalStorage);
+  const userName = localStorage.getItem("username");
 
   return (
     <>
@@ -42,13 +41,11 @@ export default function DesktopNavbar({ toggleJoinUs, token }) {
           </Link>
         ) : (
           <Link
-            to="/user/profile"
+            to="/user/dashboard"
             className="btn-primary flex !w-fit !rounded-full !bg-primary-400 !py-2.5 font-semibold hover:!bg-primary-300"
           >
             <img src={profile} alt="" className="mr-1 w-5 rounded-full" />
-            <span className="text-sm">
-              {userDataFromLocalStorage?.displayName.slice(0, 1) || "User"}
-            </span>
+            <span className="text-sm">{userName}</span>
           </Link>
         )}
       </div>

@@ -204,12 +204,12 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             <div className="flex justify-center space-x-4 text-center">
               <button
                 onClick={openWelcomeScreen}
-                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !bg-white !py-2 font-semibold !text-primary-300 transition-all hover:shadow-md"
+                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !bg-white !py-2 !text-sm font-semibold !text-primary-300 transition-all hover:shadow-md"
               >
                 Go Back
               </button>
               <button
-                className="btn-primary !w-fit bg-gradient-to-r from-secondary to-tertiary !py-2.5 !font-semibold transition-all hover:shadow-md"
+                className="btn-primary !w-fit bg-gradient-to-r from-secondary to-tertiary !py-2.5 !text-sm !font-semibold transition-all hover:shadow-md"
                 onClick={openScreenTwo}
               >
                 Save & Next
@@ -260,12 +260,12 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             <div className="mt-8 flex justify-center space-x-4 text-center lg:mt-0">
               <button
                 onClick={openScreenOne}
-                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !bg-white !py-2 font-semibold !text-primary-300 transition-all hover:shadow-md"
+                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !bg-white !py-2 !text-sm font-semibold !text-primary-300 transition-all hover:shadow-md"
               >
                 Go Back
               </button>
               <button
-                className="btn-primary !w-fit bg-gradient-to-r from-secondary to-tertiary !py-2.5 !font-semibold transition-all hover:shadow-md"
+                className="btn-primary !w-fit bg-gradient-to-r from-secondary to-tertiary !py-2.5 !text-sm !font-semibold transition-all hover:shadow-md"
                 onClick={openScreenThree}
               >
                 Save & Next
@@ -315,12 +315,12 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             <div className="mt-8 flex justify-center space-x-4 text-center lg:mt-0">
               <button
                 onClick={openScreenTwo}
-                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !bg-white !py-2 font-semibold !text-primary-300 transition-all hover:shadow-md"
+                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !bg-white !py-2 !text-sm font-semibold !text-primary-300 transition-all hover:shadow-md"
               >
                 Go Back
               </button>
               <button
-                className="btn-primary !w-fit bg-gradient-to-r from-secondary to-tertiary !py-2.5 !font-semibold transition-all hover:shadow-md"
+                className="btn-primary !w-fit bg-gradient-to-r from-secondary to-tertiary !py-2.5 !text-sm !font-semibold transition-all hover:shadow-md"
                 onClick={openScreenFour}
               >
                 Save & Next
@@ -396,14 +396,14 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
             <div className="flex justify-center space-x-4 text-center">
               <button
                 onClick={openScreenThree}
-                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !bg-white !py-2 font-semibold !text-primary-300 transition-all hover:shadow-md"
+                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !bg-white !py-2 !text-sm font-semibold !text-primary-300 transition-all hover:shadow-md"
                 s
               >
                 Go Back
               </button>
               <Link
                 to="/experts/all"
-                className="btn-primary !w-fit bg-gradient-to-r from-secondary to-tertiary !py-2.5 !font-semibold transition-all hover:shadow-md"
+                className="btn-primary !w-fit bg-gradient-to-r from-secondary to-tertiary !py-2.5 !text-sm !font-semibold transition-all hover:shadow-md"
               >
                 Find the experts
               </Link>
@@ -424,7 +424,7 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
         {/* Close */}
         <FontAwesomeIcon
           icon={faClose}
-          className="absolute right-4 top-4 cursor-pointer text-3xl text-black lg:right-8 lg:top-8 lg:text-4xl"
+          className="absolute right-4 top-4 cursor-pointer text-3xl text-primary-400 lg:right-8 lg:top-8 lg:text-4xl"
           onClick={onAssessmentClose}
         />
       </div>

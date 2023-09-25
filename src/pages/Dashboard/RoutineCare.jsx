@@ -4,8 +4,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { RoutineCareChats } from "../../data/dashboard";
 import { iconDay, iconNight } from "../../assets";
 import ShowMoreText from "../../components/Cards/ShowMoreText";
+import { useNavigate } from "react-router-dom";
 
-export default function RoutineCare() {
+export default function RoutineCare({ token }) {
+  const navigate = useNavigate();
+
+  // Redirect user if loggedin
+  if (token == "" || token == undefined || token == null) {
+    navigate("/login", {
+      state: {
+        successMessage: "Please login to continue to dashboard",
+      },
+    });
+  }
   const [morningRoutine, setMorningRoutine] = useState([]);
   const [eveningRoutine, setEveningRoutine] = useState([]);
   const [morningTask, setMorningTask] = useState("");
@@ -61,7 +72,7 @@ export default function RoutineCare() {
 
   return (
     <section className="gap-5 lg:flex">
-      <div className="lg:w-[65%]">
+      <div className="-mt-10 lg:w-[65%]">
         <div className="mb-2">
           <h1>
             <span className="text-2xl font-medium">Good Morning </span>
