@@ -5,7 +5,8 @@ import axios from "axios";
 import { SIGNUP_USER_URI } from "../../data/api";
 import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 import { signInWithPopup } from "firebase/auth";
-export default function Signup() {
+
+export default function Signup({ setToken, token }) {
   const [formInfo, setFormData] = useState({
     name: "",
     phone: "",
@@ -18,6 +19,10 @@ export default function Signup() {
   });
 
   const navigate = useNavigate();
+  // Redirect user if token is not available
+  if (token && token !== "" && token !== undefined) {
+    navigate("/user/dashboard");
+  }
 
   // Update form value
   const handleChange = (e) => {
@@ -96,18 +101,25 @@ export default function Signup() {
 
         // Empty form after successfully sending data
         if (response.data.status == "success") {
+          // Empty Variable if success
           setFormData({
             name: "",
             phone: "",
             password: "",
             confirm_password: "",
           });
+          // Set login token
+          setToken(response.data.access_token);
+          localStorage.setItem("phone", formInfo["phone"]);
+          navigate("/user/dashboard");
 
-          navigate("/login", {
-            state: {
-              successMessage: "Registration successful! Please log in.",
-            },
-          });
+          // navigate("/login", {
+          //   state: {
+          //     successMessage: "Registration successful! Please log in.",
+          //   },
+          // });
+        } else {
+          setMessages(response.data.status, response.data.message);
         }
       } catch (error) {
         console.error("Error sending data:", error);

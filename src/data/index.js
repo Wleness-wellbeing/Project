@@ -92,6 +92,7 @@ import {
   homeMeditation,
   homeInternship,
   homeSelfcare,
+  homeMusicalTherapy,
   one,
   two,
   three,
@@ -147,6 +148,14 @@ import {
   sevaSadhnas,
   natureSadhnaProcedure,
   natureSadhnas,
+  yogaSadhnaHeader,
+  meditationSadhnaHeader,
+  mantraSadhnaHeader,
+  japaSadhnaHeader,
+  bhaktiSadhnaHeader,
+  kundaliniSadhnaHeader,
+  sevaSadhnaHeader,
+  natureSadhnaHeader,
 } from "../assets";
 
 // Components
@@ -2468,7 +2477,7 @@ export const activities = [
               data: {
                 title: "Yoga Sadhana",
                 desc: "Yoga Sadhana, the ancient practice of uniting body, mind, and soul, has been revered for centuries for its trans-formative power. Rooted in the teachings of ancient Indian philosophy, Yoga Sadhana goes beyond the physical postures we often associate with yoga. It encompasses a holistic approach to self-realization, promoting mental clarity, physical well-being, and spiritual growth. ",
-                image: adhvmukhaHeader,
+                image: yogaSadhnaHeader,
                 variations: false,
                 var: "",
               },
@@ -2609,7 +2618,7 @@ export const activities = [
               data: {
                 title: "Meditation Sadhana",
                 desc: "Meditation Sadhana, a practice dating back thousands of years, is a trans formative journey of self-discovery & inner peace. Rooted in ancient traditions and spiritual philosophies, meditation Sadhana aims to quiet the mind, cultivate mindfulness, and unlock our vast reservoir of inner potential. In this blog, we will explore the procedure, benefits, and potential complications of meditation Sadhana, shedding light on why it has become an essential tool for modern individuals seeking balance",
-                image: adhvmukhaHeader,
+                image: meditationSadhnaHeader,
                 variations: false,
                 var: "",
               },
@@ -2754,7 +2763,7 @@ export const activities = [
               data: {
                 title: "Mantra Sadhana",
                 desc: "Mantra Sadhana, an ancient spiritual practice, harnesses the power of sacred sounds or phrases to invoke positive energies and spiritual growth. Rooted in various religious and mystical traditions, mantra chanting has been regarded as a potent tool for self-realization and inner transformation. Mantras are sacred syllables, words, or phrases with significant spiritual energy and vibrational frequencies. They are often derived from ancient scriptures and are believed to embody divine powers and deities.",
-                image: adhvmukhaHeader,
+                image: mantraSadhnaHeader,
                 variations: false,
                 var: "",
               },
@@ -2899,7 +2908,7 @@ export const activities = [
               data: {
                 title: "Japa Sadhana",
                 desc: "Japa Sadhana, an ancient spiritual practice, involves continuously repeating a sacred mantra, name, or prayer to connect with the divine and attain higher states of consciousness. Rooted in various religious and spiritual traditions, Japa Sadhana is a powerful tool for self-realization and inner transformation. Japa Sadhana centers on the meditative repetition of a mantra, divine name, or prayer. The chosen words carry spiritual vibrations, and the continuous repetition helps to focus the mind, purify thoughts, and invoke the divine presence within oneself.",
-                image: adhvmukhaHeader,
+                image: japaSadhnaHeader,
                 variations: false,
                 var: "",
               },
@@ -3044,7 +3053,7 @@ export const activities = [
               data: {
                 title: "Bhakti Sadhana",
                 desc: "Bhakti Sadhana, the practice of devotion, is a sacred journey that involves surrendering oneself to the divine with love and unwavering faith. Rooted in various religious and spiritual traditions, Bhakti Sadhana is a powerful means to transcend the ego, experience divine love, and attain spiritual liberation. Bhakti, meaning devotion, is the foundation of Bhakti Sadhana. It is a deep and heartfelt love for the divine, whether conceptualized as a personal deity, formless energy, or an all-pervading consciousness.",
-                image: adhvmukhaHeader,
+                image: bhaktiSadhnaHeader,
                 variations: false,
                 var: "",
               },
@@ -3189,7 +3198,7 @@ export const activities = [
               data: {
                 title: "Kundalini Sadhana",
                 desc: "Kundalini Sadhana is an ancient spiritual practice that awakens the dormant energy residing at the base of the spine, known as Kundalini. This powerful energy, often depicted as a coiled serpent, holds immense transformative potential and can lead the practitioner toward spiritual awakening and self-realization. ",
-                image: adhvmukhaHeader,
+                image: kundaliniSadhnaHeader,
                 variations: false,
                 var: "",
               },
@@ -3338,7 +3347,7 @@ export const activities = [
               data: {
                 title: "Seva Sadhana",
                 desc: "Seva Sadhna, also known as selfless or voluntary service, is a noble practice deeply ingrained in various spiritual and cultural traditions worldwide. It involves dedicating oneself to helping others without expecting anything in return. Seva Sadhna is not just an act of philanthropy; it is a profound spiritual practice that can lead to personal growth and a deeper connection with humanity. Seva Sadhna is rooted in the principle of selflessness and compassion. 'Seva' comes from Sanskrit, meaning service, and 'Sadhna' refers to a spiritual practice or discipline.",
-                image: adhvmukhaHeader,
+                image: sevaSadhnaHeader,
                 variations: false,
                 var: "",
               },
@@ -3487,7 +3496,7 @@ export const activities = [
               data: {
                 title: "Nature Sadhana",
                 desc: "Nature Sadhna is a spiritual practice that involves cultivating a deep connection with nature and recognizing the inherent unity between humans and the natural world. It is a profound way of experiencing nature's beauty, wisdom, and harmony, leading to a greater sense of peace, purpose, and spiritual awakening. Nature Sadhna is based on the principle that humans are an integral part of nature, and by reconnecting with the natural world, we can rediscover our innate connection with all living beings. ",
-                image: adhvmukhaHeader,
+                image: natureSadhnaHeader,
                 variations: false,
                 var: "",
               },
@@ -3792,7 +3801,7 @@ export const homeServices = [
   {
     title: "Music Healing",
     desc: "A Collection of diverse music based mechanisms, techniques with interdisciplinary approach to maintain, restore and improve- Physical, Psychological, social and holistic health.",
-    image: homeMeditation,
+    image: homeMusicalTherapy,
     slug: "/services/music-healing",
   },
   {

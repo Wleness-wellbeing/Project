@@ -7,6 +7,7 @@ import {
   faSearch,
   faSmile,
 } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const comments = [
   {
@@ -27,7 +28,17 @@ const comments = [
   },
 ];
 
-export default function Chat() {
+export default function Chat({ token }) {
+  const navigate = useNavigate();
+
+  // Redirect user if loggedin
+  if (token == "" || token == undefined || token == null) {
+    navigate("/login", {
+      state: {
+        successMessage: "Please login to continue to dashboard",
+      },
+    });
+  }
   const [sendMessage, setSendMessage] = useState([]);
 
   return (

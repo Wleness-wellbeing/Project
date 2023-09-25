@@ -56,6 +56,7 @@ import StudentsPolicy from "./pages/Policies/StudentsPolicy";
 import ExpertProfile from "./pages/Experts/ExpertProfile";
 import Gauth from "./pages/Authentication/Gauth";
 import FacebookAuth from "./pages/Authentication/FacebookAuth";
+import Career from "./pages/Career";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -327,7 +328,7 @@ function App() {
             </Layout>
           }
         />
-        {!token && token !== "" && token !== undefined ? (
+        {/* {!token && token !== "" && token !== undefined ? (
           <>
             <Route
               path="/login"
@@ -341,7 +342,7 @@ function App() {
               path="/signup"
               element={
                 <SignupLayout>
-                  <SignUp />
+                  <SignUp setToken={setToken} />
                 </SignupLayout>
               }
             />
@@ -361,7 +362,7 @@ function App() {
               path="/user/profile"
               element={
                 <DashboardLayout>
-                  <Profile />
+                  <Profile token={token} />
                 </DashboardLayout>
               }
             />
@@ -382,7 +383,56 @@ function App() {
               }
             />
           </>
-        )}
+        )} */}
+        <Route
+          path="/login"
+          element={
+            <SignupLayout>
+              <Login setToken={setToken} token={token} />
+            </SignupLayout>
+          }
+        />
+        <Route
+          path="/signup"
+          element={
+            <SignupLayout>
+              <SignUp setToken={setToken} token={token} />
+            </SignupLayout>
+          }
+        />
+        <Route
+          path="/user/dashboard"
+          element={
+            <DashboardLayout>
+              <UserDashboard token={token} setToken={setToken} />
+            </DashboardLayout>
+          }
+        />
+
+        <Route
+          path="/user/profile"
+          element={
+            <DashboardLayout>
+              <Profile token={token} />
+            </DashboardLayout>
+          }
+        />
+        <Route
+          path="/community/chat"
+          element={
+            <DashboardLayout>
+              <Chat token={token} />
+            </DashboardLayout>
+          }
+        />
+        <Route
+          path="/user/routine-care"
+          element={
+            <DashboardLayout>
+              <RoutineCare token={token} />
+            </DashboardLayout>
+          }
+        />
         <Route
           path="/campus-ambassador"
           element={
@@ -470,6 +520,14 @@ function App() {
           element={
             <Layout>
               <ContactUs />
+            </Layout>
+          }
+        />
+        <Route
+          path="/career"
+          element={
+            <Layout>
+              <Career />
             </Layout>
           }
         />

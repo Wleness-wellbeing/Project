@@ -1,12 +1,19 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { iconFacebookCircle, iconGoogle, login, logo } from "../../assets";
-import axios from "axios";
-import { LOGIN_USER_URI } from "../../data/api";
-import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 import { signInWithPopup } from "firebase/auth";
+import axios from "axios";
+import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
+// Data
+import { iconFacebookCircle, iconGoogle, login, logo } from "../../assets";
+import { LOGIN_USER_URI } from "../../data/api";
 
-export default function Login({ setToken }) {
+export default function Login({ setToken, token }) {
+  const navigate = useNavigate();
+  // Redirect user if token is not available
+  if (token && token !== "" && token !== undefined) {
+    navigate("/user/dashboard");
+  }
+
   const [formInfo, setFormData] = useState({
     phone: "",
     password: "",
@@ -54,7 +61,6 @@ export default function Login({ setToken }) {
   };
   // Set alert message
 
-  const navigate = useNavigate();
   const location = useLocation();
 
   // Update form value
@@ -94,8 +100,11 @@ export default function Login({ setToken }) {
             password: "",
           });
           setToken(response.data.access_token);
+          localStorage.setItem("phone", formInfo["phone"]);
 
           navigate("/user/dashboard");
+        } else {
+          setMessages(response.data.status, response.data.message);
         }
       } catch (error) {
         console.error("Error sending data:", error);
@@ -135,7 +144,7 @@ export default function Login({ setToken }) {
             {successMessage.status == "" ? (
               location.state &&
               location.state.successMessage && (
-                <p className="mb-3 text-center font-semibold text-green-500">
+                <p className="mb-3 text-center font-semibold text-red-500">
                   {location.state.successMessage}
                 </p>
               )

@@ -4,7 +4,11 @@ export default function HeaderWithImage(props) {
   return (
     <header className="container mx-auto flex flex-col items-center lg:flex-row">
       <div className="py-4 lg:order-2 lg:w-1/2">
-        <img src={props.data.image} alt="" />
+        <img
+          src={props.data.image}
+          alt=""
+          className="object-cover p-4 lg:p-8"
+        />
       </div>
       <div className="lg:order-1 lg:w-1/2">
         <h1 className="subheading">

@@ -105,13 +105,13 @@ export default function MobileNavbar({ toggleJoinUs }) {
         {isMenuOpen ? (
           <FontAwesomeIcon
             icon={faClose}
-            className="text-3xl"
+            className="text-3xl text-primary-400"
             onClick={() => closeMenu()}
           />
         ) : (
           <FontAwesomeIcon
             icon={faBars}
-            className="text-3xl"
+            className="text-3xl text-primary-400"
             onClick={() => openMenu()}
           />
         )}

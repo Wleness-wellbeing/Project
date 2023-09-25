@@ -7,17 +7,36 @@ import {
   selfCareConcern,
   selfCareFeeling,
 } from "../../data/dashboard";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { placeholderLandscape, placeholderPortrait } from "../../assets";
 import UpcomingMeets from "../../components/list/UpcomingMeets";
+import axios from "axios";
+import { USER_APPOINTMENTS } from "../../data/api";
 
 export default function UserDashboard({ token }) {
+  const navigate = useNavigate();
+
+  // Redirect user if loggedin
+  if (token == "" || token == undefined || token == null) {
+    navigate("/login", {
+      state: {
+        successMessage: "Please login to continue to dashboard",
+      },
+    });
+  }
+
   const [thoughts, setThoughts] = useState([]); // thoughts list
   const [newThought, setNewThought] = useState(""); // add new thought in list
   const [mood, setMood] = useState("");
   const [activeQuote, setActiveQuote] = useState(0);
+  const [loading, setLoading] = useState(true); // set loading screen
+  const [profileDetails, setProfileDetails] = useState({
+    // set profile detals
+    name: "",
+    appointments: {},
+  });
 
-  // Display random quote
+  // ======== Randome Quote ===========
   const setRandomQuote = () => {
     const quote = Math.floor(Math.random() * dashboardQuotes.length);
     setActiveQuote(quote);
@@ -55,13 +74,48 @@ export default function UserDashboard({ token }) {
     console.log(mood);
   };
 
+  // ======== Get user appointments and details ===========
+  const phone = localStorage.getItem("phone");
+  const url = USER_APPOINTMENTS + "/" + phone;
+
+  useEffect(() => {
+    // Make a GET request using Axios
+    axios
+      .get(url, {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      })
+      .then((response) => {
+        if (response.status == 200) {
+          setProfileDetails({
+            name: response.data.name,
+            appointments: response.data.appointments,
+          });
+          setLoading(false);
+          console.log(response.data.message);
+          localStorage.setItem("username", response.data.name);
+        }
+      })
+      .catch((error) => {
+        // Handle errors
+        console.error("Error fetching doctor details:", error);
+      });
+  }, []);
+
+  if (loading) {
+    return <div className="mb-5 text-center">Loading...</div>;
+  }
+
   return (
     <section className="gap-5 lg:flex">
-      <div className="lg:w-[65%]">
+      <div className="-mt-10 lg:w-[65%]">
         <div className="mb-2">
           <h1>
             <span className="text-2xl font-medium">Good Morning </span>
-            <span className="text-3xl font-bold text-[#0DCCF6]">Mia</span>
+            <span className="text-3xl font-bold text-[#0DCCF6]">
+              {profileDetails.name}
+            </span>
           </h1>
           <p className="font-medium text-slate-600">
             Today is the 12th day of your therapy session.

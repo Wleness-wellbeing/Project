@@ -10,9 +10,11 @@ export const USER_PROFILE_URI = URI + "user-profile";
 
 // Leads
 export const REQUEST_CALLBACK_URI = URI + "request-callback";
+export const CONTACT_URI = URI + "submit-contact";
 
 // Experts
 export const EXPERTS_URI = URI + "get-experts";
+export const USER_APPOINTMENTS = URI + "user-appointments";
 
 // Blogs
 export const BLOGS_URI = URI + "get-blogs";

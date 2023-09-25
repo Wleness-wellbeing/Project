@@ -120,21 +120,15 @@ export {
   homeSelfcare,
 };
 
-import about1 from "./images/aboutus/about1.png"
-import about2 from "./images/aboutus/about2.png"
-import about3 from "./images/aboutus/about3.png"
-import about4 from "./images/aboutus/about4.png"
-import about5 from "./images/aboutus/about5.png"
-import about6 from "./images/aboutus/about6.png"
-import meeting from "./images/aboutus/meeting.png"
+import about1 from "./images/aboutus/about1.png";
+import about2 from "./images/aboutus/about2.png";
+import about3 from "./images/aboutus/about3.png";
+import about4 from "./images/aboutus/about4.png";
+import about5 from "./images/aboutus/about5.png";
+import about6 from "./images/aboutus/about6.png";
+import meeting from "./images/aboutus/meeting.png";
 
-export {
-  about1,about2,about3,about4,about5,about6,meeting
-}
-
-
-
-
+export { about1, about2, about3, about4, about5, about6, meeting };
 
 // Avatar images
 import avatarImage1 from "./images/activities/avatar/image 13.png";
@@ -213,7 +207,31 @@ import zenHeader from "./images/activities/meditation/meditationSubpages/zenHead
 import zenLeft1 from "./images/activities/meditation/meditationSubpages/zenLeft1.png";
 import zenRight1 from "./images/activities/meditation/meditationSubpages/zenRight1.png";
 
-export{breadthBenefit,breadthHeader,breadthLeft1,breadthRight1,breadthRight2,kundaliniHeader,kundaliniLeft1,kundaliniRight1,mindfulnessHeader,mindfulnessLeft1,mindfulnessLeft2,mindfulnessLeft3,mindfulnessRight1,mindfulnessRight2,spiritualHeader,spiritualLeft1,spiritualRight1,walkingHeader,walkingLeft1,walkingRight1,zenHeader,zenLeft1,zenRight1}
+export {
+  breadthBenefit,
+  breadthHeader,
+  breadthLeft1,
+  breadthRight1,
+  breadthRight2,
+  kundaliniHeader,
+  kundaliniLeft1,
+  kundaliniRight1,
+  mindfulnessHeader,
+  mindfulnessLeft1,
+  mindfulnessLeft2,
+  mindfulnessLeft3,
+  mindfulnessRight1,
+  mindfulnessRight2,
+  spiritualHeader,
+  spiritualLeft1,
+  spiritualRight1,
+  walkingHeader,
+  walkingLeft1,
+  walkingRight1,
+  zenHeader,
+  zenLeft1,
+  zenRight1,
+};
 
 // Activities >> Yoga
 import yogaHeader from "./images/activities/yoga/yoga-header.png";
@@ -280,6 +298,14 @@ import sevaSadhnaProcedure from "./images/activities/sadhna/seva-sadhna-procedur
 import sevaSadhnas from "./images/activities/sadhna/seva-sadhnas.png";
 import natureSadhnaProcedure from "./images/activities/sadhna/nature-sadhna-procedure.png";
 import natureSadhnas from "./images/activities/sadhna/nature-sadhnas.png";
+import bhaktiSadhnaHeader from "./images/activities/sadhna/bhakti-sadhna-header.png";
+import japaSadhnaHeader from "./images/activities/sadhna/japa-sadhna-header.png";
+import kundaliniSadhnaHeader from "./images/activities/sadhna/kundalini-sadhna-header.png";
+import mantraSadhnaHeader from "./images/activities/sadhna/mantra-sadhna-header.png";
+import meditationSadhnaHeader from "./images/activities/sadhna/meditation-sadhna-header.png";
+import natureSadhnaHeader from "./images/activities/sadhna/nature-sadhna-header.png";
+import sevaSadhnaHeader from "./images/activities/sadhna/seva-sadhna-header.png";
+import yogaSadhnaHeader from "./images/activities/sadhna/yoga-sadhna-header.png";
 // Activities >> Brain Exercise
 import brainExerciseHeader from "./images/activities/brainExercise/brain-exercise-header.png";
 import brainGameGalaxy from "./images/activities/brainExercise/brain-game-galaxy.png";
@@ -348,6 +374,14 @@ export {
   sevaSadhnas,
   natureSadhnaProcedure,
   natureSadhnas,
+  bhaktiSadhnaHeader,
+  japaSadhnaHeader,
+  kundaliniSadhnaHeader,
+  mantraSadhnaHeader,
+  meditationSadhnaHeader,
+  natureSadhnaHeader,
+  sevaSadhnaHeader,
+  yogaSadhnaHeader,
   // Yoga
   yogaHeader,
   yogaType1,

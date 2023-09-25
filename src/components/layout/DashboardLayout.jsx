@@ -7,6 +7,7 @@ import { assessment1 } from "../../assets";
 export default function DashboardLayout({ children }) {
   const [openMenu, setOpenMenu] = useState(false);
 
+  const username = localStorage.getItem("username");
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
@@ -24,26 +25,14 @@ export default function DashboardLayout({ children }) {
                 className="cursor-pointer text-2xl text-slate-400 transition-all hover:text-slate-500"
               />
             </span>
-            {/* <span>
-              <FontAwesomeIcon
-                icon={faComments}
-                className="cursor-pointer text-2xl text-slate-400 transition-all hover:text-slate-500"
-              />
-            </span>
-            <span>
-              <FontAwesomeIcon
-                icon={faBell}
-                className="cursor-pointer text-2xl text-slate-400 transition-all hover:text-slate-500"
-              />
-            </span> */}
             <span className="flex cursor-pointer items-center rounded-xl border-2 px-2 py-1 transition-all hover:bg-slate-100">
               <img src={assessment1} alt="" className="mr-2 w-8" />
-              <span className="text-sm font-bold">Ken Parker</span>
+              <span className="text-sm font-bold">{username}</span>
             </span>
           </div>
 
           <div className="lg:order-1 lg:w-[65%]">
-            <form
+            {/* <form
               action=""
               method="get"
               className="flex w-full rounded-xl bg-slate-200/60"
@@ -63,7 +52,7 @@ export default function DashboardLayout({ children }) {
                   className="px-4 text-slate-400"
                 />
               </button>
-            </form>
+            </form> */}
           </div>
         </nav>
 

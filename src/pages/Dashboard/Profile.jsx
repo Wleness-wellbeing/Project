@@ -1,7 +1,60 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { avatars } from "../../data/dashboard";
+import { USER_PROFILE_URI } from "../../data/api";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-export default function Profile() {
+export default function Profile({ token }) {
+  const navigate = useNavigate();
+
+  // Redirect user if loggedin
+  if (token == "" || token == undefined || token == null) {
+    navigate("/login", {
+      state: {
+        successMessage: "Please login to continue to dashboard",
+      },
+    });
+  }
+  const [profileDetails, setProfileDetails] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    image: "",
+  });
+  const [loading, setLoading] = useState(true);
+
+  const phone = localStorage.getItem("phone");
+  const url = USER_PROFILE_URI + "/" + phone;
+
+  useEffect(() => {
+    // Make a GET request using Axios
+    axios
+      .get(url, {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      })
+      .then((response) => {
+        if (response.status == 200) {
+          setProfileDetails({
+            name: response.data.name,
+            phone: response.data.phone,
+            email: response.data.email,
+            image: response.data.image,
+          });
+          setLoading(false);
+        }
+      })
+      .catch((error) => {
+        // Handle errors
+        console.error("Error fetching doctor details:", error);
+      });
+  }, []);
+
+  if (loading) {
+    return <div className="mb-5 text-center">Loading...</div>;
+  }
+
   return (
     <section className="mx-auto flex h-full flex-col justify-center lg:w-96">
       <h2 className="text-center text-2xl font-semibold text-primary-400">
@@ -27,21 +80,27 @@ export default function Profile() {
         <input
           className="w-full rounded-lg border-2 border-slate-400 px-4 py-2"
           type="text"
-          name="username"
+          name="name"
+          id="name"
           placeholder="Enter You Username"
+          defaultValue={profileDetails.name}
         />
         <input
           className="w-full rounded-lg border-2 border-slate-400 px-4 py-2"
           type="tel"
           maxLength={10}
-          name="number"
+          name="phone"
+          id="phone"
           placeholder="98******78"
+          defaultValue={profileDetails.phone}
         />
         <input
           className="w-full rounded-lg border-2 border-slate-400 px-4 py-2"
           type="text"
           name="email"
+          id="email"
           placeholder="hooman@gmail.com"
+          defaultValue={profileDetails.email}
         />
         <select
           name="gender"

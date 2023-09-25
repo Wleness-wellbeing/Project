@@ -109,11 +109,12 @@ export default function ExpertProfile() {
 
           <div className="rounded-3xl border-2 border-secondary p-3 lg:p-6">
             <p className="text-center text-sm font-medium md:text-lg">
-              Dr. Michelle Reynolds is a compassionate and dedicated licensed
+              {/* Dr. Michelle Reynolds is a compassionate and dedicated licensed
               clinical psychologist with over a decade of experience in helping
               individuals achieve mental and emotional well-being. With a warm
               and non-judgmental approach, she creates a safe space for clients
-              to explore their thoughts, feelings, and challenges.
+              to explore their thoughts, feelings, and challenges. */}
+              {profileDetails.bio}
             </p>
           </div>
         </div>
