@@ -327,31 +327,7 @@ function App() {
             </Layout>
           }
         />
-        <Route
-          path="/doctors-signup"
-          element={
-            <SignupLayout>
-              <DoctorSignup />
-            </SignupLayout>
-          }
-        />
-        <Route
-          path="/login"
-          element={
-            <SignupLayout>
-              <Login />
-            </SignupLayout>
-          }
-        />
-        <Route
-          path="/signup"
-          element={
-            <SignupLayout>
-              <SignUp />
-            </SignupLayout>
-          }
-        />
-        {/* {!token && token !== "" && token !== undefined ? (
+        {!token && token !== "" && token !== undefined ? (
           <>
             <Route
               path="/login"
@@ -371,23 +347,42 @@ function App() {
             />
           </>
         ) : (
-          <Route
-            path="/user/dashboard"
-            element={
-              <DashboardLayout>
-                <UserDashboard token={token} setToken={setToken} />
-              </DashboardLayout>
-            }
-          />
-        )} */}
-        <Route
-          path="/user/dashboard"
-          element={
-            <DashboardLayout>
-              <UserDashboard />
-            </DashboardLayout>
-          }
-        />
+          <>
+            <Route
+              path="/user/dashboard"
+              element={
+                <DashboardLayout>
+                  <UserDashboard token={token} setToken={setToken} />
+                </DashboardLayout>
+              }
+            />
+
+            <Route
+              path="/user/profile"
+              element={
+                <DashboardLayout>
+                  <Profile />
+                </DashboardLayout>
+              }
+            />
+            <Route
+              path="/community/chat"
+              element={
+                <DashboardLayout>
+                  <Chat />
+                </DashboardLayout>
+              }
+            />
+            <Route
+              path="/user/routine-care"
+              element={
+                <DashboardLayout>
+                  <RoutineCare />
+                </DashboardLayout>
+              }
+            />
+          </>
+        )}
         <Route
           path="/campus-ambassador"
           element={
@@ -420,8 +415,6 @@ function App() {
             </Layout>
           }
         />
-
-        {/* Dashboard Routes */}
         <Route
           path="/doctor/dashboard"
           element={
@@ -430,38 +423,6 @@ function App() {
             </DashboardLayout>
           }
         />
-        <Route
-          path="/user/profile"
-          element={
-            <DashboardLayout>
-              <Profile />
-            </DashboardLayout>
-          }
-        />
-        <Route
-          path="/community/chat"
-          element={
-            <DashboardLayout>
-              <Chat />
-            </DashboardLayout>
-          }
-        />
-        <Route
-          path="/user/routine-care"
-          element={
-            <DashboardLayout>
-              <RoutineCare />
-            </DashboardLayout>
-          }
-        />
-        {/* <Route
-          path="/self-care"
-          element={
-            <DashboardLayout>
-              <Selfcare />
-            </DashboardLayout>
-          }
-        /> */}
         <Route
           path="/chatbox"
           element={

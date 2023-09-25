@@ -5,6 +5,7 @@ import axios from "axios";
 import { LOGIN_USER_URI } from "../../data/api";
 import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 import { signInWithPopup } from "firebase/auth";
+
 export default function Login({ setToken }) {
   const [formInfo, setFormData] = useState({
     phone: "",
@@ -33,6 +34,7 @@ export default function Login({ setToken }) {
         console.error("Error signing in with Google:", error);
       });
   };
+
   // ===================Facebook Login ==========================//
   const handleFacebookSignIn = () => {
     signInWithPopup(auth, facebookProvider) // Use the Facebook provider
