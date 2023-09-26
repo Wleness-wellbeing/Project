@@ -11,7 +11,7 @@ import { doodle2 } from "../assets";
 
 export default function HappyClient(props) {
   return (
-    <section className="relative px-4 py-6 text-center lg:px-0 lg:py-10">
+    <section className="relative overflow-clip px-4 py-6 text-center lg:px-0 lg:py-10">
       <h2 className="subheading">{textColorize(props.data.heading)}</h2>
       <div className="container mx-auto py-2 lg:py-4">
         <div className="relative pb-4 lg:!pr-0 lg:pb-0">
@@ -33,7 +33,7 @@ export default function HappyClient(props) {
                         loading="lazy"
                         src={value.image}
                         alt=""
-                        className="mt-4 w-60 rounded-2xl rounded-br-[4rem] object-cover shadow-[-12px_-16px_2px_4px_rgba(82,208,194,0.27)] md:my-4"
+                        className="mt-4 w-52 rounded-2xl rounded-br-[4rem] object-cover shadow-[-12px_-16px_2px_4px_rgba(82,208,194,0.27)] md:my-4"
                       />
                     </div>
                     <figcaption className="lg:w-3/5">
@@ -59,13 +59,13 @@ export default function HappyClient(props) {
         loading="lazy"
         src={doodle2}
         alt=""
-        className="absolute right-0 top-0 -z-10 w-20 -scale-x-[1] object-cover opacity-20 xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80"
+        className="absolute -right-20 top-0 -z-10 w-20 -scale-x-[1] object-cover opacity-20 xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80"
       />
       <img
         loading="lazy"
         src={doodle2}
         alt=""
-        className="absolute bottom-0 left-0 -z-10 w-20 object-cover opacity-20 xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80"
+        className="absolute -left-10 bottom-0 -z-10 w-20 object-cover opacity-20 xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80"
       />
     </section>
   );

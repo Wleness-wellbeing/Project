@@ -15,6 +15,7 @@ import testimonial1 from "./images/home/testimonials/testimonial-1.png";
 import testimonial2 from "./images/home/testimonials/testimonial-2.png";
 import testimonial3 from "./images/home/testimonials/testimonial-3.png";
 import testimonial4 from "./images/home/testimonials/testimonial-4.png";
+import testimonialRing from "./images/home/testimonials/testimonial-ring.png";
 import community from "./images/home/community.png";
 import doodle1 from "./images/home/doodle-1.svg";
 import doodle2 from "./images/home/doodle-2.svg";
@@ -76,6 +77,7 @@ export {
   testimonial2,
   testimonial3,
   testimonial4,
+  testimonialRing,
   community,
   doodle1,
   doodle2,
@@ -746,12 +748,12 @@ import happyClient1 from "./images/clients/happy-client-1.png";
 import happyClient2 from "./images/clients/happy-client-2.png";
 import happyClient3 from "./images/clients/happy-client-3.png";
 import happyClient4 from "./images/clients/happy-client-4.png";
-import therapyClient1 from "./images/clients/therapy-review-1.jpg";
-import therapyClient2 from "./images/clients/therapy-review-2.jpg";
-import therapyClient3 from "./images/clients/therapy-review-3.jpg";
-import coupleTherapyReview1 from "./images/clients/couple-therapy-review-1.jpg";
-import coupleTherapyReview2 from "./images/clients/couple-therapy-review-2.jpg";
-import coupleTherapyReview3 from "./images/clients/couple-therapy-review-3.jpg";
+import therapyClient1 from "./images/clients/therapy-review-1.png";
+import therapyClient2 from "./images/clients/therapy-review-2.png";
+import therapyClient3 from "./images/clients/therapy-review-3.png";
+import coupleTherapyReview1 from "./images/clients/couple-therapy-review-1.png";
+import coupleTherapyReview2 from "./images/clients/couple-therapy-review-2.png";
+import coupleTherapyReview3 from "./images/clients/couple-therapy-review-3.png";
 
 export {
   happyClient1,

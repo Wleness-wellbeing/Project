@@ -9,7 +9,11 @@ const SelectBest = React.forwardRef((props, ref) => {
     <section className="py-3 lg:py-6">
       <div className="relative overflow-x-clip">
         <div className="text-center">
-          <div className="bg-[#ddf2ef] py-4">
+          <div
+            className={` py-4 ${
+              props.headingBg ? "bg-[#ddf2ef] " : "bg-transparent"
+            }`}
+          >
             <h2 className="subheading container mx-auto !pb-0">
               {textColorize(props.heading)}
             </h2>

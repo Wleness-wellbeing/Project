@@ -7,6 +7,7 @@ import DoctorStatistics from "../../components/Statistics/DoctorStatistics";
 import HomeFaq from "../../components/Faq/HomeFaq";
 import axios from "axios";
 import { EXPERTS_URI } from "../../data/api";
+import SelectPricing from "../../components/Forms/SelectPricing";
 
 const doctorsForte = [
   "Evidence based therapy expertise",
@@ -131,7 +132,8 @@ export default function ExpertProfile() {
         />
       </header>
 
-      <BookAppointment />
+      {/* <BookAppointment /> */}
+      <SelectPricing slug={"/experts/booking/" + profileDetails.slug} />
       <DoctorStatistics />
 
       <section className="container mx-auto gap-x-6 lg:flex">

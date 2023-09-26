@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { blogThumbnail2 } from "../../assets";
 
 export default function BlogCard(props) {
   return (

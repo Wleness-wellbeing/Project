@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -14,8 +14,12 @@ import HappyClient from "../../components/HappyClient";
 import DoctorsCard from "../../components/DoctorsCard";
 import Assessment from "../../components/Assessment";
 import { mythsAndFacts } from "../../data/faqs";
+import axios from "axios";
+import { EXPERTS_URI } from "../../data/api";
 
 export default function Psychiatrist() {
+  const [doctorDetails, setDoctorDetails] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
   const openAssessmentModal = () => {
     setShowAssessmentModal(true);
@@ -29,6 +33,26 @@ export default function Psychiatrist() {
   const handleScrollToComponent = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  useEffect(() => {
+    // Make a GET request using Axios
+    axios
+      .get(EXPERTS_URI)
+      .then((response) => {
+        // Handle the successful response
+        setDoctorDetails(response.data["experts"]);
+        setLoading(false);
+      })
+      .catch((error) => {
+        // Handle errors
+        console.error("Error fetching doctor details:", error);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <div className="mb-5 text-center">Loading...</div>;
+  }
   return (
     <>
       <GridHeader
@@ -45,18 +69,19 @@ export default function Psychiatrist() {
         features={psychiatristData.bestTherapist.features}
         btn={psychiatristData.bestTherapist.startBtn}
         openAssessmentModal={openAssessmentModal}
+        headingBg={false}
       />
 
       {/* Specialist Doctors */}
       <section>
-        <div className="side-spacing grid-cols-[repeat(4, minmax(280, 1fr))] container mx-auto grid items-center gap-5 p-4 sm:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-4">
-          {psychiatristData.bestTherapist.doctors.map((value, i) => {
+        <div className="side-spacing grid-cols-[repeat(4, minmax(280, 1fr))] container mx-auto grid items-center gap-5 p-4 sm:grid-cols-2 lg:pb-12 3xl:gap-6">
+          {doctorDetails.map((value, i) => {
             return <DoctorsCard key={i} data={value} />;
           })}
         </div>
       </section>
 
-      <section className="container relative mx-auto my-8 mt-20 px-8 text-center">
+      <section className="container relative mx-auto my-8 px-8 text-center lg:my-12">
         <div className="mb-8 flex justify-center">
           <div className="z-10 grid h-28 w-28 -translate-y-8 translate-x-4 place-items-center rounded-full bg-tertiary/25 font-quicksand text-xl font-semibold">
             Myths

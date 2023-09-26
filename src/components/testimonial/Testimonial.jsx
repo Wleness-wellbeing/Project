@@ -26,7 +26,7 @@ export default function Testimonial(props) {
                   <img
                     src={value.image}
                     alt={value.name}
-                    className="mx-auto w-3/4 object-cover lg:w-full"
+                    className="mx-auto w-3/4 object-cover drop-shadow-md lg:w-full"
                   />
                 </div>
                 <figcaption className="lg:w-3/5 lg:pl-24">

@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 // Data
-import { blogHeader1, blogHeader2, blogRecent } from "../../assets";
+import { blogRecent } from "../../assets";
 // Component
 import BlogCard from "../../components/Cards/BlogCard";
 import {
@@ -25,7 +25,7 @@ const allBlogs = [
 ];
 
 export default function Blogs() {
-  const [blogPosts, setBlogPosts] = useState({});
+  const [blogPosts, setBlogPosts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -35,6 +35,7 @@ export default function Blogs() {
       .then((response) => {
         if (response.status == 200) {
           setBlogPosts(response.data.blogs);
+          console.log(response.data.blogs);
           setLoading(false);
         } else {
           console.log(response);
@@ -61,7 +62,7 @@ export default function Blogs() {
   ];
   const blogFilters = [
     "All Categories",
-    "Navigating Miflife for Women",
+    "Navigating Midlife for Women",
     "Issues",
     "Medical",
   ];
@@ -72,44 +73,6 @@ export default function Blogs() {
   return (
     <>
       {/* ========== Header ============= */}
-      {/* <header className="bg-primary-50/30">
-        <div className="container mx-auto rounded-xl py-14 lg:py-28">
-          <div className="mb-4 flex flex-col items-center lg:mb-0 lg:flex-row">
-            <div className="lg:w-1/4">
-              <img src={blogHeader1} className="w-fit object-cover"></img>
-            </div>
-
-            <div className="text-center lg:w-1/2">
-              <h1 className="subheading heading-primary">OUR BLOGS</h1>
-              <p className="text-sm font-medium lg:text-lg">
-                Mental health and physical health are linked, with poor mental
-                health leading to physical health problems and vice versa. This
-                blog post explores the relationship and offers tips for how to
-                prioritize both in daily life.
-              </p>
-            </div>
-
-            <div className="hidden w-1/4 lg:block">
-              <img src={blogHeader2} className="w-full object-cover"></img>
-            </div>
-          </div>
-
-          <form className="mx-auto flex items-center justify-between rounded-full border border-gray-300 bg-white lg:w-96">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="w-full rounded-l-full py-2.5 pl-5 pr-2 outline-none"
-            />
-            <button
-              type="submit"
-              className="rounded-full bg-primary-400 px-4 py-2.5 text-white"
-            >
-              <FontAwesomeIcon icon={faSearch} className="text-white" />
-            </button>
-          </form>
-        </div>
-      </header> */}
-
       <header className="bg-primary-50/40 py-5">
         <div className="text-center">
           <h1 className="subheading heading-primary">Our Blogs</h1>
@@ -132,15 +95,6 @@ export default function Blogs() {
 
       {/* =========== Recent Blog ========= */}
       <section className="container mx-auto py-8 lg:!px-0">
-        {/* <div className="mx-auto flex w-fit justify-end pb-8 lg:w-full lg:py-10">
-          <button className="rounded-l-lg bg-primary-400 px-8 py-3 font-bold text-white">
-            Recent
-          </button>
-          <button className="rounded-r-lg bg-slate-200 px-8 py-3 font-bold text-primary-400">
-            Popular
-          </button>
-        </div> */}
-
         <Swiper
           modules={[Pagination]}
           slidesPerView={1}
@@ -178,7 +132,6 @@ export default function Blogs() {
 
       {/* Filterable Blogs */}
       <section className="container mx-auto lg:!px-0">
-        {/* ============== Filters ============= */}
         <ul className="flex flex-wrap justify-center gap-2 pb-8 pt-12 lg:justify-between lg:gap-x-14 lg:gap-y-6 lg:pt-5 2xl:py-8">
           {blogFilters.map((value, index) => {
             return (

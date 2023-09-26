@@ -43,6 +43,7 @@ export default function Therapy() {
         features={TherapyData.bestTherapist.features}
         btn={TherapyData.bestTherapist.startBtn}
         openAssessmentModal={openAssessmentModal}
+        headingBg={true}
       />
 
       {/* Therapies */}

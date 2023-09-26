@@ -164,11 +164,11 @@ export default function Footer() {
             suicidal or self-harming thoughts or exhibit signs of severe
             clinical disorders like schizophrenia and other psychotic ailments.
             The best type of assistance in these situations is in-person medical
-            assistance. Suppose you believe you are going through any of these
-            issues. In that case, we strongly advise you to go to the hospital
-            or emergency room that is most convenient for you to speak with a
-            therapist, social worker, or psychiatrist in person. We advise
-            including a close relative or friend who can provide support.
+            assistance. In case you believe you are going through any of these
+            issues, we strongly advise you to go to the hospital or emergency
+            room that is most convenient for you and speak with a therapist,
+            social worker, or psychiatrist in person. We also advise including a
+            close relative or friend who can provide support.
           </p>
           <p>
             You can also get in touch with a suicide hotline in your home

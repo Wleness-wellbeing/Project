@@ -23,7 +23,7 @@ export default function HomeFaq(props) {
         </p>
         <img src={faq3} alt="" className="lg:w-4/5" loading="lazy" />
         <Link to="/faqs" className="btn-one inline-block">
-          Goes to FAQ's
+          Go to FAQ's
         </Link>
       </div>
       <div className="flex flex-col gap-4 lg:w-1/2" id="home-page-faqs">

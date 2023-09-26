@@ -173,8 +173,8 @@ export const footerAboutWleness = [
   ["About Us", "/about-us"],
   ["Contact Us", "/contact-us"],
   ["Career", "/career"],
-  ["Join Psychiatrist", "/join-psychiatrist"],
-  ["Join Therapist", "/join-therapist"],
+  ["Join as Psychiatrist", "/join-psychiatrist"],
+  ["Join as Therapist", "/join-therapist"],
   ["FAQ's", "/faqs"],
 ];
 
@@ -209,9 +209,9 @@ export const footerFocusAreas = [
 
 // Footer - Our Experts
 export const footerOurExperts = [
-  ["Therapist", "/services/therapy"],
+  ["Therapists", "/services/therapy"],
   // ["Psychiatrist", "/services/psychiatrist"],
-  ["Couple Therapist", "/services/couples-therapy"],
+  ["Couple Therapists", "/services/couples-therapy"],
   ["Coaches", "/coaches"],
 ];
 

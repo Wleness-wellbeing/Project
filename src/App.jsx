@@ -57,6 +57,7 @@ import ExpertProfile from "./pages/Experts/ExpertProfile";
 import Gauth from "./pages/Authentication/Gauth";
 import FacebookAuth from "./pages/Authentication/FacebookAuth";
 import Career from "./pages/Career";
+import Consent from "./pages/Policies/Consent";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -504,6 +505,14 @@ function App() {
           element={
             <Layout>
               <Cancellation />
+            </Layout>
+          }
+        />
+        <Route
+          path="/consent"
+          element={
+            <Layout>
+              <Consent />
             </Layout>
           }
         />

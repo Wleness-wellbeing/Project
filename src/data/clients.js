@@ -37,21 +37,21 @@ export const clientsReviews = [
 
 export const userReview = [
   {
-    name: "Sahil Konde",
+    name: "Anonymous User",
     profession: "",
     image: therapyClient1,
     review:
       "Wleness has truly been a game-changer in my mental health journey. The app's uplifting content and exercises have given me a more positive outlook on life. The psychologist sessions are incredibly valuable, providing me with the support and guidance I need. I can't thank the creators of Wleness enough for creating such a helpful and user-friendly resource for mental well-being",
   },
   {
-    name: "Paras Shewale",
+    name: "Anonymous User",
     profession: "",
     image: therapyClient2,
     review:
       "Wleness has truly been a game-changer in my mental health journey. The app's uplifting content and exercises have given me a more positive outlook on life. The psychologist sessions are incredibly valuable, providing me with the support and guidance I need. I can't thank the creators of Wleness enough for creating such a helpful and user-friendly resource for mental well-being",
   },
   {
-    name: "Kiran Kale",
+    name: "Anonymous User",
     profession: "",
     image: therapyClient3,
     review:
@@ -94,21 +94,21 @@ export const coupleTherapyClient = {
   ],
   clients: [
     {
-      name: "Anil Kumar",
+      name: "Anonymous User",
       profession: "",
       image: coupleTherapyReview1,
       review:
         "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
     },
     {
-      name: "Aditya Sonawane",
+      name: "Anonymous User",
       profession: "",
       image: coupleTherapyReview2,
       review:
         "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
     },
     {
-      name: "Atharva Shinde",
+      name: "Anonymous User",
       profession: "",
       image: coupleTherapyReview3,
       review:
@@ -152,21 +152,21 @@ export const therapyClient = {
   ],
   clients: [
     {
-      name: "Sahil Konde",
+      name: "Anonymous User",
       profession: "",
       image: therapyClient1,
       review:
         "Wleness has truly been a game-changer in my mental health journey. The app's uplifting content and exercises have given me a more positive outlook on life. The psychologist sessions are incredibly valuable, providing me with the support and guidance I need. I can't thank the creators of Wleness enough for creating such a helpful and user-friendly resource for mental well-being",
     },
     {
-      name: "Paras Shewale",
+      name: "Anonymous User",
       profession: "",
       image: therapyClient2,
       review:
         "Wleness has truly been a game-changer in my mental health journey. The app's uplifting content and exercises have given me a more positive outlook on life. The psychologist sessions are incredibly valuable, providing me with the support and guidance I need. I can't thank the creators of Wleness enough for creating such a helpful and user-friendly resource for mental well-being",
     },
     {
-      name: "Kiran Kale",
+      name: "Anonymous User",
       profession: "",
       image: therapyClient3,
       review:
@@ -220,21 +220,21 @@ export const expertsClients = {
   ],
   clients: [
     {
-      name: "Anil Kumar",
+      name: "Anonymous User",
       profession: "",
       image: coupleTherapyReview1,
       review:
         "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
     },
     {
-      name: "Aditya Sonawane",
+      name: "Anonymous User",
       profession: "",
       image: coupleTherapyReview2,
       review:
         "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
     },
     {
-      name: "Atharva Shinde",
+      name: "Anonymous User",
       profession: "",
       image: coupleTherapyReview3,
       review:

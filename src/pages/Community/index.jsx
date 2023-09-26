@@ -40,7 +40,7 @@ const communitySupport = [
     desc: "Find solace and support among fellow survivors on the path to overcoming traumas. Here, you'll discover a safe space to share your journey, heal, and grow stronger together.",
   },
   {
-    title: "Adulating with ADHD",
+    title: "Adulting with ADHD",
     image: communitySupport5,
     desc: "Navigate the challenges of adulting with ADHD through our community. You'll find acceptance, practical tips, and shared experiences to help you thrive here.",
   },

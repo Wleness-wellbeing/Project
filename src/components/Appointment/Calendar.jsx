@@ -39,21 +39,21 @@ const Calendar = ({ onDateSelect }) => {
   return (
     <div>
       <div className="mb-4 flex justify-between">
-        <button
+        <span
           onClick={goToPreviousMonth}
-          className="font-medium text-gray-600 hover:text-gray-800 focus:outline-none"
+          className="cursor-pointer text-sm font-medium text-gray-600  hover:text-primary-400 focus:outline-none"
         >
-          &lt; Previous Month
-        </button>
-        <h2 className="text-center text-xl font-semibold text-gray-800">
+          &lt; Previous
+        </span>
+        <h2 className="text-center text-lg font-semibold text-gray-800">
           {format(displayedMonth, "MMMM yyyy")}
         </h2>
-        <button
+        <span
           onClick={goToNextMonth}
-          className="font-medium text-gray-600 hover:text-gray-800 focus:outline-none"
+          className="cursor-pointer text-sm font-medium text-gray-600 hover:text-primary-400 focus:outline-none"
         >
-          Next Month &gt;
-        </button>
+          Next &gt;
+        </span>
       </div>
       <div className="grid grid-cols-7 gap-2">
         {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
@@ -62,10 +62,10 @@ const Calendar = ({ onDateSelect }) => {
           </div>
         ))}
         {dates.map((date) => (
-          <button
+          <span
             key={date}
             onClick={() => handleDateSelect(date)}
-            className={`border ${
+            className={`cursor-pointer border ${
               date.getMonth() !== displayedMonth.getMonth()
                 ? "text-gray-400"
                 : ""
@@ -76,7 +76,7 @@ const Calendar = ({ onDateSelect }) => {
             } rounded-full py-2 text-center focus:outline-none`}
           >
             {format(date, "d")}
-          </button>
+          </span>
         ))}
       </div>
     </div>

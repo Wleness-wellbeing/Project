@@ -66,7 +66,7 @@ const AppointmentComponent = (props) => {
   };
 
   return (
-    <div className="gap-8 lg:flex">
+    <div className="gap-2 lg:flex lg:gap-8">
       {/* Calendar Section */}
       <div className="lg:w-1/2">
         <Calendar
@@ -77,7 +77,7 @@ const AppointmentComponent = (props) => {
 
       {/* Time Slot Section */}
       <div className="lg:w-1/2">
-        <h2 className="mb-4 text-center text-2xl font-medium ">
+        <h2 className="mb-4 text-center text-xl font-medium ">
           {props.date ? (
             <>
               Available time slots for{" "}
@@ -99,9 +99,9 @@ const AppointmentComponent = (props) => {
                         <span
                           key={timeSlot}
                           onClick={() => handleTimeSelect(timeSlot)}
-                          className={`mr-2 mt-2 inline-block cursor-pointer rounded-full border-2 border-primary-300 px-4 py-2.5 text-center font-medium text-primary-300 transition-all hover:bg-primary-300 hover:text-white ${
+                          className={`mr-2 mt-2 inline-block cursor-pointer rounded-full border-2 border-primary-300 px-4 py-2.5 text-center text-sm font-medium text-primary-300 transition-all hover:bg-primary-300 hover:text-white ${
                             props.time === timeSlot
-                              ? "bg-primary-500 text-white"
+                              ? "bg-primary-300 text-white"
                               : "bg-white"
                           }`}
                         >
