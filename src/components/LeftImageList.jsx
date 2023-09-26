@@ -16,7 +16,11 @@ export default function LeftImageList(props) {
           {props.data.list.map((value, index) => {
             return (
               <li key={index} className="flex items-start">
-                <img src={leaf} alt="Leaf Icon" className="mr-2 h-6 w-6 " />
+                <img
+                  src={leaf}
+                  alt="Leaf Icon"
+                  className="mr-6 h-6 w-12 object-contain"
+                />
                 <p className="text-base font-semibold text-black">{value}</p>
               </li>
             );

@@ -59,6 +59,7 @@ import FacebookAuth from "./pages/Authentication/FacebookAuth";
 import MeditationCheckout from "./pages/Appointment/MeditationCheckout";
 import Saloni from "./pages/Coaches/Saloni";
 import Anju from "./pages/Coaches/Anju";
+import Andrea from "./pages/Coaches/Andrea";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -255,6 +256,14 @@ function App() {
           element={
             <Layout>
               <Anju />
+            </Layout>
+          }
+        />
+        <Route
+          path="/andrea"
+          element={
+            <Layout>
+              <Andrea />
             </Layout>
           }
         />

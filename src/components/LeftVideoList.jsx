@@ -23,8 +23,12 @@ export default function LeftVideoList(props) {
         <ul className="list-inside list-disc pt-4">
           {props.data.list.map((value, index) => {
             return (
-              <li key={index} className="flex items-start space-x-2">
-                <img src={leaf} alt="Leaf Icon" className="mr-2 h-6 w-6 " />
+              <li key={index} className="flex items-start ">
+                <img
+                  src={leaf}
+                  alt="Leaf Icon"
+                  className="mr-6 h-6 w-12 object-contain"
+                />
                 <span className="text-lg font-semibold text-black">
                   {value.subtitle}
                 </span>

@@ -13,7 +13,11 @@ export default function RightImageList2(props) {
             return (
               <li key={index} className="flex space-x-2">
                 <div className="">
-                  <img src={leaf} alt="Leaf Icon" className="mr-2 h-6 w-8 " />
+                  <img
+                    src={leaf}
+                    alt="Leaf Icon"
+                    className="mr-6 h-6 w-12 object-contain"
+                  />
                 </div>
                 <div>
                   <p className="mb-0">

@@ -11,12 +11,16 @@ export default function RightProcedureList(props) {
         <h2 className="mb-4 text-2xl font-bold text-primary-500">
           {props.data.title}
         </h2>
-        <ul className="pt-4">
+        <ul className="pt-4 ">
           {props.data.list.map((value, index) => {
             return (
               <li key={index} className="flex space-x-2">
                 <div className="">
-                  <img src={leaf} alt="Leaf Icon" className="mr-2 h-6 w-12 " />
+                  <img
+                    src={leaf}
+                    alt="Leaf Icon"
+                    className="mr-6 h-6 w-12 object-contain"
+                  />
                 </div>
                 <div>
                   <p className="mb-0">

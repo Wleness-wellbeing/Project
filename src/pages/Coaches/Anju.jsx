@@ -4,63 +4,55 @@ import CertificateList from "./Certificate";
 
 const certificatesData = [
   {
-    certificate:
-      "Professional Certified Coach (PCC), International Coaching Federation",
+    certificate: "Personal Certified Coach (PCC, ICF US)",
   },
   {
-    certificate: "Hogan Personality Assessments(Level 1 and Level 2)",
-  },
-  {
-    certificate: "MBE (mindset, beliefs, emotions) Reprogramming",
+    certificate: "Certified NLP Master Practitioner & NLP",
   },
   {
     certificate:
-      "Coaching for Performance(GROW Model & Situational Leadership)",
+      "Certified on EI Assessment & DISC Profiling from Thomas Assessment Pvt Ltd.",
   },
   {
-    certificate: "NLP Licensed Practitioner, Richard Bandler",
+    certificate:
+      "Coach & trainer from NLP Coaching Academy (ABNLP) & MEPSC (NSDC)",
   },
   {
-    certificate: "InnerMostShift Change & Transformation Coach",
+    certificate: "Certified Counsellor by IAPCCT",
   },
   {
-    certificate: "InnerMostShift Value Conscious Leadership Coach",
+    certificate: "TTT by Dale Carnegie Inc.",
   },
   {
-    certificate: "InnerMostShift Vision & Motivation Coach",
+    certificate: "Licensed EI Trainer IAPCCT",
   },
   {
-    certificate: "InnetMostShift Resilience & Relationship Coach",
-  },
-  {
-    certificate: "Operational Personality Questionnaire Assessment",
-  },
-  {
-    certificate: "Situational Leadership  II, Blanchard",
-  },
-  {
-    certificate: "Team Management System",
+    certificate: "T&D Diploma from ISTD",
   },
 ];
 
 export default function Anju() {
   return (
     <main>
-      <header className="relative overflow-x-clip bg-secondary/10 pb-6 pt-12 xl:pb-10 xl:pt-8">
+      <header className=" relative overflow-x-clip bg-secondary/10  lg:py-28 ">
         <div class="container mx-auto my-8 flex flex-col md:flex-row">
           <div class="flex items-center justify-center md:w-2/5 md:justify-start">
             <img src={anjuHeader} alt="Saloni Header" class="" />
           </div>
           <div class="w-full md:w-3/5">
-            <h2 class="subheading py-4">Saloni Gupta</h2>
-            <h3 class="py-4 text-lg font-bold">Executive Coach | Speaker</h3>
+            <h2 class="subheading py-4">Dr. Anju Chawla</h2>
+            <h3 class="py-4 text-lg font-bold">
+              Coach | Speaker | Trainer | Assessor
+            </h3>
             <p class="para text-justify">
-              Saloni is a certified international executive coach with a strong
-              passion for assisting leaders and organizations in navigating
-              change and achieving success in a disruptive world. Her corporate
-              career spans over 20 years, during which she held innovative HR
-              leadership roles and served as a coach in various multinational
-              companies across North America, Europe, and Asia.
+              Dr. Anju Chawla is a dedicated advocate for harnessing the power
+              of Emotional Intelligence (EI) to transform lives and achieve
+              personal and professional goals. With over two decades of
+              experience in coaching and mentoring, Dr. Chawla firmly believes
+              that every individual possesses the incredible potential of EI,
+              which she endeavours to unlock through her work. As a seasoned
+              coach, she understands the invaluable role that an external
+              perspective plays in personal growth and development.
             </p>
           </div>
         </div>{" "}
@@ -68,54 +60,57 @@ export default function Anju() {
 
       <div class="container mx-auto text-center">
         <h2 class="subheading my-4">
-          About <span className="heading-primary">Saloni Gupta</span>
+          About <span className="heading-primary">Anju Chawla</span>
         </h2>
         <p class="para text-justify">
-          Throughout her career, she successfully led numerous high-profile
-          projects to accelerate leadership development, foster talent growth,
-          and drive cultural change in organizations such as Siemens, Nokia, and
-          Grainger.
+          Dr. Chawla's extensive clientele reflects her wide-reaching impact.
+          She has worked with professionals and students from diverse
+          backgrounds, from SAARC civil servants and corporate directors to
+          engineers, doctors, and management faculties.
         </p>{" "}
         <br></br>
         <p class="para text-justify">
-          In her most recent corporate role, she launched a groundbreaking
-          global executive coaching program tailored for senior operations
-          leaders at Amazon. This program incorporated a unique blend of
-          in-person and online coaching sessions, both in group settings and on
-          a one-on-one basis.
+          Her expertise has benefited renowned organizations such as Accenture
+          India, Maruti Suzuki, and Central Bank of India, among many others.
         </p>{" "}
         <br></br>
         <p class="para text text-justify">
-          Her expertise in coaching has been recognized by the International
-          Coaching Federation, which awarded her with the prestigious
-          Professional Certified Coach (PCC) credentials. She has dedicated
-          substantial time to her professional development, completing over 250
-          hours of coach training and accumulating a wealth of experience
-          through more than 800 hours of client coaching.
+          With a track record of empowering over 60,000 individuals and earning
+          the trust of more than 70 organizations, Dr. Anju Chawla's legacy is
+          defined by her unwavering commitment to helping people realize their
+          true potential and become exceptional performers in their respective
+          fields.
+        </p>
+        <p class="para text text-justify">
+          As a catalyst for positive change and growth, her passion for
+          Emotional Intelligence and extensive experience make her a trusted and
+          influential figure in coaching and personal development.
         </p>
       </div>
       <div class="my-4 text-center">
         <h2 class="subheading">
-          Why work with <span class="heading-primary">Coach Saloni?</span>
+          Why work with <span class="heading-primary">Coach Anju?</span>
         </h2>
       </div>
 
       <div class="container mx-auto flex flex-col md:flex-row">
         <div class="w-full md:w-2/5">
-          <img src={anjuMid} alt="Saloni Mid" class="w-full" />
+          <img src={anjuMid} alt="anju Mid" class="w-full" />
         </div>
         <div class="my-9 w-full md:ml-8 md:w-3/5">
           <div class="mb-8 rounded-xl border-2 border-teal-400 bg-white p-4 shadow-md hover:bg-teal-400 hover:text-white md:p-8">
-            She is passionate about enabling leaders to lead with clarity by
-            harnessing the power of self-awareness and motivation. Her solutions
-            help leaders to understand their strengths and values, define
-            purpose-driven goals, maximize their impact.
+            Dr. Anju Chawla specializes in enhancing emotional well-being
+            through EI profiles, coaching, and training. Her focus areas include
+            leadership, emotional wellness, conflict resolution, and
+            relationship management.
           </div>
           <div class=" rounded-xl border-2 border-teal-400 bg-white p-4 shadow-md hover:bg-teal-400 hover:text-white md:p-8">
-            She begins by understanding desired leadership behaviors in your
-            organization and aligning her process to your culture. Her
-            data-driven needs analysis, culture alignment, and key stakeholder
-            involvement ensure a successful engagement.
+            Dr. Chawla, renowned for her unwavering commitment to ethical
+            practice, delivers bespoke solutions encompassing Neuro Linguistic
+            Programming, Emotional Intelligence, and other specialized
+            disciplines. Her profound expertise, cultivated through a diverse
+            clientele, empowers organizations and individuals alike, elevating
+            their emotional intelligence and overall professional well-being.
           </div>
         </div>
       </div>
@@ -130,32 +125,28 @@ export default function Anju() {
 
             <ul class="list-disc">
               <li class="flex items-center py-2 ">
-                <img src={leaf} alt="Icon 1" class=" mr-1 h-4 w-4" /> Expertise
-                in working in Diversified industry with Global perspective
+                <img src={leaf} alt="Icon 1" class=" mr-1 h-4 w-4" />
+                Executive and Life Coaching
               </li>
               <li class="flex items-center py-2">
-                <img src={leaf} alt="Icon 2" class="mr-1 h-4 w-4" /> Expert in
-                aligning coaching processes with organizational culture
+                <img src={leaf} alt="Icon 2" class="mr-1 h-4 w-4" />
+                Transition Experts with speciality in technology sector
               </li>
               <li class="flex items-center py-2">
-                <img src={leaf} alt="Icon 3" class="mr-1 h-4 w-4" /> Specializes
-                in both individual and corporate executive coaching
+                <img src={leaf} alt="Icon 3" class="mr-1 h-4 w-4" />
+                Leadership Coaching
               </li>
               <li class="flex items-center py-2">
-                <img src={leaf} alt="Icon 4" class="mr-1 h-4 w-4" /> Proficient
-                in mindset, beliefs, and emotions (MBE) reprogramming
+                <img src={leaf} alt="Icon 4" class="mr-1 h-4 w-4" /> Emotional
+                Intelligence
               </li>
               <li class="flex items-center py-2">
-                <img src={leaf} alt="Icon 5" class="mr-1 h-4 w-4" /> Expertise
-                in Executive Assessment
+                <img src={leaf} alt="Icon 5" class="mr-1 h-4 w-4" />{" "}
+                Communication Trainings
               </li>
               <li class="flex items-center py-2">
-                <img src={leaf} alt="Icon 6" class="mr-1 h-4 w-4" /> Talent
-                Consulting for high potential leaders
-              </li>
-              <li class="flex items-center py-2">
-                <img src={leaf} alt="Icon 7" class="mr-2 h-4 w-4" /> Training
-                Design and Facilitations
+                <img src={leaf} alt="Icon 6" class="mr-1 h-4 w-4" />
+                Mentorship To professionals Engineers, CAs, MBAs
               </li>
             </ul>
           </div>
@@ -170,8 +161,8 @@ export default function Anju() {
       </div>
 
       <div class="container mx-auto my-8 text-center">
-        <h2 class="subheading my-4 text-center">Certificates</h2>
-        <div class="text-center">
+        <h2 class="subheading my-4 text-center">Certifications</h2>
+        <div class="my-10 text-center">
           <CertificateList certificatesData={certificatesData} />
         </div>
       </div>

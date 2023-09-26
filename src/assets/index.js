@@ -173,9 +173,14 @@ import anjuHeader from "./images/coaches/anjuHeader.png"
 import anjuBottom from "./images/coaches/anjuBottom.png"
 import anjuMid from "./images/coaches/anjuMid.png"
 import leaf from "./images/coaches/leaf.png"
+import andreaHeader from "./images/coaches/andreaHeader.png"
+import andreaMid from "./images/coaches/andreaMid.png"
+import andreaBottom from "./images/coaches/andreaBottom.png"
+
+
 
 export{
-  saloniBottom,saloniHeader,saloniMid,anjuBottom,anjuHeader,anjuMid,leaf
+  saloniBottom,saloniHeader,saloniMid,anjuBottom,anjuHeader,anjuMid,leaf,andreaBottom,andreaHeader,andreaMid
 }
 
 

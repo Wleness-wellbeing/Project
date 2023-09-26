@@ -177,8 +177,8 @@ export default function Saloni() {
       </div>
 
       <div class="container mx-auto my-8 text-center">
-        <h2 class="subheading my-4 text-center">Certificates</h2>
-        <div class="text-center">
+        <h2 class="subheading my-4 text-center">Certifications</h2>
+        <div class="my-10 text-center">
           <CertificateList certificatesData={certificatesData} />
         </div>
       </div>
