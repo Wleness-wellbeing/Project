@@ -381,3 +381,26 @@ export const lifeStyleCoachingFaqs = {
     },
   ],
 };
+
+export const executiveCoachingFaqs = [
+  {
+    question: "Enhance Team Performance",
+    paragraph: "Great leaders inspire great teams. Our coaching fosters ",
+    answer:
+      "Great leaders inspire great teams. Our coaching fosters transformative leadership qualities that trickle down, fostering a culture of collaboration, innovation, and excellence. Watch as your teams thrive under the guidance of leaders who know how to harness their full potential.",
+  },
+  {
+    question: "Maximise ROI on Talent:",
+    paragraph:
+      "Offering a unified platform that simplifies access to all mental wellness needs, including self-care, peer support, therapy sessions, and psychiatric care.",
+    answer:
+      "Investing in executive coaching isn't just about today—it's an investment in your organisation's future. You're grooming a pipeline of visionary decision-makers by nurturing your current leaders. This strategic approach ensures a sustainable leadership succession plan, minimising disruptions and propelling your corporate journey forward.",
+  },
+  {
+    question: "Create Impact at crucial moments:",
+    paragraph:
+      "Continuous updates to ensure the best outcomes in mental wellness.",
+    answer:
+      "Our Executive Coaching program is strategically tailored to deliver remarkable results at three critical junctures: when individuals aim to enhance their leadership abilities, seek to optimise specific performance areas and navigate transformative changes that require new skills and agile adaptation. We empower individuals to amplify their success and achieve their full potential in these critical scenarios.",
+  },
+];

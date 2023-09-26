@@ -3946,6 +3946,40 @@ export const lifecoching = [
   },
 ];
 
+// Executive Coaching
+export const executiveCoaching = [
+  {
+    title: "Revenue Growth",
+    image: one,
+    desc: "Companies that invested in executive coaching saw an average revenue growth of 17% over those that didn't.",
+  },
+  {
+    title: "Employee Engagement",
+    desc: "Organizations with strong coaching cultures report employee engagement levels of over 60%.",
+    image: two,
+  },
+  {
+    title: "Leadership Effectiveness",
+    desc: "86% of the  organizations surveyed saw a positive return on investment (ROI) from coaching.",
+    image: three,
+  },
+  {
+    title: "Cost Savings",
+    desc: "Executives who underwent coaching experienced a 53% increase in productivity which makes this cost saving.",
+    image: four,
+  },
+  {
+    title: "Productivity",
+    desc: "Organizations that utilised coaching saw a cost savings of over $7 for every $1 invested.",
+    image: four,
+  },
+  {
+    title: "Leadership Confidence",
+    desc: "A substantial 63% of leaders who received coaching reported increased levels of confidence.",
+    image: four,
+  },
+];
+
 export const wlenessLifeCoaching = [
   {
     name: "One to One Power Coaching",

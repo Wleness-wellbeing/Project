@@ -774,8 +774,9 @@ import faq1 from "./images/faqs/faq-1.png";
 import faq2 from "./images/faqs/faq-2.png";
 import faq3 from "./images/faqs/faq-3.png";
 import faq4 from "./images/faqs/faq-4.png";
+import faq5 from "./images/faqs/guiding-business-image-faq.png";
 
-export { faq1, faq2, faq3, faq4, faqHeader };
+export { faq1, faq2, faq3, faq4, faqHeader, faq5 };
 
 // Blogs Images
 import blogHeader1 from "./images/blogs/blogs-header-1.png";
@@ -1040,8 +1041,22 @@ export {
 };
 
 // =======executive-coaching=========//
+import executiveCoachingHeader from "./images/executiveCoching/executive-coaching-header.png";
 import header from "./images/executiveCoching/header1.png";
 import image2 from "./images/executiveCoching/image2.png";
 import image3 from "./images/executiveCoching/image3.png";
+import executiveCoach1 from "./images/executiveCoching/our-executive-coach-1.png";
+import executiveCoach2 from "./images/executiveCoching/our-executive-coach-2.png";
+import executiveCoach3 from "./images/executiveCoching/our-executive-coach-3.png";
+import bgExecutiveApproach from "./images/executiveCoching/bg-our-approach.png";
 
-export { header, image2, image3 };
+export {
+  header,
+  image2,
+  image3,
+  executiveCoachingHeader,
+  executiveCoach1,
+  executiveCoach2,
+  executiveCoach3,
+  bgExecutiveApproach,
+};
