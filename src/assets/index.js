@@ -127,9 +127,23 @@ import about4 from "./images/aboutus/about4.png"
 import about5 from "./images/aboutus/about5.png"
 import about6 from "./images/aboutus/about6.png"
 import meeting from "./images/aboutus/meeting.png"
+import pgsir from "./images/aboutus/pgsir.png"
+import asissir from "./images/aboutus/asissir.png"
+import kamalsir from "./images/aboutus/kamalsir.png"
+import pavansir from "./images/aboutus/pavansir.png"
+import salonimaam from "./images/aboutus/salonimaam.png"
+import sreyashsir from "./images/aboutus/sreyashsir.png"
+import aboutusbg from "./images/aboutus/aboutusbg.png"
+
+
+
+
+
+
+
 
 export {
-  about1,about2,about3,about4,about5,about6,meeting
+  about1,about2,about3,about4,about5,about6,meeting,pgsir,asissir,kamalsir,pavansir,salonimaam,sreyashsir,aboutusbg
 }
 // executive coaching
 import executiveIcon1 from "./images/executiveCoching/executiveIcon1.png"
@@ -142,6 +156,26 @@ import executiveimage3 from "./images/executiveCoching/image3.png"
 
 export{
   executiveHeader,executiveIcon1,executiveIcon2,executiveIcon3,executiveIcon4,executiveimage2,executiveimage3
+}
+
+
+
+
+import meditationCheckoutBg from "./images/meditationcheckoutBg.png"
+export{
+  meditationCheckoutBg
+}
+// Coaches
+import saloniHeader from "./images/coaches/saloniGuptaHeader.png"
+import saloniBottom from "./images/coaches/saloniBottom.png"
+import saloniMid from "./images/coaches/saloniMid.png"
+import anjuHeader from "./images/coaches/anjuHeader.png"
+import anjuBottom from "./images/coaches/anjuBottom.png"
+import anjuMid from "./images/coaches/anjuMid.png"
+import leaf from "./images/coaches/leaf.png"
+
+export{
+  saloniBottom,saloniHeader,saloniMid,anjuBottom,anjuHeader,anjuMid,leaf
 }
 
 
@@ -293,6 +327,8 @@ import sevaSadhnaProcedure from "./images/activities/sadhna/seva-sadhna-procedur
 import sevaSadhnas from "./images/activities/sadhna/seva-sadhnas.png";
 import natureSadhnaProcedure from "./images/activities/sadhna/nature-sadhna-procedure.png";
 import natureSadhnas from "./images/activities/sadhna/nature-sadhnas.png";
+// Activities >> Sadhna>>subpages
+
 // Activities >> Brain Exercise
 import brainExerciseHeader from "./images/activities/brainExercise/brain-exercise-header.png";
 import brainGameGalaxy from "./images/activities/brainExercise/brain-game-galaxy.png";

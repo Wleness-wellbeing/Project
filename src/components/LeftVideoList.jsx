@@ -1,4 +1,5 @@
 import React from "react";
+import { leaf } from "../assets";
 
 export default function LeftVideoList(props) {
   return (
@@ -23,8 +24,9 @@ export default function LeftVideoList(props) {
           {props.data.list.map((value, index) => {
             return (
               <li key={index} className="flex items-start space-x-2">
-                <span className="font-bold text-primary-500">
-                  &#10004; {value.subtitle}
+                <img src={leaf} alt="Leaf Icon" className="mr-2 h-6 w-6 " />
+                <span className="text-lg font-semibold text-black">
+                  {value.subtitle}
                 </span>
                 <p>{value.desc}</p>
               </li>

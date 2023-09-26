@@ -56,6 +56,9 @@ import StudentsPolicy from "./pages/Policies/StudentsPolicy";
 import ExpertProfile from "./pages/Experts/ExpertProfile";
 import Gauth from "./pages/Authentication/Gauth";
 import FacebookAuth from "./pages/Authentication/FacebookAuth";
+import MeditationCheckout from "./pages/Appointment/MeditationCheckout";
+import Saloni from "./pages/Coaches/Saloni";
+import Anju from "./pages/Coaches/Anju";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -236,6 +239,30 @@ function App() {
           element={
             <Layout>
               <Issues />
+            </Layout>
+          }
+        />
+        <Route
+          path="/saloni"
+          element={
+            <Layout>
+              <Saloni />
+            </Layout>
+          }
+        />
+        <Route
+          path="/anju"
+          element={
+            <Layout>
+              <Anju />
+            </Layout>
+          }
+        />
+        <Route
+          path="/meditation-checkout"
+          element={
+            <Layout>
+              <MeditationCheckout />
             </Layout>
           }
         />

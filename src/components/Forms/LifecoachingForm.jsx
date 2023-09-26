@@ -121,7 +121,7 @@ export default function LifeCoachingForm({ isOpen, onClose }) {
               type="text"
               name="org"
               id="org"
-              placeholder="Name of Your Organization *"
+              placeholder="Name *"
               className="form-input"
               value={formInfo.org}
               onChange={handleChange}
@@ -133,7 +133,7 @@ export default function LifeCoachingForm({ isOpen, onClose }) {
               type="text"
               name="professional_email"
               id="professional_email"
-              placeholder="Professional Email *"
+              placeholder=" Email *"
               className="form-input"
               value={formInfo.professional_email}
               onChange={handleChange}
@@ -141,10 +141,10 @@ export default function LifeCoachingForm({ isOpen, onClose }) {
           </label>
           <label htmlFor="full_name">
             <input
-              type="text"
+              type="number"
               name="full_name"
               id="full_name"
-              placeholder="Full Name *"
+              placeholder="Age *"
               className="form-input"
               value={formInfo.full_name}
               onChange={handleChange}
@@ -152,10 +152,10 @@ export default function LifeCoachingForm({ isOpen, onClose }) {
           </label>
           <label htmlFor="role">
             <input
-              type="text"
+              type="gender"
               name="role"
               id="role"
-              placeholder="Your Role *"
+              placeholder="Gender *"
               className="form-input"
               value={formInfo.role}
               onChange={handleChange}
@@ -172,7 +172,7 @@ export default function LifeCoachingForm({ isOpen, onClose }) {
               onChange={handleChange}
             />
           </label>
-          <label htmlFor="website">
+          {/* <label htmlFor="website">
             <input
               type="text"
               name="website"
@@ -182,7 +182,7 @@ export default function LifeCoachingForm({ isOpen, onClose }) {
               value={formInfo.website}
               onChange={handleChange}
             />
-          </label>
+          </label> */}
           <label htmlFor="policyAccept" className="mb-4 flex px-2">
             <input
               type="checkbox"
@@ -206,13 +206,13 @@ export default function LifeCoachingForm({ isOpen, onClose }) {
             <button
               type="reset"
               onClick={onClose}
-              className="mr-2 rounded-2xl border-2 border-[#0F7CAB] px-5 py-2 font-semibold text-[#0A99D6] transition-all hover:bg-[#0F7CAB] hover:text-white"
+              className="mr-2 rounded-2xl border-2 border-primary-300 px-5 py-2 font-semibold text-primary-300 transition-all hover:bg-primary-500 hover:text-white"
             >
               Close
             </button>
             <button
               type="submit"
-              className="rounded-2xl border-2 border-[#0A99D6] bg-[#0A99D6] px-5 py-2 font-semibold text-white  transition-all hover:border-[#0F7CAB] hover:bg-[#0F7CAB]"
+              className="rounded-2xl border-2 border-primary-300 bg-primary-300 px-5 py-2 font-semibold text-white  transition-all hover:border-primary-500 hover:bg-primary-500"
             >
               Submit
             </button>

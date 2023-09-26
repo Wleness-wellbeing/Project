@@ -6,119 +6,192 @@ import {
   about4,
   about5,
   about6,
-  image3,
   meeting,
+  pgsir,
+  asissir,
+  kamalsir,
+  pavansir,
+  salonimaam,
+  sreyashsir,
+  aboutusbg,
 } from "../../assets";
+import AboutUsdropbox from "../../components/AboutUsDrop";
+import DummyComponent from "../../components/AboutUsDrop";
+import TeamComponent from "./TeamComponent";
 
 function AboutUs() {
   return (
     <main>
-      <div className="container mx-auto my-16 flex flex-col lg:flex-row">
-        <div className="my-4 lg:w-1/2">
-          <h1 className="subheading">
-            About <span className="heading-primary">Wleness</span>
-          </h1>
-          <br />
-          <p className="font-semibold">
-            Wleness is a mental health startup dedicated to providing accessible
-            and affordable therapy to individuals struggling with mental health
-            issues.
-          </p>
-          <br />
-          <p className="font-semibold">
-            By leveraging technology, Wleness connects users with licensed
-            mental health professionals via a secure online platform, making it
-            easier for people to receive support from the comfort of their own
-            homes.
-          </p>
-          <br />
-          <p className="font-semibold">
-            The organization aims to establish a comprehensive mental health
-            ecosystem offering treatment and tailored care plans for a spectrum
-            of mental health conditions, including but not limited to anxiety,
-            depression, bipolar disorder, ADHD, OCD, schizophrenia, and
-            addictions.
-          </p>
-        </div>
-        <div className="pl-2 lg:w-1/2">
-          <img src={about2} alt="Wleness" className="h-auto w-full" />
-        </div>
-      </div>
-
-      <div className="mx-auto flex ">
-        <div className="mx-auto mb-4 h-96 w-1/4 border-4 border-[#E9FBF8]">
-          <img
-            src={about6} // Replace with your image URL
-            alt="Description of the image"
-            className=" h-full translate-x-52 drop-shadow-lg"
-          />
-        </div>
-
-        <div className="h-96 w-3/4 bg-[#E9FBF8]">
-          <div className="my-16 w-3/5 translate-x-60 items-center">
-            <h2 className="subheading  text-left font-semibold">
-              The <span className="heading-primary">Problem </span>
-            </h2>
-            <p className="  font-semibold">
-              Despite the growing recognition and awareness of the importance of
-              mental health, access to affordable and accessible therapy remains
-              a significant challenge for many individuals.
+      <header className="relative  overflow-x-clip bg-secondary/10 py-24 sm:h-auto">
+        <div className="mx-auto flex flex-col lg:flex-row">
+          <div className="lg:order-2">
+            <img
+              src={aboutusbg}
+              alt="Wleness"
+              className="hidden w-full scale-y-150 object-cover object-left sm:block lg:w-auto"
+            />
+          </div>
+          <div className="px-4 text-justify sm:w-full lg:order-1 lg:ml-56 lg:w-1/2 lg:px-0">
+            <h1 className="subheading">
+              About <span className="heading-primary">Wleness</span>
+            </h1>
+            <br />
+            <p className="w-full font-semibold">
+              Wleness is a mental health startup dedicated to providing
+              accessible and affordable therapy to individuals struggling with
+              mental health issues.
             </p>
-            <p className="  font-semibold">
-              Traditional in-person therapy sessions often involve long wait
-              times, high costs, and limited availability of mental health
-              professionals, discouraging individuals from seeking the help they
-              need.
+            <br />
+            <p className="w-full font-semibold">
+              By leveraging technology, Wleness connects users with licensed
+              mental health professionals via a secure online platform, making
+              it easier for people to receive support from the comfort of their
+              own homes.
             </p>
-            <p className="  font-semibold">
-              Additionally, mental health issues' stigma can deter people from
-              reaching out for support.
+            <br />
+            <p className="w-full font-semibold">
+              The organization aims to establish a comprehensive mental health
+              ecosystem offering treatment and tailored care plans for a
+              spectrum of mental health conditions, including but not limited to
+              anxiety, depression, bipolar disorder, ADHD, OCD, schizophrenia,
+              and addictions.
             </p>
           </div>
         </div>
-      </div>
+      </header>
 
-      <div className="mx-auto flex py-4">
-        <div className="h-96 w-3/4 bg-[#E9FBF8]">
-          <div className="my-16 w-3/5 translate-x-60 text-left">
-            <h2 className="subheading  font-semibold">
+      <div className="container mx-auto my-6 flex flex-col-reverse lg:flex-row">
+        <div className="my-auto w-full text-center lg:w-1/2 lg:text-left">
+          <div>
+            <h2 className="subheading text-left font-semibold">
+              The <span className="heading-primary">Problem</span>
+            </h2>
+            <p className="font-semibold">
+              Modern life can be demanding, and it’s not uncommon to feel
+              stressed, anxious, and emotionally drained. Work, relationships,
+              and personal expectations can make it challenging to maintain
+              mental balance and happiness.
+            </p>
+            <br />
+            <p className="font-semibold">
+              However, finding help for your mental well-being can be tricky.
+              For some people, therapy may not be affordable or may take up too
+              much time. Others may fear asking for help because they’re worried
+              about what others will think.
+            </p>
+            <br />
+            <p className="font-semibold">
+              Moreover, digital devices and social media can worsen the
+              situation by making us feel even more alone, not good enough, and
+              anxious. In this world of technology, we need simple and
+              affordable ways to take care of our emotional and mental
+              well-being.
+            </p>
+            <br />
+            <p className="font-semibold">
+              Unfortunately, geographical constraints and financial limitations
+              exacerbate this problem, as many individuals may not have access
+              to mental health services due to their location or inability to
+              afford traditional therapy sessions.
+            </p>
+          </div>
+        </div>
+
+        <div className="mx-auto my-auto w-full lg:w-1/2">
+          {/* Added ml-4 to shift the image to the left */}
+          <img
+            src={about6} // Replace with your image URL
+            alt="Description of the image"
+            className=""
+          />
+        </div>
+      </div>
+      <div className="mx-auto flex flex-col-reverse border-4 border-secondary/10 md:flex-row">
+        <div className="w-full bg-secondary/10 md:w-3/4">
+          <div className="my-16 w-full text-center md:ml-60 md:mr-0 md:w-2/4 md:text-justify">
+            <h2 className="subheading font-semibold">
               The <span className="heading-primary">Solution</span>
             </h2>
-            <p className="  font-semibold">
-              The Wleness Solution addresses limited access to affordable mental
-              health support with a dual approach. We connect individuals to
-              licensed professionals through advanced telehealth technology,
-              breaking geographical barriers.
+            <p className="font-semibold">
+              Wleness helps you find affordable support for your mental wellness
+              with a two-pronged approach. We use advanced telehealth technology
+              to connect you with licensed professionals, no matter where you
+              are, so you don’t have to worry about geographical barriers. We
+              also offer flexibility and affordability for everyone, so you can
+              get the help you need without spending too much.
             </p>
-            <p className=" font-semibold">
-              Our flexible pricing model ensures affordability for all. We've
-              built a vast network of specialized therapists using an
-              intelligent matching system, reducing wait times and offering
-              tailored treatment.
+            <br />
+            <p className="font-semibold">
+              We have a large network of qualified therapists and use smart
+              matching algorithms to create a personalized treatment plan for
+              you. This makes sure that you get the customized care that you
+              need. We also want to reduce the stigma around mental wellness. We
+              have services like music therapy, meditation, yoga, and sadhana.
+              We encourage open conversations and provide a supportive,
+              anonymous community where you can talk about your mental wellness
+              without fear.
+            </p>
+            <br />
+            <p className="font-semibold">
+              We understand the value of life and executive coaching in helping
+              people grow personally and professionally. These types of coaching
+              offer helpful support and insights, helping people unlock their
+              full potential, overcome challenges, and reach their goals. In
+              simple terms, they act as guides, leading people to success in
+              life and work.
+            </p>
+            <br />
+            <p className="font-semibold">
+              "At every stage of your mental well-being journey, Wleness stands
+              by your side, partnering in your well-being."
             </p>
           </div>
         </div>
-        <div className="mx-auto h-96 w-1/4 border-4 border-[#E9FBF8]">
+
+        <div className="mx-auto my-auto transform md:mt-0 md:translate-x-0 lg:my-auto lg:-translate-x-60 lg:text-center">
           <img
             src={about6} // Replace with your image URL
             alt="Description of the image"
-            className=" my-auto h-full -translate-x-52 drop-shadow-lg"
+            className=""
           />
         </div>
       </div>
 
-      <div className="container mx-auto flex  flex-col items-center justify-center">
-        <p className="px-48 py-14 text-center text-2xl font-semibold text-emerald-600">
+      <div className="container mx-auto flex flex-col items-center justify-center text-center">
+        <p className="px-6 py-6 text-lg font-semibold text-emerald-600 sm:px-12 sm:py-10 sm:text-xl md:px-24 md:py-14 md:text-2xl lg:px-48">
           "At every stage of your mental health journey, Wleness stands by your
           side, committed to helping you not just feel better, but truly become
           better and remain better."
         </p>
-        <h2 className="subheading  mx-auto mb-4 text-center">
+        <h2 className="subheading mx-auto mb-2 text-lg sm:mb-4 sm:text-xl md:text-4xl">
           <span className="heading-primary">Wleness’s</span> way of crafting
           your journey
         </h2>
       </div>
-      {/* journey is begain so lets start  */}
+
+      <div className="container mx-auto flex flex-col items-center gap-4 sm:flex-row">
+        <div className="w-full sm:w-1/2 lg:w-1/2">
+          <DummyComponent />
+        </div>
+        <div className="mb-4 flex w-full items-center justify-center sm:w-1/2 lg:order-2">
+          <img src={about3} alt="Your image" className="w-2/3 lg:w-full" />
+        </div>
+      </div>
+
+      <div className="relative overflow-x-clip bg-secondary/10 pb-6 pt-12 xl:pb-10 xl:pt-16">
+        <div className="container mx-auto my-4 text-center">
+          <h2 className="subheading mx-auto mb-2 text-lg sm:mb-4 sm:text-xl md:text-4xl">
+            Meet the <span className="heading-primary">Visionaries</span> behind
+            Wleness
+          </h2>
+          <p className="para">
+            Wleness is guided, shaped, and overseen by a diverse collective of
+            individuals united by a shared mission: providing exceptional mental
+            healthcare to all in need.
+          </p>
+        </div>
+        <TeamComponent />
+      </div>
 
       <div className="grid h-full place-items-center py-5">
         <h2 className="subheading">
@@ -156,8 +229,6 @@ function AboutUs() {
           </div>
         </div>
       </div>
-
-      <div></div>
     </main>
   );
 }

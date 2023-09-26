@@ -5,6 +5,7 @@ import axios from "axios";
 import { SIGNUP_USER_URI } from "../../data/api";
 import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 import { signInWithPopup } from "firebase/auth";
+
 export default function Signup() {
   const [formInfo, setFormData] = useState({
     name: "",
@@ -25,12 +26,16 @@ export default function Signup() {
     setFormData({ ...formInfo, [name]: value });
   };
   const [user, setUser] = useState(null);
+
   // ===================Google Login ==========================//
   const handleGoogleSignIn = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         const user = result.user;
         console.log(user);
+
+        // Send user data to the backend
+        sendUserDataToBackend(user);
 
         // Save user data to localStorage
         localStorage.setItem("user", JSON.stringify(user));
@@ -42,12 +47,16 @@ export default function Signup() {
         console.error("Error signing in with Google:", error);
       });
   };
+
   // ===================Facebook Login ==========================//
   const handleFacebookSignIn = () => {
     signInWithPopup(auth, facebookProvider) // Use the Facebook provider
       .then((result) => {
         const user = result.user;
         console.log(user);
+
+        // Send user data to the backend
+        sendUserDataToBackend(user);
 
         // Save user data to localStorage
         localStorage.setItem("user", JSON.stringify(user));
@@ -59,6 +68,31 @@ export default function Signup() {
         console.error("Error signing in with Facebook:", error);
       });
   };
+
+  // Function to send user data to the backend
+  const sendUserDataToBackend = (user) => {
+    console.log("User data to be sent:", {
+      name: user.displayName,
+      email: user.email,
+      photoURL: user.photoURL,
+      // Add other user data as needed
+    });
+
+    axios
+      .post("/your-backend-endpoint", {
+        name: user.displayName,
+        email: user.email,
+        photoURL: user.photoURL,
+        // Add other user data as needed
+      })
+      .then((response) => {
+        console.log("User data sent to backend:", response.data);
+      })
+      .catch((error) => {
+        console.error("Error sending user data to backend:", error);
+      });
+  };
+
   // Set alert message
   const setMessages = (status, msg) => {
     setSuccessMessage({
@@ -78,9 +112,9 @@ export default function Signup() {
       formInfo["password"] &&
       formInfo["confirm_password"]
     ) {
-      // Check if passwords matches
+      // Check if passwords match
       if (formInfo["password"] !== formInfo["confirm_password"]) {
-        setMessages("error", "Password doesn't match"); // set success message
+        setMessages("error", "Passwords don't match"); // Set error message
         return;
       }
 
@@ -92,10 +126,10 @@ export default function Signup() {
 
       try {
         const response = await axios.post(SIGNUP_USER_URI, formData);
-        setMessages(response.data.status, response.data.message); // set success message
+        setMessages(response.data.status, response.data.message); // Set success message
 
         // Empty form after successfully sending data
-        if (response.data.status == "success") {
+        if (response.data.status === "success") {
           setFormData({
             name: "",
             phone: "",
@@ -111,17 +145,16 @@ export default function Signup() {
         }
       } catch (error) {
         console.error("Error sending data:", error);
-        setMessages("error", "Internal Server Error! Please Try Again later"); // set success message
+        setMessages("error", "Internal Server Error! Please try again later"); // Set error message
       }
     } else {
-      setMessages("error", "Please fill your details properly!"); // set success message
+      setMessages("error", "Please fill in your details properly!"); // Set error message
     }
   };
 
   const handleLogout = () => {
     setUser(null);
   };
-
   return (
     <main className="flex h-screen flex-col items-center justify-center md:flex-row md:items-stretch">
       {/* Left Sidebar */}

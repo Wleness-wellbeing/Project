@@ -1,21 +1,33 @@
 import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { iconFacebookCircle, iconGoogle, login, logo } from "../../assets";
+import { Link, useNavigate } from "react-router-dom";
+import { iconFacebookCircle, iconGoogle, logo, signup } from "../../assets";
 import axios from "axios";
-import { LOGIN_USER_URI } from "../../data/api";
+import { SIGNUP_USER_URI } from "../../data/api";
 import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 import { signInWithPopup } from "firebase/auth";
-export default function Login({ setToken }) {
+
+export default function Signup() {
   const [formInfo, setFormData] = useState({
+    name: "",
     phone: "",
     password: "",
+    confirm_password: "",
   });
   const [successMessage, setSuccessMessage] = useState({
     status: "",
     message: "",
   });
 
+  const navigate = useNavigate();
+
+  // Update form value
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formInfo, [name]: value });
+  };
+
   const [user, setUser] = useState(null);
+
   // ===================Google Login ==========================//
   const handleGoogleSignIn = () => {
     signInWithPopup(auth, googleProvider)
@@ -33,6 +45,7 @@ export default function Login({ setToken }) {
         console.error("Error signing in with Google:", error);
       });
   };
+
   // ===================Facebook Login ==========================//
   const handleFacebookSignIn = () => {
     signInWithPopup(auth, facebookProvider) // Use the Facebook provider
@@ -50,16 +63,6 @@ export default function Login({ setToken }) {
         console.error("Error signing in with Facebook:", error);
       });
   };
-  // Set alert message
-
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  // Update form value
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formInfo, [name]: value });
-  };
 
   // Set alert message
   const setMessages = (status, msg) => {
@@ -74,39 +77,56 @@ export default function Login({ setToken }) {
     e.preventDefault();
 
     // Validate if form is filled
-    if (formInfo["password"] && formInfo["phone"]) {
-      // Append form fields to the FormData object
-      let formData = new FormData();
-      for (const key in formInfo) {
-        formData.append(key, formInfo[key]);
+    if (
+      formInfo["name"] &&
+      formInfo["phone"] &&
+      formInfo["password"] &&
+      formInfo["confirm_password"]
+    ) {
+      // Check if passwords match
+      if (formInfo["password"] !== formInfo["confirm_password"]) {
+        setMessages("error", "Password doesn't match"); // set error message
+        return;
       }
 
+      // Create a user object with the desired data
+      const userData = {
+        name: formInfo.name,
+        email: user ? user.email : "", // You can update this based on your authentication method
+        photo: user ? user.photoURL : "", // You can update this based on your authentication method
+      };
+
       try {
-        const response = await axios.post(LOGIN_USER_URI, formData);
+        // Send user data to the backend
+        const response = await axios.post(SIGNUP_USER_URI, userData);
         setMessages(response.data.status, response.data.message); // set success message
 
         // Empty form after successfully sending data
-        if (response.data.status == "success") {
+        if (response.data.status === "success") {
           setFormData({
+            name: "",
             phone: "",
             password: "",
+            confirm_password: "",
           });
-          setToken(response.data.access_token);
 
-          navigate("/user/dashboard");
+          navigate("/login", {
+            state: {
+              successMessage: "Registration successful! Please log in.",
+            },
+          });
         }
       } catch (error) {
         console.error("Error sending data:", error);
-        setMessages("error", "Internal Server Error! Please Try Again later"); // set success message
+        setMessages("error", "Internal Server Error! Please try again later"); // set error message
       }
     } else {
-      setMessages("error", "Please fill your details properly!"); // set success message
+      setMessages("error", "Please fill in your details properly!"); // set error message
     }
   };
 
-  const handleGoogleLogin = () => {
-    // Redirect to the  /login route for Google OAuth2 authentication
-    window.location.href = "http://127.0.0.1:5000/login";
+  const handleLogout = () => {
+    setUser(null);
   };
 
   return (
