@@ -162,8 +162,11 @@ export{
 
 
 import meditationCheckoutBg from "./images/meditationcheckoutBg.png"
+import sadhnaCheckoutBg from "./images/sadhnacheckoutBg.png"
+import yogaCheckoutBg from "./images/sadhnacheckoutBg.png"
+
 export{
-  meditationCheckoutBg
+  meditationCheckoutBg,sadhnaCheckoutBg,yogaCheckoutBg
 }
 // Coaches
 import saloniHeader from "./images/coaches/saloniGuptaHeader.png"

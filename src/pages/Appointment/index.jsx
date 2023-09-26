@@ -228,7 +228,7 @@ export default function Appointment() {
             </div>
 
             <div className="mb-8 text-center">
-              <Link>
+              <Link to="/calendly">
                 <button className="btn-one !rounded-lg">Proceed</button>
               </Link>
             </div>

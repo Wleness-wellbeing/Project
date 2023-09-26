@@ -60,6 +60,8 @@ import MeditationCheckout from "./pages/Appointment/MeditationCheckout";
 import Saloni from "./pages/Coaches/Saloni";
 import Anju from "./pages/Coaches/Anju";
 import Andrea from "./pages/Coaches/Andrea";
+import YogaCheckout from "./pages/Appointment/YogaCheckout";
+import SadhnaCheckout from "./pages/Appointment/SadhnaCheckout";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -196,6 +198,14 @@ function App() {
           }
         />
         <Route
+          path="/calendly"
+          element={
+            <Layout>
+              <Calendly />
+            </Layout>
+          }
+        />
+        <Route
           path="/experts"
           element={
             <Layout>
@@ -272,6 +282,22 @@ function App() {
           element={
             <Layout>
               <MeditationCheckout />
+            </Layout>
+          }
+        />
+        <Route
+          path="/yoga-checkout"
+          element={
+            <Layout>
+              <YogaCheckout />
+            </Layout>
+          }
+        />
+        <Route
+          path="/sadhna-checkout"
+          element={
+            <Layout>
+              <SadhnaCheckout />
             </Layout>
           }
         />

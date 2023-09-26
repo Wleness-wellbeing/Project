@@ -3,15 +3,14 @@ import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 // Data
-import { meditationCheckoutBg } from "../../assets";
+import { sadhnaCheckoutBg } from "../../assets";
 import { modes, timings } from "../../data/doctors";
 import axios from "axios";
 import { EXPERTS_URI } from "../../data/api";
 import { profileMask, swatiGhoshalPortrait } from "../../assets";
 import AppointmentComponent from "../../components/Appointment";
-import Calendar from "../../components/Appointment/Calendar";
 
-export default function MeditationCheckout() {
+export default function SadhnaCheckout() {
   const { slug } = useParams();
   const [profileDetails, setProfileDetails] = useState({});
   const [loading, setLoading] = useState(true);
@@ -57,7 +56,7 @@ export default function MeditationCheckout() {
 
         <figure className="left-16 top-10 mx-auto w-64 justify-center gap-x-8 py-6 lg:absolute lg:w-[300px]">
           <Link to={"/experts/profile/" + slug} className="mb-5 block">
-            <div className="relative">
+            <div className="relative ml-10">
               <img
                 src={
                   profileDetails.image
@@ -74,7 +73,7 @@ export default function MeditationCheckout() {
               />
             </div>
           </Link>
-          <figcaption className="mx-auto w-60">
+          <figcaption className="mx-auto ml-14 w-60">
             <h4 className="text-2xl font-bold">{profileDetails.name}</h4>
             <h6 className="text-xl font-semibold">
               {profileDetails.experience
@@ -97,14 +96,24 @@ export default function MeditationCheckout() {
             </div>
           </figcaption>
         </figure>
-        <img src={meditationCheckoutBg}></img>
+
         {/* Book Session */}
-        <div className="container mx-auto flex justify-center ">
-          <form
-            className="w-[680px] bg-cover bg-center
-          bg-no-repeat pb-10 pt-6"
-            style={{ backgroundImage: { meditationCheckoutBg } }}
-          >
+        <div className="container mx-auto  mt-20 flex justify-center pb-10 md:mt-4 lg:justify-end">
+          <div className="relative w-full pt-6 lg:w-[680px]">
+            <div
+              style={{
+                backgroundImage: `url(${sadhnaCheckoutBg})`,
+                backgroundSize: "90%", // Adjust as needed (e.g., "contain", "100% 100%", etc.)
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center top -80px", // Move the background image up by adjusting the position
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                zIndex: -1, // Move the background image to the background
+              }}
+            ></div>
             <h2 className="mb-4 text-center text-3xl font-bold">
               Book Your Session
             </h2>
@@ -149,11 +158,12 @@ export default function MeditationCheckout() {
               </h3>
             </div>
 
-            <div class="mx-auto max-w-md ">
-              <h2 class="mb-4 text-base font-semibold">
+            <div className="mx-auto max-w-md ">
+              <h2 className="mb-4 text-base font-semibold">
                 Meditation Services Bundle – your journey to inner peace starts
                 here
               </h2>
+
               <div class="flex">
                 <input
                   type="text"
@@ -180,7 +190,7 @@ export default function MeditationCheckout() {
                 <button className="btn-one !rounded-lg">Proceed</button>
               </Link>
             </div>
-          </form>
+          </div>
 
           {/* Confirm Booking */}
           <div className="hidden w-fit py-6">

@@ -47,7 +47,7 @@ const doctors = {
     },
     {
       color: true,
-      text: " Specialist",
+      text: " Specialists",
     },
   ],
   desc: "",
@@ -61,6 +61,8 @@ const doctors = {
 export const therapiesData = [
   {
     slug: "/therapy/stress",
+    issue:"Stress",
+
     header: {
       title: [
         {
@@ -96,6 +98,7 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/depression",
+    issue:"depression",
     header: {
       title: [
         {
@@ -131,6 +134,7 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/panic-attack",
+    issue:"panic-attack",
     header: {
       title: [
         {
@@ -166,6 +170,7 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/anxiety",
+    issue:"anxiety",
     header: {
       title: [
         {
@@ -201,6 +206,7 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/ocd",
+    issue:"ocd",
     header: {
       title: [
         {
@@ -236,6 +242,7 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/bipolar-disorder",
+    issue:"bipolar-disorder",
     header: {
       title: [
         {
@@ -275,6 +282,7 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/schizophrenia",
+    issue:"schizophrenia",
     header: {
       title: [
         {
@@ -314,6 +322,7 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/eating-disorder",
+    issue:"eating-disorder",
     header: {
       title: [
         {
@@ -349,6 +358,7 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/paranoia",
+    issue:"paranoia",
     header: {
       title: [
         {
@@ -388,6 +398,7 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/adhd",
+    issue:"adhd",
     header: {
       title: [
         {
@@ -427,6 +438,7 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/odd",
+    issue:"odd",
     header: {
       title: [
         {
@@ -466,6 +478,7 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/conduct-disorder",
+    issue:"conduct-disorder",
     header: {
       title: [
         {
@@ -505,6 +518,7 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/anger",
+    issue:"anger",
     header: {
       title: [
         {
@@ -544,6 +558,7 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/relationship",
+    issue:"relationship",
     header: {
       title: [
         {
@@ -582,6 +597,7 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/lgbtq",
+    issue:"lgbtq",
     header: {
       title: [
         {
@@ -621,6 +637,7 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/parenting",
+    issue:"parenting",
     header: {
       title: [
         {
@@ -658,7 +675,7 @@ export const therapiesData = [
 
 export const wlenessApproach = [
   {
-    title: "Talk to the Therapist",
+    title: "Talk to a Therapist",
     image: wlenessApproachIcon1,
     slug: "/experts/all",
   },
@@ -668,7 +685,7 @@ export const wlenessApproach = [
     slug: "/activities",
   },
   {
-    title: "Consult the Psychiatrist",
+    title: "Consult a Psychiatrist",
     image: wlenessApproachIcon3,
     slug: "/experts/all",
   },

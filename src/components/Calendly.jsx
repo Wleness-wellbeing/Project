@@ -6,7 +6,7 @@ const Calendly = () => {
       <div className="-mt-12 h-screen w-screen rounded-lg shadow-slate-400">
         <iframe
           title="Calendly Widget"
-          src="https://calendly.com/prabhat-kr-2900/wleness?primary_color=008080&hide_name=true"
+          src="https://calendly.com/wleness111/45min"
           className="h-full w-full"
           frameBorder="0"
         ></iframe>

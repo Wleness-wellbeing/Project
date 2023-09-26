@@ -178,7 +178,7 @@ function AboutUs() {
         </div>
       </div>
 
-      <div className="relative overflow-x-clip bg-secondary/10 pb-6 pt-12 xl:pb-10 xl:pt-16">
+      <div className="relative overflow-x-clip bg-secondary/20 pb-6 pt-4 xl:pb-4 xl:pt-4">
         <div className="container mx-auto my-4 text-center">
           <h2 className="subheading mx-auto mb-2 text-lg sm:mb-4 sm:text-xl md:text-4xl">
             Meet the <span className="heading-primary">Visionaries</span> behind

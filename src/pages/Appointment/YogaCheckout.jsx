@@ -3,12 +3,14 @@ import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 // Data
+import { yogaCheckoutBg } from "../../assets";
 import { modes, timings } from "../../data/doctors";
 import axios from "axios";
 import { EXPERTS_URI } from "../../data/api";
 import { profileMask, swatiGhoshalPortrait } from "../../assets";
+import AppointmentComponent from "../../components/Appointment";
 
-export default function SadhnaCheckout() {
+export default function YogaCheckout() {
   const { slug } = useParams();
   const [profileDetails, setProfileDetails] = useState({});
   const [loading, setLoading] = useState(true);
@@ -54,7 +56,7 @@ export default function SadhnaCheckout() {
 
         <figure className="left-16 top-10 mx-auto w-64 justify-center gap-x-8 py-6 lg:absolute lg:w-[300px]">
           <Link to={"/experts/profile/" + slug} className="mb-5 block">
-            <div className="relative">
+            <div className="relative ml-10">
               <img
                 src={
                   profileDetails.image
@@ -71,7 +73,7 @@ export default function SadhnaCheckout() {
               />
             </div>
           </Link>
-          <figcaption className="mx-auto w-60">
+          <figcaption className="mx-auto ml-14 w-60">
             <h4 className="text-2xl font-bold">{profileDetails.name}</h4>
             <h6 className="text-xl font-semibold">
               {profileDetails.experience
@@ -96,15 +98,29 @@ export default function SadhnaCheckout() {
         </figure>
 
         {/* Book Session */}
-        <div className="container mx-auto flex justify-end pb-10">
-          <form className="w-[680px] pt-6">
+        <div className="container mx-auto  mt-20 flex justify-center pb-10 md:mt-4 lg:justify-end">
+          <div className="relative w-full pt-6 lg:w-[680px]">
+            <div
+              style={{
+                backgroundImage: `url(${yogaCheckoutBg})`,
+                backgroundSize: "90%", // Adjust as needed (e.g., "contain", "100% 100%", etc.)
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center top -80px", // Move the background image up by adjusting the position
+                position: "absolute",
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                zIndex: -1, // Move the background image to the background
+              }}
+            ></div>
             <h2 className="mb-4 text-center text-3xl font-bold">
               Book Your Session
             </h2>
             <p className="para mb-8 text-center">
               Book an appointment to connect with a mental health expert
             </p>
-            <div className="mb-2 grid justify-center text-center">
+            {/* <div className="mb-2 grid justify-center text-center">
               <h5 className="mb-5 text-xl font-semibold">
                 1. Select session mode
               </h5>
@@ -137,7 +153,7 @@ export default function SadhnaCheckout() {
                   );
                 })}
               </div>
-            </div>
+            </div> */}
 
             <div className="mb-4 flex flex-col items-center justify-center">
               <h5 className="my-5 text-center text-xl font-semibold">
@@ -151,8 +167,8 @@ export default function SadhnaCheckout() {
                       htmlFor={value.value}
                       className={
                         selectDuration == value.value
-                          ? "block w-full cursor-pointer rounded-2xl bg-primary-300 px-5 py-2.5 text-center font-semibold text-white "
-                          : "block w-full cursor-pointer rounded-2xl border-2 border-primary-300 px-5 py-2.5 text-center font-semibold text-primary-300"
+                          ? "block w-full cursor-pointer rounded-lg bg-primary-300 px-5 py-2.5 text-center font-semibold text-white "
+                          : "block w-full cursor-pointer rounded-lg border-2 border-primary-300 px-5 py-2.5 text-center font-semibold text-primary-300"
                       }
                     >
                       <input
@@ -169,70 +185,46 @@ export default function SadhnaCheckout() {
                 })}
               </div>
             </div>
-            <div className="mb-8">
-              <h5 className="mb-2 mt-10 text-center text-xl font-semibold">
+            <div className="my-6 mt-16 text-center">
+              <h3 className="text-xl font-bold">
                 Copy the code below and apply it to avail 50% off on your first
                 session.
-              </h5>
-              <div className="border-b-2 border-dotted border-slate-400 py-4">
-                <p className="font-medium">Get a single session</p>
-                <label
-                  htmlFor=""
-                  className="flex items-center justify-between text-lg font-bold"
-                >
-                  <span>1 Session</span>
-                  <span className="flex items-center space-x-2">
-                    <span>Rs. 999/session</span>
-                    <input
-                      type="radio"
-                      name="session"
-                      className="cursor-pointer"
-                    />
-                  </span>
-                </label>
-              </div>
-              <div className="border-b-2 border-dotted border-slate-400 py-4">
-                <p className="font-medium">Get a package</p>
-                <label
-                  htmlFor=""
-                  className="flex items-center justify-between text-lg font-bold"
-                >
-                  <span>1 Session</span>
-                  <span className="flex items-center space-x-2">
-                    <span>Rs. 999/session</span>
-                    <input
-                      type="radio"
-                      name="session"
-                      className="cursor-pointer"
-                    />
-                  </span>
-                </label>
-              </div>
-              <div className="border-b-2 border-dotted border-slate-400 py-4">
-                <p className="font-medium">Get a package</p>
-                <label
-                  htmlFor=""
-                  className="flex items-center justify-between text-lg font-bold"
-                >
-                  <span>1 Session</span>
-                  <span className="flex items-center space-x-2">
-                    <span>Rs. 999/session</span>
-                    <input
-                      type="radio"
-                      name="session"
-                      className="cursor-pointer"
-                    />
-                  </span>
-                </label>
+              </h3>
+            </div>
+
+            <div className="mx-auto max-w-md ">
+              <h2 className="mb-4 text-base font-semibold">
+                Meditation Services Bundle – your journey to inner peace starts
+                here
+              </h2>
+
+              <div class="flex">
+                <input
+                  type="text"
+                  placeholder="Enter coupon code"
+                  class="w-full rounded-l-md border border-gray-300 px-4 py-2 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-primary-500"
+                />
+                <button class="rounded-r-md bg-primary-300 px-4 py-2 text-white hover:bg-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50">
+                  Apply
+                </button>
               </div>
             </div>
+
+            <div className="my-12 text-center">
+              <h2 className="subheading ">Choose Your Slot</h2>
+            </div>
+            <div className="my-6 mb-8">
+              <AppointmentComponent />
+            </div>
+
+            {/* calendar we have to put here */}
 
             <div className="mb-8 text-center">
               <Link>
                 <button className="btn-one !rounded-lg">Proceed</button>
               </Link>
             </div>
-          </form>
+          </div>
 
           {/* Confirm Booking */}
           <div className="hidden w-fit py-6">
@@ -264,20 +256,6 @@ export default function SadhnaCheckout() {
                   </span>
                   <span className="text-center underline">Change</span>
                 </div>
-              </div>
-
-              <div className="my-8">
-                <div className="border-b-4 border-dotted pb-2">
-                  <span className="flex justify-between rounded-lg bg-slate-200 px-4 py-1 font-semibold">
-                    <span>#FIRSTSESSION</span>
-                    <span>
-                      <FontAwesomeIcon icon={faXmark} />
-                    </span>
-                  </span>
-                </div>
-                <p className="font-semibold text-primary-300">
-                  Coupon applied! Enjoy your discount!
-                </p>
               </div>
 
               <div>

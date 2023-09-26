@@ -9,7 +9,6 @@ import axios from "axios";
 import { EXPERTS_URI } from "../../data/api";
 import { profileMask, swatiGhoshalPortrait } from "../../assets";
 import AppointmentComponent from "../../components/Appointment";
-import Calendar from "../../components/Appointment/Calendar";
 
 export default function MeditationCheckout() {
   const { slug } = useParams();
@@ -57,7 +56,7 @@ export default function MeditationCheckout() {
 
         <figure className="left-16 top-10 mx-auto w-64 justify-center gap-x-8 py-6 lg:absolute lg:w-[300px]">
           <Link to={"/experts/profile/" + slug} className="mb-5 block">
-            <div className="relative">
+            <div className="relative ml-10">
               <img
                 src={
                   profileDetails.image
@@ -74,7 +73,7 @@ export default function MeditationCheckout() {
               />
             </div>
           </Link>
-          <figcaption className="mx-auto w-60">
+          <figcaption className="mx-auto ml-14 w-60">
             <h4 className="text-2xl font-bold">{profileDetails.name}</h4>
             <h6 className="text-xl font-semibold">
               {profileDetails.experience
