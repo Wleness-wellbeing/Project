@@ -1,5 +1,5 @@
 import React from "react";
-import { precautions } from "../assets";
+import { precautions, leaf } from "../assets";
 
 export default function LeftImageList(props) {
   return (
@@ -15,11 +15,13 @@ export default function LeftImageList(props) {
         <ul className=" pt-4">
           {props.data.list.map((value, index) => {
             return (
-              <li key={index} className="text-gray-800">
-                <span className="mr-1 text-lg font-bold text-primary-500">
-                  &#10004;
-                </span>
-                <span>{value}</span>
+              <li key={index} className="flex items-start">
+                <img
+                  src={leaf}
+                  alt="Leaf Icon"
+                  className="mr-6 h-6 w-12 object-contain"
+                />
+                <p className="text-base font-semibold text-black">{value}</p>
               </li>
             );
           })}

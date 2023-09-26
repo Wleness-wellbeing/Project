@@ -1827,48 +1827,65 @@ export const activities = [
             {
               component: HeaderWithImage,
               data: {
-                title: "Mindfulness",
-                desc: "Mindfulness meditation that can help us find peace and clarity amidst the chaos of the modern world. Today we will explore what exactly is mindfulness meditation, the benefits of mindfulness meditation, how to practice it, and how it can improve our overall well-being and health. The good news is, all will be in layman's terms.",
+                title: "Mindfulness Meditation",
+                desc: "Mindfulness meditation that can help us find peace and clarity amidst the chaos of the modern world. Today we will explore what exactly is mindfulness meditation, the benefits of mindfulness meditation, how to practice it, and how it can improve our overall well-being and health. The good news is, all will be in layman's terms. ",
                 image: mindfulnessHeader,
-                variables: false,
+                variations: false,
                 var: "",
               },
             },
-
             {
-              component: LeftVideoList,
+              component: RightProcedureList,
               data: {
                 title: "Practicing Mindfulness Meditation: ",
-                desc: "To practice Mindfulness meditation, follow these steps:",
-                videoUrl: mindfulnessRight1,
+                image: mindfulnessLeft1,
                 list: [
                   {
-                    subtitle: "Find a positive Space",
-                    desc: " Choose a quiet and comfortable spot where you can sit or lie down without distractions and focus on yourself.",
+                    subtitle: "Find a positive Space ",
+                    desc: "Choose a quiet and comfortable spot where you can sit or lie down without distractions and focus on yourself",
                   },
                   {
                     subtitle: "Relax your body:",
-                    desc: "Shut your eyes, take a few deep breaths, and allow your body to relax and settle down. Notice how each inhale and exhale feel as it passes through your body.",
+                    desc: " Shut your eyes, take a few deep breaths, and allow your body to relax and settle down. Notice how each inhale and exhale feel as it passes through your body.",
                   },
                   {
-                    subtitle: "Inculcate Mindfulness into Daily Life:",
+                    subtitle: "Inculcate Mindfulness into Daily Life: ",
                     desc: " Practice the cultivation of mindfulness into your daily activities and routine, paying attention to each moment with an open and non-judgmental mindset.",
                   },
                 ],
               },
             },
             {
-              component: RightImageList,
+              component: RightImageList2,
               data: {
-                title: "Benefits of Mindfulness Meditation: ",
-                desc: "Mindfulness Meditation offers many benefits for the body and mind, including",
+                image: mindfulnessRight1,
                 list: [
                   {
-                    subtitle: "Reduces Stress and Anxiety: ",
-                    desc: " Mindfulness meditation allows us to focus specifically on the present, which helps calm the mind and reduces stress and anxiety as a by-product. It helps lower one's level of the stress hormone named cortisol, reducing overall stress and its negative impacts on the physical and mental body.",
+                    subtitle: "Focus on the Present: ",
+                    desc: "Focus your attention on your breath. Observe the heightened sensation of each inhale and exhale without judgment or attachment to thoughts or distractions that you may infer.",
                   },
                   {
-                    subtitle: "Improves Mental Clarity:  ",
+                    subtitle: "Invoke Emotional Intelligence:",
+                    desc: "As thoughts, feelings and emotions arise, subtly acknowledge them without getting caught up in them. Imagine them as passing clouds through your body.",
+                  },
+                  {
+                    subtitle: "Non-judgmental Awareness:  ",
+                    desc: " Practice welcoming your thoughts and emotions without judging/labelling them as good or bad. Develop and perfects the attitude of curiosity and acceptance which of course comes with practice.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList3,
+              data: {
+                title: "Benefits of Mindfulness Meditation: ",
+                list: [
+                  {
+                    subtitle: "Reduces Stress and Anxiety:  ",
+                    desc: "Mindfulness meditation allows us to focus specifically on the present, which helps calm the mind and reduces stress and anxiety as a by-product. It helps lower one's level of the stress hormone named cortisol, reducing overall stress and its negative impacts on the physical and mental body.",
+                  },
+                  {
+                    subtitle: "Improves Mental Clarity: ",
                     desc: "By practising mindfulness meditation one enhances attention span and cognitive abilities, leading to better focus and concentration in daily chores. It can enhance the ability to concentrate, make better decisions, and increase overall mental clarity.",
                   },
                   {
@@ -1879,16 +1896,30 @@ export const activities = [
               },
             },
             {
-              component: LeftImageList,
+              component: RightImageList,
               data: {
-                desc: "While Adho Mukha Svanasana is a safe and beneficial pose for most people, there are a few precautions to remember: ",
-                info: "Adho Mukha Svanasana is a versatile pose that yogis of all skill levels can practice. Whether you want to increase your flexibility, strengthen your upper body, or reduce stress, this pose has much to offer. You can safely practice this pose and enjoy its many benefits by following the proper technique and taking necessary precautions. So next time you step onto your yoga mat, include Adho Mukha Svanasana in your practice!",
+                title:
+                  "The Importance of Mindfulness Meditation in our Daily Lives:",
+                desc: "",
+                image: mindfulnessRight2,
                 list: [
-                  "Avoid this pose if you have a wrist, shoulder, or back injury.",
-                  "If you have high blood pressure, keep your head at or above heart level to avoid a sudden increase in blood pressure.",
-                  "If you have a neck injury, keep your head aligned with your spine instead of looking towards your belly button.",
-                  "If you have tight hamstrings, bend your knees slightly to avoid straining your lower back.",
+                  {
+                    subtitle: "",
+                    desc: "In today's fast-paced world, our minds are often overwhelmed with thoughts, worries, and distractions. This constant mental chatter can have severe detrimental effects on our well-being. Mindfulness meditation offers a way to step back, relax, observe our thoughts and feelings, and find inner peace. The benefits of mindfulness meditation depend on numerous factors and can vary from person to person, and regular practice is typically required to experience these advantages fully",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "By incorporating mindfulness meditation into our daily lives, we can unlock several benefits such as improved mental clarity, significantly reduced stress, and enhanced emotional well-being. Consistency allows us to bond with the present moment and true self, rather than dwelling on the past or worrying about what the future holds.",
+                  },
                 ],
+              },
+            },
+            {
+              component: SubpagesConclusion,
+              data: {
+                title: "Conclusion: ",
+                desc: "Mindfulness meditation is indeed a powerful yet simple practice that can bring numerous benefits to our lives if implemented in the right way. By dedicating a few minutes each day to mindfulness, we can cultivate a more profound sense of calm, clarity, and overall well-being within us. So why not give it a try and check ourselves? Start with small steps, be patient with yourself, and experience the transformative power of mindfulness meditation. Always remember to prioritize yourself and your mental well-being and stability, and do not hesitate to consult a professional if you have any major concerns or questions.",
+                image: conclusionBulb,
               },
             },
             {
@@ -1922,31 +1953,81 @@ export const activities = [
             {
               component: HeaderWithImage,
               data: {
-                title: "Breadth Awareness Meditation",
+                title: "Breath Awareness Meditation",
                 desc: "Breath awareness it is a form of meditation that involves focusing on the rhythm and sensation of our breathing pattern. By turning our attention explicitly to our breath, we can calm down our minds, reduce present stress and anxiety, and improve our overall well-being inside out. In this meditation while closing the eyes you can experience the stillness and focus on the depth of your breathing.",
                 image: breadthHeader,
+                variations: false,
                 var: "",
               },
             },
-
             {
-              component: LeftVideoList,
+              component: RightProcedureList,
               data: {
                 title: "Practicing Mindfulness Meditation: ",
-                desc: "To practice Mindfulness meditation, follow these steps:",
-                videoUrl: breadthLeft1,
+                image: breadthLeft1,
                 list: [
                   {
-                    subtitle: "Find a positive Space",
-                    desc: " Choose a quiet and comfortable spot where you can sit or lie down without distractions and focus on yourself.",
+                    subtitle: "Find a positive Space: ",
+                    desc: "Choose a quiet and comfortable spot where you can sit or lie down without distractions and focus on yourself.",
                   },
                   {
                     subtitle: "Relax your body:",
-                    desc: "Shut your eyes, take a few deep breaths, and allow your body to relax and settle down. Notice how each inhale and exhale feel as it passes through your body.",
+                    desc: " Shut your eyes, take a few deep breaths, and allow your body to relax and settle down. Notice how each inhale and exhale feel as it passes through your body.",
                   },
                   {
-                    subtitle: "Inculcate Mindfulness into Daily Life:",
-                    desc: " Practice the cultivation of mindfulness into your daily activities and routine, paying attention to each moment with an open and non-judgmental mindset.",
+                    subtitle: "Focus on the Present: ",
+                    desc: " Focus your attention on your breath. Observe the heightened sensation of each inhale and exhale without judgment or attachment to thoughts or distractions that you may infer.",
+                  },
+                  {
+                    subtitle: "Focus on Your Breath:  ",
+                    desc: " Try invoking all your attention to your breath only. As you inhale visualize taking in the positivity around you, as you exhale remove toxins from within you.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList2,
+              data: {
+                title: "Benefits of Breath Awareness Meditation:",
+                desc: "Breath Awareness Meditation offers many benefits for the body and mind, including",
+                image: breadthRight1,
+                list: [
+                  {
+                    subtitle: "Count Your Breaths: ",
+                    desc: "Count your every inhale and exhale, up to let's say 10. Start again from the beginning at 1, and continue the loop for a designated amount of time duration, typically 20mins.",
+                  },
+                  {
+                    subtitle: "Beware of your Thoughts: ",
+                    desc: "As with progression thoughts and emotions arise within you, gently acknowledge them and put them at rest rather than shoving them down or without getting caught up in them. Imagine them as a flowing river.",
+                  },
+                  {
+                    subtitle:
+                      "Integration of Breath Awareness into Daily Life:   ",
+                    desc: " Now that you know the steps, occasionally take pauses throughout the day to focus solely on your breath, observing how wonderful it feels for you and letting the sensations please you.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList3,
+              data: {
+                title: "Benefits of Breath Awareness Meditation: ",
+                list: [
+                  {
+                    subtitle: "Trigger down anxiety:",
+                    desc: "By focusing all our attention on how we breathe, we can instantly quiet our minds, reduce ongoing stress and anxiety, and find a sense of inner calm and serenity.",
+                  },
+                  {
+                    subtitle: "Relaxation and Better Concentration:  ",
+                    desc: "Breath awareness meditation significantly improves our ability to concentrate on a matter and stay focused, which can enhance productivity and overall mental clarity with time as proven scientifically.",
+                  },
+                  {
+                    subtitle: "Reduce blood pressure: ",
+                    desc: "Numerous studies have proven the fact that mindfulness meditation can not only help one lower their blood pressure but also help maintain it.",
+                  },
+                  {
+                    subtitle: "Enhanced Physical Well-being: ",
+                    desc: " Focused and concentrated breathing can uplift our physical as well as mental well-being by reducing tension and inflammation present in our muscles, lowering blood pressure, and improving digestion and mobility.",
                   },
                 ],
               },
@@ -1954,39 +2035,24 @@ export const activities = [
             {
               component: RightImageList,
               data: {
-                title: "Benefits of Breath Awareness Meditation:",
-                desc: "Breath Awareness Meditation offers many benefits for the body and mind, including",
+                title:
+                  "The Importance of Breath Awareness Meditation in our Daily Lives:",
+                desc: "",
+                image: breadthRight2,
                 list: [
                   {
-                    subtitle: "Increases flexibility: ",
-                    desc: "This pose stretches the hamstrings, calves, and spine, which can help increase flexibility in these areas.",
-                  },
-                  {
-                    subtitle: "Relaxation and Better Concentration:",
-                    desc: " Breath awareness meditation significantly improves our ability to concentrate on a matter and stay focused, which can enhance productivity and overall mental clarity with time as proven scientifically.",
-                  },
-                  {
-                    subtitle: "Reduce blood pressure:  ",
-                    desc: " Numerous studies have proven the fact that mindfulness meditation can not only help one lower their blood pressure but also help maintain it.",
-                  },
-                  {
-                    subtitle: "Enhanced Physical Well-being: ",
-                    desc: "Focused and concentrated breathing can uplift our physical as well as mental well-being by reducing tension and inflammation present in our muscles, lowering blood pressure, and improving digestion and mobility.",
+                    subtitle: "",
+                    desc: "In today's world, breath awareness is a simple yet powerful escape practice from the chaotic lifestyle that can help us find a sense of inner calm amidst the constant sense of stress and overburdened emotions. By regularly tuning our brain to dedicatedly focus on our breath, we can improve our ability to concentrate significantly, reduce any definite stress and anxiety, and improve our overall health. Moreover, incorporating breath awareness regularly into our daily routines can not only help us stay present in the moment but also improve our overall quality of life.",
                   },
                 ],
               },
             },
             {
-              component: LeftImageList,
+              component: SubpagesConclusion,
               data: {
-                desc: "While Adho Mukha Svanasana is a safe and beneficial pose for most people, there are a few precautions to remember: ",
-                info: "Adho Mukha Svanasana is a versatile pose that yogis of all skill levels can practice. Whether you want to increase your flexibility, strengthen your upper body, or reduce stress, this pose has much to offer. You can safely practice this pose and enjoy its many benefits by following the proper technique and taking necessary precautions. So next time you step onto your yoga mat, include Adho Mukha Svanasana in your practice!",
-                list: [
-                  "Avoid this pose if you have a wrist, shoulder, or back injury.",
-                  "If you have high blood pressure, keep your head at or above heart level to avoid a sudden increase in blood pressure.",
-                  "If you have a neck injury, keep your head aligned with your spine instead of looking towards your belly button.",
-                  "If you have tight hamstrings, bend your knees slightly to avoid straining your lower back.",
-                ],
+                title: "Conclusion: ",
+                desc: "Breath awareness is a traditional effective form of meditation that offers a plethora of benefits for holistic i.e. mental, emotional, and physical well-being. By taking a few minutes each day to focus on our breath, we can cultivate a sense of inner calm, improve our ability to concentrate on ourselves and enhance our overall health and well-being. By dedicating a few minutes each day to mindfulness, we can cultivate a more profound sense of calm, clarity, and overall well-being within us. So why not give it a try and check ourselves? Start with small steps, be patient with yourself, and experience the transformative powers breathing meditation has to offer. Always remember to prioritize yourself and your mental well-being and stability, and do not hesitate to consult a professional if you have any major concerns or questions.",
+                image: conclusionBulb,
               },
             },
             {
@@ -2021,31 +2087,93 @@ export const activities = [
               component: HeaderWithImage,
               data: {
                 title: "Kundalini Meditation",
-                desc: "Kundalini is a Sanskrit word that refers to the coiled energy located at the base of our spine. It is often represented by a snake. The concept is that through Kundalini meditation, this hidden life energy can be awakened and guided up through the body's energy centres which are 7 in number, known as chakras, leading to a higher state of consciousness and spiritual awakening from within.",
+                desc: "Kundalini is a Sanskrit word that refers to the coiled energy located at the base of our spine. It is often represented by a snake. The concept is that through Kundalini meditation, this hidden life energy can be awakened and guided up through the body's energy centres which are 7 in number, known as chakras, leading to a higher state of consciousness and spiritual awakening from within. ",
                 image: kundaliniHeader,
                 variations: false,
                 var: "",
               },
             },
-
             {
-              component: LeftVideoList,
+              component: RightProcedureList,
               data: {
                 title: "Practicing Kundalini Meditation: ",
-                desc: "To practice kundalini meditation, follow these steps:",
-                videoUrl: kundaliniLeft1,
+                image: kundaliniLeft1,
                 list: [
                   {
-                    subtitle: "Find a positive Space",
-                    desc: " Choose a quiet and comfortable spot where you can sit or lie down without distractions and focus on yourself.",
+                    subtitle: "",
+                    desc: "Dress comfortably in light, loose clothing for your meditation session. Some practitioners find using shawls or cloth to cover their heads helps with energy flow.2.",
                   },
                   {
-                    subtitle: "Relax your body:",
-                    desc: "Shut your eyes, take a few deep breaths, and allow your body to relax and settle down. Notice how each inhale and exhale feel as it passes through your body.",
+                    subtitle: "",
+                    desc: " Start by tuning in to your meditative state. Sit upright, with a straight spine, whether on a chair or the floor. Place your hands together in a prayer pose at your chest, leaving your eyes slightly open.",
                   },
                   {
-                    subtitle: "Inculcate Mindfulness into Daily Life:",
-                    desc: " Practice the cultivation of mindfulness into your daily activities and routine, paying attention to each moment with an open and non-judgmental mindset.",
+                    subtitle: " ",
+                    desc: " Focus on your third eye chakra while tuning in. Direct your gaze to the space between your eyebrows with closed eyes.",
+                  },
+                  {
+                    subtitle: " ",
+                    desc: " Utilize a mantra to guide your focus. Kundalini meditation often involves mantras in Gurmukhi, but feel free to choose one that resonates with you. Repeat it silently or aloud.",
+                  },
+                  {
+                    subtitle: " ",
+                    desc: " Focus on your breathing pattern, inhaling and exhaling through your nose. Slow down your breathing, making each breath last about 8 seconds (3-4 seconds for inhale and exhale each). Feel the breath energizing your body.",
+                  },
+                  {
+                    subtitle: " ",
+                    desc: " Incorporate mudras, or hand positions, to enhance your meditation. For instance, the Gyan mudra (touching your first finger to your thumb) can promote wisdom and calmness, while the Shuni mudra (touching your middle finger to your thumb) can foster patience and commitment.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList2,
+              data: {
+                image: kundaliniRight1,
+                list: [
+                  {
+                    subtitle: "",
+                    desc: "Divide your breathing into equal segments by inhaling and exhaling in four parts without pausing in between. Draw your navel towards your spine with each inhale and exhale.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Whenever you feel your mind wanders away, gently tap into it to redirect your attention back to your breath. Acknowledge any wandering thoughts, then let them go as they flow free.",
+                  },
+                  {
+                    subtitle: "  ",
+                    desc: " Start with a 3 to 5-minute meditation if you're new to the practice. Gradually increase the time duration as you become more proficient and comfortable.",
+                  },
+                  {
+                    subtitle: "  ",
+                    desc: " End your session with a deep breath, inhaling as you raise your arms and exhaling to relax.",
+                  },
+                  {
+                    subtitle: "  ",
+                    desc: " Once you feel that your Kundalini energy has reached its peak, gradually try to bring your awareness back to your breath subtly. Take a few moments to ground yourself before ending the meditation and express gratitude.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList3,
+              data: {
+                title: "Benefits of Kundalini Meditation:",
+                list: [
+                  {
+                    subtitle: "Explore beyond consciousness:",
+                    desc: "Kundalini meditation can directly lead to a heightened state of awareness beyond the 5 senses and expanded consciousness merging with the universe, allowing individuals to tap into unlocking their full potential and explore higher realms of existence hidden from the rest of us.",
+                  },
+                  {
+                    subtitle: "Emotional Uplifting: ",
+                    desc: " With regular practice and consistency, Kundalini meditation can help release emotional baggage and other blockages and traumas stored in the body over time, bringing out the best of you in terms of healing, balance, and a greater sense of well-being inside out.",
+                  },
+                  {
+                    subtitle: "Heightened E Vitality:",
+                    desc: " Once successfully awakening the Kundalini energy, practitioners may expect to experience a significant increase in their energy, vitality, and a sense of empowerment in their daily lives from within",
+                  },
+                  {
+                    subtitle: "Enhanced Intuition:",
+                    desc: " Kundalini meditation has been proven and well-known to awaken dormant creativity and strengthen our inner intuition, allowing individuals to access the best of their inner wisdom and artistic expression.",
                   },
                 ],
               },
@@ -2053,39 +2181,35 @@ export const activities = [
             {
               component: RightImageList,
               data: {
-                title: "Benefits of Kundalini Meditation: ",
-                desc: "Kundalini Meditation offers many benefits for the body and mind, including",
+                title: "Safety Precautions:",
+                desc: "While Kundalini meditation can be a transformative practice, it is highly potent thus it is very essential to be under the guidance of a supervisor and approach it with caution and respect. Here are a few important safety measures and precautions to keep in mind by practitioners:",
+                image: precautions,
                 list: [
                   {
-                    subtitle: "Explore beyond consciousness:  ",
-                    desc: " Kundalini meditation can directly lead to a heightened state of awareness beyond the 5 senses and expanded consciousness merging with the universe, allowing individuals to tap into unlocking their full potential and explore higher realms of existence hidden from the rest of us.",
+                    subtitle: "Practice under an Experienced Mentor:",
+                    desc: " If you are new to Kundalini meditation, it is highly advisable to seek guidance from an experienced teacher with valid certifications who can provide proper instruction and support and guide you in this journey.",
                   },
                   {
-                    subtitle: "Emotional Uplifting: ",
-                    desc: "With regular practice and consistency, Kundalini meditation can help release emotional baggage and other blockages and traumas stored in the body over time, bringing out the best of you in terms of healing, balance, and a greater sense of well-being inside out.",
+                    subtitle: "Keep Slow Pace:",
+                    desc: "Try to begin with shorter meditation sessions consistently and gradually increase the duration of sessions as you become more comfortable with the practice and master it.",
                   },
                   {
-                    subtitle: "Heightened E Vitality: ",
-                    desc: " Once successfully awakening the Kundalini energy, practitioners may expect to experience a significant increase in their energy, vitality, and a sense of empowerment in their daily lives from within",
+                    subtitle: "Listen to Your Intuition:",
+                    desc: "Pay deep attention to any physical or emotional sensations or what we call gut feelings that arise during the meditation. If something feels uncomfortable or overwhelming kindly come to a halt, honor your boundaries and adjust your practice accordingly.",
                   },
                   {
-                    subtitle: "Enhanced Intuition:  ",
-                    desc: " Kundalini meditation has been proven and well-known to awaken dormant creativity and strengthen our inner intuition, allowing individuals to access the best of their inner wisdom and artistic expression.",
+                    subtitle: "Balance Grounding and Earthing: ",
+                    desc: "Incorporate various grounding activities such as walking in nature barefoot, journaling down your emotions, or spending time with loved ones to help integrate the Kundalini energy and maintain balance with nature.",
                   },
                 ],
               },
             },
             {
-              component: LeftImageList,
+              component: SubpagesConclusion,
               data: {
-                desc: "While Adho Mukha Svanasana is a safe and beneficial pose for most people, there are a few precautions to remember: ",
-                info: "Adho Mukha Svanasana is a versatile pose that yogis of all skill levels can practice. Whether you want to increase your flexibility, strengthen your upper body, or reduce stress, this pose has much to offer. You can safely practice this pose and enjoy its many benefits by following the proper technique and taking necessary precautions. So next time you step onto your yoga mat, include Adho Mukha Svanasana in your practice!",
-                list: [
-                  "Avoid this pose if you have a wrist, shoulder, or back injury.",
-                  "If you have high blood pressure, keep your head at or above heart level to avoid a sudden increase in blood pressure.",
-                  "If you have a neck injury, keep your head aligned with your spine instead of looking towards your belly button.",
-                  "If you have tight hamstrings, bend your knees slightly to avoid straining your lower back.",
-                ],
+                title: "Conclusion: ",
+                desc: "Kundalini meditation is indeed a transformative practice that can lead to spiritual growth, expanded consciousness, and enhanced well-being.  By taking a few minutes each day to focus on our breath, we can cultivate a sense of inner calm, improve our ability to concentrate on ourselves and enhance our overall health and well-being and awaken the dormant Kundalini energy within us, practitioners under guidance can tap into their true potential, experience emotional healing, and cultivate a deep sense of inner peace. However, it is important to approach Kundalini meditation with proper training and caution, seek guidance from experienced teachers and mentors, and listen to your body's wisdom throughout the journey and unlock the nirvana.",
+                image: conclusionBulb,
               },
             },
             {
@@ -2126,25 +2250,59 @@ export const activities = [
                 var: "",
               },
             },
-
             {
-              component: LeftVideoList,
+              component: RightProcedureList,
               data: {
                 title: "Practicing Zen Meditation:",
-                desc: "To practice Zen meditation, follow these steps:",
-                videoUrl: zenLeft1,
+                image: kundaliniLeft1,
                 list: [
                   {
                     subtitle: "",
-                    desc: " ChoFind a quiet and peaceful place for meditation. Remove any distractions, like electronic devices, and wear comfortable clothes to feel relaxed.ose a quiet and comfortable spot where you can sit or lie down without distractions and focus on yourself.",
+                    desc: "Find a quiet and peaceful place for meditation. Remove any distractions, like electronic devices, and wear comfortable clothes to feel relaxed.",
                   },
                   {
                     subtitle: "",
-                    desc: "Shut Choose a meditation pose from the following options: Half Lotus, Full Lotus, Burmese Pose, or Seiza Pose. Select a pose that feels comfortable for you. eyes, take a few deep breaths, and allow your body to relax and settle down. Notice how each inhale and exhale feel as it passes through your body.",
+                    desc: " Choose a meditation pose from the following options: Half Lotus, Full Lotus, Burmese Pose, or Seiza Pose. Select a pose that feels comfortable for you.",
+                  },
+                  {
+                    subtitle: " ",
+                    desc: " Close your eyes, focus on your breath, and stay with it. If your mind wanders, gently bring your attention back to your breath. Start with 5 minutes and gradually increase the duration.",
+                  },
+                ],
+              },
+            },
+            {
+              component: RightImageList2,
+              data: {
+                image: zenRight1,
+                list: [
+                  {
+                    subtitle: "",
+                    desc: "Develop a nonjudgmental attitude towards your thoughts and experiences. Avoid labelling thoughts as positive or negative, just let them be as they are. Embrace this new way of thinking to stay calm and patient.",
                   },
                   {
                     subtitle: "",
-                    desc: " Practice the cultivation of mindfulClose your eyes, focus on your breath, and stay with it. If your mind wanders, gently bring your attention back to your breath. Start with 5 minutes and gradually increase the duration.ness into your daily activities and routine, paying attention to each moment with an open and non-judgmental mindset.",
+                    desc: "Consistency is key. Practice daily for at least one month, reflecting on any positive changes you observe. If you experience benefits, make meditation a part of your daily routine to enhance your life.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList3,
+              data: {
+                title: "Benefits of Zen Meditation:",
+                list: [
+                  {
+                    subtitle: "Enhanced Creativity: ",
+                    desc: " When we are stressed and overwhelmed, our ability to generate new ideas and be innovative suffers. However, Zen meditation can be a remedy for this issue. By promoting increased blood circulation to the brain and energizing the right side, which is associated with creativity, Zen meditation helps unlock our creative potential.",
+                  },
+                  {
+                    subtitle: "Improved Mental Well-being:",
+                    desc: "  Zen meditation addresses deep-seated anxiety and depression, offering a path to finding clarity and answers to troubling questions. Moreover, it facilitates reconnection with life, fostering empathy and inner awareness, leading to improved psychological well-being. It promotes our cognitive abilities.",
+                  },
+                  {
+                    subtitle: "Heightened Knowledge and Insight: ",
+                    desc: " Engaging in Zen meditation fosters a thirst for knowledge and a deeper understanding of life's essence. This practice provides profound insights into one's place and purpose in the world, enabling individuals to detach from societal expectations. As a result, they are better equipped to embrace and enjoy life to the fullest.",
                   },
                 ],
               },
@@ -2152,35 +2310,39 @@ export const activities = [
             {
               component: RightImageList,
               data: {
-                title: "Benefits of Zen Meditation: ",
-                desc: "Zen Meditation offers many benefits for the body and mind, including",
+                title: "Safety Precautions:",
+                desc: "While Zeni meditation can be a transformative practice, its some forms require supervised practice and thus it is very essential to be under the guidance of a supervisor and approach it with caution and respect. Here are a few important safety measures and precautions to keep in mind for practitioners:",
+                image: precautions,
                 list: [
                   {
-                    subtitle: "Enhanced Creativity: ",
-                    desc: " When we are stressed and overwhelmed, our ability to generate new ideas and be innovative suffers. However, Zen meditation can be a remedy for this issue. By promoting increased blood circulation to the brain and energizing the right side, which is associated with creativity, Zen meditation helps unlock our creative potential.",
+                    subtitle: "Practice under an Experienced Mentor:",
+                    desc: "  If you are new to Kundalini meditation, it is highly advisable to seek guidance from an experienced teacher with valid certifications who can provide proper instruction and support and guide you in this journey.",
                   },
                   {
-                    subtitle: "Improved Mental Well-being: ",
-                    desc: " Zen meditation addresses deep-seated anxiety and depression, offering a path to finding clarity and answers to troubling questions. Moreover, it facilitates reconnection with life, fostering empathy and inner awareness, leading to improved psychological well-being. It promotes our cognitive abilities.",
+                    subtitle: "Keep Slow Pace:",
+                    desc: "Try to begin with shorter meditation sessions consistently and gradually increase the duration of sessions as you become more comfortable with the practice and master it.",
                   },
                   {
-                    subtitle: "Heightened Knowledge and Insight",
-                    desc: " Engaging in Zen meditation fosters a thirst for knowledge and a deeper understanding of life's essence. This practice provides profound insights into one's place and purpose in the world, enabling individuals to detach from societal expectations. As a result, they are better equipped to embrace and enjoy life to the fullest.",
+                    subtitle: "Do not practice it at home: ",
+                    desc: " It is important to note that Zen meditation shouldn’t be practiced alone at home or by children below 14 years of age.",
+                  },
+                  {
+                    subtitle: "Listen to Your Intuition:",
+                    desc: "Pay deep attention to any physical or emotional sensations or what we call gut feelings that arise during the meditation. If something feels uncomfortable or overwhelming kindly come to a halt, honor your boundaries and adjust your practice accordingly.",
+                  },
+                  {
+                    subtitle: "Balance Grounding and Earthing:",
+                    desc: "Incorporate various grounding activities such as walking in nature barefoot, journaling down your emotions, or spending time with loved ones to help integrate the Kundalini energy and maintain balance with nature.",
                   },
                 ],
               },
             },
             {
-              component: LeftImageList,
+              component: SubpagesConclusion,
               data: {
-                desc: "While Adho Mukha Svanasana is a safe and beneficial pose for most people, there are a few precautions to remember: ",
-                info: "Adho Mukha Svanasana is a versatile pose that yogis of all skill levels can practice. Whether you want to increase your flexibility, strengthen your upper body, or reduce stress, this pose has much to offer. You can safely practice this pose and enjoy its many benefits by following the proper technique and taking necessary precautions. So next time you step onto your yoga mat, include Adho Mukha Svanasana in your practice!",
-                list: [
-                  "Avoid this pose if you have a wrist, shoulder, or back injury.",
-                  "If you have high blood pressure, keep your head at or above heart level to avoid a sudden increase in blood pressure.",
-                  "If you have a neck injury, keep your head aligned with your spine instead of looking towards your belly button.",
-                  "If you have tight hamstrings, bend your knees slightly to avoid straining your lower back.",
-                ],
+                title: "Conclusion: ",
+                desc: "Zeni meditation is indeed a transformative practice that can lead to spiritual growth, expanded consciousness, and enhanced well-being with proficiency. By taking just a few minutes each day to focus on our breath, we can cultivate a sense of inner calm, improve our ability to concentrate on ourselves and enhance our overall health and well-being and awaken the inner true energy within us, practitioners under guidance can tap into their true potential, experience emotional healing, and cultivate a deep sense of inner peace and belonging. However, it is important to approach it with proper training and caution, seek guidance from experienced teachers and mentors, and listen to your body's wisdom throughout the journey and unlock the nirvana.",
+                image: conclusionBulb,
               },
             },
             {
@@ -2221,34 +2383,59 @@ export const activities = [
                 var: "",
               },
             },
-
             {
-              component: LeftVideoList,
+              component: RightProcedureList,
               data: {
                 title: "Practicing Spiritual Meditation:",
-                desc: "To practice spritiual meditation, follow these steps:",
-                videoUrl: spiritualLeft1,
+                image: spiritualLeft1,
                 list: [
                   {
-                    subtitle: "",
-                    desc: " ChoFind a quiet and peaceful place for meditation. Remove any distractions, like electronic devices, and wear comfortable clothes to feel relaxed.ose a quiet and comfortable spot where you can sit or lie down without distractions and focus on yourself.",
+                    subtitle: "Release any grudges you’ve been holding: ",
+                    desc: " The habit of holding grudges can weigh heavily on our minds and hearts, hindering our mental and emotional well-being and spiritual growth. To practice spiritual meditation effectively, let go of any lingering resentments you possess or negative feelings towards others. Forgiveness gratitude and compassion are very powerful tools that can liberate us thus fostering inner peace and healing within.",
                   },
                   {
-                    subtitle: "",
-                    desc: "Shut Choose a meditation pose from the following options: Half Lotus, Full Lotus, Burmese Pose, or Seiza Pose. Select a pose that feels comfortable for you. eyes, take a few deep breaths, and allow your body to relax and settle down. Notice how each inhale and exhale feel as it passes through your body.",
+                    subtitle: "Focus on your spiritual aspirations:",
+                    desc: "Spiritual meditation encourages us to cultivate deepened selflessness which extends our spiritual aspirations to others. By directing our positive intentions and prayers towards the well-being and happiness of others, we enhance our sense of interconnections and compassion.",
                   },
                   {
-                    subtitle: "",
-                    desc: " Practice the cultivation of mindfulClose your eyes, focus on your breath, and stay with it. If your mind wanders, gently bring your attention back to your breath. Start with 5 minutes and gradually increase the duration.ness into your daily activities and routine, paying attention to each moment with an open and non-judgmental mindset.",
+                    subtitle: "Bring in your faith: ",
+                    desc: " Combining with one's faith or spiritual beliefs can deepen the spiritual experience. Being fully present in moments of prayer, meditation, or religious rituals, one can connect deeply with spirituality. It allows us to engage with our faith practices.",
+                  },
+                  {
+                    subtitle: "Welcome new possibilities:",
+                    desc: " Spiritual meditation encourages us to have a welcoming and receptive mindset. By letting go of our rigid beliefs and conceptions, we can become more receptive to new ideas, insights, and spiritual experiences. This openness to exploring new possibilities expands our spiritual horizons fostering personal growth and understanding within us.",
                   },
                 ],
               },
             },
             {
-              component: RightImageList,
+              component: RightImageList2,
               data: {
-                title: "Benefits of Spiritual Meditation:",
-                desc: "Spiritual Meditation offers many benefits for the body and mind, including",
+                image: spiritualRight1,
+                list: [
+                  {
+                    subtitle: "Observe the rhythm of breathing:",
+                    desc: "The steps of spiritual meditation often begin with focusing on the breathing pattern. The breath often serves as an anchor for the mind within, allowing the right to bring our attention to the present. Observing the rhythm of breathing patterns can help quieten the mind and dive deeper into a spiritual experience.",
+                  },
+                  {
+                    subtitle: "Tune into your heart rate and heartbeats:",
+                    desc: "Whenever you feel your mind wanders away, gently tap into it to redirect your attention back to your breath. Acknowledge any wandering thoughts, then let them go as they flow free.",
+                  },
+                  {
+                    subtitle: "Tune into your heart rate and heartbeats: ",
+                    desc: " As we progress further in the meditation, we gradually shift our awareness from the breath to the rhythm of our heartbeats. Connecting with the heart centre implants a deepened sense of self-awareness and emotional understanding. This part encourages us to openly embrace our emotions with kindness and gratitude.",
+                  },
+                  {
+                    subtitle: "Thank yourself and rest:",
+                    desc: " During spiritual meditation, it's quite normal to expect the mind to wander and the ego to assert its dominance. Instead of getting frustrated over it, we can acknowledge the ego's presence, thank it for its existence, and gently put it back to rest. This practice shall create a peaceful and centred mental state.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList3,
+              data: {
+                title: "Benefits of Spirtiual Meditation:",
                 list: [
                   {
                     subtitle: "Increase aura positivity: ",
@@ -2259,23 +2446,48 @@ export const activities = [
                     desc: "With spiritual meditation addresses deep-seated anxiety and depression, offering a path to finding sans judgement ruled by clarity and answers to troubling questions. Moreover, it facilitates reconnection with life, fostering empathy and inner awareness, leading to improved psychological well-being. It promotes our cognitive abilities.",
                   },
                   {
-                    subtitle: "Heightened Knowledge and Insight:",
-                    desc: "Abundance, generosity and gratitude are fostered by a thirst for knowledge and a deeper understanding of life's essence. This practice provides profound insights into one's place and purpose in the world, enabling individuals to detach from societal expectations. As a result, they are better equipped to embrace and enjoy life to the fullest.",
+                    subtitle: "Heightened Knowledge and Insight: ",
+                    desc: " Abundance, generosity and gratitude are fostered by a thirst for knowledge and a deeper understanding of life's essence. This practice provides profound insights into one's place and purpose in the world, enabling individuals to detach from societal expectations. As a result, they are better equipped to embrace and enjoy life to the fullest.",
                   },
                 ],
               },
             },
             {
-              component: LeftImageList,
+              component: RightImageList,
               data: {
-                desc: "While Adho Mukha Svanasana is a safe and beneficial pose for most people, there are a few precautions to remember: ",
-                info: "Adho Mukha Svanasana is a versatile pose that yogis of all skill levels can practice. Whether you want to increase your flexibility, strengthen your upper body, or reduce stress, this pose has much to offer. You can safely practice this pose and enjoy its many benefits by following the proper technique and taking necessary precautions. So next time you step onto your yoga mat, include Adho Mukha Svanasana in your practice!",
+                title: "Safety Precautions:",
+                desc: "While spiritual meditation can be really empowering, it might require a supervised practitioner like a guru and thus is very essential to be under a supervisor and approach with caution and respect. Here are a few important safety measures and precautions to keep in mind for practitioners:",
+                image: precautions,
                 list: [
-                  "Avoid this pose if you have a wrist, shoulder, or back injury.",
-                  "If you have high blood pressure, keep your head at or above heart level to avoid a sudden increase in blood pressure.",
-                  "If you have a neck injury, keep your head aligned with your spine instead of looking towards your belly button.",
-                  "If you have tight hamstrings, bend your knees slightly to avoid straining your lower back.",
+                  {
+                    subtitle: "Ending meditation:",
+                    desc: "  By opening your eyes slowly and becoming aware of your surroundings allows us to inculcate the benefits of spirituality into our everyday experiences. It bridges the meditative state we possess with the maternal world and guides us in carrying spiritual insights throughout.",
+                  },
+                  {
+                    subtitle: "Aftermath:",
+                    desc: "By trying to incorporate the above steps along you into a spiritual meditation practice, individuals can expect to experience profound inner growth, mental-emotional healing, and a sounder connection with themselves and the world.",
+                  },
+                  {
+                    subtitle: "Keep Slow Pace: ",
+                    desc: "Try to begin with shorter meditation sessions consistently and gradually increase the duration of sessions as you become more comfortable with the practice and master it.",
+                  },
+                  {
+                    subtitle: "Listen to Your Intuition: ",
+                    desc: "Pay deep attention to any physical or emotional sensations or what we call gut feelings that arise during the meditation. If something feels uncomfortable or overwhelming kindly come to a halt, honor your boundaries and adjust your practice accordingly.",
+                  },
+                  {
+                    subtitle: "Balance Grounding and Earthing:  ",
+                    desc: " Incorporate various grounding activities such as walking in nature barefoot, journaling down your emotions, or spending time with loved ones to help integrate the Kundalini energy and maintain balance with nature.",
+                  },
                 ],
+              },
+            },
+            {
+              component: SubpagesConclusion,
+              data: {
+                title: "Conclusion: ",
+                desc: "Spiritual meditation is indeed an empowering and gradual practice which is a sure-shot way in leading one to spiritual growth and expanded consciousness beyond the norm and enhance well-being with proficiency. By taking just a few minutes each day to focus on our breath, we can cultivate a sense of inner calm, improve our ability to concentrate on ourselves and enhance our overall health and well-being and awaken the inner true energy within us, practitioners under guidance can tap into their true potential, experience emotional healing, and cultivate a deep sense of inner peace and belonging. However, it is important to approach it with proper training and caution, seek guidance from experienced teachers and mentors, and listen to your body's wisdom throughout the journey and unlock the nirvana.",
+                image: conclusionBulb,
               },
             },
             {
@@ -2310,84 +2522,128 @@ export const activities = [
               component: HeaderWithImage,
               data: {
                 title: "Walking Meditation",
-                desc: "Walking Meditation is one of the most popular and beneficial forms of mental health practice. It not only helps to reduce stress and anxiety, but it can also help to improve mindfulness and focus. But did you know that walking meditation is also an excellent way to practice mindfulness and relaxation?",
+                desc: "Walking Meditation is one of the most popular and beneficial forms of mental health practice. It not only helps to reduce stress and anxiety, but it can also help to improve mindfulness and focus. But did you know that walking meditation is also an excellent way to practice mindfulness and relaxation?It is an efficient way to lead away from the chaos leading to a higher state of consciousness and spiritual awakening from within ‘walking away from it’.",
                 image: walkingHeader,
-
-                variations: true,
-                var: "It is an efficient way to lead away from the chaos leading to a higher state of consciousness and spiritual awakening from within ‘walking away from it’.",
+                variations: false,
+                var: "",
               },
             },
-
             {
-              component: LeftVideoList,
+              component: RightProcedureList,
               data: {
-                title: "Practicing Walking Meditation::",
-                desc: "To practice walking meditation, follow these steps:",
-                videoUrl: walkingLeft1,
+                title: "Practicing Walking Meditation:",
+                image: kundaliniLeft1,
                 list: [
                   {
                     subtitle: "",
-                    desc: " ChoFind a quiet and peaceful place for meditation. Remove any distractions, like electronic devices, and wear comfortable clothes to feel relaxed.ose a quiet and comfortable spot where you can sit or lie down without distractions and focus on yourself.",
+                    desc: "Find a peaceful and quiet place to walk without distractions. It could be a garden, park, beach, or any open space with enough room to step back and forth for a few paces.",
                   },
                   {
                     subtitle: "",
-                    desc: "Shut Choose a meditation pose from the following options: Half Lotus, Full Lotus, Burmese Pose, or Seiza Pose. Select a pose that feels comfortable for you. eyes, take a few deep breaths, and allow your body to relax and settle down. Notice how each inhale and exhale feel as it passes through your body.",
+                    desc: " Stand upright with your spine straight but not rigid. Let your shoulders relax, and place your arms comfortably, like clasping your hands together in front of you or letting them hang naturally at your sides.",
                   },
                   {
-                    subtitle: "",
-                    desc: " Practice the cultivation of mindfulClose your eyes, focus on your breath, and stay with it. If your mind wanders, gently bring your attention back to your breath. Start with 5 minutes and gradually increase the duration.ness into your daily activities and routine, paying attention to each moment with an open and non-judgmental mindset.",
+                    subtitle: " ",
+                    desc: " Before walking, take a few deep breaths to center yourself. Pay attention to the sensations of your breath as it enters and leaves your body. This helps you become present and prepares your mind for walking meditation.",
+                  },
+                  {
+                    subtitle: " ",
+                    desc: " Begin to walk at a slow and deliberate pace. Pay attention to each step as you take it. Lift one foot slowly, move it forward, and gently place it on the ground. Feel the sensations in your feet and legs as they move.",
+                  },
+                  {
+                    subtitle: " ",
+                    desc: " As you walk, direct your attention to the physical sensations of walking. Feel the contact of your feet with the ground, the shifting of your weight from one foot to the other, and the movement of your legs and feet.",
+                  },
+                  {
+                    subtitle: " ",
+                    desc: "While walking, try to keep your attention on the act of walking itself. If your mind starts to wander or get caught up in thoughts, gently bring your focus back to the sensations of walking. Be patient with yourself; it's normal for the mind to wander.",
+                  },
+                  {
+                    subtitle: " ",
+                    desc: "Be fully present with each movement. Notice how your muscles engage as you walk, the subtle shifts in balance, and the coordination involved in each step.",
                   },
                 ],
               },
             },
             {
-              component: RightImageList,
+              component: RightImageList2,
               data: {
-                title: "Benefits of Walking Meditation: ",
-                desc: "Walking Meditation offers many benefits for the body and mind, including",
+                image: walkingRight1,
                 list: [
                   {
-                    subtitle: "Stress Reduction:",
+                    subtitle: "",
+                    desc: "You can also be aware of your surroundings while walking. Notice the sights, sounds, and smells around you without getting overly absorbed.",
+                  },
+                  {
+                    subtitle: "",
+                    desc: "Walking meditation is about being in the present moment. Try not to dwell on the past or worry about the future. Instead, immerse yourself fully in the experience of walking.",
+                  },
+                  {
+                    subtitle: "  ",
+                    desc: "Some people find repeating a simple mantra or affirmation with each step helpful to anchor their focus. For example, with each step, you can silently say, 'I am here' or 'I am present.' ",
+                  },
+                  {
+                    subtitle: "  ",
+                    desc: " Decide on your walking meditation practice duration. Depending on your preference and schedule, it could be as short as 5 minutes or as long as 30 minutes.",
+                  },
+                  {
+                    subtitle: "  ",
+                    desc: " With enough space, you can walk back and forth along a straight path. When reaching the end, pause momentarily, turn mindfully, and continue walking in the opposite direction. This continuous movement helps maintain focus.",
+                  },
+                  {
+                    subtitle: "  ",
+                    desc: " When you're ready to conclude the walking meditation, slow down gradually. Stand still for a moment, take a few deep breaths, and allow yourself to transition from a walking state to a still one.",
+                  },
+                  {
+                    subtitle: "  ",
+                    desc: " After the practice, take a moment to reflect on how you feel. Observe any changes in your mental state, emotions, or bodily sensations. Appreciate the sense of mindfulness and calmness that arises from walking meditation.",
+                  },
+                ],
+              },
+            },
+            {
+              component: LeftImageList3,
+              data: {
+                title: "Benefits of Walking Meditation:",
+                list: [
+                  {
+                    subtitle: "Stress Reduction: ",
                     desc: "Walking meditation can be a great way to relieve stress and tension. The rhythmic movement and mindful breathing help calm the nervous system, leading to relaxation and ease.",
                   },
                   {
-                    subtitle: "Improved Concentration and Focus:",
+                    subtitle: "Improved Concentration and Focus: ",
                     desc: " Regular walking meditation enhances concentration and cognitive abilities. It trains the mind to sustain attention on the walking process, which can then be transferred to other tasks and activities in daily life.",
                   },
                   {
-                    subtitle: "Physical Exercise: ",
-                    desc: "Walking is a low-impact exercise that can benefit cardiovascular health, strengthen muscles, and improve overall fitness. Incorporating mindfulness into walking adds a meditative dimension to the practice.",
+                    subtitle: "Physical Exercise:",
+                    desc: " Walking is a low-impact exercise that can benefit cardiovascular health, strengthen muscles, and improve overall fitness. Incorporating mindfulness into walking adds a meditative dimension to the practice.",
                   },
                   {
-                    subtitle: "Enhanced Self-Awareness: ",
-                    desc: "Walking meditation allows individuals to observe their thoughts, emotions, and bodily sensations as they arise during practice. This heightened self-awareness can lead to a better understanding and acceptance of one's inner experiences.",
+                    subtitle: "Enhanced Self-Awareness:",
+                    desc: " Walking meditation allows individuals to observe their thoughts, emotions, and bodily sensations as they arise during practice. This heightened self-awareness can lead to a better understanding and acceptance of one's inner experiences.",
                   },
                   {
                     subtitle: "Mood Regulation:",
                     desc: " Engaging in walking meditation can have positive effects on mood and emotional well-being. It has been found to reduce symptoms of anxiety and depression, promoting a more positive outlook on life.",
                   },
                   {
-                    subtitle: "Connection with Nature: ",
+                    subtitle: "Connection with Nature:",
                     desc: " Walking meditation in natural settings, such as parks or forests, offers the added benefit of connecting with nature. This connection has been shown to enhance feelings of well-being and reduce stress.",
                   },
                   {
-                    subtitle: "Mind-Body Integration: ",
-                    desc: "Walking meditation fosters a deeper connection between the mind and body. It allows individuals to be more attuned to the physical sensations of walking, promoting a sense of grounding and embodiment.",
+                    subtitle: "Mind-Body Integration:",
+                    desc: "  Walking meditation fosters a deeper connection between the mind and body. It allows individuals to be more attuned to the physical sensations of walking, promoting a sense of grounding and embodiment.",
                   },
                 ],
               },
             },
+
             {
-              component: LeftImageList,
+              component: SubpagesConclusion,
               data: {
-                desc: "While Adho Mukha Svanasana is a safe and beneficial pose for most people, there are a few precautions to remember: ",
-                info: "Adho Mukha Svanasana is a versatile pose that yogis of all skill levels can practice. Whether you want to increase your flexibility, strengthen your upper body, or reduce stress, this pose has much to offer. You can safely practice this pose and enjoy its many benefits by following the proper technique and taking necessary precautions. So next time you step onto your yoga mat, include Adho Mukha Svanasana in your practice!",
-                list: [
-                  "Avoid this pose if you have a wrist, shoulder, or back injury.",
-                  "If you have high blood pressure, keep your head at or above heart level to avoid a sudden increase in blood pressure.",
-                  "If you have a neck injury, keep your head aligned with your spine instead of looking towards your belly button.",
-                  "If you have tight hamstrings, bend your knees slightly to avoid straining your lower back.",
-                ],
+                title: "Conclusion: ",
+                desc: "Walking meditation can be a highly adaptable practice. It can be integrated into your daily routine as a mindful walk to the office while strolling in a park, or even during mundane activities like grocery shopping. By taking a few minutes each day to focus on our breath, we can cultivate a sense of inner calm, improve our ability to concentrate on ourselves and enhance our overall health and well-being. By dedicating a few minutes each day to mindfulness, we can cultivate a more profound sense of calm, clarity, and overall well-being within us. So why not give it a try and check ourselves? Its versatility makes it an accessible form of meditation for individuals who may find sitting meditation challenging or prefer a more engaging practice.",
+                image: conclusionBulb,
               },
             },
             {

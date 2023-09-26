@@ -1,4 +1,5 @@
 import React from "react";
+import { leaf } from "../assets";
 
 export default function RightProcedureList(props) {
   return (
@@ -10,14 +11,26 @@ export default function RightProcedureList(props) {
         <h2 className="mb-4 text-2xl font-bold text-primary-500">
           {props.data.title}
         </h2>
-        <ul className="pt-4">
+        <ul className="pt-4 ">
           {props.data.list.map((value, index) => {
             return (
-              <li key={index} className="text-gray-800">
-                <span className="text-lg font-bold text-primary-500">
-                  &#10004; {value.subtitle}
-                </span>
-                <span>{value.desc}</span>
+              <li key={index} className="flex space-x-2">
+                <div className="">
+                  <img
+                    src={leaf}
+                    alt="Leaf Icon"
+                    className="mr-6 h-6 w-12 object-contain"
+                  />
+                </div>
+                <div>
+                  <p className="mb-0">
+                    {" "}
+                    <span className="text-lg font-semibold text-primary-500">
+                      {value.subtitle}
+                    </span>
+                    {value.desc}
+                  </p>
+                </div>
               </li>
             );
           })}

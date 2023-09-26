@@ -1,5 +1,5 @@
 import React from "react";
-import { benefits } from "../assets";
+import { benefits, leaf } from "../assets";
 
 export default function RightImageList(props) {
   return (
@@ -19,11 +19,23 @@ export default function RightImageList(props) {
         <ul className="pt-4">
           {props.data.list.map((value, index) => {
             return (
-              <li key={index} className="text-gray-800">
-                <span className="text-lg font-bold text-primary-500">
-                  &#10004; {value.subtitle}
-                </span>
-                <span>{value.desc}</span>
+              <li key={index} className="flex">
+                <div className="">
+                  <img
+                    src={leaf}
+                    alt="Leaf Icon"
+                    className="mr-6 h-6 w-12 object-contain"
+                  />
+                </div>
+                <div>
+                  <p className="mb-0">
+                    {" "}
+                    <span className="text-lg font-semibold text-primary-500">
+                      {value.subtitle}
+                    </span>
+                    {value.desc}
+                  </p>
+                </div>
               </li>
             );
           })}

@@ -129,8 +129,78 @@ import about4 from "./images/aboutus/about4.png";
 import about5 from "./images/aboutus/about5.png";
 import about6 from "./images/aboutus/about6.png";
 import meeting from "./images/aboutus/meeting.png";
+import pgsir from "./images/aboutus/pgsir.png";
+import asissir from "./images/aboutus/asissir.png";
+import kamalsir from "./images/aboutus/kamalsir.png";
+import pavansir from "./images/aboutus/pavansir.png";
+import salonimaam from "./images/aboutus/salonimaam.png";
+import sreyashsir from "./images/aboutus/sreyashsir.png";
+import aboutusbg from "./images/aboutus/aboutusbg.png";
 
-export { about1, about2, about3, about4, about5, about6, meeting };
+export {
+  about1,
+  about2,
+  about3,
+  about4,
+  about5,
+  about6,
+  meeting,
+  pgsir,
+  asissir,
+  kamalsir,
+  pavansir,
+  salonimaam,
+  sreyashsir,
+  aboutusbg,
+};
+// executive coaching
+import executiveIcon1 from "./images/executiveCoching/executiveIcon1.png";
+import executiveIcon2 from "./images/executiveCoching/executiveIcon2.png";
+import executiveIcon3 from "./images/executiveCoching/executiveIcon3.png";
+import executiveIcon4 from "./images/executiveCoching/executiveIcon4.png";
+import executiveHeader from "./images/executiveCoching/header1.png";
+import executiveimage2 from "./images/executiveCoching/image2.png";
+import executiveimage3 from "./images/executiveCoching/image3.png";
+
+export {
+  executiveHeader,
+  executiveIcon1,
+  executiveIcon2,
+  executiveIcon3,
+  executiveIcon4,
+  executiveimage2,
+  executiveimage3,
+};
+
+import meditationCheckoutBg from "./images/meditationcheckoutBg.png";
+import sadhnaCheckoutBg from "./images/sadhnacheckoutBg.png";
+import yogaCheckoutBg from "./images/sadhnacheckoutBg.png";
+
+export { meditationCheckoutBg, sadhnaCheckoutBg, yogaCheckoutBg };
+// Coaches
+import saloniHeader from "./images/coaches/saloniGuptaHeader.png";
+import saloniBottom from "./images/coaches/saloniBottom.png";
+import saloniMid from "./images/coaches/saloniMid.png";
+import anjuHeader from "./images/coaches/anjuHeader.png";
+import anjuBottom from "./images/coaches/anjuBottom.png";
+import anjuMid from "./images/coaches/anjuMid.png";
+import leaf from "./images/coaches/leaf.png";
+import andreaHeader from "./images/coaches/andreaHeader.png";
+import andreaMid from "./images/coaches/andreaMid.png";
+import andreaBottom from "./images/coaches/andreaBottom.png";
+
+export {
+  saloniBottom,
+  saloniHeader,
+  saloniMid,
+  anjuBottom,
+  anjuHeader,
+  anjuMid,
+  leaf,
+  andreaBottom,
+  andreaHeader,
+  andreaMid,
+};
 
 // Avatar images
 import avatarImage1 from "./images/activities/avatar/image 13.png";
@@ -308,6 +378,8 @@ import meditationSadhnaHeader from "./images/activities/sadhna/meditation-sadhna
 import natureSadhnaHeader from "./images/activities/sadhna/nature-sadhna-header.png";
 import sevaSadhnaHeader from "./images/activities/sadhna/seva-sadhna-header.png";
 import yogaSadhnaHeader from "./images/activities/sadhna/yoga-sadhna-header.png";
+// Activities >> Sadhna>>subpages
+
 // Activities >> Brain Exercise
 import brainExerciseHeader from "./images/activities/brainExercise/brain-exercise-header.png";
 import brainGameGalaxy from "./images/activities/brainExercise/brain-game-galaxy.png";

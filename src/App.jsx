@@ -56,6 +56,12 @@ import StudentsPolicy from "./pages/Policies/StudentsPolicy";
 import ExpertProfile from "./pages/Experts/ExpertProfile";
 import Gauth from "./pages/Authentication/Gauth";
 import FacebookAuth from "./pages/Authentication/FacebookAuth";
+import MeditationCheckout from "./pages/Appointment/MeditationCheckout";
+import Saloni from "./pages/Coaches/Saloni";
+import Anju from "./pages/Coaches/Anju";
+import Andrea from "./pages/Coaches/Andrea";
+import YogaCheckout from "./pages/Appointment/YogaCheckout";
+import SadhnaCheckout from "./pages/Appointment/SadhnaCheckout";
 import Career from "./pages/Career";
 import Consent from "./pages/Policies/Consent";
 
@@ -194,6 +200,14 @@ function App() {
           }
         />
         <Route
+          path="/calendly"
+          element={
+            <Layout>
+              <Calendly />
+            </Layout>
+          }
+        />
+        <Route
           path="/experts"
           element={
             <Layout>
@@ -238,6 +252,54 @@ function App() {
           element={
             <Layout>
               <Issues />
+            </Layout>
+          }
+        />
+        <Route
+          path="/saloni"
+          element={
+            <Layout>
+              <Saloni />
+            </Layout>
+          }
+        />
+        <Route
+          path="/anju"
+          element={
+            <Layout>
+              <Anju />
+            </Layout>
+          }
+        />
+        <Route
+          path="/andrea"
+          element={
+            <Layout>
+              <Andrea />
+            </Layout>
+          }
+        />
+        <Route
+          path="/meditation-checkout"
+          element={
+            <Layout>
+              <MeditationCheckout />
+            </Layout>
+          }
+        />
+        <Route
+          path="/yoga-checkout"
+          element={
+            <Layout>
+              <YogaCheckout />
+            </Layout>
+          }
+        />
+        <Route
+          path="/sadhna-checkout"
+          element={
+            <Layout>
+              <SadhnaCheckout />
             </Layout>
           }
         />
