@@ -256,7 +256,7 @@ function App() {
           }
         />
         <Route
-          path="/saloni"
+          path="/coach/saloni-gupta"
           element={
             <Layout>
               <Saloni />
@@ -264,7 +264,7 @@ function App() {
           }
         />
         <Route
-          path="/anju"
+          path="/coach/anju-chawla"
           element={
             <Layout>
               <Anju />
@@ -272,7 +272,7 @@ function App() {
           }
         />
         <Route
-          path="/andrea"
+          path="/coach/andrea-bianchi"
           element={
             <Layout>
               <Andrea />

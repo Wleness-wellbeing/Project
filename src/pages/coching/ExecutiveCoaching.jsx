@@ -22,21 +22,25 @@ import {
   executiveServices,
   individualServices,
 } from "../../data/executiveCoaching";
+import { Link } from "react-router-dom";
 
 const executiveCoaches = [
   {
     name: "Saloni Gupta",
     profession: "Executive Coach",
+    slug: "/coach/saloni-gupta",
     image: executiveCoach1,
   },
   {
     name: "Dr. Anju Chawla",
     profession: "Coach & Speaker",
+    slug: "/coach/anju-chawla",
     image: executiveCoach2,
   },
   {
     name: "Andrea Bianchi",
     profession: "Executive Coach",
+    slug: "/coach/andrea-bianchi",
     image: executiveCoach3,
   },
 ];
@@ -177,7 +181,7 @@ export default function ExecutiveCoaching() {
         <div className="mt-4 grid space-y-4 lg:grid-cols-3 lg:space-y-0">
           {executiveCoaches.map((value, i) => {
             return (
-              <figure key={i}>
+              <Link key={i} to={value.slug} className="block">
                 <div className="mb-4">
                   <img src={value.image} alt="" className="mx-auto w-44" />
                 </div>
@@ -189,7 +193,7 @@ export default function ExecutiveCoaching() {
                     {value.profession}
                   </h4>
                 </figcaption>
-              </figure>
+              </Link>
             );
           })}
         </div>

@@ -25,14 +25,6 @@ export default function Login({ setToken, token }) {
     message: "",
   });
 
-  const navigate = useNavigate();
-
-  // Update form value
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formInfo, [name]: value });
-  };
-
   const [user, setUser] = useState(null);
 
   // ===================Google Login ==========================//
