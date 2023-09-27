@@ -65,8 +65,6 @@ import SadhnaCheckout from "./pages/Appointment/SadhnaCheckout";
 import Career from "./pages/Career";
 import Consent from "./pages/Policies/Consent";
 import ApplyForm from "./components/JoinUs/ApplyForm";
-import AppointmentForm from "./components/SendDetails";
-import MeetingApp from "./components/Meeting/Meeting";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -136,14 +134,6 @@ function App() {
             </Layout>
           }
         />
-        <Route
-          path="/appointment-details"
-          element={
-            <Layout>
-              <AppointmentForm />
-            </Layout>
-          }
-        />
 
         <Route
           path="/avatar"
@@ -153,14 +143,7 @@ function App() {
             </Layout>
           }
         />
-        <Route
-          path="/meeting"
-          element={
-            <Layout>
-              <MeetingApp />
-            </Layout>
-          }
-        />
+
         <Route
           path="/gauth"
           element={

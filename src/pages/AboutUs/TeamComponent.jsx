@@ -21,14 +21,14 @@ const TeamComponent = () => {
       imageSrc: kamalsir,
     },
     {
-      name: "Pawan Kumar Singh",
-      designation: "Technlogy Lead",
-      imageSrc: pavansir,
-    },
-    {
       name: "Saloni Gupta",
       designation: "Chief Knowledge Officer",
       imageSrc: salonimaam,
+    },
+    {
+      name: "Pawan Kumar Singh",
+      designation: "Technlogy Lead",
+      imageSrc: pavansir,
     },
     {
       name: "Dr. Sreyash Satpathy",
@@ -43,16 +43,15 @@ const TeamComponent = () => {
   ];
 
   return (
-    <div className="container mx-auto grid grid-cols-2 gap-4 text-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
+    <div className="container mx-auto grid grid-cols-3  pb-4 text-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 lg:gap-8 xl:grid-cols-3">
       {teamMembers.map((member, index) => (
-        <div key={index} className="mx-auto my-auto w-3/4 lg:w-2/3  ">
+        <div key={index} className="mx-auto my-auto w-2/3  lg:w-1/2  ">
           <img
             src={member.imageSrc}
             alt={member.name}
-            className="mx-auto mb-2 rounded-full"
-            style={{}}
+            className="mx-auto mb-1 h-24 w-24 rounded-full lg:h-36 lg:w-36"
           />
-          <h2 className="text-sm font-bold lg:text-xl">{member.name}</h2>
+          <h2 className="text-xs font-bold lg:text-sm">{member.name}</h2>
           <p className="text-xs font-semibold">{member.designation}</p>
         </div>
       ))}
