@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown, faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import React, { useState } from "react";
+import { approveIcon } from "../assets";
 
 const dummyData = [
   {
@@ -8,7 +9,7 @@ const dummyData = [
     paragraph: "Prioritizing mental wellness in all aspects of our approach.",
     answer:
       "Crafting personalized wellness plans for each individual, considering the severity of their concerns, their life circumstances, and mental wellness needs.Implementing well-established methods and incorporating the latest scientific advancements in mental wellness into our care options, tools, and resources.Monitoring the progress of each client and conducting regular assessments of treatment outcomes to ensure continual improvement and tailored care.",
-    isOpen: true,
+    isOpen: false,
   },
   {
     heading: "Comprehensive Wellness Ecosystem:",
@@ -71,18 +72,28 @@ function AboutUsdropbox({ heading, paragraph, answer, isOpen, toggleFAQ }) {
           <h2 className="text-2xl font-extrabold text-primary-400">
             {heading}
           </h2>
-          <p className="font-semibold text-primary-300">{paragraph}</p>
+          <div className="flex items-start font-semibold text-primary-300">
+            {" "}
+            {/* Use flex for icon and text */}
+            <img src={approveIcon} alt="Approve Icon" className="mr-2 " />{" "}
+            {/* Use the custom PNG icon here */}
+            <span>{paragraph}</span>
+          </div>
         </div>
         <FontAwesomeIcon icon={isOpen ? faAngleUp : faAngleDown} />
       </div>
       {/* Map over the answerList to create list items with disc bullets */}
-      <ul
-        className={
-          isOpen ? "list-disc font-semibold text-primary-300" : "hidden"
-        }
-      >
+      <ul className={isOpen ? " font-semibold text-primary-300" : "hidden"}>
         {answerList.map((item, index) => (
-          <li key={index}>{item.trim()}</li>
+          <li key={index}>
+            <div className="flex items-start font-semibold text-primary-300">
+              {" "}
+              {/* Use flex for icon and text */}
+              <img src={approveIcon} alt="Approve Icon" className="mr-2" />{" "}
+              {/* Use the custom PNG icon here */}
+              <span>{item.trim()}</span>
+            </div>
+          </li>
         ))}
       </ul>
     </div>

@@ -66,6 +66,7 @@ import Career from "./pages/Career";
 import Consent from "./pages/Policies/Consent";
 import ApplyForm from "./components/JoinUs/ApplyForm";
 import AppointmentForm from "./components/SendDetails";
+import MeetingApp from "./components/Meeting/Meeting";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -149,6 +150,14 @@ function App() {
           element={
             <Layout>
               <Avatar />
+            </Layout>
+          }
+        />
+        <Route
+          path="/meeting"
+          element={
+            <Layout>
+              <MeetingApp />
             </Layout>
           }
         />

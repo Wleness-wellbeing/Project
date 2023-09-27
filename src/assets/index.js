@@ -137,6 +137,7 @@ import salonimaam from "./images/aboutus/salonimaam.png";
 import sreyashsir from "./images/aboutus/sreyashsir.png";
 import aboutusbg from "./images/aboutus/aboutusbg.png";
 import problem from "./images/aboutus/problem.png";
+import approveIcon from "./images/aboutus/approveIcon.png";
 
 
 
@@ -155,7 +156,8 @@ export {
   salonimaam,
   sreyashsir,
   aboutusbg,
-  problem
+  problem,
+  approveIcon
 };
 // executive coaching
 import executiveIcon1 from "./images/executiveCoching/executiveIcon1.png";
