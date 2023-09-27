@@ -196,7 +196,7 @@ export default function Home() {
                       src={value.image}
                       alt=""
                       loading="lazy"
-                      className="mx-auto w-28"
+                      className="mx-auto mb-4 w-20"
                     />
                   </div>
                   <figcaption>
