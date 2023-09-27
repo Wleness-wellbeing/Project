@@ -16,7 +16,7 @@ export default function MainHeader({ openAssessmentModal }) {
           />
         </div>
         <div className="lg:order-1 lg:w-1/2">
-          <h1 className="subheading heading-primary px-10 lg:mb-4 lg:px-0">
+          <h1 className="subheading heading-primary px-10 lg:mb-4 lg:px-0 lg:text-4xl xl:text-[38px]">
             Partnering Your Well Being
           </h1>
           <h4 className="mb-2 text-xl font-bold text-primary-400 lg:mb-4">

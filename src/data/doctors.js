@@ -38,7 +38,7 @@ export const doctorsDetails = [
     slug: "purvi-balasaria",
   },
   {
-    name: "Meenakshi Mishra",
+    name: "Minakshi Mishra",
     image: meenakshiMishraPortrait,
     exp: "8+ years of experience",
     expertise: "CBT, BT, Counseling, Mindfulness meditations",
@@ -70,7 +70,7 @@ export const doctorsDetails = [
     slug: "purvi-balasaria",
   },
   {
-    name: "Meenakshi Mishra",
+    name: "Minakshi Mishra",
     image: meenakshiMishraPortrait,
     exp: "8+ years of experience",
     expertise: "CBT, BT, Counseling, Mindfulness meditations",
@@ -342,4 +342,3 @@ export const modes = [
     icon: faVideo,
   },
 ];
-

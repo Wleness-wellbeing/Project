@@ -11,10 +11,12 @@ export const USER_PROFILE_URI = URI + "user-profile";
 // Leads
 export const REQUEST_CALLBACK_URI = URI + "request-callback";
 export const CONTACT_URI = URI + "submit-contact";
+export const CAREER_URI = URI + "career-apply";
 
 // Experts
 export const EXPERTS_URI = URI + "get-experts";
 export const USER_APPOINTMENTS = URI + "user-appointments";
+export const COACH_CALLBACK_URI = URI + "coach-callback-requests";
 
 // Blogs
 export const BLOGS_URI = URI + "get-blogs";

@@ -629,7 +629,7 @@ export {
   couplesTherapy1,
   couplesTherapy2,
 };
-// Services >> Musical Therapy
+// Services >> Musical Healing
 import musicalTherapyHeader from "./images/services/musicalTherapy/musicalHeading.png";
 import musicalTherapy1 from "./images/services/musicalTherapy/musical-therapy-1.png";
 import musicalTherapy2 from "./images/services/musicalTherapy/musical-therapy-2.png";
@@ -648,6 +648,9 @@ import g8 from "./images/services/musicalTherapy/g8.png";
 import musicalelipse1 from "./images/services/musicalTherapy/musicalElipse1.png";
 import musicalelipse2 from "./images/services/musicalTherapy/musicalElipse2.png";
 import musicalelipse3 from "./images/services/musicalTherapy/musicalElipse3.png";
+import musicalHealingChild from "./images/services/musicalTherapy/musical-healing-child.png";
+import musicalHealingYoung from "./images/services/musicalTherapy/musical-healing-young.png";
+import musicalHealingOld from "./images/services/musicalTherapy/musical-healing-old.png";
 
 // Services >> Therapy
 import therapyHeader from "./images/services/therapy/therapy-header.png";
@@ -680,6 +683,9 @@ export {
   musicalTherapy4,
   musicalTherapy5,
   musicalTherapy6,
+  musicalHealingChild,
+  musicalHealingYoung,
+  musicalHealingOld,
   therapyHeader,
   bestTherapy,
   whyChooseTherapy1,
@@ -823,9 +829,9 @@ import happyClient4 from "./images/clients/happy-client-4.png";
 import therapyClient1 from "./images/clients/therapy-review-1.png";
 import therapyClient2 from "./images/clients/therapy-review-2.png";
 import therapyClient3 from "./images/clients/therapy-review-3.png";
-import coupleTherapyReview1 from "./images/clients/couple-therapy-review-1.png";
-import coupleTherapyReview2 from "./images/clients/couple-therapy-review-2.png";
-import coupleTherapyReview3 from "./images/clients/couple-therapy-review-3.png";
+import coupleTherapyReview1 from "./images/clients/couple-therapy-review-1.jpg";
+import coupleTherapyReview2 from "./images/clients/couple-therapy-review-2.jpg";
+import coupleTherapyReview3 from "./images/clients/couple-therapy-review-3.jpg";
 
 export {
   happyClient1,

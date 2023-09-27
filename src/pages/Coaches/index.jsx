@@ -23,6 +23,7 @@ import {
   individualServices,
 } from "../../data/executiveCoaching";
 import { Link } from "react-router-dom";
+import CoachRequestForm from "../../components/Forms/CoachRequestForm";
 
 const executiveCoaches = [
   {
@@ -191,6 +192,9 @@ export default function ExecutiveCoaching() {
                   </h2>
                   <h4 className="font-semibold text-slate-600">
                     {value.profession}
+                  </h4>
+                  <h4 className="font-semibold text-slate-600">
+                    Certified by ICF
                   </h4>
                 </figcaption>
               </Link>
@@ -362,8 +366,11 @@ export default function ExecutiveCoaching() {
             <div className="container mx-auto divide-x-2 divide-slate-600 lg:grid lg:grid-cols-3">
               {executiveApproach.map((value, i) => {
                 return (
-                  <div className="px-4 py-4 lg:flex lg:items-end lg:px-6 lg:py-8">
-                    <div key={i} className="group cursor-pointer">
+                  <div
+                    className="px-4 py-4 lg:flex lg:items-end lg:px-6 lg:py-8"
+                    key={i}
+                  >
+                    <div className="group cursor-pointer">
                       <h2 className="mb-4 text-2xl font-semibold text-white">
                         {value.title}
                       </h2>
@@ -396,6 +403,8 @@ export default function ExecutiveCoaching() {
           Tomorrow's Triumphs.
         </p>
       </section>
+
+      <CoachRequestForm />
     </>
   );
 }

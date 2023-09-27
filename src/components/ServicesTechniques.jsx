@@ -1,5 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  musicalHealingChild,
+  musicalHealingOld,
+  musicalHealingYoung,
+} from "../assets";
 
 const ServicesTechniques = React.forwardRef((props, ref) => {
   const activityTypes = props.types.map((value, index) => {
@@ -34,10 +39,28 @@ const ServicesTechniques = React.forwardRef((props, ref) => {
   });
 
   return (
-    <section className="container mx-auto pb-6" ref={ref}>
-      <div className="my-6 text-center lg:my-14">
+    <section className="container mx-auto py-6 lg:py-9" ref={ref}>
+      <div className="text-center">
         <h2 className="subheading text-primary-400">{props.title}</h2>
         <p className="font-semibold text-slate-700 lg:text-xl">{props.desc}</p>
+      </div>
+
+      <div className="flex justify-center gap-2 py-6 lg:gap-5 lg:py-10">
+        <img
+          src={musicalHealingChild}
+          alt=""
+          className="w-24 object-cover lg:w-32"
+        />
+        <img
+          src={musicalHealingYoung}
+          alt=""
+          className="w-24 object-cover lg:w-32"
+        />
+        <img
+          src={musicalHealingOld}
+          alt=""
+          className="w-24 object-cover lg:w-32"
+        />
       </div>
 
       {/* Meditations */}
