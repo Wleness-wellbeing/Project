@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   about1,
   about2,
@@ -14,6 +15,9 @@ import {
   salonimaam,
   sreyashsir,
   aboutusbg,
+  problem,
+  leaf,
+  approveIcon,
 } from "../../assets";
 import AboutUsdropbox from "../../components/AboutUsDrop";
 import DummyComponent from "../../components/AboutUsDrop";
@@ -22,34 +26,40 @@ import TeamComponent from "./TeamComponent";
 function AboutUs() {
   return (
     <main>
-      <header className="relative  overflow-x-clip bg-secondary/10 py-24 sm:h-auto">
+      <header
+        className="relative  bg-cover bg-center py-36 brightness-90 sm:h-auto "
+        style={{
+          backgroundImage: `url(${aboutusbg}) `,
+        }}
+      >
         <div className="mx-auto flex flex-col lg:flex-row">
-          <div className="lg:order-2">
+          {/* <div className="lg:order-2">
             <img
               src={aboutusbg}
               alt="Wleness"
               className="hidden w-full scale-y-150 object-cover object-left sm:block lg:w-auto"
             />
-          </div>
-          <div className="px-4 text-justify sm:w-full lg:order-1 lg:ml-56 lg:w-1/2 lg:px-0">
-            <h1 className="subheading">
-              About <span className="heading-primary">Wleness</span>
+          </div> */}
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+          <div className="  px-4 text-justify sm:w-full lg:order-1 lg:ml-56 lg:w-1/2 lg:px-0">
+            <h1 className="subheading  text-white brightness-105">
+              About <span className="heading-primary !text-white">Wleness</span>
             </h1>
             <br />
-            <p className="w-full font-semibold">
+            <p className="brightness-10 relative z-10 mt-4 w-full font-semibold text-white">
               Wleness is a mental health startup dedicated to providing
               accessible and affordable therapy to individuals struggling with
               mental health issues.
             </p>
             <br />
-            <p className="w-full font-semibold">
+            <p className="relative z-10 w-full font-semibold text-white">
               By leveraging technology, Wleness connects users with licensed
               mental health professionals via a secure online platform, making
               it easier for people to receive support from the comfort of their
               own homes.
             </p>
             <br />
-            <p className="w-full font-semibold">
+            <p className="relative z-10 w-full font-semibold text-white">
               The organization aims to establish a comprehensive mental health
               ecosystem offering treatment and tailored care plans for a
               spectrum of mental health conditions, including but not limited to
@@ -59,95 +69,191 @@ function AboutUs() {
           </div>
         </div>
       </header>
-
-      <div className="container mx-auto my-6 flex flex-col-reverse lg:flex-row">
-        <div className="my-auto w-full text-center lg:w-1/2 lg:text-left">
+      <div className="container mx-auto mt-7 text-center ">
+        <h2 className="subheading  font-semibold">
+          The <span className="heading-primary">Problem</span>
+        </h2>
+      </div>
+      <div className="container mx-auto   flex flex-col-reverse lg:flex-row">
+        <div className="my-auto w-full text-center lg:order-2 lg:w-1/2 lg:text-left">
           <div>
-            <h2 className="subheading text-left font-semibold">
-              The <span className="heading-primary">Problem</span>
-            </h2>
-            <p className="font-semibold">
-              Modern life can be demanding, and it’s not uncommon to feel
-              stressed, anxious, and emotionally drained. Work, relationships,
-              and personal expectations can make it challenging to maintain
-              mental balance and happiness.
-            </p>
-            <br />
-            <p className="font-semibold">
-              However, finding help for your mental well-being can be tricky.
-              For some people, therapy may not be affordable or may take up too
-              much time. Others may fear asking for help because they’re worried
-              about what others will think.
-            </p>
-            <br />
-            <p className="font-semibold">
-              Moreover, digital devices and social media can worsen the
-              situation by making us feel even more alone, not good enough, and
-              anxious. In this world of technology, we need simple and
-              affordable ways to take care of our emotional and mental
-              well-being.
-            </p>
-            <br />
-            <p className="font-semibold">
-              Unfortunately, geographical constraints and financial limitations
-              exacerbate this problem, as many individuals may not have access
-              to mental health services due to their location or inability to
-              afford traditional therapy sessions.
-            </p>
+            <div className="flex items-start">
+              {" "}
+              {/* Use a flex container */}
+              <img
+                src={leaf}
+                alt="Leaf Icon"
+                className="mr-2 h-4 w-4 object-contain"
+              />
+              <p className=" font-semibold">
+                Modern life can be demanding, leading to stress, anxiety, and
+                emotional exhaustion.
+              </p>
+            </div>
+
+            <div className="flex items-start">
+              {" "}
+              {/* Use a flex container */}
+              <img
+                src={leaf}
+                alt="Leaf Icon"
+                className="mr-2 h-4 w-4 object-contain"
+              />
+              <p className="font-semibold">
+                Digital devices and social media can exacerbate feelings of
+                isolation, inadequacy, and anxiety.
+              </p>
+            </div>
+            <div className="flex items-start">
+              {" "}
+              {/* Use a flex container */}
+              <img
+                src={leaf}
+                alt="Leaf Icon"
+                className="mr-2 h-4 w-4 object-contain"
+              />
+              <p className="font-semibold">
+                Therapy may not be affordable or feasible for everyone, and some
+                may fear societal judgment.
+              </p>
+            </div>
+            <div className="flex items-start">
+              {" "}
+              {/* Use a flex container */}
+              <img
+                src={leaf}
+                alt="Leaf Icon"
+                className="mr-2 h-4 w-4 object-contain"
+              />
+              <p className="font-semibold">
+                Geographical constraints and financial limitations can hinder
+                access to mental health services.
+              </p>
+            </div>
+            <div className="flex items-start">
+              {" "}
+              {/* Use a flex container */}
+              <img
+                src={leaf}
+                alt="Leaf Icon"
+                className="mr-2 h-4 w-4 object-contain"
+              />
+              <p className="font-semibold">
+                In the technological era, there’s a need for simple and
+                affordable mental health solutions.
+              </p>
+            </div>
+            <div className="flex items-start">
+              {" "}
+              {/* Use a flex container */}
+              <img
+                src={leaf}
+                alt="Leaf Icon"
+                className="mr-2 h-4 w-4 object-contain"
+              />
+              <p className="font-semibold">
+                No platform addresses holistic wellness, one has to scout
+                different forums.{" "}
+              </p>
+            </div>
           </div>
         </div>
 
-        <div className="mx-auto my-auto w-full lg:w-1/2">
+        <div className="mx-auto my-auto w-full lg:order-1 lg:w-1/2">
           {/* Added ml-4 to shift the image to the left */}
           <img
-            src={about6} // Replace with your image URL
+            src={problem} // Replace with your image URL
             alt="Description of the image"
             className=""
           />
         </div>
       </div>
+
       <div className="mx-auto flex flex-col-reverse border-4 border-secondary/10 md:flex-row">
         <div className="w-full bg-secondary/10 md:w-3/4">
-          <div className="my-16 w-full text-center md:ml-60 md:mr-0 md:w-2/4 md:text-justify">
-            <h2 className="subheading font-semibold">
+          <div className="my-4 mr-40 text-end">
+            {" "}
+            <h2 className="subheading ">
               The <span className="heading-primary">Solution</span>
             </h2>
-            <p className="font-semibold">
-              Wleness helps you find affordable support for your mental wellness
-              with a two-pronged approach. We use advanced telehealth technology
-              to connect you with licensed professionals, no matter where you
-              are, so you don’t have to worry about geographical barriers. We
-              also offer flexibility and affordability for everyone, so you can
-              get the help you need without spending too much.
-            </p>
-            <br />
-            <p className="font-semibold">
-              We have a large network of qualified therapists and use smart
-              matching algorithms to create a personalized treatment plan for
-              you. This makes sure that you get the customized care that you
-              need. We also want to reduce the stigma around mental wellness. We
-              have services like music therapy, meditation, yoga, and sadhana.
-              We encourage open conversations and provide a supportive,
-              anonymous community where you can talk about your mental wellness
-              without fear.
-            </p>
-            <br />
-            <p className="font-semibold">
-              We understand the value of life and executive coaching in helping
-              people grow personally and professionally. These types of coaching
-              offer helpful support and insights, helping people unlock their
-              full potential, overcome challenges, and reach their goals. In
-              simple terms, they act as guides, leading people to success in
-              life and work.
-            </p>
-            <br />
-            <p className="font-semibold">
-              "At every stage of your mental well-being journey, Wleness stands
-              by your side, partnering in your well-being."
-            </p>
+          </div>
+          <div className="my-4 w-full text-center md:ml-60 md:mr-0 md:w-2/4 md:text-justify">
+            <ul class="list-disc">
+              <li class="item-start flex py-2 ">
+                <img
+                  src={leaf}
+                  alt="Leaf Icon"
+                  className="mr-2 h-4 w-4 object-contain"
+                />
+                <span>
+                  Wleness addresses the concerns with a 360-degree view and
+                  provides a single platform for all one needs.{" "}
+                </span>
+              </li>
+              <li class="flex items-start py-2">
+                <img
+                  src={leaf}
+                  alt="Leaf Icon"
+                  className="mr-2 h-4 w-4 object-contain"
+                />{" "}
+                <span>
+                  Wleness uses advanced telehealth technology to connect users
+                  with licensed professionals, overcoming geographical barriers
+                  and offering personalised solutions.{" "}
+                </span>
+              </li>
+              <li class="flex items-start py-2">
+                <img
+                  src={leaf}
+                  alt="Leaf Icon"
+                  className="mr-2 h-4 w-4 object-contain"
+                />{" "}
+                <span>
+                  {" "}
+                  Wleness offers alternative healing techniques like Music
+                  Healing and Sadhna, differing from the traditional
+                  counseling-only
+                </span>
+                approach.{" "}
+              </li>
+              <li class="flex items-start py-2">
+                <img
+                  src={leaf}
+                  alt="Leaf Icon"
+                  className="mr-2 h-4 w-4 object-contain"
+                />
+                <spna>
+                  a supportive, anonymous community for open conversations about
+                  mental wellness.
+                </spna>
+              </li>
+              <li class="flex items-start py-2">
+                <img
+                  src={leaf}
+                  alt="Leaf Icon"
+                  className="mr-2 h-4 w-4 object-contain"
+                />{" "}
+                <span>
+                  Wleness recognises the value of life and executive coaching in
+                  personal and professional growth.{" "}
+                </span>
+              </li>
+              <li class="flex items-start py-2">
+                <img
+                  src={leaf}
+                  alt="Leaf Icon"
+                  className="mr-2 h-4 w-4 object-contain"
+                />{" "}
+                <span>
+                  Life and executive coaching services are available to help
+                  users unlock their potential, overcome challenges, and reach
+                  their
+                </span>
+                goals.{" "}
+              </li>
+            </ul>
           </div>
         </div>
-
         <div className="mx-auto my-auto transform md:mt-0 md:translate-x-0 lg:my-auto lg:-translate-x-60 lg:text-center">
           <img
             src={about6} // Replace with your image URL
@@ -169,11 +275,11 @@ function AboutUs() {
         </h2>
       </div>
 
-      <div className="container mx-auto flex flex-col items-center gap-4 sm:flex-row">
-        <div className="w-full sm:w-1/2 lg:w-1/2">
+      <div className="container  mx-auto flex flex-col items-center  gap-4 sm:flex-row">
+        <div className="order-2 w-full sm:w-1/2 lg:w-1/2">
           <DummyComponent />
         </div>
-        <div className="mb-4 flex w-full items-center justify-center sm:w-1/2 lg:order-2">
+        <div className="order-1 mb-4 flex w-full items-center justify-center sm:w-1/2 lg:order-2">
           <img src={about3} alt="Your image" className="w-2/3 lg:w-full" />
         </div>
       </div>
@@ -193,13 +299,12 @@ function AboutUs() {
         <TeamComponent />
       </div>
 
-      <div className="grid h-full place-items-center py-5">
+      <div className="grid h-full place-items-center  gap-4 py-5">
         <h2 className="subheading">
           <span className="heading-primary ">Reach out</span> to us
         </h2>
-
-        <div className="h-ful container mx-auto grid grid-cols-1 items-center justify-center gap-4  sm:grid-cols-2 md:grid-cols-3">
-          <div className="text-center">
+        <div className="h-ful container mx-auto grid grid-cols-1 items-center justify-center  gap-16   sm:grid-cols-2 md:grid-cols-3">
+          <div className="text-center hover:p-4 hover:shadow-xl">
             <img className="mx-auto" src={about1}></img>
             <h2 className="text-lg font-semibold text-primary-400">
               Contact us
@@ -207,26 +312,34 @@ function AboutUs() {
             <p className="font-semibold">
               Unsure about what is the proper mental health support for you?
             </p>
+            <p className="font-bold">Contact us</p>
           </div>
-          <div className="text-center">
-            <img className="mx-auto" src={about4}></img>
-            <h2 className="text-lg font-semibold text-primary-400">
-              Partner with us
-            </h2>
-            <p className="font-semibold">
-              Want to integrate mental health support at your workplace
-            </p>
-          </div>
-          <div className="text-center">
-            <img className="mx-auto" src={meeting}></img>
-            <h2 className="text-lg font-semibold text-primary-400">
-              Work with us
-            </h2>
-            <p className="font-semibold">
-              Looking to be part of the Wleness Team?
-              {/* make it responsive to the mobile devices as it is not responsive to the screen of that */}
-            </p>
-          </div>
+
+          <Link to="/corporate-wellbeing">
+            <div className="text-center hover:p-4 hover:shadow-xl">
+              <img className="mx-auto" src={about4}></img>
+              <h2 className="text-lg font-semibold text-primary-400">
+                Partner with us
+              </h2>
+              <p className="font-semibold ">
+                Want to integrate mental health support at your workplace
+              </p>
+              <p className="font-bold">Partner with us</p>
+            </div>
+          </Link>
+          <Link to="/internship">
+            <div className="text-center hover:p-4 hover:shadow-xl ">
+              <img className="mx-auto" src={meeting}></img>
+              <h2 className="text-lg font-semibold text-primary-400">
+                Work with us
+              </h2>
+              <p className="font-semibold">
+                Looking to be part of the Wleness Team?
+                {/* make it responsive to the mobile devices as it is not responsive to the screen of that */}
+              </p>
+              <p className="font-bold">Work with us</p>
+            </div>
+          </Link>
         </div>
       </div>
     </main>

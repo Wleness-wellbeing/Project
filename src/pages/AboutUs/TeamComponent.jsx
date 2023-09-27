@@ -43,17 +43,17 @@ const TeamComponent = () => {
   ];
 
   return (
-    <div className="container mx-auto grid grid-cols-2 gap-2 text-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
+    <div className="container mx-auto grid grid-cols-2 gap-4 text-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3">
       {teamMembers.map((member, index) => (
-        <div key={index} className="mx-auto my-auto w-1/2">
+        <div key={index} className="mx-auto my-auto w-3/4 lg:w-2/3  ">
           <img
             src={member.imageSrc}
             alt={member.name}
             className="mx-auto mb-2 rounded-full"
             style={{}}
           />
-          <h2 className="text-xl font-semibold">{member.name}</h2>
-          <p className="text-sm font-semibold">{member.designation}</p>
+          <h2 className="text-sm font-bold lg:text-xl">{member.name}</h2>
+          <p className="text-xs font-semibold">{member.designation}</p>
         </div>
       ))}
     </div>

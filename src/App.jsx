@@ -132,12 +132,28 @@ function App() {
             </Layout>
           }
         />
+        <Route
+          path="/appointment-details"
+          element={
+            <Layout>
+              <AppointmentForm />
+            </Layout>
+          }
+        />
 
         <Route
           path="/avatar"
           element={
             <Layout>
               <Avatar />
+            </Layout>
+          }
+        />
+        <Route
+          path="/meeting"
+          element={
+            <Layout>
+              <MeetingApp />
             </Layout>
           }
         />
