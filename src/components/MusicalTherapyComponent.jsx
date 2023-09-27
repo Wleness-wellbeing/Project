@@ -63,10 +63,12 @@ const dummyData = [
 export default function MusicalTherapyComponent() {
   const Card = ({ image, heading, description }) => (
     <div className="mx-auto mt-4 max-w-md overflow-hidden rounded-xl">
-      <img src={image} alt={heading} className="mx-auto" />
-      <div className="p-4">
-        <h2 className="text-xl font-semibold text-primary-500">{heading}</h2>
-        <p className=" font-semibold">{description}</p>
+      <div>
+        <img src={image} alt={heading} className="mx-auto w-24 lg:w-28" />
+      </div>
+      <div className="lg:p-4">
+        <h2 className="font-semibold text-primary-500 lg:text-xl">{heading}</h2>
+        <p className="text-xs font-semibold lg:text-base">{description}</p>
       </div>
     </div>
   );
@@ -76,7 +78,7 @@ export default function MusicalTherapyComponent() {
       <h1 className="pb-4 text-center text-3xl font-bold text-primary-500">
         Benefits of <span className="heading-primary">Music Healing</span>
       </h1>
-      <div className=" container mx-auto grid grid-cols-1 justify-center gap-2 text-center md:grid-cols-2 lg:grid-cols-4">
+      <div className="container mx-auto grid grid-cols-2 justify-center gap-4 !px-2 text-center md:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:px-4">
         {dummyData.map((data) => (
           <Card
             key={data.id}

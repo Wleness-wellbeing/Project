@@ -33,7 +33,7 @@ export default function Testimonial(props) {
                   <h4 className="text-lg font-semibold sm:text-xl lg:text-3xl">
                     {value.name}
                   </h4>
-                  <h6 className="mb-2 font-medium text-slate-400 xl:text-xl">
+                  <h6 className="mb-2 font-semibold text-primary-400 xl:text-lg">
                     {value.profession}
                   </h6>
                   <p className="mb-1 text-justify text-sm font-medium sm:text-lg md:text-base md:leading-5 lg:text-lg">

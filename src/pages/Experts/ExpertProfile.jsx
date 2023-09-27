@@ -139,7 +139,7 @@ export default function ExpertProfile() {
       <section className="container mx-auto gap-x-6 lg:flex">
         <div className="mb-6 lg:mb-0 lg:w-1/2">
           <h2 className="mb-4 text-center text-2xl font-bold lg:mb-10 lg:text-3xl">
-            Doctor's Main <span className="heading-primary">Forte</span>
+            Expert's Main <span className="heading-primary">Forte</span>
           </h2>
           <div className="flex flex-wrap justify-center gap-2 lg:gap-3">
             {doctorsForte.map((value, index) => {
@@ -156,7 +156,7 @@ export default function ExpertProfile() {
         </div>
         <div className="lg:w-1/2">
           <h2 className="mb-4 text-center text-2xl font-bold lg:mb-10 lg:text-3xl">
-            Doctor's Main <span className="heading-primary">Suggestion's</span>
+            Expert's Main <span className="heading-primary">Suggestion's</span>
           </h2>
           <div className="flex flex-wrap justify-center gap-2 lg:gap-3">
             {doctorsSuggestions.map((value, index) => {

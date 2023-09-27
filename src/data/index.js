@@ -4155,25 +4155,21 @@ export const statistics = [
     value: "24/7",
     title: "Online Support",
     suffix: "",
-    background: "bg-primary-400",
   },
   {
     value: "50",
     title: "Experts",
     suffix: "+",
-    background: "bg-primary-50",
   },
   {
     value: "10",
     title: "Active Users",
     suffix: "k",
-    background: "bg-primary-400",
   },
   {
     value: "1",
     title: "Interested",
     suffix: "M+",
-    background: "bg-primary-50",
   },
 ];
 

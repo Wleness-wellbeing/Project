@@ -1,6 +1,6 @@
 import React from "react";
 import { email, location, ringervolume } from "../assets";
-import ContactForm from "../components/Forms/ContactForm";
+import CareerForm from "../components/Forms/CareerForm";
 
 export default function Career() {
   return (
@@ -14,8 +14,8 @@ export default function Career() {
         </div>
       </header>
 
-      <section className="container mx-auto space-y-5 py-8 text-justify font-medium">
-        <ContactForm />
+      <section className="container mx-auto space-y-5 py-8 font-medium">
+        <CareerForm />
         <div>
           <div className="my-6 flex items-center justify-center">
             <h1 className="subheading heading-primary text-center">

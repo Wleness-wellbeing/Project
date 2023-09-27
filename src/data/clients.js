@@ -37,22 +37,29 @@ export const clientsReviews = [
 
 export const userReview = [
   {
-    name: "Anonymous User",
-    profession: "",
+    name: "Paras Shewale",
+    profession: "Investor",
     image: therapyClient1,
     review:
       "Wleness has truly been a game-changer in my mental health journey. The app's uplifting content and exercises have given me a more positive outlook on life. The psychologist sessions are incredibly valuable, providing me with the support and guidance I need. I can't thank the creators of Wleness enough for creating such a helpful and user-friendly resource for mental well-being",
   },
   {
-    name: "Anonymous User",
-    profession: "",
+    name: "Sahil Konde",
+    profession: "Videographer",
     image: therapyClient2,
     review:
       "Wleness has truly been a game-changer in my mental health journey. The app's uplifting content and exercises have given me a more positive outlook on life. The psychologist sessions are incredibly valuable, providing me with the support and guidance I need. I can't thank the creators of Wleness enough for creating such a helpful and user-friendly resource for mental well-being",
   },
   {
-    name: "Anonymous User",
-    profession: "",
+    name: "Kiran Kale",
+    profession: "Photographer",
+    image: therapyClient3,
+    review:
+      "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
+  },
+  {
+    name: "Niraj Chopra",
+    profession: "Android Developer",
     image: therapyClient3,
     review:
       "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
@@ -94,22 +101,22 @@ export const coupleTherapyClient = {
   ],
   clients: [
     {
-      name: "Anonymous User",
-      profession: "",
+      name: "Aditya Soni",
+      profession: "Web Developer",
       image: coupleTherapyReview1,
       review:
         "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
     },
     {
-      name: "Anonymous User",
-      profession: "",
+      name: "Murtaza Merji",
+      profession: "Digital Marketer",
       image: coupleTherapyReview2,
       review:
         "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
     },
     {
-      name: "Anonymous User",
-      profession: "",
+      name: "Akash More",
+      profession: "Graphics Designer",
       image: coupleTherapyReview3,
       review:
         "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
@@ -150,29 +157,7 @@ export const therapyClient = {
       text: "Say",
     },
   ],
-  clients: [
-    {
-      name: "Anonymous User",
-      profession: "",
-      image: therapyClient1,
-      review:
-        "Wleness has truly been a game-changer in my mental health journey. The app's uplifting content and exercises have given me a more positive outlook on life. The psychologist sessions are incredibly valuable, providing me with the support and guidance I need. I can't thank the creators of Wleness enough for creating such a helpful and user-friendly resource for mental well-being",
-    },
-    {
-      name: "Anonymous User",
-      profession: "",
-      image: therapyClient2,
-      review:
-        "Wleness has truly been a game-changer in my mental health journey. The app's uplifting content and exercises have given me a more positive outlook on life. The psychologist sessions are incredibly valuable, providing me with the support and guidance I need. I can't thank the creators of Wleness enough for creating such a helpful and user-friendly resource for mental well-being",
-    },
-    {
-      name: "Anonymous User",
-      profession: "",
-      image: therapyClient3,
-      review:
-        "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
-    },
-  ],
+  clients: userReview,
 };
 
 export const psychiatristClient = {

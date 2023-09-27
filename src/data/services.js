@@ -136,42 +136,42 @@ export const MusicalTherapyData = {
   activities: {
     title: "MUSIC HEALING SERVICES",
     desc: "Use music to improve mental and emotional well-being through techniques like active listening, improvisation, and songwriting with our top counselors.",
-    
+
     types: [
       {
-        title: "Guided Imagery and Music",
+        title: "Healing Soundscapes",
         thumbnail: musicalTherapy1,
-        desc: "Listening to carefully selected music in a relaxed state to explore emotions, memories, and thoughts, gain insight, reduce stress, and promote self-awareness.",
+        desc: "Experience the soothing embrace of our meticulously crafted, research-backed musical tracks, purposefully designed to usher in relaxation, diminish stress, and elevate your overall well-being through music.",
         slug: "/",
       },
       {
-        title: "Nordoff-Robbins Music Therapy",
+        title: "Personalized Music Therapy",
         thumbnail: musicalTherapy2,
-        desc: "Focuses on musical improvisation to enhance communication, skills, and emotional expression, beneficial for children and individuals with developmental problems.",
+        desc: "Experience the transformative benefits of one-on-one or group music therapy sessions led by our expert therapists. Explore diverse therapeutic approaches, including receptive listening, improvisation, recreative exercises.",
         slug: "/",
       },
       {
-        title: "Bonny Method of Guided Imagery and Music",
+        title: "Musical Artistry",
         thumbnail: musicalTherapy3,
-        desc: "Utilizes music to facilitate a deep unconscious, promoting personal growth & transformation,share their emotional experiences during and after the BMGIM listening sessions.",
+        desc: "Unlock your creativity with Musical Drawing, an interdisciplinary approach that combines visual art and music to express your inner emotions and thoughts through a unique and therapeutic medium.",
         slug: "/",
       },
       {
-        title: "Neurologic Music Therapy",
+        title: "Rhythmic Harmony",
         thumbnail: musicalTherapy4,
-        desc: "Applies evidence-based techniques to help neurological issues, utilizing rhythm, melody, and harmony to improve cognitive, motor, and speech in individuals.",
+        desc: "Join our Music and Movement sessions, where the fusion of music and physical expression offers a dynamic outlet for self-expression and emotional release, fostering holistic healing and self-discovery.",
         slug: "/",
       },
       {
-        title: "Songwriting Therapy",
+        title: "Corporate Harmony",
         thumbnail: musicalTherapy5,
-        desc: "Encourages clients to express through songs, gives an outlet for emotions, fosters creativity & enables personal growth through the process of composing & performing their music.",
+        desc: "Elevate your workplace with our corporate music healing programs aimed at improving the well-being of both employers and  employees. Enhance team dynamics, reduce stress, and boost productivity.",
         slug: "/",
       },
       {
-        title: "Raaga Chikitsa",
+        title: "Soul Rhythm",
         thumbnail: musicalTherapy6,
-        desc: "A traditional form of musical healing in Indian classical music, where specific ragas and suras are used to evoke and influence specific emotions, moods, and states of mind.",
+        desc: "This serves as a valuable means for young adults to alleviate distress. Through creative expression and introspection via rhythm, melody, and lyrics, it enables emotional processing and inner balance & mental well-being.",
         slug: "/",
       },
     ],

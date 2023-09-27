@@ -1,10 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {
+  musicalHealingChild,
+  musicalHealingOld,
+  musicalHealingYoung,
+} from "../assets";
 
 const ServicesTechniques = React.forwardRef((props, ref) => {
   const activityTypes = props.types.map((value, index) => {
     return (
-      <figure key={index}>
+      <figure key={index} className="mx-auto 2xl:w-80">
         <div>
           <img
             src={value.thumbnail}
@@ -14,10 +19,10 @@ const ServicesTechniques = React.forwardRef((props, ref) => {
           />
         </div>
         <figcaption>
-          <h4 className="py-2 text-xl font-bold text-primary-400">
+          <h4 className="py-2 text-lg font-bold text-primary-400 lg:text-xl">
             {value.title}
           </h4>
-          <p className="pb-2 text-sm font-semibold text-slate-800">
+          <p className="pb-2 text-sm font-semibold text-slate-800 lg:text-base">
             {value.desc}
           </p>
           <div className="mt-2 text-center">
@@ -34,14 +39,32 @@ const ServicesTechniques = React.forwardRef((props, ref) => {
   });
 
   return (
-    <section className="container mx-auto pb-6" ref={ref}>
-      <div className="my-6 text-center lg:my-14">
+    <section className="container mx-auto py-6 lg:py-9" ref={ref}>
+      <div className="text-center">
         <h2 className="subheading text-primary-400">{props.title}</h2>
         <p className="font-semibold text-slate-700 lg:text-xl">{props.desc}</p>
       </div>
 
+      <div className="flex justify-center gap-2 py-6 lg:gap-5 lg:py-10">
+        <img
+          src={musicalHealingChild}
+          alt=""
+          className="w-24 object-cover lg:w-32"
+        />
+        <img
+          src={musicalHealingYoung}
+          alt=""
+          className="w-24 object-cover lg:w-32"
+        />
+        <img
+          src={musicalHealingOld}
+          alt=""
+          className="w-24 object-cover lg:w-32"
+        />
+      </div>
+
       {/* Meditations */}
-      <div className="grid gap-6 px-5 pb-4 lg:grid-cols-3 lg:px-0 xl:grid-cols-4">
+      <div className="grid gap-6 px-5 pb-4 sm:grid-cols-2 lg:grid-cols-3 lg:px-0">
         {activityTypes}
       </div>
     </section>

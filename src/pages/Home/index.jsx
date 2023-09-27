@@ -135,7 +135,7 @@ export default function Home() {
               />
             </div>
             <article className="mx-auto pb-4 lg:order-1 lg:w-3/5 lg:pb-10">
-              <hgroup className="mb-6 lg:mb-10">
+              <hgroup className="mb-2">
                 <h2 className="subheading">
                   <span className="heading-primary">Wleness Community</span>
                 </h2>
@@ -196,7 +196,7 @@ export default function Home() {
                       src={value.image}
                       alt=""
                       loading="lazy"
-                      className="mx-auto w-28"
+                      className="mx-auto mb-4 w-20"
                     />
                   </div>
                   <figcaption>
@@ -217,7 +217,7 @@ export default function Home() {
         <h2 className="mb-4 text-center">
           <span className="subheading heading-primary">Our Testimonials</span>
         </h2>
-        <div className="bg-gradient-to-b from-primary-300/20 to-white pt-4 lg:py-8">
+        <div className="bg-gradient-to-b from-primary-300/20 to-white py-4">
           <Testimonial data={homeTestimonials} />
         </div>
       </section>
@@ -228,10 +228,7 @@ export default function Home() {
           return (
             <div
               key={i}
-              className={
-                value.background +
-                " flex flex-col rounded-2xl p-2 text-center md:p-4"
-              }
+              className="flex flex-col rounded-2xl bg-primary-50 p-2 text-center md:p-4"
             >
               <span className="mb-1 text-xl font-bold md:text-2xl">
                 {value.value}

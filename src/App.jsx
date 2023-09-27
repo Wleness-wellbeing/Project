@@ -42,7 +42,7 @@ import TermsAndConditions from "./pages/Policies/TermsAndConditions";
 // import Selfcare from "./pages/Dashboard/Selfcare";
 import ContactUs from "./pages/ContactUs";
 import LifeCoching from "./pages/coching/LifeCoching";
-import ExecutiveCoaching from "./pages/coching/ExecutiveCoaching";
+import ExecutiveCoaching from "./pages/Coaches";
 import RoutineCare from "./pages/Dashboard/RoutineCare";
 import DoctorSignup from "./pages/Authentication/DoctorSignup";
 import TherapistJoining from "./pages/JoinUs/TherapistJoining";
@@ -57,13 +57,12 @@ import ExpertProfile from "./pages/Experts/ExpertProfile";
 import Gauth from "./pages/Authentication/Gauth";
 import FacebookAuth from "./pages/Authentication/FacebookAuth";
 import MeditationCheckout from "./pages/Appointment/MeditationCheckout";
-import Saloni from "./pages/Coaches/Saloni";
-import Anju from "./pages/Coaches/Anju";
-import Andrea from "./pages/Coaches/Andrea";
 import YogaCheckout from "./pages/Appointment/YogaCheckout";
 import SadhnaCheckout from "./pages/Appointment/SadhnaCheckout";
 import Career from "./pages/Career";
 import Consent from "./pages/Policies/Consent";
+import { coachesData } from "./data/coach";
+import CoachSubpage from "./pages/Coaches/CoachSubpage";
 import ApplyForm from "./components/JoinUs/ApplyForm";
 
 function App() {
@@ -254,30 +253,6 @@ function App() {
           element={
             <Layout>
               <Issues />
-            </Layout>
-          }
-        />
-        <Route
-          path="/coach/saloni-gupta"
-          element={
-            <Layout>
-              <Saloni />
-            </Layout>
-          }
-        />
-        <Route
-          path="/coach/anju-chawla"
-          element={
-            <Layout>
-              <Anju />
-            </Layout>
-          }
-        />
-        <Route
-          path="/coach/andrea-bianchi"
-          element={
-            <Layout>
-              <Andrea />
             </Layout>
           }
         />
@@ -620,6 +595,19 @@ function App() {
             </Layout>
           }
         />
+        {coachesData.map((value, i) => {
+          return (
+            <Route
+              key={i}
+              path={value.slug}
+              element={
+                <Layout>
+                  <CoachSubpage data={value} />
+                </Layout>
+              }
+            />
+          );
+        })}
       </Routes>
     </Router>
   );

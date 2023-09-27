@@ -210,9 +210,9 @@ export const footerFocusAreas = [
 // Footer - Our Experts
 export const footerOurExperts = [
   ["Therapists", "/services/therapy"],
-  // ["Psychiatrist", "/services/psychiatrist"],
+  ["Psychiatrists", "/services/psychiatrist"],
   ["Couple Therapists", "/services/couples-therapy"],
-  ["Coaches", "/coaches"],
+  ["Coaches", "/executive-coaching"],
 ];
 
 // Footer social links

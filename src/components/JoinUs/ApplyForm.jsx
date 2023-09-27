@@ -40,7 +40,6 @@ export default function ApplyForm({ name, url }) {
         formData.append(key, personalDetails[key]);
       }
       formData.append("resume", resume);
-      console.log(formData);
       try {
         const response = await axios.post(url, formData, {
           headers: {
