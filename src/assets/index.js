@@ -136,6 +136,9 @@ import pavansir from "./images/aboutus/pavansir.png";
 import salonimaam from "./images/aboutus/salonimaam.png";
 import sreyashsir from "./images/aboutus/sreyashsir.png";
 import aboutusbg from "./images/aboutus/aboutusbg.png";
+import problem from "./images/aboutus/problem.png";
+
+
 
 export {
   about1,
@@ -152,6 +155,7 @@ export {
   salonimaam,
   sreyashsir,
   aboutusbg,
+  problem
 };
 // executive coaching
 import executiveIcon1 from "./images/executiveCoching/executiveIcon1.png";

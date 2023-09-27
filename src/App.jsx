@@ -64,6 +64,8 @@ import YogaCheckout from "./pages/Appointment/YogaCheckout";
 import SadhnaCheckout from "./pages/Appointment/SadhnaCheckout";
 import Career from "./pages/Career";
 import Consent from "./pages/Policies/Consent";
+import ApplyForm from "./components/JoinUs/ApplyForm";
+import AppointmentForm from "./components/SendDetails";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -130,6 +132,14 @@ function App() {
           element={
             <Layout>
               <AboutUs />
+            </Layout>
+          }
+        />
+        <Route
+          path="/appointment-details"
+          element={
+            <Layout>
+              <AppointmentForm />
             </Layout>
           }
         />

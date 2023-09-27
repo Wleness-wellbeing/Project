@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   about1,
   about2,
@@ -14,6 +15,7 @@ import {
   salonimaam,
   sreyashsir,
   aboutusbg,
+  problem,
 } from "../../assets";
 import AboutUsdropbox from "../../components/AboutUsDrop";
 import DummyComponent from "../../components/AboutUsDrop";
@@ -22,34 +24,40 @@ import TeamComponent from "./TeamComponent";
 function AboutUs() {
   return (
     <main>
-      <header className="relative  overflow-x-clip bg-secondary/10 py-24 sm:h-auto">
+      <header
+        className="relative  bg-cover bg-center py-36 brightness-90 sm:h-auto "
+        style={{
+          backgroundImage: `url(${aboutusbg}) `,
+        }}
+      >
         <div className="mx-auto flex flex-col lg:flex-row">
-          <div className="lg:order-2">
+          {/* <div className="lg:order-2">
             <img
               src={aboutusbg}
               alt="Wleness"
               className="hidden w-full scale-y-150 object-cover object-left sm:block lg:w-auto"
             />
-          </div>
+          </div> */}
+          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           <div className="px-4 text-justify sm:w-full lg:order-1 lg:ml-56 lg:w-1/2 lg:px-0">
-            <h1 className="subheading">
-              About <span className="heading-primary">Wleness</span>
+            <h1 className="subheading text-white brightness-105">
+              About <span className="heading-primary !text-white">Wleness</span>
             </h1>
             <br />
-            <p className="w-full font-semibold">
+            <p className="brightness-10 relative z-10 w-full pt-4 font-semibold text-white">
               Wleness is a mental health startup dedicated to providing
               accessible and affordable therapy to individuals struggling with
               mental health issues.
             </p>
             <br />
-            <p className="w-full font-semibold">
+            <p className="relative z-10 w-full font-semibold text-white">
               By leveraging technology, Wleness connects users with licensed
               mental health professionals via a secure online platform, making
               it easier for people to receive support from the comfort of their
               own homes.
             </p>
             <br />
-            <p className="w-full font-semibold">
+            <p className="relative z-10 w-full font-semibold text-white">
               The organization aims to establish a comprehensive mental health
               ecosystem offering treatment and tailored care plans for a
               spectrum of mental health conditions, including but not limited to
@@ -61,7 +69,7 @@ function AboutUs() {
       </header>
 
       <div className="container mx-auto my-6 flex flex-col-reverse lg:flex-row">
-        <div className="my-auto w-full text-center lg:w-1/2 lg:text-left">
+        <div className="my-auto w-full text-center lg:order-2 lg:w-1/2 lg:text-left">
           <div>
             <h2 className="subheading text-left font-semibold">
               The <span className="heading-primary">Problem</span>
@@ -97,10 +105,10 @@ function AboutUs() {
           </div>
         </div>
 
-        <div className="mx-auto my-auto w-full lg:w-1/2">
+        <div className="mx-auto my-auto w-full lg:order-1 lg:w-1/2">
           {/* Added ml-4 to shift the image to the left */}
           <img
-            src={about6} // Replace with your image URL
+            src={problem} // Replace with your image URL
             alt="Description of the image"
             className=""
           />
@@ -199,7 +207,7 @@ function AboutUs() {
         </h2>
 
         <div className="h-ful container mx-auto grid grid-cols-1 items-center justify-center gap-4  sm:grid-cols-2 md:grid-cols-3">
-          <div className="text-center">
+          <div className="text-center hover:p-4 hover:shadow-xl">
             <img className="mx-auto" src={about1}></img>
             <h2 className="text-lg font-semibold text-primary-400">
               Contact us
@@ -208,25 +216,27 @@ function AboutUs() {
               Unsure about what is the proper mental health support for you?
             </p>
           </div>
-          <div className="text-center">
+          <div className="text-center hover:p-4 hover:shadow-xl">
             <img className="mx-auto" src={about4}></img>
             <h2 className="text-lg font-semibold text-primary-400">
               Partner with us
             </h2>
-            <p className="font-semibold">
+            <p className="font-semibold ">
               Want to integrate mental health support at your workplace
             </p>
           </div>
-          <div className="text-center">
-            <img className="mx-auto" src={meeting}></img>
-            <h2 className="text-lg font-semibold text-primary-400">
-              Work with us
-            </h2>
-            <p className="font-semibold">
-              Looking to be part of the Wleness Team?
-              {/* make it responsive to the mobile devices as it is not responsive to the screen of that */}
-            </p>
-          </div>
+          <Link to="/internship">
+            <div className="text-center hover:p-4 hover:shadow-xl ">
+              <img className="mx-auto" src={meeting}></img>
+              <h2 className="text-lg font-semibold text-primary-400">
+                Work with us
+              </h2>
+              <p className="font-semibold">
+                Looking to be part of the Wleness Team?
+                {/* make it responsive to the mobile devices as it is not responsive to the screen of that */}
+              </p>
+            </div>
+          </Link>
         </div>
       </div>
     </main>
