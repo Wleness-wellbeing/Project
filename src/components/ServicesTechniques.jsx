@@ -9,7 +9,7 @@ import {
 const ServicesTechniques = React.forwardRef((props, ref) => {
   const activityTypes = props.types.map((value, index) => {
     return (
-      <figure key={index}>
+      <figure key={index} className="mx-auto 2xl:w-80">
         <div>
           <img
             src={value.thumbnail}
@@ -19,10 +19,10 @@ const ServicesTechniques = React.forwardRef((props, ref) => {
           />
         </div>
         <figcaption>
-          <h4 className="py-2 text-xl font-bold text-primary-400">
+          <h4 className="py-2 text-lg font-bold text-primary-400 lg:text-xl">
             {value.title}
           </h4>
-          <p className="pb-2 text-sm font-semibold text-slate-800">
+          <p className="pb-2 text-sm font-semibold text-slate-800 lg:text-base">
             {value.desc}
           </p>
           <div className="mt-2 text-center">
@@ -64,7 +64,7 @@ const ServicesTechniques = React.forwardRef((props, ref) => {
       </div>
 
       {/* Meditations */}
-      <div className="grid gap-6 px-5 pb-4 lg:grid-cols-3 lg:px-0 xl:grid-cols-4">
+      <div className="grid gap-6 px-5 pb-4 sm:grid-cols-2 lg:grid-cols-3 lg:px-0">
         {activityTypes}
       </div>
     </section>
