@@ -69,7 +69,7 @@ function AboutUs() {
         </h2>
       </div>
       <div className="container mx-auto   flex flex-col-reverse lg:flex-row">
-        <div className="my-auto w-full text-center lg:order-2 lg:w-1/2 lg:text-left">
+        <div className="my-auto w-full text-left lg:order-2 lg:w-1/2 lg:text-left">
           <div>
             <div className="flex items-start py-2">
               {" "}
@@ -170,7 +170,7 @@ function AboutUs() {
               The <span className="heading-primary">Solution</span>
             </h2>
           </div>
-          <div className="my-12  w-full text-center md:ml-60 md:mr-0 md:w-2/4 md:text-justify">
+          <div className="my-9    w-full  text-left md:ml-60 md:mr-0 md:w-2/4 md:text-justify lg:my-12">
             <ul class="list-disc ">
               <li class="item-start  flex ">
                 <img
@@ -205,9 +205,8 @@ function AboutUs() {
                   {" "}
                   Wleness offers alternative healing techniques like Music
                   Healing and Sadhna, differing from the traditional
-                  counseling-only
+                  counseling-only approach.{" "}
                 </span>
-                approach.{" "}
               </li>
               <li class="flex items-start py-2">
                 <img
@@ -240,9 +239,8 @@ function AboutUs() {
                 <span className="font-semibold">
                   Life and executive coaching services are available to help
                   users unlock their potential, overcome challenges, and reach
-                  their
+                  their goals.{" "}
                 </span>
-                goals.{" "}
               </li>
             </ul>
           </div>

@@ -61,7 +61,6 @@ const doctors = {
 export const therapiesData = [
   {
     slug: "/therapy/stress",
-    issue:"Stress",
 
     header: {
       title: [
@@ -82,6 +81,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: "Stress Disorder symptoms ",
+      issue:"Stress",
+
       points: [
         "Feeling constant tiredness even after adequate rest",
         "Facing difficulty in concentrating",
@@ -92,13 +93,13 @@ export const therapiesData = [
       ],
       image: symptomsStress,
     },
+
     doctors: doctors,
     quote:
       "Research published in the journal JAMA Internal Medicine indicates that practicing stress reduction techniques can lead to a 38% reduction in the likelihood of developing anxiety disorders.",
   },
   {
     slug: "/therapy/depression",
-    issue:"depression",
     header: {
       title: [
         {
@@ -118,6 +119,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Depression symptoms ",
+      issue:"depression",
+
       points: [
         "Trouble concentrating",
         "Facing difficulty in concentrating",
@@ -134,7 +137,6 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/panic-attack",
-    issue:"panic-attack",
     header: {
       title: [
         {
@@ -154,6 +156,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Panic Attack symptoms ",
+      issue:"panic-attack",
+
       points: [
         "Rapid heartbeat or palpitations",
         "Shortness of breath",
@@ -170,7 +174,6 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/anxiety",
-    issue:"anxiety",
     header: {
       title: [
         {
@@ -190,6 +193,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Anxiety symptoms ",
+      issue:"anxiety",
+
       points: [
         "Excessive worry and apprehension about everyday events or situations.",
         "Avoidance of triggering situations or activities.",
@@ -206,7 +211,6 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/ocd",
-    issue:"ocd",
     header: {
       title: [
         {
@@ -226,6 +230,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " OCD symptoms ",
+      issue:"ocd",
+
       points: [
         "Intrusive, Distressing Thoughts",
         "Repetitive Rituals or Behaviors",
@@ -242,7 +248,6 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/bipolar-disorder",
-    issue:"bipolar-disorder",
     header: {
       title: [
         {
@@ -266,6 +271,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Bipolar Disorder symptoms ",
+      issue:"bipolar-disorder",
+
       points: [
         "Intense Euphoria and Energy",
         "Severe Irritability or Agitation",
@@ -282,7 +289,6 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/schizophrenia",
-    issue:"schizophrenia",
     header: {
       title: [
         {
@@ -306,6 +312,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Schizophrenia symptoms ",
+      issue:"schizophrenia",
+
       points: [
         "Hallucinations",
         "Impaired Social Functioning",
@@ -322,7 +330,6 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/eating-disorder",
-    issue:"eating-disorder",
     header: {
       title: [
         {
@@ -342,6 +349,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Eating Disorder symptoms ",
+      issue:"eating-disorder",
+
       points: [
         "Social Withdrawal and Isolation",
         "Obsession with Weight and Body Shape",
@@ -358,7 +367,6 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/paranoia",
-    issue:"paranoia",
     header: {
       title: [
         {
@@ -382,6 +390,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Paranoia symptoms ",
+      issue:"paranoia",
+
       points: [
         "Social withdrawal due to fear.",
         "Persistent mistrust of others' intentions.",
@@ -398,7 +408,6 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/adhd",
-    issue:"adhd",
     header: {
       title: [
         {
@@ -422,6 +431,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " ADHD symptoms ",
+      issue:"adhd",
+
       points: [
         "Poor Time Management: Struggling to manage time effectively.",
         "Inattention: Struggling to focus on tasks or details.",
@@ -438,7 +449,6 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/odd",
-    issue:"odd",
     header: {
       title: [
         {
@@ -462,6 +472,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " ODD symptoms ",
+      issue:"odd",
+
       points: [
         "Vindictiveness and seeking revenge when feeling wronged.",
         "Easily angered, resentful, or spiteful behavior.",
@@ -478,7 +490,6 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/conduct-disorder",
-    issue:"conduct-disorder",
     header: {
       title: [
         {
@@ -502,6 +513,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Conduct Disorder symptoms ",
+      issue:"conduct-disorder",
+
       points: [
         "Aggression towards people and animals.",
         "Frequent bullying, intimidation, or physical fights.",
@@ -518,7 +531,6 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/anger",
-    issue:"anger",
     header: {
       title: [
         {
@@ -542,6 +554,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Anger symptoms ",
+    issue:"anger",
+
       points: [
         "Frequent Irritability: Getting easily annoyed or irritated over small matters regularly.",
         "Intense or Frequent Outbursts: Displaying explosive anger, which may involve shouting, screaming, or physical aggression.",
@@ -558,7 +572,6 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/relationship",
-    issue:"relationship",
     header: {
       title: [
         {
@@ -582,6 +595,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Relationship symptoms ",
+      issue:"relationship",
+
       points: [
         "Infertility: Infertility is the inability to conceive or carry a pregnancy to term after a year of regular unprotected intercourse.",
         "Infant Loss: Approximately 2.6 million stillbirths occur globally each year, highlighting the tragic reality of infant loss and the need for support and awareness.",
@@ -597,7 +612,6 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/lgbtq",
-    issue:"lgbtq",
     header: {
       title: [
         {
@@ -621,6 +635,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " LGBTQ symptoms ",
+      issue:"lgbtq",
+
       points: [
         "Higher Rates of Depression. In LGBTQIA+ individuals often experience higher rates of depression due to stigma and discrimination.",
         "Anxiety disorders are common, with many facing 'minority stress' due to societal prejudice.",
@@ -637,7 +653,6 @@ export const therapiesData = [
   },
   {
     slug: "/therapy/parenting",
-    issue:"parenting",
     header: {
       title: [
         {
@@ -657,6 +672,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Parenting symptoms ",
+      issue:"parenting",
+
       points: [
         "Postpartum Depression: Many new mothers experience postpartum depression, characterized by persistent feelings of sadness, exhaustion, and anxiety after giving birth.",
         "Parental Anxiety: Parents often grapple with anxiety, worrying about their children's safety, well-being, and future, which can impact their mental health.",
