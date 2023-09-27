@@ -67,12 +67,12 @@ import CoachSubpage from "./pages/Coaches/CoachSubpage";
 function App() {
   const { token, removeToken, setToken } = useToken();
   // Disable right click on website
-  // function handleContextMenu(e) {
-  //   e.preventDefault(); // prevents the default right-click menu from appearing
-  // }
-  // // add the event listener to the component's root element
-  // const rootElement = document.getElementById("root");
-  // rootElement.addEventListener("contextmenu", handleContextMenu);
+  function handleContextMenu(e) {
+    e.preventDefault(); // prevents the default right-click menu from appearing
+  }
+  // add the event listener to the component's root element
+  const rootElement = document.getElementById("root");
+  rootElement.addEventListener("contextmenu", handleContextMenu);
 
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
   const activitiesMenu = activities.map((value, index) => {
@@ -132,14 +132,14 @@ function App() {
             </Layout>
           }
         />
-        <Route
+        {/* <Route
           path="/appointment-details"
           element={
             <Layout>
               <AppointmentForm />
             </Layout>
           }
-        />
+        /> */}
 
         <Route
           path="/avatar"
@@ -149,14 +149,14 @@ function App() {
             </Layout>
           }
         />
-        <Route
+        {/* <Route
           path="/meeting"
           element={
             <Layout>
               <MeetingApp />
             </Layout>
           }
-        />
+        /> */}
         <Route
           path="/gauth"
           element={
