@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { textColorize } from "../utils";
 import { Link } from "react-router-dom";
+import ActivityForm from "./Forms/ActivityForm";
 
 export default function ActivityHeader(props) {
+  const [enquiryForm, setEnquiryForm] = useState(false);
+
+  // Toggle form
+  const toggleForm = () => {
+    setEnquiryForm(!enquiryForm);
+  };
   return (
     <>
       <header className="relative overflow-x-clip bg-secondary/10 pb-6 pt-12 xl:pb-10 xl:pt-16">
@@ -32,16 +39,12 @@ export default function ActivityHeader(props) {
               >
                 {props.button[0]}
               </button>
-              {props.isButton ? (
-                <Link
-                  to="/appointment/checkout"
-                  className="btn-one inline-block border-2 !border-primary-400 !bg-transparent !py-2 !text-[#383838] hover:!bg-primary-400 hover:!text-white lg:!w-fit"
-                >
-                  Book Now
-                </Link>
-              ) : (
-                ""
-              )}
+              <button
+                className="btn-one inline-block border-2 !border-primary-400 !bg-transparent !py-2 !text-[#383838] hover:!bg-primary-400 hover:!text-white lg:!w-fit"
+                onClick={toggleForm}
+              >
+                Enquire Now
+              </button>
             </div>
           </div>
         </div>
@@ -52,6 +55,8 @@ export default function ActivityHeader(props) {
           <span className="text-primary-400">Meditation</span>
         </p> */}
       </header>
+
+      <ActivityForm isOpen={enquiryForm} onClose={toggleForm} />
     </>
   );
 }

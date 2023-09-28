@@ -101,7 +101,7 @@ export const whyExecutiveCoachingSlider = [
     image: whyExecutiveCoaching3,
   },
   {
-    title: "Cost Savings",
+    title: "Cost Saving",
     desc: "Executives who underwent coaching experienced a 53% increase in productivity.",
     image: whyExecutiveCoaching4,
   },

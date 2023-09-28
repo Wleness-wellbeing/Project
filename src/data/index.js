@@ -2184,7 +2184,7 @@ export const activities = [
               component: RightProcedureList,
               data: {
                 title: "Practicing Walking Meditation:",
-                image: kundaliniLeft1,
+                image: walkingLeft1,
                 list: [
                   {
                     subtitle: "",

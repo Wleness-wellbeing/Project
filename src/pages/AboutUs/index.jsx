@@ -32,10 +32,10 @@ function AboutUs() {
           backgroundImage: `url(${aboutusbg}) `,
         }}
       >
-        <div className="mx-auto mt-9 flex flex-col lg:flex-row">
+        <div className="mx-auto flex flex-col py-6 lg:flex-row lg:py-10">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-          <div className="space-y-4 px-4 text-justify sm:w-full lg:order-1 lg:ml-56 lg:w-1/2 lg:space-y-6 lg:px-0">
-            <h1 className="mt-8 text-[42px] font-semibold text-white brightness-105">
+          <div className="space-y-4 px-4 sm:w-full lg:order-1 lg:ml-56 lg:w-1/2 lg:space-y-6 lg:px-0">
+            <h1 className="text-[42px] font-semibold text-white brightness-105">
               About <span className="heading-primary !text-white">Wleness</span>
             </h1>
             <p className="brightness-10 relative z-10 w-full font-semibold text-white">
