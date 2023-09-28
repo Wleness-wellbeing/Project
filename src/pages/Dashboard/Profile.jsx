@@ -8,13 +8,17 @@ export default function Profile({ token }) {
   const navigate = useNavigate();
 
   // Redirect user if loggedin
-  if (token == "" || token == undefined || token == null) {
-    navigate("/login", {
-      state: {
-        successMessage: "Please login to continue to dashboard",
-      },
-    });
+  if (token == null || token == "" || token == undefined) {
+    // Navigate to login
+    useEffect(() => {
+      navigate("/login", {
+        state: {
+          successMessage: "Please login to continue to dashboard",
+        },
+      });
+    }, []);
   }
+
   const [profileDetails, setProfileDetails] = useState({
     name: "",
     phone: "",

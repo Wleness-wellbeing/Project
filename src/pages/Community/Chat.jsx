@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { profile } from "../../assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -32,13 +32,17 @@ export default function Chat({ token }) {
   const navigate = useNavigate();
 
   // Redirect user if loggedin
-  if (token == "" || token == undefined || token == null) {
-    navigate("/login", {
-      state: {
-        successMessage: "Please login to continue to dashboard",
-      },
-    });
+  if (token == null || token == "" || token == undefined) {
+    // Navigate to login
+    useEffect(() => {
+      navigate("/login", {
+        state: {
+          successMessage: "Please login to continue to dashboard",
+        },
+      });
+    }, []);
   }
+
   const [sendMessage, setSendMessage] = useState([]);
 
   return (
