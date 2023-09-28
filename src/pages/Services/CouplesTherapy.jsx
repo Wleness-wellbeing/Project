@@ -84,7 +84,7 @@ function CouplesTherapy() {
               <h6 className="text-lg font-bold ">Accessibility:</h6>
               <p className="text-sm font-medium lg:text-base">
                 Get a one-to-one therapy session with the best therapist from
-                the comfort of your home through video, calls or chats, to deal
+                the comfort of your home through video, calls or chats to deal
                 with your ongoing issues.
               </p>
             </div>

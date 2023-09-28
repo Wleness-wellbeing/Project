@@ -412,7 +412,7 @@ export const therapiesData = [
       title: [
         {
           color: false,
-          text: "Accessing Adult ",
+          text: "Accessing ",
         },
         {
           color: true,
@@ -431,15 +431,15 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " ADHD symptoms ",
-      issue:"adhd",
+      issue:"ADHD",
 
       points: [
-        "Poor Time Management: Struggling to manage time effectively.",
-        "Inattention: Struggling to focus on tasks or details.",
-        "Hyperactivity: Being overly restless or constantly active.",
-        "Impulsivity: Acting without thinking about consequences.",
-        "Disorganization: Needs to be more efficient in organizing tasks or activities.",
-        "Forgetfulness: Frequently losing items and forgetting appointments.",
+        "Poor Time Management: Struggling to manage time effectively",
+        "Inattention: Struggling to focus on tasks or details",
+        "Hyperactivity: Being overly restless or constantly active",
+        "Impulsivity: Acting without thinking about consequences",
+        "Disorganization: Needs to be more efficient in organizing tasks or activities",
+        "Forgetfulness: Frequently losing items and forgetting appointments",
       ],
       image: symptomsAdhd,
     },
@@ -472,7 +472,7 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " ODD symptoms ",
-      issue:"odd",
+      issue:"ODD",
 
       points: [
         "Vindictiveness and seeking revenge when feeling wronged.",
@@ -513,7 +513,7 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Conduct Disorder symptoms ",
-      issue:"conduct-disorder",
+      issue:"Conduct-Disorder",
 
       points: [
         "Aggression towards people and animals.",
@@ -554,7 +554,7 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Anger symptoms ",
-    issue:"anger",
+    issue:"Anger",
 
       points: [
         "Frequent Irritability: Getting easily annoyed or irritated over small matters regularly.",
@@ -594,15 +594,16 @@ export const therapiesData = [
       image: relationshipHeader,
     },
     symptoms: {
-      highlight: " Relationship symptoms ",
+      highlight: " Relationship challenges ",
       issue:"relationship",
 
       points: [
+        "Dating Fatigue: Dating fatigue can be caused by overwhelming choices, and the time and energy investment required in the dating process.",
+        "Overcoming heartbreak: Approximately 25% of individuals who go through a significant heartbreak experience symptoms of depression and anxiety",
+        "Separation: Separation refers to two individuals or partners living apart, often following a relationship or marriage breakdown.",
+
         "Infertility: Infertility is the inability to conceive or carry a pregnancy to term after a year of regular unprotected intercourse.",
         "Infant Loss: Approximately 2.6 million stillbirths occur globally each year, highlighting the tragic reality of infant loss and the need for support and awareness.",
-        "Dating Fatigue: Dating fatigue can be caused by overwhelming choices, and the time and energy investment required in the dating process.",
-        "Separation: Separation refers to two individuals or partners living apart, often following a relationship or marriage breakdown.",
-        "Overcoming heartbreak: Approximately 25% of individuals who go through a significant heartbreak experience symptoms of depression and anxiety",
       ],
       image: symptomsRelationship,
     },
@@ -620,7 +621,7 @@ export const therapiesData = [
         },
         {
           color: true,
-          text: "LGBTQ+ ",
+          text: "LGBTQIA+ ",
         },
         {
           color: false,
@@ -634,8 +635,8 @@ export const therapiesData = [
       image: lgbtqHeader,
     },
     symptoms: {
-      highlight: " LGBTQ symptoms ",
-      issue:"lgbtq",
+      highlight: " LGBTQIA+ symptoms ",
+      issue:"LGBTQIA+",
 
       points: [
         "Higher Rates of Depression. In LGBTQIA+ individuals often experience higher rates of depression due to stigma and discrimination.",
@@ -661,7 +662,7 @@ export const therapiesData = [
         },
         {
           color: false,
-          text: " Nurturing both yours and your child's well being",
+          text: " Nurturing both your's and your child's well being",
         },
       ],
       desc: [
@@ -671,8 +672,8 @@ export const therapiesData = [
       image: parentingHeader,
     },
     symptoms: {
-      highlight: " Parenting symptoms ",
-      issue:"parenting",
+      highlight: " Parenting Challenges ",
+      issue:"parenting Hurdles",
 
       points: [
         "Postpartum Depression: Many new mothers experience postpartum depression, characterized by persistent feelings of sadness, exhaustion, and anxiety after giving birth.",

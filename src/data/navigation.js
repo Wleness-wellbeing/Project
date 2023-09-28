@@ -175,7 +175,7 @@ export const footerAboutWleness = [
   ["Career", "/career"],
   ["Join as Psychiatrist", "/join-psychiatrist"],
   ["Join as Therapist", "/join-therapist"],
-  ["FAQ's", "/faqs"],
+  ["FAQs", "/faqs"],
 ];
 
 // Footer - Our Services

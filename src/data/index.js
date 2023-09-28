@@ -3714,7 +3714,7 @@ export const homeServices = [
   },
   {
     title: "Executive Coaching",
-    desc: "Executive coaching elevates leadership, empowers high-level staff, & drives positive results. It maximizes potential, navigates the challenges, &  enhances performance.",
+    desc: "Executive coaching elevates leadership, empowers high-level staff & drives positive results. It maximizes potential, navigates the challenges &  enhances performance.",
     image: homeExecutiveCoaching,
     slug: "/executive-coaching",
   },
@@ -3792,12 +3792,12 @@ export const whyChooseUs = [
   },
   {
     title: "Commitment",
-    desc: "We commit to providing personalized care tailored to your unique needs and support you at every step.",
+    desc: "We commit to provide personalized care tailored to your unique needs and support you at every step.",
     image: homeCommitmentIcon,
   },
   {
     title: "Facilities",
-    desc: "Experience the convenience and comfort of our state-of-the-art facilities with wleness.",
+    desc: "Experience the convenience and comfort of our state-of-the-art facilities with Wleness.",
     image: homeFacilitiesIcon,
   },
 ];

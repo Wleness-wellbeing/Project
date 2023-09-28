@@ -45,7 +45,15 @@ export const prioritizeCorporate = [
       },
       {
         status: false,
-        text: "of millennials and 81% of Gen Zs left their jobs for mental health-related reasons in the last year.  ",
+        text: "of millennials  ",
+      },
+      {
+        status: true,
+        text: " 81% ",
+      },
+      {
+        status: false,
+        text: " of Gen Zs left their jobs for mental health-related reasons in the last year.  ",
       },
     ],
   },

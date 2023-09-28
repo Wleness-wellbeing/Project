@@ -56,7 +56,7 @@ export default function DoctorsCard(props) {
         </div>
         <div className="w-[65%] px-4 lg:w-3/5 3xl:px-6">
           <Link
-            to={bookNow}
+            to="https://appointment-wleness.dayschedule.com/meeting-with-wleness"
             className="block w-fit rounded-full bg-primary-400 px-4 py-2.5 text-center text-xs font-semibold text-white transition-all hover:bg-primary-300 lg:px-6 lg:py-2.5 lg:text-sm"
           >
             Book Now

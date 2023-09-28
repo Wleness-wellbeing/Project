@@ -34,7 +34,7 @@ export const doctorsDetails = [
     image: purviBalasariaPortrait,
     exp: "5+ years of experience",
     expertise: "Approach",
-    speaks: "Eng, Hindi, Bengali",
+    speaks: "English, Hindi, Bengali",
     slug: "purvi-balasaria",
   },
   {
@@ -66,7 +66,7 @@ export const doctorsDetails = [
     image: purviBalasariaPortrait,
     exp: "5+ years of experience",
     expertise: "Approach",
-    speaks: "Eng, Hindi, Bengali",
+    speaks: "English, Hindi, Bengali",
     slug: "purvi-balasaria",
   },
   {

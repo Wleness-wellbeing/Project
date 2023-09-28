@@ -27,7 +27,7 @@ export default function LeftVideoList(props) {
                 <img
                   src={leaf}
                   alt="Leaf Icon"
-                  className="mr-6 h-6 w-12 object-contain"
+                  className="mr-4 h-6 w-6 object-contain"
                 />
                 <span className="text-lg font-semibold text-black">
                   {value.subtitle}
