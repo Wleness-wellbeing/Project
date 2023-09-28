@@ -68,7 +68,7 @@ function AboutUsdropbox({ heading, paragraph, answer, isOpen, toggleFAQ }) {
       onClick={toggleFAQ}
     >
       <div className="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
-        <div className="lg:w-3/4">
+        <div className="mt-4 lg:w-3/4">
           <h2 className="text-2xl font-extrabold text-primary-400">
             {heading}
           </h2>

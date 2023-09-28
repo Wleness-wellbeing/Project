@@ -3,13 +3,13 @@ import { wlenessApproach } from "../data/issues";
 import ApproachCard from "./Cards/ApproachCard";
 import { Link } from "react-router-dom";
 
-export default function WlenessApproach() {
+export default function WlenessApproach({ issue }) {
   return (
     <section className="my-5 bg-gradient-to-b from-primary-50/40 to-transparent pt-5 xl:mt-10 xl:pt-10">
       <div className="container mx-auto text-center">
         <h2 className="subheading">
           How <span className="heading-primary">Wleness approach</span> helps to
-          treat stress
+          treat {issue}
         </h2>
         <p className="text-xl font-medium">
           Indulge in a rejuvenating journey towards tranquility with our

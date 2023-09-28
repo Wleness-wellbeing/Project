@@ -63,6 +63,7 @@ import Career from "./pages/Career";
 import Consent from "./pages/Policies/Consent";
 import { coachesData } from "./data/coach";
 import CoachSubpage from "./pages/Coaches/CoachSubpage";
+import ApplyForm from "./components/JoinUs/ApplyForm";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -132,14 +133,6 @@ function App() {
             </Layout>
           }
         />
-        {/* <Route
-          path="/appointment-details"
-          element={
-            <Layout>
-              <AppointmentForm />
-            </Layout>
-          }
-        /> */}
 
         <Route
           path="/avatar"
@@ -149,14 +142,7 @@ function App() {
             </Layout>
           }
         />
-        {/* <Route
-          path="/meeting"
-          element={
-            <Layout>
-              <MeetingApp />
-            </Layout>
-          }
-        /> */}
+
         <Route
           path="/gauth"
           element={
