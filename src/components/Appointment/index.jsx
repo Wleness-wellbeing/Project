@@ -68,7 +68,7 @@ const AppointmentComponent = (props) => {
   return (
     <div className="gap-2 lg:flex lg:gap-8">
       {/* Calendar Section */}
-      <div className="lg:w-1/2">
+      <div className="mb-6 lg:mb-0 lg:w-1/2">
         <Calendar
           appointmentData={appointmentData}
           onDateSelect={handleDateSelect}

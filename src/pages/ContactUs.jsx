@@ -1,5 +1,12 @@
 import React from "react";
-import { email, location, ringervolume } from "../assets";
+import {
+  about1,
+  about4,
+  email,
+  location,
+  meeting,
+  ringervolume,
+} from "../assets";
 import ContactForm from "../components/Forms/ContactForm";
 
 export default function ContactUs() {
@@ -25,7 +32,7 @@ export default function ContactUs() {
 
           <div className="grid grid-cols-1 items-center justify-center gap-4 sm:grid-cols-2 md:grid-cols-3">
             <div className="text-center">
-              <img className="mx-auto" src={email}></img>
+              <img className="mx-auto" src={about1}></img>
               <h2 className="text-lg font-semibold text-primary-400">
                 Email Us At
               </h2>
@@ -35,7 +42,7 @@ export default function ContactUs() {
               </p>
             </div>
             <div className="text-center">
-              <img className="mx-auto" src={location}></img>
+              <img className="mx-auto" src={about4}></img>
               <h2 className="text-lg font-semibold text-primary-400">
                 Visit Us At
               </h2>
@@ -45,7 +52,7 @@ export default function ContactUs() {
               </p>
             </div>
             <div className="text-center">
-              <img className="mx-auto" src={ringervolume}></img>
+              <img className="mx-auto" src={meeting}></img>
               <h2 className="text-lg font-semibold text-primary-400">
                 Call Us At
               </h2>

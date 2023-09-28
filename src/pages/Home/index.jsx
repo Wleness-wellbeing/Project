@@ -170,13 +170,6 @@ export default function Home() {
             </article>
           </div>
         </div>
-        {/* Doodles */}
-        <img
-          loading="lazy"
-          src={doodle2}
-          alt=""
-          className="absolute bottom-0 left-0 -z-10 w-20 object-cover opacity-20 xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80"
-        />
       </section>
 
       {/* ========== Why Choose Us ========== */}

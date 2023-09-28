@@ -4,6 +4,7 @@ import AppointmentComponent from "../Appointment";
 import { APPOINTMENT_BOOK_URI } from "../../data/api";
 import axios from "axios";
 import { modes, timings } from "../../data/doctors";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function SelectPricing({ slug }) {
   const [selectDuration, setSelectDuration] = useState(timings[0]["value"]);
@@ -60,7 +61,7 @@ export default function SelectPricing({ slug }) {
     }
   };
   return (
-    <section className="container mx-auto pb-10 pt-6">
+    <section className="container mx-auto pb-10 lg:pt-6">
       <div className="lg:flex lg:gap-x-5">
         <div className="lg:w-1/2">
           <div className="mb-4 flex gap-x-2 lg:gap-x-5">
@@ -83,6 +84,9 @@ export default function SelectPricing({ slug }) {
                     onChange={handleModes}
                     className="hidden"
                   />
+                  <span className="mr-2">
+                    <FontAwesomeIcon icon={value.icon} />
+                  </span>
                   <span>{value.text}</span>
                 </label>
               );
@@ -113,7 +117,8 @@ export default function SelectPricing({ slug }) {
               );
             })}
           </div>
-          <div className="pt-5">
+
+          <div className="hidden pt-5 lg:block">
             <label htmlFor="coupon">
               <input
                 type="text"
@@ -140,7 +145,7 @@ export default function SelectPricing({ slug }) {
             </div>
           </div>
         </div>
-        <div className="rounded-xl bg-primary-50 p-5 lg:w-1/2 lg:p-10">
+        <div className="rounded-xl bg-primary-50 p-5 lg:w-1/2 lg:p-10 ">
           <h2 className="mb-4 text-xl font-bold text-slate-800 lg:text-2xl">
             Pricing Details
           </h2>
@@ -171,6 +176,33 @@ export default function SelectPricing({ slug }) {
                 </h5>
               </>
             ))}
+        </div>
+
+        <div className="pt-5 lg:hidden">
+          <label htmlFor="coupon">
+            <input
+              type="text"
+              name="coupon"
+              id="coupon"
+              placeholder="Apply Coupon"
+              className="mb-3 block w-full rounded-xl border-2 border-slate-200 px-6 py-2.5"
+            />
+          </label>
+
+          <p
+            className={`mb-4 text-center font-semibold ${
+              successMessage.status == "success"
+                ? " text-green-500 "
+                : " text-red-500 "
+            }`}
+          >
+            {successMessage.message}
+          </p>
+          <div className="text-center">
+            <Link to={slug} className="btn-one inline-block">
+              Book an appointment now
+            </Link>
+          </div>
         </div>
       </div>
     </section>

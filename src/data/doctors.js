@@ -43,7 +43,7 @@ export const doctorsDetails = [
     exp: "8+ years of experience",
     expertise: "CBT, BT, Counseling, Mindfulness meditations",
     speaks: "Hindi, English",
-    slug: "meenakshi-mishra",
+    slug: "minakshi-mishra",
   },
   {
     name: "Swati Ghoshal",
