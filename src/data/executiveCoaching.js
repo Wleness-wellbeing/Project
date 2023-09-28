@@ -102,7 +102,7 @@ export const whyExecutiveCoachingSlider = [
   },
   {
     title: "Cost Savings",
-    desc: "Executives who underwent coaching experienced a 53% increase in productivity which makes this cost saving.",
+    desc: "Executives who underwent coaching experienced a 53% increase in productivity.",
     image: whyExecutiveCoaching4,
   },
   {
