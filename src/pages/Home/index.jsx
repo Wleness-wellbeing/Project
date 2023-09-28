@@ -178,7 +178,7 @@ export default function Home() {
           <h2 className="subheading heading-primary">Why Choose Us?</h2>
           <p className="pb-12 text-lg font-medium text-slate-500 lg:mx-auto lg:w-[720px]">
             Our platform is built by psychiatrists, psychologists and mental
-            health experts with immense global experience.
+            health experts with immense global exposure.
           </p>
           <div className="mb-14 grid gap-y-8 md:grid-cols-3 lg:gap-12 lg:gap-y-0">
             {whyChooseUs.map((value, i) => {

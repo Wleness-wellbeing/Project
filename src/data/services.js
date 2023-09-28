@@ -218,7 +218,7 @@ export const TherapyData = {
     featureImage: bestTherapy,
     features: [
       ["Consultations ", "anywhere, anytime"],
-      ["Online ", "Consultations"],
+      ["One-to-One ", "Consultations"],
       ["Trusted ", "Therapist"],
       ["Affordable ", "Help"],
     ],

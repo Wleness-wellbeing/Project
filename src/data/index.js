@@ -4062,7 +4062,7 @@ export const homeServices = [
   },
   {
     title: "Executive Coaching",
-    desc: "Executive coaching elevates leadership, empowers high-level staff, & drives positive results. It maximizes potential, navigates the challenges, &  enhances performance.",
+    desc: "Executive coaching elevates leadership, empowers high-level staff & drives positive results. It maximizes potential, navigates the challenges &  enhances performance.",
     image: homeExecutiveCoaching,
     slug: "/executive-coaching",
   },
@@ -4140,12 +4140,12 @@ export const whyChooseUs = [
   },
   {
     title: "Commitment",
-    desc: "We commit to providing personalized care tailored to your unique needs and support you at every step.",
+    desc: "We commit to provide personalized care tailored to your unique needs and support you at every step.",
     image: homeCommitmentIcon,
   },
   {
     title: "Facilities",
-    desc: "Experience the convenience and comfort of our state-of-the-art facilities with wleness.",
+    desc: "Experience the convenience and comfort of our state-of-the-art facilities with Wleness.",
     image: homeFacilitiesIcon,
   },
 ];
@@ -4216,8 +4216,8 @@ export const executiveCoaching = [
     image: three,
   },
   {
-    title: "Cost Savings",
-    desc: "Executives who underwent coaching experienced a 53% increase in productivity which makes this cost saving.",
+    title: "Cost Saving",
+    desc: "Executive clients saw a sharp 53% increase in productivity making it cost friendly .",
     image: four,
   },
   {

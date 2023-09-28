@@ -24,7 +24,7 @@ export default function RightImageList(props) {
                   <img
                     src={leaf}
                     alt="Leaf Icon"
-                    className="mr-6 h-6 w-12 object-contain"
+                    className="mr-6 h-6 w-6 object-contain"
                   />
                 </div>
                 <div>
