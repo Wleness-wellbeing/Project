@@ -84,10 +84,13 @@ export default function SelectPricing({ slug }) {
                     onChange={handleModes}
                     className="hidden"
                   />
-                  <span className="mr-2">
-                    <FontAwesomeIcon icon={value.icon} />
+                  <span className="mr-1 lg:mr-2">
+                    <FontAwesomeIcon
+                      icon={value.icon}
+                      className="text-xs lg:text-base"
+                    />
                   </span>
-                  <span>{value.text}</span>
+                  <span className="text-sm lg:text-base">{value.text}</span>
                 </label>
               );
             })}
@@ -112,7 +115,7 @@ export default function SelectPricing({ slug }) {
                     onChange={handleDuration}
                     className="hidden"
                   />
-                  <span>{value.text}</span>
+                  <span className="text-sm lg:text-base">{value.text}</span>
                 </label>
               );
             })}

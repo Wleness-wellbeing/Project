@@ -1,59 +1,68 @@
 import React from "react";
-import { g1, g2, g3, g4, g5, g6, g7, g8 } from "../assets";
+import {
+  musicalHealingBenefit1,
+  musicalHealingBenefit2,
+  musicalHealingBenefit3,
+  musicalHealingBenefit4,
+  musicalHealingBenefit5,
+  musicalHealingBenefit6,
+  musicalHealingBenefit7,
+  musicalHealingBenefit8,
+} from "../assets";
 
 const dummyData = [
   {
     id: 1,
-    image: g1,
+    image: musicalHealingBenefit1,
     heading: "Stress Reduction:",
     description:
       "Music can lower stress levels & induce relaxation, reducing anxiety, promote calmness.",
   },
   {
     id: 2,
-    image: g2,
+    image: musicalHealingBenefit2,
     heading: "Emotional Expression:",
     description:
       "It provides creative channel for the expression of emotions and facilitates the processing of trauma.",
   },
   {
     id: 3,
-    image: g3,
+    image: musicalHealingBenefit3,
     heading: "Pain Management:",
     description:
       "Music has the ability to divert attention away from pain and discomfort, aiding in pain management.",
   },
   {
     id: 4,
-    image: g4,
+    image: musicalHealingBenefit4,
     heading: "Cognitive Enhancement:",
     description:
       "It can improve memory, attention, & cognitive skills, particularly in individuals with cognitive impairments.",
   },
   {
     id: 5,
-    image: g5,
+    image: musicalHealingBenefit5,
     heading: "Mood Regulation:",
     description:
       "Music helps regulate mood, boosting feelings of happiness and reducing depression.",
   },
   {
     id: 6,
-    image: g6,
+    image: musicalHealingBenefit6,
     heading: "Social Connection:",
     description:
       "Group music therapy fosters social interaction and fosters a profound sense of community.",
   },
   {
     id: 7,
-    image: g7,
+    image: musicalHealingBenefit7,
     heading: "Physical Rehabilitation:",
     description:
       "It aids in physical rehabilitation by synchronizing movements with rhythmic cues.",
   },
   {
     id: 8,
-    image: g8,
+    image: musicalHealingBenefit8,
     heading: "Self-Exploration:",
     description:
       "Music therapy serves as a powerful catalyst, inspiring profound self-reflection and personal growth.",

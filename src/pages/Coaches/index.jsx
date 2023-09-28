@@ -12,15 +12,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Navigation, Autoplay, Pagination } from "swiper/modules";
-import { executiveCoaching } from "../../data";
 import { executiveCoachingFaqs } from "../../data/faqs";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
-import Faq from "../../components/layout/Faq";
 import {
   executiveApproach,
   executiveServices,
   individualServices,
+  whyExecutiveCoachingSlider,
 } from "../../data/executiveCoaching";
 import { Link } from "react-router-dom";
 import CoachRequestForm from "../../components/Forms/CoachRequestForm";
@@ -144,7 +143,7 @@ export default function ExecutiveCoaching() {
           speed={400}
           loop={true}
         >
-          {executiveCoaching.map((value, i) => {
+          {whyExecutiveCoachingSlider.map((value, i) => {
             return (
               <SwiperSlide
                 className="mb-2 cursor-pointer rounded-xl border-[1px] border-slate-200 p-3 py-8 shadow-xl shadow-slate-300 hover:bg-primary-10 lg:mb-12 lg:p-5"

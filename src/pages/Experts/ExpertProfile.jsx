@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { bgDotsPattern } from "../../assets";
+import { bgDotsPattern, profileMask } from "../../assets";
 import { Link, useParams } from "react-router-dom";
 
 import BookAppointment from "../../components/Forms/BookAppointment";
@@ -84,11 +84,16 @@ export default function ExpertProfile() {
             <span className="subheading">Appointment Booking</span>
           </h1>
           <figure className="mx-auto items-center justify-center gap-x-8 py-3 lg:flex lg:w-[590px] lg:py-6">
-            <div className="mx-auto w-48 lg:mx-0 lg:w-1/2">
+            <div className="relative mx-auto mb-4 h-40 w-40 lg:h-48 lg:w-48">
               <img
                 src={profileDetails.image}
                 alt=""
-                className="h-40 w-40 rounded-full border-4 border-primary-300 object-cover object-top lg:h-56 lg:w-56"
+                className="h-full w-full rounded-full object-cover object-top"
+              />
+              <img
+                src={profileMask}
+                alt=""
+                className="absolute left-1/2 top-0 -translate-x-[55%] scale-110 object-cover"
               />
             </div>
             <figcaption className="mx-auto text-center lg:w-1/2 lg:text-left">
@@ -170,7 +175,10 @@ export default function ExpertProfile() {
 
       <h4 className="container mx-auto pb-6 pt-12 text-center text-2xl font-bold lg:text-4xl">
         <span>Looking for different service </span>
-        <Link to="" className="heading-primary inline-block underline">
+        <Link
+          to="/services/therapy"
+          className="heading-primary inline-block underline"
+        >
           Click Here
         </Link>
       </h4>

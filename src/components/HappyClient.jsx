@@ -7,7 +7,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 
 // Data
 import { textColorize } from "../utils";
-import { doodle2 } from "../assets";
+import { doodle2, doodle3 } from "../assets";
 
 export default function HappyClient(props) {
   return (
@@ -52,20 +52,19 @@ export default function HappyClient(props) {
               );
             })}
           </Swiper>
-          {/* Testimonials */}
         </div>
       </div>
       <img
         loading="lazy"
-        src={doodle2}
+        src={doodle3}
         alt=""
-        className="absolute -right-20 top-0 -z-10 w-20 -scale-x-[1] object-cover opacity-20 xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80"
+        className="absolute -right-20 top-0 -z-10 w-20 object-cover xs:w-32 sm:w-40 md:w-56 lg:w-64 xl:w-72"
       />
       <img
         loading="lazy"
         src={doodle2}
         alt=""
-        className="absolute -left-10 bottom-0 -z-10 w-20 object-cover opacity-20 xs:w-32 sm:w-40 md:w-56 lg:w-72 xl:w-80"
+        className="absolute -left-14 bottom-0 -z-10 w-20 object-cover opacity-20 xs:w-32 sm:w-40 md:w-56 lg:w-64"
       />
     </section>
   );

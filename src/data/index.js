@@ -42,7 +42,6 @@ import {
   yogaType10,
   yogaType11,
   yogaType12,
-  brainExerciseHeader,
   brainGameGalaxy,
   brainGameTreasure,
   brainGameHunter,
@@ -93,10 +92,6 @@ import {
   homeInternship,
   homeSelfcare,
   homeMusicalTherapy,
-  one,
-  two,
-  three,
-  four,
   issueParenting,
   lifeCoaching1,
   lifeCoaching2,
@@ -156,13 +151,16 @@ import {
   kundaliniSadhnaHeader,
   sevaSadhnaHeader,
   natureSadhnaHeader,
+  lifeCoachingClarity,
+  lifeCoachingMotivation,
+  lifeCoachingConfidence,
+  lifeCoachingOvercomingfear,
 } from "../assets";
 
 // Components
 import HeaderWithImage from "../components/HeaderWithImage";
 import RightImage from "../components/RightImage";
 import LeftImage from "../components/LeftImage";
-import LeftVideoList from "../components/LeftVideoList";
 import RightProcedureList from "../components/RightProcedureList";
 import RightImageList from "../components/RightImageList";
 import LeftImageList from "../components/LeftImageList";
@@ -380,36 +378,6 @@ export const activities = [
               },
             },
             {
-              component: LeftVideoList,
-              data: {
-                title: "Steps of Adho Mukha Svanasana: ",
-                desc: "To practice Adho Mukha Svanasana, follow these steps: ",
-                videoUrl: "https://www.youtube.com/embed/cCEK6XrcUx0",
-                list: [
-                  {
-                    subtitle: "",
-                    desc: "Start on your hands and knees with your wrists under your shoulders and your knees under your hips. Spread your fingers wide and press firmly into the palms of your hands.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Inhale and tuck your toes under, lifting your knees off the ground. Exhale and lift your hips up and back, straightening your arms and legs",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Keep your hands shoulder-width apart and your feet hip-width apart. Press your heels down towards the ground and lengthen your spine.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Relax your head and neck and gaze towards your belly button.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Hold the pose for 5-10 deep breaths, then exhale and release back to the starting position.",
-                  },
-                ],
-              },
-            },
-            {
               component: RightImageList,
               data: {
                 title: "Benefits of Adho Mukha Svanasana: ",
@@ -511,44 +479,6 @@ export const activities = [
                 title: "Bound Warrior Pose: ",
                 desc: "This variation is an advanced variation that requires both strength and flexibility. Start in Virabhadrasana II, then reach your right arm behind your back and clasp your hands together. Lift your chest and gaze towards the ceiling, keeping your shoulders relaxed.",
                 image: virabhadrasanaVariation3,
-              },
-            },
-            {
-              component: LeftVideoList,
-              data: {
-                title: "Steps for Virabhadrasana II: ",
-                desc: "To practice Virabhadrasana II, follow these steps: ",
-                videoUrl: "https://www.youtube.com/embed/cCEK6XrcUx0",
-                list: [
-                  {
-                    subtitle: "",
-                    desc: "Begin in Tadasana (Mountain Pose) at the front of your mat.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Step your left foot back about 3-4 feet, keeping your toes pointing forward. Your right foot should be pointing straight ahead.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Inhale and lift your arms to shoulder height, keeping them parallel to the ground. Your palms should be facing down.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Exhale and bend your right knee above your ankle. Your left leg should be straight behind you, with your left foot at a 45-degree angle.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Press down through your feet and engage your thigh muscles. Keep your hips facing forward, and your shoulders relaxed.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Gaze over your proper fingertips, keeping your neck aligned with your spine.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Hold the pose for several deep breaths, then release and repeat on the other side.",
-                  },
-                ],
               },
             },
             {
@@ -656,44 +586,6 @@ export const activities = [
               },
             },
             {
-              component: LeftVideoList,
-              data: {
-                title: "Steps for Trikonasana: ",
-                desc: "To practice Trikonasana, follow these steps: ",
-                videoUrl: "https://www.youtube.com/embed/cCEK6XrcUx0",
-                list: [
-                  {
-                    subtitle: "",
-                    desc: "Begin in Tadasana (Mountain Pose) at the front of your mat.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Step your left foot back about 3-4 feet, keeping your toes pointing forward. Your right foot should be pointing straight ahead.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Inhale and lift your arms to shoulder height, keeping them parallel to the ground. Your palms should be facing down.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Exhale and reach your right arm forward, then down towards your right shin, ankle, or the floor outside your right foot. Your left arm should be reaching up toward the ceiling.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Keep your legs strong and engaged, pressing down through your feet. Keep your hips facing forward and your chest open.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Gaze towards your left fingertips, keeping your neck aligned with your spine.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Hold the pose for several deep breaths, then release and repeat on the other side.",
-                  },
-                ],
-              },
-            },
-            {
               component: RightImageList,
               data: {
                 title: "Benefits of Trikonasana: ",
@@ -798,44 +690,6 @@ export const activities = [
               },
             },
             {
-              component: LeftVideoList,
-              data: {
-                title: "Steps for Vrkasana: ",
-                desc: "To practice Vrksasana, follow these steps: ",
-                videoUrl: "https://www.youtube.com/embed/cCEK6XrcUx0",
-                list: [
-                  {
-                    subtitle: "",
-                    desc: "Begin in Tadasana (Mountain Pose) at the front of your mat.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Shift your weight onto your left foot and lift your right foot off the ground",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Place the sole of your right foot onto the inside of your left thigh, as high up as possible. You can also place your foot on your left calf if it's challenging to balance.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Press your right foot into your left thigh or calf and your thigh or calf into your foot to create a stable foundation.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Bring your hands together at your heart center in Namaste mudra, or extend your arms overhead, keeping them parallel to the ground.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Gaze at a fixed point before you, keeping your neck aligned with your spine.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Hold the pose for several deep breaths, then release and repeat on the other side.",
-                  },
-                ],
-              },
-            },
-            {
               component: RightImageList,
               data: {
                 title: "Benefits of Vrksasana: ",
@@ -913,48 +767,6 @@ export const activities = [
                 image: ustrasanaHeader,
                 variations: false,
                 var: "",
-              },
-            },
-            {
-              component: LeftVideoList,
-              data: {
-                title: "Steps for Ustrasana: ",
-                desc: "To practice Ustrasana, follow these steps: ",
-                videoUrl: "https://www.youtube.com/embed/cCEK6XrcUx0",
-                list: [
-                  {
-                    subtitle: "",
-                    desc: "Begin by kneeling on the floor with your knees hip-distance apart.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Place your hands on your hips and gently draw your tailbone towards the bottom.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Inhale and lift your chest towards the ceiling, arching your back.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Bring your hands to your lower back and press your palms into your sacrum. Keep your elbows close to your body.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "As you exhale, lean back and reach your hands towards your heels.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Grab your heels with your hands, or place your hands on your lower back.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Hold the pose for 30 seconds to 1 minute, breathing deeply.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "To leave the carriage, release your hands from your heels or lower back and slowly bring your torso back upright.",
-                  },
-                ],
               },
             },
             {
@@ -1041,44 +853,6 @@ export const activities = [
               },
             },
             {
-              component: LeftVideoList,
-              data: {
-                title: "Steps for Matsyasana: ",
-                desc: "To practice Matsyasana, follow these steps: ",
-                videoUrl: "https://www.youtube.com/embed/cCEK6XrcUx0",
-                list: [
-                  {
-                    subtitle: "",
-                    desc: "Begin by lying on your back with your legs straight and your arms by your sides.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Place your hands' palms down under your hips, with your fingertips pointing towards your toes.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Inhale and lift your chest towards the ceiling, arching your back.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Exhale and lower the top of your head to the floor. If your head does not touch the ground, you can use a cushion or folded blanket to support your head.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Press your elbows into the floor and lift your chest towards the ceiling. Keep your legs and buttocks engaged.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Hold the pose for 30 seconds to 1 minute, breathing deeply.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "To leave the pose, gently lower your chest to the floor and lift your head.",
-                  },
-                ],
-              },
-            },
-            {
               component: RightImageList,
               data: {
                 title: "Benefits of Matsyasana: ",
@@ -1161,44 +935,6 @@ export const activities = [
               },
             },
             {
-              component: LeftVideoList,
-              data: {
-                title: "Steps for Sirsasana: ",
-                desc: "To practice Sirsasana, follow these steps: ",
-                videoUrl: "https://www.youtube.com/embed/cCEK6XrcUx0",
-                list: [
-                  {
-                    subtitle: "",
-                    desc: "Begin by kneeling on the floor and interlocking your fingers. Place your forearms on the floor, keeping your elbows shoulder-width apart.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Place the top of your head on the floor between your palms, ensuring your neck is straight, and your head is supported.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Straighten your legs, lift your hips towards the ceiling, and walk your feet towards your head.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Slowly lift one leg off the floor, bending the knee and bringing it towards your chest. Then, lift the other leg off the floor, straightening both legs towards the ceiling.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Engage your core muscles, and maintain a straight line from your feet to your hips and shoulders..",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Hold the pose for 30 seconds to 1 minute, breathing deeply.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "To leave the pose, lower one leg at a time, bending the knees and bringing your feet back to the floor.",
-                  },
-                ],
-              },
-            },
-            {
               component: RightImageList,
               data: {
                 title: "Benefits of Sirsasana: ",
@@ -1278,48 +1014,6 @@ export const activities = [
                 image: sarvangasanaHeader,
                 variations: false,
                 var: "",
-              },
-            },
-            {
-              component: LeftVideoList,
-              data: {
-                title: "Steps for Sarvangasana: ",
-                desc: "To practice Sarvangasana, follow these steps: ",
-                videoUrl: "https://www.youtube.com/embed/cCEK6XrcUx0",
-                list: [
-                  {
-                    subtitle: "",
-                    desc: "Begin by lying on your back with your arms by your sides and your palms facing down.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Inhale and lift your legs off the floor, keeping them straight and together.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Exhale and lift your hips off the floor, using your hands to support your lower back.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Bring your legs and torso perpendicular to the floor, with your toes pointing towards the ceiling.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Support your back with your hands, keeping your elbows together and your forearms parallel.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Engage your core muscles, and maintain a straight line from your feet to your hips and shoulders.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Hold the pose for 30 seconds to 1 minute, breathing deeply.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "To come out of the pose, exhale and slowly lower your back to the floor, keeping your legs together.",
-                  },
-                ],
               },
             },
             {
@@ -1406,48 +1100,6 @@ export const activities = [
                 image: setuBandhasanaHeader,
                 variations: false,
                 var: "",
-              },
-            },
-            {
-              component: LeftVideoList,
-              data: {
-                title: "Steps for Setu Bandhasana: ",
-                desc: "To practice Setu Bandhasana, follow these steps: ",
-                videoUrl: "https://www.youtube.com/embed/cCEK6XrcUx0",
-                list: [
-                  {
-                    subtitle: "",
-                    desc: "Begin by lying on your back with your knees bent and your feet flat on the floor, hip-width apart.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Inhale and lift your hips off the floor, pressing into your feet and engaging your glutes and core muscles.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Roll your shoulders back and down, and interlace your fingers underneath your hips.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Press your forearms and elbows into the floor and lift your chest towards your chin.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Support your back with your hands, keeping your elbows together and your forearms parallel.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Keep your thighs parallel and your knees directly over your ankles.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "Hold the pose for 30 seconds to 1 minute, breathing deeply.",
-                  },
-                  {
-                    subtitle: "",
-                    desc: "To come out of the pose, exhale and slowly lower your hips to the floor.",
-                  },
-                ],
               },
             },
             {
@@ -4177,58 +3829,24 @@ export const statistics = [
 export const lifecoching = [
   {
     title: "Clarity",
-    image: one,
+    image: lifeCoachingClarity,
     desc: "Life coaching clarifies your goals, dreams, and aspirations. It helps you see a clear path forward and set achievable objectives. ",
   },
   {
     title: "Motivation",
     desc: "Feeling stuck or lacking motivation? A life coach can reignite your passion and keep you accountable for your aspirations.",
-    image: two,
+    image: lifeCoachingMotivation,
   },
   {
     title: "Confidence",
     desc: "Fear of failure? It's a common roadblock. Life coaching equips you with the tools to boldly face your fears & move forward.",
 
-    image: three,
+    image: lifeCoachingConfidence,
   },
   {
     title: "Overcoming Fear",
     desc: "Fear of failure? It's a common roadblock. Life coaching equips you with the tools to boldly face your fears & move forward.",
-    image: four,
-  },
-];
-
-// Executive Coaching
-export const executiveCoaching = [
-  {
-    title: "Revenue Growth",
-    image: one,
-    desc: "Companies that invested in executive coaching saw an average revenue growth of 17% over those that didn't.",
-  },
-  {
-    title: "Employee Engagement",
-    desc: "Organizations with strong coaching cultures report employee engagement levels of over 60%.",
-    image: two,
-  },
-  {
-    title: "Leadership Effectiveness",
-    desc: "86% of the  organizations surveyed saw a positive return on investment (ROI) from coaching.",
-    image: three,
-  },
-  {
-    title: "Cost Savings",
-    desc: "Executives who underwent coaching experienced a 53% increase in productivity which makes this cost saving.",
-    image: four,
-  },
-  {
-    title: "Productivity",
-    desc: "Organizations that utilised coaching saw a cost savings of over $7 for every $1 invested.",
-    image: four,
-  },
-  {
-    title: "Leadership Confidence",
-    desc: "A substantial 63% of leaders who received coaching reported increased levels of confidence.",
-    image: four,
+    image: lifeCoachingOvercomingfear,
   },
 ];
 

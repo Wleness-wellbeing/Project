@@ -19,6 +19,7 @@ import testimonialRing from "./images/home/testimonials/testimonial-ring.png";
 import community from "./images/home/community.png";
 import doodle1 from "./images/home/doodle-1.svg";
 import doodle2 from "./images/home/doodle-2.svg";
+import doodle3 from "./images/home/doodle-3.png";
 import iconCommitment from "./images/home/icon-commitment.svg";
 import iconExperience from "./images/home/icon-experience.svg";
 import iconFacilities from "./images/home/icon-facilities.svg";
@@ -81,6 +82,7 @@ export {
   community,
   doodle1,
   doodle2,
+  doodle3,
   iconCommitment,
   iconExperience,
   iconFacilities,
@@ -139,8 +141,6 @@ import aboutusbg from "./images/aboutus/aboutusbg.png";
 import problem from "./images/aboutus/problem.png";
 import approveIcon from "./images/aboutus/approveIcon.png";
 
-
-
 export {
   about1,
   about2,
@@ -157,7 +157,7 @@ export {
   sreyashsir,
   aboutusbg,
   problem,
-  approveIcon
+  approveIcon,
 };
 // executive coaching
 import executiveIcon1 from "./images/executiveCoching/executiveIcon1.png";
@@ -643,14 +643,14 @@ import musicalTherapy3 from "./images/services/musicalTherapy/musical-therapy-3.
 import musicalTherapy4 from "./images/services/musicalTherapy/musical-therapy-4.png";
 import musicalTherapy5 from "./images/services/musicalTherapy/musical-therapy-5.png";
 import musicalTherapy6 from "./images/services/musicalTherapy/musical-therapy-6.png";
-import g1 from "./images/services/musicalTherapy/g1.png";
-import g2 from "./images/services/musicalTherapy/g2.png";
-import g3 from "./images/services/musicalTherapy/g3.png";
-import g4 from "./images/services/musicalTherapy/g4.png";
-import g5 from "./images/services/musicalTherapy/g5.png";
-import g6 from "./images/services/musicalTherapy/g6.png";
-import g7 from "./images/services/musicalTherapy/g7.png";
-import g8 from "./images/services/musicalTherapy/g8.png";
+import musicalHealingBenefit1 from "./images/services/musicalTherapy/musical-healing-benefit-1.png";
+import musicalHealingBenefit2 from "./images/services/musicalTherapy/musical-healing-benefit-2.png";
+import musicalHealingBenefit3 from "./images/services/musicalTherapy/musical-healing-benefit-3.png";
+import musicalHealingBenefit4 from "./images/services/musicalTherapy/musical-healing-benefit-4.png";
+import musicalHealingBenefit5 from "./images/services/musicalTherapy/musical-healing-benefit-5.png";
+import musicalHealingBenefit6 from "./images/services/musicalTherapy/musical-healing-benefit-6.png";
+import musicalHealingBenefit7 from "./images/services/musicalTherapy/musical-healing-benefit-7.png";
+import musicalHealingBenefit8 from "./images/services/musicalTherapy/musical-healing-benefit-8.png";
 import musicalelipse1 from "./images/services/musicalTherapy/musicalElipse1.png";
 import musicalelipse2 from "./images/services/musicalTherapy/musicalElipse2.png";
 import musicalelipse3 from "./images/services/musicalTherapy/musicalElipse3.png";
@@ -671,14 +671,14 @@ import bestPsychiatrist from "./images/services/psychiatrist/best-psychiatrist.p
 import bulb from "./images/services/psychiatrist/bulb.png";
 import mythsAndFacts from "./images/services/psychiatrist/myths-and-facts.png";
 export {
-  g1,
-  g2,
-  g3,
-  g4,
-  g5,
-  g6,
-  g7,
-  g8,
+  musicalHealingBenefit1,
+  musicalHealingBenefit2,
+  musicalHealingBenefit3,
+  musicalHealingBenefit4,
+  musicalHealingBenefit5,
+  musicalHealingBenefit6,
+  musicalHealingBenefit7,
+  musicalHealingBenefit8,
   musicalelipse1,
   musicalelipse2,
   musicalelipse3,
@@ -1104,11 +1104,11 @@ import lifeCoaching3 from "./images/lifecoching/life-coaching-3.png";
 import rectangle1 from "./images/lifecoching/rectangle1.png";
 import rectangle2 from "./images/lifecoching/rectangle2.png";
 import rectangle3 from "./images/lifecoching/rectangle3.png";
-import one from "./images/lifecoching/1.png";
-import two from "./images/lifecoching/2.png";
-import three from "./images/lifecoching/3.png";
-import four from "./images/lifecoching/4.png";
 import lifeCoachingHeader from "./images/lifecoching/life-coaching-header.png";
+import lifeCoachingClarity from "./images/lifecoching/life-coaching-clarity.png";
+import lifeCoachingConfidence from "./images/lifecoching/life-coaching-confidence.png";
+import lifeCoachingMotivation from "./images/lifecoching/life-coaching-motivation.png";
+import lifeCoachingOvercomingfear from "./images/lifecoching/life-coaching-overcoming-fear.png";
 
 export {
   lifeCoaching1,
@@ -1117,11 +1117,11 @@ export {
   rectangle1,
   rectangle2,
   rectangle3,
-  one,
-  two,
-  three,
-  four,
   lifeCoachingHeader,
+  lifeCoachingClarity,
+  lifeCoachingConfidence,
+  lifeCoachingMotivation,
+  lifeCoachingOvercomingfear,
 };
 
 // =======executive-coaching=========//
@@ -1133,6 +1133,12 @@ import executiveCoach1 from "./images/executiveCoching/our-executive-coach-1.png
 import executiveCoach2 from "./images/executiveCoching/our-executive-coach-2.png";
 import executiveCoach3 from "./images/executiveCoching/our-executive-coach-3.png";
 import bgExecutiveApproach from "./images/executiveCoching/bg-our-approach.png";
+import whyExecutiveCoaching1 from "./images/executiveCoching/why-executive-coaching-1.png";
+import whyExecutiveCoaching2 from "./images/executiveCoching/why-executive-coaching-2.png";
+import whyExecutiveCoaching3 from "./images/executiveCoching/why-executive-coaching-3.png";
+import whyExecutiveCoaching4 from "./images/executiveCoching/why-executive-coaching-4.png";
+import whyExecutiveCoaching5 from "./images/executiveCoching/why-executive-coaching-5.png";
+import whyExecutiveCoaching6 from "./images/executiveCoching/why-executive-coaching-6.png";
 
 export {
   header,
@@ -1143,4 +1149,10 @@ export {
   executiveCoach2,
   executiveCoach3,
   bgExecutiveApproach,
+  whyExecutiveCoaching1,
+  whyExecutiveCoaching2,
+  whyExecutiveCoaching3,
+  whyExecutiveCoaching4,
+  whyExecutiveCoaching5,
+  whyExecutiveCoaching6,
 };

@@ -65,7 +65,7 @@ function Experts() {
               unique needs. Whether you're seeking to manage stress, overcome
               challenges, or enhance your overall mental health, we're committed
               to empowering you on your path to wellness. Together, we'll unlock
-              the potential for a healthier and happier you
+              the potential for a healthier and happier you.
             </p>
             <div className="space-y-3 lg:flex lg:space-x-3 lg:space-y-0">
               <button

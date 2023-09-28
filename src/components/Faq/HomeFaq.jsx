@@ -13,7 +13,7 @@ export default function HomeFaq(props) {
     }
   };
   return (
-    <section className="container mx-auto my-6 gap-2 px-4 lg:mb-14 lg:flex">
+    <section className="container mx-auto my-6 mt-12 gap-2 px-4 lg:mb-14 lg:flex">
       {/* ========== FAQ's ========== */}
       <div className="mx-auto mb-5 lg:mb-0 lg:w-1/2">
         <h2 className="subheading heading-primary mb-2">FAQs</h2>

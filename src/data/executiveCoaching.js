@@ -1,3 +1,12 @@
+import {
+  whyExecutiveCoaching1,
+  whyExecutiveCoaching2,
+  whyExecutiveCoaching3,
+  whyExecutiveCoaching4,
+  whyExecutiveCoaching5,
+  whyExecutiveCoaching6,
+} from "../assets";
+
 export const executiveServices = [
   {
     title: "1-1 Executive Coaching",
@@ -71,5 +80,39 @@ export const executiveApproach = [
       "Attain holistic well-being and stress relief tools",
       "Excel in your current role or prepare for the next step",
     ],
+  },
+];
+
+// Executive Coaching
+export const whyExecutiveCoachingSlider = [
+  {
+    title: "Revenue Growth",
+    image: whyExecutiveCoaching1,
+    desc: "Companies that invested in executive coaching saw an average revenue growth of 17% over those that didn't.",
+  },
+  {
+    title: "Employee Engagement",
+    desc: "Organizations with strong coaching cultures report employee engagement levels of over 60%.",
+    image: whyExecutiveCoaching2,
+  },
+  {
+    title: "Leadership Effectiveness",
+    desc: "86% of the  organizations surveyed saw a positive return on investment (ROI) from coaching.",
+    image: whyExecutiveCoaching3,
+  },
+  {
+    title: "Cost Savings",
+    desc: "Executives who underwent coaching experienced a 53% increase in productivity which makes this cost saving.",
+    image: whyExecutiveCoaching4,
+  },
+  {
+    title: "Productivity",
+    desc: "Organizations that utilised coaching saw a cost savings of over $7 for every $1 invested.",
+    image: whyExecutiveCoaching5,
+  },
+  {
+    title: "Leadership Confidence",
+    desc: "A substantial 63% of leaders who received coaching reported increased levels of confidence.",
+    image: whyExecutiveCoaching6,
   },
 ];
