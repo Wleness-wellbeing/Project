@@ -69,11 +69,10 @@ function AboutUsdropbox({ heading, paragraph, answer, isOpen, toggleFAQ }) {
     >
       <div className="flex w-full flex-col items-start justify-between lg:flex-row lg:items-center">
         <div className="mt-4 lg:w-3/4">
-          <h2 className="text-2xl font-extrabold text-primary-400">
+          <h2 className="mb-3 text-2xl font-extrabold text-primary-400">
             {heading}
           </h2>
           <div className="flex items-start font-semibold text-primary-300">
-            {" "}
             {/* Use flex for icon and text */}
             <img src={approveIcon} alt="Approve Icon" className="mr-2 " />{" "}
             {/* Use the custom PNG icon here */}
@@ -87,7 +86,6 @@ function AboutUsdropbox({ heading, paragraph, answer, isOpen, toggleFAQ }) {
         {answerList.map((item, index) => (
           <li key={index}>
             <div className="flex items-start font-semibold text-primary-300">
-              {" "}
               {/* Use flex for icon and text */}
               <img src={approveIcon} alt="Approve Icon" className="mr-2" />{" "}
               {/* Use the custom PNG icon here */}

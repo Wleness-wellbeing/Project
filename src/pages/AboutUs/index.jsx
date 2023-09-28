@@ -34,25 +34,22 @@ function AboutUs() {
       >
         <div className="mx-auto mt-9 flex flex-col lg:flex-row">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-          <div className="px-4 text-justify sm:w-full lg:order-1 lg:ml-56 lg:w-1/2 lg:px-0">
+          <div className="space-y-4 px-4 text-justify sm:w-full lg:order-1 lg:ml-56 lg:w-1/2 lg:space-y-6 lg:px-0">
             <h1 className="mt-8 text-[42px] font-semibold text-white brightness-105">
               About <span className="heading-primary !text-white">Wleness</span>
             </h1>
-            <br />
-            <p className="brightness-10 relative z-10 mt-6 w-full font-semibold text-white">
+            <p className="brightness-10 relative z-10 w-full font-semibold text-white">
               Wleness is a mental health startup dedicated to providing
               accessible and affordable therapy to individuals struggling with
               mental health issues.
             </p>
-            <br />
-            <p className="relative z-10 mt-6 w-full font-semibold text-white">
+            <p className="relative z-10 w-full font-semibold text-white">
               By leveraging technology, Wleness connects users with licensed
               mental health professionals via a secure online platform, making
               it easier for people to receive support from the comfort of their
               own homes.
             </p>
-            <br />
-            <p className="relative z-10 mt-6 w-full font-semibold text-white">
+            <p className="relative z-10 w-full font-semibold text-white">
               The organization aims to establish a comprehensive mental health
               ecosystem offering treatment and tailored care plans for a
               spectrum of mental health conditions, including but not limited to
@@ -294,9 +291,9 @@ function AboutUs() {
         <h2 className="subheading py-6">
           <span className="heading-primary ">Reach out</span> to us
         </h2>
-        <div className="h-ful container mx-auto grid grid-cols-1 items-center justify-center  gap-16   sm:grid-cols-2 md:grid-cols-3">
+        <div className="container mx-auto grid grid-cols-1 items-center justify-center  gap-16   sm:grid-cols-2 md:grid-cols-3">
           <Link to="/contact-us">
-            <div className="text-center hover:p-4 hover:shadow-xl">
+            <div className="rounded-xl p-4 text-center hover:shadow-xl">
               <img className="mx-auto" src={about1}></img>
               <h2 className="py-2 text-lg font-semibold text-primary-400">
                 Contact us
@@ -308,7 +305,7 @@ function AboutUs() {
             </div>
           </Link>
           <Link to="/corporate-wellbeing">
-            <div className="text-center hover:p-4 hover:shadow-xl">
+            <div className="rounded-xl p-4 text-center hover:shadow-xl">
               <img className="mx-auto" src={about4}></img>
               <h2 className="py-2 text-lg font-semibold text-primary-400">
                 Partner with us
@@ -320,7 +317,7 @@ function AboutUs() {
             </div>
           </Link>
           <Link to="/internship">
-            <div className="text-center hover:p-4 hover:shadow-xl ">
+            <div className="rounded-xl p-4 text-center hover:shadow-xl ">
               <img className="mx-auto" src={meeting}></img>
               <h2 className="py-2 text-lg font-semibold text-primary-400">
                 Work with us

@@ -1,4 +1,9 @@
-import { faVideo, faXmark } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCalendar,
+  faCircleLeft,
+  faVideo,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
 import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
@@ -132,8 +137,8 @@ export default function Appointment() {
         </figure>
 
         {/* Book Session */}
-        <div className="container mx-auto flex flex-col items-end pb-10">
-          <div className="w-[720px] pt-6">
+        <div className="container mx-auto flex flex-col pb-10 md:items-end">
+          <div className="pt-6 md:w-[580px] 2xl:w-[720px]">
             {!checkout ? (
               <form onSubmit={handleProceed}>
                 <h2 className="mb-4 text-center text-3xl font-bold">
@@ -256,27 +261,27 @@ export default function Appointment() {
               </form>
             ) : (
               <div className="py-6">
-                <div className="mb-4 flex justify-between text-center ">
-                  <span></span>
+                <div className="mb-4 flex items-center justify-between text-center md:flex-row ">
+                  <span className="hidden lg:block"></span>
                   <h2 className="text-3xl font-bold">Confirm Booking</h2>
-                  <span
-                    onClick={closeCheckout}
-                    className="btn-one cursor-pointer"
-                  >
-                    Back
+                  <span onClick={closeCheckout} className="cursor-pointer">
+                    <FontAwesomeIcon
+                      icon={faCircleLeft}
+                      className="text-3xl hover:text-slate-600"
+                    />
                   </span>
                 </div>
 
                 <div>
                   <h4 className="mb-2 text-xl font-semibold">
-                    Session Details:{" "}
+                    Session Details:
                   </h4>
-                  <div className="flex gap-x-5">
-                    <div className="flex w-60 flex-col justify-center rounded-lg border-2 border-primary-300 px-8 py-4 font-bold">
+                  <div className="flex gap-x-2 lg:gap-x-5">
+                    <div className="w-1/2 rounded-lg border-2 border-primary-300 px-4 py-4 text-center font-bold md:w-60 lg:px-8">
                       <span className="text-center">
                         <FontAwesomeIcon icon={faVideo} /> <span>Mode</span>
                       </span>
-                      <span className="my-2 flex justify-between font-semibold text-slate-400">
+                      <span className="my-2 flex justify-between text-sm font-semibold text-slate-400 lg:text-base">
                         <span>video</span>
                         <span>45 min</span>
                       </span>
@@ -288,11 +293,11 @@ export default function Appointment() {
                       </span>
                     </div>
 
-                    <div className="flex w-60 flex-col justify-center rounded-lg border-2 border-primary-300 px-8 py-4 font-bold">
+                    <div className="w-1/2 rounded-lg border-2 border-primary-300 px-4 py-4 text-center font-bold md:w-60 lg:px-8">
                       <span className="text-center">
-                        <FontAwesomeIcon icon={faVideo} /> <span>Date</span>
+                        <FontAwesomeIcon icon={faCalendar} /> <span>Date</span>
                       </span>
-                      <span className="my-2 flex justify-between font-semibold text-slate-400">
+                      <span className="my-2 flex justify-between text-sm font-semibold text-slate-400 lg:text-base">
                         <span>10th Aug, 23</span>
                         <span>1:00 PM</span>
                       </span>
