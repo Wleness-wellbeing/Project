@@ -71,7 +71,7 @@ function CouplesTherapy() {
                 help you build a stronger, more fulfilling connection.
               </p>
             </div>
-            <div className="rounded-2xl rounded-br-[4rem] bg-primary-50 px-6 py-3 shadow-lg hover:bg-transparent">
+            <div className="rounded-2xl rounded-br-[4rem] border-2 border-primary-50 bg-transparent px-6 py-3 shadow-lg hover:bg-primary-50">
               <h6 className="text-lg font-bold">Tailored Approach:</h6>
               <p className="text-sm font-medium lg:text-base">
                 We understand that every couple is unique, and there is no
@@ -88,7 +88,7 @@ function CouplesTherapy() {
                 with your ongoing issues.
               </p>
             </div>
-            <div className="rounded-2xl rounded-br-[4rem] bg-primary-50 px-6 py-3 shadow-lg hover:bg-transparent">
+            <div className="rounded-2xl rounded-br-[4rem] border-2 border-primary-50 bg-transparent px-6 py-3 shadow-lg hover:bg-primary-50">
               <h6 className="text-lg font-bold">
                 Safe and Non-Judgmental Space:
               </h6>

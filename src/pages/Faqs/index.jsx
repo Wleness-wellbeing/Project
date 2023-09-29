@@ -4,14 +4,19 @@ import Faq from "../../components/layout/Faq";
 import { faqs } from "../../data/faqs";
 
 export default function index() {
-  const [openFAQ, setOpenFAQ] = useState(0);
+  const [openFAQ, setOpenFAQ] = useState(-1); // Initialize with -1 to represent all FAQs as closed
 
   // Toggle Faq's
   const toggleFAQ = (index) => {
-    if (index !== openFAQ) {
+    if (index === openFAQ) {
+      // If it's already open, close it
+      setOpenFAQ(1); // Close all FAQs
+    } else {
+      // If it's closed or a different FAQ is open, open it
       setOpenFAQ(index);
     }
   };
+
   return (
     <>
       <header className="relative overflow-x-hidden overflow-y-clip bg-gradient-to-b from-primary-50/30 to-transparent">

@@ -156,6 +156,12 @@ import {
   kundaliniSadhnaHeader,
   sevaSadhnaHeader,
   natureSadhnaHeader,
+  vipasnaHeader,
+  vipasnaPracticingLeft,
+  vipasnaPracticingRight,
+  concentrationHeader,
+  concentrationPracticingLeft,
+  concentrationPracticingRight,
 } from "../assets";
 
 // Components
@@ -1916,10 +1922,12 @@ export const activities = [
             },
             {
               component: SubpagesConclusion,
+              
               data: {
                 title: "Conclusion: ",
                 desc: "Mindfulness meditation is indeed a powerful yet simple practice that can bring numerous benefits to our lives if implemented in the right way. By dedicating a few minutes each day to mindfulness, we can cultivate a more profound sense of calm, clarity, and overall well-being within us. So why not give it a try and check ourselves? Start with small steps, be patient with yourself, and experience the transformative power of mindfulness meditation. Always remember to prioritize yourself and your mental well-being and stability, and do not hesitate to consult a professional if you have any major concerns or questions.",
                 image: conclusionBulb,
+                
               },
             },
             {
@@ -2053,6 +2061,7 @@ export const activities = [
                 title: "Conclusion: ",
                 desc: "Breath awareness is a traditional effective form of meditation that offers a plethora of benefits for holistic i.e. mental, emotional, and physical well-being. By taking a few minutes each day to focus on our breath, we can cultivate a sense of inner calm, improve our ability to concentrate on ourselves and enhance our overall health and well-being. By dedicating a few minutes each day to mindfulness, we can cultivate a more profound sense of calm, clarity, and overall well-being within us. So why not give it a try and check ourselves? Start with small steps, be patient with yourself, and experience the transformative powers breathing meditation has to offer. Always remember to prioritize yourself and your mental well-being and stability, and do not hesitate to consult a professional if you have any major concerns or questions.",
                 image: conclusionBulb,
+                position:"left"
               },
             },
             {
@@ -2210,6 +2219,7 @@ export const activities = [
                 title: "Conclusion: ",
                 desc: "Kundalini meditation is indeed a transformative practice that can lead to spiritual growth, expanded consciousness, and enhanced well-being.  By taking a few minutes each day to focus on our breath, we can cultivate a sense of inner calm, improve our ability to concentrate on ourselves and enhance our overall health and well-being and awaken the dormant Kundalini energy within us, practitioners under guidance can tap into their true potential, experience emotional healing, and cultivate a deep sense of inner peace. However, it is important to approach Kundalini meditation with proper training and caution, seek guidance from experienced teachers and mentors, and listen to your body's wisdom throughout the journey and unlock the nirvana.",
                 image: conclusionBulb,
+                position:"left"
               },
             },
             {
@@ -2343,6 +2353,7 @@ export const activities = [
                 title: "Conclusion: ",
                 desc: "Zeni meditation is indeed a transformative practice that can lead to spiritual growth, expanded consciousness, and enhanced well-being with proficiency. By taking just a few minutes each day to focus on our breath, we can cultivate a sense of inner calm, improve our ability to concentrate on ourselves and enhance our overall health and well-being and awaken the inner true energy within us, practitioners under guidance can tap into their true potential, experience emotional healing, and cultivate a deep sense of inner peace and belonging. However, it is important to approach it with proper training and caution, seek guidance from experienced teachers and mentors, and listen to your body's wisdom throughout the journey and unlock the nirvana.",
                 image: conclusionBulb,
+                position:"left"
               },
             },
             {
@@ -2485,9 +2496,12 @@ export const activities = [
             {
               component: SubpagesConclusion,
               data: {
+            
+
                 title: "Conclusion: ",
                 desc: "Spiritual meditation is indeed an empowering and gradual practice which is a sure-shot way in leading one to spiritual growth and expanded consciousness beyond the norm and enhance well-being with proficiency. By taking just a few minutes each day to focus on our breath, we can cultivate a sense of inner calm, improve our ability to concentrate on ourselves and enhance our overall health and well-being and awaken the inner true energy within us, practitioners under guidance can tap into their true potential, experience emotional healing, and cultivate a deep sense of inner peace and belonging. However, it is important to approach it with proper training and caution, seek guidance from experienced teachers and mentors, and listen to your body's wisdom throughout the journey and unlock the nirvana.",
                 image: conclusionBulb,
+                position:"left"
               },
             },
             {
@@ -2644,6 +2658,7 @@ export const activities = [
                 title: "Conclusion: ",
                 desc: "Walking meditation can be a highly adaptable practice. It can be integrated into your daily routine as a mindful walk to the office while strolling in a park, or even during mundane activities like grocery shopping. By taking a few minutes each day to focus on our breath, we can cultivate a sense of inner calm, improve our ability to concentrate on ourselves and enhance our overall health and well-being. By dedicating a few minutes each day to mindfulness, we can cultivate a more profound sense of calm, clarity, and overall well-being within us. So why not give it a try and check ourselves? Its versatility makes it an accessible form of meditation for individuals who may find sitting meditation challenging or prefer a more engaging practice.",
                 image: conclusionBulb,
+                position:"left"
               },
             },
             {
@@ -2673,12 +2688,255 @@ export const activities = [
           thumbnail: meditationType7,
           desc: "The insight meditation practice of vipassana calls for very attentive observation of feelings, ideas, and sensations. Its goal is to help people comprehend how fleeting and ultimately unsatisfying life is.",
           slug: "/activities/meditation/vipassana-meditation",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Vipassana Meditation",
+                desc: [
+                  "A moment of stillness can feel like a luxury in today's fast-paced world. Amidst the chaos, Vipassana meditation emerges as a beacon of tranquillity, offering a path to profound self-discovery and inner peace. This ancient practice, rooted in the teachings of Gautama Buddha, has been revered for over 2,500 years.",
+                  "Vipassana, which means 'clear seeing' or 'insight,' is a form of meditation that encourages a deep awareness of the present moment. Unlike concentration-based techniques, Vipassana aims to observe bodily sensations and mental phenomena without attachment or aversion."
+                ],
+                image: vipasnaHeader,
+                var: " ",
+                variations: false,
+              },
+            },
+            {
+              component: RightProcedureList,
+              data: {
+                title: "Practicing Vipasna Meditation:",
+                image: vipasnaPracticingLeft,
+                list: [
+                  {
+                    subtitle:"Find a Quiet Space:",
+                    desc: "Select a quiet, comfortable place where you won't be disturbed.",
+                  },
+                  {
+                    subtitle:"Assume a Comfortable Posture:",
+                    desc: "Sit cross-legged on the floor or a chair with your back straight. The key is to maintain a posture that is both relaxed and alert.",
+                  },
+                  {
+                    subtitle:"Focus on the Breath: ",
+                    desc: "Start by observing the natural rhythm of your breath. Pay attention to the sensation of the breath entering and leaving your nostrils.",
+                  },
+                  {
+                    subtitle:"Body Scan:",
+                    desc: "Gradually shift your attention to the sensations throughout your body. Start from the top of your head and work your way down to your toes. Be mindful of any tingling, warmth, pressure, or other sensations.",
+                  },
+                 
+                ],
+              },
+            },
+            {
+              component: RightImageList2,
+              data: {
+                image: vipasnaPracticingRight,
+                list: [
+                  {
+                    subtitle: "Equanimous Observation:",
+                    desc: "Remain equanimous, which means observing sensations without attachment or aversion. If discomfort arises, resist the urge to react; simply observe it.",
+                  },
+                  {
+                    subtitle: "Persist with Patience:",
+                    desc: " Initially, your mind may resist this process, seeking distraction. Gently guide it back to the sensations whenever it wanders.",
+                  },
+                  {
+                    subtitle: "Practice Regularly: ",
+                    desc: "Consistency is key. Aim to meditate daily, starting with shorter sessions and gradually extending the duration. ",
+                  },
+                
+                ],
+              },
+            },
+            {
+              component: LeftImageList3,
+              data: {
+                title: "Benefits of Vipasna Meditation:",
+                list: [
+                  {
+                    subtitle: "Enhanced Awareness: ",
+                    desc: "Vipassana sharpens your ability to observe thoughts, emotions, and bodily sensations, fostering a profound self-awareness.",
+                  },
+                  {
+                    subtitle: "Stress Reduction:",
+                    desc: "  Regular practice has been shown to reduce stress, anxiety, and symptoms of depression, allowing for a greater sense of mental calm and stability.",
+                  },
+                  {
+                    subtitle: "Improved Concentration:",
+                    desc: "Vipassana strengthens your ability to focus, leading to enhanced productivity and mental clarity in daily life.",
+                  },
+                  {
+                    subtitle: "Emotional Resilience: ",
+                    desc: " You learn to respond to life's challenges with a balanced mind, reducing reactivity and cultivating emotional resilience through equanimity.",
+                  },
+                  {
+                    subtitle: "Spiritual Growth:",
+                    desc: " Many practitioners report a deepened sense of spiritual connection and purpose, transcending the boundaries of the self.",
+                  },
+                 
+                ],
+              },
+            },
+
+            {
+              component: SubpagesConclusion,
+              data: {                image: conclusionBulb,
+
+
+                title: "Conclusion: ",
+                desc: "With its roots in ancient wisdom, Vipassana meditation offers a profound journey towards self-discovery and inner peace. Through diligent practice, one can experience heightened awareness, emotional resilience, and spiritual growth. While potential side effects are minimal, the benefits are boundless. So, take a step towards this transformative journey, and may it bring you the serenity and clarity you seek in today's bustling world.",
+              },
+            },
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
+          ],
         },
         {
           title: "Concentrate Meditation",
           thumbnail: meditationType8,
           desc: "Focusing all your attention on singularity. Train your mind to focus on a particular vibration or sensation, which enhances your capacity for concentration and decreases distractions.",
           slug: "/activities/meditation/concentrative-meditation",
+          sections: [
+            {
+              component: HeaderWithImage,
+              data: {
+                title: "Concentrate Meditation",
+                desc: `Finding moments of focus and inner peace can be a rare gift in our fast-paced world. Concentration meditation, a centuries-old practice, is a valuable tool to help you sharpen your mind, reduce stress, and cultivate a sense of calm amidst life's chaos.
+                
+                Concentration meditation, also known as focused attention meditation, is a practice that involves directing your attention to a single point of focus. This focus can be on an object, a sound, your breath, or even a specific thought or mantra. The goal is to train your mind to stay present and not wander, leading to enhanced concentration and mindfulness.
+                
+                `,
+                image: concentrationHeader,
+                var: " ",
+                variations: false,
+              },
+            },
+            {
+              component: RightProcedureList,
+              data: {
+                title: "Practicing Concentrate Meditation:",
+                image: concentrationPracticingLeft,
+                list: [
+                  {
+                    subtitle:"Choose Your Point of Focus:",
+                    desc: "Start by selecting your object of focus. It can be your breath, a candle flame, a word or phrase (mantra), or any other object that resonates with you.",
+                  },
+                  {
+                    subtitle:"Find a Quiet Space:",
+                    desc: "Select a peaceful environment where you won't be easily distracted.",
+                  },
+                  {
+                    subtitle:"Assume a Comfortable Posture: ",
+                    desc: "Sit relaxed but alert. You can sit cross-legged on the floor or in a chair with your back straight.",
+                  },
+                  {
+                    subtitle:"Begin to Focus:",
+                    desc: "Gently direct your attention to your chosen focus point. For instance, if you're focusing on your breath, observe the sensation of each inhale and exhale.",
+                  },
+                 
+                ],
+              },
+            },
+            {
+              component: RightImageList2,
+              data: {
+                image: concentrationPracticingRight,
+                list: [
+                  {
+                    subtitle: "Maintain Your Focus:",
+                    desc: "you may notice your mind wandering as you meditate. When this happens, gently bring your attention back to your chosen focus point without judgment.",
+                  },
+                  {
+                    subtitle: "Start with Short Sessions: ",
+                    desc: " If you're new to concentration meditation, begin with short sessions (5-10 minutes) and gradually extend the duration as you become more comfortable.",
+                  },
+                  {
+                    subtitle: "Consistency Matters:",
+                    desc: "Regular practice is key to reaping the full benefits of concentration meditation. Aim to meditate daily, even if it's for a short duration. ",
+                  },
+                
+                ],
+              },
+            },
+            {
+              component: LeftImageList3,
+              data: {
+                title: "Benefits of Concentration Meditation:",
+                list: [
+                  {
+                    subtitle: "Enhanced Concentration: ",
+                    desc: "As the name suggests, this practice significantly improves your ability to concentrate on tasks, making you more productive and efficient in your daily life.",
+                  },
+                  {
+                    subtitle: "Stress Reduction:",
+                    desc: "  Concentration meditation has been shown to reduce stress and anxiety, helping you manage life's challenges with a calmer and more collected mind. ",
+                  },
+                  {
+                    subtitle: "Increased Mindfulness:",
+                    desc: "This practice deepens awareness of the present moment, fostering greater mindfulness and appreciation for the here and now",
+                  },
+                  {
+                    subtitle: "Emotional Regulation: ",
+                    desc: " Concentration meditation can help you become more emotionally resilient, allowing you to respond to situations more easily.",
+                  },
+                  {
+                    subtitle: "Spiritual Growth:",
+                    desc: "  For some, concentration meditation is a gateway to deeper spiritual exploration and self-discovery.",
+                  },
+                 
+                ],
+              },
+            },
+            {
+              component: SubpagesConclusion,
+              data: {
+                image: conclusionBulb,
+                title: "Conclusion: ",
+                desc: "Concentration meditation is valuable for anyone seeking greater mental clarity, focus, and inner peace in today's hectic world. While it requires patience and consistent practice, the benefits are worth the effort. By embracing this practice, you can cultivate and harness the power of concentration to lead a more balanced, mindful, and fulfilling life.",
+                position: "right" // Specify the position here
+              },
+            },
+            
+            {
+              component: ActivityBlogs,
+              blogs: [
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+                {
+                  thumbnail: activityBlogThumbnail,
+                  title: "Maintain a good habit with yourself",
+                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
+                },
+              ],
+            },
+          ],
         },
       ],
     },
@@ -2839,6 +3097,7 @@ export const activities = [
                 title: "Conclusion: ",
                 desc: "Yoga Sadhana is a profound journey of self-discovery and transformation that unites the physical, mental, and spiritual aspects of our being. Through practicing asanas, pranayama, meditation, and ethical principles, practitioners can experience numerous physical and mental benefits. However, it is crucial to approach Yoga Sadhana with patience and self-awareness and under the guidance of a qualified instructor to avoid potential complications. Embrace this ancient practice, and may your journey on the path of Yoga Sadhana be filled with joy, peace, and self-realization.",
                 image: conclusionBulb,
+                
               },
             },
             {

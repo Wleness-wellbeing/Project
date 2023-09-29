@@ -20,7 +20,7 @@ export default function UserDashboard({ token }) {
   if (token == "" || token == undefined || token == null) {
     navigate("/login", {
       state: {
-        successMessage: "Please login to continue to dashboard",
+        successMessage: "Please login to continue",
       },
     });
   }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   about1,
@@ -22,17 +22,25 @@ import {
 import AboutUsdropbox from "../../components/AboutUsDrop";
 import DummyComponent from "../../components/AboutUsDrop";
 import TeamComponent from "./TeamComponent";
+import PartnerWithUs from "../../components/Forms/PartnerWithUs";
 
 function AboutUs() {
+  const [partnerWithUs, setPartnerWithUs] = useState(false);
+
+  // Toggle form
+  const toggleForm = () => {
+    setPartnerWithUs(!partnerWithUs);
+  };
+
   return (
     <main>
       <header
-        className="relative bg-cover bg-fixed bg-center  py-24  brightness-90 sm:h-auto"
+        className="relative bg-cover bg-fixed bg-center  py-16 brightness-90  sm:h-auto lg:py-32"
         style={{
           backgroundImage: `url(${aboutusbg}) `,
         }}
       >
-        <div className="mx-auto mt-9 flex flex-col lg:flex-row">
+        <div className="mx-auto  flex flex-col lg:flex-row">
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
           <div className="space-y-4 px-4 text-justify sm:w-full lg:order-1 lg:ml-56 lg:w-1/2 lg:space-y-6 lg:px-0">
             <h1 className="mt-8 text-[42px] font-semibold text-white brightness-105">
@@ -162,12 +170,12 @@ function AboutUs() {
 
       <div className="mx-auto flex flex-col-reverse justify-center border-4 border-secondary/10 md:flex-row">
         <div className="mx-auto my-auto w-full bg-secondary/10 text-center md:w-3/4">
-          <div className="mr-40 mt-8 text-end">
+          <div className=" mt-2 lg:mr-40 lg:text-end">
             <h2 className="subheading">
               The <span className="heading-primary">Solution</span>
             </h2>
           </div>
-          <div className="my-9    w-full  text-left md:ml-60 md:mr-0 md:w-2/4 md:text-justify lg:my-12">
+          <div className=" w-full  text-left md:ml-60 md:mr-0 md:w-2/4 md:text-justify lg:my-12">
             <ul class="list-disc ">
               <li class="item-start  flex ">
                 <img
@@ -180,7 +188,7 @@ function AboutUs() {
                   provides a single platform for all one needs.{" "}
                 </span>
               </li>
-              <li class=" flex items-start py-2">
+              <li class=" flex items-start py-1">
                 <img
                   src={leaf}
                   alt="Leaf Icon"
@@ -192,7 +200,7 @@ function AboutUs() {
                   and offering personalised solutions.{" "}
                 </span>
               </li>
-              <li class="flex items-start py-2">
+              <li class="flex items-start py-1">
                 <img
                   src={leaf}
                   alt="Leaf Icon"
@@ -205,18 +213,18 @@ function AboutUs() {
                   counseling-only approach.{" "}
                 </span>
               </li>
-              <li class="flex items-start py-2">
+              <li class="flex items-start py-1">
                 <img
                   src={leaf}
                   alt="Leaf Icon"
                   className="mr-2 h-4 w-4 object-contain"
                 />
-                <spna className="font-semibold">
+                <span className="font-semibold">
                   It provides a supportive, anonymous community for open
                   conversations about mental wellness.
-                </spna>
+                </span>
               </li>
-              <li class="flex items-start py-2">
+              <li class="flex items-start py-1">
                 <img
                   src={leaf}
                   alt="Leaf Icon"
@@ -227,7 +235,7 @@ function AboutUs() {
                   personal and professional growth.{" "}
                 </span>
               </li>
-              <li class="flex items-start py-2">
+              <li class="flex items-start py-1">
                 <img
                   src={leaf}
                   alt="Leaf Icon"
@@ -272,9 +280,9 @@ function AboutUs() {
         </div>
       </div>
 
-      <div className="relative overflow-x-clip bg-secondary/20 pb-6 pt-4 xl:pb-4 xl:pt-4">
-        <div className="container mx-auto my-4 text-center">
-          <h2 className="subheading mx-auto mb-2 text-lg sm:mb-4 sm:text-xl md:text-4xl">
+      <div className="relative overflow-x-clip bg-secondary/20  xl:pb-4 xl:pt-4">
+        <div className="container mx-auto  text-center">
+          <h2 className="subheading mx-auto  text-lg sm:mb-4 sm:text-xl md:text-4xl">
             Meet the <span className="heading-primary">Visionaries</span> behind
             Wleness
           </h2>
@@ -287,11 +295,11 @@ function AboutUs() {
         <TeamComponent />
       </div>
 
-      <div className="grid h-full place-items-center  gap-4  pb-6">
+      <div className="grid h-full place-items-center   pb-6">
         <h2 className="subheading py-6">
           <span className="heading-primary ">Reach out</span> to us
         </h2>
-        <div className="container mx-auto grid grid-cols-1 items-center justify-center  gap-16   sm:grid-cols-2 md:grid-cols-3">
+        <div className="container mx-auto grid grid-cols-1 items-center justify-center   sm:grid-cols-2 md:grid-cols-3">
           <Link to="/contact-us">
             <div className="rounded-xl p-4 text-center hover:shadow-xl">
               <img className="mx-auto" src={about1}></img>
@@ -304,33 +312,40 @@ function AboutUs() {
               <p className="font-bold">Contact us</p>
             </div>
           </Link>
-          <Link to="/corporate-wellbeing">
+          <Link to="">
             <div className="rounded-xl p-4 text-center hover:shadow-xl">
-              <img className="mx-auto" src={about4}></img>
-              <h2 className="py-2 text-lg font-semibold text-primary-400">
-                Partner with us
-              </h2>
-              <p className="font-semibold ">
-                Want to integrate mental health support at your workplace
-              </p>
-              <p className="font-bold">Partner with us</p>
+              <button onClick={toggleForm} className="w-full">
+                <img className="mx-auto" src={about4}></img>
+                <h2 className="py-2 text-lg font-semibold text-primary-400">
+                  Partner with us
+                </h2>
+                <p className="font-semibold ">
+                  Want to integrate mental health support at your workplace
+                </p>
+                <p className="font-bold">Partner with us</p>
+              </button>
             </div>
           </Link>
-          <Link to="/internship">
-            <div className="rounded-xl p-4 text-center hover:shadow-xl ">
-              <img className="mx-auto" src={meeting}></img>
-              <h2 className="py-2 text-lg font-semibold text-primary-400">
-                Work with us
-              </h2>
-              <p className="font-semibold">
-                Looking to be part of the Wleness Team?
-                {/* make it responsive to the mobile devices as it is not responsive to the screen of that */}
-              </p>
-              <p className="font-bold">Work with us</p>
+          <Link to="">
+            <div className="rounded-xl p-4 text-center hover:shadow-xl">
+              <button onClick={toggleForm} className="w-full">
+                {" "}
+                {/* Add this button */}
+                <img className="mx-auto" src={meeting} alt="Meeting" />
+                <h2 className="py-2 text-lg font-semibold text-primary-400">
+                  Work with us
+                </h2>
+                <p className="font-semibold">
+                  Looking to be part of the Wleness Team?
+                  {/* make it responsive to the mobile devices as it is not responsive to the screen of that */}
+                </p>
+                <p className="font-bold">Work with us</p>
+              </button>
             </div>
           </Link>
         </div>
       </div>
+      <PartnerWithUs isOpen={partnerWithUs} onClose={toggleForm} />
     </main>
   );
 }

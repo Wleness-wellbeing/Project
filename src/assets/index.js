@@ -284,8 +284,20 @@ import walkingRight1 from "./images/activities/meditation/meditationSubpages/wal
 import zenHeader from "./images/activities/meditation/meditationSubpages/zenHeader.png";
 import zenLeft1 from "./images/activities/meditation/meditationSubpages/zenLeft1.png";
 import zenRight1 from "./images/activities/meditation/meditationSubpages/zenRight1.png";
+import vipasnaHeader from "./images/activities/meditation/meditationSubpages/vipasna-header.png"
+import vipasnaPracticingLeft from "./images/activities/meditation/meditationSubpages/vipasna-practicing-left.png"
+import vipasnaPracticingRight from "./images/activities/meditation/meditationSubpages/vipasna-practicing-right.png"
+import concentrationHeader from "./images/activities/meditation/meditationSubpages/concentration-header.png"
+import concentrationPracticingLeft from "./images/activities/meditation/meditationSubpages/concentration-practicing-left.png"
+import concentrationPracticingRight from "./images/activities/meditation/meditationSubpages/concentration-practicing-right.png"
+
+
+
+
 
 export {
+  concentrationHeader,concentrationPracticingLeft,concentrationPracticingRight,
+  vipasnaHeader,vipasnaPracticingLeft,vipasnaPracticingRight,
   breadthBenefit,
   breadthHeader,
   breadthLeft1,

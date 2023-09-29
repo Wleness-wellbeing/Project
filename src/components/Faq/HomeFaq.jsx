@@ -1,17 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Faq from "../layout/Faq";
 import { faq3 } from "../../assets";
 
 export default function HomeFaq(props) {
-  const [openFAQ, setOpenFAQ] = useState(0);
+  const [openFAQ, setOpenFAQ] = useState(-1); // Initialize with -1 to represent all FAQs as closed
 
   // Toggle Faq's
   const toggleFAQ = (index) => {
-    if (index !== openFAQ) {
+    if (index === openFAQ) {
+      // If it's already open, close it
+      setOpenFAQ(-1); // Close all FAQs
+    } else {
+      // If it's closed or a different FAQ is open, open it
       setOpenFAQ(index);
     }
   };
+
   return (
     <section className="container mx-auto my-6 gap-2 px-4 lg:mb-14 lg:flex">
       {/* ========== FAQ's ========== */}
