@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import { CORPORATE_JOIN_URI } from "../../data/api";
+import { PARTNER_WITH_US_URI } from "../../data/api";
 
 export default function PartnerWithUs({ isOpen, onClose }) {
   if (!isOpen) return null;
   // Handle Joining Form
   const [formInfo, setFormData] = useState({
-    org: "",
-    professional_email: "",
     full_name: "",
-    role: "",
+    email: "",
+    gender: "",
     number: "",
-    website: "",
-    policyAccept: "off",
   });
   const [successMessage, setSuccessMessage] = useState({
     status: "",
@@ -23,7 +19,7 @@ export default function PartnerWithUs({ isOpen, onClose }) {
   // Close assessment modal on clicking outside of the box
   useEffect(() => {
     const handleOutsideClick = (event) => {
-      if (isOpen && !event.target.closest(".corporate-form")) {
+      if (isOpen && !event.target.closest(".partner-with-us")) {
         onClose();
       }
     };
@@ -50,13 +46,10 @@ export default function PartnerWithUs({ isOpen, onClose }) {
 
     // Validate if form is filled
     if (
-      formInfo["org"] &&
-      formInfo["professional_email"] &&
       formInfo["full_name"] &&
-      formInfo["role"] &&
       formInfo["number"] &&
-      formInfo["website"] &&
-      formInfo["policyAccept"]
+      formInfo["email"] &&
+      formInfo["gender"]
     ) {
       let formData = new FormData();
       // Append form fields to the FormData object
@@ -65,7 +58,7 @@ export default function PartnerWithUs({ isOpen, onClose }) {
       }
 
       try {
-        const response = await axios.post(CORPORATE_JOIN_URI, formData);
+        const response = await axios.post(PARTNER_WITH_US_URI, formData);
         console.log(response.data);
         setSuccessMessage({
           status: response.data.status,
@@ -75,13 +68,10 @@ export default function PartnerWithUs({ isOpen, onClose }) {
         // Empty form after successfully sending data
         response.data.status == "success"
           ? setFormData({
-              org: "",
-              professional_email: "",
               full_name: "",
-              role: "",
+              email: "",
+              gender: "",
               number: "",
-              website: "",
-              policyAccept: "off",
             })
           : null;
       } catch (error) {
@@ -101,7 +91,7 @@ export default function PartnerWithUs({ isOpen, onClose }) {
 
   return (
     <section className="fixed inset-0 z-50 grid place-items-center bg-black/20">
-      <div className="corporate-form w-4/5 rounded-2xl bg-white p-6 lg:w-[620px]">
+      <div className="partner-with-us w-4/5 rounded-2xl bg-white p-6 lg:w-[620px]">
         <div className="text-center">
           <h2 className="subheading">Please Fill The Form</h2>
         </div>
@@ -116,40 +106,29 @@ export default function PartnerWithUs({ isOpen, onClose }) {
           >
             {successMessage.message}
           </p>
-          <label htmlFor="org">
-            <input
-              type="text"
-              name="org"
-              id="org"
-              placeholder="Name *"
-              className="form-input"
-              value={formInfo.org}
-              onChange={handleChange}
-            />
-          </label>
 
-          <label htmlFor="professional_email">
-            <input
-              type="text"
-              name="professional_email"
-              id="professional_email"
-              placeholder=" Email *"
-              className="form-input"
-              value={formInfo.professional_email}
-              onChange={handleChange}
-            />
-          </label>
-          {/* <label htmlFor="full_name">
+          <label htmlFor="full_name">
             <input
               type="number"
               name="full_name"
               id="full_name"
-              placeholder="Age *"
+              placeholder="Full Name *"
               className="form-input"
               value={formInfo.full_name}
               onChange={handleChange}
             />
-          </label> */}
+          </label>
+          <label htmlFor="email">
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder=" Email *"
+              className="form-input"
+              value={formInfo.email}
+              onChange={handleChange}
+            />
+          </label>
           <label htmlFor="gender">
             <select
               id="gender"
@@ -174,36 +153,6 @@ export default function PartnerWithUs({ isOpen, onClose }) {
               value={formInfo.number}
               onChange={handleChange}
             />
-          </label>
-          {/* <label htmlFor="website">
-            <input
-              type="text"
-              name="website"
-              id="website"
-              placeholder="Your Website *"
-              className="form-input"
-              value={formInfo.website}
-              onChange={handleChange}
-            />
-          </label> */}
-          <label htmlFor="policyAccept" className="mb-4 flex px-2">
-            <input
-              type="checkbox"
-              name="policyAccept"
-              className="mr-2"
-              id="policyAccept"
-              value={formInfo.policyAccept}
-              onChange={handleChange}
-            />
-            <span className="text-[8px] font-medium md:text-xs">
-              I understand & agree that the information submitted in this form
-              will be transmitted to, stored and processed by Wleness, in
-              accordance with their &nbsp;
-              <Link to="/privacy-policy" className="text-primary-400">
-                Privacy Policy
-              </Link>
-              .
-            </span>
           </label>
           <div className="grid grid-cols-2 justify-center lg:flex">
             <button
