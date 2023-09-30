@@ -12,6 +12,7 @@ export const USER_PROFILE_URI = URI + "user-profile";
 export const REQUEST_CALLBACK_URI = URI + "request-callback";
 export const CONTACT_URI = URI + "submit-contact";
 export const CAREER_URI = URI + "career-apply";
+export const PARTNER_WITH_US_URI = URI + "partner-with-us";
 
 // Experts
 export const EXPERTS_URI = URI + "get-experts";
