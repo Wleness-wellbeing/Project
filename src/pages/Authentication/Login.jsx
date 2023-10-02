@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { signInWithPopup } from "firebase/auth";
 import axios from "axios";
@@ -9,16 +9,18 @@ import { LOGIN_USER_URI } from "../../data/api";
 
 export default function Login({ setToken, token }) {
   const navigate = useNavigate();
-  // Redirect user if token is not available
+
+  // Redirect user if loggedin
   if (token && token !== "" && token !== undefined) {
-    navigate("/user/dashboard");
+    // Navigate to login
+    useEffect(() => {
+      navigate("/user/dashboard");
+    }, []);
   }
 
   const [formInfo, setFormData] = useState({
-    name: "",
     phone: "",
     password: "",
-    confirm_password: "",
   });
   const [successMessage, setSuccessMessage] = useState({
     status: "",
@@ -50,7 +52,6 @@ export default function Login({ setToken, token }) {
     signInWithPopup(auth, facebookProvider) // Use the Facebook provider
       .then((result) => {
         const user = result.user;
-        console.log(user);
 
         // Save user data to localStorage
         localStorage.setItem("user", JSON.stringify(user));
@@ -85,34 +86,21 @@ export default function Login({ setToken, token }) {
     e.preventDefault();
 
     // Validate if form is filled
-    if (
-      formInfo["name"] &&
-      formInfo["phone"] &&
-      formInfo["password"] &&
-      formInfo["confirm_password"]
-    ) {
-      // Check if passwords match
-      if (formInfo["password"] !== formInfo["confirm_password"]) {
-        setMessages("error", "Password doesn't match"); // set error message
-        return;
+    if (formInfo["phone"] && formInfo["password"]) {
+      // Append form fields to the FormData object
+      let formData = new FormData();
+      for (const key in formInfo) {
+        formData.append(key, formInfo[key]);
       }
-
-      // Create a user object with the desired data
-      const userData = {
-        name: formInfo.name,
-        email: user ? user.email : "", // You can update this based on your authentication method
-        photo: user ? user.photoURL : "", // You can update this based on your authentication method
-      };
 
       try {
         // Send user data to the backend
-        const response = await axios.post(SIGNUP_USER_URI, userData);
+        const response = await axios.post(LOGIN_USER_URI, formData);
         setMessages(response.data.status, response.data.message); // set success message
 
         // Empty form after successfully sending data
         if (response.data.status === "success") {
           setFormData({
-            name: "",
             phone: "",
             password: "",
           });

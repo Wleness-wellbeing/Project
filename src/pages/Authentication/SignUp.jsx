@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { iconFacebookCircle, iconGoogle, logo, signup } from "../../assets";
 import axios from "axios";
@@ -7,6 +7,16 @@ import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 import { signInWithPopup } from "firebase/auth";
 
 export default function Signup({ setToken, token }) {
+  const navigate = useNavigate();
+
+  // Redirect user if loggedin
+  if (token && token !== "" && token !== undefined) {
+    // Navigate to login
+    useEffect(() => {
+      navigate("/user/dashboard");
+    }, []);
+  }
+
   const [formInfo, setFormData] = useState({
     name: "",
     phone: "",
@@ -17,12 +27,6 @@ export default function Signup({ setToken, token }) {
     status: "",
     message: "",
   });
-
-  const navigate = useNavigate();
-  // Redirect user if token is not available
-  if (token && token !== "" && token !== undefined) {
-    navigate("/user/dashboard");
-  }
 
   // Update form value
   const handleChange = (e) => {
@@ -145,12 +149,6 @@ export default function Signup({ setToken, token }) {
           setToken(response.data.access_token);
           localStorage.setItem("phone", formInfo["phone"]);
           navigate("/user/dashboard");
-
-          // navigate("/login", {
-          //   state: {
-          //     successMessage: "Registration successful! Please log in.",
-          //   },
-          // });
         } else {
           setMessages(response.data.status, response.data.message);
         }
