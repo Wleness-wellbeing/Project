@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 export default function DoctorsCard(props) {
   const slug = `/experts/profile/${props.data.slug}`; // slug for profile
   const bookNow = `/experts/booking/${props.data.slug}`; // slug for booking
+
   return (
     <figure className="rounded-2xl rounded-br-[5rem] border-2 border-primary-300 bg-white p-3 transition-all hover:shadow-lg hover:shadow-primary-50">
       <div className="mb-1 flex">
@@ -56,7 +57,7 @@ export default function DoctorsCard(props) {
         </div>
         <div className="w-[65%] px-4 lg:w-3/5 3xl:px-6">
           <Link
-            to="https://appointment-wleness.dayschedule.com/meeting-with-wleness"
+            to="https://deba-shree.dayschedule.com/talk-with-debashree-das-gupta"
             className="block w-fit rounded-full bg-primary-400 px-4 py-2.5 text-center text-xs font-semibold text-white transition-all hover:bg-primary-300 lg:px-6 lg:py-2.5 lg:text-sm"
           >
             Book Now

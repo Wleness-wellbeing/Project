@@ -60,7 +60,12 @@ import homeMusicalTherapy from "./images/home/home-service-7.png";
 import homeInternship from "./images/home/home-service-8.png";
 import homeSelfcare from "./images/home/home-service-9.png";
 
+import mainforteRight from "./images/mainforteRight.png"
+import suggestionRight from "./images/suggestionRight.png"
+
+
 export {
+  mainforteRight,suggestionRight,
   mainHeaderImage,
   iconCommunity,
   iconEasyAccess,

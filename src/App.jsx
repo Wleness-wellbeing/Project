@@ -64,6 +64,7 @@ import Consent from "./pages/Policies/Consent";
 import { coachesData } from "./data/coach";
 import CoachSubpage from "./pages/Coaches/CoachSubpage";
 import ApplyForm from "./components/JoinUs/ApplyForm";
+import TabSwitcher from "./components/SwitchTab";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -213,6 +214,14 @@ function App() {
           element={
             <Layout>
               <Experts />
+            </Layout>
+          }
+        />
+        <Route
+          path="/tab-switch"
+          element={
+            <Layout>
+              <TabSwitcher />
             </Layout>
           }
         />
