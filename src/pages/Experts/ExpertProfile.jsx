@@ -133,7 +133,10 @@ export default function ExpertProfile() {
       </header>
 
       {/* <BookAppointment /> */}
-      <SelectPricing slug={"/experts/booking/" + profileDetails.slug} />
+      <SelectPricing
+        slug={"/experts/booking/" + profileDetails.slug}
+        bookingUrl={profileDetails.bookingUrl}
+      />
       <DoctorStatistics />
 
       <section className="container mx-auto gap-x-6 lg:flex">

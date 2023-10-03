@@ -6,7 +6,7 @@ import axios from "axios";
 import { modes, timings } from "../../data/doctors";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function SelectPricing({ slug }) {
+export default function SelectPricing({ slug, bookingUrl }) {
   const [selectDuration, setSelectDuration] = useState(timings[0]["value"]);
   const [setMode, setSelectMode] = useState(modes[0]["value"]);
   const [selectedDate, setSelectedDate] = useState(null);
@@ -142,7 +142,11 @@ export default function SelectPricing({ slug }) {
               {successMessage.message}
             </p>
             <div className="text-center">
-              <Link to={slug} className="btn-one inline-block">
+              <Link
+                to={bookingUrl}
+                target="_blank"
+                className="btn-one inline-block"
+              >
                 Book an appointment now
               </Link>
             </div>
