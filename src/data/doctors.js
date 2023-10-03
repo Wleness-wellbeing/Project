@@ -14,6 +14,8 @@ import {
 
 export const doctorsDetails = [
   {
+    bookingLink:"https://wleness-4.dayschedule.com/meeting-with-swati-ghoswal",
+
     name: "Swati Ghoshal",
     image: swatiGhoshalPortrait,
     exp: "8+ years of experience",
@@ -28,6 +30,8 @@ export const doctorsDetails = [
     expertise: "Musical Healing",
     speaks: "Hindi, English & Bengali",
     slug: "debashree-das-gupta",
+    bookingLink:"https://wleness-4.dayschedule.com/meeting-with-debashree-das-gupta",
+
   },
   {
     name: "Purvi Balasaria",
@@ -36,6 +40,7 @@ export const doctorsDetails = [
     expertise: "Approach",
     speaks: "English, Hindi, Bengali",
     slug: "purvi-balasaria",
+    bookingLink:"https://wleness-4.dayschedule.com/meeting-with-purvi-balasaria",
   },
   {
     name: "Minakshi Mishra",
@@ -44,6 +49,8 @@ export const doctorsDetails = [
     expertise: "CBT, BT, Counseling, Mindfulness meditations",
     speaks: "Hindi, English",
     slug: "minakshi-mishra",
+    bookingLink:"https://wleness-4.dayschedule.com/meeting-with-minakshi-mishra",
+
   },
   {
     name: "Swati Ghoshal",
@@ -52,6 +59,8 @@ export const doctorsDetails = [
     expertise: "Couple Counselling, Corporate Training",
     speaks: "Hindi, English & Bengali",
     slug: "swati-ghoshal",
+    bookingLink:"https://wleness-4.dayschedule.com/meeting-with-swati-ghoswal",
+
   },
   {
     name: "Debashree Das Gupta",
@@ -60,6 +69,8 @@ export const doctorsDetails = [
     expertise: "Musical Healing",
     speaks: "Hindi, English & Bengali",
     slug: "debashree-das-gupta",
+    bookingLink:"https://wleness-4.dayschedule.com/meeting-with-debashree-das-gupta",
+
   },
   {
     name: "Purvi Balasaria",
@@ -68,6 +79,8 @@ export const doctorsDetails = [
     expertise: "Approach",
     speaks: "English, Hindi, Bengali",
     slug: "purvi-balasaria",
+    bookingLink:"https://wleness-4.dayschedule.com/meeting-with-purvi-balasaria",
+
   },
   {
     name: "Minakshi Mishra",
@@ -76,6 +89,8 @@ export const doctorsDetails = [
     expertise: "CBT, BT, Counseling, Mindfulness meditations",
     speaks: "Hindi, English",
     slug: "meenakshi-mishra",
+    bookingLink:"https://wleness-4.dayschedule.com/meeting-with-minakshi-mishra",
+
   },
   {
     name: "Swati Ghoshal",
@@ -84,6 +99,8 @@ export const doctorsDetails = [
     expertise: "Couple Counselling, Corporate Training",
     speaks: "Hindi, English & Bengali",
     slug: "swati-ghoshal",
+    bookingLink:"https://wleness-4.dayschedule.com/meeting-with-swati-ghoswal",
+
   },
   {
     name: "Debashree Das Gupta",
@@ -92,6 +109,8 @@ export const doctorsDetails = [
     expertise: "Musical Healing",
     speaks: "Hindi, English & Bengali",
     slug: "debashree-das-gupta",
+    bookingLink:"https://wleness-4.dayschedule.com/meeting-with-debashree-das-gupta",
+
   },
 ];
 
@@ -110,7 +129,7 @@ export const homePageDoctors = {
   doctors: doctorsDetails,
   button: {
     text: "Book Now",
-    slug: "/experts/booking/swati-ghoshal",
+    slug: "/experts/all",
   },
 };
 

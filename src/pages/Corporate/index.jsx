@@ -40,9 +40,9 @@ export default function index() {
 
             <button
               onClick={toggleForm}
-              className="btn-one !bg-[#0A99D6] hover:!bg-[#0F7CAB]"
+              className="btn-one !bg-[#0A99D6]  hover:!bg-[#0F7CAB]"
             >
-              Book Us Now
+              Enquiry now
             </button>
           </div>
         </div>
@@ -151,7 +151,7 @@ export default function index() {
                 className="btn-one !bg-[#0A99D6] hover:!bg-[#0F7CAB]"
                 onClick={toggleForm}
               >
-                Get a Callback
+                Enquiry now
               </button>
             </div>
           </div>
@@ -183,7 +183,7 @@ export default function index() {
               className="btn-one !bg-[#0A99D6] hover:!bg-[#0F7CAB]"
               onClick={toggleForm}
             >
-              Book Us Now
+              Enquiry now
             </button>
           </div>
         </div>
