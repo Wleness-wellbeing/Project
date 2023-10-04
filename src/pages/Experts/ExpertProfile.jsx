@@ -8,6 +8,7 @@ import HomeFaq from "../../components/Faq/HomeFaq";
 import axios from "axios";
 import { EXPERTS_URI } from "../../data/api";
 import SelectPricing from "../../components/Forms/SelectPricing";
+import TabSwitcher from "../../components/ExpertTabSwitcher";
 
 const doctorsForte = [
   "Evidence based therapy expertise",
@@ -139,7 +140,7 @@ export default function ExpertProfile() {
       />
       <DoctorStatistics />
 
-      <section className="container mx-auto gap-x-6 lg:flex">
+      {/* <section className="container mx-auto gap-x-6 lg:flex">
         <div className="mb-6 lg:mb-0 lg:w-1/2">
           <h2 className="mb-4 text-center text-2xl font-bold lg:mb-10 lg:text-3xl">
             Expert's Main <span className="heading-primary">Forte</span>
@@ -174,7 +175,8 @@ export default function ExpertProfile() {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
+      <TabSwitcher />
 
       <h4 className="container mx-auto pb-6 pt-12 text-center text-2xl font-bold lg:text-4xl">
         <span>Looking for different service </span>
