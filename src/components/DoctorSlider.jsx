@@ -24,6 +24,12 @@ export default function DoctorSlider(props) {
       .then((response) => {
         let data = response.data["experts"];
         // Handle the successful response
+        data.forEach((element) => {
+          data.push(element);
+        });
+        data.forEach((element) => {
+          data.push(element);
+        });
         data.length >= 10 ? (data.length = 10) : "";
         setExperts(data);
       })
