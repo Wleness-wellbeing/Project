@@ -21,7 +21,8 @@ export default function ActivityLayout(props) {
         image={props.header.image}
         desc={props.header.desc}
         handleScrollToComponent={() => handleScrollToComponent()}
-        isButton={true}
+        isEnquiry={true}
+        displayButton={true}
         button={["Explore More"]}
       />
       <ActivityTechniques

@@ -5,14 +5,58 @@ import {
   faEllipsis,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { dashboardDoctor } from "../../assets";
 import PatientListItem from "../../components/list/PatientListItem";
 import { patientsList } from "../../data/patients";
 import PatientItem from "../../components/list/PatientItem";
 import UpcomingMeets from "../../components/list/UpcomingMeets";
+import { EXPERTS_PROFILE_URI, EXPERTS_URI } from "../../data/api";
+import axios from "axios";
 
-export default function DoctorDashboard() {
+export default function DoctorDashboard({ token, setToken }) {
+  const [loading, setLoading] = useState(true); // set loading screen
+  const [profileDetails, setProfileDetails] = useState({
+    // set profile detals
+    name: "",
+    email: "",
+    image: "",
+  });
+  // ======== Get user appointments and details ===========
+  const user_id = localStorage.getItem("wleness_experts_id");
+  const url = EXPERTS_PROFILE_URI + user_id;
+
+  useEffect(() => {
+    // Make a GET request using Axios
+    axios
+      .get(url, {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      })
+      .then((response) => {
+        if (response.status == 200) {
+          setProfileDetails({
+            // set profile detals
+            name: response.data.name,
+            email: response.data.email,
+            image: response.data.image,
+          });
+          localStorage.setItem("username", response.data.name);
+          setLoading(false);
+          console.log(response.data.message);
+        }
+      })
+      .catch((error) => {
+        // Handle errors
+        console.error("Error fetching doctor details:", error);
+      });
+  }, []);
+
+  if (loading) {
+    return <div className="mb-5 text-center">Loading...</div>;
+  }
+
   return (
     <section className="flex gap-5">
       <div className="w-[65%]">
@@ -21,7 +65,7 @@ export default function DoctorDashboard() {
           <h1 className="mb-3">
             <span className="text-2xl font-medium">Good Morning </span>
             <span className="text-3xl font-semibold text-primary-300">
-              Dr. Tim!
+              {profileDetails.name}
             </span>
           </h1>
 

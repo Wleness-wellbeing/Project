@@ -11,6 +11,7 @@ import { profile } from "../../assets";
 
 export default function DesktopNavbar({ toggleJoinUs, token }) {
   const userName = localStorage.getItem("username");
+  const user_type = localStorage.getItem("wleness_user_type");
 
   return (
     <>
@@ -41,11 +42,11 @@ export default function DesktopNavbar({ toggleJoinUs, token }) {
           </Link>
         ) : (
           <Link
-            to="/user/dashboard"
+            to={user_type == "expert" ? "/doctor/dashboard" : "/user/dashboard"}
             className="btn-primary flex !w-fit !rounded-full !bg-primary-400 !py-2.5 font-semibold hover:!bg-primary-300"
           >
             <img src={profile} alt="" className="mr-1 w-5 rounded-full" />
-            <span className="text-sm">{userName}</span>
+            <span className="text-sm">{userName.split(" ")[0]}</span>
           </Link>
         )}
       </div>

@@ -39,21 +39,29 @@ export default function ActivityHeader(props) {
               >
                 {props.button[0]}
               </button>
-              <button
-                className="btn-one inline-block border-2 !border-primary-400 !bg-transparent !py-2 !text-[#383838] hover:!bg-primary-400 hover:!text-white lg:!w-fit"
-                onClick={toggleForm}
-              >
-                Enquire Now
-              </button>
+              {props.displayButton ? (
+                props.isEnquiry ? (
+                  <button
+                    className="btn-one inline-block border-2 !border-primary-400 !bg-transparent !py-2 !text-[#383838] hover:!bg-primary-400 hover:!text-white lg:!w-fit"
+                    onClick={toggleForm}
+                  >
+                    Enquire Now
+                  </button>
+                ) : (
+                  <Link
+                    target="_blank"
+                    to="https://deba-shree.dayschedule.com/talk-with-debashree-das-gupta"
+                    className="btn-one inline-block border-2 !border-primary-400 !bg-transparent !py-2 !text-[#383838] hover:!bg-primary-400 hover:!text-white lg:!w-fit"
+                  >
+                    Book Now
+                  </Link>
+                )
+              ) : (
+                ""
+              )}
             </div>
           </div>
         </div>
-
-        {/* BreadCrump */}
-        {/* <p className="absolute top-5 left-5 font-semibold text-lg">
-          <span>Activities / </span>
-          <span className="text-primary-400">Meditation</span>
-        </p> */}
       </header>
 
       <ActivityForm isOpen={enquiryForm} onClose={toggleForm} />

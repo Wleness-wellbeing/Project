@@ -4,10 +4,10 @@ import { signInWithPopup } from "firebase/auth";
 import axios from "axios";
 import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 // Data
-import { iconFacebookCircle, iconGoogle, login, logo } from "../../assets";
-import { LOGIN_USER_URI } from "../../data/api";
+import { login, logo } from "../../assets";
+import { EXPERTS_LOGIN_URI } from "../../data/api";
 
-export default function Login({ setToken, token }) {
+export default function ExpertsLogin({ setToken, token }) {
   const navigate = useNavigate();
 
   // Redirect user if loggedin
@@ -19,7 +19,7 @@ export default function Login({ setToken, token }) {
   }
 
   const [formInfo, setFormData] = useState({
-    phone: "",
+    user_id: "",
     password: "",
   });
   const [successMessage, setSuccessMessage] = useState({
@@ -27,44 +27,7 @@ export default function Login({ setToken, token }) {
     message: "",
   });
 
-  const [user, setUser] = useState(null);
-
-  // ===================Google Login ==========================//
-  const handleGoogleSignIn = () => {
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
-
-        // Save user data to localStorage
-        localStorage.setItem("user", JSON.stringify(user));
-
-        // Redirect to the home page
-        navigate("/"); // Replace "/" with the appropriate home page route
-      })
-      .catch((error) => {
-        console.error("Error signing in with Google:", error);
-      });
-  };
-
-  // ===================Facebook Login ==========================//
-  const handleFacebookSignIn = () => {
-    signInWithPopup(auth, facebookProvider) // Use the Facebook provider
-      .then((result) => {
-        const user = result.user;
-
-        // Save user data to localStorage
-        localStorage.setItem("user", JSON.stringify(user));
-
-        // Redirect to the home page
-        navigate("/"); // Replace "/" with the appropriate home page route
-      })
-      .catch((error) => {
-        console.error("Error signing in with Facebook:", error);
-      });
-  };
   // Set alert message
-
   const location = useLocation();
 
   // Update form value
@@ -86,7 +49,7 @@ export default function Login({ setToken, token }) {
     e.preventDefault();
 
     // Validate if form is filled
-    if (formInfo["phone"] && formInfo["password"]) {
+    if (formInfo["user_id"] && formInfo["password"]) {
       // Append form fields to the FormData object
       let formData = new FormData();
       for (const key in formInfo) {
@@ -95,20 +58,20 @@ export default function Login({ setToken, token }) {
 
       try {
         // Send user data to the backend
-        const response = await axios.post(LOGIN_USER_URI, formData);
+        const response = await axios.post(EXPERTS_LOGIN_URI, formData);
         setMessages(response.data.status, response.data.message); // set success message
 
         // Empty form after successfully sending data
         if (response.data.status === "success") {
           setFormData({
-            phone: "",
+            user_id: "",
             password: "",
           });
           setToken(response.data.access_token);
-          localStorage.setItem("phone", formInfo["phone"]);
-          localStorage.setItem("wleness_user_type", "user");
+          localStorage.setItem("wleness_experts_id", formInfo["user_id"]);
+          localStorage.setItem("wleness_user_type", "expert");
 
-          navigate("/user/dashboard");
+          navigate("/doctor/dashboard");
         } else {
           setMessages(response.data.status, response.data.message);
         }
@@ -165,15 +128,15 @@ export default function Login({ setToken, token }) {
               </p>
             )}
 
-            <label htmlFor="phone" className="mb-5 block">
+            <label htmlFor="user_id" className="mb-5 block">
               <input
                 type="tel"
-                id="phone"
+                id="user_id"
                 maxLength={10}
-                name="phone"
-                placeholder="Mobile Number"
+                name="user_id"
+                placeholder="User Id"
                 className="form-input"
-                value={formInfo.phone}
+                value={formInfo.user_id}
                 onChange={handleChange}
               />
             </label>
@@ -203,43 +166,6 @@ export default function Login({ setToken, token }) {
               </button>
             </div>
           </form>
-
-          <div className="md:px-16">
-            <div className="my-4 flex items-center justify-center gap-3">
-              <span className="h-[2px] w-28 bg-slate-200"></span>
-              <span className="text-sm font-medium">OR</span>
-              <span className="h-[2px] w-28 bg-slate-200"></span>
-            </div>
-            <div className="mb-6 flex justify-center gap-x-4">
-              <button
-                className="rounded-lg bg-primary-50/80 px-4 py-2 transition-colors hover:bg-primary-50"
-                onClick={handleGoogleSignIn}
-              >
-                <img src={iconGoogle} alt="" className="w-6" />
-              </button>
-              <button
-                className="rounded-lg bg-primary-50/80 px-4 py-2 transition-colors hover:bg-primary-50"
-                onClick={handleFacebookSignIn}
-              >
-                <img src={iconFacebookCircle} alt="" className="w-6" />
-              </button>
-            </div>
-            <p className="text-center font-medium">
-              <span>Don't have an account yet. </span>
-              <Link className="font-semibold text-primary-400" to="/signup">
-                Sign Up
-              </Link>
-            </p>
-            <p className="text-center font-medium">
-              <span>Login as an Expert. </span>
-              <Link
-                className="font-semibold text-primary-400"
-                to="/experts-login"
-              >
-                Login In
-              </Link>
-            </p>
-          </div>
         </div>
       </div>
     </main>

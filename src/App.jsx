@@ -65,6 +65,7 @@ import { coachesData } from "./data/coach";
 import CoachSubpage from "./pages/Coaches/CoachSubpage";
 import ApplyForm from "./components/JoinUs/ApplyForm";
 import TabSwitcher from "./components/SwitchTab";
+import ExpertsLogin from "./pages/Authentication/ExpertsLogin";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -377,62 +378,22 @@ function App() {
             </Layout>
           }
         />
-        {/* {!token && token !== "" && token !== undefined ? (
-          <>
-            <Route
-              path="/login"
-              element={
-                <SignupLayout>
-                  <Login setToken={setToken} />
-                </SignupLayout>
-              }
-            />
-            <Route
-              path="/signup"
-              element={
-                <SignupLayout>
-                  <SignUp setToken={setToken} />
-                </SignupLayout>
-              }
-            />
-          </>
-        ) : (
-          <>
-            <Route
-              path="/user/dashboard"
-              element={
-                <DashboardLayout>
-                  <UserDashboard token={token} setToken={setToken} />
-                </DashboardLayout>
-              }
-            />
-
-            <Route
-              path="/user/profile"
-              element={
-                <DashboardLayout>
-                  <Profile token={token} />
-                </DashboardLayout>
-              }
-            />
-            <Route
-              path="/community/chat"
-              element={
-                <DashboardLayout>
-                  <Chat />
-                </DashboardLayout>
-              }
-            />
-            <Route
-              path="/user/routine-care"
-              element={
-                <DashboardLayout>
-                  <RoutineCare />
-                </DashboardLayout>
-              }
-            />
-          </>
-        )} */}
+        <Route
+          path="/experts-login"
+          element={
+            <SignupLayout>
+              <ExpertsLogin setToken={setToken} token={token} />
+            </SignupLayout>
+          }
+        />
+        <Route
+          path="/doctor/dashboard"
+          element={
+            <DashboardLayout>
+              <DoctorDashboard token={token} setToken={setToken} />
+            </DashboardLayout>
+          }
+        />
         <Route
           path="/login"
           element={
@@ -512,14 +473,6 @@ function App() {
             <Layout>
               <PsychiatristJoining />
             </Layout>
-          }
-        />
-        <Route
-          path="/doctor/dashboard"
-          element={
-            <DashboardLayout>
-              <DoctorDashboard />
-            </DashboardLayout>
           }
         />
         <Route

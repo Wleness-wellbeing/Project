@@ -27,7 +27,8 @@ const ServicesTechniques = React.forwardRef((props, ref) => {
           </p>
           <div className="mt-2 text-center">
             <Link
-              to="/appointment/checkout"
+              to="https://deba-shree.dayschedule.com/talk-with-debashree-das-gupta"
+              target="_blank"
               className="btn-one inline-block !py-2"
             >
               Book Now

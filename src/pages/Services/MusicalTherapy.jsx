@@ -16,6 +16,7 @@ import Assessment from "../../components/Assessment";
 import MusicalTherapyComponent from "../../components/MusicalTherapyComponent";
 //image
 import { musicalelipse1, musicalelipse2, musicalelipse3 } from "../../assets";
+
 export default function MusicalTherapy() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
   const openAssessmentModal = () => {
@@ -38,7 +39,8 @@ export default function MusicalTherapy() {
         desc={MusicalTherapyData.header.desc}
         handleScrollToComponent={() => handleScrollToComponent()}
         openAssessmentModal={openAssessmentModal}
-        isButton={true}
+        isEnquiry={false}
+        displayButton={true}
         button={["Explore More"]}
       />
       <p ref={ref}></p>

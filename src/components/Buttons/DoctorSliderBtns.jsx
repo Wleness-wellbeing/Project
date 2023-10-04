@@ -19,7 +19,7 @@ export default function DoctorSliderBtns({ text, slug }) {
           className="text-2xl text-primary-300 lg:text-4xl"
         />
       </button> */}
-      <Link to={slug} className="btn-one mx-auto">
+      <Link to={slug} target="_blank" className="btn-one mx-auto">
         {text}
       </Link>
       {/* <button

@@ -7,6 +7,7 @@ export const SIGNUP_USER_URI = URI + "signup";
 export const LOGIN_USER_URI = URI + "login";
 export const LOGOUT_USER_URI = URI + "logout";
 export const USER_PROFILE_URI = URI + "profile";
+export const EXPERTS_LOGIN_URI = URI + "experts-login";
 
 // Leads
 export const REQUEST_CALLBACK_URI = URI + "request-callback";
@@ -16,6 +17,7 @@ export const PARTNER_WITH_US_URI = URI + "partner-with-us";
 
 // Experts
 export const EXPERTS_URI = URI + "experts";
+export const EXPERTS_PROFILE_URI = URI + "experts/profile/";
 export const USER_APPOINTMENTS = URI + "appointments";
 export const COACH_CALLBACK_URI = URI + "coach-callback-requests";
 

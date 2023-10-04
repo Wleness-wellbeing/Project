@@ -15,6 +15,7 @@ import useToken from "../../utils/useToken";
 export default function AdminSideBar({ isOpen, toggle }) {
   const { removeToken } = useToken();
   const navigate = useNavigate();
+  const wleness_user_type = localStorage.getItem("wleness_user_type");
 
   const logMeOut = async () => {
     try {
@@ -22,7 +23,13 @@ export default function AdminSideBar({ isOpen, toggle }) {
       if (response.data.status === "success") {
         // Clear user data from local storage
         removeToken();
-        localStorage.removeItem("phone");
+        if (wleness_user_type == "expert") {
+          localStorage.removeItem("wleness_experts_id");
+        } else {
+          localStorage.removeItem("phone");
+        }
+        localStorage.removeItem("wleness_user_type");
+        localStorage.removeItem("username");
         window.location = "/";
         // navigate("/login");
       }
@@ -30,6 +37,11 @@ export default function AdminSideBar({ isOpen, toggle }) {
       console.error(error);
     }
   };
+
+  let dashbaordLinks = userDashboardLinks;
+  if (wleness_user_type == "expert") {
+    dashbaordLinks = [];
+  }
 
   return (
     <aside
@@ -48,7 +60,7 @@ export default function AdminSideBar({ isOpen, toggle }) {
       </Link>
 
       <ul className="space-y-2">
-        {userDashboardLinks.map((value, i) => {
+        {dashbaordLinks.map((value, i) => {
           return (
             <Link
               key={i}

@@ -131,6 +131,8 @@ export default function Footer() {
             <Link to="/privacy-policy">Privacy Policy</Link>
             <span> | </span>
             <Link to="/terms-and-conditions">Terms & Conditions</Link>
+            <span> | </span>
+            <Link to="/cancellation">Cancellation</Link>
           </div>
           <div className="items-center justify-between md:flex">
             <div className="flex justify-center gap-x-4">
