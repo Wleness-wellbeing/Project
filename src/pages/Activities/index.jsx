@@ -6,9 +6,6 @@ import {
   sadhna,
   yoga,
   activitiesHeader,
-  activitiesExplore1,
-  activitiesExplore2,
-  activitiesExplore3,
 } from "../../assets";
 import { Link } from "react-router-dom";
 import ActivityCards from "../../components/ActivityCards";
@@ -86,7 +83,7 @@ function Activities() {
           </Link>
         </div>
         <div className="absolute left-[335px] top-0 z-10 w-44 drop-shadow-xl transition-all hover:z-20 hover:scale-105 lg:left-[491px] lg:w-64 xl:left-[575px] xl:w-80">
-          <Link to="/activities/self-care">
+          <Link to="/user/dashboard">
             <h2 className="pl-8 text-xl font-semibold text-[#f2ceae]">
               Self Care
             </h2>

@@ -62,7 +62,7 @@ export default function Home() {
           <div className="container mx-auto">
             <h2 className="sm:pb-0 xl:pb-1">
               <span className="subheading heading-primary">
-                World Is Your Stage
+                The World Is Your Stage
               </span>
             </h2>
             <p className="para">

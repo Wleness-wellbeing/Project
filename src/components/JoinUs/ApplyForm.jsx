@@ -82,9 +82,8 @@ export default function ApplyForm({ name, url }) {
     <section className="container mx-auto pt-12">
       <div className="mb-6 text-center">
         <h2 className="subheading">
-          <span>Join</span>
-          <span className="heading-primary"> Wleness {name}'s </span>
-          <span>Team</span>
+          <span>Join as a </span>
+          <span className="heading-primary"> Wleness {name} </span>
         </h2>
         <p className="para">
           Take the next step in joining our team by completing a form, allowing

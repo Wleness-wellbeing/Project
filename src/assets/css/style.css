@@ -122,8 +122,12 @@ a {
 }
 
 /* Swiper Styles */
+/* ---- Pagination  */
 .swiper-pagination {
   @apply !-bottom-8 lg:!bottom-0;
+}
+.blog-categories .swiper-pagination {
+  @apply !-bottom-8 lg:!-bottom-10;
 }
 .mythsAndFacts .swiper-pagination {
   @apply !-bottom-10;

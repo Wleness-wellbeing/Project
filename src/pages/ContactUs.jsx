@@ -21,16 +21,16 @@ export default function ContactUs() {
         </div>
       </header>
 
-      <section className="container mx-auto space-y-5 py-8 text-justify font-medium">
+      <section className="container mx-auto space-y-5 py-8 font-medium">
         <ContactForm />
         <div>
-          <div className="my-6 flex items-center justify-center">
+          <div className="my-6 flex items-center">
             <h1 className="subheading heading-primary text-center">
               Have a question? Talk to us
             </h1>
           </div>
 
-          <div className="grid grid-cols-1 items-center justify-center gap-4 sm:grid-cols-2 md:grid-cols-3">
+          <div className="grid grid-cols-1 items-center gap-4 sm:grid-cols-2 md:grid-cols-3">
             <div className="text-center">
               <img className="mx-auto" src={about1}></img>
               <h2 className="text-lg font-semibold text-primary-400">

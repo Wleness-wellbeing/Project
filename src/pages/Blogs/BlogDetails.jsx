@@ -4,7 +4,6 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { SINGLE_BLOG_URI } from "../../data/api";
-import { blogDetailsHero } from "../../assets";
 
 export default function BlogDetails() {
   const { slug } = useParams();
@@ -23,6 +22,7 @@ export default function BlogDetails() {
       .catch((error) => {
         // Handle errors
         setLoading(false);
+        console.error(error);
       });
   }, []);
 
@@ -38,7 +38,7 @@ export default function BlogDetails() {
             <img
               src={blogDetails.image}
               alt=""
-              className="h-72 w-full rounded-3xl object-cover object-top"
+              className="w-full rounded-3xl object-cover object-top"
             />
           </div>
           <h1 className="subheading">{blogDetails.title}</h1>

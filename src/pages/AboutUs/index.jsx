@@ -35,7 +35,7 @@ function AboutUs() {
   return (
     <main>
       <header
-        className="relative bg-cover bg-fixed bg-center  py-16 brightness-90  sm:h-auto lg:py-32"
+        className="relative bg-cover bg-top py-16 brightness-90  lg:py-32"
         style={{
           backgroundImage: `url(${aboutusbg}) `,
         }}
@@ -176,8 +176,8 @@ function AboutUs() {
             </h2>
           </div>
           <div className=" w-full  text-left md:ml-60 md:mr-0 md:w-2/4 md:text-justify lg:my-12">
-            <ul class="list-disc ">
-              <li class="item-start  flex ">
+            <ul className="list-disc ">
+              <li className="item-start  flex ">
                 <img
                   src={leaf}
                   alt="Leaf Icon"
@@ -188,7 +188,7 @@ function AboutUs() {
                   provides a single platform for all one needs.{" "}
                 </span>
               </li>
-              <li class=" flex items-start py-1">
+              <li className=" flex items-start py-1">
                 <img
                   src={leaf}
                   alt="Leaf Icon"
@@ -200,7 +200,7 @@ function AboutUs() {
                   and offering personalised solutions.{" "}
                 </span>
               </li>
-              <li class="flex items-start py-1">
+              <li className="flex items-start py-1">
                 <img
                   src={leaf}
                   alt="Leaf Icon"
@@ -213,7 +213,7 @@ function AboutUs() {
                   counseling-only approach.{" "}
                 </span>
               </li>
-              <li class="flex items-start py-1">
+              <li className="flex items-start py-1">
                 <img
                   src={leaf}
                   alt="Leaf Icon"
@@ -224,7 +224,7 @@ function AboutUs() {
                   conversations about mental wellness.
                 </span>
               </li>
-              <li class="flex items-start py-1">
+              <li className="flex items-start py-1">
                 <img
                   src={leaf}
                   alt="Leaf Icon"
@@ -235,7 +235,7 @@ function AboutUs() {
                   personal and professional growth.{" "}
                 </span>
               </li>
-              <li class="flex items-start py-1">
+              <li className="flex items-start py-1">
                 <img
                   src={leaf}
                   alt="Leaf Icon"

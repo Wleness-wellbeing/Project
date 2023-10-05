@@ -66,6 +66,7 @@ import CoachSubpage from "./pages/Coaches/CoachSubpage";
 import ApplyForm from "./components/JoinUs/ApplyForm";
 import TabSwitcher from "./components/SwitchTab";
 import ExpertsLogin from "./pages/Authentication/ExpertsLogin";
+import ForgotPassword from "./pages/Authentication/Forget";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -399,6 +400,14 @@ function App() {
           element={
             <SignupLayout>
               <Login setToken={setToken} token={token} />
+            </SignupLayout>
+          }
+        />
+        <Route
+          path="/forgot-password"
+          element={
+            <SignupLayout>
+              <ForgotPassword setToken={setToken} token={token} />
             </SignupLayout>
           }
         />

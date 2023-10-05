@@ -45,15 +45,15 @@ function ContactForm() {
           <h3 className="font-medium text-[#464646] opacity-80 lg:text-lg">
             Need an expert's consulting?
           </h3>
-          <h1 className="font-quicksand text-4xl font-bold leading-tight tracking-tight text-[#464646] opacity-90 xl:text-5xl">
-            Request a Call Back Now
+          <h1 className="font-quicksand text-4xl font-bold leading-tight tracking-tight text-[#464646] opacity-90 xl:text-4xl">
+            Request a Call Back
           </h1>
 
           <p className="pt-2 text-slate-700 opacity-90 lg:text-xl">
             Talk to your mental health professional.
           </p>
         </div>
-        <div className="mt-10 items-center sm:flex">
+        <div className="mt-5 items-center sm:flex">
           <img
             className="mb-2 w-24 object-cover sm:mr-6"
             src={requestCallback}

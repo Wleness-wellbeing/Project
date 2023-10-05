@@ -17,6 +17,7 @@ import {
 } from "../../data/blogs";
 import { BLOGS_URI } from "../../data/api";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const allBlogs = [
   ...navigatingMidlifeForWomenBlogs,
@@ -26,7 +27,10 @@ const allBlogs = [
 
 export default function Blogs() {
   const [blogPosts, setBlogPosts] = useState([]);
+  const [recentPosts, setRecentPosts] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  let categoryFilters = [];
 
   useEffect(() => {
     // Make a GET request using Axios
@@ -35,7 +39,8 @@ export default function Blogs() {
       .then((response) => {
         if (response.status == 200) {
           setBlogPosts(response.data.blogs);
-          console.log(response.data.blogs);
+          setRecentPosts(response.data.recent_blogs);
+          console.log(response.data.recent_blogs.reverse());
           setLoading(false);
         } else {
           console.log(response);
@@ -52,8 +57,6 @@ export default function Blogs() {
     return <div className="mb-5 text-center">Loading...</div>;
   }
 
-  const recentBlogs = [1, 2, 3, 4, 5];
-
   const blogFilterValues = [
     allBlogs,
     navigatingMidlifeForWomenBlogs,
@@ -68,12 +71,11 @@ export default function Blogs() {
   ];
   const handleBlogsFilter = (index) => {
     console.log(index);
-    setBlogs(blogFilterValues[index]);
   };
   return (
     <>
       {/* ========== Header ============= */}
-      <header className="bg-primary-50/40 py-5">
+      <header className="bg-primary-50/40 px-4 py-5">
         <div className="text-center">
           <h1 className="subheading heading-primary">Our Blogs</h1>
         </div>
@@ -94,53 +96,72 @@ export default function Blogs() {
       </header>
 
       {/* =========== Recent Blog ========= */}
-      <section className="container mx-auto py-8 lg:!px-0">
+      <section className="container mx-auto py-8 lg:!px-0 lg:pb-20 lg:pt-12">
         <Swiper
           modules={[Pagination]}
           slidesPerView={1}
-          className="blog-categories !overflow-x-clip overflow-y-visible pb-2 lg:pb-14"
+          className="blog-categories !overflow-x-clip overflow-y-visible"
           pagination={{ clickable: true }}
         >
-          {recentBlogs.map((value, i) => {
-            return (
-              <SwiperSlide key={i}>
-                <div className="items-center rounded-xl lg:flex">
-                  <div className="lg:w-3/5">
-                    <img src={blogRecent} className="w-full object-cover"></img>
-                  </div>
-                  <div className="pt-3 xs:w-full sm:w-full lg:w-2/5 lg:pl-12">
-                    <h2 className="pb-2 text-xl font-bold lg:pb-6 lg:text-5xl">
-                      Maintain a good habit with yourself
-                    </h2>
-                    <p className="text-lg font-medium">
-                      <span className="mr-1">
-                        Lorem ipsum dolor sit amet consectetur. Neque turpis
-                        faucibus eget magna est.Neque turpis faucibus eget magna
-                        est.
-                      </span>
-                      <span className="text-base font-bold text-primary-500">
-                        Read More
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
-            );
-          })}
+          {recentPosts
+            ? recentPosts.map((value, i) => {
+                let slug = "/blog/" + value.slug;
+                return (
+                  <SwiperSlide key={i}>
+                    <div className="items-center rounded-xl lg:flex">
+                      <Link className="inline-block lg:w-1/2" to={slug}>
+                        <img src={blogRecent} className="w-full object-cover" />
+                      </Link>
+                      <div className="pt-3 xs:w-full sm:w-full lg:w-1/2 lg:pl-12">
+                        <p className="mb-2 font-semibold text-primary-300 lg:text-lg">
+                          {value.category}
+                        </p>
+                        <h2 className="mb-2 text-xl font-bold lg:mb-4 lg:text-4xl">
+                          <Link to={slug}>{value.title}</Link>
+                        </h2>
+                        <p className="text-lg font-medium">
+                          <span className="mr-2">
+                            {value.desc.length >= 150
+                              ? value.desc.slice(0, 150) + "..."
+                              : value.desc}
+                          </span>
+                          <Link
+                            to={slug}
+                            className="text-base font-bold text-primary-500"
+                          >
+                            Read More
+                          </Link>
+                        </p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                );
+              })
+            : ""}
         </Swiper>
       </section>
 
       {/* Filterable Blogs */}
       <section className="container mx-auto lg:!px-0">
-        <ul className="flex flex-wrap justify-center gap-2 pb-8 pt-12 lg:justify-between lg:gap-x-14 lg:gap-y-6 lg:pt-5 2xl:py-8">
-          {blogFilters.map((value, index) => {
-            return (
-              <li key={index} onClick={() => handleBlogsFilter(index)}>
-                <span className="inline-block cursor-pointer rounded-3xl bg-primary-50/50 px-6 py-2.5 text-xs font-bold text-slate-900 transition-colors hover:bg-primary-50 md:text-base">
-                  {value}
-                </span>
-              </li>
-            );
+        <ul className="flex flex-wrap justify-center gap-2 pb-8 pt-5 lg:gap-x-14 lg:gap-y-6 lg:pt-0 2xl:pb-8">
+          <li onClick={() => handleBlogsFilter(index)}>
+            <span className="inline-block cursor-pointer rounded-3xl bg-primary-50/50 px-6 py-2.5 text-xs font-bold text-slate-900 transition-colors hover:bg-primary-50 md:text-base">
+              All
+            </span>
+          </li>
+          {blogPosts.map((value, index) => {
+            if (!categoryFilters.includes(value.category)) {
+              categoryFilters.push(value.category);
+              return (
+                <li key={index} onClick={() => handleBlogsFilter(value.id)}>
+                  <span className="inline-block cursor-pointer rounded-3xl bg-primary-50/50 px-6 py-2.5 text-xs font-bold text-slate-900 transition-colors hover:bg-primary-50 md:text-base">
+                    {value.category}
+                  </span>
+                </li>
+              );
+            } else {
+              return null;
+            }
           })}
         </ul>
 

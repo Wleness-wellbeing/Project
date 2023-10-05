@@ -76,10 +76,10 @@ export default function Cancellation() {
           trs={[
             [
               "At least 24 hours in advance of the scheduled session",
-              "Free Reschedule",
+              "Within 24 hours of the scheduled session",
             ],
             [
-              "Within 24 hours of the scheduled session",
+              "Free Reschedule",
               "Needs to be booked as a new session and make payment for the same if applicable",
             ],
           ]}

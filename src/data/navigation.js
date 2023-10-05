@@ -165,7 +165,7 @@ export const footerLocation = [
   ],
   ["www.wleness.com", "https://wleness.com/", faGlobe],
   ["hello@wleness.com", "mailto:hello@wleness.com", faEnvelope],
-  ["+91 8764387421", "tel:+918764387421", faPhone],
+  ["+91 6394770176", "tel:+916394770176", faPhone],
 ];
 
 // Footer - About Wleness
@@ -211,7 +211,6 @@ export const footerFocusAreas = [
 export const footerOurExperts = [
   ["Therapists", "/services/therapy"],
   ["Psychiatrists", "/services/psychiatrist"],
-  ["Couple Therapists", "/services/couples-therapy"],
   ["Coaches", "/executive-coaching"],
 ];
 
@@ -239,7 +238,7 @@ export const adminSidebar = [
 export const userDashboardLinks = [
   ["Home", "/user/dashboard", faHome],
   ["Profile", "/user/profile", faUser],
-  // ["Self Care", "/self-care", faHeartCircleCheck],
+  // ["Self Care", "/user/dashboard", faHeartCircleCheck],
   // ["Routine Care", "/user/routine-care", faBookBookmark],
   ["Routine Care", "/user/routine-care", faClipboardList],
   ["Community", "/community/chat", faUsers],

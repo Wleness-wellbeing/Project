@@ -26,7 +26,7 @@ const ActivityCards = () => {
       paragraph:
         "In our fast-paced world, find inner balance through self-discovery. Self-care is your delightful journey. Pamper yourself, empower self-love, and let your inner radiance shine. You deserve it! Treat yourself to self-care today.",
       buttonText: "Start the care",
-      slug: "/self-care",
+      slug: "/user/dashboard",
     },
   ];
 

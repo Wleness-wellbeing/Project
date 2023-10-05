@@ -20,6 +20,7 @@ export default function Signup({ setToken, token }) {
   const [formInfo, setFormData] = useState({
     name: "",
     phone: "",
+    email: "",
     password: "",
     confirm_password: "",
   });
@@ -123,6 +124,7 @@ export default function Signup({ setToken, token }) {
     if (
       formInfo["name"] &&
       formInfo["phone"] &&
+      formInfo["email"] &&
       formInfo["password"] &&
       formInfo["confirm_password"]
     ) {
@@ -148,6 +150,7 @@ export default function Signup({ setToken, token }) {
           setFormData({
             name: "",
             phone: "",
+            email: "",
             password: "",
             confirm_password: "",
           });
@@ -213,6 +216,18 @@ export default function Signup({ setToken, token }) {
                 name="phone"
                 placeholder="Mobile"
                 value={formInfo.phone}
+                onChange={handleChange}
+                className="form-input"
+              />
+            </label>
+
+            <label htmlFor="email">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                value={formInfo.email}
                 onChange={handleChange}
                 className="form-input"
               />
