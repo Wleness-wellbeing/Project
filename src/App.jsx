@@ -65,6 +65,8 @@ import { coachesData } from "./data/coach";
 import CoachSubpage from "./pages/Coaches/CoachSubpage";
 import ApplyForm from "./components/JoinUs/ApplyForm";
 import TabSwitcher from "./components/SwitchTab";
+import { GameEmbed2, GameEmbed } from "./components/Game";
+import ForgotPassword from "./pages/Authentication/Forget";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -149,6 +151,22 @@ function App() {
           element={
             <Layout>
               <Gauth />
+            </Layout>
+          }
+        />
+        <Route
+          path="/game"
+          element={
+            <Layout>
+              <GameEmbed />
+            </Layout>
+          }
+        />
+        <Route
+          path="/game2"
+          element={
+            <Layout>
+              <GameEmbed2 />
             </Layout>
           }
         />
@@ -446,6 +464,14 @@ function App() {
           element={
             <SignupLayout>
               <SignUp setToken={setToken} token={token} />
+            </SignupLayout>
+          }
+        />
+        <Route
+          path="/forgot-password"
+          element={
+            <SignupLayout>
+              <ForgotPassword />
             </SignupLayout>
           }
         />

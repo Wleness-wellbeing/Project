@@ -40,7 +40,7 @@ export default function Login({ setToken, token }) {
         localStorage.setItem("user", JSON.stringify(user));
 
         // Redirect to the home page
-        navigate("/"); // Replace "/" with the appropriate home page route
+        navigate("/user/dashboard"); // Replace "/" with the appropriate home page route
       })
       .catch((error) => {
         console.error("Error signing in with Google:", error);
@@ -107,7 +107,7 @@ export default function Login({ setToken, token }) {
           setToken(response.data.access_token);
           localStorage.setItem("phone", formInfo["phone"]);
 
-          navigate("/user/dashboard");
+          navigate("/");
         } else {
           setMessages(response.data.status, response.data.message);
         }

@@ -97,7 +97,7 @@ const TabSwitcher = () => {
                     <img
                       src={leaf}
                       alt="Leaf Icon"
-                      className="mr-4 h-6 w-6 object-contain"
+                      className="mr-6 h-6 w-6 object-contain"
                     />
                   </div>
                   <div>
