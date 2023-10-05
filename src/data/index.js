@@ -3829,10 +3829,13 @@ export const brainExercise = {
   },
   activities: {
     title: "Brain Games",
+    
     desc: "Explore a range of brain-boosting exercises and activities, puzzles, techniques, and mental workouts tailored to enhance cognition and mental well-being, memory, focus, and overall brain health.",
     types: [
       {
         title: "The Turtle Hunter",
+        buttonLink:"https://zv1y2i8p.play.gamezop.com/g/hfPOimYqY?_gl=1*jg57ya*_ga*MTgwMjE2MTc3Ny4xNjk2NTA4MTI5*_ga_2MDW41Z2GK*MTY5NjUwODEyOS4xLjEuMTY5NjUwODU5MS42MC4wLjA.",
+
         thumbnail: brainGameHunter,
         desc: "Welcome to Turtle Treasure Dash, an exciting adventure game where you control a brave and agile turtle on a quest to collect shimmering coins while navigating through a challenging obstacle course. Join our little hero on an epic journey through various terrains, from lush forests to treacherous caves and beyond, in search of precious treasure!",
         slug: "/",
@@ -3840,6 +3843,8 @@ export const brainExercise = {
       },
       {
         title: "Galaxy - The Space Adventure",
+       
+        buttonLink:"https://zv1y2i8p.play.gamezop.com/g/B1MXhUFQke?_gl=1*bzevu1*_ga*MTgwMjE2MTc3Ny4xNjk2NTA4MTI5*_ga_2MDW41Z2GK*MTY5NjUwODEyOS4xLjEuMTY5NjUwODM4MS41Mi4wLjA.",
         thumbnail: brainGameGalaxy,
         desc: "Embark on an interstellar journey beyond the boundaries of the known universe in Galactic Odyssey, an epic space adventure game that will take you to the stars and beyond. Strap into your advanced spaceship and prepare for an unforgettable voyage through dazzling galaxies, treacherous asteroid fields, and enigmatic wormholes.",
         slug: "/",
@@ -3847,6 +3852,8 @@ export const brainExercise = {
       },
       {
         title: "Treasure Chest",
+        buttonLink:"https://zv1y2i8p.play.gamezop.com/g/H1WmafkP9JQ?_gl=1*hxc13t*_ga*MTgwMjE2MTc3Ny4xNjk2NTA4MTI5*_ga_2MDW41Z2GK*MTY5NjUwODEyOS4xLjEuMTY5NjUwODIxNy42MC4wLjA.",
+
         thumbnail: brainGameTreasure,
         desc: "Get ready for a thrilling and immersive treasure hunt like no other in 'Treasure Quest Adventures,' an action-packed game that will take you on a mesmerizing journey to uncover hidden riches and long-lost artifacts in mysterious lands. Embark on an epic quest filled with puzzles, challenges, and danger, as you set out to become the greatest treasure hunter the world has ever known!",
         slug: "/",

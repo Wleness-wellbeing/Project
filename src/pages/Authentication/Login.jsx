@@ -130,7 +130,7 @@ export default function Login({ setToken, token }) {
           localStorage.setItem("wleness_user_type", "user");
           localStorage.setItem("login_type", "password");
 
-          navigate("/user/dashboard");
+          navigate("/");
         } else {
           setMessages(response.data.status, response.data.message);
         }

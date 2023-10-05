@@ -154,6 +154,7 @@ function App() {
             </Layout>
           }
         />
+
         <Route
           path="/facebook"
           element={
@@ -416,6 +417,14 @@ function App() {
           element={
             <SignupLayout>
               <SignUp setToken={setToken} token={token} />
+            </SignupLayout>
+          }
+        />
+        <Route
+          path="/forgot-password"
+          element={
+            <SignupLayout>
+              <ForgotPassword />
             </SignupLayout>
           }
         />
