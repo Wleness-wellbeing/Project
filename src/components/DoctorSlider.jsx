@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 // Data
 import { textColorize } from "../utils";
 import { EXPERTS_URI } from "../data/api";
+import { doctorsDetails } from "../data/doctors";
 
 export default function DoctorSlider(props) {
   const [swiper, setSwiper] = useState(null); // Store Swiper instance
@@ -17,27 +18,27 @@ export default function DoctorSlider(props) {
   const navigate = useNavigate();
 
   // Fetch Doctors list
-  useEffect(() => {
-    // Make a GET request using Axios
-    axios
-      .get(EXPERTS_URI)
-      .then((response) => {
-        let data = response.data["experts"];
-        // Handle the successful response
-        data.forEach((element) => {
-          data.push(element);
-        });
-        data.forEach((element) => {
-          data.push(element);
-        });
-        data.length >= 10 ? (data.length = 10) : "";
-        setExperts(data);
-      })
-      .catch((error) => {
-        // Handle errors
-        console.error("Error fetching doctor details:", error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   // Make a GET request using Axios
+  //   axios
+  //     .get(EXPERTS_URI)
+  //     .then((response) => {
+  //       let data = response.data["experts"];
+  //       // Handle the successful response
+  //       data.forEach((element) => {
+  //         data.push(element);
+  //       });
+  //       data.forEach((element) => {
+  //         data.push(element);
+  //       });
+  //       // data.length >= 10 ? (data.length = 10) : "";
+  //       setExperts(data);
+  //     })
+  //     .catch((error) => {
+  //       // Handle errors
+  //       console.error("Error fetching doctor details:", error);
+  //     });
+  // }, []);
 
   // Show Active Image content
   const hideOtherImages = (e) => {
@@ -52,6 +53,7 @@ export default function DoctorSlider(props) {
       doctorSlidesContent.forEach((element) => {
         element.style.display = "none";
       });
+      // console.log(activeSlide);
       doctorSlidesContent[activeSlide].style.display = "block";
     }
   };
@@ -117,7 +119,7 @@ export default function DoctorSlider(props) {
           onSwiper={(swiper) => setSwiper(swiper)} // Store Swiper instance
           speed={600}
         >
-          {experts.map((value, index) => {
+          {doctorsDetails.map((value, index) => {
             let slug = `/experts/profile/${value.slug}`;
             return (
               <SwiperSlide key={index}>
