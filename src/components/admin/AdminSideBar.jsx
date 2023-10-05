@@ -27,9 +27,11 @@ export default function AdminSideBar({ isOpen, toggle }) {
           localStorage.removeItem("wleness_experts_id");
         } else {
           localStorage.removeItem("phone");
+          localStorage.removeItem("email");
         }
         localStorage.removeItem("wleness_user_type");
         localStorage.removeItem("username");
+        localStorage.removeItem("login_type");
         window.location = "/";
         // navigate("/login");
       }

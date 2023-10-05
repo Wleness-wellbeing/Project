@@ -5,7 +5,7 @@ import axios from "axios";
 import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 // Data
 import { iconFacebookCircle, iconGoogle, login, logo } from "../../assets";
-import { LOGIN_USER_URI } from "../../data/api";
+import { GOOGLE_LOGIN_URI, LOGIN_USER_URI } from "../../data/api";
 
 export default function Login({ setToken, token }) {
   const navigate = useNavigate();
@@ -35,12 +35,7 @@ export default function Login({ setToken, token }) {
       .then((result) => {
         const user = result.user;
         console.log(user);
-
-        // Save user data to localStorage
-        localStorage.setItem("user", JSON.stringify(user));
-
-        // Redirect to the home page
-        navigate("/"); // Replace "/" with the appropriate home page route
+        VerifyLoginData(user, GOOGLE_LOGIN_URI);
       })
       .catch((error) => {
         console.error("Error signing in with Google:", error);
@@ -63,7 +58,33 @@ export default function Login({ setToken, token }) {
         console.error("Error signing in with Facebook:", error);
       });
   };
-  // Set alert message
+
+  const VerifyLoginData = async (data, url) => {
+    // Append form fields to the FormData object
+    let formData = new FormData();
+    formData.append("email", data.email);
+    formData.append("access_token", data.accessToken);
+    try {
+      // Send user data to the backend
+      const response = await axios.post(url, formData);
+      setMessages(response.data.status, response.data.message); // set success message
+
+      // Empty form after successfully sending data
+      if (response.data.status === "success") {
+        setToken(response.data.access_token);
+        localStorage.setItem("email", data.email);
+        localStorage.setItem("wleness_user_type", "user");
+        localStorage.setItem("login_type", "google");
+
+        navigate("/user/dashboard");
+      } else {
+        setMessages(response.data.status, response.data.message);
+      }
+    } catch (error) {
+      console.error("Error sending data:", error);
+      setMessages("error", "Internal Server Error! Please try again later"); // set error message
+    }
+  };
 
   const location = useLocation();
 
@@ -107,6 +128,7 @@ export default function Login({ setToken, token }) {
           setToken(response.data.access_token);
           localStorage.setItem("phone", formInfo["phone"]);
           localStorage.setItem("wleness_user_type", "user");
+          localStorage.setItem("login_type", "password");
 
           navigate("/user/dashboard");
         } else {

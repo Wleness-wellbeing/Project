@@ -8,6 +8,8 @@ export const LOGIN_USER_URI = URI + "login";
 export const LOGOUT_USER_URI = URI + "logout";
 export const USER_PROFILE_URI = URI + "profile";
 export const EXPERTS_LOGIN_URI = URI + "experts-login";
+export const GOOGLE_SIGNUP_URI = URI + "google-signup";
+export const GOOGLE_LOGIN_URI = URI + "google-signin";
 
 // Leads
 export const REQUEST_CALLBACK_URI = URI + "request-callback";

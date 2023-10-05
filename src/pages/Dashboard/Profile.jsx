@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { avatars } from "../../data/dashboard";
-import { USER_PROFILE_URI } from "../../data/api";
+import { USER_APPOINTMENTS, USER_PROFILE_URI } from "../../data/api";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -27,8 +27,15 @@ export default function Profile({ token }) {
   });
   const [loading, setLoading] = useState(true);
 
-  const phone = localStorage.getItem("phone");
-  const url = USER_PROFILE_URI + "/" + phone;
+  let login_type = localStorage.getItem("login_type");
+  let data, url;
+  if (login_type == "google") {
+    data = localStorage.getItem("email");
+    url = USER_APPOINTMENTS + "/" + data;
+  } else {
+    data = localStorage.getItem("phone");
+    url = USER_APPOINTMENTS + "/" + data;
+  }
 
   useEffect(() => {
     // Make a GET request using Axios

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { iconFacebookCircle, iconGoogle, logo, signup } from "../../assets";
 import axios from "axios";
-import { SIGNUP_USER_URI } from "../../data/api";
+import { GOOGLE_SIGNUP_URI, SIGNUP_USER_URI } from "../../data/api";
 import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 import { signInWithPopup } from "firebase/auth";
 
@@ -39,17 +39,12 @@ export default function Signup({ setToken, token }) {
   const handleGoogleSignIn = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
-        const user = result.user;
+        let user = result.user;
+        user.login_type = "google";
         console.log(user);
 
         // Send user data to the backend
-        sendUserDataToBackend(user);
-
-        // Save user data to localStorage
-        localStorage.setItem("user", JSON.stringify(user));
-
-        // Redirect to the home page
-        navigate("/"); // Replace "/" with the appropriate home page route
+        sendUserDataToBackend(user, GOOGLE_SIGNUP_URI);
       })
       .catch((error) => {
         console.error("Error signing in with Google:", error);
@@ -78,27 +73,38 @@ export default function Signup({ setToken, token }) {
   };
 
   // Function to send user data to the backend
-  const sendUserDataToBackend = (user) => {
-    console.log("User data to be sent:", {
+  const sendUserDataToBackend = async (user, url) => {
+    let data = {
       name: user.displayName,
       email: user.email,
-      photoURL: user.photoURL,
-      // Add other user data as needed
-    });
+      image: user.photoURL,
+      login_type: user.login_type,
+      access_token: user.accessToken,
+    };
 
-    axios
-      .post("/your-backend-endpoint", {
-        name: user.displayName,
-        email: user.email,
-        photoURL: user.photoURL,
-        // Add other user data as needed
-      })
-      .then((response) => {
-        console.log("User data sent to backend:", response.data);
-      })
-      .catch((error) => {
-        console.error("Error sending user data to backend:", error);
-      });
+    let formData = new FormData();
+    formData.append("name", data.name);
+    formData.append("email", data.email);
+    formData.append("image", data.image);
+    formData.append("login_type", data.login_type);
+    formData.append("access_token", data.access_token);
+
+    try {
+      const response = await axios.post(url, formData);
+      if (response.data.status == "success") {
+        // Set login token
+        setToken(response.data.access_token);
+        localStorage.setItem("email", data.email);
+        localStorage.setItem("login_type", data.login_type);
+        navigate("/user/dashboard");
+      } else {
+        setMessages(response.data.status, response.data.message);
+        console.log(response.data);
+      }
+    } catch (error) {
+      console.error("Error sending data:", error);
+      setMessages("error", "Internal Server Error! Please try again later"); // Set error message
+    }
   };
 
   // Set alert message

@@ -78,8 +78,15 @@ export default function UserDashboard({ token }) {
   };
 
   // ======== Get user appointments and details ===========
-  const phone = localStorage.getItem("phone");
-  const url = USER_APPOINTMENTS + "/" + phone;
+  let login_type = localStorage.getItem("login_type");
+  let data, url;
+  if (login_type == "google") {
+    data = localStorage.getItem("email");
+    url = USER_APPOINTMENTS + "/" + data;
+  } else {
+    data = localStorage.getItem("phone");
+    url = USER_APPOINTMENTS + "/" + data;
+  }
 
   useEffect(() => {
     // Make a GET request using Axios
