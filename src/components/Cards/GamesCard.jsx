@@ -18,7 +18,12 @@ export default function GamesCard(props) {
           {props.data.desc}
         </p>
         <div className="lg:text-right">
-          <button className="btn-one !py-2.5">Play Now</button>
+          <button
+            className="btn-one !py-2.5"
+            onClick={() => (window.location.href = props.data.buttonLink)}
+          >
+            Play Now
+          </button>
         </div>
       </figcaption>
     </figure>

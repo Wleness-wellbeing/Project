@@ -68,7 +68,7 @@ function RequestForm() {
             Need expert guidance?
           </h3>
           <h2 className="font-quicksand text-3xl font-bold leading-tight tracking-tight text-[#464646] opacity-90 xl:text-5xl">
-            Request a Call Back Now
+            Request a Call Back
           </h2>
 
           <p className="pb-4 pt-2 font-medium text-slate-700 opacity-90 lg:text-xl">
