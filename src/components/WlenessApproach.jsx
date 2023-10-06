@@ -3,7 +3,7 @@ import { wlenessApproach } from "../data/issues";
 import ApproachCard from "./Cards/ApproachCard";
 import { Link } from "react-router-dom";
 
-export default function WlenessApproach({ issue }) {
+export default function WlenessApproach({ issue, desc }) {
   return (
     <section className="my-5 bg-gradient-to-b from-primary-50/40 to-transparent pt-5 xl:mt-10 xl:pt-10">
       <div className="container mx-auto text-center">
@@ -11,11 +11,7 @@ export default function WlenessApproach({ issue }) {
           How <span className="heading-primary">Wleness approach</span> helps to
           treat {issue}
         </h2>
-        <p className="text-xl font-medium">
-          Indulge in a rejuvenating journey towards tranquility with our
-          comprehensive stress treatment program at the healthcare center, where
-          relaxation and well-being intertwine
-        </p>
+        <p className="text-xl font-medium">{desc}</p>
 
         <div className="my-6 grid grid-cols-2 gap-6 rounded-xl bg-[#FAFCE7] p-2 lg:my-10 lg:grid-cols-4 lg:gap-6 lg:p-4">
           {wlenessApproach.map((value, i) => {

@@ -36,7 +36,7 @@ export default function IssueSubPageLayout({
         image={symptoms.image}
         points={symptoms.points}
       />
-      <WlenessApproach issue={symptoms.issue} />
+      <WlenessApproach issue={symptoms.issue} desc={symptoms.desc} />
       <DoctorSlider data={doctors} />
       <Community />
       <IssueQuote quote={quote} />

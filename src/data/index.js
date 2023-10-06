@@ -336,7 +336,7 @@ export const activities = [
           text: "Yoga",
         },
       ],
-      desc: "Yoga is a path to feeling better in both your body and mind. Doing yoga regularly makes you less stressed and more mindful and brings balance to your life. Start your journey with yoga for a refreshed body, calm mind, and a more harmonious life.",
+      desc: "Yoga is a path to feeling better in both your body and mind. Regular yoga makes you less stressed, more mindful, and balances your life. Start your journey with yoga for a refreshed body, calm mind, and a more harmonious life.",
       image: yogaHeader,
     },
     activities: {
@@ -554,7 +554,7 @@ export const activities = [
         {
           title: "Trikonasana",
           thumbnail: yogaType3,
-          desc: "Trikonasana is a radiant and dynamic yoga posture that stretches and opens the entire body. With its triangular shape, it offers a blend of strength, expansion, and tranquility",
+          desc: "Trikonasana is a radiant and dynamic yoga posture that stretches and opens the entire body. Its triangular shape offers a blend of strength, expansion, and tranquillity.",
           slug: "/activities/yoga/trikonasana",
           sections: [
             {
@@ -762,7 +762,7 @@ export const activities = [
         {
           title: "Ustrasana",
           thumbnail: yogaType5,
-          desc: "Ustrasana opens the heart center and stimulates the entire front body, offering a profound stretch and release. This bring a sense of liberation & vulnerability, to embrace courage. ",
+          desc: "Ustrasana opens the heart center and stimulates the entire front body, offering a deep stretch and release. This brings a sense of liberation & vulnerability to embrace courage.",
           slug: "/activities/yoga/ustrasana",
           sections: [
             {
@@ -845,7 +845,7 @@ export const activities = [
         {
           title: "Matsyasana",
           thumbnail: yogaType6,
-          desc: "Matsyasana gracefully arches the back and opens the chest, offering a deep stretch to the neck and throat. It symbolizes receptivity and renewal, inviting a sense of tranquility.",
+          desc: "Matsyasana gracefully arches the back and opens the chest, offering a deep stretch to the neck and throat. It symbolizes receptivity and renewal, inviting a sense of tranquillity.",
           slug: "/activities/yoga/matsyasana",
           sections: [
             {
@@ -1009,7 +1009,7 @@ export const activities = [
         {
           title: "Sarvangasana",
           thumbnail: yogaType8,
-          desc: "Sarvangasana is a revered yoga pose that offers many benefits for the body and mind. This promotes rejuvenation, improved circulation, and a calming effect on the nervous system.",
+          desc: "Sarvangasana is a revered yoga pose that offers many bodily and mental benefits. This promotes rejuvenation, improved circulation, and a calming effect on the nervous system.",
           slug: "/activities/yoga/sarvangasana",
           sections: [
             {
@@ -1095,7 +1095,7 @@ export const activities = [
         {
           title: "Setu Bandhasana",
           thumbnail: yogaType9,
-          desc: "Setu Bandhasana gracefully opens up the chest and hip flexors while strengthening the back and glutes. This yoga posture stimulates the spine and brings a sense of balance and stability",
+          desc: "Setu Bandhasana gracefully opens up the chest and hip flexors while strengthening the back and glutes. This yoga posture stimulates the spine and brings a sense of balance and stability.",
           slug: "/activities/yoga/setu-bandhasana",
           sections: [
             {
@@ -1181,7 +1181,7 @@ export const activities = [
         {
           title: "Uttanasana",
           thumbnail: yogaType10,
-          desc: "Uttanasana involves bending forward with straight or bent legs, providing a stretch to lower back and hamstrings. It's often integrated into yoga  for its calming and grounding effects.",
+          desc: "Uttanasana involves bending forward with straight or bent legs, providing a stretch to the lower back and hamstrings. It's often integrated into yoga for its calming and grounding effects.",
           slug: "/activities/yoga/uttanasana",
           sections: [
             {
@@ -1479,7 +1479,7 @@ export const activities = [
         {
           title: "Mindfulness Meditation",
           thumbnail: meditationType1,
-          desc: "Originated from Hindu shastras,a practise involving attention to present,focusing on breath and thoughts without judgment fostering heightened awareness, acceptance.",
+          desc: "Originated from Hindu shastras, a practice involving attention to the present, focusing on breath and thoughts without judgment, fostering heightened awareness and acceptance.",
           slug: "/activities/meditation/mindfulness-meditation",
           sections: [
             {
@@ -1606,7 +1606,7 @@ export const activities = [
         {
           title: "Breadth Awareness Meditation",
           thumbnail: meditationType2,
-          desc: "Observing the natural rhythm of breath.Close attention to inhalation and exhalation, redirecting the mind back to the breath.Calms mind, enhances focus, and reduces anxiety.",
+          desc: "Observing the natural rhythm of the breath. Close attention to inhalation and exhalation, redirecting the mind back to the breath. It calms the mind, enhances focus, and reduces anxiety.",
           slug: "/activities/meditation/breath-awareness-meditation",
           sections: [
             {
@@ -1740,7 +1740,7 @@ export const activities = [
         {
           title: "Kundalini Meditation",
           thumbnail: meditationType3,
-          desc: "Blending the breathwork, chanting, movement, and visualization to awaken the energy within. Power to  Balancethe chakras and achieve heightened spiritual awakening. ",
+          desc: "Blending the breathwork, chanting, movement, and visualization to awaken the energy within. Power to Balance the chakras and achieve heightened spiritual awakening.",
           slug: "/activities/meditation/kundalini-meditation",
           sections: [
             {
@@ -1898,7 +1898,7 @@ export const activities = [
         {
           title: "Zen Meditation (Zazen)",
           thumbnail: meditationType4,
-          desc: "Originates from Buddhism. Sitting in a specific posture, focusing on breath observing thoughts and sensations without attachment or judgment. Cultivate mindfulness,  into true reality.",
+          desc: "Originates from Buddhism. Sitting in a specific posture, focusing on breath, observing thoughts and sensations without attachment or judgment. Cultivate mindfulness into actual reality.",
           slug: "/activities/meditation/zen-meditation",
           sections: [
             {
@@ -2032,7 +2032,7 @@ export const activities = [
         {
           title: "Spiritual Meditation",
           thumbnail: meditationType5,
-          desc: "Activating one's consciousness. Spiritual meditation involves bonding at a higher consciencel. Highly beneficial to those seeking spiritual growth and oneness with supreme self.",
+          desc: "Activating one's consciousness. Spiritual meditation involves bonding with a higher conscience. Highly beneficial to those seeking spiritual growth and oneness with the supreme self.",
           slug: "/activities/meditation/spiritual-meditation",
           sections: [
             {
@@ -2178,7 +2178,7 @@ export const activities = [
         {
           title: "Walking Meditation",
           thumbnail: meditationType6,
-          desc: "Walking slowly and attentively, cultivating awareness of present. Unlike seated meditation, it allows individuals to engage their bodies and minds while maintaining tranquility.",
+          desc: "Walking slowly and attentively, cultivating awareness of the present. Unlike seated meditation, it allows individuals to engage their bodies and minds while maintaining tranquillity.",
           slug: "/activities/meditation/walking-meditation",
           sections: [
             {
@@ -2459,7 +2459,7 @@ export const activities = [
         {
           title: "Concentrate Meditation",
           thumbnail: meditationType8,
-          desc: "Focusing all your attention on singularity. Train your mind to focus on a particular vibration or sensation, which enhances your capacity for concentration and decreases distractions.",
+          desc: "Focusing all your attention on singularity. Train your mind to focus on a particular vibration or sensation, enhancing your concentration capacity and decreasing distractions.",
           slug: "/activities/meditation/concentrative-meditation",
           sections: [
             {
@@ -2626,7 +2626,7 @@ export const activities = [
         {
           title: "Yoga Sadhana",
           thumbnail: sadhnaType1,
-          desc: "Originated from Hindu shastras,a practise involving attention to present,focusing on breath and thoughts without judgment fostering heightened awareness, acceptance.",
+          desc: "Originated from Hindu shastras, a practice involving attention to the present, focusing on breath and thoughts without judgment, fostering heightened awareness and acceptance.",
           slug: "/activities/sadhna/yoga-sadhna",
           sections: [
             {
@@ -2767,7 +2767,7 @@ export const activities = [
         {
           title: "Meditation Sadhana",
           thumbnail: sadhnaType2,
-          desc: "Observing the natural rhythm of breath.Close attention to inhalation and exhalation, redirecting the mind back to the breath.Calms mind, enhances focus, and reduces anxiety.",
+          desc: "Observing the natural rhythm of the breath. Close attention to inhalation and exhalation, redirecting the mind back to the breath. It calms the mind, enhances focus, and reduces anxiety.",
           slug: "/activities/sadhna/meditation-sadhna",
           sections: [
             {
@@ -2912,7 +2912,7 @@ export const activities = [
         {
           title: "Mantra Sadhana",
           thumbnail: sadhnaType3,
-          desc: "Blending the breathwork, chanting, movement, and visualization to awaken the energy within. Power to  Balancethe chakras and achieve heightened spiritual awakening. ",
+          desc: "Blending the breathwork, chanting, movement, and visualization to awaken the energy within. Power to Balance the chakras and achieve heightened spiritual awakening.",
           slug: "/activities/sadhna/mantra-sadhna",
           sections: [
             {
@@ -3057,7 +3057,7 @@ export const activities = [
         {
           title: "Japa Sadhana",
           thumbnail: sadhnaType4,
-          desc: "Originates from Buddhism. Sitting in a specific posture, focusing on breath observing thoughts and sensations without attachment or judgment. Cultivate mindfulness,  into true reality.",
+          desc: "Originates from Buddhism. Sitting in a specific posture, focusing on breath, observing thoughts and sensations without attachment or judgment. Cultivate mindfulness into actual reality.",
           slug: "/activities/sadhna/japa-sadhna",
           sections: [
             {
@@ -3202,7 +3202,7 @@ export const activities = [
         {
           title: "Bhakti Sadhana",
           thumbnail: sadhnaType5,
-          desc: "Activating one's consciousness. Spiritual meditation involves bonding at a higher consciencel. Highly beneficial to those seeking spiritual growth and oneness with supreme self.",
+          desc: "Activating one's consciousness. Spiritual meditation involves bonding with a higher conscience. Highly beneficial to those seeking spiritual growth and oneness with the supreme self.",
           slug: "/activities/sadhna/bhakti-sadhna",
           sections: [
             {
@@ -3347,7 +3347,7 @@ export const activities = [
         {
           title: "Kundalini Sadhana",
           thumbnail: sadhnaType6,
-          desc: "Walking slowly and attentively, cultivating awareness of present. Unlike seated meditation, it allows individuals to engage their bodies and minds while maintaining tranquility.",
+          desc: "Walking slowly and attentively, cultivating awareness of the present. Unlike seated meditation, it allows individuals to engage their bodies and minds while maintaining tranquillity.",
           slug: "/activities/sadhna/kundalini-sadhna",
           sections: [
             {
@@ -3496,7 +3496,7 @@ export const activities = [
         {
           title: "Seva Sadhana",
           thumbnail: sadhnaType7,
-          desc: "Walking slowly and attentively, cultivating awareness of present. Unlike seated meditation, it allows individuals to engage their bodies and minds while maintaining tranquility.",
+          desc: "Walking slowly and attentively, cultivating awareness of the present. Unlike seated meditation, it will enable individuals to engage their bodies and minds while maintaining tranquillity.",
           slug: "/activities/sadhna/seva-sadhna",
           sections: [
             {
@@ -3645,7 +3645,7 @@ export const activities = [
         {
           title: "Nature Sadhana",
           thumbnail: sadhnaType8,
-          desc: "Walking slowly and attentively, cultivating awareness of present. Unlike seated meditation, it allows individuals to engage their bodies and minds while maintaining tranquility.",
+          desc: "Walking slowly and attentively, cultivating awareness of the present. Unlike seated meditation, it allows individuals to engage their bodies and minds while maintaining tranquillity.",
           slug: "/activities/sadhna/nature-sadhna",
           sections: [
             {
@@ -3829,7 +3829,6 @@ export const brainExercise = {
   },
   activities: {
     title: "Brain Games",
-
     desc: "Explore a range of brain-boosting exercises and activities, puzzles, techniques, and mental workouts tailored to enhance cognition and mental well-being, memory, focus, and overall brain health.",
     types: [
       {
@@ -3967,31 +3966,31 @@ export const homeServices = [
   },
   {
     title: "Music Healing",
-    desc: "A Collection of diverse music based mechanisms, techniques with interdisciplinary approach to maintain, restore and improve- Physical, Psychological, social and holistic health.",
+    desc: "Music Healing addresses diverse needs through music. Therapists use musical interventions like listening, creating, singing, and playing instruments.",
     image: homeMusicalTherapy,
     slug: "/services/music-healing",
   },
   {
     title: "Executive Coaching",
-    desc: "Executive coaching elevates leadership, empowers high-level staff & drives positive results. It maximizes potential, navigates the challenges &  enhances performance.",
+    desc: "Executive coaching elevates leadership, empowers high-level staff, and drives positive results. It maximizes potential, navigates the challenges, and enhances performance.",
     image: homeExecutiveCoaching,
     slug: "/executive-coaching",
   },
   {
     title: "Corporate Wellbeing",
-    desc: "Corporate mental wellness services focus on employee well-being, and tackling the  challenges, reducing stress, and promoting emotional resilience at work.",
+    desc: "Corporate mental wellness services focus on employee well-being, tackling challenges, reducing stress, and promoting emotional resilience at work.",
     image: homeCorporate,
     slug: "/corporate-wellbeing",
   },
   {
     title: "Life Coaching",
-    desc: "Life coaching empowers well-being, productivity, and balance. It encourages health, reduces stress, boosts motivation, and enhances performance.",
+    desc: "Lifestyle coaching empowers well-being, productivity, and balance. It encourages health, reduces stress, boosts motivation, and enhances performance.",
     image: homeLifestyleCoaching,
     slug: "/life-coaching",
   },
   {
     title: "Internship",
-    desc: "Unlock career opportunities & gain experience through our internship programs.  Explore placements that align with your academic  professional goals,  skills & opportunities.",
+    desc: "Unlock career opportunities and gain experience through our internship programs. Explore placements that align with your academic and professional goals, skills, and options.",
     image: homeInternship,
     slug: "/internship",
   },
@@ -4009,7 +4008,7 @@ export const homeServices = [
   },
   {
     title: "Self Care",
-    desc: "Prioritize your well-being with our self-care solutions. We offer personalized self-care plans & resources to help you nurture your physical, mental, and emotional health. ",
+    desc: "Prioritize your well-being with our self-care solutions. We offer personalized self-care plans and resources to help you nurture your physical, mental, and emotional health.",
     image: homeSelfcare,
     slug: "/user/dashboard",
   },
@@ -4047,16 +4046,16 @@ export const whyChooseUs = [
   {
     title: "Experience",
     image: homeExperienceIcon,
-    desc: "Experience world class services based on international standards for your health",
+    desc: "Experience world-class services based on international standards for your health",
   },
   {
     title: "Commitment",
-    desc: "We commit to provide personalized care tailored to your unique needs and support you at every step.",
+    desc: "We commit to providing personalized care tailored to your unique needs and support you at every step.",
     image: homeCommitmentIcon,
   },
   {
     title: "Facilities",
-    desc: "Experience the convenience and comfort of our state-of-the-art facilities with Wleness.",
+    desc: "Experience the convenience and comfort of our state-of-the-art facilities with wleness.",
     image: homeFacilitiesIcon,
   },
 ];
@@ -4098,13 +4097,13 @@ export const lifecoching = [
   },
   {
     title: "Confidence",
-    desc: "Fear of failure? It's a common roadblock. Life coaching equips you with the tools to boldly face your fears & move forward.",
+    desc: "Fear of failure? It's a common roadblock. Life coaching equips you with the tools to face your fears & move forward boldly.",
 
     image: lifeCoachingConfidence,
   },
   {
     title: "Overcoming Fear",
-    desc: "Fear of failure? It's a common roadblock. Life coaching equips you with the tools to boldly face your fears & move forward.",
+    desc: "Fear of failure? It's a common roadblock. Life coaching provides the tools to face your fears & move forward boldly.",
     image: lifeCoachingOvercomingfear,
   },
 ];

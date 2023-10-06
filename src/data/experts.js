@@ -2,7 +2,7 @@ import { expertsWhy1, expertsWhy2, expertsWhy3 } from "../assets";
 
 export const expertsTherapy = {
   title: "Therapy",
-  desc: "A holistic approach to therapy that considers the whole person - mind, body, and spirit. Our therapeutic services are tailored to meet the individual needs of each client, ensuring personalized and effective care.",
+  desc: "A holistic approach to therapy that considers the whole person - mind, body, and spirit. Our therapeutic services are tailored to meet each client's individual needs, ensuring personalized and effective care.",
   image: expertsWhy1,
   slug: "/services/therapy",
 };
@@ -16,7 +16,7 @@ export const expertsPsychiatrist = {
 
 export const expertsCoupleTherapy = {
   title: "Couple Therapy",
-  desc: "We believe that every couple is unique, and their therapy should reflect that. Our couple therapy approach is tailored to meet the specific needs and dynamics of each relationship.",
+  desc: "We believe that every couple is unique, and their therapy should reflect that. Our couple therapy approach is tailored to meet each relationship's specific needs and dynamics.",
   image: expertsWhy3,
   slug: "/services/couples-therapy",
 };

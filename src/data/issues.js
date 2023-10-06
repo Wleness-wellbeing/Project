@@ -74,20 +74,20 @@ export const therapiesData = [
         },
       ],
       desc: [
-        "Stress is the body's response to external pressures or demands, triggering physical, emotional, and cognitive reactions that can affect well-being and performance.",
+        "Stress is the body's response to external pressures or demands, triggering physical, emotional, and cognitive reactions that can affect well-being and performance. It can range from motivating challenges to overwhelming strain.",
         "It can range from motivating challenges to overwhelming strain.",
       ],
       image: stressHeader,
     },
     symptoms: {
       highlight: "Stress Disorder symptoms ",
-      issue:"Stress",
-
+      issue: "Stress",
+      desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive stress treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
-        "Feeling constant tiredness even after adequate rest",
+        "It can range from motivating challenges to overwhelming strain.",
         "Facing difficulty in concentrating",
         "Having trouble falling asleep",
-        "Noticing muscles tensions or constant headaches",
+        "Noticing muscle tension or constant headaches",
         "Either overeating or experiencing a loss of appetite",
         "Feeling easily irritable, frustrated or being short-tempered",
       ],
@@ -119,8 +119,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Depression symptoms ",
-      issue:"depression",
-
+      issue: "depression",
+      desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive depression treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Trouble concentrating",
         "Facing difficulty in concentrating",
@@ -156,8 +156,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Panic Attack symptoms ",
-      issue:"panic-attack",
-
+      issue: "panic-attack",
+      desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive Panic Attack treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Rapid heartbeat or palpitations",
         "Shortness of breath",
@@ -193,13 +193,13 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Anxiety symptoms ",
-      issue:"anxiety",
-
+      issue: "anxiety",
+      desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive anxiety treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Excessive worry and apprehension about everyday events or situations.",
-        "Avoidance of triggering situations or activities.",
+        "Avoidance of triggering problems or activities.",
         "Fatigue or difficulty concentrating due to racing thoughts.",
-        "Physical symptoms like increased heart rate, sweating, trembling, or muscle tension.",
+        "Physical symptoms include increased heart rate, sweating, trembling, or muscle tension.",
         "Restlessness, feeling on edge, or having difficulty relaxing.",
         "Sleep disturbances, such as difficulty falling asleep or staying asleep.",
       ],
@@ -230,8 +230,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " OCD symptoms ",
-      issue:"ocd",
-
+      issue: "ocd",
+      desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive ocd treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Intrusive, Distressing Thoughts",
         "Repetitive Rituals or Behaviors",
@@ -271,8 +271,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Bipolar Disorder symptoms ",
-      issue:"bipolar-disorder",
-
+      issue: "bipolar-disorder",
+      desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive bipolar disorder treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Intense Euphoria and Energy",
         "Severe Irritability or Agitation",
@@ -312,8 +312,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Schizophrenia symptoms ",
-      issue:"schizophrenia",
-
+      issue: "schizophrenia",
+      desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive schizophrenia program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Hallucinations",
         "Impaired Social Functioning",
@@ -349,8 +349,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Eating Disorder symptoms ",
-      issue:"eating-disorder",
-
+      issue: "eating-disorder",
+      desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive eating disorder treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Social Withdrawal and Isolation",
         "Obsession with Weight and Body Shape",
@@ -390,8 +390,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Paranoia symptoms ",
-      issue:"paranoia",
-
+      issue: "paranoia",
+      desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive paranoia treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Social withdrawal due to fear.",
         "Persistent mistrust of others' intentions.",
@@ -431,8 +431,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " ADHD symptoms ",
-      issue:"ADHD",
-
+      issue: "ADHD",
+      desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive ADHD treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Poor Time Management: Struggling to manage time effectively",
         "Inattention: Struggling to focus on tasks or details",
@@ -472,8 +472,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " ODD symptoms ",
-      issue:"ODD",
-
+      issue: "ODD",
+      desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive ODD treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Vindictiveness and seeking revenge when feeling wronged.",
         "Easily angered, resentful, or spiteful behavior.",
@@ -513,8 +513,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Conduct Disorder symptoms ",
-      issue:"Conduct-Disorder",
-
+      issue: "Conduct-Disorder",
+      desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive conduct disorder treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Aggression towards people and animals.",
         "Frequent bullying, intimidation, or physical fights.",
@@ -554,8 +554,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Anger symptoms ",
-    issue:"Anger",
-
+      issue: "Anger",
+      desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive anger treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Frequent Irritability: Getting easily annoyed or irritated over small matters regularly.",
         "Intense or Frequent Outbursts: Displaying explosive anger, which may involve shouting, screaming, or physical aggression.",
@@ -595,8 +595,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Relationship challenges ",
-      issue:"relationship",
-
+      issue: "relationship",
+      desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive relationship improvement program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Dating Fatigue: Dating fatigue can be caused by overwhelming choices, and the time and energy investment required in the dating process.",
         "Overcoming heartbreak: Approximately 25% of individuals who go through a significant heartbreak experience symptoms of depression and anxiety",
@@ -636,8 +636,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " LGBTQIA+ symptoms ",
-      issue:"LGBTQIA+",
-
+      issue: "LGBTQIA+",
+      desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive stress treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Higher Rates of Depression. In LGBTQIA+ individuals often experience higher rates of depression due to stigma and discrimination.",
         "Anxiety disorders are common, with many facing 'minority stress' due to societal prejudice.",
@@ -673,8 +673,8 @@ export const therapiesData = [
     },
     symptoms: {
       highlight: " Parenting Challenges ",
-      issue:"parenting Hurdles",
-
+      issue: "parenting Hurdles",
+      desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive stress treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Postpartum Depression: Many new mothers experience postpartum depression, characterized by persistent feelings of sadness, exhaustion, and anxiety after giving birth.",
         "Parental Anxiety: Parents often grapple with anxiety, worrying about their children's safety, well-being, and future, which can impact their mental health.",

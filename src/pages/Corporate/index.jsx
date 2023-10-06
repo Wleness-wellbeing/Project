@@ -144,8 +144,8 @@ export default function index() {
                 caring for your workforce. From physical wellness to mental
                 health, our platform ensures all aspects of employee well-being
                 are addressed effectively. Elevate productivity, satisfaction,
-                and engagement through this cutting-edge tool, designed to meet
-                your company's unique requirements.
+                and engagement through this cutting-edge tool to meet your
+                company's unique requirements.
               </p>
               <button
                 className="btn-one !bg-[#0A99D6] hover:!bg-[#0F7CAB]"

@@ -282,23 +282,23 @@ export const homeFaqs = [
   {
     question: "What is Wleness?",
     answer:
-      "Wleness is an inclusive online platform promoting mental health and wellness. We provide numerous resources to support individuals on their journey towards better mental well-being. Our platform is LGBTQ-friendly, and a safe and inclusive environment for all.",
+      "Wleness is an inclusive online platform dedicated to promote mental health and wellness.",
   },
   {
     question: "What services does Wleness offer?",
     answer:
-      "Wleness offers a wide range of services to support mental health including online therapy sessions with licensed professionals, self-help resources, articles, guided meditation, exercises etc. and a supportive community forum at your fingertips. We prioritize providing world-class services and the well-being of our users.",
+      "Wleness offers a wide range of services to support mental health, including online therapy sessions with licensed professionals, self-help resources, articles, guided meditation, exercises, and a supportive community forum at your fingertips. We prioritize providing world-class services and the well-being of our users.",
   },
   {
     question: "How can I get started with Wleness?",
     answer:
-      "Simply visit Wleness.com and create an account. From there, you can explore the various resources and services available on the platform. We guide you in selecting a therapist and schedule sessions based on your preferences. We offer a plethora of services to suit your needs.",
+      "Visit Wleness.com and create an account. From there, you can explore the various resources and services on the platform. We guide you in selecting a therapist and schedule sessions based on your preferences. We offer a plethora of services to suit your needs.",
   },
   {
     question:
       "Is Wleness suitable for individuals with severe mental health conditions?",
     answer:
-      "While all therapists on Wleness are licensed professionals who possess the necessary qualifications, it may not be suitable for severe mental health conditions or those in crisis. In such cases, we recommend immediate assistance from emergency services that provide more intensive and prompt support.",
+      "While all therapists on Wleness are licensed professionals with the necessary qualifications, it may not be suitable for severe mental health conditions or those in crisis. In such cases, we recommend immediate assistance from emergency services that provide more intensive and prompt support.",
   },
 ];
 

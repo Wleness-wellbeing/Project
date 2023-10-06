@@ -33,24 +33,24 @@ const wlenessWork = [
   {
     image: internshipIcon3,
     title: "We spread smiles, not stress:",
-    desc: "Unleash a perfect state of mind sans anxiety or stress.",
+    desc: "Unleash an ideal state of mind sans anxiety or stress.",
   },
   {
     image: internshipIcon4,
     title: "Break mental health barriers:",
-    desc: "well-being rules with wit, passion, and positive vibes!",
+    desc: "Well-being rules with wit, passion, and positive vibes!",
   },
   {
     image: internshipIcon5,
     title: "Stigma free zone:",
-    desc: "Conquer the stigma,spread love and compassion.",
+    desc: "Conquer the stigma and spread love and compassion.",
   },
 ];
 
 const whyWleness = [
   [
     iconExperience,
-    "Whether you're looking to assist therapists, conducting research or supporting community outreach programs, enjoy customized diverse learning opportunities",
+    "Whether you're looking to assist therapists, conduct research or support community outreach programs, enjoy customized, diverse learning opportunities.",
     "true",
   ],
   [
@@ -60,7 +60,7 @@ const whyWleness = [
   ],
   [
     iconFacilities,
-    "Experience holistic growth by working in a multi disciplinary team with a positive work-life balance. There's a place for you wherever you excel.",
+    "Experience holistic development by working in a multi-disciplinary team with a positive work-life balance. There's a place for you wherever you excel.",
     "false",
   ],
 ];
@@ -91,11 +91,11 @@ export default function Internship() {
             </h1>
             <h3 className="text-3xl font-bold">Want to join us ?</h3>
             <p className="para py-4 pb-6">
-              We are seeking passionate individuals who are willing to make a
-              change and contribute to our noble cause. Are you someone who has
-              the zest to combine your passion for mental health with real life?
-              If yes, look no further! Join Wleness to embark on a rewarding
-              journey promoting well-being and supporting individuals in need.
+              We seek passionate individuals willing to make a change and
+              contribute to our noble cause. Are you someone who has the zest to
+              combine your passion for mental health with real life? If yes,
+              look no further! Join Wleness to embark on a rewarding journey
+              promoting well-being and supporting individuals in need.
             </p>
             <button className="btn-one" onClick={openInternshipModal}>
               Apply Now

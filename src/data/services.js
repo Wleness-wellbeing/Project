@@ -197,7 +197,7 @@ export const MusicalTherapyData = {
 
 export const TherapyData = {
   name: "Therapy",
-  desc: "Discover transformative counseling and online therapy for growth, healing, and resilience, empowering you with compassionate support for renewed well-being.",
+  desc: "Discover transformative counselling and online Therapy for growth, healing, and resilience, empowering you with compassionate support for renewed well-being.",
   slug: "/therapy",
   image: therapyHeader,
   bestTherapist: {
@@ -217,8 +217,8 @@ export const TherapyData = {
     ],
     featureImage: bestTherapy,
     features: [
-      ["Consultations ", "anywhere, anytime"],
-      ["One-to-One ", "Consultations"],
+      ["Consultation ", "anywhere, anytime"],
+      ["Online ", "Consultation"],
       ["Trusted ", "Therapist"],
       ["Affordable ", "Help"],
     ],
@@ -227,12 +227,12 @@ export const TherapyData = {
   whyChoose: [
     {
       title: "Emotional Support",
-      desc: "Therapy provides a safe and supportive space to express & process emotions.",
+      desc: "Therapy provides a safe and supportive space to express and process emotions.",
       image: whyChooseTherapy1,
     },
     {
       title: "Problem Solving",
-      desc: "Therapists offer  strategies to cope with challenges & find solutions.",
+      desc: "Therapists offer strategies to cope with challenges and find solutions.",
       image: whyChooseTherapy2,
     },
     {

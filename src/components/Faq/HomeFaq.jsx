@@ -23,8 +23,8 @@ export default function HomeFaq(props) {
       <div className="mx-auto mb-5 lg:mb-0 lg:w-1/2">
         <h2 className="subheading heading-primary mb-2">FAQs</h2>
         <p className="para mb-4">
-          Everything you need to know right here at Wleness. Ask questions and
-          browse around for answers.
+          All essential information is readily available here on Wleness. Ask
+          questions and browse around for answers.
         </p>
         <img src={faq3} alt="" className="lg:w-4/5" loading="lazy" />
         <Link to="/faqs" className="btn-one inline-block">

@@ -65,7 +65,7 @@ function RequestForm() {
       <div className="md:flex md:h-full md:flex-col md:justify-between md:px-6">
         <div>
           <h3 className="font-medium text-[#464646] opacity-80 lg:text-lg">
-            Need expert guidance?
+            Need expert counselling?
           </h3>
           <h2 className="font-quicksand text-3xl font-bold leading-tight tracking-tight text-[#464646] opacity-90 xl:text-4xl">
             Request a Call Back
