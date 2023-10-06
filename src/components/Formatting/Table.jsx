@@ -21,7 +21,7 @@ export default function Table({ ths, trs }) {
             <tr key={i}>
               {value.map((data, index) => {
                 return (
-                  <td className="border-2 px-4 py-3" key={index}>
+                  <td className="border-2 px-4 py-3 font-normal" key={index}>
                     {data}
                   </td>
                 );

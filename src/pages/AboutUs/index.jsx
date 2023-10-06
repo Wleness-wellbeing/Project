@@ -175,7 +175,7 @@ function AboutUs() {
               The <span className="heading-primary">Solution</span>
             </h2>
           </div>
-          <div className=" w-full  text-left md:ml-60 md:mr-0 md:w-2/4 md:text-justify lg:my-12">
+          <div className=" w-full  text-left md:ml-60 md:mr-0 md:w-2/4 lg:my-12">
             <ul className="list-disc ">
               <li className="item-start  flex ">
                 <img
