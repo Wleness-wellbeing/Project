@@ -301,7 +301,7 @@ function AboutUs() {
         </h2>
         <div className="container mx-auto grid grid-cols-1 items-center justify-center   sm:grid-cols-2 md:grid-cols-3">
           <Link to="/contact-us">
-            <div className="rounded-xl p-4 text-center hover:shadow-xl">
+            <div className="rounded-xl p-4 text-center transition-all hover:bg-primary-50/30 hover:shadow-xl">
               <img className="mx-auto" src={about1}></img>
               <h2 className="py-2 text-lg font-semibold text-primary-400">
                 Contact us
@@ -313,7 +313,7 @@ function AboutUs() {
             </div>
           </Link>
           <Link to="">
-            <div className="rounded-xl p-4 text-center hover:shadow-xl">
+            <div className="rounded-xl p-4 text-center transition-all hover:bg-primary-50/30 hover:shadow-xl">
               <button onClick={toggleForm} className="w-full">
                 <img className="mx-auto" src={about4}></img>
                 <h2 className="py-2 text-lg font-semibold text-primary-400">
@@ -327,9 +327,8 @@ function AboutUs() {
             </div>
           </Link>
           <Link to="">
-            <div className="rounded-xl p-4 text-center hover:shadow-xl">
+            <div className="rounded-xl p-4 text-center transition-all hover:bg-primary-50/30 hover:shadow-xl">
               <button onClick={toggleForm} className="w-full">
-                {" "}
                 {/* Add this button */}
                 <img className="mx-auto" src={meeting} alt="Meeting" />
                 <h2 className="py-2 text-lg font-semibold text-primary-400">

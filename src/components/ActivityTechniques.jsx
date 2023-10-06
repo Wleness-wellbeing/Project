@@ -43,9 +43,9 @@ const ActivityTechniques = React.forwardRef((props, ref) => {
         </div>
 
         <div className="py-4 text-center">
-          <Link to="/appointment/checkout" className="btn-one inline-block">
-            Book Now
-          </Link>
+          <button onClick={props.openEnquiry} className="btn-one">
+            Enquire Now
+          </button>
         </div>
       </div>
     </section>

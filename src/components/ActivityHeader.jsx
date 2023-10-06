@@ -1,15 +1,8 @@
 import React, { useState } from "react";
 import { textColorize } from "../utils";
 import { Link } from "react-router-dom";
-import ActivityForm from "./Forms/ActivityForm";
 
 export default function ActivityHeader(props) {
-  const [enquiryForm, setEnquiryForm] = useState(false);
-
-  // Toggle form
-  const toggleForm = () => {
-    setEnquiryForm(!enquiryForm);
-  };
   return (
     <>
       <header className="relative overflow-x-clip bg-secondary/10 pb-6 pt-12 xl:pb-10 xl:pt-16">
@@ -43,7 +36,7 @@ export default function ActivityHeader(props) {
                 props.isEnquiry ? (
                   <button
                     className="btn-one inline-block border-2 !border-primary-400 !bg-transparent !py-2 !text-[#383838] hover:!bg-primary-400 hover:!text-white lg:!w-fit"
-                    onClick={toggleForm}
+                    onClick={props.openEnquiry}
                   >
                     Enquire Now
                   </button>
@@ -63,8 +56,6 @@ export default function ActivityHeader(props) {
           </div>
         </div>
       </header>
-
-      <ActivityForm isOpen={enquiryForm} onClose={toggleForm} />
     </>
   );
 }

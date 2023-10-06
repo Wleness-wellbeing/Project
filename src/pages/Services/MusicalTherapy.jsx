@@ -1,23 +1,21 @@
 import React, { useRef, useState } from "react";
 // Data
-import {
-  MusicalTherapyData,
-  musicalTherapyFeatures,
-} from "../../data/services";
+import { MusicalTherapyData } from "../../data/services";
 import { musicalTherapyClient } from "../../data/clients";
 import { musicalTherapyFaq } from "../../data/faqs";
 // Components
-import FeaturesBlock from "../../components/FeaturesBlock";
 import ActivityHeader from "../../components/ActivityHeader";
 import ServicesTechniques from "../../components/ServicesTechniques";
 import HappyClient from "../../components/HappyClient";
 import FaqWithImage from "../../components/FaqWithImage";
 import Assessment from "../../components/Assessment";
 import MusicalTherapyComponent from "../../components/MusicalTherapyComponent";
-//image
-import { musicalelipse1, musicalelipse2, musicalelipse3 } from "../../assets";
+import ActivityForm from "../../components/Forms/ActivityForm";
+import useEnquiryForm from "../../hooks/useEnquiryForm";
 
 export default function MusicalTherapy() {
+  const { enquiryForm, toggleForm } = useEnquiryForm();
+
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
   const openAssessmentModal = () => {
     setShowAssessmentModal(true);
@@ -39,9 +37,10 @@ export default function MusicalTherapy() {
         desc={MusicalTherapyData.header.desc}
         handleScrollToComponent={() => handleScrollToComponent()}
         openAssessmentModal={openAssessmentModal}
-        isEnquiry={false}
+        isEnquiry={true}
         displayButton={true}
         button={["Explore More"]}
+        openEnquiry={toggleForm}
       />
       <p ref={ref}></p>
       <ServicesTechniques
@@ -49,6 +48,7 @@ export default function MusicalTherapy() {
         desc={MusicalTherapyData.activities.desc}
         types={MusicalTherapyData.activities.types}
         openAssessmentModal={openAssessmentModal}
+        openEnquiry={toggleForm}
       />
       <MusicalTherapyComponent />
       <HappyClient data={musicalTherapyClient} />
@@ -57,6 +57,8 @@ export default function MusicalTherapy() {
         isAssessmentOpen={isAssessmentModalOpen}
         onAssessmentClose={closeAssessmentModal}
       />
+
+      <ActivityForm isOpen={enquiryForm} onClose={toggleForm} />
     </>
   );
 }

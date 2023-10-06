@@ -66,9 +66,10 @@ export default function Home() {
               </span>
             </h2>
             <p className="para">
-              We are the only platform globally offering holistic wellness
-              services with yoga, meditation, musical healing, and a wealth of
-              engaging resources. Join us on this unique path to well-being.
+              We are an integrated digital platform offering holistic wellness
+              services with yoga, meditation, musical healing, brain games and a
+              wealth of engaging resources. Join us on this unique path to
+              well-being.
             </p>
           </div>
         </div>
@@ -216,7 +217,7 @@ export default function Home() {
       </section>
 
       {/* ========== Statistics ========== */}
-      <section className="container mx-auto grid grid-cols-4 gap-2 py-4 pt-6 lg:gap-8 lg:py-12">
+      <section className="container mx-auto grid grid-cols-4 gap-2 py-4 pt-10 lg:gap-8 lg:py-12">
         {statistics.map((value, i) => {
           return (
             <div

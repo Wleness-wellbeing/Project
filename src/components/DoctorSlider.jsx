@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Navigation, Autoplay, A11y } from "swiper/modules";
@@ -9,12 +8,10 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 // Data
 import { textColorize } from "../utils";
-import { EXPERTS_URI } from "../data/api";
 import { doctorsDetails } from "../data/doctors";
 
 export default function DoctorSlider(props) {
   const [swiper, setSwiper] = useState(null); // Store Swiper instance
-  const [experts, setExperts] = useState([]);
   const navigate = useNavigate();
 
   // Fetch Doctors list
@@ -84,7 +81,7 @@ export default function DoctorSlider(props) {
       >
         <Swiper
           modules={[EffectCoverflow, Navigation, Autoplay]}
-          className="mySwiper mb-12 overflow-y-visible rounded-2xl"
+          className="mySwiper h-[500px] overflow-y-visible rounded-2xl"
           navigation={true}
           effect={"coverflow"}
           grabCursor={true}

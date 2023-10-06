@@ -24,7 +24,7 @@ export default function MainHeader({ openAssessmentModal }) {
           </h4>
           <h3 className="mx-auto mb-6 text-sm font-semibold text-slate-600 md:text-base lg:mb-10 lg:text-lg">
             Discover your journey to a better self by nurturing your mind, body
-            and soul with our professionally curated services customised by
+            and soul with our professionally curated services customized by
             industry experts just for you!
           </h3>
           <button

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
   musicalHealingChild,
   musicalHealingOld,
@@ -25,7 +24,7 @@ const ServicesTechniques = React.forwardRef((props, ref) => {
           <p className="pb-2 text-sm font-semibold text-slate-800 lg:text-base">
             {value.desc}
           </p>
-          <div className="mt-2 text-center">
+          {/* <div className="mt-2 text-center">
             <Link
               to="https://deba-shree.dayschedule.com/talk-with-debashree-das-gupta"
               target="_blank"
@@ -33,7 +32,7 @@ const ServicesTechniques = React.forwardRef((props, ref) => {
             >
               Book Now
             </Link>
-          </div>
+          </div> */}
         </figcaption>
       </figure>
     );
@@ -67,6 +66,11 @@ const ServicesTechniques = React.forwardRef((props, ref) => {
       {/* Meditations */}
       <div className="grid gap-6 px-5 pb-4 sm:grid-cols-2 lg:grid-cols-3 lg:px-0">
         {activityTypes}
+      </div>
+      <div className="pt-5 text-center">
+        <button className="btn-one" onClick={props.openEnquiry}>
+          Enquire Now
+        </button>
       </div>
     </section>
   );

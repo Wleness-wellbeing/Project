@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 // Data
 import { activityFeatures } from "../../data";
 // Components
@@ -7,13 +7,17 @@ import ActivityTechniques from "../../components/ActivityTechniques";
 import ActivityVideos from "../../components/ActivityVideos";
 import ActivityBlogs from "../../components/ActivityBlogs";
 import FeaturesBlock from "../../components/FeaturesBlock";
+import ActivityForm from "../../components/Forms/ActivityForm";
+import useEnquiryForm from "../../hooks/useEnquiryForm";
 
 export default function ActivityLayout(props) {
   const ref = useRef(null);
+  const { enquiryForm, toggleForm } = useEnquiryForm();
 
   const handleScrollToComponent = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
+
   return (
     <>
       <ActivityHeader
@@ -24,6 +28,7 @@ export default function ActivityLayout(props) {
         isEnquiry={true}
         displayButton={true}
         button={["Explore More"]}
+        openEnquiry={toggleForm}
       />
       <ActivityTechniques
         ref={ref}
@@ -31,10 +36,13 @@ export default function ActivityLayout(props) {
         desc={props.activities.desc}
         types={props.activities.types}
         slug={props.activities.types.slug}
+        openEnquiry={toggleForm}
       />
       <FeaturesBlock data={activityFeatures} />
       {/* <ActivityVideos /> */}
       <ActivityBlogs blogs={props.blogs} />
+
+      <ActivityForm isOpen={enquiryForm} onClose={toggleForm} />
     </>
   );
 }

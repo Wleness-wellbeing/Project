@@ -2,8 +2,8 @@ import React from "react";
 // Swiper Js & Styles
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { Navigation, Autoplay } from "swiper/modules";
-import SwiperBtns from "../Buttons/SwiperBtns";
+import "swiper/css/pagination";
+import { Autoplay, Pagination } from "swiper/modules";
 
 export default function Testimonial(props) {
   return (
@@ -11,8 +11,10 @@ export default function Testimonial(props) {
       {/* Testimonials */}
       <Swiper
         navigation={true}
-        modules={[Navigation, Autoplay]}
+        modules={[Pagination]}
+        pagination={{ clickable: true }}
         slidesPerView={1}
+        grabCursor={true}
         className="!overflow-x-clip overflow-y-visible"
         autoplay={{ delay: 4000 }}
         speed={400}
@@ -26,17 +28,17 @@ export default function Testimonial(props) {
                   <img
                     src={value.image}
                     alt={value.name}
-                    className="mx-auto w-3/4 object-cover drop-shadow-md lg:w-full"
+                    className="mx-auto w-3/4 object-cover drop-shadow-md lg:w-4/5"
                   />
                 </div>
-                <figcaption className="lg:w-3/5 lg:pl-24">
+                <figcaption className="lg:w-3/5 lg:pl-4">
                   <h4 className="text-lg font-semibold sm:text-xl lg:text-3xl">
                     {value.name}
                   </h4>
                   <h6 className="mb-2 font-semibold text-primary-400 xl:text-lg">
                     {value.profession}
                   </h6>
-                  <p className="mb-1 text-justify text-sm font-medium sm:text-lg md:text-base md:leading-5 lg:text-lg">
+                  <p className="mb-1 text-sm font-medium leading-6 sm:text-lg md:text-base md:leading-6">
                     {value.desc}
                   </p>
                 </figcaption>
@@ -44,7 +46,6 @@ export default function Testimonial(props) {
             </SwiperSlide>
           );
         })}
-        {/* <SwiperBtns /> */}
       </Swiper>
     </div>
   );
