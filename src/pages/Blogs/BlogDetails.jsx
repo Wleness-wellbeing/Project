@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { useParams } from "react-router-dom";
+import { faArrowLeft, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { SINGLE_BLOG_URI } from "../../data/api";
 
 export default function BlogDetails() {
   const { slug } = useParams();
   const [blogDetails, setBlogDetails] = useState({});
+  const [blogCategories, setBlogCategories] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -16,7 +17,8 @@ export default function BlogDetails() {
       .get(SINGLE_BLOG_URI + "/" + slug)
       .then((response) => {
         // Handle the successful response
-        setBlogDetails(response.data);
+        setBlogDetails(response.data.blog_details);
+        setBlogCategories(response.data.categories);
         setLoading(false);
       })
       .catch((error) => {
@@ -36,7 +38,7 @@ export default function BlogDetails() {
         <article className="pb-5 lg:w-[70%]">
           <div className="mb-3">
             <img
-              src={blogDetails.image}
+              src={blogDetails.header_image}
               alt=""
               className="w-full rounded-3xl object-cover object-top"
             />
@@ -72,22 +74,25 @@ export default function BlogDetails() {
             </button>
           </form>
 
-          <div className="mt-4 space-y-3">
-            <p className="w-full rounded-xl bg-primary-50/80 px-4 py-2 font-semibold">
+          <ul className="mt-4 space-y-3">
+            <li className="w-full rounded-xl bg-primary-50/80 px-4 py-2 font-semibold">
               All Categories
-            </p>
-            <p className="px-4 font-medium hover:text-slate-900">Issues</p>
-            <p className="px-4 font-medium hover:text-slate-900">
-              Relationship
-            </p>
-            <p className="px-4 font-medium hover:text-slate-900">Travel</p>
-            <p className="px-4 font-medium hover:text-slate-900">
-              Eating Disorder
-            </p>
-            <p className="px-4 font-medium hover:text-slate-900">
-              Health Routine
-            </p>
-          </div>
+            </li>
+            {blogCategories.map((value, i) => {
+              return (
+                <li className="flex justify-between px-4 font-medium hover:text-slate-900">
+                  <span>{value.category}</span>
+                  <span>{value.total_blogs}</span>
+                </li>
+              );
+            })}
+            <Link to="/blogs" className="block pt-4">
+              <li className="w-full rounded-xl bg-primary-50/80 px-4 py-2 font-semibold transition-all hover:bg-primary-50">
+                <FontAwesomeIcon icon={faArrowLeft} className="mr-4" />
+                <span>Back</span>
+              </li>
+            </Link>
+          </ul>
         </section>
       </main>
     </>

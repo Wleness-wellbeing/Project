@@ -7,7 +7,11 @@ export default function BlogCard(props) {
   return (
     <figure className="flex h-full flex-col p-2">
       <Link to={slug}>
-        <img src={props.data.image} className="w-full rounded-xl" alt="..." />
+        <img
+          src={props.data.thumbnail_image}
+          className="w-full rounded-xl"
+          alt="..."
+        />
       </Link>
       <figcaption className="flex h-full flex-col items-start justify-between">
         <div>

@@ -110,7 +110,10 @@ export default function Blogs() {
                   <SwiperSlide key={i}>
                     <div className="items-center rounded-xl lg:flex">
                       <Link className="inline-block lg:w-1/2" to={slug}>
-                        <img src={blogRecent} className="w-full object-cover" />
+                        <img
+                          src={value.thumbnail_image}
+                          className="w-full rounded-2xl object-cover"
+                        />
                       </Link>
                       <div className="pt-3 xs:w-full sm:w-full lg:w-1/2 lg:pl-12">
                         <p className="mb-2 font-semibold text-primary-300 lg:text-lg">
