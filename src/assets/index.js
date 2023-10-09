@@ -1058,6 +1058,8 @@ import iconNight from "./images/icons/icon-night.png";
 import iconDay from "./images/icons/icon-day.png";
 import iconAndroid from "./images/icons/android-logo.png";
 import iconIOS from "./images/icons/ios-logo.png";
+import colorIconGoogle from "./images/icons/google.png";
+import colorIconFacebook from "./images/icons/facebook.png";
 
 export {
   iconInstagram,
@@ -1080,12 +1082,16 @@ export {
   iconDay,
   iconAndroid,
   iconIOS,
+  colorIconGoogle,
+  colorIconFacebook,
 };
 
 // Other Images
 import doctorLogin from "./images/doctor-login.png";
 import doctorSignup from "./images/doctor-signup.png";
 import login from "./images/login.png";
+import loginLights from "./images/login-lights.png";
+import loginSofa from "./images/login-sofa.png";
 import logo from "./images/logo.png";
 import logoTransparent from "./images/logo-transparent.png";
 import rightBar from "./images/right-bar.jpg";
@@ -1095,11 +1101,14 @@ import themeWAve from "./images/theme-wave.png";
 import startUpIndiaLogo from "./images/startup-india-logo.png";
 import logoIAF from "./images/logo-iaf.png";
 import logoISO from "./images/logo-iso.png";
+import bgAuth from "./images/bg-auth.png";
 
 export {
   doctorLogin,
   doctorSignup,
   login,
+  loginLights,
+  loginSofa,
   logo,
   rightBar,
   signup,
@@ -1107,6 +1116,7 @@ export {
   themeWAve,
   logoTransparent,
   startUpIndiaLogo,
+  bgAuth,
   logoIAF,
   logoISO,
 };

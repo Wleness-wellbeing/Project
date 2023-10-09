@@ -2,17 +2,16 @@ import {
   faAngleDown,
   faArrowTrendDown,
   faArrowTrendUp,
-  faEllipsis,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import { dashboardDoctor } from "../../assets";
 import PatientListItem from "../../components/list/PatientListItem";
 import { patientsList } from "../../data/patients";
-import PatientItem from "../../components/list/PatientItem";
 import UpcomingMeets from "../../components/list/UpcomingMeets";
-import { EXPERTS_PROFILE_URI, EXPERTS_URI } from "../../data/api";
+import { EXPERTS_PROFILE_URI } from "../../data/api";
 import axios from "axios";
+import UpdateExpertSlots from "../../components/Admin/UpdateExpertSlots";
 
 export default function DoctorDashboard({ token, setToken }) {
   const [loading, setLoading] = useState(true); // set loading screen
@@ -112,7 +111,7 @@ export default function DoctorDashboard({ token, setToken }) {
         </div>
 
         {/* Patient List & Consultation */}
-        <div className="flex">
+        {/* <div className="flex">
           <div className="w-1/2 p-4">
             <h3 className="flex justify-between pb-4 pt-2">
               <span className="text-xl font-bold">Patient List</span>
@@ -131,19 +130,41 @@ export default function DoctorDashboard({ token, setToken }) {
 
           <div className="w-1/2 p-4">
             <h3 className="pb-4 pt-2 text-xl font-bold">Consultation</h3>
-
             <PatientItem data={patientsList[0]} />
           </div>
+        </div> */}
+
+        <div className="py-6">
+          <h3 className="mb-6 text-center text-xl font-bold">
+            Update Your Time Slots
+          </h3>
+          <UpdateExpertSlots />
         </div>
       </div>
       <div className="w-[35%] p-4">
-        <div className="mb-4">
+        {/* <div className="mb-4">
           <h5 className="flex items-center justify-between">
             <span className="font-semibold">Upcoming Events</span>
             <span className="cursor-pointer rounded-full bg-slate-200 px-2 py-0.5 text-sm font-semibold transition-all hover:bg-slate-300">
               <FontAwesomeIcon icon={faEllipsis} />
             </span>
           </h5>
+        </div> */}
+
+        <div className="mb-6">
+          <h3 className="flex justify-between pb-4 pt-2">
+            <span className="text-xl font-bold">Patient List</span>
+            <span className="flex items-center text-sm font-medium text-slate-400">
+              <span className="mr-1">Today </span>
+              <FontAwesomeIcon icon={faAngleDown} />
+            </span>
+          </h3>
+
+          <div className="space-y-3">
+            {patientsList.map((value, i) => {
+              return <PatientListItem data={value} key={i} />;
+            })}
+          </div>
         </div>
 
         <div>

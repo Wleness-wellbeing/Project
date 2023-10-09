@@ -76,12 +76,12 @@ export default function CoachRequestForm({ name }) {
           <h3 className="font-medium text-[#464646] opacity-80 lg:text-lg">
             Need coaching?
           </h3>
-          <h2 className="font-quicksand text-3xl font-bold leading-tight tracking-tight text-[#464646] opacity-90 xl:text-5xl">
-            Request a Call Back Now
+          <h2 className="font-quicksand text-3xl font-bold leading-tight tracking-tight text-[#464646] opacity-90 xl:text-4xl">
+            Book a session
           </h2>
 
           <p className="pb-4 pt-2 font-medium text-slate-700 opacity-90 lg:text-lg">
-            Talk to our Executive Coach Now.
+            Book a free 30 Minutes exploratory session.
           </p>
           <p className="pb-4 pt-2 font-semibold opacity-90 lg:text-lg">
             We'll book your appointment within 24-48 Hrs.

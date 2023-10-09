@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import axios from "axios";
 import { signInWithPopup } from "firebase/auth";
+import axios from "axios";
 import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 // Data
-import { colorIconFacebook, colorIconGoogle } from "../../assets";
+import { iconFacebookCircle, iconGoogle, login, logo } from "../../assets";
 import { GOOGLE_LOGIN_URI, LOGIN_USER_URI } from "../../data/api";
 
 export default function Login({ setToken, token }) {
@@ -26,6 +26,8 @@ export default function Login({ setToken, token }) {
     status: "",
     message: "",
   });
+
+  const [user, setUser] = useState(null);
 
   // ===================Google Login ==========================//
   const handleGoogleSignIn = () => {
@@ -141,110 +143,127 @@ export default function Login({ setToken, token }) {
     }
   };
 
+  const handleLogout = () => {
+    setUser(null);
+  };
+
   return (
-    <div className="flex items-center justify-center md:w-1/2 md:px-4">
-      <div className="w-80 rounded-xl bg-white p-6 shadow-[5px_5px_14px_3px] shadow-gray-300 sm:w-[400px] lg:py-10">
-        <div className="mb-4 grid grid-cols-2 justify-between gap-4">
-          <button
-            onClick={handleGoogleSignIn}
-            className="flex items-center rounded-lg border-2 border-primary-300 px-5 py-2"
-          >
-            <img src={colorIconGoogle} alt="" className="mr-1 w-8" />
-            <span className="font-medium">Google</span>
-          </button>
-          <button
-            onClick={handleFacebookSignIn}
-            className="flex items-center rounded-lg border-2 border-primary-300 px-5 py-2"
-          >
-            <img src={colorIconFacebook} alt="" className="mr-1 w-8" />
-            <span className="font-medium">Facebook</span>
-          </button>
-        </div>
+    <main className="flex h-screen flex-col items-center justify-center md:flex-row md:items-stretch">
+      <aside className="hidden items-center justify-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-contain bg-right bg-no-repeat md:flex md:w-1/2">
+        <img src={login} alt="" className="block w-[648px] object-cover" />
+      </aside>
 
-        <div className="my-4 flex items-center justify-center gap-3">
-          <span className="h-[2px] w-36 bg-slate-200"></span>
-          <span className="text-sm font-medium">OR</span>
-          <span className="h-[2px] w-36 bg-slate-200"></span>
-        </div>
+      <div className="flex items-center justify-center md:w-1/2 md:px-4">
+        <div className="w-80 sm:w-[400px]">
+          <div className="mx-auto mb-3 w-64 sm:w-[280px]">
+            <Link to="/">
+              <img
+                src={logo}
+                alt="Logo"
+                loading="lazy"
+                className="block w-full object-cover"
+              />
+            </Link>
+          </div>
 
-        {/* Login Form */}
-        <form onSubmit={handleSubmit} className="mb-8 px-4">
-          {successMessage.status == "" ? (
-            location.state &&
-            location.state.successMessage && (
-              <p className="mb-3 text-center font-semibold text-red-500">
-                {location.state.successMessage}
+          {/* Login Form */}
+          <form onSubmit={handleSubmit} className="mb-8">
+            {successMessage.status == "" ? (
+              location.state &&
+              location.state.successMessage && (
+                <p className="mb-3 text-center font-semibold text-red-500">
+                  {location.state.successMessage}
+                </p>
+              )
+            ) : (
+              <p
+                className={`mb-3 text-center font-semibold ${
+                  successMessage.status == "success"
+                    ? " text-green-500 "
+                    : " text-red-500 "
+                }`}
+              >
+                {successMessage.message}
               </p>
-            )
-          ) : (
-            <p
-              className={`mb-3 text-center font-semibold ${
-                successMessage.status == "success"
-                  ? " text-green-500 "
-                  : " text-red-500 "
-              }`}
-            >
-              {successMessage.message}
+            )}
+
+            <label htmlFor="phone" className="mb-5 block">
+              <input
+                type="tel"
+                id="phone"
+                maxLength={10}
+                name="phone"
+                placeholder="Mobile Number"
+                className="form-input"
+                value={formInfo.phone}
+                onChange={handleChange}
+              />
+            </label>
+            <label htmlFor="password">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                className="form-input"
+                value={formInfo.password}
+                onChange={handleChange}
+              />
+            </label>
+
+            <div className="text-right">
+              <Link
+                to="/forgot-password"
+                className="mb-6 inline-block font-medium text-primary-400"
+              >
+                Forgot Password?
+              </Link>
+            </div>
+            <div className="text-center">
+              <button type="submit" className="btn-primary !w-fit !px-28 !py-3">
+                LOGIN
+              </button>
+            </div>
+          </form>
+
+          <div className="md:px-16">
+            <div className="my-4 flex items-center justify-center gap-3">
+              <span className="h-[2px] w-28 bg-slate-200"></span>
+              <span className="text-sm font-medium">OR</span>
+              <span className="h-[2px] w-28 bg-slate-200"></span>
+            </div>
+            <div className="mb-6 flex justify-center gap-x-4">
+              <button
+                className="rounded-lg bg-primary-50/80 px-4 py-2 transition-colors hover:bg-primary-50"
+                onClick={handleGoogleSignIn}
+              >
+                <img src={iconGoogle} alt="" className="w-6" />
+              </button>
+              <button
+                className="rounded-lg bg-primary-50/80 px-4 py-2 transition-colors hover:bg-primary-50"
+                onClick={handleFacebookSignIn}
+              >
+                <img src={iconFacebookCircle} alt="" className="w-6" />
+              </button>
+            </div>
+            <p className="text-center font-medium">
+              <span>Don't have an account yet. </span>
+              <Link className="font-semibold text-primary-400" to="/signup">
+                Sign Up
+              </Link>
             </p>
-          )}
-
-          <label htmlFor="phone" className="mb-5 block">
-            <input
-              type="tel"
-              id="phone"
-              maxLength={10}
-              name="phone"
-              placeholder="Mobile Number"
-              className="form-input-underline"
-              value={formInfo.phone}
-              onChange={handleChange}
-            />
-          </label>
-          <label htmlFor="password">
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Password"
-              className="form-input-underline"
-              value={formInfo.password}
-              onChange={handleChange}
-            />
-          </label>
-
-          <div className="text-right">
-            <Link
-              to="/forgot-password"
-              className="mb-6 inline-block text-sm font-medium text-primary-400"
-            >
-              Forgot Password?
-            </Link>
+            <p className="text-center font-medium">
+              <span>Login as an Expert. </span>
+              <Link
+                className="font-semibold text-primary-400"
+                to="/experts-login"
+              >
+                Login In
+              </Link>
+            </p>
           </div>
-          <div className="text-center">
-            <button type="submit" className="btn-primary !w-fit !px-28 !py-3">
-              LOGIN
-            </button>
-          </div>
-        </form>
-
-        <div className="md:px-8">
-          <p className="text-center font-medium">
-            <span>Don't have an account yet. </span>
-            <Link className="font-semibold text-primary-400" to="/signup">
-              Sign Up
-            </Link>
-          </p>
-          <p className="text-center font-medium">
-            <span>Login as an Expert. </span>
-            <Link
-              className="font-semibold text-primary-400"
-              to="/experts-login"
-            >
-              Login In
-            </Link>
-          </p>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

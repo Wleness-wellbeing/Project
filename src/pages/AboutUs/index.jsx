@@ -60,15 +60,14 @@ function AboutUs() {
 
       <div className="container mx-auto mt-5 text-center lg:mt-7 ">
         <h2 className="subheading  font-semibold">
-          The <span className="heading-primary">Problem</span>
+          <span>Unmasking the </span>
+          <span className="heading-primary"> Challenges</span>
         </h2>
       </div>
       <div className="container mx-auto   flex flex-col-reverse lg:flex-row">
         <div className="my-auto w-full text-left lg:order-2 lg:w-1/2 lg:text-left">
-          <div>
+          {/* <div>
             <div className="flex items-start py-2">
-              {" "}
-              {/* Use a flex container */}
               <img
                 src={leaf}
                 alt="Leaf Icon"
@@ -81,8 +80,6 @@ function AboutUs() {
             </div>
 
             <div className="flex items-start py-2">
-              {" "}
-              {/* Use a flex container */}
               <img
                 src={leaf}
                 alt="Leaf Icon"
@@ -94,8 +91,6 @@ function AboutUs() {
               </p>
             </div>
             <div className="flex items-start py-2">
-              {" "}
-              {/* Use a flex container */}
               <img
                 src={leaf}
                 alt="Leaf Icon"
@@ -107,8 +102,6 @@ function AboutUs() {
               </p>
             </div>
             <div className="flex items-start py-2">
-              {" "}
-              {/* Use a flex container */}
               <img
                 src={leaf}
                 alt="Leaf Icon"
@@ -120,8 +113,6 @@ function AboutUs() {
               </p>
             </div>
             <div className="flex items-start py-2">
-              {" "}
-              {/* Use a flex container */}
               <img
                 src={leaf}
                 alt="Leaf Icon"
@@ -133,8 +124,6 @@ function AboutUs() {
               </p>
             </div>
             <div className="flex items-start py-2">
-              {" "}
-              {/* Use a flex container */}
               <img
                 src={leaf}
                 alt="Leaf Icon"
@@ -145,28 +134,35 @@ function AboutUs() {
                 different forums.{" "}
               </p>
             </div>
-          </div>
+          </div> */}
+          <p className="font-medium lg:text-lg">
+            In today's fast-paced world, the demands of modern life, coupled
+            with the pervasive influence of digital devices and social media,
+            can amplify feelings of stress, anxiety, and isolation. While
+            therapy is a potential solution, it's not always accessible due to
+            costs, societal stigmas, or geographical barriers. The digital age
+            calls for comprehensive, affordable mental health solutions that
+            transcend these limitations, yet a unified platform addressing
+            holistic wellness remains elusive, forcing individuals to search
+            across various forums.
+          </p>
         </div>
 
         <div className="mx-auto my-auto w-full lg:order-1 lg:w-1/2">
-          {/* Added ml-4 to shift the image to the left */}
-          <img
-            src={problem} // Replace with your image URL
-            alt="Description of the image"
-            className=""
-          />
+          <img src={problem} alt="Description of the image" className="" />
         </div>
       </div>
 
       <div className="mx-auto flex flex-col-reverse justify-center border-4 border-secondary/10 md:flex-row">
-        <div className="mx-auto my-auto w-full bg-secondary/10 text-center md:w-3/4">
-          <div className=" mt-2 lg:mr-40 lg:text-end">
+        <div className="mx-auto my-auto w-full bg-secondary/10 py-8 text-center md:w-3/4">
+          <div className="my-4 text-left md:ml-60">
             <h2 className="subheading">
-              The <span className="heading-primary">Solution</span>
+              <span>Charting the path </span>
+              <span className="heading-primary"> Forward</span>
             </h2>
           </div>
-          <div className=" w-full  text-left md:ml-60 md:mr-0 md:w-2/4 lg:my-12">
-            <ul className="list-disc ">
+          <div className="w-full text-left md:ml-60 md:mr-0 md:w-2/4 lg:mb-12">
+            {/* <ul className="list-disc ">
               <li className="item-start  flex ">
                 <img
                   src={leaf}
@@ -237,7 +233,20 @@ function AboutUs() {
                   their goals.{" "}
                 </span>
               </li>
-            </ul>
+            </ul> */}
+            <p className="font-medium lg:text-lg">
+              Wleness delivers a comprehensive approach to well-being,
+              consolidating essential resources into one unified platform.
+              Utilizing cutting-edge telehealth technology, Wleness bridges
+              distances by linking users with certified experts, ensuring
+              tailored interventions. Beyond conventional counseling, Wleness
+              introduces innovative healing modalities such as Music Healing and
+              Sadhna. In fostering a secure, anonymous space, it encourages
+              candid discussions on mental health. Additionally, Wleness
+              underscores the significance of life and executive coaching,
+              empowering individuals to surmount obstacles, realize their
+              potential, and achieve their aspirations.
+            </p>
           </div>
         </div>
         <div className="mx-auto my-auto transform md:mt-0 md:translate-x-0 lg:my-auto lg:-translate-x-60 lg:text-center">

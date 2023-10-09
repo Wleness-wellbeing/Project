@@ -80,9 +80,12 @@ export default function BlogDetails() {
             </li>
             {blogCategories.map((value, i) => {
               return (
-                <li className="flex justify-between px-4 font-medium hover:text-slate-900">
+                <li
+                  key={i}
+                  className="flex justify-between px-4 font-medium hover:text-slate-900"
+                >
                   <span>{value.category}</span>
-                  <span>{value.total_blogs}</span>
+                  {/* <span>{value.total_blogs}</span> */}
                 </li>
               );
             })}

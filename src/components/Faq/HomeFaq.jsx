@@ -22,7 +22,7 @@ export default function HomeFaq(props) {
       {/* ========== FAQ's ========== */}
       <div className="mx-auto mb-5 lg:mb-0 lg:w-1/2">
         <h2 className="subheading heading-primary mb-2">FAQs</h2>
-        <p className="para mb-4">
+        <p className="para mb-4 lg:pr-5">
           All essential information is readily available here on Wleness. Ask
           questions and browse around for answers.
         </p>

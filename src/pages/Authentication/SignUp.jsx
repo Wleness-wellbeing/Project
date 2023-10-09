@@ -1,6 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { iconFacebookCircle, iconGoogle, logo, signup } from "../../assets";
+import {
+  colorIconFacebook,
+  colorIconGoogle,
+  iconFacebookCircle,
+  iconGoogle,
+  logo,
+  signup,
+} from "../../assets";
 import axios from "axios";
 import { GOOGLE_SIGNUP_URI, SIGNUP_USER_URI } from "../../data/api";
 import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
@@ -174,161 +181,122 @@ export default function Signup({ setToken, token }) {
     setUser(null);
   };
   return (
-    <main className="flex h-screen flex-col items-center justify-center md:flex-row md:items-stretch">
-      {/* Left Sidebar */}
-      <aside className="hidden items-center justify-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-contain bg-right bg-no-repeat md:flex md:w-1/2">
-        <img src={signup} alt="" className="block object-cover md:w-[648px]" />
-      </aside>
+    <div className="flex flex-col items-center justify-center md:w-1/2 md:px-12">
+      <div className="w-80 rounded-xl bg-white px-6 py-8 shadow-[5px_5px_14px_3px] shadow-gray-300 sm:w-[400px]">
+        <div className="mb-4 grid grid-cols-2 justify-between gap-4">
+          <button
+            onClick={handleGoogleSignIn}
+            className="flex items-center rounded-lg border-2 border-primary-300 px-5 py-2"
+          >
+            <img src={colorIconGoogle} alt="" className="mr-1 w-7 lg:w-8" />
+            <span className="text-sm font-medium md:text-base">Google</span>
+          </button>
+          <button
+            onClick={handleFacebookSignIn}
+            className="flex items-center rounded-lg border-2 border-primary-300 px-5 py-2"
+          >
+            <img src={colorIconFacebook} alt="" className="mr-1 w-7 lg:w-8" />
+            <span className="text-sm font-medium md:text-base">Facebook</span>
+          </button>
+        </div>
 
-      {/* Right Content */}
-      <div className="flex flex-col items-center justify-center md:w-1/2 md:px-12">
-        <div className="w-80 sm:w-[400px]">
-          <div className="mx-auto mb-4 w-64 sm:w-[280px]">
-            <Link to="/">
-              <img
-                src={logo}
-                loading="lazy"
-                alt="Logo"
-                className="block w-full object-cover"
-              />
-            </Link>
+        <div className="my-4 flex items-center justify-center gap-3">
+          <span className="h-[2px] w-36 bg-slate-200"></span>
+          <span className="text-sm font-medium">OR</span>
+          <span className="h-[2px] w-36 bg-slate-200"></span>
+        </div>
+
+        {/* Signup Form */}
+        <form onSubmit={handleSubmit} className="mb-4 px-4">
+          <label htmlFor="name">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Name"
+              value={formInfo.name}
+              onChange={handleChange}
+              className="form-input-underline"
+            />
+          </label>
+
+          <label htmlFor="phone">
+            <input
+              type="tel"
+              maxLength={10}
+              id="phone"
+              name="phone"
+              placeholder="Mobile"
+              value={formInfo.phone}
+              onChange={handleChange}
+              className="form-input-underline"
+            />
+          </label>
+
+          <label htmlFor="email">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              value={formInfo.email}
+              onChange={handleChange}
+              className="form-input-underline"
+            />
+          </label>
+
+          <label htmlFor="password">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              value={formInfo.password}
+              onChange={handleChange}
+              className="form-input-underline"
+            />
+          </label>
+
+          <label htmlFor="confirm_password">
+            <input
+              type="password"
+              id="confirm_password"
+              name="confirm_password"
+              placeholder="Confirm Password"
+              value={formInfo.confirm_password}
+              onChange={handleChange}
+              className="form-input-underline"
+            />
+          </label>
+          <p
+            className={`text-center font-semibold ${
+              successMessage.status == "success"
+                ? " text-green-500 "
+                : " text-red-500 "
+            }`}
+          >
+            {successMessage.message}
+          </p>
+          <div className="mt-6 text-center">
+            <button className="btn-primary !w-full !py-3 !text-sm !font-semibold lg:!px-20">
+              CREATE ACCOUNT
+            </button>
           </div>
+        </form>
 
-          {/* Signup Form */}
-          <form onSubmit={handleSubmit} className="mb-4 md:mb-8">
-            <label htmlFor="name">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Name"
-                value={formInfo.name}
-                onChange={handleChange}
-                className="form-input"
-              />
-            </label>
-
-            <label htmlFor="phone">
-              <input
-                type="tel"
-                maxLength={10}
-                id="phone"
-                name="phone"
-                placeholder="Mobile"
-                value={formInfo.phone}
-                onChange={handleChange}
-                className="form-input"
-              />
-            </label>
-
-            <label htmlFor="email">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Email"
-                value={formInfo.email}
-                onChange={handleChange}
-                className="form-input"
-              />
-            </label>
-
-            <label htmlFor="password">
-              <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Password"
-                value={formInfo.password}
-                onChange={handleChange}
-                className="form-input"
-              />
-            </label>
-
-            <label htmlFor="confirm_password">
-              <input
-                type="password"
-                id="confirm_password"
-                name="confirm_password"
-                placeholder="Confirm Password"
-                value={formInfo.confirm_password}
-                onChange={handleChange}
-                className="form-input"
-              />
-            </label>
-            <p
-              className={`text-center font-semibold ${
-                successMessage.status == "success"
-                  ? " text-green-500 "
-                  : " text-red-500 "
-              }`}
+        <div className="md:px-10">
+          {/* Login Link */}
+          <p className="text-center">
+            <span> Already have an account? </span>
+            <Link
+              className="font-bold text-primary-100 hover:text-primary-500"
+              to="/login"
             >
-              {successMessage.message}
-            </p>
-            <div className="mt-6 text-center">
-              <button className="btn-primary !w-fit !px-20 !text-sm !font-semibold">
-                CREATE ACCOUNT
-              </button>
-            </div>
-          </form>
-
-          <div className="md:px-16">
-            <div className="my-4 flex items-center justify-center gap-3">
-              <span className="h-[2px] w-28 bg-slate-200"></span>
-              <span className="text-sm font-medium">OR</span>
-              <span className="h-[2px] w-28 bg-slate-200"></span>
-            </div>
-            <div className="mb-6 flex justify-center gap-x-4">
-              {user ? (
-                <>
-                  <button onClick={handleLogout}>Logout</button>
-                  <h3>Welcome {user.displayName}</h3>
-                  <p>{user.email}</p>
-                  <div>
-                    <img src={user.photoURL} alt="dp"></img>
-                  </div>
-                </>
-              ) : (
-                <button
-                  className="rounded-lg bg-primary-50/80 px-4 py-2 transition-colors hover:bg-primary-50"
-                  onClick={handleGoogleSignIn}
-                >
-                  <img src={iconGoogle} alt="" className="w-6" />
-                </button>
-              )}
-
-              {user ? (
-                <>
-                  <button onClick={handleLogout}>Logout</button>
-                  <h3>Welcome {user.displayName}</h3>
-                  <p>{user.email}</p>
-                  <div>
-                    <img src={user.photoURL} alt="dp"></img>
-                  </div>
-                </>
-              ) : (
-                <button
-                  className="rounded-lg bg-primary-50/80 px-4 py-2 transition-colors hover:bg-primary-50"
-                  onClick={handleFacebookSignIn}
-                >
-                  <img src={iconFacebookCircle} alt="" className="w-6" />
-                </button>
-              )}
-            </div>
-
-            {/* Login Link */}
-            <p className="text-center">
-              <span> Already have an account? </span>
-              <Link
-                className="font-bold text-primary-100 hover:text-primary-500"
-                to="/login"
-              >
-                Login
-              </Link>
-            </p>
-          </div>
+              Login
+            </Link>
+          </p>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

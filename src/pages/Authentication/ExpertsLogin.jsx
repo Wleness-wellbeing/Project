@@ -89,85 +89,77 @@ export default function ExpertsLogin({ setToken, token }) {
   };
 
   return (
-    <main className="flex h-screen flex-col items-center justify-center md:flex-row md:items-stretch">
-      <aside className="hidden items-center justify-center bg-primary-200 bg-[url(../images/right-bar.jpg)] bg-contain bg-right bg-no-repeat md:flex md:w-1/2">
-        <img src={login} alt="" className="block w-[648px] object-cover" />
-      </aside>
+    <div className="flex items-center justify-center md:w-1/2 md:px-4">
+      <div className="w-80 rounded-xl bg-white px-6 py-8 shadow-[5px_5px_14px_3px] shadow-gray-300 sm:w-[400px]">
+        {/* Login Form */}
+        <form onSubmit={handleSubmit} className="lg:px-4">
+          {successMessage.status == "" ? (
+            location.state &&
+            location.state.successMessage && (
+              <p className="mb-3 text-center font-semibold text-red-500">
+                {location.state.successMessage}
+              </p>
+            )
+          ) : (
+            <p
+              className={`mb-3 text-center font-semibold ${
+                successMessage.status == "success"
+                  ? " text-green-500 "
+                  : " text-red-500 "
+              }`}
+            >
+              {successMessage.message}
+            </p>
+          )}
 
-      <div className="flex items-center justify-center md:w-1/2 md:px-4">
-        <div className="w-80 sm:w-[400px]">
-          <div className="mx-auto mb-3 w-64 sm:w-[280px]">
-            <Link to="/">
-              <img
-                src={logo}
-                alt="Logo"
-                loading="lazy"
-                className="block w-full object-cover"
-              />
+          <label htmlFor="user_id" className="mb-5 block">
+            <input
+              type="tel"
+              id="user_id"
+              maxLength={10}
+              name="user_id"
+              placeholder="User Id"
+              className="form-input-underline"
+              value={formInfo.user_id}
+              onChange={handleChange}
+            />
+          </label>
+          <label htmlFor="password">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              className="form-input-underline"
+              value={formInfo.password}
+              onChange={handleChange}
+            />
+          </label>
+
+          <div className="text-right">
+            <Link
+              to="/forgot-password"
+              className="mb-6 inline-block font-medium text-primary-400"
+            >
+              Forgot Password?
             </Link>
           </div>
+          <div className="text-center">
+            <button type="submit" className="btn-primary !w-fit !px-28 !py-3">
+              LOGIN
+            </button>
+          </div>
+        </form>
 
-          {/* Login Form */}
-          <form onSubmit={handleSubmit} className="mb-8">
-            {successMessage.status == "" ? (
-              location.state &&
-              location.state.successMessage && (
-                <p className="mb-3 text-center font-semibold text-red-500">
-                  {location.state.successMessage}
-                </p>
-              )
-            ) : (
-              <p
-                className={`mb-3 text-center font-semibold ${
-                  successMessage.status == "success"
-                    ? " text-green-500 "
-                    : " text-red-500 "
-                }`}
-              >
-                {successMessage.message}
-              </p>
-            )}
-
-            <label htmlFor="user_id" className="mb-5 block">
-              <input
-                type="tel"
-                id="user_id"
-                maxLength={10}
-                name="user_id"
-                placeholder="User Id"
-                className="form-input"
-                value={formInfo.user_id}
-                onChange={handleChange}
-              />
-            </label>
-            <label htmlFor="password">
-              <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="Password"
-                className="form-input"
-                value={formInfo.password}
-                onChange={handleChange}
-              />
-            </label>
-
-            <div className="text-right">
-              <Link
-                to="/forgot-password"
-                className="mb-6 inline-block font-medium text-primary-400"
-              >
-                Forgot Password?
-              </Link>
-            </div>
-            <div className="text-center">
-              <button type="submit" className="btn-primary !w-fit !px-28 !py-3">
-                LOGIN
-              </button>
-            </div>
-          </form>
+        <div className="mt-4 md:px-8">
+          <p className="text-center font-medium">
+            <span>Login as an User. </span>
+            <Link className="font-semibold text-primary-400" to="/login">
+              Login In
+            </Link>
+          </p>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
