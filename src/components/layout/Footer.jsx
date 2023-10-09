@@ -9,7 +9,13 @@ import {
   socialLinks,
 } from "../../data/navigation";
 import { Link } from "react-router-dom";
-import { logoIAF, logoISO, startUpIndiaLogo } from "../../assets";
+import {
+  iconAndroid,
+  iconIOS,
+  logoIAF,
+  logoISO,
+  startUpIndiaLogo,
+} from "../../assets";
 
 export default function Footer() {
   return (
@@ -144,6 +150,17 @@ export default function Footer() {
               <img src={logoIAF} alt="" className="w-14 object-contain" />
               <img src={logoISO} alt="" className="w-10 object-contain" />
             </div>
+
+            <div className="my-5">
+              <h4 className="text-center text-lg font-semibold lg:text-xl">
+                We are launching soon...
+              </h4>
+              <div className="flex justify-center space-x-4">
+                <img src={iconAndroid} alt="" className="w-32 object-contain" />
+                <img src={iconIOS} alt="" className="w-20 object-contain" />
+              </div>
+            </div>
+
             <div className="my-3 flex items-center justify-center gap-x-2">
               {socialLinks.map((value, i) => {
                 return (

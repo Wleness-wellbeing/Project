@@ -2,24 +2,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   about1,
-  about2,
   about3,
   about4,
-  about5,
   about6,
   meeting,
-  pgsir,
-  asissir,
-  kamalsir,
-  pavansir,
-  salonimaam,
-  sreyashsir,
-  aboutusbg,
   problem,
   leaf,
-  approveIcon,
+  aboutusHeader,
 } from "../../assets";
-import AboutUsdropbox from "../../components/AboutUsDrop";
 import DummyComponent from "../../components/AboutUsDrop";
 import TeamComponent from "./TeamComponent";
 import PartnerWithUs from "../../components/Forms/PartnerWithUs";
@@ -35,14 +25,14 @@ function AboutUs() {
   return (
     <main>
       <header
-        className="relative bg-cover bg-top py-16 brightness-90  lg:py-32"
+        className="relative bg-cover bg-center bg-no-repeat brightness-90 lg:bg-top"
         style={{
-          backgroundImage: `url(${aboutusbg}) `,
+          backgroundImage: `url(${aboutusHeader}) `,
         }}
       >
-        <div className="mx-auto  flex flex-col lg:flex-row">
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-          <div className="space-y-4 px-4 sm:w-full lg:order-1 lg:ml-56 lg:w-1/2 lg:space-y-6 lg:px-0">
+        <div className="mx-auto flex flex-col  bg-black bg-opacity-20 py-16  lg:flex-row lg:py-32">
+          <div className="absolute inset-0"></div>
+          <div className="space-y-4 px-4 sm:w-full lg:order-1 lg:ml-56 lg:w-1/2 lg:space-y-6 lg:px-0 lg:pr-44">
             <h1 className="text-[42px] font-semibold text-white brightness-105">
               About <span className="heading-primary !text-white">Wleness</span>
             </h1>

@@ -61,12 +61,12 @@ import homeMusicalTherapy from "./images/home/home-service-7.png";
 import homeInternship from "./images/home/home-service-8.png";
 import homeSelfcare from "./images/home/home-service-9.png";
 
-import mainforteRight from "./images/mainforteRight.png"
-import suggestionRight from "./images/suggestionRight.png"
-
+import mainforteRight from "./images/mainforteRight.png";
+import suggestionRight from "./images/suggestionRight.png";
 
 export {
-  mainforteRight,suggestionRight,
+  mainforteRight,
+  suggestionRight,
   mainHeaderImage,
   iconCommunity,
   iconEasyAccess,
@@ -142,7 +142,7 @@ import kamalsir from "./images/aboutus/kamalsir.png";
 import pavansir from "./images/aboutus/pavansir.png";
 import salonimaam from "./images/aboutus/salonimaam.png";
 import sreyashsir from "./images/aboutus/sreyashsir.png";
-import aboutusbg from "./images/aboutus/aboutusbg.png";
+import aboutusHeader from "./images/aboutus/aboutus-header.png";
 import problem from "./images/aboutus/problem.png";
 import approveIcon from "./images/aboutus/approveIcon.png";
 
@@ -160,7 +160,7 @@ export {
   pavansir,
   salonimaam,
   sreyashsir,
-  aboutusbg,
+  aboutusHeader,
   problem,
   approveIcon,
 };
@@ -289,20 +289,20 @@ import walkingRight1 from "./images/activities/meditation/meditationSubpages/wal
 import zenHeader from "./images/activities/meditation/meditationSubpages/zenHeader.png";
 import zenLeft1 from "./images/activities/meditation/meditationSubpages/zenLeft1.png";
 import zenRight1 from "./images/activities/meditation/meditationSubpages/zenRight1.png";
-import vipasnaHeader from "./images/activities/meditation/meditationSubpages/vipasna-header.png"
-import vipasnaPracticingLeft from "./images/activities/meditation/meditationSubpages/vipasna-practicing-left.png"
-import vipasnaPracticingRight from "./images/activities/meditation/meditationSubpages/vipasna-practicing-right.png"
-import concentrationHeader from "./images/activities/meditation/meditationSubpages/concentration-header.png"
-import concentrationPracticingLeft from "./images/activities/meditation/meditationSubpages/concentration-practicing-left.png"
-import concentrationPracticingRight from "./images/activities/meditation/meditationSubpages/concentration-practicing-right.png"
-
-
-
-
+import vipasnaHeader from "./images/activities/meditation/meditationSubpages/vipasna-header.png";
+import vipasnaPracticingLeft from "./images/activities/meditation/meditationSubpages/vipasna-practicing-left.png";
+import vipasnaPracticingRight from "./images/activities/meditation/meditationSubpages/vipasna-practicing-right.png";
+import concentrationHeader from "./images/activities/meditation/meditationSubpages/concentration-header.png";
+import concentrationPracticingLeft from "./images/activities/meditation/meditationSubpages/concentration-practicing-left.png";
+import concentrationPracticingRight from "./images/activities/meditation/meditationSubpages/concentration-practicing-right.png";
 
 export {
-  concentrationHeader,concentrationPracticingLeft,concentrationPracticingRight,
-  vipasnaHeader,vipasnaPracticingLeft,vipasnaPracticingRight,
+  concentrationHeader,
+  concentrationPracticingLeft,
+  concentrationPracticingRight,
+  vipasnaHeader,
+  vipasnaPracticingLeft,
+  vipasnaPracticingRight,
   breadthBenefit,
   breadthHeader,
   breadthLeft1,
@@ -1056,6 +1056,8 @@ import iconNeutral from "./images/icons/icon-neutral.png";
 import iconSad from "./images/icons/icon-sad.png";
 import iconNight from "./images/icons/icon-night.png";
 import iconDay from "./images/icons/icon-day.png";
+import iconAndroid from "./images/icons/android-logo.png";
+import iconIOS from "./images/icons/ios-logo.png";
 
 export {
   iconInstagram,
@@ -1076,6 +1078,8 @@ export {
   iconSad,
   iconNight,
   iconDay,
+  iconAndroid,
+  iconIOS,
 };
 
 // Other Images
