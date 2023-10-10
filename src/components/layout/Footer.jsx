@@ -151,13 +151,13 @@ export default function Footer() {
               <img src={logoISO} alt="" className="w-10 object-contain" />
             </div>
 
-            <div className="my-5">
-              <h4 className="text-center text-lg font-semibold lg:text-xl">
-                We are launching soon...
+            <div className="my-5 flex">
+              <h4 className="mr-2 text-center text-lg font-semibold lg:text-xl">
+                We are launching soon
               </h4>
-              <div className="flex justify-center space-x-4">
-                <img src={iconAndroid} alt="" className="w-32 object-contain" />
-                <img src={iconIOS} alt="" className="w-20 object-contain" />
+              <div className="flex justify-center space-x-2">
+                <img src={iconAndroid} alt="" className="w-7 object-contain" />
+                <img src={iconIOS} alt="" className="w-7 object-contain" />
               </div>
             </div>
 

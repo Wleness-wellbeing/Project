@@ -1056,8 +1056,8 @@ import iconNeutral from "./images/icons/icon-neutral.png";
 import iconSad from "./images/icons/icon-sad.png";
 import iconNight from "./images/icons/icon-night.png";
 import iconDay from "./images/icons/icon-day.png";
-import iconAndroid from "./images/icons/android-logo.png";
-import iconIOS from "./images/icons/ios-logo.png";
+import iconAndroid from "./images/icons/android.png";
+import iconIOS from "./images/icons/ios.png";
 import colorIconGoogle from "./images/icons/google.png";
 import colorIconFacebook from "./images/icons/facebook.png";
 
