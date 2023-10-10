@@ -5,6 +5,7 @@ import { CORPORATE_JOIN_URI } from "../../data/api";
 
 export default function CorporateForm({ isOpen, onClose }) {
   if (!isOpen) return null;
+
   // Handle Joining Form
   const [formInfo, setFormData] = useState({
     org: "",
@@ -13,8 +14,9 @@ export default function CorporateForm({ isOpen, onClose }) {
     role: "",
     number: "",
     website: "",
-    policyAccept: "off",
   });
+  const [policy, setPolicy] = useState(false);
+
   const [successMessage, setSuccessMessage] = useState({
     status: "",
     message: "",
@@ -43,10 +45,14 @@ export default function CorporateForm({ isOpen, onClose }) {
     setFormData({ ...formInfo, [name]: value });
   };
 
+  // ========== Update Policy ==========
+  const handlePolicy = () => {
+    setPolicy(!policy);
+  };
+
   // Handle Post Request
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formInfo);
 
     // Validate if form is filled
     if (
@@ -55,9 +61,16 @@ export default function CorporateForm({ isOpen, onClose }) {
       formInfo["full_name"] &&
       formInfo["role"] &&
       formInfo["number"] &&
-      formInfo["website"] &&
-      formInfo["policyAccept"]
+      formInfo["website"]
     ) {
+      if (!policy) {
+        setSuccessMessage({
+          status: "error",
+          message: "Please accept our policies to continue",
+        });
+        return null;
+      }
+
       let formData = new FormData();
       // Append form fields to the FormData object
       for (const key in formInfo) {
@@ -66,24 +79,23 @@ export default function CorporateForm({ isOpen, onClose }) {
 
       try {
         const response = await axios.post(CORPORATE_JOIN_URI, formData);
-        console.log(response.data);
         setSuccessMessage({
           status: response.data.status,
           message: response.data.message,
         });
 
         // Empty form after successfully sending data
-        response.data.status == "success"
-          ? setFormData({
-              org: "",
-              professional_email: "",
-              full_name: "",
-              role: "",
-              number: "",
-              website: "",
-              policyAccept: "off",
-            })
-          : null;
+        if (response.data.status == "success") {
+          setFormData({
+            org: "",
+            professional_email: "",
+            full_name: "",
+            role: "",
+            number: "",
+            website: "",
+          });
+          setPolicy(false);
+        }
       } catch (error) {
         console.error("Error sending data:", error);
         setSuccessMessage({
@@ -189,8 +201,8 @@ export default function CorporateForm({ isOpen, onClose }) {
               name="policyAccept"
               className="mr-2"
               id="policyAccept"
-              value={formInfo.policyAccept}
-              onChange={handleChange}
+              checked={policy}
+              onChange={handlePolicy}
             />
             <span className="text-[8px] font-medium md:text-xs">
               I understand & agree that the information submitted in this form

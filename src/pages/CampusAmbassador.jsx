@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 // Data
 import {
   campusAmbassadorHeader,
@@ -98,7 +98,7 @@ export default function CampusAmbassador() {
         <div className="flex flex-wrap justify-between py-6">
           {whyToApplyCampus.map((value, i) => {
             return (
-              <figure>
+              <figure key={i}>
                 <div>
                   <img src={value.image} alt="" className="w-40" />
                 </div>

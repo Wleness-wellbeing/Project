@@ -1,13 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import {
-  colorIconFacebook,
-  colorIconGoogle,
-  iconFacebookCircle,
-  iconGoogle,
-  logo,
-  signup,
-} from "../../assets";
+import { colorIconFacebook, colorIconGoogle } from "../../assets";
 import axios from "axios";
 import { GOOGLE_SIGNUP_URI, SIGNUP_USER_URI } from "../../data/api";
 import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";

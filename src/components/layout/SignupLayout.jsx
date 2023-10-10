@@ -3,28 +3,31 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
 import { bgAuth, loginLights, loginSofa } from "../../assets";
+import Footer from "../layout/Footer";
 
 export default function SignupLayout({ children }) {
   return (
     <>
       <main className="flex h-screen flex-col items-center justify-center md:flex-row md:items-stretch">
         <aside className="hidden flex-col items-center justify-between md:flex md:w-1/2">
-          <div className="w-96 pt-28">
-            <h2 className="mb-4 text-3xl font-semibold text-primary-300 xl:text-4xl">
-              Welcome to Wleness
-            </h2>
-            <p className="font-medium lg:text-lg">
-              Mental health is vital—it's the foundation of our well-being,
-              impacting relationships, productivity, and life's challenges.
-              Recognizing its importance fosters a stigma-free society that
-              supports happier, healthier lives for all.
-            </p>
+          <div>
+            <div className="mx-auto w-96 pt-28 lg:w-[460px]">
+              <h2 className="mb-4 text-3xl font-semibold text-primary-300 xl:text-4xl">
+                Welcome to Wleness
+              </h2>
+              <p className="font-medium lg:text-lg">
+                Mental health is vital—it's the foundation of our well-being,
+                impacting relationships, productivity, and life's challenges.
+                Recognizing its importance fosters a stigma-free society that
+                supports happier, healthier lives for all.
+              </p>
+            </div>
+            <img
+              src={loginSofa}
+              alt=""
+              className="block w-[620px] object-cover"
+            />
           </div>
-          <img
-            src={loginSofa}
-            alt=""
-            className="block w-[648px] object-cover"
-          />
         </aside>
         <Link
           to="/"
@@ -49,6 +52,7 @@ export default function SignupLayout({ children }) {
           className="absolute right-0 -z-10 h-full w-full"
         />
       </main>
+      <Footer />
     </>
   );
 }

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { CAMPUS_AMBASSADOR_JOIN_URI } from "../data/api";
 
 export default function CampusAmbassadorForm({ isOpen, onClose }) {
   if (!isOpen) return null;
 
-  const [formData, setFormData] = useState({
+  const [formInfo, setFormInfo] = useState({
     firstName: "",
     lastName: "",
     email: "",
@@ -12,47 +13,94 @@ export default function CampusAmbassadorForm({ isOpen, onClose }) {
     address: "",
     qualification: "",
     role: "",
-    resume: "",
     interest: "",
-    agreement: false,
+  });
+  const [resume, setResume] = useState(null);
+  const [agreement, setAgreement] = useState(false);
+  const [alertMessage, setAlertMessage] = useState({
+    status: "",
+    message: "",
   });
 
-  const handleChange = (event) => {
-    const { name, value, type, checked } = event.target;
-    const fieldValue = type === "checkbox" ? checked : value;
-
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: fieldValue,
-    }));
+  // ========== Handle Form Submission ==========
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormInfo({ ...formInfo, [name]: value });
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  // ========== Update Policy ==========
+  const handleAgreement = () => {
+    setAgreement(!agreement);
+  };
 
-    try {
-      const response = await axios.post(
-        "http://localhost:3000/register", // Update the URL to your backend endpoint
-        formData,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        },
-      );
+  const updateMessage = (status, message) => {
+    setAlertMessage({
+      status: status,
+      message: message,
+    });
+  };
 
-      if (response.status === 200) {
-        // Handle successful submission
-        console.log("Application submitted successfully");
-        alert("Application submitted successfully!");
+  // Handle Post Request
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-        onClose();
-      } else {
-        // Handle submission error
-        console.error("An error occurred while submitting the application");
+    // Validate if form is filled
+    if (
+      formInfo["firstName"] &&
+      formInfo["lastName"] &&
+      formInfo["email"] &&
+      formInfo["phoneNumber"] &&
+      formInfo["address"] &&
+      formInfo["qualification"] &&
+      formInfo["role"] &&
+      formInfo["interest"]
+    ) {
+      // Validate agreement is accepted
+      if (!agreement) {
+        updateMessage("error", "Please accept our policies to continue");
+        return null;
       }
-    } catch (error) {
-      console.error(error);
+
+      // Validate if resume if uploaded
+      if (resume == null) {
+        updateMessage("error", "Please upload resume");
+      }
+
+      let form_data = new FormData();
+      // Append form fields to the form_data object
+      for (const key in formInfo) {
+        form_data.append(key, formInfo[key]);
+      }
+      form_data.append("resume", resume);
+
+      try {
+        const response = await axios.post(
+          CAMPUS_AMBASSADOR_JOIN_URI,
+          form_data,
+        );
+        updateMessage(response.data.status, response.data.message);
+
+        // Empty form after successfully sending data
+        if (response.data.status == "success") {
+          setFormInfo({
+            firstName: "",
+            lastName: "",
+            email: "",
+            phoneNumber: "",
+            address: "",
+            qualification: "",
+            role: "",
+            interest: "",
+          });
+          setAgreement(false);
+        } else {
+          return null;
+        }
+      } catch (error) {
+        console.log("Error sending data:", error);
+      }
+    } else {
+      updateMessage("error", "Please fill your details properly!");
     }
   };
 
@@ -75,7 +123,7 @@ export default function CampusAmbassadorForm({ isOpen, onClose }) {
 
   return (
     <section className="fixed inset-0 z-40 flex justify-center pt-8 backdrop-brightness-50">
-      <div className="campus-ambassador-form w-[640px] overflow-y-scroll rounded-t-lg bg-white p-6">
+      <div className="campus-ambassador-form w-[640px] overflow-y-scroll rounded-lg bg-white p-6">
         <h4 className="mb-4 text-center text-2xl font-bold text-primary-300">
           Campus Ambassador Form
         </h4>
@@ -85,44 +133,36 @@ export default function CampusAmbassadorForm({ isOpen, onClose }) {
           out the form.
         </p>
 
-        <form action="" className="pt-6" onSubmit={handleSubmit}>
+        <form className="pt-6" onSubmit={handleSubmit}>
           <div className="mb-4 flex gap-4">
-            <label htmlFor="" className="w-1/2 self-end">
+            <label htmlFor="firstName" className="w-1/2 self-end">
               <span className="mb-1 block font-bold text-primary-300">
                 Name:
               </span>
               <input
                 type="text"
                 name="firstName"
-                value={formData.firstName}
-                onChange={(e) =>
-                  setFormData((prevFormData) => ({
-                    ...prevFormData,
-                    firstName: e.target.value,
-                  }))
-                }
+                id="firstName"
+                value={formInfo.firstName}
+                onChange={handleChange}
                 placeholder="First Name"
                 className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
               />
             </label>
-            <label htmlFor="" className="w-1/2 self-end">
+            <label htmlFor="lastName" className="w-1/2 self-end">
               <input
                 type="text"
+                id="lastName"
                 name="lastName"
-                value={formData.lastName}
-                onChange={(e) =>
-                  setFormData((prevFormData) => ({
-                    ...prevFormData,
-                    lastName: e.target.value,
-                  }))
-                }
+                value={formInfo.lastName}
+                onChange={handleChange}
                 placeholder="Last Name"
                 className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
               />
             </label>
           </div>
           <div className="mb-4 flex gap-4">
-            <label htmlFor="" className="w-1/2 self-end">
+            <label htmlFor="email" className="w-1/2 self-end">
               <span className="mb-1 block font-bold text-primary-300">
                 Email:
               </span>
@@ -130,18 +170,13 @@ export default function CampusAmbassadorForm({ isOpen, onClose }) {
                 type="text"
                 name="email"
                 id="email"
-                value={formData.email}
-                onChange={(e) =>
-                  setFormData((prevFormData) => ({
-                    ...prevFormData,
-                    email: e.target.value,
-                  }))
-                }
+                value={formInfo.email}
+                onChange={handleChange}
                 placeholder="Enter email address"
                 className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
               />
             </label>
-            <label htmlFor="" className="w-1/2 self-end">
+            <label htmlFor="phoneNumber" className="w-1/2 self-end">
               <span className="mb-1 block font-bold text-primary-300">
                 Phone Number:
               </span>
@@ -149,20 +184,15 @@ export default function CampusAmbassadorForm({ isOpen, onClose }) {
                 type="text"
                 name="phoneNumber"
                 id="phoneNumber"
-                value={formData.phoneNumber}
-                onChange={(e) =>
-                  setFormData((prevFormData) => ({
-                    ...prevFormData,
-                    phoneNumber: e.target.value,
-                  }))
-                }
+                value={formInfo.phoneNumber}
+                onChange={handleChange}
                 placeholder="Enter your phone number"
                 className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
               />
             </label>
           </div>
           <div className="mb-4 flex gap-4">
-            <label htmlFor="" className="w-full">
+            <label htmlFor="address" className="w-full">
               <span className="mb-1 block font-bold text-primary-300">
                 Address:
               </span>
@@ -170,20 +200,15 @@ export default function CampusAmbassadorForm({ isOpen, onClose }) {
                 type="text"
                 name="address"
                 id="address"
-                value={formData.address}
-                onChange={(e) =>
-                  setFormData((prevFormData) => ({
-                    ...prevFormData,
-                    address: e.target.value,
-                  }))
-                }
+                value={formInfo.address}
+                onChange={handleChange}
                 placeholder="Enter Your Complete Address"
                 className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
               />
             </label>
           </div>
           <div className="mb-4 flex gap-4">
-            <label htmlFor="" className="w-1/2 self-end">
+            <label htmlFor="qualification" className="w-1/2 self-end">
               <span className="mb-1 block font-bold text-primary-300">
                 Educational Qualification :
               </span>
@@ -191,18 +216,13 @@ export default function CampusAmbassadorForm({ isOpen, onClose }) {
                 type="text"
                 name="qualification"
                 id="qualification"
-                value={formData.qualification}
-                onChange={(e) =>
-                  setFormData((prevFormData) => ({
-                    ...prevFormData,
-                    qualification: e.target.value,
-                  }))
-                }
+                value={formInfo.qualification}
+                onChange={handleChange}
                 placeholder="Enter your degree"
                 className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
               />
             </label>
-            <label htmlFor="" className="w-1/2 self-end">
+            <label htmlFor="role" className="w-1/2 self-end">
               <span className="mb-1 block font-bold text-primary-300">
                 Role you are looking for:
               </span>
@@ -210,20 +230,15 @@ export default function CampusAmbassadorForm({ isOpen, onClose }) {
                 type="text"
                 name="role"
                 id="role"
-                value={formData.role}
-                onChange={(e) =>
-                  setFormData((prevFormData) => ({
-                    ...prevFormData,
-                    role: e.target.value,
-                  }))
-                }
-                placeholder="Select"
+                value={formInfo.role}
+                onChange={handleChange}
+                placeholder="Role"
                 className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
               />
             </label>
           </div>
           <div className="mb-4 flex gap-4">
-            <label htmlFor="" className="w-full">
+            <label htmlFor="resume" className="w-full">
               <span className="mb-1 block font-bold text-primary-300">
                 Resume:
               </span>
@@ -231,12 +246,13 @@ export default function CampusAmbassadorForm({ isOpen, onClose }) {
                 type="file"
                 name="resume"
                 id="resume"
+                onChange={(e) => setResume(e.target.files[0])}
                 className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
               />
             </label>
           </div>
           <div className="mb-4 flex gap-4">
-            <label htmlFor="" className="w-full">
+            <label htmlFor="interest" className="w-full">
               <span className="mb-1 block font-bold text-primary-300">
                 Tell us about your interest:
               </span>
@@ -245,25 +261,21 @@ export default function CampusAmbassadorForm({ isOpen, onClose }) {
                 id="interest"
                 cols="30"
                 rows="3"
-                value={formData.interest}
-                onChange={(e) =>
-                  setFormData((prevFormData) => ({
-                    ...prevFormData,
-                    interest: e.target.value,
-                  }))
-                }
+                value={formInfo.interest}
+                onChange={handleChange}
                 className="w-full rounded-lg border-2 border-primary-50 px-4 py-2 outline-none"
                 placeholder="Give a brief not more than 300 words"
               ></textarea>
             </label>
           </div>
           <div className="mb-6 flex gap-4">
-            <label htmlFor="" className="flex w-full items-start">
+            <label htmlFor="agreement" className="flex w-full items-start">
               <input
                 type="checkbox"
+                id="agreement"
                 name="agreement"
-                checked={formData.agreement}
-                onChange={handleChange}
+                checked={agreement}
+                onChange={handleAgreement}
                 className="mr-3 mt-1"
               />
               <p className="text-sm font-medium">
@@ -272,6 +284,17 @@ export default function CampusAmbassadorForm({ isOpen, onClose }) {
                 accordance with their Privacy Policy.
               </p>
             </label>
+          </div>
+          <div>
+            <p
+              className={`mb-2 text-center font-semibold ${
+                alertMessage.status == "success"
+                  ? " text-green-500 "
+                  : " text-red-500 "
+              }`}
+            >
+              {alertMessage.message}
+            </p>
           </div>
           <div className="text-center">
             <button

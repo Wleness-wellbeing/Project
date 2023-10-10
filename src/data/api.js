@@ -13,14 +13,19 @@ export const GOOGLE_LOGIN_URI = URI + "google-signin";
 
 // Leads
 export const REQUEST_CALLBACK_URI = URI + "request-callback";
-export const CONTACT_URI = URI + "submit-contact";
+export const CONTACT_URI = URI + "contact";
 export const CAREER_URI = URI + "career-apply";
 export const PARTNER_WITH_US_URI = URI + "partner-with-us";
 
 // Experts
 export const EXPERTS_URI = URI + "experts";
 export const EXPERTS_PROFILE_URI = URI + "experts/profile/";
+
+// Appointment
 export const USER_APPOINTMENTS = URI + "appointments";
+export const APPOINTMENT_BOOK_URI = URI + "book-appointment";
+
+// Enquiries
 export const COACH_CALLBACK_URI = URI + "coach-callback-requests";
 
 // Blogs
@@ -28,7 +33,7 @@ export const BLOGS_URI = URI + "blogs";
 export const SINGLE_BLOG_URI = URI + "blog";
 
 // Joining Forms
-export const APPOINTMENT_BOOK_URI = URI + "book-appointment";
 export const CORPORATE_JOIN_URI = URI + "join-corporate";
 export const THERAPIST_JOIN_URI = URI + "join-therapist";
 export const PSYCHIATRIST_JOIN_URI = URI + "join-psychiatrist";
+export const CAMPUS_AMBASSADOR_JOIN_URI = URI + "join-campus-ambassador";

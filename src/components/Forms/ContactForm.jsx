@@ -1,40 +1,69 @@
 import React, { useState } from "react";
 import { requestCallback } from "../../assets";
+import { CONTACT_URI } from "../../data/api";
+import axios from "axios";
 
 function ContactForm() {
-  const [name, setName] = useState("");
-  const [number, setNumber] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [formInfo, setFormData] = useState({
+    name: "",
+    email: "",
+    number: "",
+    message: "",
+  });
+  const [successMessage, setSuccessMessage] = useState({
+    status: "",
+    message: "",
+  });
 
-  const [successMessage, setSuccessMessage] = useState("");
+  // Set alert message
+  const setMessage = (status, message) => {
+    setSuccessMessage({
+      status: status,
+      message: message,
+    });
+  };
 
+  // Change form values
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formInfo, [name]: value });
+  };
+
+  // Handle form submit
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const formData = {
-      name: name,
-      number: number,
-      email: email,
-      message: message,
-    };
-
-    try {
-      const response = await fetch("http://localhost:3000/submit-form", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json", // Set the content type to JSON
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        setSuccessMessage("Thanks! We will get back to you soon.🙂"); // Update success message
-      } else {
-        console.error("Error submitting form data");
+    // Validate if form is filled
+    if (
+      formInfo["name"] &&
+      formInfo["email"] &&
+      formInfo["number"] &&
+      formInfo["message"]
+    ) {
+      let formData = new FormData();
+      for (const key in formInfo) {
+        formData.append(key, formInfo[key]);
       }
-    } catch (error) {
-      console.error("Error submitting form data:", error);
+
+      try {
+        const response = await axios.post(CONTACT_URI, formData);
+        setMessage(response.data.status, response.data.message);
+
+        // Empty form after successfully sending data
+        response.data.status == "success"
+          ? setFormData({
+              name: "",
+              email: "",
+              number: "",
+              message: "",
+            })
+          : null;
+      } catch (error) {
+        console.error("Error sending data:", error);
+        setMessage("error", "Internal Server Error! Please Try Again later");
+      }
+    } else {
+      setMessage("error", "Please fill your details!");
     }
   };
 
@@ -74,8 +103,9 @@ function ContactForm() {
           <input
             type="text"
             placeholder="Enter Your Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={formInfo.name}
+            name="name"
+            onChange={handleChange}
             className="block w-full rounded-md px-6 py-4 shadow-md focus:ring focus:ring-violet-400 focus:ring-opacity-75 dark:bg-white"
           />
         </label>
@@ -83,8 +113,9 @@ function ContactForm() {
           <input
             type="tel" // Use "tel" for phone numbers
             placeholder="Your number"
-            value={number}
-            onChange={(e) => setNumber(e.target.value)}
+            name="number"
+            value={formInfo.number}
+            onChange={handleChange}
             className="block w-full rounded-md px-6 py-4 shadow-md focus:ring focus:ring-violet-400 focus:ring-opacity-75 dark:bg-white"
           />
         </label>
@@ -92,8 +123,9 @@ function ContactForm() {
           <input
             type="email"
             placeholder="Email"
-            value={email}
-            onChange={(e) => setDate(e.target.value)}
+            name="email"
+            value={formInfo.email}
+            onChange={handleChange}
             className="block w-full rounded-md px-6 py-4 shadow-md focus:ring focus:ring-violet-400 focus:ring-opacity-75 dark:bg-white"
           />
         </label>
@@ -101,14 +133,21 @@ function ContactForm() {
           <input
             type="text"
             placeholder="Message"
-            value={message}
-            onChange={(e) => setDate(e.target.value)}
+            name="message"
+            value={formInfo.message}
+            onChange={handleChange}
             className="block w-full rounded-md px-6 py-4 shadow-md focus:ring focus:ring-violet-400 focus:ring-opacity-75 dark:bg-white"
           />
         </label>
-        {successMessage && (
-          <p className="text-center text-green-500">{successMessage}</p>
-        )}
+        <p
+          className={`text-center font-semibold ${
+            successMessage.status == "success"
+              ? " text-green-500 "
+              : " text-red-500 "
+          }`}
+        >
+          {successMessage.message}
+        </p>
         <button type="submit" className="btn-one mx-auto mt-4">
           Submit
         </button>

@@ -403,7 +403,7 @@ export default function ExecutiveCoaching() {
         </p>
       </section>
 
-      <CoachRequestForm />
+      <CoachRequestForm name="General" />
     </>
   );
 }
