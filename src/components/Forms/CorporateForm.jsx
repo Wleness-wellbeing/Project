@@ -16,7 +16,6 @@ export default function CorporateForm({ isOpen, onClose }) {
     website: "",
   });
   const [policy, setPolicy] = useState(false);
-
   const [successMessage, setSuccessMessage] = useState({
     status: "",
     message: "",

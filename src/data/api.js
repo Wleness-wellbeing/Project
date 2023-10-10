@@ -27,6 +27,7 @@ export const APPOINTMENT_BOOK_URI = URI + "book-appointment";
 
 // Enquiries
 export const COACH_CALLBACK_URI = URI + "coach-callback-requests";
+export const LIFE_COACHING_URI = URI + "life-coaching";
 
 // Blogs
 export const BLOGS_URI = URI + "blogs";
@@ -37,3 +38,4 @@ export const CORPORATE_JOIN_URI = URI + "join-corporate";
 export const THERAPIST_JOIN_URI = URI + "join-therapist";
 export const PSYCHIATRIST_JOIN_URI = URI + "join-psychiatrist";
 export const CAMPUS_AMBASSADOR_JOIN_URI = URI + "join-campus-ambassador";
+export const INTERNSHIP_JOIN_URI = URI + "join-internships";

@@ -1,29 +1,35 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { CORPORATE_JOIN_URI } from "../../data/api";
+import { CORPORATE_JOIN_URI, LIFE_COACHING_URI } from "../../data/api";
 
 export default function LifeCoachingForm({ isOpen, onClose }) {
   if (!isOpen) return null;
   // Handle Joining Form
   const [formInfo, setFormData] = useState({
-    org: "",
-    professional_email: "",
-    full_name: "",
-    role: "",
-    number: "",
-    website: "",
-    policyAccept: "off",
+    name: "",
+    email: "",
+    age: "",
+    gender: "",
+    phone: "",
   });
-  const [successMessage, setSuccessMessage] = useState({
+  const [policy, setPolicy] = useState(false);
+  const [alert, setAlert] = useState({
     status: "",
     message: "",
   });
 
+  const setMessage = (status, message) => {
+    setAlert({
+      status: status,
+      message: message,
+    });
+  };
+
   // Close assessment modal on clicking outside of the box
   useEffect(() => {
     const handleOutsideClick = (event) => {
-      if (isOpen && !event.target.closest(".corporate-form")) {
+      if (isOpen && !event.target.closest(".life-coaching")) {
         onClose();
       }
     };
@@ -43,6 +49,11 @@ export default function LifeCoachingForm({ isOpen, onClose }) {
     setFormData({ ...formInfo, [name]: value });
   };
 
+  // ========== Update Policy ==========
+  const handlePolicy = () => {
+    setPolicy(!policy);
+  };
+
   // Handle Post Request
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -50,14 +61,17 @@ export default function LifeCoachingForm({ isOpen, onClose }) {
 
     // Validate if form is filled
     if (
-      formInfo["org"] &&
-      formInfo["professional_email"] &&
-      formInfo["full_name"] &&
-      formInfo["role"] &&
-      formInfo["number"] &&
-      formInfo["website"] &&
-      formInfo["policyAccept"]
+      formInfo["name"] &&
+      formInfo["email"] &&
+      formInfo["age"] &&
+      formInfo["gender"] &&
+      formInfo["phone"]
     ) {
+      if (!policy) {
+        setMessage("error", "Please accept our policies to continue");
+        return null;
+      }
+
       let formData = new FormData();
       // Append form fields to the FormData object
       for (const key in formInfo) {
@@ -65,43 +79,32 @@ export default function LifeCoachingForm({ isOpen, onClose }) {
       }
 
       try {
-        const response = await axios.post(CORPORATE_JOIN_URI, formData);
-        console.log(response.data);
-        setSuccessMessage({
-          status: response.data.status,
-          message: response.data.message,
-        });
+        const response = await axios.post(LIFE_COACHING_URI, formData);
+        setMessage(response.data.status, response.data.message);
 
         // Empty form after successfully sending data
-        response.data.status == "success"
-          ? setFormData({
-              org: "",
-              professional_email: "",
-              full_name: "",
-              role: "",
-              number: "",
-              website: "",
-              policyAccept: "off",
-            })
-          : null;
+        if (response.data.status == "success") {
+          setFormData({
+            name: "",
+            email: "",
+            age: "",
+            gender: "",
+            phone: "",
+          });
+          setPolicy(false);
+        }
       } catch (error) {
         console.error("Error sending data:", error);
-        setSuccessMessage({
-          status: "error",
-          message: "Internal Server Error! Please Try Again later",
-        });
+        setMessage("error", "Internal Server Error! Please Try Again later");
       }
     } else {
-      setSuccessMessage({
-        status: "error",
-        message: "Please fill your details properly!",
-      });
+      setMessage("error", "Please fill your details properly!");
     }
   };
 
   return (
     <section className="fixed inset-0 z-50 grid place-items-center bg-black/20">
-      <div className="corporate-form w-4/5 rounded-2xl bg-white p-6 lg:w-[620px]">
+      <div className="life-coaching w-4/5 rounded-2xl bg-white p-6 lg:w-[620px]">
         <div className="text-center">
           <h2 className="subheading">Life-coaching Join</h2>
         </div>
@@ -109,88 +112,75 @@ export default function LifeCoachingForm({ isOpen, onClose }) {
         <form onSubmit={handleSubmit}>
           <p
             className={`mb-2 text-center font-semibold ${
-              successMessage.status == "success"
-                ? " text-green-500 "
-                : " text-red-500 "
+              alert.status == "success" ? " text-green-500 " : " text-red-500 "
             }`}
           >
-            {successMessage.message}
+            {alert.message}
           </p>
-          <label htmlFor="org">
+          <label htmlFor="name">
             <input
               type="text"
-              name="org"
-              id="org"
+              name="name"
+              id="name"
               placeholder="Name *"
               className="form-input"
-              value={formInfo.org}
+              value={formInfo.name}
               onChange={handleChange}
             />
           </label>
 
-          <label htmlFor="professional_email">
+          <label htmlFor="email">
             <input
-              type="text"
-              name="professional_email"
-              id="professional_email"
+              type="email"
+              name="email"
+              id="email"
               placeholder=" Email *"
               className="form-input"
-              value={formInfo.professional_email}
+              value={formInfo.email}
               onChange={handleChange}
             />
           </label>
-          <label htmlFor="full_name">
+          <label htmlFor="age">
             <input
-              type="number"
-              name="full_name"
-              id="full_name"
+              type="text"
+              name="age"
+              id="age"
               placeholder="Age *"
               className="form-input"
-              value={formInfo.full_name}
+              value={formInfo.age}
               onChange={handleChange}
             />
           </label>
-          <label htmlFor="role">
+          <label htmlFor="gender">
             <input
-              type="gender"
-              name="role"
-              id="role"
+              type="text"
+              name="gender"
+              id="gender"
               placeholder="Gender *"
               className="form-input"
-              value={formInfo.role}
+              value={formInfo.gender}
               onChange={handleChange}
             />
           </label>
-          <label htmlFor="number">
+          <label htmlFor="phone">
             <input
-              type="text"
-              name="number"
-              id="number"
+              type="tel"
+              name="phone"
+              id="phone"
               placeholder="Phone Number *"
               className="form-input"
-              value={formInfo.number}
+              value={formInfo.phone}
               onChange={handleChange}
             />
           </label>
-          {/* <label htmlFor="website">
-            <input
-              type="text"
-              name="website"
-              id="website"
-              placeholder="Your Website *"
-              className="form-input"
-              value={formInfo.website}
-              onChange={handleChange}
-            />
-          </label> */}
           <label htmlFor="policyAccept" className="mb-4 flex px-2">
             <input
               type="checkbox"
               name="policyAccept"
               className="mr-2"
               id="policyAccept"
-              value={formInfo.policyAccept}
-              onChange={handleChange}
+              checked={policy}
+              onChange={handlePolicy}
             />
             <span className="text-[8px] font-medium md:text-xs">
               I understand & agree that the information submitted in this form
