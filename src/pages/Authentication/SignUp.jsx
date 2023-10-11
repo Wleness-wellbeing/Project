@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { colorIconFacebook, colorIconGoogle } from "../../assets";
 import axios from "axios";
-import { GOOGLE_SIGNUP_URI, SIGNUP_USER_URI } from "../../data/api";
+import { GOOGLE_SIGNUP_URI, SIGNUP_USER_URI, VERIFY_OTP } from "../../data/api";
 import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 import { signInWithPopup } from "firebase/auth";
 
 export default function Signup({ setToken, token }) {
+  const [otp, setotp] = useState(0);
   const navigate = useNavigate();
 
   // Redirect user if loggedin
@@ -170,126 +171,154 @@ export default function Signup({ setToken, token }) {
     }
   };
 
+  // const verifyOtp = async () => {
+  //   if (otp == null) {
+  //     setOtpMessage("Please Enter Your OTP");
+  //   } else {
+  //     const verifyOtp = await axios.post(VERIFY_OTP, formData);
+  //     if (verifyOtp.data.status != "success") {
+  //       setMessages(response.data.status, response.data.message); // Set success message
+  //     } else {
+  //       setMessages(response.data.status, response.data.message); // Set success message
+  //     }
+  //   }
+  // };
+
   const handleLogout = () => {
     setUser(null);
   };
   return (
-    <div className="flex flex-col items-center justify-center md:w-1/2 md:px-12">
-      <div className="w-80 rounded-xl bg-white px-6 py-8 shadow-[5px_5px_14px_3px] shadow-gray-300 sm:w-[400px]">
-        <div className="mb-4 grid grid-cols-2 justify-between gap-4">
-          <button
-            onClick={handleGoogleSignIn}
-            className="flex items-center rounded-lg border-2 border-primary-300 px-5 py-2"
-          >
-            <img src={colorIconGoogle} alt="" className="mr-1 w-7 lg:w-8" />
-            <span className="text-sm font-medium md:text-base">Google</span>
-          </button>
-          <button
-            onClick={handleFacebookSignIn}
-            className="flex items-center rounded-lg border-2 border-primary-300 px-5 py-2"
-          >
-            <img src={colorIconFacebook} alt="" className="mr-1 w-7 lg:w-8" />
-            <span className="text-sm font-medium md:text-base">Facebook</span>
-          </button>
-        </div>
-
-        <div className="my-4 flex items-center justify-center gap-3">
-          <span className="h-[2px] w-36 bg-slate-200"></span>
-          <span className="text-sm font-medium">OR</span>
-          <span className="h-[2px] w-36 bg-slate-200"></span>
-        </div>
-
-        {/* Signup Form */}
-        <form onSubmit={handleSubmit} className="mb-4 px-4">
-          <label htmlFor="name">
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Name"
-              value={formInfo.name}
-              onChange={handleChange}
-              className="form-input-underline"
-            />
-          </label>
-
-          <label htmlFor="phone">
-            <input
-              type="tel"
-              maxLength={10}
-              id="phone"
-              name="phone"
-              placeholder="Mobile"
-              value={formInfo.phone}
-              onChange={handleChange}
-              className="form-input-underline"
-            />
-          </label>
-
-          <label htmlFor="email">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-              value={formInfo.email}
-              onChange={handleChange}
-              className="form-input-underline"
-            />
-          </label>
-
-          <label htmlFor="password">
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Password"
-              value={formInfo.password}
-              onChange={handleChange}
-              className="form-input-underline"
-            />
-          </label>
-
-          <label htmlFor="confirm_password">
-            <input
-              type="password"
-              id="confirm_password"
-              name="confirm_password"
-              placeholder="Confirm Password"
-              value={formInfo.confirm_password}
-              onChange={handleChange}
-              className="form-input-underline"
-            />
-          </label>
-          <p
-            className={`text-center font-semibold ${
-              successMessage.status == "success"
-                ? " text-green-500 "
-                : " text-red-500 "
-            }`}
-          >
-            {successMessage.message}
-          </p>
-          <div className="mt-6 text-center">
-            <button className="btn-primary !w-full !py-3 !text-sm !font-semibold lg:!px-20">
-              CREATE ACCOUNT
+    <>
+      <div className="flex flex-col items-center justify-center md:w-1/2 md:px-12">
+        <div className="w-80 rounded-xl bg-white px-6 py-8 shadow-[5px_5px_14px_3px] shadow-gray-300 sm:w-[400px]">
+          <div className="mb-4 grid grid-cols-2 justify-between gap-4">
+            <button
+              onClick={handleGoogleSignIn}
+              className="flex items-center rounded-lg border-2 border-primary-300 px-5 py-2"
+            >
+              <img src={colorIconGoogle} alt="" className="mr-1 w-7 lg:w-8" />
+              <span className="text-sm font-medium md:text-base">Google</span>
+            </button>
+            <button
+              onClick={handleFacebookSignIn}
+              className="flex items-center rounded-lg border-2 border-primary-300 px-5 py-2"
+            >
+              <img src={colorIconFacebook} alt="" className="mr-1 w-7 lg:w-8" />
+              <span className="text-sm font-medium md:text-base">Facebook</span>
             </button>
           </div>
-        </form>
 
-        <div className="md:px-10">
-          {/* Login Link */}
-          <p className="text-center">
-            <span> Already have an account? </span>
-            <Link
-              className="font-bold text-primary-100 hover:text-primary-500"
-              to="/login"
+          <div className="my-4 flex items-center justify-center gap-3">
+            <span className="h-[2px] w-36 bg-slate-200"></span>
+            <span className="text-sm font-medium">OR</span>
+            <span className="h-[2px] w-36 bg-slate-200"></span>
+          </div>
+
+          {/* Signup Form */}
+          <form onSubmit={handleSubmit} className="mb-4 px-4">
+            <label htmlFor="name">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Name"
+                value={formInfo.name}
+                onChange={handleChange}
+                className="form-input-underline"
+              />
+            </label>
+
+            <label htmlFor="phone">
+              <input
+                type="tel"
+                maxLength={10}
+                id="phone"
+                name="phone"
+                placeholder="Mobile"
+                value={formInfo.phone}
+                onChange={handleChange}
+                className="form-input-underline"
+              />
+            </label>
+
+            <label htmlFor="email">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                value={formInfo.email}
+                onChange={handleChange}
+                className="form-input-underline"
+              />
+            </label>
+
+            <label htmlFor="password">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                value={formInfo.password}
+                onChange={handleChange}
+                className="form-input-underline"
+              />
+            </label>
+
+            <label htmlFor="confirm_password">
+              <input
+                type="password"
+                id="confirm_password"
+                name="confirm_password"
+                placeholder="Confirm Password"
+                value={formInfo.confirm_password}
+                onChange={handleChange}
+                className="form-input-underline"
+              />
+            </label>
+            <p
+              className={`text-center font-semibold ${
+                successMessage.status == "success"
+                  ? " text-green-500 "
+                  : " text-red-500 "
+              }`}
             >
-              Login
-            </Link>
-          </p>
+              {successMessage.message}
+            </p>
+            <div className="mt-6 text-center">
+              <button className="btn-primary !w-full !py-3 !text-sm !font-semibold lg:!px-20">
+                CREATE ACCOUNT
+              </button>
+            </div>
+          </form>
+
+          <div className="md:px-10">
+            {/* Login Link */}
+            <p className="text-center">
+              <span> Already have an account? </span>
+              <Link
+                className="font-bold text-primary-100 hover:text-primary-500"
+                to="/login"
+              >
+                Login
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+
+      {/* <div className="fixed inset-0 z-20 grid w-full place-items-center bg-black/20">
+        <div className="rounded-lg bg-white p-5 shadow-lg">
+          <h2 className="text-center text-2xl font-semibold">Enter Your OTP</h2>
+          <form className="my-4 block" onSubmit={verifyOtp}>
+            <input type="text" name="otp" id="otp" className="form-input" />
+
+            <div className="text-center">
+              <button className="btn-one">Verify Otp</button>
+            </div>
+          </form>
+        </div>
+      </div> */}
+    </>
   );
 }

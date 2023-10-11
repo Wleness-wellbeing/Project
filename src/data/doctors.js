@@ -6,9 +6,11 @@ import {
 import {
   debashreeDasPortrait,
   doctor1,
+  kantaGavitPortrait,
   meenakshiMishraPortrait,
   nehaJainPortrait,
   nidhiNahataPortrait,
+  nithinAfPortrait,
   poojaSinghPortrait,
   prakashchandraRamtekePortrait,
   purviBalasariaPortrait,
@@ -70,7 +72,8 @@ export const doctorsDetails = [
     slug: "minakshi-mishra",
   },
   {
-    bookingUrl: "#",
+    bookingUrl:
+      "https://talk-with-prakashchandra-ramteke.dayschedule.com/prakashchandra-ramteke",
     experience: "3+ years of experience",
     expertise: "CBT, ACT, DBT, School Counseling",
     id: 5,
@@ -82,7 +85,7 @@ export const doctorsDetails = [
     slug: "prakashchandra-ramteke",
   },
   {
-    bookingUrl: "#",
+    bookingUrl: "https://nitin-af.dayschedule.com/talk-with-nitin-af",
     experience: "9+ years of experience",
     expertise: "Holistic healing, Anxiety disorders",
     id: 6,
@@ -94,7 +97,8 @@ export const doctorsDetails = [
     slug: "dr-p-singh",
   },
   {
-    bookingUrl: "#",
+    bookingUrl:
+      "https://talk-with-neha-jain.dayschedule.com/talk-with-neha-jain",
     experience: "5+ years of experience",
     expertise: "CBT, EFT, and DBT",
     id: 7,
@@ -106,7 +110,7 @@ export const doctorsDetails = [
     slug: "neha-jain",
   },
   {
-    bookingUrl: "#",
+    bookingUrl: "https://talk-with-nidhi-nahata.dayschedule.com/talk-with",
     experience: "3+ years of experience",
     expertise: "Clinical Psychiatrist",
     id: 8,
@@ -118,30 +122,28 @@ export const doctorsDetails = [
     slug: "nidhi-nahata",
   },
   {
-    bookingUrl: "https://swati-ghoshal.dayschedule.com/talk-with-swati-ghoshal",
-    experience: "8+ years of experience",
-    expertise: "Couple Counselling, Corporate Training",
+    bookingUrl: "#",
+    experience: "4+ years of experience",
+    expertise: "Couple and family counseling",
     id: 9,
-    image: "https://api.wleness.com//static/img/experts/swati-ghoshal.png",
-    languages: "Hindi, English & Bengali",
-    name: "Swati Ghoshal",
-    price: 234,
+    image: nithinAfPortrait,
+    languages: "English, Malayalam",
+    name: "Nithin A.F",
+    price: 1000,
     profession: "Psychologist",
-    slug: "swati-ghoshal",
+    slug: "nithin-a-f",
   },
   {
-    bookingUrl:
-      "https://deba-shree.dayschedule.com/talk-with-debashree-das-gupta",
-    experience: "8+ years of experience",
-    expertise: "Musical Healing",
+    bookingUrl: "https://kanta-gavit.dayschedule.com/kanta-gavit",
+    experience: "12+ years of experience",
+    expertise: "Trauma Therapist",
     id: 10,
-    image:
-      "https://api.wleness.com//static/img/experts/debashree-das-gupta.png",
-    languages: "Hindi, English & Bengali",
-    name: "Debashree Das Gupta",
-    price: 234,
-    profession: "Music Therapist",
-    slug: "debashree-das-gupta",
+    image: kantaGavitPortrait,
+    languages: "English, Hindi",
+    name: "Kanta Gavit",
+    price: 2500,
+    profession: "Psychologist",
+    slug: "kanta-gavit",
   },
 ];
 
