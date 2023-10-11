@@ -137,6 +137,7 @@ export default function ExpertProfile() {
       <SelectPricing
         slug={"/experts/booking/" + profileDetails.slug}
         bookingUrl={profileDetails.bookingUrl}
+        price={profileDetails.price}
       />
       <DoctorStatistics />
 

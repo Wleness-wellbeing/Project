@@ -945,6 +945,10 @@ import swatiGhoshalPortrait from "./images/doctors/swati-ghoshal-portrait.png";
 import debashreeDasPortrait from "./images/doctors/debashree-das-portrait.png";
 import purviBalasariaPortrait from "./images/doctors/purvi-balasaria-portrait.png";
 import meenakshiMishraPortrait from "./images/doctors/meenakshi-mishra-portrait.png";
+import prakashchandraRamtekePortrait from "./images/doctors/prakashchandra-ramteke-portrait.png";
+import nehaJainPortrait from "./images/doctors/neha-jain-portrait.png";
+import nidhiNahataPortrait from "./images/doctors/nidhi-nahata-portrait.png";
+import poojaSinghPortrait from "./images/doctors/pooja-singh-portrait.png";
 // Landscape Images
 import swatiGhoshalLandscape from "./images/doctors/swati-ghoshal-landscape.png";
 import debashreeDasLandscape from "./images/doctors/debashree-das-landscape.png";
@@ -962,6 +966,10 @@ export {
   purviBalasariaLandscape,
   meenakshiMishraLandscape,
   meenakshiMishraPortrait,
+  prakashchandraRamtekePortrait,
+  nehaJainPortrait,
+  nidhiNahataPortrait,
+  poojaSinghPortrait,
 };
 
 // Design Elements
