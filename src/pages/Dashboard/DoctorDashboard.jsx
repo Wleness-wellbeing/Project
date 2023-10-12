@@ -68,7 +68,7 @@ export default function DoctorDashboard({ token, setToken }) {
             </span>
           </h1>
 
-          <div className="flex items-center  rounded-3xl bg-slate-200 bg-gradient-to-tr from-[#B2E6FD] via-[#9BD8F1] to-[#52D0C2] px-4 pr-8">
+          <div className="flex items-center rounded-3xl bg-slate-200 bg-gradient-to-tr from-[#B2E6FD] via-[#9BD8F1] to-[#52D0C2] px-4 pr-8">
             <div className="w-3/4">
               <div className="mb-4 grid">
                 <span className="mb-1 text-2xl font-semibold">
@@ -151,6 +151,21 @@ export default function DoctorDashboard({ token, setToken }) {
           </h5>
         </div> */}
 
+        <div>
+          <h5 className="flex items-center justify-between">
+            <span className="font-semibold">Upcoming Appointments</span>
+            <span className="cursor-pointer rounded-full px-2 py-0.5 text-sm font-semibold text-blue-500 transition-all">
+              View all
+            </span>
+          </h5>
+
+          <div className="space-y-3 py-4">
+            <UpcomingMeets />
+            <UpcomingMeets />
+            <UpcomingMeets />
+            <UpcomingMeets />
+          </div>
+        </div>
         <div className="mb-6">
           <h3 className="flex justify-between pb-4 pt-2">
             <span className="text-xl font-bold">Patient List</span>
@@ -164,22 +179,6 @@ export default function DoctorDashboard({ token, setToken }) {
             {patientsList.map((value, i) => {
               return <PatientListItem data={value} key={i} />;
             })}
-          </div>
-        </div>
-
-        <div>
-          <h5 className="flex items-center justify-between">
-            <span className="font-semibold">Upcoming Meets & Events</span>
-            <span className="cursor-pointer rounded-full px-2 py-0.5 text-sm font-semibold text-blue-500 transition-all">
-              View all
-            </span>
-          </h5>
-
-          <div className="space-y-3 py-4">
-            <UpcomingMeets />
-            <UpcomingMeets />
-            <UpcomingMeets />
-            <UpcomingMeets />
           </div>
         </div>
       </div>

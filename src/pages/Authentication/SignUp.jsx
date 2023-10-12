@@ -7,7 +7,11 @@ import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 import { signInWithPopup } from "firebase/auth";
 
 export default function Signup({ setToken, token }) {
-  const [otp, setotp] = useState(0);
+  const [otp, setOTP] = useState(null);
+  const [OTPModal, setOTPModal] = useState(false);
+  const [otpAlert, setOTPAlert] = useState("");
+  const [newToken, setNewToken] = useState("");
+  const [phone, setPhone] = useState(null);
   const navigate = useNavigate();
 
   // Redirect user if loggedin
@@ -147,6 +151,7 @@ export default function Signup({ setToken, token }) {
 
         // Empty form after successfully sending data
         if (response.data.status == "success") {
+          setPhone(formInfo["phone"]);
           // Empty Variable if success
           setFormData({
             name: "",
@@ -155,10 +160,8 @@ export default function Signup({ setToken, token }) {
             password: "",
             confirm_password: "",
           });
-          // Set login token
-          setToken(response.data.access_token);
-          localStorage.setItem("phone", formInfo["phone"]);
-          navigate("/user/dashboard");
+          setNewToken(response.data.access_token);
+          setOTPModal(true);
         } else {
           setMessages(response.data.status, response.data.message);
         }
@@ -171,18 +174,25 @@ export default function Signup({ setToken, token }) {
     }
   };
 
-  // const verifyOtp = async () => {
-  //   if (otp == null) {
-  //     setOtpMessage("Please Enter Your OTP");
-  //   } else {
-  //     const verifyOtp = await axios.post(VERIFY_OTP, formData);
-  //     if (verifyOtp.data.status != "success") {
-  //       setMessages(response.data.status, response.data.message); // Set success message
-  //     } else {
-  //       setMessages(response.data.status, response.data.message); // Set success message
-  //     }
-  //   }
-  // };
+  // Handle OTP Verification
+  const handleVerifyOTP = async (e) => {
+    e.preventDefault();
+
+    if (otp == null) {
+      setOTPAlert("Please Enter Your OTP");
+    } else {
+      const verifyOtp = await axios.post(VERIFY_OTP, { otp: otp });
+      console.log(verifyOtp.data);
+      if (verifyOtp.data.status == "success") {
+        // Set login token after OTP Verification
+        setToken(newToken);
+        localStorage.setItem("phone", phone);
+        navigate("/user/dashboard");
+      } else {
+        setOTPAlert(verifyOtp.data.message);
+      }
+    }
+  };
 
   const handleLogout = () => {
     setUser(null);
@@ -307,18 +317,33 @@ export default function Signup({ setToken, token }) {
         </div>
       </div>
 
-      {/* <div className="fixed inset-0 z-20 grid w-full place-items-center bg-black/20">
-        <div className="rounded-lg bg-white p-5 shadow-lg">
-          <h2 className="text-center text-2xl font-semibold">Enter Your OTP</h2>
-          <form className="my-4 block" onSubmit={verifyOtp}>
-            <input type="text" name="otp" id="otp" className="form-input" />
+      <div
+        className={`fixed inset-0 z-20 grid w-full place-items-center bg-black/40 ${
+          OTPModal ? " block" : " hidden"
+        }`}
+      >
+        <div className="rounded-lg bg-white px-8 py-5 shadow-lg">
+          <h2 className="text-center text-xl font-semibold">Enter Your OTP</h2>
+          <small className="block text-center text-red-500">{otpAlert}</small>
+          <form className="my-4 block" onSubmit={handleVerifyOTP}>
+            <input
+              type="tel"
+              maxLength={4}
+              name="otp"
+              id="otp"
+              value={otp}
+              onChange={(e) => setOTP(e.target.value)}
+              className="form-input text-center tracking-widest"
+            />
 
-            <div className="text-center">
-              <button className="btn-one">Verify Otp</button>
+            <div className="">
+              <button className="btn-one !block !w-full !rounded-lg">
+                Verify OTP
+              </button>
             </div>
           </form>
         </div>
-      </div> */}
+      </div>
     </>
   );
 }

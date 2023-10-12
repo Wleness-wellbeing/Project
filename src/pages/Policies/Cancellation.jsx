@@ -139,7 +139,7 @@ export default function Cancellation() {
         <List
           items={[
             "Within the validity period, schedule a session with the same expert.",
-            "If the user paid to reserve the session, they may request a cash refund by writing to help@wleness.com within the validity time.",
+            "If the user paid to reserve the session, they may request a cash refund by writing to support@wleness.com within the validity time.",
           ]}
         />
         <Headingxl text="Session Delayed/Technical Issues" />

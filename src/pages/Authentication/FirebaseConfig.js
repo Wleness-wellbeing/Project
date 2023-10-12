@@ -1,22 +1,27 @@
 import { initializeApp } from "firebase/app";
-import {getAuth,GoogleAuthProvider,FacebookAuthProvider} from 'firebase/auth';
+import {
+  getAuth,
+  GoogleAuthProvider,
+  FacebookAuthProvider,
+} from "firebase/auth";
 const firebaseConfig = {
-  apiKey: "AIzaSyCQjZRZYcr0_VtZgnOkD5tGIX5QM__A6Fc",
-  authDomain: "wlen-demo.firebaseapp.com",
-  projectId: "wlen-demo",
-  storageBucket: "wlen-demo.appspot.com",
-  messagingSenderId: "212139102976",
-  appId: "1:212139102976:web:a472c8538fa2f5162199e5"
+  apiKey: "AIzaSyCeaaFJF6R0KC7UsWZOrr0x4JhHeSO-7aw",
+  authDomain: "wleness-84739.firebaseapp.com",
+  projectId: "wleness-84739",
+  storageBucket: "wleness-84739.appspot.com",
+  messagingSenderId: "584754703541",
+  appId: "1:584754703541:web:c6dc3ac065e7d840f3a2fc",
+  measurementId: "G-4SYTVTV84N",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-const auth=getAuth(app)
+const auth = getAuth(app);
 
 // const provider=new GoogleAuthProvider();
 
 const googleProvider = new GoogleAuthProvider();
 const facebookProvider = new FacebookAuthProvider();
 
-export{auth,googleProvider,facebookProvider}
+export { auth, googleProvider, facebookProvider };

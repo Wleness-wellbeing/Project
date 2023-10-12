@@ -35,7 +35,7 @@ export default function HowItWorks() {
               </h4>
               <p className="font-semibold">
                 You can typically begin seeing clients on Wleness Therapy within
-                1 to 4 months, on average
+                1 to 4 months, on average you can expect 50% increase in ROI.
               </p>
             </div>
           </div>

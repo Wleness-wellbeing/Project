@@ -57,18 +57,6 @@ export default function Blogs() {
     return <div className="mb-5 text-center">Loading...</div>;
   }
 
-  const blogFilterValues = [
-    allBlogs,
-    navigatingMidlifeForWomenBlogs,
-    issuesBlogs,
-    medicalBlogs,
-  ];
-  const blogFilters = [
-    "All Categories",
-    "Navigating Midlife for Women",
-    "Issues",
-    "Medical",
-  ];
   const handleBlogsFilter = (index) => {
     console.log(index);
   };

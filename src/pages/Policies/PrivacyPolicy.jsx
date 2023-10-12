@@ -69,7 +69,7 @@ export default function PrivacyPolicy() {
         <Paragraphs
           texts={[
             "You hereby give your consent to the collection, storage, processing, disclosure, and transfer of your Personal Information following the terms of this Privacy Policy and the applicable data privacy laws in India by using the platform, giving us your Personal Information, using the features offered by the platform, or making a payment to Wleness.",
-            "You acknowledge that whether you give your personal information to Wleness directly or indirectly through a third party or your organization, you do so voluntarily. You can choose whether or not to provide us with the requested personal information. You will also have the choice to withdraw your consent at any time as long as you notify us in writing at help@wleness.com. Despite this, you can withdraw your consent at any time if you access our platform through a third party or your organization, provided you explicitly inform the third party or your organization about such withdrawal of consent in writing. The third party or your organization would then instruct us to take action.",
+            "You acknowledge that whether you give your personal information to Wleness directly or indirectly through a third party or your organization, you do so voluntarily. You can choose whether or not to provide us with the requested personal information. You will also have the choice to withdraw your consent at any time as long as you notify us in writing at support@wleness.com. Despite this, you can withdraw your consent at any time if you access our platform through a third party or your organization, provided you explicitly inform the third party or your organization about such withdrawal of consent in writing. The third party or your organization would then instruct us to take action.",
             "Suppose you refuse to give us your personal information or revoke your consent at any time. In that case, we reserve the right not to use the information for the intended purposes and to impose restrictions on your platform use.",
           ]}
         />
@@ -100,16 +100,16 @@ export default function PrivacyPolicy() {
         <Paragraphs
           texts={[
             "The Wellness Professionals and our app algorithms analyze your information to understand your condition better and offer you the most appropriate counselling service or digital experience. The counselling sessions and in-app experience may occasionally be customized by Wellness and/or Wellness Professionals using third-party tools. In such circumstances, only the minimum necessary information is disclosed to others.",
-            "We're committed to protecting the confidentiality and accuracy of your personal information. You can let us know at any time if you change your mind about receiving certain emails from us by emailing help@wleness.com.",
+            "We're committed to protecting the confidentiality and accuracy of your personal information. You can let us know at any time if you change your mind about receiving certain emails from us by emailing support@wleness.com.",
           ]}
         />
 
         <Heading2xl text="Update Personal Information" />
         <Paragraphs
           texts={[
-            "You can send updates and corrections to us at help@wleness.com if your information changes, needs to be updated or corrected, or if you have any complaints about how your personal information is being processed or used for any other reason. We will use commercially reasonable efforts to incorporate any changes you send us within a reasonable time frame. Wleness may not be able to make any changes to your Personal Information if you have provided it to a third-party platform from which you are accessing our Services; instead, you will need to contact the third-party platform to make any necessary updates.",
+            "You can send updates and corrections to us at support@wleness.com if your information changes, needs to be updated or corrected, or if you have any complaints about how your personal information is being processed or used for any other reason. We will use commercially reasonable efforts to incorporate any changes you send us within a reasonable time frame. Wleness may not be able to make any changes to your Personal Information if you have provided it to a third-party platform from which you are accessing our Services; instead, you will need to contact the third-party platform to make any necessary updates.",
             "You can change your personal information from our website or mobile device if saved as part of your platform profile.",
-            "For example, your responses to online tests cannot be changed or removed once entered as Personal Information. Please email us at help@wleness.com if you would like us to delete your records from our system. If we are not required by law to keep them, we will do our best to comply with your request.",
+            "For example, your responses to online tests cannot be changed or removed once entered as Personal Information. Please email us at support@wleness.com if you would like us to delete your records from our system. If we are not required by law to keep them, we will do our best to comply with your request.",
             "Please be aware that even if you delete your account, we will continue to store certain information for the duration specified by applicable laws as required by professional standards or by law for record-maintenance purposes (including but not limited to payment history, feedback, client information, etc.). Additionally, despite our best efforts to delete data from our databases and other records, residual information might still exist in those places.",
           ]}
         />
@@ -183,7 +183,7 @@ export default function PrivacyPolicy() {
         <Heading2xl text="Grievance Redressal" />
         <Paragraphs
           texts={[
-            "Wleness has created a Grievance Redressal Forum to resolve user complaints. You can contact our Grievance Redressal Officer, [Name], at help@wleness.com if you're unhappy with our services. We promise to respond to your complaint within a month of receiving it.",
+            "Wleness has created a Grievance Redressal Forum to resolve user complaints. You can contact our Grievance Redressal Officer, [Name], at support@wleness.com if you're unhappy with our services. We promise to respond to your complaint within a month of receiving it.",
           ]}
         />
 
@@ -198,7 +198,7 @@ export default function PrivacyPolicy() {
         <Paragraphs
           texts={[
             "Registered Address:  Springhouse Coworking, Plot no. 2, Sector- 43, Gurugram - 122009",
-            "E-mail: help@wleness.com",
+            "E-mail: support@wleness.com",
           ]}
         />
       </section>
