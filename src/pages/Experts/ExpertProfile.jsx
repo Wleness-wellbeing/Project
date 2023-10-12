@@ -138,6 +138,7 @@ export default function ExpertProfile() {
         slug={"/experts/booking/" + profileDetails.slug}
         bookingUrl={profileDetails.bookingUrl}
         price={profileDetails.price}
+        packages={profileDetails.packages}
       />
       <DoctorStatistics />
 

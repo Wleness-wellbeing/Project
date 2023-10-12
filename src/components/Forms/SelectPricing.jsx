@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { modes } from "../../data/doctors";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function SelectPricing({ slug, bookingUrl, price }) {
+export default function SelectPricing({ slug, bookingUrl, price, packages }) {
   // const [selectDuration, setSelectDuration] = useState(pricings[2]["time"]);
   const [setMode, setSelectMode] = useState(modes[0]["value"]);
   const [successMessage, setSuccessMessage] = useState({
@@ -110,28 +110,24 @@ export default function SelectPricing({ slug, bookingUrl, price }) {
             </div>
           </div>
         </div>
-        <div className="rounded-xl bg-primary-50 p-5 lg:w-1/2 lg:p-10 ">
+        <div className="rounded-xl bg-primary-50 p-5 lg:w-1/2 lg:p-10">
           <h2 className="mb-4 text-xl font-bold text-slate-800 lg:text-2xl">
             Pricing Details
           </h2>
-          <div className="mb-6 ">
-            <h4 className="mb-2 flex justify-between font-semibold">
-              <span>Total Session Price ( 60 Mins )</span>
-              <span>Rs. {price}</span>
-            </h4>
-            <h5 className="mb-2 flex justify-between font-semibold">
-              <span>Discount</span>
-              <span>00</span>
-            </h5>
-            <h5 className="mb-5 flex justify-between font-semibold">
-              <span>Coupon Discount</span>
-              <span>0</span>
-            </h5>
+          <div>
+            {packages &&
+              packages.map((value, i) => {
+                return (
+                  <h4
+                    key={i}
+                    className="mb-2 flex justify-between font-semibold"
+                  >
+                    <span>{value.package}</span>
+                    <span>Rs. {value.price}</span>
+                  </h4>
+                );
+              })}
           </div>
-          <h5 className="mb-2 flex justify-between font-semibold">
-            <span>Amount to be paid</span>
-            <span className="font-bold">Rs. {price}</span>
-          </h5>
           {/* {pricings
             .filter((price) => price.time == selectDuration)
             .map((filteredPrice) => (
