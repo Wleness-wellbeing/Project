@@ -114,7 +114,7 @@ export default function ExpertsLogin({ setToken, token }) {
 
           <label htmlFor="user_id" className="mb-5 block">
             <input
-              type="tel"
+              type="text"
               id="user_id"
               maxLength={10}
               name="user_id"

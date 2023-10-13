@@ -14,6 +14,7 @@ import {
 // Components
 import AssessmentOption from "./AssessmentOption";
 import AssessmentTextBtn from "./AssessmentTextBtn";
+import Buttons from "./Buttons";
 
 export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
   if (!isAssessmentOpen) return null;
@@ -201,20 +202,10 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                 {Alert}
               </p>
             )}
-            <div className="flex justify-center space-x-4 text-center">
-              <button
-                onClick={openWelcomeScreen}
-                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !bg-white !py-2 !text-sm font-semibold !text-primary-300 transition-all hover:shadow-md"
-              >
-                Go Back
-              </button>
-              <button
-                className="btn-primary !w-fit bg-gradient-to-r from-secondary to-tertiary !py-2.5 !text-sm !font-semibold transition-all hover:shadow-md"
-                onClick={openScreenTwo}
-              >
-                Save & Next
-              </button>
-            </div>
+            <Buttons
+              back={() => openWelcomeScreen()}
+              next={() => openScreenTwo()}
+            />
           </div>
         )}
 
@@ -257,20 +248,10 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                 {Alert}
               </p>
             )}
-            <div className="mt-8 flex justify-center space-x-4 text-center lg:mt-0">
-              <button
-                onClick={openScreenOne}
-                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !bg-white !py-2 !text-sm font-semibold !text-primary-300 transition-all hover:shadow-md"
-              >
-                Go Back
-              </button>
-              <button
-                className="btn-primary !w-fit bg-gradient-to-r from-secondary to-tertiary !py-2.5 !text-sm !font-semibold transition-all hover:shadow-md"
-                onClick={openScreenThree}
-              >
-                Save & Next
-              </button>
-            </div>
+            <Buttons
+              back={() => openScreenOne()}
+              next={() => openScreenThree()}
+            />
           </div>
         )}
 
@@ -312,20 +293,10 @@ export default function Assessment({ isAssessmentOpen, onAssessmentClose }) {
                 {Alert}
               </p>
             )}
-            <div className="mt-8 flex justify-center space-x-4 text-center lg:mt-0">
-              <button
-                onClick={openScreenTwo}
-                className="btn-primary !w-fit border-2 border-primary-300 !bg-transparent !bg-white !py-2 !text-sm font-semibold !text-primary-300 transition-all hover:shadow-md"
-              >
-                Go Back
-              </button>
-              <button
-                className="btn-primary !w-fit bg-gradient-to-r from-secondary to-tertiary !py-2.5 !text-sm !font-semibold transition-all hover:shadow-md"
-                onClick={openScreenFour}
-              >
-                Save & Next
-              </button>
-            </div>
+            <Buttons
+              back={() => openScreenTwo()}
+              next={() => openScreenFour()}
+            />
           </div>
         )}
 
