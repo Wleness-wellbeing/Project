@@ -10,7 +10,6 @@ export default function ApproachCard(props) {
           <h4>{props.data.title}</h4>
         </div>
       </Link>
-      <figcaption className="absolute inset-0 -z-10 rounded-xl bg-primary-300 transition-all group-hover:-inset-y-6 group-hover:lg:-inset-y-10"></figcaption>
     </figure>
   );
 }

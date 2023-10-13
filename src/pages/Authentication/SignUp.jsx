@@ -18,7 +18,7 @@ export default function Signup({ setToken, token }) {
   if (token && token !== "" && token !== undefined) {
     // Navigate to login
     useEffect(() => {
-      navigate("/user/dashboard");
+      navigate("/");
     }, []);
   }
 
@@ -100,9 +100,16 @@ export default function Signup({ setToken, token }) {
       if (response.data.status == "success") {
         // Set login token
         setToken(response.data.access_token);
-        localStorage.setItem("email", data.email);
-        localStorage.setItem("login_type", data.login_type);
-        navigate("/user/dashboard");
+        localStorage.setItem(
+          "wleness_user",
+          JSON.stringify({
+            key: "email",
+            username: data.email,
+            type: "user",
+            login_type: data.login_type,
+          }),
+        );
+        navigate("/");
       } else {
         setMessages(response.data.status, response.data.message);
         console.log(response.data);
@@ -152,6 +159,15 @@ export default function Signup({ setToken, token }) {
         // Empty form after successfully sending data
         if (response.data.status == "success") {
           setPhone(formInfo["phone"]);
+          localStorage.setItem(
+            "wleness_user",
+            JSON.stringify({
+              key: "email",
+              username: formInfo["email"],
+              type: "user",
+              login_type: "password",
+            }),
+          );
           // Empty Variable if success
           setFormData({
             name: "",
@@ -187,7 +203,7 @@ export default function Signup({ setToken, token }) {
         // Set login token after OTP Verification
         setToken(newToken);
         localStorage.setItem("phone", phone);
-        navigate("/user/dashboard");
+        navigate("/");
       } else {
         setOTPAlert(verifyOtp.data.message);
       }
@@ -336,7 +352,10 @@ export default function Signup({ setToken, token }) {
               className="form-input text-center tracking-widest"
             />
 
-            <div className="">
+            <div>
+              <small className="mb-1 block text-center">
+                OTP sent to {phone}
+              </small>
               <button className="btn-one !block !w-full !rounded-lg">
                 Verify OTP
               </button>

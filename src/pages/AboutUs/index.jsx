@@ -294,55 +294,6 @@ function AboutUs() {
         <TeamComponent />
       </div>
 
-      <div className="grid h-full place-items-center   pb-6">
-        <h2 className="subheading py-6">
-          <span className="heading-primary ">Reach out</span> to us
-        </h2>
-        <div className="container mx-auto grid grid-cols-1 items-center justify-center   sm:grid-cols-2 md:grid-cols-3">
-          <Link to="/contact-us">
-            <div className="rounded-xl p-4 text-center transition-all hover:bg-primary-50/30 hover:shadow-xl">
-              <img className="mx-auto" src={about1}></img>
-              <h2 className="py-2 text-lg font-semibold text-primary-400">
-                Contact us
-              </h2>
-              <p className="font-semibold">
-                Unsure about what is the proper mental health support for you?
-              </p>
-              <p className="font-bold">Contact us</p>
-            </div>
-          </Link>
-          <Link to="">
-            <div className="rounded-xl p-4 text-center transition-all hover:bg-primary-50/30 hover:shadow-xl">
-              <button onClick={toggleForm} className="w-full">
-                <img className="mx-auto" src={about4}></img>
-                <h2 className="py-2 text-lg font-semibold text-primary-400">
-                  Partner with us
-                </h2>
-                <p className="font-semibold ">
-                  Want to integrate mental health support at your workplace
-                </p>
-                <p className="font-bold">Partner with us</p>
-              </button>
-            </div>
-          </Link>
-          <Link to="">
-            <div className="rounded-xl p-4 text-center transition-all hover:bg-primary-50/30 hover:shadow-xl">
-              <button onClick={toggleForm} className="w-full">
-                {/* Add this button */}
-                <img className="mx-auto" src={meeting} alt="Meeting" />
-                <h2 className="py-2 text-lg font-semibold text-primary-400">
-                  Work with us
-                </h2>
-                <p className="font-semibold">
-                  Looking to be part of the Wleness Team?
-                  {/* make it responsive to the mobile devices as it is not responsive to the screen of that */}
-                </p>
-                <p className="font-bold">Work with us</p>
-              </button>
-            </div>
-          </Link>
-        </div>
-      </div>
       <PartnerWithUs isOpen={partnerWithUs} onClose={toggleForm} />
     </main>
   );

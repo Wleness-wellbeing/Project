@@ -210,7 +210,7 @@ export const footerFocusAreas = [
 // Footer - Our Experts
 export const footerOurExperts = [
   ["Therapists", "/services/therapy"],
-  ["Psychiatrists", "/services/psychiatrist"],
+  ["Psychiatrists", ""],
   ["Coaches", "/executive-coaching"],
 ];
 
@@ -236,8 +236,8 @@ export const adminSidebar = [
 ];
 
 export const userDashboardLinks = [
-  ["Home", "/user/dashboard", faHome],
-  ["Profile", "/user/profile", faUser],
+  ["Home", "/user/profile", faHome],
+  // ["Profile", "/user/profile", faUser],
   // ["Self Care", "/user/dashboard", faHeartCircleCheck],
   // ["Routine Care", "/user/routine-care", faBookBookmark],
   ["Routine Care", "/user/routine-care", faClipboardList],

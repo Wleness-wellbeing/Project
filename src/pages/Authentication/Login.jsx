@@ -14,12 +14,12 @@ export default function Login({ setToken, token }) {
   if (token && token !== "" && token !== undefined) {
     // Navigate to login
     useEffect(() => {
-      navigate("/user/dashboard");
+      navigate("/");
     }, []);
   }
 
   const [formInfo, setFormData] = useState({
-    phone: "",
+    username: "",
     password: "",
   });
   const [successMessage, setSuccessMessage] = useState({
@@ -70,11 +70,18 @@ export default function Login({ setToken, token }) {
       // Empty form after successfully sending data
       if (response.data.status === "success") {
         setToken(response.data.access_token);
-        localStorage.setItem("email", data.email);
-        localStorage.setItem("wleness_user_type", "user");
-        localStorage.setItem("login_type", "google");
 
-        navigate("/user/dashboard");
+        localStorage.setItem(
+          "wleness_user",
+          JSON.stringify({
+            key: "email",
+            username: data.email,
+            type: "user",
+            login_type: "google",
+          }),
+        );
+
+        navigate("/");
       } else {
         setMessages(response.data.status, response.data.message);
       }
@@ -100,17 +107,40 @@ export default function Login({ setToken, token }) {
     });
   };
 
+  const validateMobileNumberOrEmail = (username) => {
+    // Regular expression for a valid email address
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    // Regular expression for a valid mobile number
+    const mobileRegex = /^[0-9]{10}$/;
+
+    if (emailRegex.test(username)) {
+      return "email";
+    } else if (mobileRegex.test(username)) {
+      return "phone";
+    } else {
+      return "invalid";
+    }
+  };
+
   // Handle Post Request
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Validate if form is filled
-    if (formInfo["phone"] && formInfo["password"]) {
+    if (formInfo["username"] && formInfo["password"]) {
+      let userType = validateMobileNumberOrEmail(formInfo["username"]);
+      if (userType == "invalid") {
+        setMessages("error", "Please enter email or phone"); // set success message
+        return null;
+      }
+
       // Append form fields to the FormData object
       let formData = new FormData();
       for (const key in formInfo) {
         formData.append(key, formInfo[key]);
       }
+      formData.append("value_type", userType);
 
       try {
         // Send user data to the backend
@@ -119,14 +149,20 @@ export default function Login({ setToken, token }) {
 
         // Empty form after successfully sending data
         if (response.data.status === "success") {
+          setToken(response.data.access_token);
+          localStorage.setItem(
+            "wleness_user",
+            JSON.stringify({
+              key: userType,
+              username: formInfo["username"],
+              type: "user",
+              login_type: "password",
+            }),
+          );
           setFormData({
-            phone: "",
+            username: "",
             password: "",
           });
-          setToken(response.data.access_token);
-          localStorage.setItem("phone", formInfo["phone"]);
-          localStorage.setItem("wleness_user_type", "user");
-          localStorage.setItem("login_type", "password");
 
           navigate("/");
         } else {
@@ -188,15 +224,14 @@ export default function Login({ setToken, token }) {
             </p>
           )}
 
-          <label htmlFor="phone" className="mb-5 block">
+          <label htmlFor="username" className="mb-5 block">
             <input
-              type="tel"
-              id="phone"
-              maxLength={10}
-              name="phone"
-              placeholder="Mobile Number"
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Email or Mobile Number"
               className="form-input-underline"
-              value={formInfo.phone}
+              value={formInfo.username}
               onChange={handleChange}
             />
           </label>

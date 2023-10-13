@@ -76,7 +76,7 @@ export default function CareerForm() {
       <div className="md:flex md:h-full md:flex-col md:px-6">
         <div>
           <h3 className="font-medium text-[#464646] opacity-80 lg:text-lg">
-            Need an expert's consulting?
+            Seeking professional career opportunities?
           </h3>
           <h1 className="font-quicksand text-4xl font-bold leading-tight tracking-tight text-[#464646] opacity-90">
             Apply Now

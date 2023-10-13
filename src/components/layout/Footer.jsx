@@ -151,7 +151,7 @@ export default function Footer() {
               <img src={logoISO} alt="" className="w-10 object-contain" />
             </div>
 
-            <div className="my-5 flex">
+            <div className="my-5 flex justify-center">
               <h4 className="mr-2 text-center text-lg font-semibold lg:text-xl">
                 We are launching soon
               </h4>

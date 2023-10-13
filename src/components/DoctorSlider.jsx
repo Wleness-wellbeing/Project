@@ -55,6 +55,15 @@ export default function DoctorSlider(props) {
     }
   };
 
+  const handleBookNow = (url) => {
+    props.openAssessmentModal();
+
+    props.setUrl({
+      name: "Book Now",
+      url: url,
+    });
+  };
+
   const handleMouseEnter = () => {
     swiper ? swiper.autoplay.stop() : "";
   };
@@ -157,13 +166,20 @@ export default function DoctorSlider(props) {
                         </span>
                       </p>
                       <div className="mt-4">
-                        <Link
+                        {/* <Link
                           to={value.bookingUrl}
                           target="_blank"
                           className="btn-one mx-auto inline-block !py-2 !text-sm"
                         >
                           Book Now
-                        </Link>
+                        </Link> */}
+                        <button
+                          onClick={() => handleBookNow(value.bookingUrl)}
+                          target="_blank"
+                          className="btn-one mx-auto inline-block !py-2 !text-sm"
+                        >
+                          Book Now
+                        </button>
                       </div>
                     </div>
                   </figcaption>

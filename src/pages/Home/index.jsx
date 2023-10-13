@@ -17,6 +17,7 @@ import DoctorSlider from "../../components/DoctorSlider";
 
 export default function Home() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
+  const [rediredurl, setRediredurl] = useState(null);
 
   // Assessment Slides
   const openAssessmentModal = () => {
@@ -25,6 +26,15 @@ export default function Home() {
 
   const closeAssessmentModal = () => {
     setShowAssessmentModal(false);
+  };
+
+  const resetBookNow = () => {
+    openAssessmentModal();
+
+    setRediredurl({
+      name: "Find a Therapist",
+      url: "/experts/all",
+    });
   };
 
   const [name, setName] = useState("");
@@ -54,7 +64,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <MainHeader openAssessmentModal={openAssessmentModal} />
+      <MainHeader openAssessmentModal={() => resetBookNow()} />
 
       {/* ========== Services ========== */}
       <section>
@@ -112,7 +122,11 @@ export default function Home() {
       </section>
 
       {/* Doctors Slider */}
-      <DoctorSlider data={homePageDoctors} />
+      <DoctorSlider
+        data={homePageDoctors}
+        openAssessmentModal={openAssessmentModal}
+        setUrl={setRediredurl}
+      />
 
       {/* ========== Community ========== */}
       <section className="relative overflow-x-clip bg-primary-10 pt-6 3xl:py-10">
@@ -245,6 +259,7 @@ export default function Home() {
       <Assessment
         isAssessmentOpen={isAssessmentModalOpen}
         onAssessmentClose={closeAssessmentModal}
+        buttons={rediredurl}
       />
 
       {/* <Feedback isOpen={isFeedbackOpen} onClose={closeFeedbackModal} /> */}

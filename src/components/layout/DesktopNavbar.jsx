@@ -7,14 +7,15 @@ import {
   serviceMenuPages,
 } from "../../data/navigation";
 import { Link } from "react-router-dom";
-import { profile } from "../../assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 
-export default function DesktopNavbar({ toggleJoinUs, token }) {
-  const userName = localStorage.getItem("username");
-  const user_type = localStorage.getItem("wleness_user_type");
-
+export default function DesktopNavbar({
+  toggleJoinUs,
+  token,
+  username,
+  userType,
+}) {
   return (
     <>
       <ul className="hidden w-fit justify-end space-x-4 bg-white p-6 xl:flex">
@@ -44,12 +45,14 @@ export default function DesktopNavbar({ toggleJoinUs, token }) {
           </Link>
         ) : (
           <Link
-            to={user_type == "expert" ? "/doctor/dashboard" : "/user/dashboard"}
+            to={userType == "expert" ? "/doctor/dashboard" : "/user/dashboard"}
             className="btn-primary flex !w-fit items-center !rounded-full !bg-primary-400 !py-2.5 font-semibold hover:!bg-primary-300"
           >
             {/* <img src={profile} alt="" className="mr-1 w-5 rounded-full" /> */}
             <FontAwesomeIcon icon={faUserCircle} className="mr-1" />
-            <span className="text-sm">{userName.split(" ")[0]}</span>
+            <span className="text-sm">
+              {username ? username.split(" ")[0] : "User"}
+            </span>
           </Link>
         )}
       </div>

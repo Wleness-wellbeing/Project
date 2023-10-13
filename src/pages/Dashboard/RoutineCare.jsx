@@ -74,17 +74,19 @@ export default function RoutineCare({ token }) {
     setEveningRoutine(newArray);
   };
 
+  let userInfo = JSON.parse(localStorage.getItem("userInfo"));
+
   return (
     <section className="gap-5 lg:flex">
       <div className="-mt-10 lg:w-[65%]">
         <div className="mb-2">
           <h1>
             <span className="text-2xl font-medium">Good Morning </span>
-            <span className="text-3xl font-bold text-[#0DCCF6]">Mia</span>
+            <span className="text-3xl font-bold text-[#0DCCF6]">
+              {userInfo.name}
+            </span>
           </h1>
-          <p className="font-medium text-slate-600">
-            Today is the 12th day of your therapy session.
-          </p>
+          <p className="font-medium text-slate-600">Today is a Good Day.</p>
         </div>
 
         {/* How you feel */}
@@ -96,7 +98,7 @@ export default function RoutineCare({ token }) {
       </div>
       <div className="lg:w-[35%] lg:p-4">
         <div className="relative mb-6 rounded-2xl bg-[#C0F1F8] p-6">
-          <h2 className="mb-2 font-semibold">Morning Routine</h2>
+          <h2 className="mb-2 font-semibold">Morning</h2>
           <ul className="space-y-2 font-semibold">
             {morningRoutine.map((value, i) => {
               return (
@@ -138,7 +140,7 @@ export default function RoutineCare({ token }) {
         </div>
 
         <div className="relative mb-10 rounded-2xl bg-[#C0F1F8] p-6">
-          <h2 className="mb-2 font-semibold">Evening Routine</h2>
+          <h2 className="mb-2 font-semibold">Evening</h2>
           <ul className="space-y-2 font-semibold">
             {eveningRoutine.map((value, i) => {
               return (

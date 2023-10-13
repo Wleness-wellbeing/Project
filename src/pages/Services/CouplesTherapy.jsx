@@ -14,6 +14,7 @@ import TherapyHeader from "../../components/TherapyHeader";
 
 function CouplesTherapy() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
+  const [rediredurl, setRediredurl] = useState(null);
 
   const openAssessmentModal = () => {
     setShowAssessmentModal(true);
@@ -29,6 +30,15 @@ function CouplesTherapy() {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const resetBookNow = () => {
+    openAssessmentModal();
+
+    setRediredurl({
+      name: "Find a Therapist",
+      url: "/experts/all",
+    });
+  };
+
   return (
     <>
       <TherapyHeader
@@ -36,7 +46,7 @@ function CouplesTherapy() {
         images={couplesTherapyData.header.images}
         desc={couplesTherapyData.header.desc}
         handleScrollToComponent={() => handleScrollToComponent()}
-        openAssessmentModal={openAssessmentModal}
+        openAssessmentModal={() => resetBookNow()}
       />
       <p ref={ref}></p>
 
@@ -104,12 +114,17 @@ function CouplesTherapy() {
       </section>
 
       {/* Doctors */}
-      <DoctorSlider data={couplesTherapyDoctors} />
+      <DoctorSlider
+        data={couplesTherapyDoctors}
+        openAssessmentModal={openAssessmentModal}
+        setUrl={setRediredurl}
+      />
       <HappyClient data={coupleTherapyClient} />
       <FaqWithImage data={coupleTherapyFaq} />
       <Assessment
         isAssessmentOpen={isAssessmentModalOpen}
         onAssessmentClose={closeAssessmentModal}
+        buttons={rediredurl}
       />
     </>
   );

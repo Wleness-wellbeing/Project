@@ -15,6 +15,15 @@ export default function IssueSubPageLayout({
   quote,
 }) {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
+  const [rediredurl, setRediredurl] = useState(null);
+  const resetBookNow = () => {
+    openAssessmentModal();
+
+    setRediredurl({
+      name: "Find a Therapist",
+      url: "/experts/all",
+    });
+  };
   const openAssessmentModal = () => {
     setShowAssessmentModal(true);
   };
@@ -29,7 +38,7 @@ export default function IssueSubPageLayout({
         title={header.title}
         desc={header.desc}
         image={header.image}
-        openAssessmentModal={openAssessmentModal}
+        openAssessmentModal={() => resetBookNow()}
       />
       <Symptoms
         highlight={symptoms.highlight}
@@ -37,12 +46,17 @@ export default function IssueSubPageLayout({
         points={symptoms.points}
       />
       <WlenessApproach issue={symptoms.issue} desc={symptoms.desc} />
-      <DoctorSlider data={doctors} />
+      <DoctorSlider
+        data={doctors}
+        openAssessmentModal={openAssessmentModal}
+        setUrl={setRediredurl}
+      />
       <Community />
       <IssueQuote quote={quote} />
       <Assessment
         isAssessmentOpen={isAssessmentModalOpen}
         onAssessmentClose={closeAssessmentModal}
+        buttons={rediredurl}
       />
     </>
   );

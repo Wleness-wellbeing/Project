@@ -17,6 +17,7 @@ import {
 
 function Experts() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
+  const [rediredurl, setRediredurl] = useState(null);
 
   const openAssessmentModal = () => {
     setShowAssessmentModal(true);
@@ -24,6 +25,15 @@ function Experts() {
 
   const closeAssessmentModal = () => {
     setShowAssessmentModal(false);
+  };
+
+  const resetBookNow = () => {
+    openAssessmentModal();
+
+    setRediredurl({
+      name: "Find a Therapist",
+      url: "/experts/all",
+    });
   };
 
   const button = {
@@ -70,7 +80,7 @@ function Experts() {
             <div className="space-y-3 lg:flex lg:space-x-3 lg:space-y-0">
               <button
                 className="btn-one !w-full lg:!w-fit lg:px-6"
-                onClick={openAssessmentModal}
+                onClick={() => resetBookNow()}
               >
                 Make an appointment
               </button>
@@ -86,7 +96,11 @@ function Experts() {
       </header>
 
       {/* ========== Soul Healers ========== */}
-      <DoctorSlider data={expertDoctors} />
+      <DoctorSlider
+        data={expertDoctors}
+        openAssessmentModal={openAssessmentModal}
+        setUrl={setRediredurl}
+      />
 
       {/* ========== Objectives ========== */}
       {/* <section className="container mx-auto mb-10 mt-5 grid items-center gap-5 rounded-2xl bg-primary-50/30 lg:grid-cols-3">
@@ -146,9 +160,7 @@ function Experts() {
                 {expertsPsychiatrist.desc}
               </p>
               <p className="text-right">
-                <Link to={expertsPsychiatrist.slug} className="btn-one">
-                  Get Started
-                </Link>
+                <span className="btn-one cursor-not-allowed">Coming Soon</span>
               </p>
             </figcaption>
             <div className="order-1 mb-5 lg:order-2 lg:ml-14 lg:w-[45%]">
@@ -185,7 +197,7 @@ function Experts() {
           look forward to assisting you in achieving your therapeutic goals.
         </p>
         <div className="text-center">
-          <button className="btn-one" onClick={openAssessmentModal}>
+          <button className="btn-one" onClick={() => resetBookNow()}>
             Make an appointment
           </button>
         </div>
@@ -197,7 +209,7 @@ function Experts() {
       <Assessment
         isAssessmentOpen={isAssessmentModalOpen}
         onAssessmentClose={closeAssessmentModal}
-        button={button}
+        buttons={rediredurl}
       />
     </>
   );

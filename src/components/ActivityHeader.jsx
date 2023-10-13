@@ -27,17 +27,14 @@ export default function ActivityHeader(props) {
             </hgroup>
             <div className="text-center lg:text-left">
               <button
-                className="btn-one mr-2"
+                className="btn-one mr-2 hidden"
                 onClick={props.handleScrollToComponent}
               >
                 {props.button[0]}
               </button>
               {props.displayButton ? (
                 props.isEnquiry ? (
-                  <button
-                    className="btn-one inline-block border-2 !border-primary-400 !bg-transparent !py-2 !text-[#383838] hover:!bg-primary-400 hover:!text-white lg:!w-fit"
-                    onClick={props.openEnquiry}
-                  >
+                  <button className="btn-one" onClick={props.openEnquiry}>
                     Enquire Now
                   </button>
                 ) : (

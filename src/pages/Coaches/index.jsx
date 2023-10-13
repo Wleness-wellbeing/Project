@@ -285,7 +285,7 @@ export default function ExecutiveCoaching() {
               return (
                 <div
                   key={i}
-                  onClick={() => handleServices(i)}
+                  onMouseOver={() => handleServices(i)}
                   className={`grid cursor-pointer place-items-center rounded-2xl px-5 py-3 font-semibold transition-all hover:bg-primary-300 hover:text-white ${
                     activeService == i
                       ? " bg-primary-300 text-white"
@@ -323,7 +323,7 @@ export default function ExecutiveCoaching() {
               return (
                 <div
                   key={i}
-                  onClick={() => handleIndividualServices(i)}
+                  onMouseOver={() => handleIndividualServices(i)}
                   className={`grid cursor-pointer place-items-center rounded-2xl px-5 py-3 font-semibold transition-all hover:bg-primary-300 hover:text-white ${
                     activeIndividualService == i
                       ? " bg-primary-300 text-white"
@@ -376,7 +376,7 @@ export default function ExecutiveCoaching() {
                       <ul className="hidden transition-all group-hover:block">
                         {value.list.map((element, j) => {
                           return (
-                            <li className="text-sm text-slate-200">
+                            <li key={j} className="text-sm text-slate-200">
                               {element}
                             </li>
                           );

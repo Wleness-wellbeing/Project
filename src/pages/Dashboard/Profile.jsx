@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { avatars } from "../../data/dashboard";
 import { USER_APPOINTMENTS, USER_PROFILE_URI } from "../../data/api";
 import axios from "axios";
@@ -19,52 +19,59 @@ export default function Profile({ token }) {
     }, []);
   }
 
-  const [profileDetails, setProfileDetails] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    image: "",
-  });
-  const [loading, setLoading] = useState(true);
+  // const [profileDetails, setProfileDetails] = useState({
+  //   name: "",
+  //   phone: "",
+  //   email: "",
+  //   image: "",
+  // });
+  // const [loading, setLoading] = useState(true);
 
-  let login_type = localStorage.getItem("login_type");
-  let data, url;
-  if (login_type == "google") {
-    data = localStorage.getItem("email");
-    url = USER_APPOINTMENTS + "/" + data;
-  } else {
-    data = localStorage.getItem("phone");
-    url = USER_APPOINTMENTS + "/" + data;
+  // let login_type = localStorage.getItem("login_type");
+  // let data, url;
+  // if (login_type == "google") {
+  //   data = localStorage.getItem("email");
+  //   url = USER_APPOINTMENTS + "/" + data;
+  // } else {
+  //   data = localStorage.getItem("phone");
+  //   url = USER_APPOINTMENTS + "/" + data;
+  // }
+
+  let wleness_user = JSON.parse(localStorage.getItem("wleness_user"));
+  let userInfo = JSON.parse(localStorage.getItem("userInfo"));
+  if (wleness_user.type == "expert") {
+    useEffect(() => {
+      navigate("/doctor/dashboard");
+    }, []);
   }
+  // useEffect(() => {
+  //   // Make a GET request using Axios
+  //   axios
+  //     .get(url, {
+  //       headers: {
+  //         Authorization: "Bearer " + token,
+  //       },
+  //     })
+  //     .then((response) => {
+  //       if (response.status == 200) {
+  //         setProfileDetails({
+  //           name: response.data.name,
+  //           phone: response.data.phone,
+  //           email: response.data.email,
+  //           image: response.data.image,
+  //         });
+  //         setLoading(false);
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       // Handle errors
+  //       console.error("Error fetching doctor details:", error);
+  //     });
+  // }, []);
 
-  useEffect(() => {
-    // Make a GET request using Axios
-    axios
-      .get(url, {
-        headers: {
-          Authorization: "Bearer " + token,
-        },
-      })
-      .then((response) => {
-        if (response.status == 200) {
-          setProfileDetails({
-            name: response.data.name,
-            phone: response.data.phone,
-            email: response.data.email,
-            image: response.data.image,
-          });
-          setLoading(false);
-        }
-      })
-      .catch((error) => {
-        // Handle errors
-        console.error("Error fetching doctor details:", error);
-      });
-  }, []);
-
-  if (loading) {
-    return <div className="mb-5 text-center">Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div className="mb-5 text-center">Loading...</div>;
+  // }
 
   return (
     <section className="mx-auto flex h-full flex-col justify-center lg:w-96">
@@ -94,7 +101,7 @@ export default function Profile({ token }) {
           name="name"
           id="name"
           placeholder="Enter You Username"
-          defaultValue={profileDetails.name}
+          defaultValue={userInfo.name}
         />
         <input
           className="w-full rounded-lg border-2 border-slate-400 px-4 py-2"
@@ -102,16 +109,16 @@ export default function Profile({ token }) {
           maxLength={10}
           name="phone"
           id="phone"
-          placeholder="98******78"
-          defaultValue={profileDetails.phone}
+          placeholder="91******78"
+          defaultValue={userInfo.phone}
         />
         <input
           className="w-full rounded-lg border-2 border-slate-400 px-4 py-2"
           type="text"
           name="email"
           id="email"
-          placeholder="hooman@gmail.com"
-          defaultValue={profileDetails.email}
+          placeholder="demo@gmail.com"
+          defaultValue={userInfo.email}
         />
         <select
           name="gender"

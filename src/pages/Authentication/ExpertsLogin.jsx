@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { signInWithPopup } from "firebase/auth";
 import axios from "axios";
-import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 // Data
-import { login, logo } from "../../assets";
 import { EXPERTS_LOGIN_URI } from "../../data/api";
 
 export default function ExpertsLogin({ setToken, token }) {
@@ -14,7 +11,7 @@ export default function ExpertsLogin({ setToken, token }) {
   if (token && token !== "" && token !== undefined) {
     // Navigate to login
     useEffect(() => {
-      navigate("/user/dashboard");
+      navigate("/");
     }, []);
   }
 
@@ -67,11 +64,19 @@ export default function ExpertsLogin({ setToken, token }) {
             user_id: "",
             password: "",
           });
+
           setToken(response.data.access_token);
-          localStorage.setItem("wleness_experts_id", formInfo["user_id"]);
+
+          localStorage.setItem(
+            "wleness_user",
+            JSON.stringify({
+              user_id: formInfo["user_id"],
+              type: "expert",
+            }),
+          );
           localStorage.setItem("wleness_user_type", "expert");
 
-          navigate("/doctor/dashboard");
+          navigate("/");
         } else {
           setMessages(response.data.status, response.data.message);
         }

@@ -29,6 +29,8 @@ export default function AdminSideBar({ isOpen, toggle }) {
           localStorage.removeItem("phone");
           localStorage.removeItem("email");
         }
+        localStorage.removeItem("userInfo");
+        localStorage.removeItem("wleness_user");
         localStorage.removeItem("wleness_user_type");
         localStorage.removeItem("username");
         localStorage.removeItem("login_type");

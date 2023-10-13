@@ -10,8 +10,6 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { placeholderLandscape, placeholderPortrait } from "../../assets";
 import UpcomingMeets from "../../components/list/UpcomingMeets";
-import axios from "axios";
-import { USER_APPOINTMENTS } from "../../data/api";
 
 export default function UserDashboard({ token }) {
   const navigate = useNavigate();
@@ -26,10 +24,12 @@ export default function UserDashboard({ token }) {
         },
       });
     }, []);
+    return null;
   }
 
-  let userType = localStorage.getItem("wleness_user_type");
-  if (userType == "expert") {
+  let wleness_user = JSON.parse(localStorage.getItem("wleness_user"));
+  let userInfo = JSON.parse(localStorage.getItem("userInfo"));
+  if (wleness_user.type == "expert") {
     useEffect(() => {
       navigate("/doctor/dashboard");
     }, []);
@@ -85,44 +85,44 @@ export default function UserDashboard({ token }) {
   };
 
   // ======== Get user appointments and details ===========
-  let login_type = localStorage.getItem("login_type");
-  let data, url;
-  if (login_type == "google") {
-    data = localStorage.getItem("email");
-    url = USER_APPOINTMENTS + "/" + data;
-  } else {
-    data = localStorage.getItem("phone");
-    url = USER_APPOINTMENTS + "/" + data;
-  }
+  // let login_type = localStorage.getItem("login_type");
+  // let data, url;
+  // if (login_type == "google") {
+  //   data = localStorage.getItem("email");
+  //   url = USER_APPOINTMENTS + "/" + data;
+  // } else {
+  //   data = localStorage.getItem("phone");
+  //   url = USER_APPOINTMENTS + "/" + data;
+  // }
 
-  useEffect(() => {
-    // Make a GET request using Axios
-    axios
-      .get(url, {
-        headers: {
-          Authorization: "Bearer " + token,
-        },
-      })
-      .then((response) => {
-        if (response.status == 200) {
-          setProfileDetails({
-            name: response.data.name,
-            appointments: response.data.appointments,
-          });
-          setLoading(false);
-          console.log(response.data.message);
-          localStorage.setItem("username", response.data.name);
-        }
-      })
-      .catch((error) => {
-        // Handle errors
-        console.error("Error fetching doctor details:", error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   // Make a GET request using Axios
+  //   axios
+  //     .get(url, {
+  //       headers: {
+  //         Authorization: "Bearer " + token,
+  //       },
+  //     })
+  //     .then((response) => {
+  //       if (response.status == 200) {
+  //         setProfileDetails({
+  //           name: response.data.name,
+  //           appointments: response.data.appointments,
+  //         });
+  //         setLoading(false);
+  //         console.log(response.data.message);
+  //         localStorage.setItem("username", response.data.name);
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       // Handle errors
+  //       console.error("Error fetching doctor details:", error);
+  //     });
+  // }, []);
 
-  if (loading) {
-    return <div className="mb-5 text-center">Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div className="mb-5 text-center">Loading...</div>;
+  // }
 
   return (
     <section className="gap-5 lg:flex">
@@ -131,12 +131,10 @@ export default function UserDashboard({ token }) {
           <h1>
             <span className="text-2xl font-medium">Good Morning </span>
             <span className="text-3xl font-bold text-[#0DCCF6]">
-              {profileDetails.name}
+              {userInfo.name}
             </span>
           </h1>
-          <p className="font-medium text-slate-600">
-            Today is the 12th day of your therapy session.
-          </p>
+          <p className="font-medium text-slate-600">Today is a Good Day.</p>
         </div>
 
         {/* How you feel */}

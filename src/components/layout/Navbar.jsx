@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import JoinUs from "../JoinUs";
 // Data
@@ -7,24 +7,79 @@ import { logo } from "../../assets";
 import DesktopNavbar from "./DesktopNavbar";
 import MobileNavbar from "./MobileNavbar";
 import useToken from "../../utils/useToken";
+import axios from "axios";
+import { EXPERTS_PROFILE_URI, USER_PROFILE_URI } from "../../data/api";
 
 function Navbar() {
-  const [userName, setUserName] = useState("User");
+  const [loading, setLoading] = useState(true); // set loading screen
+  const [user, setUser] = useState(null);
   const [openJoinUs, setJoinUsModal] = useState(false);
-  const { token, setToken } = useToken();
+  const { token } = useToken();
 
-  // try {
-  //   const response = axios.get(USER_PROFILE_URI, {
-  //     Authorization: "Bearer" + token,
-  //   });
-  //   const res = response.data;
-  //   if (res.status == "success") {
-  //     res.access_token && setToken(res.access_token);
-  //     setUserName(res.user_name);
-  //   }
-  // } catch (error) {
-  //   console.error(error);
-  // }
+  // ======== Get user appointments and details ===========  // Redirect user if loggedin
+  let wleness_user = JSON.parse(localStorage.getItem("wleness_user"));
+
+  if (token && token !== "" && token !== undefined && wleness_user != null) {
+    let wleness_user_type = wleness_user.type;
+
+    if (wleness_user_type == "expert") {
+      let url = EXPERTS_PROFILE_URI + wleness_user.user_id;
+      useEffect(() => {
+        // Make a GET request using Axios
+        axios
+          .get(url, {
+            headers: {
+              Authorization: "Bearer " + token,
+            },
+          })
+          .then((response) => {
+            if (response.status == 200) {
+              setUser(response.data);
+              localStorage.setItem("userInfo", JSON.stringify(response.data));
+              console.log(user);
+              setLoading(false);
+            } else {
+              console.log(response);
+            }
+          })
+          .catch((error) => {
+            // Handle errors
+            console.error("Error fetching doctor details:", error);
+            setLoading(false);
+          });
+      }, []);
+    } else {
+      let url = USER_PROFILE_URI + "/" + wleness_user.username;
+      console.log(wleness_user.key);
+      console.log(token);
+      useEffect(() => {
+        // Make a GET request using Axios
+        axios
+          .get(url, {
+            headers: {
+              Authorization: "Bearer " + token,
+            },
+            params: {
+              type: wleness_user.key,
+            },
+          })
+          .then((response) => {
+            if (response.status == 200) {
+              setUser(response.data);
+              localStorage.setItem("userInfo", JSON.stringify(response.data));
+              setLoading(false);
+            } else {
+              console.log(response);
+            }
+          })
+          .catch((error) => {
+            // Handle errors
+            console.error("Error fetching doctor details:", error);
+            setLoading(false);
+          });
+      }, []);
+    }
+  }
 
   const toggleJoinUs = () => {
     setJoinUsModal(!openJoinUs);
@@ -46,15 +101,12 @@ function Navbar() {
           <DesktopNavbar
             token={token}
             toggleJoinUs={toggleJoinUs}
-            userName={userName}
+            username={user != null ? user.name : null}
+            user_type={wleness_user ? wleness_user.type : null}
           />
 
           {/* Mobile Menu */}
-          <MobileNavbar
-            token={token}
-            toggleJoinUs={toggleJoinUs}
-            userName={userName}
-          />
+          <MobileNavbar token={token} toggleJoinUs={toggleJoinUs} user={user} />
         </div>
       </nav>
       <JoinUs isOpen={openJoinUs} onClose={toggleJoinUs} />

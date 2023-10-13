@@ -22,39 +22,39 @@ export default function DoctorDashboard({ token, setToken }) {
     image: "",
   });
   // ======== Get user appointments and details ===========
-  const user_id = localStorage.getItem("wleness_experts_id");
-  const url = EXPERTS_PROFILE_URI + user_id;
+  const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+  console.log(userInfo);
 
-  useEffect(() => {
-    // Make a GET request using Axios
-    axios
-      .get(url, {
-        headers: {
-          Authorization: "Bearer " + token,
-        },
-      })
-      .then((response) => {
-        if (response.status == 200) {
-          setProfileDetails({
-            // set profile detals
-            name: response.data.name,
-            email: response.data.email,
-            image: response.data.image,
-          });
-          localStorage.setItem("username", response.data.name);
-          setLoading(false);
-          console.log(response.data.message);
-        }
-      })
-      .catch((error) => {
-        // Handle errors
-        console.error("Error fetching doctor details:", error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   // Make a GET request using Axios
+  //   axios
+  //     .get(url, {
+  //       headers: {
+  //         Authorization: "Bearer " + token,
+  //       },
+  //     })
+  //     .then((response) => {
+  //       if (response.status == 200) {
+  //         setProfileDetails({
+  //           // set profile detals
+  //           name: response.data.name,
+  //           email: response.data.email,
+  //           image: response.data.image,
+  //         });
+  //         localStorage.setItem("username", response.data.name);
+  //         setLoading(false);
+  //         console.log(response.data.message);
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       // Handle errors
+  //       console.error("Error fetching doctor details:", error);
+  //     });
+  // }, []);
 
-  if (loading) {
-    return <div className="mb-5 text-center">Loading...</div>;
-  }
+  // if (loading) {
+  //   return <div className="mb-5 text-center">Loading...</div>;
+  // }
 
   return (
     <section className="gap-5 lg:flex">
@@ -63,10 +63,10 @@ export default function DoctorDashboard({ token, setToken }) {
         <div>
           <h1 className="mb-3 flex flex-col lg:flex-row lg:items-end">
             <span className="mr-2 text-xl font-medium lg:text-2xl">
-              Good Morning
+              Welcome
             </span>
             <span className="text-2xl font-semibold text-primary-300 lg:text-3xl">
-              {profileDetails.name}
+              {userInfo.name}
             </span>
           </h1>
 

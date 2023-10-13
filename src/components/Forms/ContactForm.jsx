@@ -89,7 +89,7 @@ function ContactForm() {
             alt="contact"
           />
           <p className="font-medium leading-5 text-slate-700">
-            Our Experts are waiting
+            Our Soul Healers are waiting
             <br />
             for your service.
           </p>

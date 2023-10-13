@@ -71,23 +71,23 @@ const dummyData = [
 
 export default function MusicalTherapyComponent() {
   const Card = ({ image, heading, description }) => (
-    <div className="mx-auto mt-4 max-w-md overflow-hidden rounded-xl">
+    <div className="mx-auto max-w-md cursor-pointer overflow-hidden rounded-xl pt-4 transition-all hover:bg-gradient-to-br hover:from-secondary/50 hover:to-tertiary/50 hover:shadow-xl">
       <div>
         <img src={image} alt={heading} className="mx-auto w-24 lg:w-28" />
       </div>
       <div className="lg:p-4">
         <h2 className="font-semibold text-primary-500 lg:text-xl">{heading}</h2>
-        <p className="text-xs font-semibold lg:text-base">{description}</p>
+        <p className="text-xs font-semibold  lg:text-base">{description}</p>
       </div>
     </div>
   );
 
   return (
-    <div className="relative overflow-x-clip bg-secondary/10 pb-4 pt-6 xl:pb-6 xl:pt-10">
+    <div className="relative overflow-x-clip bg-secondary/5 pb-4 pt-6 xl:pb-6 xl:pt-10">
       <h1 className="pb-4 text-center text-3xl font-bold text-primary-500">
         Benefits of <span className="heading-primary">Music Healing</span>
       </h1>
-      <div className="container mx-auto grid grid-cols-2 justify-center gap-4 !px-2 text-center md:grid-cols-2 lg:grid-cols-4 lg:gap-0 lg:px-4">
+      <div className="container mx-auto grid grid-cols-2 justify-center gap-4 !px-2 text-center md:grid-cols-2 lg:grid-cols-4 lg:gap-6 lg:px-4">
         {dummyData.map((data) => (
           <Card
             key={data.id}

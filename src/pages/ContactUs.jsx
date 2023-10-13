@@ -24,8 +24,8 @@ export default function ContactUs() {
       <section className="container mx-auto space-y-5 py-8 font-medium">
         <ContactForm />
         <div>
-          <div className="my-6 flex items-center">
-            <h1 className="subheading heading-primary text-center">
+          <div className="my-6 text-center">
+            <h1 className="subheading heading-primary">
               Have a question? Talk to us
             </h1>
           </div>
@@ -56,8 +56,8 @@ export default function ContactUs() {
               <h2 className="text-lg font-semibold text-primary-400">
                 Call Us At
               </h2>
-              <h3 className="font-bold">+91 8764387421</h3>
-              <p className="font-semibold">Call between 10AM to 10PM</p>
+              <h3 className="font-bold">+91 6394770176</h3>
+              <p className="font-semibold">Call between 10 AM to 6 PM</p>
             </div>
           </div>
         </div>

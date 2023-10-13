@@ -698,11 +698,6 @@ export const wlenessApproach = [
     slug: "/experts/all",
   },
   {
-    title: "Explore different tools & activities",
-    image: wlenessApproachIcon2,
-    slug: "/activities",
-  },
-  {
     title: "Consult a Psychiatrist",
     image: wlenessApproachIcon3,
     slug: "/experts/all",
