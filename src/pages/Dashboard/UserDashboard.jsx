@@ -28,6 +28,13 @@ export default function UserDashboard({ token }) {
     }, []);
   }
 
+  let userType = localStorage.getItem("wleness_user_type");
+  if (userType == "expert") {
+    useEffect(() => {
+      navigate("/doctor/dashboard");
+    }, []);
+  }
+
   const [thoughts, setThoughts] = useState([]); // thoughts list
   const [newThought, setNewThought] = useState(""); // add new thought in list
   const [mood, setMood] = useState("");

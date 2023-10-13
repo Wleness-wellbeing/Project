@@ -6,7 +6,7 @@ const UpdateExpertSlots = () => {
   const [selectedTime, setSelectedTime] = useState(null);
   const [selectedSlots, setSelectedSlots] = useState([]);
   const [slots, setSlots] = useState([]);
-
+  console.log(slots);
   // Sample appointment data (Replace this with a backend API call)
   function generateAppointmentData(startDate, endDate, timeSlots) {
     const appointmentData = [];
@@ -60,6 +60,40 @@ const UpdateExpertSlots = () => {
     setSelectedTime(null);
   };
 
+  const handleSlotsUpdate = (slot) => {
+    if (selectedSlots.length == undefined) {
+      let newSlot = {
+        [selectedDate]: [slot],
+      };
+      setSelectedSlots(newSlot);
+    } else {
+      selectedSlots.forEach((element) => {
+        console.log(element);
+      });
+    }
+
+    // if (!selectedDate.includes(selectedSlots)) {
+    //   let newSlot = {
+    //     [selectedDate]: [slot],
+    //   };
+    //   setSelectedSlots([...selectedSlots, newSlot]);
+    // } else {
+    //   selectedSlots.forEach((element) => {
+    //     console.log(element);
+    //     // if(!Object.keys(element).includes(selectedDate)){
+    //     //   let currentSlot = selectedSlots[selectedDate]
+    //     //   let newSlot = [...currentSlot, slot]
+
+    //     // }
+    //   });
+    //   let currentSlots = selectedSlots.indexOf(selectedDate);
+    //   console.log(currentSlots);
+    //   // let newSlot = selectedSlots.
+    //   // setSelectedSlots([...selectedSlots, newSlot]);
+    // }
+    console.log(selectedSlots);
+  };
+
   const handleTimeSelect = (time) => {
     setSelectedTime(time);
   };
@@ -103,7 +137,7 @@ const UpdateExpertSlots = () => {
               return (
                 <span
                   key={i}
-                  onClick={() => setSelectedSlots(slot)}
+                  onClick={() => handleSlotsUpdate(slot)}
                   className={`mr-2 mt-2 inline-block cursor-pointer rounded-full border-2 border-primary-300 px-4 py-2.5 text-center text-sm font-medium text-primary-300 transition-all hover:bg-primary-300 hover:text-white ${
                     false ? "bg-primary-300 text-white" : "bg-white"
                   }`}

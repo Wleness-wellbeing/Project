@@ -155,7 +155,7 @@ export default function ExpertsLogin({ setToken, token }) {
           <p className="text-center font-medium">
             <span>Login as an User. </span>
             <Link className="font-semibold text-primary-400" to="/login">
-              Login In
+              Login
             </Link>
           </p>
         </div>

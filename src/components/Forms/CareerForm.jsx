@@ -49,18 +49,19 @@ export default function CareerForm() {
         });
 
         // Empty form after successfully sending data
-        response.data.status == "success"
-          ? setFormData({
-              name: "",
-              number: "",
-              email: "",
-            })
-          : null;
+        if (response.data.status == "success") {
+          setFormData({
+            name: "",
+            number: "",
+            email: "",
+          });
+          setResume(null);
+        }
       } catch (error) {
         console.error("Error sending data:", error);
         setSuccessMessage({
           status: "error",
-          message: "Internal Server Error! Please Try Again later",
+          message: error,
         });
       }
     } else {
@@ -142,7 +143,7 @@ export default function CareerForm() {
               icon={faUpload}
               className="mr-3 text-primary-400"
             />
-            <span>Upload Resume </span>
+            <span>{resume != null ? resume.name : "Upload Resume"} </span>
           </span>
           <input
             type="file"

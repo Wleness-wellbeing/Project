@@ -240,7 +240,7 @@ export default function Login({ setToken, token }) {
               className="font-semibold text-primary-400"
               to="/experts-login"
             >
-              Login In
+              Login
             </Link>
           </p>
         </div>
