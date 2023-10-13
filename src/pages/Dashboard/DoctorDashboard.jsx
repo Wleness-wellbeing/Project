@@ -57,19 +57,21 @@ export default function DoctorDashboard({ token, setToken }) {
   }
 
   return (
-    <section className="flex gap-5">
-      <div className="w-[65%]">
+    <section className="gap-5 lg:flex">
+      <div className="lg:w-[65%]">
         {/* Doctor Profile */}
         <div>
-          <h1 className="mb-3">
-            <span className="text-2xl font-medium">Good Morning </span>
-            <span className="text-3xl font-semibold text-primary-300">
+          <h1 className="mb-3 flex flex-col lg:flex-row lg:items-end">
+            <span className="mr-2 text-xl font-medium lg:text-2xl">
+              Good Morning
+            </span>
+            <span className="text-2xl font-semibold text-primary-300 lg:text-3xl">
               {profileDetails.name}
             </span>
           </h1>
 
-          <div className="flex items-center rounded-3xl bg-slate-200 bg-gradient-to-tr from-[#B2E6FD] via-[#9BD8F1] to-[#52D0C2] px-4 pr-8">
-            <div className="w-3/4">
+          <div className="items-center rounded-3xl bg-slate-200 bg-gradient-to-tr from-[#B2E6FD] via-[#9BD8F1] to-[#52D0C2] px-4 pr-8 md:flex">
+            <div className="mb-20 p-2 md:mb-0 md:w-3/4">
               <div className="mb-4 grid">
                 <span className="mb-1 text-2xl font-semibold">
                   Visit for Today
@@ -100,11 +102,11 @@ export default function DoctorDashboard({ token, setToken }) {
               </div>
             </div>
 
-            <div className="w-1/4">
+            <div className="md:w-1/4">
               <img
                 src={dashboardDoctor}
                 alt=""
-                className="h-full w-full -translate-y-6 scale-125 object-cover"
+                className="mx-auto h-full w-56 -translate-y-10 scale-125 object-cover md:w-full md:-translate-y-6"
               />
             </div>
           </div>
@@ -141,7 +143,7 @@ export default function DoctorDashboard({ token, setToken }) {
           <UpdateExpertSlots />
         </div>
       </div>
-      <div className="w-[35%] p-4">
+      <div className="p-4 lg:w-[35%]">
         {/* <div className="mb-4">
           <h5 className="flex items-center justify-between">
             <span className="font-semibold">Upcoming Events</span>
