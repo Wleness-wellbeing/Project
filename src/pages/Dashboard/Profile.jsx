@@ -17,6 +17,7 @@ export default function Profile({ token }) {
         },
       });
     }, []);
+    return null;
   }
 
   // const [profileDetails, setProfileDetails] = useState({

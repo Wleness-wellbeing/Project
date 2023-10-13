@@ -19,6 +19,7 @@ export default function RoutineCare({ token }) {
         },
       });
     }, []);
+    return null;
   }
 
   const [morningRoutine, setMorningRoutine] = useState([]);

@@ -23,7 +23,6 @@ export default function DoctorDashboard({ token, setToken }) {
   });
   // ======== Get user appointments and details ===========
   const userInfo = JSON.parse(localStorage.getItem("userInfo"));
-  console.log(userInfo);
 
   // useEffect(() => {
   //   // Make a GET request using Axios
