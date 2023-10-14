@@ -3,7 +3,13 @@ import { Link } from "react-router-dom";
 import { modes } from "../../data/doctors";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function SelectPricing({ slug, bookingUrl, price, packages }) {
+export default function SelectPricing({
+  slug,
+  bookingUrl,
+  price,
+  packages,
+  handleBook,
+}) {
   // const [selectDuration, setSelectDuration] = useState(pricings[2]["time"]);
   const [setMode, setSelectMode] = useState(modes[0]["value"]);
   const [successMessage, setSuccessMessage] = useState({
@@ -100,13 +106,12 @@ export default function SelectPricing({ slug, bookingUrl, price, packages }) {
               {successMessage.message}
             </p>
             <div className="text-center">
-              <Link
-                to={bookingUrl}
-                target="_blank"
+              <button
+                onClick={() => handleBook(bookingUrl)}
                 className="btn-one inline-block"
               >
                 Book an appointment now
-              </Link>
+              </button>
             </div>
           </div>
         </div>

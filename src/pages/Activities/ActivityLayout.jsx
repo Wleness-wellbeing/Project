@@ -40,7 +40,7 @@ export default function ActivityLayout(props) {
       />
       <FeaturesBlock data={activityFeatures} />
       {/* <ActivityVideos /> */}
-      <ActivityBlogs blogs={props.blogs} />
+      {/* <ActivityBlogs blogs={props.blogs} /> */}
 
       <ActivityForm isOpen={enquiryForm} onClose={toggleForm} />
     </>

@@ -7,6 +7,14 @@ export default function DoctorsCard(props) {
   const slug = `/experts/profile/${props.data.slug}`; // slug for profile
   const bookNow = `/experts/booking/${props.data.slug}`; // slug for booking
 
+  const handleBookNow = (url) => {
+    props.openAssessmentModal();
+
+    props.setUrl({
+      name: "Book Now",
+      url: url,
+    });
+  };
   return (
     <figure className="rounded-2xl rounded-br-[5rem] border-2 border-primary-300 bg-white p-3 transition-all hover:shadow-lg hover:shadow-primary-50">
       <div className="mb-1 flex">
@@ -56,13 +64,20 @@ export default function DoctorsCard(props) {
           </Link>
         </div>
         <div className="w-[65%] px-4 lg:w-3/5 3xl:px-6">
-          <Link
+          {/* <Link
             to={props.data.bookingUrl}
             target="_blank"
             className="block w-fit rounded-full bg-primary-400 px-4 py-2.5 text-center text-xs font-semibold text-white transition-all hover:bg-primary-300 lg:px-6 lg:py-2.5 lg:text-sm"
           >
             Book Now
-          </Link>
+          </Link> */}
+          <button
+            onClick={() => handleBookNow(props.data.bookingUrl)}
+            target="_blank"
+            className="block w-fit rounded-full bg-primary-400 px-4 py-2.5 text-center text-xs font-semibold text-white transition-all hover:bg-primary-300 lg:px-6 lg:py-2.5 lg:text-sm"
+          >
+            Book Now
+          </button>
         </div>
       </div>
     </figure>

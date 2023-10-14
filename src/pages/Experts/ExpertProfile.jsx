@@ -9,6 +9,7 @@ import axios from "axios";
 import { EXPERTS_URI } from "../../data/api";
 import SelectPricing from "../../components/Forms/SelectPricing";
 import TabSwitcher from "../../components/ExpertTabSwitcher";
+import Assessment from "../../components/Assessment";
 
 const doctorsForte = [
   "Evidence based therapy expertise",
@@ -56,7 +57,24 @@ export default function ExpertProfile() {
   const { slug } = useParams();
   const [profileDetails, setProfileDetails] = useState({});
   const [loading, setLoading] = useState(true);
+  const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
+  const [rediredurl, setRediredurl] = useState(null);
+  // Assessment Slides
+  const openAssessmentModal = () => {
+    setShowAssessmentModal(true);
+  };
 
+  const closeAssessmentModal = () => {
+    setShowAssessmentModal(false);
+  };
+  const handleBookNow = (url) => {
+    openAssessmentModal();
+
+    setRediredurl({
+      name: "Book Now",
+      url: url,
+    });
+  };
   useEffect(() => {
     // Make a GET request using Axios
     axios
@@ -139,6 +157,7 @@ export default function ExpertProfile() {
         bookingUrl={profileDetails.bookingUrl}
         price={profileDetails.price}
         packages={profileDetails.packages}
+        handleBook={handleBookNow}
       />
       <DoctorStatistics />
 
@@ -191,6 +210,11 @@ export default function ExpertProfile() {
       </h4>
 
       <HomeFaq data={faqs} />
+      <Assessment
+        isAssessmentOpen={isAssessmentModalOpen}
+        onAssessmentClose={closeAssessmentModal}
+        buttons={rediredurl}
+      />
     </>
   );
 }

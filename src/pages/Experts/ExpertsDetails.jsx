@@ -7,10 +7,22 @@ import { EXPERTS_URI } from "../../data/api";
 import HappyClient from "../../components/HappyClient";
 import { expertsClients } from "../../data/clients";
 import axios from "axios";
+import Assessment from "../../components/Assessment";
 
 export default function ExpertsDetails() {
   const [doctorDetails, setDoctorDetails] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
+  const [rediredurl, setRediredurl] = useState(null);
+
+  // Assessment Slides
+  const openAssessmentModal = () => {
+    setShowAssessmentModal(true);
+  };
+
+  const closeAssessmentModal = () => {
+    setShowAssessmentModal(false);
+  };
 
   useEffect(() => {
     // Make a GET request using Axios
@@ -101,7 +113,14 @@ export default function ExpertsDetails() {
       <section>
         <div className="side-spacing grid-cols-[repeat(4, minmax(280, 1fr))] container mx-auto grid items-center gap-5 p-4 sm:grid-cols-2 lg:pb-12 3xl:gap-6">
           {doctorDetails.map((value, i) => {
-            return <DoctorsCard key={i} data={value} />;
+            return (
+              <DoctorsCard
+                key={i}
+                data={value}
+                setUrl={setRediredurl}
+                openAssessmentModal={openAssessmentModal}
+              />
+            );
           })}
         </div>
       </section>
@@ -119,6 +138,12 @@ export default function ExpertsDetails() {
         </div>
       </div>
       <HappyClient data={expertsClients} />
+
+      <Assessment
+        isAssessmentOpen={isAssessmentModalOpen}
+        onAssessmentClose={closeAssessmentModal}
+        buttons={rediredurl}
+      />
     </main>
   );
 }
