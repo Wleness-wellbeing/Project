@@ -26,7 +26,7 @@ export default function BrainExercise() {
         displayButton={false}
         button={["Play Now"]}
       />
-      <FeaturesBlock data={activityFeatures} />
+      {/* <FeaturesBlock data={activityFeatures} /> */}
 
       <section className="container mx-auto pb-6" ref={ref}>
         <div className="my-5 text-center lg:my-14">

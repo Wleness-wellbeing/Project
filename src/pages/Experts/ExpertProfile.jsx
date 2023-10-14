@@ -123,8 +123,18 @@ export default function ExpertProfile() {
                 {profileDetails.experience}
               </h6>
               <div className="my-2 font-medium">
-                <p>Expertise: {profileDetails.expertise}</p>
-                <p>Speaks: {profileDetails.languages}</p>
+                <p>
+                  <span className="mr-1 font-semibold text-primary-300">
+                    Expertise:
+                  </span>
+                  <span>{profileDetails.expertise}</span>
+                </p>
+                <p>
+                  <span className="mr-1 font-semibold text-primary-300">
+                    Speaks:
+                  </span>
+                  <span>{profileDetails.languages}</span>
+                </p>
               </div>
               <p className="text-xl font-bold text-primary-400">
                 Starts at Rs. {profileDetails.price}
@@ -199,7 +209,7 @@ export default function ExpertProfile() {
       </section> */}
       <TabSwitcher />
 
-      <h4 className="container mx-auto pb-6 pt-12 text-center text-2xl font-bold lg:text-4xl">
+      {/* <h4 className="container mx-auto pb-6 pt-12 text-center text-2xl font-bold lg:text-4xl">
         <span>Looking for different service </span>
         <Link
           to="/services/therapy"
@@ -207,9 +217,9 @@ export default function ExpertProfile() {
         >
           Click Here
         </Link>
-      </h4>
+      </h4> */}
 
-      <HomeFaq data={faqs} />
+      {/* <HomeFaq data={faqs} /> */}
       <Assessment
         isAssessmentOpen={isAssessmentModalOpen}
         onAssessmentClose={closeAssessmentModal}

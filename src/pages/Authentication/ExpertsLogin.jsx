@@ -11,7 +11,7 @@ export default function ExpertsLogin({ setToken, token }) {
   if (token && token !== "" && token !== undefined) {
     // Navigate to login
     useEffect(() => {
-      navigate("/");
+      navigate("/doctor/dashboard");
     }, []);
   }
 
@@ -76,7 +76,7 @@ export default function ExpertsLogin({ setToken, token }) {
           );
           localStorage.setItem("wleness_user_type", "expert");
 
-          navigate("/");
+          navigate("/doctor/dashboard");
         } else {
           setMessages(response.data.status, response.data.message);
         }

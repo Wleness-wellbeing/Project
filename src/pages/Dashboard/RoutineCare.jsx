@@ -15,7 +15,7 @@ export default function RoutineCare({ token }) {
     useEffect(() => {
       navigate("/login", {
         state: {
-          successMessage: "Please login to continue to dashboard",
+          successMessage: "Please Login",
         },
       });
     }, []);

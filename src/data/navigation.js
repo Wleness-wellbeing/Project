@@ -209,7 +209,7 @@ export const footerFocusAreas = [
 
 // Footer - Our Experts
 export const footerOurExperts = [
-  ["Therapists", "/services/therapy"],
+  ["Therapists", "/experts/all"],
   ["Psychiatrists", ""],
   ["Coaches", "/executive-coaching"],
 ];
@@ -236,10 +236,10 @@ export const adminSidebar = [
 ];
 
 export const userDashboardLinks = [
-  ["Home", "/user/profile", faHome],
+  ["Home", "/user/profile", faHome, "_self"],
   // ["Profile", "/user/profile", faUser],
   // ["Self Care", "/user/dashboard", faHeartCircleCheck],
   // ["Routine Care", "/user/routine-care", faBookBookmark],
-  ["Routine Care", "/user/routine-care", faClipboardList],
-  ["Community", "/community/chat", faUsers],
+  ["Routine Care", "/user/routine-care", faClipboardList, "_self"],
+  ["Community", "https://community.wleness.com", faUsers, "_blank"],
 ];

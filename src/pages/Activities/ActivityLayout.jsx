@@ -38,7 +38,7 @@ export default function ActivityLayout(props) {
         slug={props.activities.types.slug}
         openEnquiry={toggleForm}
       />
-      <FeaturesBlock data={activityFeatures} />
+      {/* <FeaturesBlock data={activityFeatures} /> */}
       {/* <ActivityVideos /> */}
       {/* <ActivityBlogs blogs={props.blogs} /> */}
 

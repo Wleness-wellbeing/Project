@@ -12,48 +12,65 @@ import UpcomingMeets from "../../components/list/UpcomingMeets";
 import { EXPERTS_PROFILE_URI } from "../../data/api";
 import axios from "axios";
 import UpdateExpertSlots from "../../components/Admin/UpdateExpertSlots";
+import { useNavigate } from "react-router-dom";
 
 export default function DoctorDashboard({ token, setToken }) {
   const [loading, setLoading] = useState(true); // set loading screen
+  const [user, setUser] = useState(null);
   const [profileDetails, setProfileDetails] = useState({
     // set profile detals
     name: "",
     email: "",
     image: "",
   });
+  const navigate = useNavigate();
   // ======== Get user appointments and details ===========
-  const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+  let wleness_user = JSON.parse(localStorage.getItem("wleness_user"));
 
-  // useEffect(() => {
-  //   // Make a GET request using Axios
-  //   axios
-  //     .get(url, {
-  //       headers: {
-  //         Authorization: "Bearer " + token,
-  //       },
-  //     })
-  //     .then((response) => {
-  //       if (response.status == 200) {
-  //         setProfileDetails({
-  //           // set profile detals
-  //           name: response.data.name,
-  //           email: response.data.email,
-  //           image: response.data.image,
-  //         });
-  //         localStorage.setItem("username", response.data.name);
-  //         setLoading(false);
-  //         console.log(response.data.message);
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       // Handle errors
-  //       console.error("Error fetching doctor details:", error);
-  //     });
-  // }, []);
+  if (
+    token &&
+    token !== "" &&
+    token !== undefined &&
+    wleness_user != null &&
+    wleness_user.type == "expert"
+  ) {
+    let url = EXPERTS_PROFILE_URI + wleness_user.user_id;
+    useEffect(() => {
+      // Make a GET request using Axios
+      axios
+        .get(url, {
+          headers: {
+            Authorization: "Bearer " + token,
+          },
+        })
+        .then((response) => {
+          if (response.status == 200) {
+            setUser(response.data);
+            localStorage.setItem("userInfo", JSON.stringify(response.data));
+            setLoading(false);
+          } else {
+            console.log(response);
+          }
+        })
+        .catch((error) => {
+          // Handle errors
+          console.error("Error fetching doctor details:", error);
+          setLoading(false);
+        });
+    }, []);
+  } else {
+    useEffect(() => {
+      navigate("/experts-login", {
+        state: {
+          successMessage: "Please Login",
+        },
+      });
+    }, []);
+  }
 
-  // if (loading) {
-  //   return <div className="mb-5 text-center">Loading...</div>;
-  // }
+  if (loading) {
+    return <div className="mb-5 text-center">Loading...</div>;
+  }
 
   return (
     <section className="gap-5 lg:flex">
@@ -65,7 +82,7 @@ export default function DoctorDashboard({ token, setToken }) {
               Welcome
             </span>
             <span className="text-2xl font-semibold text-primary-300 lg:text-3xl">
-              {userInfo.name}
+              {user.name}
             </span>
           </h1>
 

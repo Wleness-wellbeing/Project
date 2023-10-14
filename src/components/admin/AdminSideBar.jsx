@@ -69,6 +69,7 @@ export default function AdminSideBar({ isOpen, toggle }) {
             <Link
               key={i}
               to={value[1]}
+              target={value[3]}
               className="flex cursor-pointer items-center rounded-full border-2 border-primary-300 px-4 py-2 text-xl text-primary-400 transition-colors hover:text-primary-300 lg:h-12 lg:w-12 lg:justify-center lg:p-0 lg:text-xl"
               title={value[0]}
             >

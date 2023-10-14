@@ -20,7 +20,7 @@ export default function UserDashboard({ token }) {
     useEffect(() => {
       navigate("/login", {
         state: {
-          successMessage: "Please login to continue to dashboard",
+          successMessage: "Please Login",
         },
       });
     }, []);

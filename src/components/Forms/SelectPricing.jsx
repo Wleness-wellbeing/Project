@@ -26,8 +26,8 @@ export default function SelectPricing({
   };
   return (
     <section className="container mx-auto pb-10 lg:pt-6">
-      <div className="lg:flex lg:gap-x-5">
-        <div className="lg:w-1/2">
+      <div className="lg:flex lg:items-center lg:gap-x-5">
+        <div className="mb-4 lg:mb-0 lg:w-1/2">
           <div className="flex gap-x-2 lg:gap-x-5">
             {modes.map((value, i) => {
               return (
