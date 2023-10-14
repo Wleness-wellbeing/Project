@@ -180,9 +180,12 @@ export default function SelectPricing({
             {successMessage.message}
           </p>
           <div className="text-center">
-            <Link to={slug} className="btn-one inline-block">
+            <button
+              onClick={() => handleBook(bookingUrl)}
+              className="btn-one inline-block"
+            >
               Book an appointment now
-            </Link>
+            </button>
           </div>
         </div>
       </div>

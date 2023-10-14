@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,33 +9,29 @@ import "swiper/css/pagination";
 // Data
 import { textColorize } from "../utils";
 import { doctorsDetails } from "../data/doctors";
+import axios from "axios";
+import { EXPERTS_URI } from "../data/api";
 
 export default function DoctorSlider(props) {
   const [swiper, setSwiper] = useState(null); // Store Swiper instance
+  const [experts, setExperts] = useState(null);
   const navigate = useNavigate();
 
   // Fetch Doctors list
-  // useEffect(() => {
-  //   // Make a GET request using Axios
-  //   axios
-  //     .get(EXPERTS_URI)
-  //     .then((response) => {
-  //       let data = response.data["experts"];
-  //       // Handle the successful response
-  //       data.forEach((element) => {
-  //         data.push(element);
-  //       });
-  //       data.forEach((element) => {
-  //         data.push(element);
-  //       });
-  //       // data.length >= 10 ? (data.length = 10) : "";
-  //       setExperts(data);
-  //     })
-  //     .catch((error) => {
-  //       // Handle errors
-  //       console.error("Error fetching doctor details:", error);
-  //     });
-  // }, []);
+  useEffect(() => {
+    // Make a GET request using Axios
+    axios
+      .get(EXPERTS_URI)
+      .then((response) => {
+        let data = response.data["experts"];
+        // Handle the successful response
+        setExperts(data);
+      })
+      .catch((error) => {
+        // Handle errors
+        console.error("Error fetching doctor details:", error);
+      });
+  }, []);
 
   // Show Active Image content
   const hideOtherImages = (e) => {
@@ -125,68 +121,69 @@ export default function DoctorSlider(props) {
           onSwiper={(swiper) => setSwiper(swiper)} // Store Swiper instance
           speed={600}
         >
-          {doctorsDetails.map((value, index) => {
-            let slug = `/experts/profile/${value.slug}`;
-            return (
-              <SwiperSlide key={index}>
-                <figure>
-                  <div
-                    onClick={() => navigate(slug)}
-                    className="rounded-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 p-1"
-                  >
-                    <img
-                      src={value.image}
-                      alt="Doctors"
-                      className="box-border block w-full rounded-2xl object-cover"
-                    />
-                  </div>
-                  <figcaption className="doctor-slide-content py-3 text-center">
-                    <p className="expert-slug hidden">{value.bookingUrl}</p>
-                    <h4 className="text-lg font-semibold leading-6 lg:text-xl">
-                      {value.name}
-                    </h4>
-                    <p className="text-sm font-medium text-slate-500 lg:text-base">
-                      {value.experience}
-                    </p>
-                    <div className="text-xs lg:text-sm">
-                      <p>
-                        <span className="mr-1 font-semibold text-primary-400">
-                          Expertise:
-                        </span>
-                        <span className="font-medium text-slate-500">
-                          {value.expertise}
-                        </span>
+          {experts &&
+            experts.map((value, index) => {
+              let slug = `/experts/profile/${value.slug}`;
+              return (
+                <SwiperSlide key={index}>
+                  <figure>
+                    <div
+                      onClick={() => navigate(slug)}
+                      className="rounded-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 p-1"
+                    >
+                      <img
+                        src={value.image}
+                        alt="Doctors"
+                        className="box-border block w-full rounded-2xl object-cover"
+                      />
+                    </div>
+                    <figcaption className="doctor-slide-content py-3 text-center">
+                      <p className="expert-slug hidden">{value.bookingUrl}</p>
+                      <h4 className="text-lg font-semibold leading-6 lg:text-xl">
+                        {value.name}
+                      </h4>
+                      <p className="text-sm font-medium text-slate-500 lg:text-base">
+                        {value.experience}
                       </p>
-                      <p>
-                        <span className="mr-1 font-semibold text-primary-400">
-                          Speaks:
-                        </span>
-                        <span className="font-medium text-slate-500">
-                          {value.languages}
-                        </span>
-                      </p>
-                      <div className="mt-4">
-                        {/* <Link
+                      <div className="text-xs lg:text-sm">
+                        <p>
+                          <span className="mr-1 font-semibold text-primary-400">
+                            Expertise:
+                          </span>
+                          <span className="font-medium text-slate-500">
+                            {value.expertise}
+                          </span>
+                        </p>
+                        <p>
+                          <span className="mr-1 font-semibold text-primary-400">
+                            Speaks:
+                          </span>
+                          <span className="font-medium text-slate-500">
+                            {value.languages}
+                          </span>
+                        </p>
+                        <div className="mt-4">
+                          {/* <Link
                           to={value.bookingUrl}
                           target="_blank"
                           className="btn-one mx-auto inline-block !py-2 !text-sm"
                         >
                           Book Now
                         </Link> */}
-                        <button
-                          onClick={() => handleBookNow(value.bookingUrl)}
-                          target="_blank"
-                          className="btn-one mx-auto inline-block !py-2 !text-sm"
-                        >
-                          Book Now
-                        </button>
+                          <button
+                            onClick={() => handleBookNow(value.bookingUrl)}
+                            target="_blank"
+                            className="btn-one mx-auto inline-block !py-2 !text-sm"
+                          >
+                            Book Now
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                  </figcaption>
-                </figure>
-              </SwiperSlide>
-            );
-          })}
+                    </figcaption>
+                  </figure>
+                </SwiperSlide>
+              );
+            })}
         </Swiper>
       </div>
     </section>
