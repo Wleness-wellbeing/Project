@@ -5,6 +5,7 @@ import axios from "axios";
 import { GOOGLE_SIGNUP_URI, SIGNUP_USER_URI, VERIFY_OTP } from "../../data/api";
 import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 import { signInWithPopup } from "firebase/auth";
+import SocialAuthButtons from "../../components/Buttons/SocialAuthButtons";
 
 export default function Signup({ setToken, token }) {
   const [otp, setOTP] = useState(null);
@@ -217,22 +218,10 @@ export default function Signup({ setToken, token }) {
     <>
       <div className="flex flex-col items-center justify-center md:w-1/2 md:px-12">
         <div className="w-80 rounded-xl bg-white px-6 py-8 shadow-[5px_5px_14px_3px] shadow-gray-300 sm:w-[400px]">
-          <div className="mb-4 grid grid-cols-2 justify-between gap-4">
-            <button
-              onClick={handleGoogleSignIn}
-              className="flex items-center rounded-lg border-2 border-primary-300 px-5 py-2"
-            >
-              <img src={colorIconGoogle} alt="" className="mr-1 w-7 lg:w-8" />
-              <span className="text-sm font-medium md:text-base">Google</span>
-            </button>
-            <button
-              onClick={handleFacebookSignIn}
-              className="flex items-center rounded-lg border-2 border-primary-300 px-5 py-2"
-            >
-              <img src={colorIconFacebook} alt="" className="mr-1 w-7 lg:w-8" />
-              <span className="text-sm font-medium md:text-base">Facebook</span>
-            </button>
-          </div>
+          <SocialAuthButtons
+            google={handleGoogleSignIn}
+            facebook={handleFacebookSignIn}
+          />
 
           <div className="my-4 flex items-center justify-center gap-3">
             <span className="h-[2px] w-36 bg-slate-200"></span>

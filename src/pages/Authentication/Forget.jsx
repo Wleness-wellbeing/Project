@@ -35,14 +35,14 @@ const ForgotPassword = () => {
       role="main"
       className="mx-auto my-32 w-full max-w-md p-6"
     >
-      <div className=" mt-7 rounded-xl  border-2 border-teal-300 bg-white shadow-lg dark:border-gray-700 dark:bg-gray-800">
+      <div className=" mt-7 rounded-xl  bg-white shadow-[5px_5px_14px_3px] shadow-gray-300">
         <div className="p-4 sm:p-7">
           <div className="text-center">
-            <h1 className="block text-2xl font-bold text-gray-800 dark:text-white">
+            <h1 className="block text-2xl font-bold text-gray-800">
               Forgot password?
             </h1>
-            <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-              Remember your password?
+            <p className="mt-2 text-sm text-gray-600">
+              <span>Remember your password? </span>
               <Link
                 to="/login"
                 className="font-bold text-teal-600 decoration-2 hover:underline"
@@ -57,7 +57,7 @@ const ForgotPassword = () => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="mb-2 ml-1 block text-sm font-bold dark:text-white"
+                    className="mb-2 ml-1 block text-sm font-bold"
                   >
                     Email address
                   </label>
@@ -83,7 +83,7 @@ const ForgotPassword = () => {
                 </div>
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center gap-2 rounded-md border border-transparent bg-teal-500 px-4 py-3 text-sm font-semibold text-white transition-all hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800"
+                  className="inline-flex items-center justify-center gap-2 rounded-md border border-transparent bg-teal-500 px-4 py-3 text-sm font-semibold text-white transition-all hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 "
                 >
                   Reset password
                 </button>
@@ -92,7 +92,7 @@ const ForgotPassword = () => {
           </div>
         </div>
       </div>
-      <p className="mt-3 flex items-center justify-center divide-x divide-gray-300 text-center dark:divide-gray-700"></p>
+      <p className="mt-3 flex items-center justify-center divide-x divide-gray-300 text-center "></p>
     </main>
   );
 };

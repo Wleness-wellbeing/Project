@@ -362,7 +362,7 @@ export default function ExecutiveCoaching() {
             className="h-[500px] w-full object-cover object-top"
           />
           <div className="absolute inset-0 w-full  bg-black/60 lg:flex">
-            <div className="container mx-auto divide-x-2 divide-slate-600 lg:grid lg:grid-cols-3">
+            <div className="container mx-auto lg:grid lg:grid-cols-3">
               {executiveApproach.map((value, i) => {
                 return (
                   <div

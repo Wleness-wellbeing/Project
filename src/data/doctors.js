@@ -20,7 +20,8 @@ import {
 
 export const doctorsDetails = [
   {
-    bookingUrl: "https://swati-ghoshal.dayschedule.com/talk-with-swati-ghoshal",
+    bookingUrl:
+      "https://swati-ghoshal.dayschedule.com/session-with-swati-ghoshal",
     experience: "8+ years of experience",
     expertise: "Couple Counselling, Corporate Training",
     id: 1,
@@ -33,7 +34,7 @@ export const doctorsDetails = [
   },
   {
     bookingUrl:
-      "https://deba-shree.dayschedule.com/talk-with-debashree-das-gupta",
+      "https://deba-shree.dayschedule.com/session-with-debashree-das-gupta",
     experience: "8+ years of experience",
     expertise: "Musical Healing",
     id: 2,
@@ -47,7 +48,7 @@ export const doctorsDetails = [
   },
   {
     bookingUrl:
-      "https://purvi-balasaria.dayschedule.com/talk-with-purvi-balasaria-1",
+      "https://purvi-balasaria.dayschedule.com/session-with-purvi-balasaria-1",
     experience: "5+ years of experience",
     expertise: "Eclectic, Holistic Approach",
     id: 3,
@@ -86,7 +87,8 @@ export const doctorsDetails = [
     slug: "prakashchandra-ramteke",
   },
   {
-    bookingUrl: "https://nitin-af.dayschedule.com/talk-with-nitin-af",
+    bookingUrl:
+      "https://talk-with-dr-psingh.dayschedule.com/session-with-dr-p-singh",
     experience: "9+ years of experience",
     expertise: "Holistic healing, Anxiety disorders",
     id: 6,
@@ -99,7 +101,7 @@ export const doctorsDetails = [
   },
   {
     bookingUrl:
-      "https://talk-with-neha-jain.dayschedule.com/talk-with-neha-jain",
+      "https://talk-with-neha-jain.dayschedule.com/session-with-neha-jain",
     experience: "5+ years of experience",
     expertise: "CBT, EFT, and DBT",
     id: 7,
@@ -111,7 +113,7 @@ export const doctorsDetails = [
     slug: "neha-jain",
   },
   {
-    bookingUrl: "https://talk-with-nidhi-nahata.dayschedule.com/talk-with",
+    bookingUrl: "https://talk-with-nidhi-nahata.dayschedule.com/session-with",
     experience: "3+ years of experience",
     expertise: "Clinical Psychiatrist",
     id: 8,
@@ -123,7 +125,7 @@ export const doctorsDetails = [
     slug: "nidhi-nahata",
   },
   {
-    bookingUrl: "#",
+    bookingUrl: "https://nitin-af.dayschedule.com/talk-with-nitin-af",
     experience: "4+ years of experience",
     expertise: "Couple and family counseling",
     id: 9,

@@ -6,6 +6,7 @@ import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 // Data
 import { colorIconFacebook, colorIconGoogle } from "../../assets";
 import { GOOGLE_LOGIN_URI, LOGIN_USER_URI } from "../../data/api";
+import SocialAuthButtons from "../../components/Buttons/SocialAuthButtons";
 
 export default function Login({ setToken, token }) {
   const navigate = useNavigate();
@@ -180,22 +181,10 @@ export default function Login({ setToken, token }) {
   return (
     <div className="flex items-center justify-center md:w-1/2 md:px-4">
       <div className="w-80 rounded-xl bg-white p-6 shadow-[5px_5px_14px_3px] shadow-gray-300 sm:w-[400px] lg:py-10">
-        <div className="mb-4 grid grid-cols-2 justify-between gap-4">
-          <button
-            onClick={handleGoogleSignIn}
-            className="flex items-center rounded-lg border-2 border-primary-300 px-5 py-2"
-          >
-            <img src={colorIconGoogle} alt="" className="mr-1 w-8" />
-            <span className="font-medium">Google</span>
-          </button>
-          <button
-            onClick={handleFacebookSignIn}
-            className="flex items-center rounded-lg border-2 border-primary-300 px-5 py-2"
-          >
-            <img src={colorIconFacebook} alt="" className="mr-1 w-8" />
-            <span className="font-medium">Facebook</span>
-          </button>
-        </div>
+        <SocialAuthButtons
+          google={handleGoogleSignIn}
+          facebook={handleFacebookSignIn}
+        />
 
         <div className="my-4 flex items-center justify-center gap-3">
           <span className="h-[2px] w-36 bg-slate-200"></span>

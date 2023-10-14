@@ -50,11 +50,7 @@ export const languages = [
   "Marathi",
   "Malayalam",
   "Telugu",
-  "Urdu",
-  "Kannada",
   "Punjabi",
-  "Tamil",
-  "Gujarati",
 ];
 
 export const ageRange = [
