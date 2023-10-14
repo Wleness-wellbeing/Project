@@ -8,7 +8,7 @@ export default function IssueQuote({ quote }) {
     <section className="relative overflow-x-hidden overflow-y-clip pb-14">
       <div className="relative px-10">
         <img src={didYouKnow} alt="" className="mx-auto w-fit xl:w-32" />
-        <div className="group relative mx-auto rounded-xl border-4 border-primary-400 p-6 hover:bg-[#fafce7] lg:w-[640px] lg:p-12">
+        <div className="hover:bg-yellow-primary group relative mx-auto rounded-xl border-4 border-primary-400 p-6 lg:w-[640px] lg:p-12">
           <p className="text-center font-bold">{quote}</p>
           {/* <FontAwesomeIcon
             icon={faQuoteLeft}

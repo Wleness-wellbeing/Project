@@ -27,6 +27,7 @@ module.exports = {
         },
         secondary: "#00F5A0",
         tertiary: "#00D9F5",
+        "yellow-primary": "#F2F4D6",
         light: "#464646",
       },
       fontFamily: {

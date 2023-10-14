@@ -70,7 +70,7 @@ export default function CoachRequestForm({ name }) {
   };
 
   return (
-    <section className="container mx-auto mb-6 grid rounded-3xl bg-[#FAFCE7] px-6 py-8 xs:px-8 xs:py-14 md:grid-cols-2 lg:p-8">
+    <section className="bg-yellow-primary container mx-auto mb-6 grid rounded-3xl px-6 py-8 xs:px-8 xs:py-14 md:grid-cols-2 lg:p-8">
       <div className="md:flex md:h-full md:flex-col md:justify-center md:px-6 md:pb-10">
         <div>
           <h3 className="font-medium text-[#464646] opacity-80 lg:text-lg">

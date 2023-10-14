@@ -13,7 +13,7 @@ export default function WlenessApproach({ issue, desc }) {
         </h2>
         <p className="text-xl font-medium">{desc}</p>
 
-        <div className="my-6 grid grid-cols-3 gap-2 rounded-xl bg-[#FAFCE7] p-2 lg:my-10 lg:grid-cols-3 lg:gap-6 lg:p-4">
+        <div className="bg-yellow-primary my-6 grid grid-cols-3 gap-6 rounded-xl p-2 lg:my-10 lg:grid-cols-3 lg:gap-6 lg:p-4">
           {wlenessApproach.map((value, i) => {
             return <ApproachCard key={i} data={value} />;
           })}

@@ -6,7 +6,7 @@ export default function ServicesCard(props) {
     <>
       <div className="rounded-2xl bg-gradient-to-br from-secondary to-tertiary p-1 transition-all lg:hover:scale-105">
         <Link to={props.data.slug}>
-          <figure className="relative flex h-full flex-col justify-between rounded-xl bg-white p-3 transition-all hover:bg-[#FAFCE7] hover:shadow-xl hover:shadow-secondary/30 lg:p-5">
+          <figure className="hover:bg-yellow-primary relative flex h-full flex-col justify-between rounded-xl bg-white p-3 transition-all hover:shadow-xl hover:shadow-secondary/30 lg:p-5">
             <img
               src={props.data.image}
               alt={props.data.title}

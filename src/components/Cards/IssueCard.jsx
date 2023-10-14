@@ -16,7 +16,7 @@ export default function IssueCard(props) {
       className="mx-auto w-full rounded-2xl rounded-br-[4rem] bg-gradient-to-br from-secondary to-tertiary p-1 lg:w-full"
       title={props.data.title}
     >
-      <div className="flex h-full flex-col items-center justify-center rounded-xl rounded-br-[3.8rem] bg-[#FAFCE7] py-4 md:py-6">
+      <div className="bg-yellow-primary flex h-full flex-col items-center justify-center rounded-xl rounded-br-[3.8rem] py-4 md:py-6">
         {/* <div className="flex h-full flex-col items-center justify-center rounded-2xl rounded-br-[3rem] bg-green-50 py-4 md:py-6"> */}
         <Link to={props.data.slug}>
           <h3 className="mb-4 text-center font-bold lg:text-2xl">
