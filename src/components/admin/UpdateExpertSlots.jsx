@@ -1,12 +1,23 @@
 import React, { useState } from "react";
 import ExpertsCalendar from "./ExpertsCalendar";
+import { format } from "date-fns";
+import axios from "axios";
+import { UPDATE_SLOTS } from "../../data/api";
 
-const UpdateExpertSlots = () => {
-  const [selectedDate, setSelectedDate] = useState(null);
+const UpdateExpertSlots = ({ token }) => {
+  // Get Current Date
+  const currentDate = new Date();
+  const [selectedDate, setSelectedDate] = useState(
+    format(currentDate, "yyyy-MM-dd"),
+  );
   const [selectedTime, setSelectedTime] = useState(null);
-  const [selectedSlots, setSelectedSlots] = useState([]);
+  const [selectedSlots, setSelectedSlots] = useState({});
+  const [isChecked, setChecked] = useState(false);
   const [slots, setSlots] = useState([]);
-  console.log(slots);
+  const [alert, setAlert] = useState({
+    status: "",
+    message: "",
+  });
   // Sample appointment data (Replace this with a backend API call)
   function generateAppointmentData(startDate, endDate, timeSlots) {
     const appointmentData = [];
@@ -49,6 +60,13 @@ const UpdateExpertSlots = () => {
     "09:00 PM",
   ];
 
+  const setMessage = (status, message) => {
+    setAlert({
+      status: status,
+      message: message,
+    });
+  };
+
   const appointmentData = generateAppointmentData(
     startDate,
     endDate,
@@ -57,19 +75,17 @@ const UpdateExpertSlots = () => {
 
   const handleDateSelect = (date) => {
     setSelectedDate(date);
-    setSelectedTime(null);
+    setSlots([]);
+    // setSelectedTime(null);
   };
 
   const handleSlotsUpdate = (slot) => {
-    if (selectedSlots.length == undefined) {
-      let newSlot = {
-        [selectedDate]: [slot],
-      };
-      setSelectedSlots(newSlot);
+    const exists = slots.includes(slot);
+    if (exists) {
+      let newSlots = slots.filter((element) => element !== slot);
+      setSlots(newSlots);
     } else {
-      selectedSlots.forEach((element) => {
-        console.log(element);
-      });
+      setSlots([...slots, slot]);
     }
 
     // if (!selectedDate.includes(selectedSlots)) {
@@ -91,11 +107,40 @@ const UpdateExpertSlots = () => {
     //   // let newSlot = selectedSlots.
     //   // setSelectedSlots([...selectedSlots, newSlot]);
     // }
-    console.log(selectedSlots);
   };
 
   const handleTimeSelect = (time) => {
     setSelectedTime(time);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (slots.length == 0) {
+      setMessage("error", "Please select time slots");
+      return null;
+    }
+
+    let form_data = new FormData();
+    form_data.append("date", selectedDate);
+    form_data.append("slots", slots);
+    form_data.append("expert_id", "hello");
+
+    axios
+      .post(UPDATE_SLOTS, form_data, {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      })
+      .then((response) => {
+        if (response.data.status == "success") {
+          setMessage("success", response.data.message);
+        }
+      })
+      .catch((error) => {
+        // Handle errors
+        console.error("Error fetching doctor details:", error);
+      });
   };
 
   // Function to check if time slots are available for the selected date
@@ -107,13 +152,14 @@ const UpdateExpertSlots = () => {
   };
 
   return (
-    <form action="" method="post">
+    <form onSubmit={handleSubmit}>
       <div className="gap-2 lg:flex lg:gap-8">
         {/* Calendar Section */}
         <div className="mb-6 lg:mb-0 lg:w-1/2">
           <ExpertsCalendar
             appointmentData={appointmentData}
             onDateSelect={handleDateSelect}
+            currentDate={currentDate}
             updateslots={setSelectedSlots}
             updatedslots={selectedSlots}
           />
@@ -135,23 +181,42 @@ const UpdateExpertSlots = () => {
           <div className="flex flex-wrap justify-center">
             {timeSlots.map((slot, i) => {
               return (
-                <span
+                <label
+                  htmlFor={slot}
                   key={i}
-                  onClick={() => handleSlotsUpdate(slot)}
                   className={`mr-2 mt-2 inline-block cursor-pointer rounded-full border-2 border-primary-300 px-4 py-2.5 text-center text-sm font-medium text-primary-300 transition-all hover:bg-primary-300 hover:text-white ${
-                    false ? "bg-primary-300 text-white" : "bg-white"
+                    slots.includes(slot)
+                      ? "bg-primary-300 text-white"
+                      : "bg-white"
                   }`}
                 >
                   {slot}
-                </span>
+                  <input
+                    type="checkbox"
+                    name={slot}
+                    checked={slots.includes(slot)}
+                    onChange={() => handleSlotsUpdate(slot)}
+                    id={slot}
+                    className="hidden"
+                  />
+                </label>
               );
             })}
           </div>
         </div>
       </div>
 
+      <p
+        className={`text-center font-semibold ${
+          alert.status == "success" ? " text-green-500 " : " text-red-500 "
+        }`}
+      >
+        {alert.message}
+      </p>
       <div className="mt-6 text-center">
-        <button className="btn-one">Update</button>
+        <button type="submit" className="btn-one">
+          Update
+        </button>
       </div>
     </form>
   );

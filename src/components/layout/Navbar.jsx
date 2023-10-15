@@ -84,7 +84,12 @@ function Navbar() {
           />
 
           {/* Mobile Menu */}
-          <MobileNavbar token={token} toggleJoinUs={toggleJoinUs} user={user} />
+          <MobileNavbar
+            token={token}
+            toggleJoinUs={toggleJoinUs}
+            username={user != null ? user.name : null}
+            user_type={wleness_user ? wleness_user.type : null}
+          />
         </div>
       </nav>
       <JoinUs isOpen={openJoinUs} onClose={toggleJoinUs} />

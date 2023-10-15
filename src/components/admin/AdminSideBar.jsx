@@ -5,42 +5,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
+import { Link } from "react-router-dom";
 
 import { userDashboardLinks } from "../../data/navigation";
-import { LOGOUT_USER_URI } from "../../data/api";
-import useToken from "../../utils/useToken";
+import useLogout from "../Auth/useLogout";
 
 export default function AdminSideBar({ isOpen, toggle }) {
-  const { removeToken } = useToken();
-  const navigate = useNavigate();
+  const { logout } = useLogout();
   const wleness_user_type = localStorage.getItem("wleness_user_type");
-
-  const logMeOut = async () => {
-    try {
-      const response = await axios.post(LOGOUT_USER_URI);
-      if (response.data.status === "success") {
-        // Clear user data from local storage
-        removeToken();
-        if (wleness_user_type == "expert") {
-          localStorage.removeItem("wleness_experts_id");
-        } else {
-          localStorage.removeItem("phone");
-          localStorage.removeItem("email");
-        }
-        localStorage.removeItem("userInfo");
-        localStorage.removeItem("wleness_user");
-        localStorage.removeItem("wleness_user_type");
-        localStorage.removeItem("username");
-        localStorage.removeItem("login_type");
-        window.location = "/";
-        // navigate("/login");
-      }
-    } catch (error) {
-      console.error(error);
-    }
-  };
 
   let dashbaordLinks = userDashboardLinks;
   if (wleness_user_type == "expert") {
@@ -81,7 +53,7 @@ export default function AdminSideBar({ isOpen, toggle }) {
       </ul>
 
       <button
-        onClick={logMeOut}
+        onClick={() => logout()}
         className="flex cursor-pointer items-center rounded-full border-2 border-primary-300 px-4 py-2 text-xl text-primary-400 transition-all hover:border-primary-300  hover:text-red-500 lg:h-12 lg:w-12 lg:justify-center lg:p-0 lg:text-xl"
         title="Logout"
       >

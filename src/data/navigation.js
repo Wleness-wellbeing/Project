@@ -216,7 +216,7 @@ export const footerOurExperts = [
 
 // Footer social links
 export const socialLinks = [
-  [faSquareWhatsapp, "#"],
+  [faSquareWhatsapp, "https://wa.me/916394770176"],
   [faSquareInstagram, "https://www.instagram.com/wleness/"],
   [faFacebookSquare, "http://facebook.com/profile.php?id=100094475627706"],
   [faSquareXTwitter, "http://twitter.com/wleness111"],

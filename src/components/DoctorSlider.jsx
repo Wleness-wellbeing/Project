@@ -15,6 +15,7 @@ import { EXPERTS_URI } from "../data/api";
 export default function DoctorSlider(props) {
   const [swiper, setSwiper] = useState(null); // Store Swiper instance
   const [experts, setExperts] = useState(null);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   // Fetch Doctors list
@@ -24,14 +25,20 @@ export default function DoctorSlider(props) {
       .get(EXPERTS_URI)
       .then((response) => {
         let data = response.data["experts"];
-        // Handle the successful response
-        setExperts(data);
+        if (response.status == 200) {
+          setExperts(data);
+          setLoading(false);
+        }
       })
       .catch((error) => {
         // Handle errors
         console.error("Error fetching doctor details:", error);
       });
   }, []);
+
+  if (loading) {
+    return <div className="mb-5 text-center">Loading...</div>;
+  }
 
   // Show Active Image content
   const hideOtherImages = (e) => {
@@ -46,7 +53,6 @@ export default function DoctorSlider(props) {
       doctorSlidesContent.forEach((element) => {
         element.style.display = "none";
       });
-      // console.log(activeSlide);
       doctorSlidesContent[activeSlide].style.display = "block";
     }
   };

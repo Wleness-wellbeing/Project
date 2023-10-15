@@ -13,8 +13,10 @@ import { EXPERTS_PROFILE_URI } from "../../data/api";
 import axios from "axios";
 import UpdateExpertSlots from "../../components/Admin/UpdateExpertSlots";
 import { useNavigate } from "react-router-dom";
+import useLogout from "../../components/Auth/useLogout";
 
 export default function DoctorDashboard({ token, setToken }) {
+  const { logout } = useLogout();
   const [loading, setLoading] = useState(true); // set loading screen
   const [user, setUser] = useState(null);
   const [profileDetails, setProfileDetails] = useState({
@@ -24,41 +26,17 @@ export default function DoctorDashboard({ token, setToken }) {
     image: "",
   });
   const navigate = useNavigate();
+
   // ======== Get user appointments and details ===========
   let wleness_user = JSON.parse(localStorage.getItem("wleness_user"));
 
   if (
-    token &&
-    token !== "" &&
-    token !== undefined &&
-    wleness_user != null &&
-    wleness_user.type == "expert"
+    token == null ||
+    token == "" ||
+    token == undefined ||
+    wleness_user.type != "expert"
   ) {
-    let url = EXPERTS_PROFILE_URI + wleness_user.user_id;
-    useEffect(() => {
-      // Make a GET request using Axios
-      axios
-        .get(url, {
-          headers: {
-            Authorization: "Bearer " + token,
-          },
-        })
-        .then((response) => {
-          if (response.status == 200) {
-            setUser(response.data);
-            localStorage.setItem("userInfo", JSON.stringify(response.data));
-            setLoading(false);
-          } else {
-            console.log(response);
-          }
-        })
-        .catch((error) => {
-          // Handle errors
-          console.error("Error fetching doctor details:", error);
-          setLoading(false);
-        });
-    }, []);
-  } else {
+    // Navigate to login
     useEffect(() => {
       navigate("/experts-login", {
         state: {
@@ -68,6 +46,42 @@ export default function DoctorDashboard({ token, setToken }) {
     }, []);
     return null;
   }
+
+  let url = EXPERTS_PROFILE_URI + wleness_user.user_id;
+  useEffect(() => {
+    // Make a GET request using Axios
+    axios
+      .get(url, {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      })
+      .then((response) => {
+        if (response.status == 200) {
+          setUser(response.data);
+          localStorage.setItem("userInfo", JSON.stringify(response.data));
+          setLoading(false);
+        }
+      })
+      .catch((error) => {
+        // Handle errors
+        // console.error("Error fetching doctor details:", error);
+        if (error.response.status == 401) {
+          // Logout and redirect user
+          logout();
+          useEffect(() => {
+            navigate("/experts-login", {
+              state: {
+                successMessage: "Session Expired Please Login",
+              },
+            });
+          }, []);
+          return null;
+        } else {
+          console.error(error);
+        }
+      });
+  }, []);
 
   if (loading) {
     return <div className="mb-5 text-center">Loading...</div>;
@@ -83,7 +97,7 @@ export default function DoctorDashboard({ token, setToken }) {
               Welcome
             </span>
             <span className="text-2xl font-semibold text-primary-300 lg:text-3xl">
-              {user.name}
+              {user ? user.name : ""}
             </span>
           </h1>
 
@@ -157,7 +171,7 @@ export default function DoctorDashboard({ token, setToken }) {
           <h3 className="mb-6 text-center text-xl font-bold">
             Update Your Time Slots
           </h3>
-          <UpdateExpertSlots />
+          <UpdateExpertSlots token={token} />
         </div>
       </div>
       <div className="p-4 lg:w-[35%]">

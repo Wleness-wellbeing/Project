@@ -6,11 +6,20 @@ import {
 } from "../../data/navigation";
 import MobileMenuLink from "../links/MobileMenuLink";
 import MobileDropdown from "../links/MobileDropdown";
-import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faClose,
+  faUserCircle,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
-export default function MobileNavbar({ toggleJoinUs }) {
+export default function MobileNavbar({
+  toggleJoinUs,
+  token,
+  username,
+  userType,
+}) {
   const [isMenuOpen, setMenuOpen] = useState(false); // Menu Modal
 
   const openMenu = () => {
@@ -90,12 +99,31 @@ export default function MobileNavbar({ toggleJoinUs }) {
             >
               Join Us
             </button>
-            <Link
-              to="/signup"
-              className="btn-primary !w-full !rounded-full !bg-primary-400 !py-2.5 !text-base font-semibold hover:!bg-primary-300 xl:!w-fit xl:!py-2"
-            >
-              Sign Up
-            </Link>
+
+            {!token ? (
+              <Link
+                to="/signup"
+                className="btn-primary !w-full !rounded-full !bg-primary-400 !py-2.5 !text-base font-semibold hover:!bg-primary-300 xl:!w-fit xl:!py-2"
+              >
+                Sign Up
+              </Link>
+            ) : (
+              <Link
+                to={
+                  userType == "expert" ? "/doctor/dashboard" : "/user/dashboard"
+                }
+                className="btn-primary flex !w-full items-center justify-center !rounded-full !bg-primary-400 !py-2.5 font-semibold hover:!bg-primary-300"
+              >
+                {/* <img src={profile} alt="" className="mr-1 w-5 rounded-full" /> */}
+                <FontAwesomeIcon
+                  icon={faUserCircle}
+                  className="mr-2 text-base"
+                />
+                <span className="text-sm">
+                  {username ? username.split(" ")[0] : "User"}
+                </span>
+              </Link>
+            )}
           </div>
         </div>
       </div>

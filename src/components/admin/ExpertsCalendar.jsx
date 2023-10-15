@@ -8,8 +8,7 @@ import {
   subMonths,
 } from "date-fns";
 
-const ExpertsCalendar = ({ onDateSelect }) => {
-  const currentDate = new Date();
+const ExpertsCalendar = ({ onDateSelect, currentDate }) => {
   const [displayedMonth, setDisplayedMonth] = useState(currentDate);
 
   // Get the first day of the displayed month

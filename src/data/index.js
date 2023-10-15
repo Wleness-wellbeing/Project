@@ -170,7 +170,6 @@ import LeftImage from "../components/LeftImage";
 import RightProcedureList from "../components/RightProcedureList";
 import RightImageList from "../components/RightImageList";
 import LeftImageList from "../components/LeftImageList";
-import ActivityBlogs from "../components/ActivityBlogs";
 import LeftImageList3 from "../components/LeftImageList3";
 import SubpagesConclusion from "../components/SubpagesConclusion";
 import RightImageList2 from "../components/RightImageList2";
@@ -425,26 +424,6 @@ export const activities = [
                 ],
               },
             },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
-            },
           ],
         },
         {
@@ -528,26 +507,6 @@ export const activities = [
                   "Always listen to your body, and don't push yourself beyond your limits. Remember that yoga is about finding a balance between effort and ease and never forcing your body into a pose that feels uncomfortable or painful.",
                 ],
               },
-            },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
             },
           ],
         },
@@ -633,26 +592,6 @@ export const activities = [
                 ],
               },
             },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
-            },
           ],
         },
         {
@@ -737,26 +676,6 @@ export const activities = [
                 ],
               },
             },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
-            },
           ],
         },
         {
@@ -820,26 +739,6 @@ export const activities = [
                 ],
               },
             },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
-            },
           ],
         },
         {
@@ -902,26 +801,6 @@ export const activities = [
                 ],
               },
             },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
-            },
           ],
         },
         {
@@ -983,26 +862,6 @@ export const activities = [
                   "Always warm up your body before attempting Sirsasana.",
                 ],
               },
-            },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
             },
           ],
         },
@@ -1070,26 +929,6 @@ export const activities = [
                 ],
               },
             },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
-            },
           ],
         },
         {
@@ -1155,26 +994,6 @@ export const activities = [
                   "Always warm up your body before attempting Setu Bandhasana..",
                 ],
               },
-            },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
             },
           ],
         },
@@ -1246,26 +1065,6 @@ export const activities = [
                 ],
               },
             },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
-            },
           ],
         },
         {
@@ -1329,26 +1128,6 @@ export const activities = [
                 ],
               },
             },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
-            },
           ],
         },
         {
@@ -1411,26 +1190,6 @@ export const activities = [
                   "Balance Challenges: Practicing near a wall or using a chair for support can be helpful, especially if you're new to balancing poses.",
                 ],
               },
-            },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
             },
           ],
         },
@@ -1581,26 +1340,6 @@ export const activities = [
                 image: conclusionBulb,
               },
             },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
-            },
           ],
         },
         {
@@ -1714,26 +1453,6 @@ export const activities = [
                 image: conclusionBulb,
                 position: "left",
               },
-            },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
             },
           ],
         },
@@ -1873,26 +1592,6 @@ export const activities = [
                 position: "left",
               },
             },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
-            },
           ],
         },
         {
@@ -2006,26 +1705,6 @@ export const activities = [
                 image: conclusionBulb,
                 position: "left",
               },
-            },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
             },
           ],
         },
@@ -2152,26 +1831,6 @@ export const activities = [
                 image: conclusionBulb,
                 position: "left",
               },
-            },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
             },
           ],
         },
@@ -2310,26 +1969,6 @@ export const activities = [
                 position: "left",
               },
             },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
-            },
           ],
         },
         {
@@ -2434,26 +2073,6 @@ export const activities = [
                 desc: "With its roots in ancient wisdom, Vipassana meditation offers a profound journey towards self-discovery and inner peace. Through diligent practice, one can experience heightened awareness, emotional resilience, and spiritual growth. While potential side effects are minimal, the benefits are boundless. So, take a step towards this transformative journey, and may it bring you the serenity and clarity you seek in today's bustling world.",
               },
             },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
-            },
           ],
         },
         {
@@ -2557,27 +2176,6 @@ export const activities = [
                 desc: "Concentration meditation is valuable for anyone seeking greater mental clarity, focus, and inner peace in today's hectic world. While it requires patience and consistent practice, the benefits are worth the effort. By embracing this practice, you can cultivate and harness the power of concentration to lead a more balanced, mindful, and fulfilling life.",
                 position: "right", // Specify the position here
               },
-            },
-
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
             },
           ],
         },
@@ -2742,26 +2340,6 @@ export const activities = [
                 image: conclusionBulb,
               },
             },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
-            },
           ],
         },
         {
@@ -2886,26 +2464,6 @@ export const activities = [
                 desc: "Meditation Sadhana is a transformative journey that allows individuals to find inner calm, cultivate mindfulness, and discover their true selves. By creating a conducive environment, practicing regular meditation with patience, and embracing the present moment, practitioners can experience various mental, emotional, and physical benefits. However, it's essential to approach Meditation Sadhana with an open heart, acknowledging the potential challenges and seeking guidance when needed. Embrace this ancient practice, and may your meditation Sadhana lead you to a life filled with profound peace and self-awareness.",
                 image: conclusionBulb,
               },
-            },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
             },
           ],
         },
@@ -3032,26 +2590,6 @@ export const activities = [
                 image: conclusionBulb,
               },
             },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
-            },
           ],
         },
         {
@@ -3177,26 +2715,6 @@ export const activities = [
                 image: conclusionBulb,
               },
             },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
-            },
           ],
         },
         {
@@ -3321,26 +2839,6 @@ export const activities = [
                 desc: "Bhakti Sadhana is a sacred journey of devotion, love, and surrender to the divine. By engaging in daily prayers, devotional practices, and selfless service, practitioners can experience a profound connection with the heavenly, inner peace, and spiritual growth. To embark on this transformative path, choose a form of the divine that resonates with your heart, practice with sincerity and love, and stay open to the limitless power of Bhakti Sadhana. May your journey of devotion lead you to a life filled with divine love, compassion, and spiritual liberation.",
                 image: conclusionBulb,
               },
-            },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
             },
           ],
         },
@@ -3471,26 +2969,6 @@ export const activities = [
                 image: conclusionBulb,
               },
             },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
-            },
           ],
         },
         {
@@ -3620,26 +3098,6 @@ export const activities = [
                 image: conclusionBulb,
               },
             },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
-            },
           ],
         },
         {
@@ -3764,26 +3222,6 @@ export const activities = [
                 desc: "Nature Sadhna is a profound and accessible spiritual practice that allows individuals to connect with the natural world and rediscover their inherent oneness with all living beings. By immersing ourselves in nature, we gain insights into the beauty and wisdom of the environment, leading to personal growth, inner peace, and spiritual awakening. Nature Sadhna also fosters environmental consciousness and a profound responsibility toward protecting and preserving the earth. As we embrace Nature Sadhna, we embark on a transformative journey that nurtures our souls and renews our bond with the natural world, fostering harmony, balance, and reverence for all life.",
                 image: conclusionBulb,
               },
-            },
-            {
-              component: ActivityBlogs,
-              blogs: [
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-                {
-                  thumbnail: activityBlogThumbnail,
-                  title: "Maintain a good habit with yourself",
-                  desc: "Lorem ipsum dolor sit amet consectetur. Neque turpis faucibus eget magna est.Neque turpis faucibus eget magna est.",
-                },
-              ],
             },
           ],
         },
