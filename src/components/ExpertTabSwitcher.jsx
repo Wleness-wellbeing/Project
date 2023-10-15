@@ -24,7 +24,7 @@ const TabSwitcher = () => {
   const [active, setActive] = useState(true);
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mb-8">
       <div className="grid grid-cols-2">
         <ExpertsButton
           text="Main Forte"
@@ -40,7 +40,7 @@ const TabSwitcher = () => {
 
       {/* <hr className="h-1 bg-teal-500 "></hr> */}
       {/* Content for the active tab */}
-      <div className="my-4">
+      <div className="bg-yellow-primary px-2 py-4 lg:px-6">
         {active && (
           <div className="flex lg:items-center lg:py-4">
             <div className="para lg:w-1/2">
