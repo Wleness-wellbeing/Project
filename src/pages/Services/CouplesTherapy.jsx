@@ -34,6 +34,7 @@ function CouplesTherapy() {
     openAssessmentModal();
 
     setRediredurl({
+      title: "Find a Therapist",
       name: "Find a Therapist",
       url: "/experts/all",
     });

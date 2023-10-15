@@ -6,8 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-// Data
-import { blogRecent } from "../../assets";
 // Component
 import BlogCard from "../../components/Cards/BlogCard";
 import {
@@ -18,12 +16,6 @@ import {
 import { BLOGS_URI } from "../../data/api";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
-const allBlogs = [
-  ...navigatingMidlifeForWomenBlogs,
-  ...issuesBlogs,
-  ...medicalBlogs,
-];
 
 export default function Blogs() {
   const [blogPosts, setBlogPosts] = useState([]);

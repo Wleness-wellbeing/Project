@@ -174,7 +174,7 @@ export default function Assessment({
               className="btn-primary mx-auto bg-gradient-to-r from-secondary to-tertiary !font-semibold"
               onClick={openScreenOne}
             >
-              Find a Therapist
+              {buttons.title}
             </button>
           </div>
         )}

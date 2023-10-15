@@ -13,6 +13,8 @@ import Assessment from "../../components/Assessment";
 
 export default function Therapy() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
+  const [rediredurl, setRediredurl] = useState(null);
+
   const openAssessmentModal = () => {
     setShowAssessmentModal(true);
   };
@@ -21,6 +23,15 @@ export default function Therapy() {
     setShowAssessmentModal(false);
   };
 
+  const resetBookNow = () => {
+    openAssessmentModal();
+
+    setRediredurl({
+      title: "Find a Therapist",
+      name: "Find a Therapist",
+      url: "/experts/all",
+    });
+  };
   const ref = useRef(null);
 
   const handleScrollToComponent = () => {
@@ -42,7 +53,7 @@ export default function Therapy() {
         image={TherapyData.bestTherapist.featureImage}
         features={TherapyData.bestTherapist.features}
         btn={TherapyData.bestTherapist.startBtn}
-        openAssessmentModal={openAssessmentModal}
+        openAssessmentModal={() => resetBookNow()}
         headingBg={true}
       />
 
@@ -60,6 +71,7 @@ export default function Therapy() {
       <Assessment
         isAssessmentOpen={isAssessmentModalOpen}
         onAssessmentClose={closeAssessmentModal}
+        buttons={rediredurl}
       />
     </>
   );

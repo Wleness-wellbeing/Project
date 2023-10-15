@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { bgDotsPattern, profileMask } from "../../assets";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-import BookAppointment from "../../components/Forms/BookAppointment";
 import DoctorStatistics from "../../components/Statistics/DoctorStatistics";
-import HomeFaq from "../../components/Faq/HomeFaq";
 import axios from "axios";
 import { EXPERTS_URI } from "../../data/api";
 import SelectPricing from "../../components/Forms/SelectPricing";
 import TabSwitcher from "../../components/ExpertTabSwitcher";
-import Assessment from "../../components/Assessment";
 
 const doctorsForte = [
   "Evidence based therapy expertise",
@@ -57,24 +54,7 @@ export default function ExpertProfile() {
   const { slug } = useParams();
   const [profileDetails, setProfileDetails] = useState({});
   const [loading, setLoading] = useState(true);
-  const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
-  const [rediredurl, setRediredurl] = useState(null);
-  // Assessment Slides
-  const openAssessmentModal = () => {
-    setShowAssessmentModal(true);
-  };
 
-  const closeAssessmentModal = () => {
-    setShowAssessmentModal(false);
-  };
-  const handleBookNow = (url) => {
-    openAssessmentModal();
-
-    setRediredurl({
-      name: "Book Now",
-      url: url,
-    });
-  };
   useEffect(() => {
     // Make a GET request using Axios
     axios
@@ -167,64 +147,9 @@ export default function ExpertProfile() {
         bookingUrl={profileDetails.bookingUrl}
         price={profileDetails.price}
         packages={profileDetails.packages}
-        handleBook={handleBookNow}
       />
       <DoctorStatistics />
-
-      {/* <section className="container mx-auto gap-x-6 lg:flex">
-        <div className="mb-6 lg:mb-0 lg:w-1/2">
-          <h2 className="mb-4 text-center text-2xl font-bold lg:mb-10 lg:text-3xl">
-            Expert's Main <span className="heading-primary">Forte</span>
-          </h2>
-          <div className="flex flex-wrap justify-center gap-2 lg:gap-3">
-            {doctorsForte.map((value, index) => {
-              return (
-                <span
-                  key={index}
-                  className="rounded-xl border-2 border-primary-300 px-5 py-2.5 text-sm font-semibold lg:py-3 lg:text-base"
-                >
-                  {value}
-                </span>
-              );
-            })}
-          </div>
-        </div>
-        <div className="lg:w-1/2">
-          <h2 className="mb-4 text-center text-2xl font-bold lg:mb-10 lg:text-3xl">
-            Expert's Main <span className="heading-primary">Suggestion's</span>
-          </h2>
-          <div className="flex flex-wrap justify-center gap-2 lg:gap-3">
-            {doctorsSuggestions.map((value, index) => {
-              return (
-                <span
-                  key={index}
-                  className="rounded-xl bg-primary-300 px-5 py-2.5 text-sm font-semibold text-white lg:py-3 lg:text-base"
-                >
-                  {value}
-                </span>
-              );
-            })}
-          </div>
-        </div>
-      </section> */}
       <TabSwitcher />
-
-      {/* <h4 className="container mx-auto pb-6 pt-12 text-center text-2xl font-bold lg:text-4xl">
-        <span>Looking for different service </span>
-        <Link
-          to="/services/therapy"
-          className="heading-primary inline-block underline"
-        >
-          Click Here
-        </Link>
-      </h4> */}
-
-      {/* <HomeFaq data={faqs} /> */}
-      <Assessment
-        isAssessmentOpen={isAssessmentModalOpen}
-        onAssessmentClose={closeAssessmentModal}
-        buttons={rediredurl}
-      />
     </>
   );
 }

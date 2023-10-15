@@ -55,6 +55,7 @@ export default function DoctorSlider(props) {
     props.openAssessmentModal();
 
     props.setUrl({
+      title: "Schedule a Session",
       name: "Book Now",
       url: url,
     });

@@ -45,13 +45,7 @@ export default function TherapyHeader(props) {
             <div className="lg:text-left">
               <button
                 className="btn-one mr-2"
-                onClick={props.handleScrollToComponent}
-              >
-                Explore More
-              </button>
-              <button
                 onClick={props.openAssessmentModal}
-                className="btn-one inline-block border-2 !border-primary-400 !bg-transparent !py-2 !text-[#383838] hover:!bg-primary-400 hover:!text-white lg:!w-fit"
               >
                 Book Now
               </button>

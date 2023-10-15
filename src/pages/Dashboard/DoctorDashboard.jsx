@@ -66,6 +66,7 @@ export default function DoctorDashboard({ token, setToken }) {
         },
       });
     }, []);
+    return null;
   }
 
   if (loading) {
