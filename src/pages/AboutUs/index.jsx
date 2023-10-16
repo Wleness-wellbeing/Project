@@ -58,100 +58,35 @@ function AboutUs() {
         </div>
       </header>
 
-      <div className="container mx-auto mt-5 text-center lg:mt-7 ">
+      <section className="container mx-auto mt-5 text-center lg:mt-7 lg:py-8">
         <h2 className="subheading  font-semibold">
           <span>Unmasking the </span>
           <span className="heading-primary"> Challenges</span>
         </h2>
-      </div>
-      <div className="container mx-auto   flex flex-col-reverse lg:flex-row">
-        <div className="my-auto w-full text-left lg:order-2 lg:w-1/2 lg:text-left">
-          {/* <div>
-            <div className="flex items-start py-2">
-              <img
-                src={leaf}
-                alt="Leaf Icon"
-                className="mr-2 h-4 w-4 object-contain"
-              />
-              <p className=" font-semibold">
-                Modern life can be demanding, leading to stress, anxiety, and
-                emotional exhaustion.
-              </p>
-            </div>
+        <div className="flex flex-col-reverse lg:flex-row">
+          <div className="my-auto w-full text-left lg:order-2 lg:w-1/2 lg:text-left">
+            <p className="font-medium lg:text-lg">
+              In today's fast-paced world, the demands of modern life, coupled
+              with the pervasive influence of digital devices and social media,
+              can amplify feelings of stress, anxiety, and isolation. While
+              therapy is a potential solution, it's not always accessible due to
+              costs, societal stigmas, or geographical barriers. The digital age
+              calls for comprehensive, affordable mental health solutions that
+              transcend these limitations, yet a unified platform addressing
+              holistic wellness remains elusive, forcing individuals to search
+              across various forums.
+            </p>
+          </div>
 
-            <div className="flex items-start py-2">
-              <img
-                src={leaf}
-                alt="Leaf Icon"
-                className="mr-2 h-4 w-4 object-contain"
-              />
-              <p className="font-semibold">
-                Digital devices and social media can exacerbate feelings of
-                isolation, inadequacy, and anxiety.
-              </p>
-            </div>
-            <div className="flex items-start py-2">
-              <img
-                src={leaf}
-                alt="Leaf Icon"
-                className="mr-2 h-4 w-4 object-contain"
-              />
-              <p className="font-semibold">
-                Therapy may not be affordable or feasible for everyone, and some
-                may fear societal judgment.
-              </p>
-            </div>
-            <div className="flex items-start py-2">
-              <img
-                src={leaf}
-                alt="Leaf Icon"
-                className="mr-2 h-4 w-4 object-contain"
-              />
-              <p className="font-semibold">
-                Geographical constraints and financial limitations can hinder
-                access to mental health services.
-              </p>
-            </div>
-            <div className="flex items-start py-2">
-              <img
-                src={leaf}
-                alt="Leaf Icon"
-                className="mr-2 h-4 w-4 object-contain"
-              />
-              <p className="font-semibold">
-                In the technological era, there’s a need for simple and
-                affordable mental health solutions.
-              </p>
-            </div>
-            <div className="flex items-start py-2">
-              <img
-                src={leaf}
-                alt="Leaf Icon"
-                className="mr-2 h-4 w-4 object-contain"
-              />
-              <p className="font-semibold">
-                No platform addresses holistic wellness, one has to scout
-                different forums.{" "}
-              </p>
-            </div>
-          </div> */}
-          <p className="font-medium lg:text-lg">
-            In today's fast-paced world, the demands of modern life, coupled
-            with the pervasive influence of digital devices and social media,
-            can amplify feelings of stress, anxiety, and isolation. While
-            therapy is a potential solution, it's not always accessible due to
-            costs, societal stigmas, or geographical barriers. The digital age
-            calls for comprehensive, affordable mental health solutions that
-            transcend these limitations, yet a unified platform addressing
-            holistic wellness remains elusive, forcing individuals to search
-            across various forums.
-          </p>
+          <div className="mx-auto my-auto w-full lg:order-1 lg:w-1/2">
+            <img
+              src={problem}
+              alt="Description of the image"
+              className="mx-auto w-[400px]"
+            />
+          </div>
         </div>
-
-        <div className="mx-auto my-auto w-full lg:order-1 lg:w-1/2">
-          <img src={problem} alt="Description of the image" className="" />
-        </div>
-      </div>
+      </section>
 
       <div className="mx-auto flex flex-col-reverse justify-center border-4 border-secondary/10 md:flex-row">
         <div className="mx-auto my-auto w-full bg-secondary/10 py-8 text-center md:w-3/4">
