@@ -65,7 +65,6 @@ export default function DoctorDashboard({ token, setToken }) {
       })
       .catch((error) => {
         // Handle errors
-        // console.error("Error fetching doctor details:", error);
         if (error.response.status == 401) {
           // Logout and redirect user
           logout();

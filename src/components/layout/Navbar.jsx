@@ -9,8 +9,10 @@ import MobileNavbar from "./MobileNavbar";
 import useToken from "../../utils/useToken";
 import axios from "axios";
 import { EXPERTS_PROFILE_URI, USER_PROFILE_URI } from "../../data/api";
+import useLogout from "../Auth/useLogout";
 
 function Navbar() {
+  const { logout } = useLogout();
   const [user, setUser] = useState(null);
   const [openJoinUs, setJoinUsModal] = useState(false);
   const { token } = useToken();
@@ -45,8 +47,21 @@ function Navbar() {
             }
           })
           .catch((error) => {
-            // Handle errors
-            console.error("Error fetching doctor details:", error);
+            if (error.response.status == 401) {
+              // Logout and redirect user
+              logout();
+              useEffect(() => {
+                navigate("/login", {
+                  state: {
+                    successMessage: "Session Expired Please Login",
+                  },
+                });
+              }, []);
+              return null;
+            } else {
+              // Handle errors
+              console.error("Error fetching doctor details:", error);
+            }
           });
       }, []);
     } else {
