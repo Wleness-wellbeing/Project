@@ -15,8 +15,11 @@ export default function DoctorsCard(props) {
             <img
               src={props.data.image}
               alt=""
-              className="mb-2 block w-full rounded-2xl object-cover lg:w-40 lg:rounded-l-2xl"
+              className="mb-1 block w-full rounded-2xl object-cover lg:w-40 lg:rounded-l-2xl"
             />
+            <small className="block text-clip text-center font-quicksand font-semibold text-primary-400">
+              {props.data.certification}
+            </small>
           </Link>
         </div>
         <figcaption className="w-[65%] px-4 lg:w-3/5 3xl:px-6">
@@ -27,6 +30,7 @@ export default function DoctorsCard(props) {
             <h5 className="font-semibold text-primary-400">
               {props.data.profession}
             </h5>
+
             <h4 className="text-sm font-semibold text-slate-500 lg:text-lg">
               {props.data.experience}
             </h4>
