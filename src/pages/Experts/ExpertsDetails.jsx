@@ -45,7 +45,7 @@ export default function ExpertsDetails() {
 
       {/* Specialist Doctors */}
       <section>
-        <div className="side-spacing grid-cols-[repeat(4, minmax(280, 1fr))] container mx-auto grid items-center gap-5 p-4 sm:grid-cols-2 lg:pb-12 3xl:gap-6">
+        <div className="side-spacing grid-cols-[repeat(4, minmax(280, 1fr))] container mx-auto grid gap-5 p-4 sm:grid-cols-2 lg:pb-12 3xl:gap-6">
           {doctorDetails.map((value, i) => {
             return <DoctorsCard key={i} data={value} />;
           })}

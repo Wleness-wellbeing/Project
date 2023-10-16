@@ -8,9 +8,9 @@ export default function DoctorsCard(props) {
   const bookNow = `/experts/booking/${props.data.slug}`; // slug for booking
 
   return (
-    <figure className="rounded-2xl rounded-br-[5rem] border-2 border-primary-300 bg-white p-3 transition-all hover:shadow-lg hover:shadow-primary-50">
+    <figure className="flex flex-col justify-between rounded-2xl rounded-br-[5rem] border-2 border-primary-300 bg-white p-3 transition-all hover:shadow-lg hover:shadow-primary-50">
       <div className="mb-1 flex">
-        <div className="relative flex w-[35%] items-center justify-center lg:w-2/5">
+        <div className="relative flex w-[35%] justify-center lg:w-2/5">
           <Link to={slug}>
             <img
               src={props.data.image}
