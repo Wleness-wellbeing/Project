@@ -1,48 +1,68 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { FORGOT_PASSWORD_URI } from "../../data/api";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 const ForgotPassword = () => {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(null);
   const [resetEmailSent, setResetEmailSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState({
+    status: "",
+    message: "",
+  });
 
   const handleChange = (e) => {
     setEmail(e.target.value);
   };
 
+  const setMessage = (status, message) => {
+    setSuccessMessage({
+      status: status,
+      message: message,
+    });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(email);
-    try {
-      const response = await axios.post("/patient/forgot-password", {
-        email,
-      });
-      if (response.data.status === "ok") {
-        setResetEmailSent(true);
-      } else {
-        // Handle error, e.g., display an error message
-        console.error("Password reset email request failed.");
-      }
-    } catch (error) {
-      // Handle network error or other unexpected errors
-      console.error("An error occurred:", error);
+
+    if (email == null || email == "") {
+      setMessage("error", "Please Enter Your Email");
+      setLoading(false);
+      return null;
     }
+
+    let formData = new FormData();
+    formData.append("email", email);
+
+    axios
+      .post(FORGOT_PASSWORD_URI, formData)
+      .then((response) => {
+        if (response.status == 200) {
+          setMessage(response.data.status, response.data.message);
+          setLoading(false);
+        } else {
+          console.log(response.data);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        setLoading(false);
+      });
   };
 
   return (
-    <main
-      id="content"
-      role="main"
-      className="mx-auto my-32 w-full max-w-md p-6"
-    >
-      <div className=" mt-7 rounded-xl  bg-white shadow-[5px_5px_14px_3px] shadow-gray-300">
-        <div className="p-4 sm:p-7">
+    <div className="flex items-center justify-center md:w-1/2 md:px-4">
+      <div className="w-80 rounded-xl bg-white p-6 shadow-[5px_5px_14px_3px] shadow-gray-300 sm:w-[400px] lg:py-10">
+        <div className="p-4">
           <div className="text-center">
-            <h1 className="block text-2xl font-bold text-gray-800">
+            <h2 className="block text-2xl font-bold text-gray-800">
               Forgot password?
-            </h1>
+            </h2>
             <p className="mt-2 text-sm text-gray-600">
-              <span>Remember your password? </span>
+              <span className="font-semibold">Remember your password? </span>
               <Link
                 to="/login"
                 className="font-bold text-teal-600 decoration-2 hover:underline"
@@ -55,45 +75,48 @@ const ForgotPassword = () => {
             <form onSubmit={handleSubmit}>
               <div className="grid gap-y-4">
                 <div>
-                  <label
-                    htmlFor="email"
-                    className="mb-2 ml-1 block text-sm font-bold"
-                  >
-                    Email address
-                  </label>
-                  <div className="relative">
+                  <label htmlFor="email" className="mb-2 ml-1 block text-sm">
+                    <span className="mb-1 block font-semibold">
+                      Email address
+                    </span>
                     <input
                       type="email"
                       id="email"
                       name="email"
                       className="block w-full rounded-md border-2 border-gray-200 px-4 py-3 text-sm shadow-sm focus:border-teal-500 focus:ring-teal-500"
-                      required=""
-                      aria-describedby="email-error"
                       value={email}
                       onChange={handleChange} // Handle email input change
                     />
-                  </div>
+                  </label>
                   <p
-                    className="mt-2 hidden text-xs text-red-600"
-                    id="email-error"
+                    className={`text-center font-semibold ${
+                      successMessage.status == "success"
+                        ? " text-green-500 "
+                        : " text-red-500 "
+                    }`}
                   >
-                    Please include a valid email address so we can get back to
-                    you
+                    {successMessage.message}
                   </p>
                 </div>
                 <button
                   type="submit"
                   className="inline-flex items-center justify-center gap-2 rounded-md border border-transparent bg-teal-500 px-4 py-3 text-sm font-semibold text-white transition-all hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 "
+                  onClick={() => setLoading(true)}
                 >
-                  Reset password
+                  <FontAwesomeIcon
+                    icon={faSpinner}
+                    className={`animate-spin text-lg ${
+                      loading ? "block" : "hidden"
+                    }`}
+                  />
+                  Reset Password
                 </button>
               </div>
             </form>
           </div>
         </div>
       </div>
-      <p className="mt-3 flex items-center justify-center divide-x divide-gray-300 text-center "></p>
-    </main>
+    </div>
   );
 };
 

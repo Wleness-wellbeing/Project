@@ -58,7 +58,11 @@ export default function MusicalTherapy() {
         onAssessmentClose={closeAssessmentModal}
       />
 
-      <ActivityForm isOpen={enquiryForm} onClose={toggleForm} />
+      <ActivityForm
+        purpose={MusicalTherapyData.name}
+        isOpen={enquiryForm}
+        onClose={toggleForm}
+      />
     </>
   );
 }

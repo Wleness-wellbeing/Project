@@ -19,6 +19,17 @@ export default function Login({ setToken, token }) {
     }, []);
   }
 
+  // Handle Redirect Messsages
+  useEffect(() => {
+    const url = window.location.href;
+    const urlParams = new URLSearchParams(window.location.search);
+    const paramValue = urlParams.get("source");
+
+    if (paramValue == "passwordReset") {
+      setMessages("success", "Password reset successfully! Please Login");
+    }
+  }, []);
+
   const [formInfo, setFormData] = useState({
     username: "",
     password: "",

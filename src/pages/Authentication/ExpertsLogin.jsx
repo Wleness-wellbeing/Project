@@ -15,6 +15,16 @@ export default function ExpertsLogin({ setToken, token }) {
     }, []);
   }
 
+  // Handle Redirect Messsages
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const paramValue = urlParams.get("source");
+
+    if (paramValue == "passwordReset") {
+      setMessages("success", "Password reset successfully! Please Login");
+    }
+  }, []);
+
   const [formInfo, setFormData] = useState({
     user_id: "",
     password: "",

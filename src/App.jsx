@@ -87,6 +87,7 @@ function App() {
         element={
           <Layout>
             <ActivityLayout
+              name={value.name}
               header={value.header}
               activities={value.activities}
               blogs={value.blogs}

@@ -17,7 +17,6 @@ export default function ActivityLayout(props) {
   const handleScrollToComponent = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
-
   return (
     <>
       <ActivityHeader
@@ -41,8 +40,11 @@ export default function ActivityLayout(props) {
       {/* <FeaturesBlock data={activityFeatures} /> */}
       {/* <ActivityVideos /> */}
       {/* <ActivityBlogs blogs={props.blogs} /> */}
-
-      <ActivityForm isOpen={enquiryForm} onClose={toggleForm} />
+      <ActivityForm
+        purpose={props.name}
+        isOpen={enquiryForm}
+        onClose={toggleForm}
+      />
     </>
   );
 }

@@ -11,6 +11,7 @@ export const EXPERTS_LOGIN_URI = URI + "experts-login";
 export const GOOGLE_SIGNUP_URI = URI + "google-signup";
 export const GOOGLE_LOGIN_URI = URI + "google-signin";
 export const VERIFY_OTP = URI + "verifyOtp";
+export const FORGOT_PASSWORD_URI = URI + "forgot-password";
 
 // Leads
 export const REQUEST_CALLBACK_URI = URI + "request-callback";
@@ -30,6 +31,7 @@ export const UPDATE_SLOTS = URI + "experts/update-slots";
 // Enquiries
 export const COACH_CALLBACK_URI = URI + "coach-callback-requests";
 export const LIFE_COACHING_URI = URI + "life-coaching";
+export const GENERAL_ENQUIRY_URI = URI + "general-enquiries";
 
 // Blogs
 export const BLOGS_URI = URI + "blogs";

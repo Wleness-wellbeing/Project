@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
-import { CORPORATE_JOIN_URI } from "../../data/api";
+import { GENERAL_ENQUIRY_URI } from "../../data/api";
 
-export default function ActivityForm({ isOpen, onClose }) {
+export default function ActivityForm({ isOpen, onClose, purpose }) {
   if (!isOpen) return null;
+
   // Handle Joining Form
   const [formInfo, setFormData] = useState({
     full_name: "",
@@ -57,9 +57,10 @@ export default function ActivityForm({ isOpen, onClose }) {
       for (const key in formInfo) {
         formData.append(key, formInfo[key]);
       }
+      formData.append("purpose", purpose);
 
       try {
-        const response = await axios.post(CORPORATE_JOIN_URI, formData);
+        const response = await axios.post(GENERAL_ENQUIRY_URI, formData);
         console.log(response.data);
         setSuccessMessage({
           status: response.data.status,
