@@ -97,6 +97,7 @@ export default function CampusAmbassadorForm({ isOpen, onClose }) {
           return null;
         }
       } catch (error) {
+        updateMessage(error.data.status, error.data.message);
         console.log("Error sending data:", error);
       }
     } else {
