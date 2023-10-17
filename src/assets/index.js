@@ -51,15 +51,15 @@ import homeCommitmentIcon from "./images/home/icons/commitment-icon.png";
 import homeExperienceIcon from "./images/home/icons/experience-icon.png";
 import homeFacilitiesIcon from "./images/home/icons/facilities-icon.png";
 // Services
-import homeTherapy from "./images/home/home-service-1.png";
-import homeExecutiveCoaching from "./images/home/home-service-2.png";
-import homeCorporate from "./images/home/home-service-3.png";
-import homeLifestyleCoaching from "./images/home/home-service-4.png";
-import homeYoga from "./images/home/home-service-5.png";
-import homeMeditation from "./images/home/home-service-6.png";
-import homeMusicalTherapy from "./images/home/home-service-7.png";
-import homeInternship from "./images/home/home-service-8.png";
-import homeSelfcare from "./images/home/home-service-9.png";
+import homeTherapy from "./images/home/therapy.png";
+import homeExecutiveCoaching from "./images/home/executive.png";
+import homeCorporate from "./images/home/corporate.png";
+import homeLifestyleCoaching from "./images/home/life-coching.png";
+import homeYoga from "./images/home/yoga.png";
+import homeMeditation from "./images/home/meditation.png";
+import homeMusicalTherapy from "./images/home/music.png";
+import homeInternship from "./images/home/internship.png";
+import homeSelfcare from "./images/home/self-care.png";
 
 import mainforteRight from "./images/mainforteRight.png";
 import suggestionRight from "./images/suggestionRight.png";
