@@ -33,7 +33,7 @@ const ForgotPassword = () => {
       setLoading(false);
       return null;
     }
-
+    setLoading(true);
     let formData = new FormData();
     formData.append("email", email);
 
@@ -101,7 +101,6 @@ const ForgotPassword = () => {
                 <button
                   type="submit"
                   className="inline-flex items-center justify-center gap-2 rounded-md border border-transparent bg-teal-500 px-4 py-3 text-sm font-semibold text-white transition-all hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 "
-                  onClick={() => setLoading(true)}
                 >
                   <FontAwesomeIcon
                     icon={faSpinner}
