@@ -8,7 +8,6 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 // Data
 import { textColorize } from "../utils";
-import { doctorsDetails } from "../data/doctors";
 import axios from "axios";
 import { EXPERTS_URI } from "../data/api";
 
@@ -93,7 +92,7 @@ export default function DoctorSlider(props) {
       >
         <Swiper
           modules={[EffectCoverflow, Navigation, Autoplay]}
-          className="mySwiper h-[500px] overflow-y-visible rounded-2xl"
+          className="mySwiper h-[520px] overflow-y-visible rounded-2xl"
           navigation={true}
           effect={"coverflow"}
           grabCursor={true}
@@ -144,7 +143,10 @@ export default function DoctorSlider(props) {
                         className="box-border block w-full rounded-2xl object-cover"
                       />
                     </div>
-                    <figcaption className="doctor-slide-content py-3 text-center">
+                    <figcaption className="doctor-slide-content pb-3 pt-1 text-center">
+                      <small className="block text-clip text-center font-quicksand font-semibold text-primary-400">
+                        {value.certification}
+                      </small>
                       <p className="expert-slug hidden">{value.bookingUrl}</p>
                       <h4 className="text-lg font-semibold leading-6 lg:text-xl">
                         {value.name}

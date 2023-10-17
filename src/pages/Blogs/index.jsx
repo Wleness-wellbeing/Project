@@ -99,7 +99,7 @@ export default function Blogs() {
                         <p className="mb-2 font-semibold text-primary-300 lg:text-lg">
                           {value.category}
                         </p>
-                        <h2 className="mb-2 text-xl font-bold lg:mb-4 lg:text-4xl">
+                        <h2 className="mb-2 text-xl font-bold capitalize lg:mb-4 lg:text-4xl">
                           <Link to={slug}>{value.title}</Link>
                         </h2>
                         <p className="text-lg font-medium">

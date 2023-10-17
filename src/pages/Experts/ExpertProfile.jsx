@@ -148,8 +148,16 @@ export default function ExpertProfile() {
         price={profileDetails.price}
         packages={profileDetails.packages}
       />
-      <DoctorStatistics />
-      <TabSwitcher />
+      <DoctorStatistics
+        rating={profileDetails.rating}
+        recommend={profileDetails.recommend}
+        ongoing={profileDetails.ongoing}
+        last_booked={profileDetails.last_booked}
+      />
+      <TabSwitcher
+        fortes={profileDetails.fortes}
+        suggestions={profileDetails.suggestions}
+      />
     </>
   );
 }
