@@ -5,7 +5,7 @@ export default function ServicesCard(props) {
   return (
     <>
       <div class="rounded-2xl bg-gradient-to-br from-secondary to-tertiary p-1 transition-all lg:hover:scale-105">
-        <a href={props.data.slug}>
+        <Link to={props.data.slug}>
           <figure class="relative flex h-full flex-col justify-between rounded-xl bg-white p-3 transition-all hover:bg-yellow-primary hover:shadow-xl hover:shadow-secondary/30 lg:p-5">
             <img
               src={props.data.image}
@@ -24,7 +24,7 @@ export default function ServicesCard(props) {
               Explore More
             </button>
           </figure>
-        </a>
+        </Link>
       </div>
       {/* <div className="rounded-2xl ">
         <Link to=>
