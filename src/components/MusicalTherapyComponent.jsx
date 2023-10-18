@@ -25,13 +25,13 @@ const dummyData = [
     description:
       "It provides creative channel for the expression of emotions and facilitates the processing of trauma.",
   },
-  {
-    id: 3,
-    image: musicalHealingBenefit3,
-    heading: "Pain Management:",
-    description:
-      "Music has the ability to divert attention away from pain and discomfort, aiding in pain management.",
-  },
+  // {
+  //   id: 3,
+  //   image: musicalHealingBenefit3,
+  //   heading: "Pain Management:",
+  //   description:
+  //     "Music has the ability to divert attention away from pain and discomfort, aiding in pain management.",
+  // },
   {
     id: 4,
     image: musicalHealingBenefit4,
@@ -39,13 +39,13 @@ const dummyData = [
     description:
       "It can improve memory, attention, & cognitive skills, particularly in individuals with cognitive impairments.",
   },
-  {
-    id: 5,
-    image: musicalHealingBenefit5,
-    heading: "Mood Regulation:",
-    description:
-      "Music helps regulate mood, boosting feelings of happiness and reducing depression.",
-  },
+  // {
+  //   id: 5,
+  //   image: musicalHealingBenefit5,
+  //   heading: "Mood Regulation:",
+  //   description:
+  //     "Music helps regulate mood, boosting feelings of happiness and reducing depression.",
+  // },
   {
     id: 6,
     image: musicalHealingBenefit6,
@@ -87,7 +87,7 @@ export default function MusicalTherapyComponent() {
       <h1 className="pb-4 text-center text-3xl font-bold text-primary-500">
         Benefits of <span className="heading-primary">Music Healing</span>
       </h1>
-      <div className="container mx-auto grid grid-cols-2 justify-center gap-4 !px-2 text-center md:grid-cols-2 lg:grid-cols-4 lg:gap-6 lg:px-4">
+      <div className="container mx-auto grid grid-cols-2 justify-center gap-4 !px-2 text-center md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:px-4">
         {dummyData.map((data) => (
           <Card
             key={data.id}

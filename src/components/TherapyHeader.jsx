@@ -10,7 +10,7 @@ export default function TherapyHeader(props) {
     <>
       <header className="bg-primary-100/20 py-4 lg:py-10">
         {/* <header className="bg-gradient-to-b from-primary-50/30 to-transparent"> */}
-        <div className="container relative mx-auto flex flex-col items-center rounded-3xl py-2 lg:flex-row lg:bg-orange-50 lg:px-10 lg:py-6 xl:py-14 2xl:justify-between">
+        <div className="container relative mx-auto flex flex-col items-center rounded-3xl py-2 lg:flex-row lg:bg-yellow-primary lg:px-10 lg:py-6 xl:py-14 2xl:justify-between">
           {/* Desktop Image */}
           <Swiper
             modules={[Autoplay, EffectFade]}

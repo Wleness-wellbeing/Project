@@ -211,7 +211,7 @@ export const internshipFaqs = {
     {
       question: "How to apply for it ?",
       answer:
-        "Enumerated herewith are the sequential guidelines to be meticulously adhered to. Please diligently follow each of these steps, and we shall expeditiously make contact with you. Should any lingering uncertainties assail you, do not hesitate to reach out to us at care@wleness.com.",
+        "Enumerated herewith are the sequential guidelines to be meticulously adhered to. Please diligently follow each of these steps, and we shall expeditiously make contact with you. Should any lingering uncertainties assail you, do not hesitate to reach out to us at support@wleness.com.",
     },
     {
       question: "I am not From Psychology background. Can I do it ?",
@@ -360,24 +360,30 @@ export const lifeStyleCoachingFaqs = {
     {
       question: "Who benefits from Life Coaching?",
       answer:
-        "Life coaching benefits a diverse spectrum of individuals, including professionals seeking career growth and work-life balance, entrepreneurs aiming to enhance their businesses.",
+        "Life coaching benefits a diverse spectrum of individuals, including professionals seeking career growth and work-life balance, entrepreneurs aiming to enhance their businesses, students navigating academics and career choices, people in life transitions, creatives overcoming creative blocks, personal development enthusiasts, those focusing on health and wellness, couples and families working on relationships, retirees exploring new interests, and anyone facing personal challenges such as stress, anxiety, or low self-esteem. It offers tailored support and guidance to help individuals achieve their unique goals, whether in their careers, personal lives, or overall well-being.",
     },
     {
       question: "What goals can coaching help me with?",
       answer:
-        "Life coaching benefits a diverse spectrum of individuals, including professionals seeking career growth and work-life balance, entrepreneurs aiming to enhance their businesses.",
+        "Coaching can assist you in achieving a wide range of goals, from career advancement and stress management to improved relationships and personal growth. Whether you aspire to boost your confidence, set and achieve specific objectives, navigate life transitions, enhance leadership skills, overcome obstacles like procrastination, or make healthier lifestyle choices, coaching provides personalized guidance and strategies to help you realize your aspirations and lead a more fulfilling life.",
     },
     {
       question:
-        "Can I continue coaching to work on new objectives after achieving my initial goals?",
+        "How do I know if I am ready for life coaching, and what should I expect from the process?",
       answer:
-        "Life coaching benefits a diverse spectrum of individuals, including professionals seeking career growth and work-life balance, entrepreneurs aiming to enhance their businesses.",
+        "You'll know you're ready for life coaching when you're eager to make positive changes in your life and open to guidance. Expect a collaborative journey with a trained coach who will help you set and achieve your goals, gain clarity on what you want, and develop strategies to overcome obstacles. Regular sessions will allow you to gain insights, build confidence, and experience personal growth. Life coaching is about empowerment and can benefit anyone seeking to improve their life, whether in career, relationships, or overall well-being.",
     },
     {
       question:
-        "How do I know if I am ready for life coaching,  what should I expect from the process?",
+        "After Achieving My Initial Goals, can I continue coaching to work on new objectives?",
       answer:
-        "Life coaching benefits a diverse spectrum of individuals, including professionals seeking career growth and work-life balance, entrepreneurs aiming to enhance their businesses.",
+        "You can continue coaching after reaching your initial goals. Life coaching is flexible and adaptable, allowing you to set new objectives and work on evolving areas of your life. Your coach will support you in identifying fresh aspirations, refining your strategies, and maintaining momentum on your growth journey. Whether striving for continuous improvement, facing new challenges, or simply seeking guidance in different areas, life coaching remains valuable to help you achieve ongoing success and fulfillment.",
+    },
+    {
+      question:
+        "What is your approach to handling client feedback or concerns?",
+      answer:
+        "At Wleness, we value client feedback and concerns as essential to our commitment to your progress. We encourage open communication and provide a safe space to share your thoughts. Our dedicated coaches listen attentively, address your feedback constructively, and adapt our approach to ensure your coaching experience is positive and productive. Your satisfaction and progress are our top priorities, and we are dedicated to working collaboratively to resolve any concerns or challenges that may arise during your coaching journey.",
     },
   ],
 };

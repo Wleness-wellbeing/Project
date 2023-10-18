@@ -2,7 +2,7 @@ import React from "react";
 
 export default function SubpagesConclusion(props) {
   const imageAlignmentClass =
-    props.data.position === "left" ? "lg:w-1/2" : "order-2 lg:w-1/2";
+    props.data.position === "left" ? "lg:w-1/2" : "lg:w-1/2";
 
   return (
     <section className="container mx-auto py-8 lg:flex">
@@ -13,11 +13,7 @@ export default function SubpagesConclusion(props) {
           className="mx-auto w-80"
         />
       </div>
-      <div
-        className={`lg:w-1/2 ${
-          props.data.position === "left" ? "" : "order-1"
-        }`}
-      >
+      <div className={`lg:w-1/2 ${props.data.position === "left" ? "" : ""}`}>
         <h2 className="mb-4 text-2xl font-bold text-primary-500">
           {props.data.title}
         </h2>

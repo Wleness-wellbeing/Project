@@ -59,12 +59,12 @@ function AboutUs() {
       </header>
 
       <section className="container mx-auto mt-5 text-center lg:mt-7 lg:py-8">
-        <h2 className="subheading  font-semibold">
-          <span>Unmasking the </span>
-          <span className="heading-primary"> Challenges</span>
-        </h2>
         <div className="flex flex-col-reverse lg:flex-row">
           <div className="my-auto w-full text-left lg:order-2 lg:w-1/2 lg:text-left">
+            <h2 className="subheading mb-2 font-semibold">
+              <span>Unmasking the </span>
+              <span className="heading-primary"> Challenges</span>
+            </h2>
             <p className="font-medium lg:text-lg">
               In today's fast-paced world, the demands of modern life, coupled
               with the pervasive influence of digital devices and social media,
@@ -82,7 +82,7 @@ function AboutUs() {
             <img
               src={problem}
               alt="Description of the image"
-              className="mx-auto w-[400px]"
+              className="mx-auto w-[480px]"
             />
           </div>
         </div>

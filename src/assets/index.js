@@ -51,15 +51,15 @@ import homeCommitmentIcon from "./images/home/icons/commitment-icon.png";
 import homeExperienceIcon from "./images/home/icons/experience-icon.png";
 import homeFacilitiesIcon from "./images/home/icons/facilities-icon.png";
 // Services
-import homeTherapy from "./images/home/therapy.png";
-import homeExecutiveCoaching from "./images/home/executive.png";
-import homeCorporate from "./images/home/corporate.png";
-import homeLifestyleCoaching from "./images/home/life-coching.png";
-import homeYoga from "./images/home/yoga.png";
-import homeMeditation from "./images/home/meditation.png";
-import homeMusicalTherapy from "./images/home/music.png";
-import homeInternship from "./images/home/internship.png";
-import homeSelfcare from "./images/home/self-care.png";
+import homeTherapy from "./images/home/icons/home-service-1.png";
+import homeExecutiveCoaching from "./images/home/icons/home-service-3.png";
+import homeCorporate from "./images/home/icons/home-service-4.png";
+import homeLifestyleCoaching from "./images/home/icons/home-service-5.png";
+import homeYoga from "./images/home/icons/home-service-7.png";
+import homeMeditation from "./images/home/icons/home-service-9.png";
+import homeMusicalTherapy from "./images/home/icons/home-service-2.png";
+import homeInternship from "./images/home/icons/home-service-6.png";
+import homeSelfcare from "./images/home/icons/home-service-9.png";
 
 import mainforteRight from "./images/mainforteRight.png";
 import suggestionRight from "./images/suggestionRight.png";
@@ -852,6 +852,7 @@ import happyClient4 from "./images/clients/happy-client-4.png";
 import therapyClient1 from "./images/clients/therapy-review-1.png";
 import therapyClient2 from "./images/clients/therapy-review-2.png";
 import therapyClient3 from "./images/clients/therapy-review-3.png";
+import therapyClient4 from "./images/clients/therapy-review-4.png";
 import coupleTherapyReview1 from "./images/clients/couple-therapy-review-1.jpg";
 import coupleTherapyReview2 from "./images/clients/couple-therapy-review-2.jpg";
 import coupleTherapyReview3 from "./images/clients/couple-therapy-review-3.jpg";
@@ -864,6 +865,7 @@ export {
   therapyClient1,
   therapyClient2,
   therapyClient3,
+  therapyClient4,
   coupleTherapyReview1,
   coupleTherapyReview2,
   coupleTherapyReview3,

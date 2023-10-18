@@ -47,7 +47,7 @@ const doctors = {
     },
     {
       color: true,
-      text: " Specialists",
+      text: " Soul Healers",
     },
   ],
   desc: "",
@@ -700,7 +700,7 @@ export const wlenessApproach = [
   {
     title: "Consult a Psychiatrist",
     image: wlenessApproachIcon3,
-    slug: "/experts/all",
+    slug: "",
   },
   {
     title: "Join the community",

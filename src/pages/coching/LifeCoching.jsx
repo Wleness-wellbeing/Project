@@ -69,7 +69,7 @@ export default function LifeCoching() {
 
             <div className="mt-6">
               <button onClick={toggleForm} className="btn-one">
-                Book Us Now
+                Enquire Now
               </button>
             </div>
           </div>

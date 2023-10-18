@@ -9,6 +9,7 @@ import {
   therapyClient1,
   therapyClient2,
   therapyClient3,
+  therapyClient4,
 } from "../assets";
 
 export const clientsReviews = [
@@ -60,7 +61,7 @@ export const userReview = [
   {
     name: "Niraj Chopra",
     profession: "Android Developer",
-    image: therapyClient3,
+    image: therapyClient4,
     review:
       "It was an unforgettable journey of healing, self-discovery, and personal growth. I wholeheartedly recommend anyone seeking solace, understanding, and emotional balance to explore the wonders of musical therapy. It is an experience that words alone cannot do justice.",
   },
@@ -164,7 +165,7 @@ export const musicalTherapyClient = {
     {
       name: "Niraj Chopra",
       profession: "Android Developer",
-      image: therapyClient3,
+      image: therapyClient4,
       review:
         "Wleness has been a haven for my soul. Their musical healing sessions have been truly life-changing. The skilled practitioners there create an incredibly peaceful atmosphere using the magic of sound and music. Thanks to these sessions, I've found relief from stress, anxiety, and insomnia. Now, Wleness is a crucial part of my self-care routine.",
     },
@@ -211,7 +212,7 @@ export const therapyClient = {
     {
       name: "Niraj Chopra",
       profession: "Android Developer",
-      image: therapyClient3,
+      image: therapyClient4,
       review:
         "Wleness is a place of true transformation. I've been attending therapy sessions here for quite some time, and it's been an incredible journey. My compassionate and skilled therapist creates a safe and welcoming space for me to explore my thoughts and feelings. Their guidance has helped me navigate challenges, manage anxiety, and build resilience.",
     },
@@ -268,7 +269,7 @@ export const internshipClients = {
     {
       name: "Niraj Chopra",
       profession: "Fitness Trainer",
-      image: therapyClient3,
+      image: therapyClient4,
       review:
         "Wleness is a fantastic platform for young therapists like me to kick-start their careers. The thoughtfully structured internship program provides a perfect blend of mentorship and hands-on experience. I've had the privilege of interning here as a budding psychotherapist, and the guidance I've received has been invaluable. The support and insights from experienced practitioners have significantly boosted my confidence.",
     },

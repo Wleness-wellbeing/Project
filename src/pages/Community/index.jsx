@@ -1,10 +1,6 @@
 import React from "react";
 import {
   bgDotsPattern,
-  community1,
-  community2,
-  community3,
-  community4,
   communityHeader,
   communitySupport1,
   communitySupport2,
@@ -67,7 +63,11 @@ export default function index() {
               Let's come together and build a supportive community where we
               share, grow, and heal as one.
             </p>
-            <Link to="/community/chat" className="btn-one">
+            <Link
+              to="https://community.wleness.com/"
+              target="_blank"
+              className="btn-one"
+            >
               Participate Now
             </Link>
           </div>
@@ -133,7 +133,11 @@ export default function index() {
         </div>
 
         <div className="pb-8 text-center">
-          <Link to="/community/chat" className="btn-one mx-auto block">
+          <Link
+            to="https://community.wleness.com/"
+            target="_blank"
+            className="btn-one mx-auto block"
+          >
             Participate Now
           </Link>
         </div>

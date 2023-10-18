@@ -7,6 +7,7 @@ export const SIGNUP_USER_URI = URI + "signup";
 export const LOGIN_USER_URI = URI + "login";
 export const LOGOUT_USER_URI = URI + "logout";
 export const USER_PROFILE_URI = URI + "profile";
+export const USER_PROFILE_UPDATE_URI = URI + "profile/update";
 export const EXPERTS_LOGIN_URI = URI + "experts-login";
 export const GOOGLE_SIGNUP_URI = URI + "google-signup";
 export const GOOGLE_LOGIN_URI = URI + "google-signin";

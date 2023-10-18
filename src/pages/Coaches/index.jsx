@@ -23,6 +23,8 @@ import {
 } from "../../data/executiveCoaching";
 import { Link } from "react-router-dom";
 import CoachRequestForm from "../../components/Forms/CoachRequestForm";
+import ActivityForm from "../../components/Forms/ActivityForm";
+import useEnquiryForm from "../../hooks/useEnquiryForm";
 
 const executiveCoaches = [
   {
@@ -53,6 +55,7 @@ const transformalSuccess = [
 ];
 
 export default function ExecutiveCoaching() {
+  const { enquiryForm, toggleForm } = useEnquiryForm();
   const [openFAQ, setOpenFAQ] = useState(0);
   const [activeService, setActiveService] = useState(0);
   const [activeIndividualService, setIndividualService] = useState(0);
@@ -111,6 +114,10 @@ export default function ExecutiveCoaching() {
                 know the corporate world craves adaptable trailblazers.
               </li>
             </ul>
+
+            <button className="btn-one" onClick={toggleForm}>
+              Enquire Now
+            </button>
           </div>
         </div>
       </header>
@@ -404,6 +411,12 @@ export default function ExecutiveCoaching() {
       </section>
 
       <CoachRequestForm name="General" />
+
+      <ActivityForm
+        purpose="Executive Coaching"
+        isOpen={enquiryForm}
+        onClose={toggleForm}
+      />
     </>
   );
 }

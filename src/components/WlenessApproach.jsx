@@ -13,17 +13,17 @@ export default function WlenessApproach({ issue, desc }) {
         </h2>
         <p className="text-xl font-medium">{desc}</p>
 
-        <div className="bg-yellow-primary my-6 grid grid-cols-3 gap-6 rounded-xl p-2 lg:my-10 lg:grid-cols-3 lg:gap-6 lg:p-4">
+        <div className="my-6 grid grid-cols-3 gap-6 rounded-xl bg-yellow-primary p-2 lg:my-10 lg:grid-cols-3 lg:gap-6 lg:p-4">
           {wlenessApproach.map((value, i) => {
             return <ApproachCard key={i} data={value} />;
           })}
         </div>
 
-        <div className="text-center">
+        {/* <div className="text-center">
           <Link to="/experts/all" className="btn-one mx-auto block w-fit">
             Start the treatment
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

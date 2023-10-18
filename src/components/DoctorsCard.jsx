@@ -37,10 +37,14 @@ export default function DoctorsCard(props) {
           </hgroup>
           <div className="text-xs font-medium lg:my-3 lg:text-base">
             <p className="leading-5 text-slate-600 lg:mb-2">
-              Expertise: {props.data.expertise}
+              <span className="font-semibold text-primary-400">
+                Expertise:{" "}
+              </span>
+              {props.data.expertise}
             </p>
             <p className="leading-5 text-slate-600">
-              Speaks: {props.data.languages}
+              <span className="font-semibold text-primary-400">Speaks: </span>
+              {props.data.languages}
             </p>
             <h5 className="my-1 text-sm font-semibold text-primary-400 lg:text-lg">
               Session Starts

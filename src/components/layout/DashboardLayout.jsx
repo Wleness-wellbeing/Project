@@ -7,7 +7,7 @@ import { assessment1 } from "../../assets";
 export default function DashboardLayout({ children }) {
   const [openMenu, setOpenMenu] = useState(false);
 
-  const username = localStorage.getItem("username");
+  const username = JSON.parse(localStorage.getItem("userInfo"));
   const toggleMenu = () => {
     setOpenMenu(!openMenu);
   };
@@ -26,8 +26,14 @@ export default function DashboardLayout({ children }) {
               />
             </span>
             <span className="flex cursor-pointer items-center rounded-xl border-2 px-2 py-1 transition-all hover:bg-slate-100">
-              <img src={assessment1} alt="" className="mr-2 w-8" />
-              <span className="text-sm font-bold">{username}</span>
+              <img
+                src={username ? username.image : "User"}
+                alt=""
+                className="mr-2 w-8"
+              />
+              <span className="text-sm font-bold">
+                {username ? username.name : "User"}
+              </span>
             </span>
           </div>
 
