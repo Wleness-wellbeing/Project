@@ -14,7 +14,7 @@ import { whyToApplyCampus } from "../data/whyWleness";
 
 const roles = [
   [roleSMM, "Social Media & Public Marketing"],
-  [roleSpreadAwareness, "Spread Awareness About Wlness"],
+  [roleSpreadAwareness, "Spread Awareness About Wleness"],
   [roleCampus, "Develop an ecosystem around the campus"],
   [roleProgram, "Suggest ways to make better program"],
 ];

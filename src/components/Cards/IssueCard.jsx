@@ -4,25 +4,25 @@ import { Link } from "react-router-dom";
 export default function IssueCard(props) {
   return (
     <div
-      className="mx-auto w-full rounded-2xl rounded-br-[4rem] bg-gradient-to-br from-secondary to-tertiary p-1 lg:w-full"
+      className="mx-auto w-full p-2 pt-24 lg:w-full"
       title={props.data.title}
     >
-      <div className="flex h-full flex-col items-center justify-center rounded-xl rounded-br-[3.8rem] bg-yellow-primary py-4 md:py-6">
-        {/* <div className="flex h-full flex-col items-center justify-center rounded-2xl rounded-br-[3rem] bg-green-50 py-4 md:py-6"> */}
+      <div className="flex h-full flex-col items-center justify-center bg-primary-50 py-4 md:py-6">
         <Link to={props.data.slug}>
-          <h3 className="mb-4 text-center font-bold lg:text-2xl">
-            {props.data.name}
-          </h3>
           <img
             loading="lazy"
             src={props.data.image}
             alt="Avatar"
-            className="mx-auto mb-2 block h-20 w-20 object-contain md:h-24 md:w-24 lg:h-40 lg:w-40 3xl:h-36 3xl:w-36"
+            className="mx-auto mb-2 block h-28 object-contain md:h-32 md:w-44 lg:h-20 lg:w-44 3xl:h-32 3xl:w-44"
+            style={{ marginTop: "-50%", backgroundSize: "50%" }}
           />
-        </Link>
 
+          <h3 className="mb-4 py-2 text-center  font-bold md:py-4 lg:text-2xl">
+            {props.data.name}
+          </h3>
+        </Link>
         <button
-          className="btn-one bg-gradient-to-r from-secondary to-tertiary !text-sm !font-bold transition-colors hover:bg-gradient-to-br hover:from-tertiary hover:to-secondary hover:shadow-md"
+          className="btn-one bg-teal-600 !text-sm !font-bold transition-colors hover:bg-teal-500 hover:bg-gradient-to-br hover:shadow-md"
           onClick={props.openAssessmentModal}
         >
           Book Now
@@ -31,3 +31,22 @@ export default function IssueCard(props) {
     </div>
   );
 }
+
+{
+  /* <div className="rounded-2xl ">
+<Link to={props.data.slug}>
+  <img src={props.data.image} className="" />
+  {/* <figcaption className="pb-2 pt-8 lg:pb-5 lg:pt-10">
+      <h2 className="mb-2 text-center text-sm font-semibold lg:text-lg xl:text-xl">
+        {props.data.title}
+      </h2>
+      <p className="text-center text-xs font-semibold text-slate-600 lg:text-base">
+        {props.data.desc}
+      </p>
+    </figcaption>
+    <button className="mx-auto block w-fit rounded-full bg-gradient-to-tr from-secondary to-tertiary px-5 py-2.5 text-xs font-semibold text-white transition-all hover:shadow-lg lg:text-base">
+      Explore More
+    </button> */
+}
+// </Link>
+// </div> */}
