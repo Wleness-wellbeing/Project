@@ -25,11 +25,26 @@ import { homePageDoctors } from "../../data/doctors";
 import DoctorSlider from "../../components/DoctorSlider";
 
 const featuredIn = [
-  featuredIn1,
-  featuredIn2,
-  featuredIn3,
-  featuredIn4,
-  featuredIn5,
+  [
+    featuredIn1,
+    "https://www.business-standard.com/content/press-releases-ani/discover-a-new-era-of-wellness-with-wleness-unveiling-innovative-solutions-for-your-health-and-happiness-123101600467_1.html",
+  ],
+  [
+    featuredIn2,
+    "https://republicnewsindia.com/discover-a-new-era-of-wellness-with-wleness-unveiling-innovative-solutions-for-your-health-and-happiness/",
+  ],
+  [
+    featuredIn3,
+    "https://aninews.in/news/business/business/discover-a-new-era-of-wellness-with-wleness-unveiling-innovative-solutions-for-your-health-and-happiness20231016140849/",
+  ],
+  [
+    featuredIn4,
+    "https://m.dailyhunt.in/news/india/english/lokmattimes+english-epaper-lokmaten/discover+a+new+era+of+wellness+with+wleness+unveiling+innovative+solutions+for+your+health+and+happiness-newsid-n547715388?sm=Y",
+  ],
+  [
+    featuredIn5,
+    "https://jionews.com/home/article/5/1087191419/Discover-a-New-Era-of-Wellness-with-WLENESS-Unveiling-Innovative-Solutions-for-Your-Health-and-Happiness",
+  ],
 ];
 
 export default function Home() {
@@ -238,21 +253,26 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mb-4 bg-primary-10 py-8 lg:mb-8">
+      <section className="mb-4 bg-yellow-primary py-6 lg:mb-8 lg:py-10">
         <div className="container mx-auto">
-          <h2 className="mb-4 text-center">
+          <h2 className="mb-5 text-center">
             <span className="subheading heading-primary">Featured In</span>
           </h2>
-
-          <div className="grid grid-cols-2 items-center justify-center gap-4 md:grid-cols-5">
+          <div className="grid grid-cols-2 items-center justify-center gap-4 md:grid-cols-5 lg:pb-3">
             {featuredIn.map((value, i) => {
               return (
-                <img
-                  src={value}
-                  key={i}
-                  alt="featured in"
-                  className="w-42 h-12 place-self-center object-contain"
-                />
+                <Link
+                  to={value[1]}
+                  className="place-self-center"
+                  target="_blank"
+                >
+                  <img
+                    src={value[0]}
+                    key={i}
+                    alt="featured in"
+                    className="w-42 h-12 object-contain"
+                  />
+                </Link>
               );
             })}
           </div>
