@@ -67,6 +67,8 @@ import ApplyForm from "./components/JoinUs/ApplyForm";
 import TabSwitcher from "./components/SwitchTab";
 import ExpertsLogin from "./pages/Authentication/ExpertsLogin";
 import ForgotPassword from "./pages/Authentication/Forget";
+import Dashboardnew from "./components/layout/Dashboardnew";
+import UserProfile from "./components/layout/UserProfile";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -134,6 +136,14 @@ function App() {
           element={
             <Layout>
               <AboutUs />
+            </Layout>
+          }
+        />
+        <Route
+          path="/dashboardnew"
+          element={
+            <Layout>
+              <Dashboardnew />
             </Layout>
           }
         />
@@ -429,21 +439,23 @@ function App() {
             </SignupLayout>
           }
         />
-        <Route
-          path="/user/dashboard"
-          element={
-            <DashboardLayout>
-              <Profile token={token} />
-              {/* <UserDashboard token={token} setToken={setToken} /> */}
-            </DashboardLayout>
-          }
-        />
+        <Route path="dashboard" element={<Dashboardnew />} />
+        <Route path="userProfile" element={<UserProfile />} />
 
         <Route
           path="/user/profile"
           element={
             <DashboardLayout>
               <Profile token={token} />
+            </DashboardLayout>
+          }
+        />
+        <Route
+          path="/user/dashboard"
+          element={
+            <DashboardLayout>
+              <Profile token={token} />
+              <UserDashboard token={token} setToken={setToken} />
             </DashboardLayout>
           }
         />
