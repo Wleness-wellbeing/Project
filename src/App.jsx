@@ -69,6 +69,7 @@ import ExpertsLogin from "./pages/Authentication/ExpertsLogin";
 import ForgotPassword from "./pages/Authentication/Forget";
 import Dashboardnew from "./components/layout/Dashboardnew";
 import UserProfile from "./components/layout/UserProfile";
+import Error404 from "./components/Error404";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -441,6 +442,7 @@ function App() {
         />
         <Route path="dashboard" element={<Dashboardnew />} />
         <Route path="userProfile" element={<UserProfile />} />
+        <Route path="*" element={<Error404 />} />
 
         <Route
           path="/user/profile"

@@ -27,50 +27,7 @@ export default function Dashboardnew() {
   const [editingGoal, setEditingGoal] = useState(null);
   const [selectedMood, setSelectedMood] = useState("Happy");
 
-  useEffect(() => {
-    // Load data from local storage when the component mounts
-    const storedThoughts = localStorage.getItem("thoughts");
-    if (storedThoughts) {
-      setThoughts(JSON.parse(storedThoughts));
-    }
-
-    const storedTodos = localStorage.getItem("todos");
-    if (storedTodos) {
-      setTodos(JSON.parse(storedTodos));
-    }
-
-    const storedGoals = localStorage.getItem("goals");
-    if (storedGoals) {
-      setGoals(JSON.parse(storedGoals));
-    }
-
-    const storedSelectedMood = localStorage.getItem("selectedMood");
-    if (storedSelectedMood) {
-      setSelectedMood(storedSelectedMood);
-    }
-
-    // Initialize selected day and current date as before
-    const daysOfWeek = [
-      "sunday",
-      "monday",
-      "tuesday",
-      "wednesday",
-      "thursday",
-      "friday",
-      "saturday",
-    ];
-    const currentDay = daysOfWeek[new Date().getDay()];
-    setSelectedDay(currentDay);
-
-    const today = new Date();
-    const options = {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    };
-    setCurrentDate(today.toLocaleDateString(undefined, options));
-  }, []);
+  console.log(thoughts, newThought, todos, selectedDay, goals);
 
   // Function to add a new todo task
   const addTodo = () => {
@@ -169,6 +126,51 @@ export default function Dashboardnew() {
   useEffect(() => {
     localStorage.setItem("selectedMood", selectedMood);
   }, [selectedMood]);
+
+  useEffect(() => {
+    // Load data from local storage when the component mounts
+    const storedThoughts = localStorage.getItem("thoughts");
+    if (storedThoughts) {
+      setThoughts(JSON.parse(storedThoughts));
+    }
+
+    const storedTodos = localStorage.getItem("todos");
+    if (storedTodos) {
+      setTodos(JSON.parse(storedTodos));
+    }
+
+    const storedGoals = localStorage.getItem("goals");
+    if (storedGoals) {
+      setGoals(JSON.parse(storedGoals));
+    }
+
+    const storedSelectedMood = localStorage.getItem("selectedMood");
+    if (storedSelectedMood) {
+      setSelectedMood(storedSelectedMood);
+    }
+
+    // Initialize selected day and current date as before
+    const daysOfWeek = [
+      "sunday",
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+    ];
+    const currentDay = daysOfWeek[new Date().getDay()];
+    setSelectedDay(currentDay);
+
+    const today = new Date();
+    const options = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    };
+    setCurrentDate(today.toLocaleDateString(undefined, options));
+  }, []);
 
   return (
     <div className="grid-cols-1 md:flex">
@@ -417,7 +419,7 @@ export default function Dashboardnew() {
             <h2 className="py-4 text-2xl font-bold md:py-4">Your Progress:</h2>
             <div className="rounded-lg bg-teal-100 p-2 text-end">
               <div className=" flex">
-                <div className="ml-3 flex items-center md:ml-12">
+                <div className="ml-3 flex items-center  md:ml-7">
                   {/* {selectedDay === "sunday" ? ( */}
                   <img
                     src={Sunflower}
@@ -473,7 +475,7 @@ export default function Dashboardnew() {
             <div className=" rounded-lg  bg-teal-100  py-3 text-end md:py-5">
               {/* <h3 className="font-semibold text-gray-">Oct 19 - Oct 25</h3> */}
               <div className="flex items-center justify-center text-center">
-                <div className=" border-r border-gray-500 pr-4">
+                <div className=" border-r border-slate-300 pr-4">
                   <div className="flex">
                     <div>
                       <img src={Spark} className="h-10 w-10" />
