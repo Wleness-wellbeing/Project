@@ -67,9 +67,9 @@ import ApplyForm from "./components/JoinUs/ApplyForm";
 import TabSwitcher from "./components/SwitchTab";
 import ExpertsLogin from "./pages/Authentication/ExpertsLogin";
 import ForgotPassword from "./pages/Authentication/Forget";
-import Dashboardnew from "./components/layout/Dashboardnew";
-import UserProfile from "./components/layout/UserProfile";
+import UserProfile from "./pages/Dashboard/UserProfile";
 import Error404 from "./components/Error404";
+import UserDashboardLayout from "./components/layout/UserDashboardLayout";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -137,14 +137,6 @@ function App() {
           element={
             <Layout>
               <AboutUs />
-            </Layout>
-          }
-        />
-        <Route
-          path="/dashboardnew"
-          element={
-            <Layout>
-              <Dashboardnew />
             </Layout>
           }
         />
@@ -440,27 +432,32 @@ function App() {
             </SignupLayout>
           }
         />
-        <Route path="dashboard" element={<Dashboardnew />} />
-        <Route path="userProfile" element={<UserProfile />} />
+        <Route
+          path="/user/profile"
+          element={
+            <UserDashboardLayout token={token}>
+              <UserProfile token={token} />
+            </UserDashboardLayout>
+          }
+        />
+        <Route
+          path="/user/dashboard"
+          element={
+            <UserDashboardLayout token={token}>
+              <UserDashboard />
+            </UserDashboardLayout>
+          }
+        />
         <Route path="*" element={<Error404 />} />
 
-        <Route
+        {/* <Route
           path="/user/profile"
           element={
             <DashboardLayout>
               <Profile token={token} />
             </DashboardLayout>
           }
-        />
-        <Route
-          path="/user/dashboard"
-          element={
-            <DashboardLayout>
-              <Profile token={token} />
-              <UserDashboard token={token} setToken={setToken} />
-            </DashboardLayout>
-          }
-        />
+        /> */}
         <Route
           path="/community/chat"
           element={

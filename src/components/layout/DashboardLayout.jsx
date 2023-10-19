@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import AdminSideBar from "../admin/AdminSideBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faSearch } from "@fortawesome/free-solid-svg-icons";
-import { assessment1 } from "../../assets";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function DashboardLayout({ children }) {
   const [openMenu, setOpenMenu] = useState(false);
