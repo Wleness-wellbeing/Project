@@ -15,7 +15,7 @@ export default function BlogCard(props) {
       </Link>
       <figcaption className="flex h-full flex-col items-start justify-between">
         <div>
-          <h5 className="my-2 text-lg font-bold capitalize tracking-wider text-black">
+          <h5 className="my-2 text-lg font-bold capitalize text-black">
             <Link to={slug}>{props.data.title}</Link>
           </h5>
           <p className="text-lg font-medium">

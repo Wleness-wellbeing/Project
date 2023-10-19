@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // Data
-import { community, doodle2, designRing } from "../../assets";
+import {
+  community,
+  doodle2,
+  designRing,
+  featuredIn1,
+  featuredIn2,
+  featuredIn3,
+  featuredIn4,
+  featuredIn5,
+} from "../../assets";
 import { homeFaqs } from "../../data/faqs";
 import { homeTestimonials } from "../../data/testimonials";
 import { homeServices, objectives, statistics, whyChooseUs } from "../../data";
@@ -14,6 +23,14 @@ import HomeFaq from "../../components/Faq/HomeFaq";
 import ServicesCard from "../../components/Cards/ServicesCard";
 import { homePageDoctors } from "../../data/doctors";
 import DoctorSlider from "../../components/DoctorSlider";
+
+const featuredIn = [
+  featuredIn1,
+  featuredIn2,
+  featuredIn3,
+  featuredIn4,
+  featuredIn5,
+];
 
 export default function Home() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
@@ -221,9 +238,30 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="mb-4 bg-primary-10 py-8 lg:mb-8">
+        <div className="container mx-auto">
+          <h2 className="mb-4 text-center">
+            <span className="subheading heading-primary">Featured In</span>
+          </h2>
+
+          <div className="grid grid-cols-2 items-center justify-center gap-4 md:grid-cols-5">
+            {featuredIn.map((value, i) => {
+              return (
+                <img
+                  src={value}
+                  key={i}
+                  alt="featured in"
+                  className="w-42 h-12 place-self-center object-contain"
+                />
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
       {/* ========== Our Testimonial ========== */}
       <section>
-        <h2 className="mb-4 text-center">
+        <h2 className="mb-4 py-4 text-center">
           <span className="subheading heading-primary">Our Testimonials</span>
         </h2>
         <div className="bg-gradient-to-b from-primary-300/20 to-white py-4">

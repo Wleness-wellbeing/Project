@@ -50,6 +50,11 @@ import servicesIcon6 from "./images/home/icons/services-icon-6.png";
 import homeCommitmentIcon from "./images/home/icons/commitment-icon.png";
 import homeExperienceIcon from "./images/home/icons/experience-icon.png";
 import homeFacilitiesIcon from "./images/home/icons/facilities-icon.png";
+import featuredIn1 from "./images/home/icons/featured-in-1.png";
+import featuredIn2 from "./images/home/icons/featured-in-2.png";
+import featuredIn3 from "./images/home/icons/featured-in-3.png";
+import featuredIn4 from "./images/home/icons/featured-in-4.png";
+import featuredIn5 from "./images/home/icons/featured-in-5.png";
 // Services
 import homeTherapy from "./images/home/icons/home-service-1.png";
 import homeExecutiveCoaching from "./images/home/icons/home-service-3.png";
@@ -60,7 +65,6 @@ import homeMeditation from "./images/home/icons/home-service-9.png";
 import homeMusicalTherapy from "./images/home/icons/home-service-2.png";
 import homeInternship from "./images/home/icons/home-service-6.png";
 import homeSelfcare from "./images/home/icons/home-service-9.png";
-
 import mainforteRight from "./images/mainforteRight.png";
 import suggestionRight from "./images/suggestionRight.png";
 
@@ -109,6 +113,11 @@ export {
   homeDepression,
   homeHyperTension,
   homeStress,
+  featuredIn1,
+  featuredIn2,
+  featuredIn3,
+  featuredIn4,
+  featuredIn5,
   servicesIcon1,
   servicesIcon2,
   servicesIcon3,

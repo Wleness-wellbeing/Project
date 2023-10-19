@@ -3280,22 +3280,22 @@ export const brainExercise = {
         class: ["order-1", "order-2"],
       },
       {
-        title: "Galaxy - The Space Adventure",
+        title: "Gold Chest Gambit",
 
         buttonLink:
           "https://zv1y2i8p.play.gamezop.com/g/B1MXhUFQke?_gl=1*bzevu1*_ga*MTgwMjE2MTc3Ny4xNjk2NTA4MTI5*_ga_2MDW41Z2GK*MTY5NjUwODEyOS4xLjEuMTY5NjUwODM4MS41Mi4wLjA.",
         thumbnail: brainGameGalaxy,
-        desc: "Embark on an interstellar journey beyond the boundaries of the known universe in Galactic Odyssey, an epic space adventure game that will take you to the stars and beyond. Strap into your advanced spaceship and prepare for an unforgettable voyage through dazzling galaxies, treacherous asteroid fields, and enigmatic wormholes.",
+        desc: "In 'Gold Chest Gambit,' your smarts are your superpower. Your mission? Guide gold chests towards you using clever thinking. Solve tricky puzzles and plan your moves wisely as you unlock each chest. The more you progress, the tougher it gets. Are you up for the ultimate brain-teasing treasure hunt? Put your skills to the test and see if you can outsmart the challenges to claim the gold!",
         slug: "/",
         class: ["order-2", "order-1"],
       },
       {
-        title: "Treasure Chest",
+        title: "The XO Rumble",
         buttonLink:
           "https://zv1y2i8p.play.gamezop.com/g/H1WmafkP9JQ?_gl=1*hxc13t*_ga*MTgwMjE2MTc3Ny4xNjk2NTA4MTI5*_ga_2MDW41Z2GK*MTY5NjUwODEyOS4xLjEuMTY5NjUwODIxNy42MC4wLjA.",
 
         thumbnail: brainGameTreasure,
-        desc: "Get ready for a thrilling and immersive treasure hunt like no other in 'Treasure Quest Adventures,' an action-packed game that will take you on a mesmerizing journey to uncover hidden riches and long-lost artifacts in mysterious lands. Embark on an epic quest filled with puzzles, challenges, and danger, as you set out to become the greatest treasure hunter the world has ever known!",
+        desc: "Prepare for an intense and strategic battle in 'XO Rumble,' the ultimate tic-tac-toe challenge. Engage in thrilling matches, outsmart your opponents, and claim your victory on the grid. Show off your wits, strategy, and tactical skills in this high-stakes game of Xs and Os.",
         slug: "/",
         class: ["order-1", "order-2"],
       },
