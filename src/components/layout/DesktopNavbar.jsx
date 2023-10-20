@@ -14,7 +14,7 @@ export default function DesktopNavbar({
   toggleJoinUs,
   token,
   username,
-  userType,
+  user_type,
 }) {
   return (
     <>
@@ -45,7 +45,7 @@ export default function DesktopNavbar({
           </Link>
         ) : (
           <Link
-            to={userType == "expert" ? "/doctor/dashboard" : "/user/dashboard"}
+            to={user_type == "expert" ? "/doctor/dashboard" : "/user/dashboard"}
             className="btn-primary flex !w-fit items-center !rounded-full !bg-primary-400 !py-2.5 font-semibold hover:!bg-primary-300"
           >
             {/* <img src={profile} alt="" className="mr-1 w-5 rounded-full" /> */}

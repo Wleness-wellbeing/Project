@@ -10,7 +10,7 @@ export default function DoctorSliderBtns({ text, slug }) {
 
   return (
     <div className="absolute bottom-0 left-0 flex w-full items-center justify-between">
-      {/* <button
+      <button
         onClick={() => swiper.slidePrev()}
         className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border-2 border-primary-300 lg:h-12 lg:w-12"
       >
@@ -18,11 +18,8 @@ export default function DoctorSliderBtns({ text, slug }) {
           icon={faCaretLeft}
           className="text-2xl text-primary-300 lg:text-4xl"
         />
-      </button> */}
-      <Link to={slug} target="_blank" className="btn-one mx-auto">
-        {text}
-      </Link>
-      {/* <button
+      </button>
+      <button
         onClick={() => swiper.slideNext()}
         className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-primary-300 lg:h-12 lg:w-12"
       >
@@ -30,7 +27,7 @@ export default function DoctorSliderBtns({ text, slug }) {
           icon={faCaretRight}
           className="text-2xl text-white lg:text-4xl"
         />
-      </button> */}
+      </button>
     </div>
   );
 }

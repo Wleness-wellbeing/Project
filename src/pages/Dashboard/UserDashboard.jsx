@@ -12,10 +12,7 @@ import {
   Spark,
   Sunflower,
   Album,
-  palmWave,
 } from "../../assets";
-import UserSidebar from "../../components/Admin/UserSidebar";
-import { useNavigate } from "react-router-dom";
 
 export default function UserDashboard() {
   const [thoughts, setThoughts] = useState([]);
@@ -176,10 +173,10 @@ export default function UserDashboard() {
 
   return (
     <>
-      <div className=" grid-cols-1 md:flex">
+      <div className="md:flex">
         {/* To-do Section */}
-        <div className=" mt-2 md:mt-0  md:w-[30%]">
-          <h2 className="pb-4 text-2xl font-bold">To-Do List:</h2>
+        <div className="mt-2 md:mt-0 md:w-[30%]">
+          <h2 className="pb-4 text-lg font-bold lg:text-2xl">To-Do List:</h2>
           <div className="rounded-lg bg-teal-100 py-6 pr-10 shadow-sm">
             <ul className="pl-4">
               {todos.map((todo, index) => (
@@ -189,7 +186,9 @@ export default function UserDashboard() {
                       type="checkbox"
                       className="form-checkbox text-green-500"
                     />
-                    <span className="ml-2 text-lg font-medium">{todo}</span>
+                    <span className="ml-2 text-sm font-semibold lg:text-lg">
+                      {todo}
+                    </span>
                   </label>
                   <FontAwesomeIcon
                     className="ml-4 cursor-pointer text-red-500 hover:text-red-600"
@@ -219,10 +218,10 @@ export default function UserDashboard() {
         </div>
 
         <div className=" md:ml-12 md:w-[75%]">
-          <h2 className="mt-4 pb-4 text-2xl font-bold md:mt-0">
+          <h2 className="mt-4 pb-4 text-xl font-bold md:mt-0 lg:text-2xl">
             Mood Tracker:
           </h2>
-          <div className="grid w-full grid-cols-3 rounded-lg bg-teal-100 p-3 text-center md:flex md:h-40 md:gap-12 md:pl-7 md:pt-4">
+          <div className="grid w-full grid-cols-3 items-center rounded-lg bg-teal-100 p-3 text-center md:flex md:h-40 md:gap-12 md:pl-7 md:pt-4">
             {[
               { label: "Happy", icon: HappyIcon },
               { label: "Neutral", icon: NeutralIcon },
@@ -241,11 +240,11 @@ export default function UserDashboard() {
                 />
                 <img
                   src={mood.icon}
-                  className="h-10 w-10  cursor-pointer object-fill md:h-20 md:w-20 "
+                  className="h-10 w-10  cursor-pointer object-fill md:h-16 md:w-16"
                   alt={mood.label}
                 />
                 <h2
-                  className={`py-2 text-lg font-semibold ${
+                  className={`py-2 text-sm font-semibold lg:text-lg ${
                     selectedMood === mood.label ? "text-teal-500" : ""
                   }`}
                 >
@@ -262,7 +261,9 @@ export default function UserDashboard() {
         <div className=" grid-cols-1 md:flex ">
           <div className="w-full md:w-1/2 md:pr-8">
             <div className="  md:pb-2 ">
-              <h2 className=" py-4 text-2xl font-bold">Journalling:</h2>
+              <h2 className=" py-4 text-xl font-bold lg:text-2xl">
+                Journalling:
+              </h2>
               {/* <div className="rounded-xl bg-yellow-primary p-2 ">
                     <div className="">
                         <input
@@ -335,7 +336,9 @@ export default function UserDashboard() {
           {/* </div> */}
 
           <div className="w-full md:w-1/2 ">
-            <h2 className="py-4 text-2xl font-bold md:py-4">Goal Planner:</h2>
+            <h2 className="py-4 text-xl font-bold md:py-4 lg:text-2xl">
+              Goal Planner:
+            </h2>
             <div className="rounded-lg bg-yellow-300/25 p-4">
               <ul className="ml-4 list-disc">
                 {goals.map((goal, index) => (
@@ -390,7 +393,9 @@ export default function UserDashboard() {
       {/* last section */}
       <div className="grid-cols-1 md:flex">
         <div className="w-full md:w-1/2 md:pr-8">
-          <h2 className="py-4 text-2xl font-bold md:py-4">Your Progress:</h2>
+          <h2 className="py-4 text-xl font-bold md:py-4 lg:text-2xl">
+            Your Progress:
+          </h2>
           <div className="rounded-lg bg-teal-100 p-2 text-end">
             <div className=" flex">
               <div className="ml-3 flex items-center  md:ml-7">
@@ -426,13 +431,13 @@ export default function UserDashboard() {
                     type="radio"
                     id={day}
                     name="day"
-                    className="h-7 w-7 border-teal-500 bg-white"
+                    className="h-4 w-4 border-teal-500 bg-white lg:h-7 lg:w-7"
                     checked={selectedDay === day}
                     onChange={() => setSelectedDay(day)}
                   />
                   <label
                     htmlFor={day}
-                    className="mx-auto mb-1 block cursor-pointer font-bold"
+                    className="mx-auto mb-1 block cursor-pointer text-sm font-bold lg:text-base"
                   >
                     {day.charAt(0).toUpperCase()}
                   </label>
@@ -442,17 +447,17 @@ export default function UserDashboard() {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2">
-          <h2 className=" my-4 pb-2 text-2xl font-bold md:mt-2">
+        <div className="mb-6 w-full md:w-1/2">
+          <h2 className="my-4 pb-2 text-xl font-bold md:mt-2 lg:text-2xl">
             Upcoming Events:
           </h2>
-          <div className=" rounded-lg  bg-teal-100  py-3 text-end md:py-5">
+          <div className="rounded-lg bg-teal-100  py-3 text-end md:py-5">
             {/* <h3 className="font-semibold text-gray-">Oct 19 - Oct 25</h3> */}
             <div className="flex items-center justify-center text-center">
               <div className=" border-r border-slate-300 pr-4">
                 <div className="flex">
                   <div>
-                    <img src={Spark} className="h-10 w-10" />
+                    <img src={Spark} className="h-8 w-8 lg:h-10 lg:w-10" />
                   </div>
                   <div>
                     <span className="text-3xl font-bold text-teal-500">1</span>
@@ -464,7 +469,7 @@ export default function UserDashboard() {
               <div className="pl-4">
                 <div className="flex">
                   <div>
-                    <img src={Album} className="h-10 w-10" />
+                    <img src={Album} className="h-8 w-8 lg:h-10 lg:w-10" />
                   </div>
                   <div>
                     <span className="text-3xl font-bold text-teal-500">0</span>

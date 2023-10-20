@@ -3,6 +3,7 @@ import { avatars } from "../../data/dashboard";
 import { USER_PROFILE_UPDATE_URI } from "../../data/api";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import useLogout from "../../components/Auth/useLogout";
 
 const genders = ["Male", "Female", "Transgender"];
 
@@ -21,6 +22,7 @@ export default function UserProfile({ token }) {
     return null;
   }
 
+  const { logout } = useLogout();
   let wleness_user = JSON.parse(localStorage.getItem("wleness_user"));
   let userInfo = JSON.parse(localStorage.getItem("userInfo"));
   if (wleness_user.type == "expert") {
@@ -98,7 +100,8 @@ export default function UserProfile({ token }) {
         }
       })
       .catch((error) => {
-        setMessage(error.data.status, error.data.message);
+        // setMessage(error.data.status, error.data.message);
+        logout() ? error.response.status == 401 : "";
       });
   };
 

@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 import { textColorize } from "../utils";
 import axios from "axios";
 import { EXPERTS_URI } from "../data/api";
+import DoctorSliderBtns from "./Buttons/DoctorSliderBtns";
 
 export default function DoctorSlider(props) {
   const [swiper, setSwiper] = useState(null); // Store Swiper instance
@@ -92,7 +93,7 @@ export default function DoctorSlider(props) {
       >
         <Swiper
           modules={[EffectCoverflow, Navigation, Autoplay]}
-          className="mySwiper h-[520px] overflow-y-visible rounded-2xl"
+          className="mySwiper h-[420px] overflow-y-visible rounded-2xl lg:h-[500px]"
           navigation={true}
           effect={"coverflow"}
           grabCursor={true}
@@ -193,6 +194,7 @@ export default function DoctorSlider(props) {
                 </SwiperSlide>
               );
             })}
+          <DoctorSliderBtns />
         </Swiper>
       </div>
     </section>

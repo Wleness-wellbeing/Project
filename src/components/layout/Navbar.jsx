@@ -25,8 +25,6 @@ function Navbar() {
 
     if (wleness_user_type == "user") {
       let url = USER_PROFILE_URI + "/" + wleness_user.username;
-      console.log(wleness_user.key);
-      console.log(token);
       useEffect(() => {
         // Make a GET request using Axios
         axios
