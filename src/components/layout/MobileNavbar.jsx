@@ -102,10 +102,10 @@ export default function MobileNavbar({
 
             {!token ? (
               <Link
-                to="/signup"
+                to="/login"
                 className="btn-primary !w-full !rounded-full !bg-primary-400 !py-2.5 !text-base font-semibold hover:!bg-primary-300 xl:!w-fit xl:!py-2"
               >
-                Sign Up
+                Sign In
               </Link>
             ) : (
               <Link

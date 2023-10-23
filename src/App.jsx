@@ -444,7 +444,7 @@ function App() {
           path="/user/dashboard"
           element={
             <UserDashboardLayout token={token}>
-              <UserDashboard />
+              <UserDashboard token={token} />
             </UserDashboardLayout>
           }
         />

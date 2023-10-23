@@ -13,163 +13,298 @@ import {
   Sunflower,
   Album,
 } from "../../assets";
+import axios from "axios";
+import { ADD_GOAL_URI, ADD_JOURNAL_URI, ADD_TODO_URI } from "../../data/api";
+import useLogout from "../../components/Auth/useLogout";
 
-export default function UserDashboard() {
-  const [thoughts, setThoughts] = useState([]);
-  const [newThought, setNewThought] = useState("");
+const days = [
+  "sunday",
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thursday",
+  "friday",
+  "saturday",
+];
+
+export default function UserDashboard({ token }) {
+  const { logout } = useLogout();
+
   const [todos, setTodos] = useState([]);
   const [newTodo, setNewTodo] = useState("");
-  const [selectedDay, setSelectedDay] = useState("");
-  const [currentDate, setCurrentDate] = useState("");
   const [goals, setGoals] = useState([]);
   const [newGoal, setNewGoal] = useState("");
-  const [editingGoal, setEditingGoal] = useState(null);
+  const [journals, setJournals] = useState([]);
+  const [newJournal, setNewJournal] = useState("");
+  const [selectedDay, setSelectedDay] = useState("");
+
+  const [currentDate, setCurrentDate] = useState("");
   const [selectedMood, setSelectedMood] = useState("Happy");
-
-  console.log(thoughts, newThought, todos, selectedDay, goals);
-
-  // Function to add a new todo task
-  const addTodo = () => {
-    if (newTodo.trim() !== "") {
-      const updatedTodos = [...todos, newTodo];
-      setTodos(updatedTodos);
-
-      // Update local storage with the new todo list
-      localStorage.setItem("todos", JSON.stringify(updatedTodos));
-
-      setNewTodo("");
-    }
-  };
-
-  // Function to delete a todo task by index
-  const deleteTodo = (index) => {
-    const updatedTodos = [...todos];
-    updatedTodos.splice(index, 1);
-    setTodos(updatedTodos);
-  };
-
-  // Handle thought form submit
-  const handleThoughtSubmit = (event) => {
-    event.preventDefault();
-
-    if (newThought === "") return;
-
-    setThoughts([...thoughts, newThought]);
-    // empty new thought value after submission
-    setNewThought("");
-  };
-
-  // Add New Thought
-  const updateNewThought = (event) => {
-    setNewThought(event.target.value);
-  };
-
-  // Delete Thought
-  const deleteThought = (index) => {
-    const newArray = [...thoughts];
-    newArray.splice(index, 1);
-    setThoughts(newArray);
-  };
-
-  // Handle goal form submit
-  const handleGoalSubmit = (event) => {
-    event.preventDefault();
-
-    if (newGoal === "") return;
-
-    if (editingGoal !== null) {
-      // If we're editing a goal, update the existing goal
-      const updatedGoals = [...goals];
-      updatedGoals[editingGoal] = newGoal;
-      setGoals(updatedGoals);
-      setEditingGoal(null); // Reset the editing state
-    } else {
-      // If not editing, add a new goal
-      setGoals([...goals, newGoal]);
-    }
-
-    // Clear the input field
-    setNewGoal("");
-  };
-
-  // Edit a goal
-  const editGoal = (index) => {
-    setEditingGoal(index);
-    setNewGoal(goals[index]);
-  };
-
-  // Delete a goal
-  const deleteGoal = (index) => {
-    const updatedGoals = [...goals];
-    updatedGoals.splice(index, 1);
-    setGoals(updatedGoals);
-  };
 
   const handleMoodChange = (event) => {
     setSelectedMood(event.target.value);
   };
 
-  // Save data to local storage whenever there is a change
+  // ================== Set current day ==================
   useEffect(() => {
-    localStorage.setItem("thoughts", JSON.stringify(thoughts));
-  }, [thoughts]);
-
-  useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]);
-
-  useEffect(() => {
-    localStorage.setItem("goals", JSON.stringify(goals));
-  }, [goals]);
-
-  useEffect(() => {
-    localStorage.setItem("selectedMood", selectedMood);
-  }, [selectedMood]);
-
-  useEffect(() => {
-    // Load data from local storage when the component mounts
-    const storedThoughts = localStorage.getItem("thoughts");
-    if (storedThoughts) {
-      setThoughts(JSON.parse(storedThoughts));
-    }
-
-    const storedTodos = localStorage.getItem("todos");
-    if (storedTodos) {
-      setTodos(JSON.parse(storedTodos));
-    }
-
-    const storedGoals = localStorage.getItem("goals");
-    if (storedGoals) {
-      setGoals(JSON.parse(storedGoals));
-    }
-
-    const storedSelectedMood = localStorage.getItem("selectedMood");
-    if (storedSelectedMood) {
-      setSelectedMood(storedSelectedMood);
-    }
-
-    // Initialize selected day and current date as before
-    const daysOfWeek = [
-      "sunday",
-      "monday",
-      "tuesday",
-      "wednesday",
-      "thursday",
-      "friday",
-      "saturday",
-    ];
-    const currentDay = daysOfWeek[new Date().getDay()];
-    setSelectedDay(currentDay);
-
-    const today = new Date();
-    const options = {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    };
-    setCurrentDate(today.toLocaleDateString(undefined, options));
+    const currentDate = new Date();
+    const day = currentDate.getDay();
+    setSelectedDay(days[day]);
   }, []);
+
+  // ================== To-do List ==================
+  // Fetch users todos
+  useEffect(() => {
+    axios
+      .get(ADD_TODO_URI, {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      })
+      .then((reponse) => {
+        console.log(reponse.data.todos);
+
+        if (reponse.data.status == "success") {
+          setTodos(reponse.data.todos);
+        }
+      });
+
+    return () => {};
+  }, []);
+
+  // Handle add todo
+  const handleTodo = (e) => {
+    e.preventDefault();
+
+    if (newTodo == "") {
+      return null;
+    }
+
+    axios
+      .post(
+        ADD_TODO_URI,
+        {
+          task: newTodo,
+        },
+        {
+          headers: {
+            Authorization: "Bearer " + token,
+          },
+        },
+      )
+      .then((response) => {
+        if (response.data.status == "success") {
+          setTodos(response.data.todos);
+          setNewTodo("");
+        }
+      })
+      .catch((error) => {
+        if (error.response.status == 401) {
+          logout();
+        } else {
+          console.log(error);
+        }
+      });
+  };
+
+  // Handle add todo
+  const deleteTodo = (id) => {
+    const config = {
+      method: "delete",
+      url: ADD_TODO_URI,
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      data: {
+        id: id,
+      },
+    };
+
+    axios(config)
+      .then((response) => {
+        if (response.data.status == "success") {
+          setTodos(response.data.todos);
+          setNewTodo("");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        if (error.response.status == 401) {
+          logout();
+        } else {
+          console.log(error);
+        }
+      });
+  };
+
+  // ================== Handle Goal Planning Actions ==================
+  // Fetch user goals
+  useEffect(() => {
+    axios
+      .get(ADD_GOAL_URI, {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      })
+      .then((reponse) => {
+        if (reponse.data.status == "success") {
+          setGoals(reponse.data.goals);
+        }
+      });
+
+    return () => {};
+  }, []);
+
+  // Handle adding goals
+  const handleGoals = (e) => {
+    e.preventDefault();
+
+    if (newGoal == "") {
+      return null;
+    }
+
+    axios
+      .post(
+        ADD_GOAL_URI,
+        {
+          plan: newGoal,
+        },
+        {
+          headers: {
+            Authorization: "Bearer " + token,
+          },
+        },
+      )
+      .then((response) => {
+        if (response.data.status == "success") {
+          setGoals(response.data.goals);
+          setNewGoal("");
+        }
+      })
+      .catch((error) => {
+        if (error.response.status == 401) {
+          logout();
+        } else {
+          console.log(error);
+        }
+      });
+  };
+
+  // Handle delete goals
+  const deleteGoal = (id) => {
+    const config = {
+      method: "delete",
+      url: ADD_GOAL_URI,
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      data: {
+        id: id,
+      },
+    };
+
+    axios(config)
+      .then((response) => {
+        if (response.data.status == "success") {
+          setGoals(response.data.goals);
+          setNewGoal("");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        if (error.response.status == 401) {
+          logout();
+        } else {
+          console.log(error);
+        }
+      });
+  };
+
+  // ================== Handle Journal Actions ==================
+  // Fetch user goals
+  useEffect(() => {
+    axios
+      .get(ADD_JOURNAL_URI, {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      })
+      .then((reponse) => {
+        if (reponse.data.status == "success") {
+          setJournals(reponse.data.journals);
+        }
+      });
+
+    return () => {};
+  }, []);
+
+  // Handle adding goals
+  const handleJournals = (e) => {
+    e.preventDefault();
+
+    if (newJournal == "") {
+      return null;
+    }
+
+    axios
+      .post(
+        ADD_JOURNAL_URI,
+        {
+          desc: newJournal,
+        },
+        {
+          headers: {
+            Authorization: "Bearer " + token,
+          },
+        },
+      )
+      .then((response) => {
+        if (response.data.status == "success") {
+          setJournals(response.data.journals);
+          setNewJournal("");
+        }
+      })
+      .catch((error) => {
+        if (error.response.status == 401) {
+          logout();
+        } else {
+          console.log(error);
+        }
+      });
+  };
+
+  // Handle delete goals
+  const deleteJournal = (id) => {
+    const config = {
+      method: "delete",
+      url: ADD_JOURNAL_URI,
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      data: {
+        id: id,
+      },
+    };
+
+    axios(config)
+      .then((response) => {
+        if (response.data.status == "success") {
+          setJournals(response.data.journals);
+          setNewJournal("");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        if (error.response.status == 401) {
+          logout();
+        } else {
+          console.log(error);
+        }
+      });
+  };
 
   return (
     <>
@@ -179,26 +314,27 @@ export default function UserDashboard() {
           <h2 className="pb-4 text-lg font-bold lg:text-2xl">To-Do List:</h2>
           <div className="rounded-lg bg-teal-100 py-6 pr-10 shadow-sm">
             <ul className="pl-4">
-              {todos.map((todo, index) => (
-                <li key={index} className="flex items-center justify-between">
+              {todos.map((todo) => (
+                <li key={todo[0]} className="flex items-center justify-between">
                   <label className="inline-flex items-center">
                     <input
                       type="checkbox"
                       className="form-checkbox text-green-500"
+                      value={todo[2]}
                     />
-                    <span className="ml-2 text-sm font-semibold lg:text-lg">
-                      {todo}
+                    <span className="ml-2 text-sm font-semibold lg:text-base">
+                      {todo[1]}
                     </span>
                   </label>
                   <FontAwesomeIcon
                     className="ml-4 cursor-pointer text-red-500 hover:text-red-600"
                     icon={faTrash}
-                    onClick={() => deleteTodo(index)}
+                    onClick={() => deleteTodo(todo[0])}
                   />
                 </li>
               ))}
             </ul>
-            <div className="mt-4 flex items-center pl-3">
+            <form className="mt-4 flex items-center pl-3" onSubmit={handleTodo}>
               <input
                 type="text"
                 value={newTodo}
@@ -207,13 +343,10 @@ export default function UserDashboard() {
                 className="w-full border-b-2 border-slate-300 bg-teal-100 p-2  text-sm font-medium outline-yellow-300"
                 style={{ outline: "none" }}
               />
-              <button
-                onClick={addTodo}
-                className="ml-2 rounded-lg bg-primary-100 px-4 py-1.5 text-xs font-medium text-white"
-              >
+              <button className="ml-2 rounded-lg bg-primary-100 px-4 py-1.5 text-xs font-medium text-white">
                 Add
               </button>
-            </div>
+            </form>
           </div>
         </div>
 
@@ -264,60 +397,30 @@ export default function UserDashboard() {
               <h2 className=" py-4 text-xl font-bold lg:text-2xl">
                 Journalling:
               </h2>
-              {/* <div className="rounded-xl bg-yellow-primary p-2 ">
-                    <div className="">
-                        <input
-                        className=" w-full border-b-2 border-gray-500 bg-yellow-primary"
-                        type="text"
-                        style={{ outline: "none" }}
-                        />
-                    </div>
-                    <div>
-                        <input
-                        className="h-9 w-full border-b-2 border-gray-500 bg-yellow-primary"
-                        type="text"
-                        style={{ outline: "none" }}
-                        />
-                    </div>
-                    <div>
-                        <input
-                        className="h-9 w-full border-b-2 border-gray-500 bg-yellow-primary"
-                        type="text"
-                        style={{ outline: "none" }}
-                        />
-                    </div>
-                    <div className="pb-6">
-                        <input
-                        className=" h-9 w-full border-b-2 border-gray-500 bg-yellow-primary"
-                        type="text"
-                        style={{ outline: "none" }}
-                        />
-                    </div>
-                    </div> */}
               {/* <div className="  lg:p-4"> */}
               <div className="rounded-lg bg-yellow-300/25 p-4 md:mb-6">
                 {/* <h4 className="font-bold">Write Your Thoughts...</h4> */}
-                {thoughts.map((value, i) => {
+                {journals.map((value) => {
                   return (
                     <p
-                      key={i}
+                      key={value[0]}
                       className="group flex justify-between border-b-[1px] border-slate-300 p-2 text-sm font-semibold outline-yellow-300"
                     >
-                      <span>{value}</span>
+                      <span>{value[1]}</span>
                       <FontAwesomeIcon
                         className="hidden cursor-pointer text-red-500 hover:text-red-600 group-hover:block"
                         icon={faTrash}
-                        onClick={() => deleteThought(i)}
+                        onClick={() => deleteJournal(value[0])}
                       />
                     </p>
                   );
                 })}
 
-                <form onSubmit={handleThoughtSubmit}>
+                <form onSubmit={handleJournals}>
                   <input
                     name="thought"
-                    value={newThought}
-                    onChange={updateNewThought}
+                    value={newJournal}
+                    onChange={(e) => setNewJournal(e.target.value)}
                     placeholder="Add New Thought"
                     className="w-full border-b-[1px] border-slate-300 bg-transparent p-2 text-sm font-medium outline-yellow-300"
                   />
@@ -341,9 +444,9 @@ export default function UserDashboard() {
             </h2>
             <div className="rounded-lg bg-yellow-300/25 p-4">
               <ul className="ml-4 list-disc">
-                {goals.map((goal, index) => (
+                {goals.map((goal) => (
                   <li
-                    key={index}
+                    key={goal[0]}
                     className="flex items-center text-lg font-semibold"
                   >
                     <img
@@ -351,25 +454,25 @@ export default function UserDashboard() {
                       alt="Arrow Icon"
                       className="mr-2 h-4 w-4"
                     />
-                    {goal}
+                    {goal[1]}
                     <div className="ml-auto flex text-end">
-                      <div
+                      {/* <div
                         className="cursor-pointer text-teal-500 hover:text-teal-600"
                         onClick={() => editGoal(index)}
                       >
                         Edit
-                      </div>
+                      </div> */}
                       <FontAwesomeIcon
                         className="ml-2 cursor-pointer text-red-500 hover:text-red-600"
                         icon={faTrash}
-                        onClick={() => deleteGoal(index)}
+                        onClick={() => deleteGoal(goal[0])}
                       />
                     </div>
                   </li>
                 ))}
               </ul>
 
-              <form onSubmit={handleGoalSubmit}>
+              <form onSubmit={handleGoals}>
                 <input
                   value={newGoal}
                   onChange={(e) => setNewGoal(e.target.value)}
@@ -381,7 +484,7 @@ export default function UserDashboard() {
                     type="submit"
                     className="rounded-lg bg-primary-100 px-4 py-1.5 text-xs font-medium text-white"
                   >
-                    {editingGoal !== null ? "Update" : "Save"}
+                    Save
                   </button>
                 </div>
               </form>
@@ -417,15 +520,7 @@ export default function UserDashboard() {
               </div>
             </div>
             <div className="flex justify-center gap-6  md:gap-12">
-              {[
-                "sunday",
-                "monday",
-                "tuesday",
-                "wednesday",
-                "thursday",
-                "friday",
-                "saturday",
-              ].map((day) => (
+              {days.map((day) => (
                 <div className="text-center" key={day}>
                   <input
                     type="radio"

@@ -6,13 +6,18 @@ const URI = "https://api.wleness.com/api/";
 export const SIGNUP_USER_URI = URI + "signup";
 export const LOGIN_USER_URI = URI + "login";
 export const LOGOUT_USER_URI = URI + "logout";
-export const USER_PROFILE_URI = URI + "profile";
-export const USER_PROFILE_UPDATE_URI = URI + "profile/update";
 export const EXPERTS_LOGIN_URI = URI + "experts-login";
 export const GOOGLE_SIGNUP_URI = URI + "google-signup";
 export const GOOGLE_LOGIN_URI = URI + "google-signin";
 export const VERIFY_OTP = URI + "verifyOtp";
 export const FORGOT_PASSWORD_URI = URI + "forgot-password";
+
+// Users
+export const USER_PROFILE_URI = URI + "profile";
+export const USER_PROFILE_UPDATE_URI = URI + "profile/update";
+export const ADD_TODO_URI = URI + "todo";
+export const ADD_GOAL_URI = URI + "goals";
+export const ADD_JOURNAL_URI = URI + "journaling";
 
 // Leads
 export const REQUEST_CALLBACK_URI = URI + "request-callback";

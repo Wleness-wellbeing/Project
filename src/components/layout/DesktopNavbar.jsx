@@ -38,10 +38,10 @@ export default function DesktopNavbar({
 
         {!token ? (
           <Link
-            to="/signup"
+            to="/login"
             className="btn-primary !w-fit !rounded-full !bg-primary-400 !py-2 font-semibold hover:!bg-primary-300"
           >
-            Sign Up
+            Sign In
           </Link>
         ) : (
           <Link
