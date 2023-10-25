@@ -796,7 +796,7 @@ import Sunflower from "./images/dashboard/sunflower.png";
 import Album from "./images/dashboard/album.png"
 import WavingHand from "./images/dashboard/waving-hand.png"
 import palmWave from "./images/dashboard/palm.png"
-
+import JournallingSmallPage from "./images/dashboard/journalling-small-page.png"
 
 
 
@@ -807,7 +807,7 @@ import palmWave from "./images/dashboard/palm.png"
 
 
 export {
-  AngryIcon,HappyIcon,EmotionalIcon,NeutralIcon,OverwhelmingIcon,SadIcon,ArrowVector,Sunflower,Spark,Album,WavingHand,palmWave,
+  JournallingSmallPage,AngryIcon,HappyIcon,EmotionalIcon,NeutralIcon,OverwhelmingIcon,SadIcon,ArrowVector,Sunflower,Spark,Album,WavingHand,palmWave,
   issuesHeader,
   issueAnxiety,
   issueAdhd,
