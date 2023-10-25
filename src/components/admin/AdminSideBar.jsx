@@ -1,64 +1,58 @@
-import {
-  faCircleArrowLeft,
-  faClose,
-  faRightFromBracket,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
-
-import { userDashboardLinks } from "../../data/navigation";
 import useLogout from "../Auth/useLogout";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
-export default function AdminSideBar({ isOpen, toggle }) {
+export default function AdminSideBar({ user, isMenuOpen, closeMenu }) {
   const { logout } = useLogout();
-  const wleness_user_type = localStorage.getItem("wleness_user_type");
-
-  let dashbaordLinks = userDashboardLinks;
-  if (wleness_user_type == "expert") {
-    dashbaordLinks = [];
-  }
 
   return (
     <aside
-      className={`fixed bottom-0 top-0 z-10 flex w-64 flex-col gap-y-4 bg-white p-5 text-center shadow-lg transition-all lg:w-[10%] lg:items-center lg:justify-between lg:bg-primary-50/50 lg:p-0 lg:py-4 lg:shadow-none ${
-        isOpen ? " right-0" : " -right-64 lg:left-0 lg:right-auto"
+      className={`fixed bottom-0 top-14 mx-auto items-center justify-center bg-teal-100 pt-20 transition-all duration-500  md:w-[20%] lg:top-0 lg:flex lg:pt-0 ${
+        isMenuOpen ? " left-0" : "  invisible -left-64 lg:visible lg:left-0"
+        // isMenuOpen ? " left-0" : "  left-0"
       }`}
     >
-      <span className="cursor-pointer self-end lg:hidden" onClick={toggle}>
-        <FontAwesomeIcon icon={faClose} className="text-3xl" />
-      </span>
       <Link
         to="/"
-        className="flex cursor-pointer items-center rounded-full border-2 border-primary-300 px-4 py-2 text-xl text-primary-400 transition-colors hover:text-primary-300 lg:h-12 lg:w-12 lg:justify-center lg:p-0 lg:text-xl"
+        className="absolute left-5 top-5 flex h-10 w-10 cursor-pointer items-center rounded-full border-2 border-primary-300 px-2 py-2 text-primary-400 transition-colors hover:text-primary-300 lg:h-12 lg:w-12 lg:justify-center lg:p-0 lg:px-4"
       >
-        <FontAwesomeIcon icon={faCircleArrowLeft} className="text-3xl" />
+        <FontAwesomeIcon
+          icon={faCircleArrowLeft}
+          className="text-xl lg:text-3xl"
+        />
       </Link>
-
-      <ul className="space-y-2">
-        {dashbaordLinks.map((value, i) => {
-          return (
-            <Link
-              key={i}
-              to={value[1]}
-              target={value[3]}
-              className="flex cursor-pointer items-center rounded-full border-2 border-primary-300 px-4 py-2 text-xl text-primary-400 transition-colors hover:text-primary-300 lg:h-12 lg:w-12 lg:justify-center lg:p-0 lg:text-xl"
-              title={value[0]}
-            >
-              <FontAwesomeIcon icon={value[2]} className="mr-2 lg:m-0" />
-              <span className="font-semibold lg:hidden">{value[0]}</span>
+      <div className="flex w-56 flex-col items-center gap-9 text-center transition-all">
+        <div className="mt-3 md:mt-0">
+          <img
+            src={user ? user.image : ""}
+            alt="Image Alt Text"
+            className="mb-4 h-20 w-20 rounded-full object-cover object-top lg:h-32 lg:w-32"
+          />
+          <h3 className="text-xl font-semibold">{user ? user.name : "User"}</h3>
+          <h5 className="text-base font-medium text-primary-400">
+            {user ? user.profession : "Psychologist"}
+          </h5>
+        </div>
+        <ul className="flex flex-col gap-6">
+          <li className="font-semibold">
+            <Link to="/doctor/dashboard" onClick={closeMenu}>
+              Dashboard
             </Link>
-          );
-        })}
-      </ul>
-
-      <button
-        onClick={() => logout()}
-        className="flex cursor-pointer items-center rounded-full border-2 border-primary-300 px-4 py-2 text-xl text-primary-400 transition-all hover:border-primary-300  hover:text-red-500 lg:h-12 lg:w-12 lg:justify-center lg:p-0 lg:text-xl"
-        title="Logout"
-      >
-        <FontAwesomeIcon icon={faRightFromBracket} className="text-3xl" />
-      </button>
+          </li>
+          <li className="font-semibold">
+            <Link to="/doctor/payment" onClick={closeMenu}>
+              Payment
+            </Link>
+          </li>
+          <li className="font-semibold">
+            <span onClick={() => logout()} className="cursor-pointer">
+              Logout
+            </span>
+          </li>
+        </ul>
+      </div>
     </aside>
   );
 }

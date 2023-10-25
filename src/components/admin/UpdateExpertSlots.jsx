@@ -153,9 +153,9 @@ const UpdateExpertSlots = ({ token }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="gap-2 lg:flex lg:gap-8">
+      <div className="mb-4">
         {/* Calendar Section */}
-        <div className="mb-6 lg:mb-0 lg:w-1/2">
+        <div className="mb-6 lg:mb-0">
           <ExpertsCalendar
             appointmentData={appointmentData}
             onDateSelect={handleDateSelect}
@@ -166,7 +166,7 @@ const UpdateExpertSlots = ({ token }) => {
         </div>
 
         {/* Time Slot Section */}
-        <div className="lg:w-1/2">
+        <div>
           <h2 className="mb-4 text-center text-xl font-medium ">
             {selectedDate ? (
               <>
@@ -178,13 +178,13 @@ const UpdateExpertSlots = ({ token }) => {
             )}
           </h2>
 
-          <div className="flex flex-wrap justify-center">
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
             {timeSlots.map((slot, i) => {
               return (
                 <label
                   htmlFor={slot}
                   key={i}
-                  className={`mr-2 mt-2 inline-block cursor-pointer rounded-full border-2 border-primary-300 px-4 py-2.5 text-center text-sm font-medium text-primary-300 transition-all hover:bg-primary-300 hover:text-white ${
+                  className={`mr-2 mt-2 inline-block cursor-pointer rounded-md border-2 border-primary-300 px-4 py-2.5 text-center text-sm font-medium text-primary-300 transition-all hover:bg-primary-300 hover:text-white ${
                     slots.includes(slot)
                       ? "bg-primary-300 text-white"
                       : "bg-white"
@@ -213,7 +213,7 @@ const UpdateExpertSlots = ({ token }) => {
       >
         {alert.message}
       </p>
-      <div className="mt-6 text-center">
+      <div className="mt-4 text-center">
         <button type="submit" className="btn-one">
           Update
         </button>

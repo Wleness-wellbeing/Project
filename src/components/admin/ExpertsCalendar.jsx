@@ -7,6 +7,13 @@ import {
   addMonths,
   subMonths,
 } from "date-fns";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowLeft,
+  faChevronLeft,
+  faChevronRight,
+  faLessThan,
+} from "@fortawesome/free-solid-svg-icons";
 
 const ExpertsCalendar = ({ onDateSelect, currentDate }) => {
   const [displayedMonth, setDisplayedMonth] = useState(currentDate);
@@ -36,27 +43,29 @@ const ExpertsCalendar = ({ onDateSelect, currentDate }) => {
   };
 
   return (
-    <div>
-      <div className="mb-4 flex justify-between">
-        <span
-          onClick={goToPreviousMonth}
-          className="cursor-pointer text-sm font-medium text-gray-600  hover:text-primary-400 focus:outline-none"
-        >
-          &lt; Previous
-        </span>
+    <div className="mb-4 lg:mb-8">
+      <div className="mb-4 flex justify-between border-b-2 border-slate-200 pb-2">
         <h2 className="text-center text-lg font-semibold text-gray-800">
           {format(displayedMonth, "MMMM yyyy")}
         </h2>
-        <span
-          onClick={goToNextMonth}
-          className="cursor-pointer text-sm font-medium text-gray-600 hover:text-primary-400 focus:outline-none"
-        >
-          Next &gt;
-        </span>
+        <div className="flex items-center space-x-5">
+          <span
+            onClick={goToPreviousMonth}
+            className="cursor-pointer text-sm font-medium text-gray-600  hover:text-primary-400 focus:outline-none"
+          >
+            <FontAwesomeIcon icon={faChevronLeft} className="text-lg" />
+          </span>
+          <span
+            onClick={goToNextMonth}
+            className="cursor-pointer text-sm font-medium text-gray-600 hover:text-primary-400 focus:outline-none"
+          >
+            <FontAwesomeIcon icon={faChevronRight} className="text-lg" />
+          </span>
+        </div>
       </div>
       <div className="grid grid-cols-7 gap-2">
         {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
-          <div key={day} className="text-center font-bold text-gray-600">
+          <div key={day} className="text-center font-semibold text-gray-600">
             {day}
           </div>
         ))}
@@ -64,7 +73,7 @@ const ExpertsCalendar = ({ onDateSelect, currentDate }) => {
           <span
             key={date}
             onClick={() => handleDateSelect(date)}
-            className={`cursor-pointer border ${
+            className={`cursor-pointer ${
               date.getMonth() !== displayedMonth.getMonth()
                 ? "text-gray-400"
                 : ""
@@ -72,7 +81,7 @@ const ExpertsCalendar = ({ onDateSelect, currentDate }) => {
               format(date, "yyyy-MM-dd") === format(currentDate, "yyyy-MM-dd")
                 ? "bg-blue-200"
                 : "bg-white hover:bg-gray-300"
-            } rounded-full py-2 text-center focus:outline-none`}
+            } justify-self-center rounded-full px-4 py-2.5 text-center focus:outline-none`}
           >
             {format(date, "d")}
           </span>

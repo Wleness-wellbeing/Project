@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 // Data
 import { expertsHeader, bubbles } from "../../assets";
 import { doctorsPageClient } from "../../data/clients";
@@ -14,10 +14,15 @@ import {
   expertsPsychiatrist,
   expertsTherapy,
 } from "../../data/experts";
+import axios from "axios";
+import { EXPERTS_URI } from "../../data/api";
+import DoctorsCard from "../../components/DoctorsCard";
 
 function Experts() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
   const [rediredurl, setRediredurl] = useState(null);
+  const [doctorDetails, setDoctorDetails] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const openAssessmentModal = () => {
     setShowAssessmentModal(true);
@@ -37,16 +42,25 @@ function Experts() {
     });
   };
 
-  const button = {
-    slug: "/experts/all",
-    text: "Find the Experts",
-  };
+  useEffect(() => {
+    // Make a GET request using Axios
+    axios
+      .get(EXPERTS_URI)
+      .then((response) => {
+        // Handle the successful response
+        setDoctorDetails(response.data["experts"].splice(0, 6));
+        setLoading(false);
+      })
+      .catch((error) => {
+        // Handle errors
+        console.error("Error fetching doctor details:", error);
+        setLoading(false);
+      });
+  }, []);
 
-  const ref = useRef(null);
-
-  const handleScrollToComponent = () => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  if (loading) {
+    return <div className="mb-5 text-center">Loading...</div>;
+  }
 
   return (
     <>
@@ -97,11 +111,23 @@ function Experts() {
       </header>
 
       {/* ========== Soul Healers ========== */}
-      <DoctorSlider
+      {/* <DoctorSlider
         data={expertDoctors}
         openAssessmentModal={openAssessmentModal}
         setUrl={setRediredurl}
-      />
+      /> */}
+
+      {/* Specialist Doctors */}
+      <section className="pb-12">
+        <div className="side-spacing grid-cols-[repeat(4, minmax(280, 1fr))] container mx-auto grid gap-5 p-4 sm:grid-cols-2 lg:pb-12 3xl:gap-6 xl:py-16">
+          {doctorDetails.map((value, i) => {
+            return <DoctorsCard key={i} data={value} />;
+          })}
+        </div>
+        <div className="text-center">
+          <Link to="/experts/all" className="btn-one">View all</Link>
+        </div>
+      </section>
 
       {/* ========== Objectives ========== */}
       {/* <section className="container mx-auto mb-10 mt-5 grid items-center gap-5 rounded-2xl bg-primary-50/30 lg:grid-cols-3">

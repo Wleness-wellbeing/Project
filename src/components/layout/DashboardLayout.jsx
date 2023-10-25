@@ -1,68 +1,74 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AdminSideBar from "../admin/AdminSideBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
+import { palmWave } from "../../assets";
+import { useNavigate } from "react-router-dom";
 
-export default function DashboardLayout({ children }) {
-  const [openMenu, setOpenMenu] = useState(false);
+export default function DashboardLayout({ children, token }) {
+  const navigate = useNavigate();
 
-  const username = JSON.parse(localStorage.getItem("userInfo"));
-  const toggleMenu = () => {
-    setOpenMenu(!openMenu);
+  // Redirect user if loggedin
+  if (token == null || token == "" || token == undefined) {
+    // Navigate to login
+    useEffect(() => {
+      navigate("/login", {
+        state: {
+          successMessage: "Please Login",
+        },
+      });
+    }, []);
+    return null;
+  }
+  const wleness_user = JSON.parse(localStorage.getItem("wleness_user"));
+  if (wleness_user.type != "expert") {
+    useEffect(() => {
+      navigate("/");
+    }, []);
+    return null;
+  }
+
+  // Handle Navigation bar
+  const [isMenuOpen, setMenuOpen] = useState(false); // Menu Modal
+
+  const openMenu = () => {
+    setMenuOpen(true);
   };
 
-  return (
-    <main className="flex">
-      <AdminSideBar isOpen={openMenu} toggle={toggleMenu} />
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
-      <section className="px-4 pb-3 pt-5 lg:ml-[10%] lg:w-[90%] lg:px-8">
-        <nav className="mb-5 justify-between gap-5 lg:flex">
-          <div className="mb-3 flex items-center justify-between gap-5 lg:order-2 lg:mb-0 lg:w-[35%] lg:justify-end">
-            <span onClick={toggleMenu} className="lg:hidden">
+  const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+  return (
+    <main className="justify-end md:flex">
+      <AdminSideBar
+        user={userInfo}
+        isMenuOpen={isMenuOpen}
+        closeMenu={closeMenu}
+      />
+
+      <div className="px-4 md:w-[80%] lg:px-8">
+        <div className="flex items-center">
+          {/* Hamburger Icon */}
+          <button className="mr-3 lg:hidden">
+            {isMenuOpen ? (
+              <FontAwesomeIcon
+                icon={faClose}
+                className="text-3xl text-primary-400"
+                onClick={() => closeMenu()}
+              />
+            ) : (
               <FontAwesomeIcon
                 icon={faBars}
-                className="cursor-pointer text-2xl text-slate-400 transition-all hover:text-slate-500"
+                className="text-2xl text-primary-400"
+                onClick={() => openMenu()}
               />
-            </span>
-            <span className="flex cursor-pointer items-center rounded-xl border-2 px-2 py-1 transition-all hover:bg-slate-100">
-              <img
-                src={username ? username.image : "User"}
-                alt=""
-                className="mr-2 w-8"
-              />
-              <span className="text-sm font-bold">
-                {username ? username.name : "User"}
-              </span>
-            </span>
-          </div>
-
-          <div className="lg:order-1 lg:w-[65%]">
-            {/* <form
-              action=""
-              method="get"
-              className="flex w-full rounded-xl bg-slate-200/60"
-            >
-              <label htmlFor="search" className="w-full">
-                <input
-                  type="search"
-                  name="search"
-                  id="search"
-                  placeholder="Search"
-                  className="h-full w-full rounded-l-xl bg-transparent px-4 py-3 outline-none"
-                />
-              </label>
-              <button type="submit" className="bg-transparent">
-                <FontAwesomeIcon
-                  icon={faSearch}
-                  className="px-4 text-slate-400"
-                />
-              </button>
-            </form> */}
-          </div>
-        </nav>
-
+            )}
+          </button>
+        </div>
         {children}
-      </section>
+      </div>
     </main>
   );
 }

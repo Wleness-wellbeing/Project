@@ -70,6 +70,7 @@ import ForgotPassword from "./pages/Authentication/Forget";
 import UserProfile from "./pages/Dashboard/UserProfile";
 import Error404 from "./components/Error404";
 import UserDashboardLayout from "./components/layout/UserDashboardLayout";
+import DoctorsPayment from "./pages/Dashboard/DoctorsPayment";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -395,8 +396,16 @@ function App() {
         <Route
           path="/doctor/dashboard"
           element={
-            <DashboardLayout>
-              <DoctorDashboard token={token} setToken={setToken} />
+            <DashboardLayout token={token}>
+              <DoctorDashboard token={token} />
+            </DashboardLayout>
+          }
+        />
+        <Route
+          path="/doctor/payment"
+          element={
+            <DashboardLayout token={token}>
+              <DoctorsPayment token={token} />
             </DashboardLayout>
           }
         />
