@@ -30,6 +30,7 @@ export default function DashboardLayout({ children, token }) {
 
   // Handle Navigation bar
   const [isMenuOpen, setMenuOpen] = useState(false); // Menu Modal
+  const [user, setUser] = useState(null);
 
   const openMenu = () => {
     setMenuOpen(true);
@@ -40,6 +41,7 @@ export default function DashboardLayout({ children, token }) {
   };
 
   const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+
   return (
     <main className="justify-end md:flex">
       <AdminSideBar

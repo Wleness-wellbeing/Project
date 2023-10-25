@@ -28,7 +28,7 @@ export default function AdminSideBar({ user, isMenuOpen, closeMenu }) {
           <img
             src={user ? user.image : ""}
             alt="Image Alt Text"
-            className="mb-4 h-20 w-20 rounded-full object-cover object-top lg:h-32 lg:w-32"
+            className="mx-auto mb-4 h-20 w-20 rounded-full object-cover object-top lg:h-32 lg:w-32"
           />
           <h3 className="text-xl font-semibold">{user ? user.name : "User"}</h3>
           <h5 className="text-base font-medium text-primary-400">
