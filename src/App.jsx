@@ -467,7 +467,7 @@ function App() {
           }
         />
         <Route
-          path="/user/dashboard/history"
+          path="/user/history"
           element={
             <UserDashboardLayout token={token}>
               <UserDashboardHistory />

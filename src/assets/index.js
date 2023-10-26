@@ -793,14 +793,10 @@ import SadIcon from "./images/dashboard/SadIcon.png";
 import ArrowVector from "./images/dashboard/Vector.png";
 import Spark from "./images/dashboard/spark.png";
 import Sunflower from "./images/dashboard/sunflower.png";
-import Album from "./images/dashboard/album.png";
 import WavingHand from "./images/dashboard/waving-hand.png";
 import palmWave from "./images/dashboard/palm.png";
 import JournallingSmallPage from "./images/dashboard/journalling-small-page.png";
-
 import Album from "./images/dashboard/album.png";
-import WavingHand from "./images/dashboard/waving-hand.png";
-import palmWave from "./images/dashboard/palm.png";
 import expertsIconTotalPatients from "./images/dashboard/total-patients-all.png";
 import expertsIconTodayPatients from "./images/dashboard/total-patients-today.png";
 import expertsIconAppointments from "./images/dashboard/appointments.png";
@@ -808,15 +804,6 @@ import expertsIconDp from "./images/dashboard/experts-dp.png";
 
 export {
   JournallingSmallPage,
-  AngryIcon,
-  HappyIcon,
-  EmotionalIcon,
-  NeutralIcon,
-  OverwhelmingIcon,
-  SadIcon,
-  ArrowVector,
-  Sunflower,
-  Spark,
   Album,
   WavingHand,
   palmWave,
@@ -829,9 +816,6 @@ export {
   ArrowVector,
   Sunflower,
   Spark,
-  Album,
-  WavingHand,
-  palmWave,
   issuesHeader,
   issueAnxiety,
   issueAdhd,

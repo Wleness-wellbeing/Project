@@ -43,6 +43,11 @@ export default function UserSidebar({ image, isMenuOpen, closeMenu }) {
             </Link>
           </li>
           <li className="font-semibold">
+            <Link to="/user/history" onClick={closeMenu}>
+              History
+            </Link>
+          </li>
+          <li className="font-semibold">
             <span onClick={() => logout()} className="cursor-pointer">
               Logout
             </span>
