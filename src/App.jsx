@@ -470,7 +470,7 @@ function App() {
           path="/user/history"
           element={
             <UserDashboardLayout token={token}>
-              <UserDashboardHistory />
+              <UserDashboardHistory token={token} />
             </UserDashboardLayout>
           }
         />

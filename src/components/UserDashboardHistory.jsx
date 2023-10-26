@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { ArrowVector, JournallingSmallPage } from "../assets";
 import MoodCalendar from "./MoodCalendar";
 import UserChart from "./UserChart";
+import axios from "axios";
+import { USER_HISTORY_URI } from "../data/api";
+import { JournalHistoryModal } from "./Modals/JournalHistoryModal";
 
 // ==========todo========================
 function ToDoItem({ label }) {
@@ -36,80 +39,6 @@ export function ToDoList({ day, date, time }) {
   );
 }
 
-function JournallingItem({ day, date, time, onOpen }) {
-  return (
-    <div>
-      <div>
-        <img
-          src={JournallingSmallPage}
-          alt="Journal Page"
-          onClick={onOpen}
-          style={{ cursor: "pointer" }}
-        />
-      </div>
-      <div className="mt-2 px-6 text-xs text-gray-500">
-        {day} - {date} - {time}
-      </div>
-    </div>
-  );
-}
-
-export function Journalling({ day, date, time }) {
-  const [isModalOpen, setModalOpen] = useState(false);
-
-  const openModal = () => {
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
-
-  return (
-    <div className=" md:w-2/12">
-      <JournallingItem day={day} date={date} time={time} onOpen={openModal} />
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div
-            className="h-2/3 w-2/3 rounded-lg bg-white p-4 shadow-lg md:h-1/2 md:w-1/2"
-            style={{ maxHeight: "50vh", overflowY: "auto" }}
-          >
-            <div className="mb-2 flex justify-end">
-              <button
-                onClick={closeModal}
-                className="close-icon text-xl font-bold text-red-500"
-              >
-                &times;
-              </button>
-            </div>
-            <h2 className="mb-2 text-2xl font-bold">Journalling:</h2>
-            <p>
-              Here is your journal content for {day} at {time} on {date}:
-            </p>
-            <ul>
-              <li className="list-item">Entry 1</li>
-              <li className="list-item">Entry 2</li>
-              <li className="list-item">Entry 1</li>
-              <li className="list-item">Entry 2</li>
-              <li className="list-item">Entry 1</li>
-              <li className="list-item">Entry 1</li>
-              <li className="list-item">Entry 2</li>
-              <li className="list-item">Entry 1</li>
-              <li className="list-item">Entry 2</li>
-              <li className="list-item">Entry 1</li>
-              <li className="list-item">Entry 1</li>
-              <li className="list-item">Entry 2</li>
-              <li className="list-item">Entry 1</li>
-              <li className="list-item">Entry 2</li>
-              <li className="list-item">Entry 1</li>
-            </ul>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
 function GoalItem({ label }) {
   return (
     <li className="flex items-center text-lg font-semibold">
@@ -136,8 +65,19 @@ export function GoalPlanner({ day, date, time }) {
   );
 }
 
-export default function UserDashboardHistory() {
+export default function UserDashboardHistory({ token }) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [journals, setJournals] = useState(null);
+  const [goals, setGoals] = useState(null);
+  const [journalModal, setJournalModal] = useState(false);
+  const openModal = () => {
+    setJournalModal(true);
+  };
+
+  const closeModal = () => {
+    setJournalModal(false);
+  };
+
   const todoListData = [
     { day: "Monday", date: "2023-10-25", time: "10:00 AM" },
     { day: "Tuesday", date: "2023-10-26", time: "3:30 PM" },
@@ -149,44 +89,113 @@ export default function UserDashboardHistory() {
     setActiveIndex((prevIndex) => (prevIndex + 1) % todoListData.length);
   };
 
+  // Fetch user history
+  useEffect(() => {
+    axios
+      .get(USER_HISTORY_URI, {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      })
+      .then((reponse) => {
+        if (reponse.data.status == "success") {
+          setGoals(reponse.data.goals);
+          setJournals(reponse.data.journals);
+        }
+      });
+
+    return () => {};
+  }, []);
+
   return (
-    <main>
+    <>
       {/* ==================== Journalling:============================*/}
       <div>
-        <div>
-          <h2 className="mb-2 text-2xl font-bold">Journalling:</h2>
-        </div>
-        <div className="grid grid-cols-2 md:flex">
-          <Journalling day="Monday" date="2023-10-25" time="10:00 AM" />
-          <Journalling day="Monday" date="2023-10-25" time="10:00 AM" />
-          <Journalling day="Monday" date="2023-10-25" time="10:00 AM" />
-          <Journalling day="Monday" date="2023-10-25" time="10:00 AM" />
-          <Journalling day="Monday" date="2023-10-25" time="10:00 AM" />
-          <Journalling day="Monday" date="2023-10-25" time="10:00 AM" />
-          <div className="my-auto text-center">
-            <button onClick={handleNext}>
-              <FontAwesomeIcon icon={faCaretRight} />
-            </button>
+        {!journals ? (
+          <div>
+            <h2 className="mb-1 text-2xl font-bold">No Journals History</h2>
           </div>
-        </div>
+        ) : (
+          <>
+            <div>
+              <h2 className="mb-2 text-2xl font-bold">Journalings</h2>
+            </div>
+            <div className="flex flex-wrap gap-4">
+              {journals.map((value, i) => (
+                <div key={i}>
+                  <div>
+                    <img
+                      src={JournallingSmallPage}
+                      alt="Journal Page"
+                      onClick={() => openModal()}
+                      className="mx-auto cursor-pointer"
+                    />
+                  </div>
+                  <div className="px-6 text-xs font-medium text-gray-500">
+                    {value.date}
+                  </div>
+                </div>
+              ))}
+              <div className="my-auto text-center">
+                <button onClick={handleNext}>
+                  <FontAwesomeIcon icon={faCaretRight} />
+                </button>
+              </div>
+            </div>
+          </>
+        )}
       </div>
 
       {/* ==================== Goal-Planner:============================*/}
       <div>
-        <div className="">
-          <h2 className="py-4 text-xl font-bold lg:text-2xl">Goal Planner:</h2>
+        <div>
+          {!goals ? (
+            <h2 className="py-4 text-xl font-bold lg:text-2xl">
+              No Goal Planning History
+            </h2>
+          ) : (
+            <>
+              <h2 className="py-4 text-xl font-bold lg:text-2xl">
+                Goal Plannings
+              </h2>
+              <div className="grid-cols-1 gap-3 md:flex">
+                {goals.map((value, i) => {
+                  return (
+                    <div key={i} className="mt-2 w-full md:w-1/4">
+                      <div className="mb-2 rounded-lg bg-yellow-300/25 px-2 py-4">
+                        <ul className="ml-4 list-disc">
+                          {value.goals.map((element, j) => (
+                            <li
+                              key={j}
+                              className="flex items-center font-semibold"
+                            >
+                              <img
+                                src={ArrowVector}
+                                alt="Arrow Icon"
+                                className="mr-2 h-3 w-3"
+                              />
+                              <div className="text-start text-sm">
+                                <p>{element}</p>
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="px-6 text-center text-xs font-medium text-gray-500">
+                        {value.date}
+                      </div>
+                    </div>
+                  );
+                })}
 
-          <div className="grid-cols-1 gap-3 md:flex">
-            <GoalPlanner day="Monday" date="2023-10-25" time="10:00 AM" />
-            <GoalPlanner day="Tuesday" date="2023-10-26" time="3:30 PM" />
-            <GoalPlanner day="Wednesday" date="2023-10-27" time="2:00 PM" />
-            <GoalPlanner day="Thursday" date="2023-10-28" time="4:45 PM" />
-            <div className="my-auto text-center">
-              <button onClick={handleNext}>
-                <FontAwesomeIcon icon={faCaretRight} />
-              </button>
-            </div>
-          </div>
+                <div className="my-auto text-center">
+                  <button onClick={handleNext}>
+                    <FontAwesomeIcon icon={faCaretRight} />
+                  </button>
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </div>
 
@@ -205,6 +214,11 @@ export default function UserDashboardHistory() {
           <MoodCalendar />
         </div>
       </div>
-    </main>
+
+      <JournalHistoryModal
+        isOpen={journalModal}
+        closeModal={() => closeModal()}
+      />
+    </>
   );
 }

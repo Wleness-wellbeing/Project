@@ -18,6 +18,7 @@ export const USER_PROFILE_UPDATE_URI = URI + "profile/update";
 export const ADD_TODO_URI = URI + "todo";
 export const ADD_GOAL_URI = URI + "goals";
 export const ADD_JOURNAL_URI = URI + "journaling";
+export const USER_HISTORY_URI = URI + "history";
 
 // Leads
 export const REQUEST_CALLBACK_URI = URI + "request-callback";
