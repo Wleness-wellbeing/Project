@@ -65,7 +65,7 @@ function Experts() {
   return (
     <>
       {/* ========== Header Bar ========== */}
-      <header className="bg-primary-50/30">
+      <header className="animate-fadeIn bg-primary-50/30">
         <div className="container mx-auto flex flex-col items-center rounded-3xl !px-5 py-2 lg:flex-row lg:py-6 2xl:justify-between 2xl:py-16">
           <div className="lg:order-2 lg:mb-0 xl:w-1/2 2xl:flex 2xl:justify-end">
             {/* Desktop Image */}
@@ -119,13 +119,15 @@ function Experts() {
 
       {/* Specialist Doctors */}
       <section className="pb-12">
-        <div className="side-spacing grid-cols-[repeat(4, minmax(280, 1fr))] container mx-auto grid gap-5 p-4 sm:grid-cols-2 lg:pb-12 3xl:gap-6 xl:py-16">
+        <div className="side-spacing grid-cols-[repeat(4, minmax(280, 1fr))] container mx-auto grid gap-5 p-4 sm:grid-cols-2 lg:pb-12 xl:py-16 3xl:gap-6">
           {doctorDetails.map((value, i) => {
             return <DoctorsCard key={i} data={value} />;
           })}
         </div>
         <div className="text-center">
-          <Link to="/experts/all" className="btn-one">View all</Link>
+          <Link to="/experts/all" className="btn-one">
+            View all
+          </Link>
         </div>
       </section>
 

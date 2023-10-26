@@ -151,24 +151,6 @@ export default function UserDashboardHistory() {
 
   return (
     <main>
-      <div>
-        <h2 className="mb-2 text-2xl font-bold">To-Do List:</h2>
-      </div>
-      <div className="grid-cols-1 md:flex ">
-        {todoListData.map((data, index) => (
-          <ToDoList
-            key={index}
-            day={data.day}
-            date={data.date}
-            time={data.time}
-          />
-        ))}
-        <div className="my-auto text-center">
-          <button onClick={handleNext}>
-            <FontAwesomeIcon icon={faCaretRight} />
-          </button>
-        </div>
-      </div>
       {/* ==================== Journalling:============================*/}
       <div>
         <div>
@@ -192,11 +174,9 @@ export default function UserDashboardHistory() {
       {/* ==================== Goal-Planner:============================*/}
       <div>
         <div className="">
-          <h2 className="py-4 text-xl font-bold md:py-4 lg:text-2xl">
-            Goal Planner:
-          </h2>
+          <h2 className="py-4 text-xl font-bold lg:text-2xl">Goal Planner:</h2>
 
-          <div className="  grid-cols-1 gap-3  md:flex">
+          <div className="grid-cols-1 gap-3 md:flex">
             <GoalPlanner day="Monday" date="2023-10-25" time="10:00 AM" />
             <GoalPlanner day="Tuesday" date="2023-10-26" time="3:30 PM" />
             <GoalPlanner day="Wednesday" date="2023-10-27" time="2:00 PM" />

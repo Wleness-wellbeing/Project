@@ -36,6 +36,15 @@ module.exports = {
       listStyleType: {
         square: "square",
       },
+      animation: {
+        fadeIn: "fadeInAni .5s ease-in-out forwards",
+      },
+      keyframes: {
+        fadeInAni: {
+          from: { opacity: 0 },
+          to: { opacity: 1 },
+        },
+      },
     },
   },
   plugins: [],

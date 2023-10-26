@@ -315,7 +315,10 @@ export default function UserDashboard({ token }) {
           <div className="rounded-lg bg-teal-100 py-6 pr-10 shadow-sm">
             <ul className="pl-4">
               {todos.map((todo) => (
-                <li key={todo[0]} className="flex items-center justify-between">
+                <li
+                  key={todo[0]}
+                  className="group flex items-center justify-between"
+                >
                   <label className="inline-flex items-center">
                     <input
                       type="checkbox"
@@ -327,7 +330,7 @@ export default function UserDashboard({ token }) {
                     </span>
                   </label>
                   <FontAwesomeIcon
-                    className="ml-4 cursor-pointer text-red-500 hover:text-red-600"
+                    className="ml-4 hidden cursor-pointer text-red-500 hover:text-red-600 group-hover:block"
                     icon={faTrash}
                     onClick={() => deleteTodo(todo[0])}
                   />
@@ -443,11 +446,11 @@ export default function UserDashboard({ token }) {
               Goal Planner:
             </h2>
             <div className="rounded-lg bg-yellow-300/25 p-4">
-              <ul className="ml-4 list-disc">
+              <ul className="ml-4 list-disc space-y-1">
                 {goals.map((goal) => (
                   <li
                     key={goal[0]}
-                    className="flex items-center text-lg font-semibold"
+                    className="group flex items-center font-semibold"
                   >
                     <img
                       src={ArrowVector}
@@ -463,7 +466,7 @@ export default function UserDashboard({ token }) {
                         Edit
                       </div> */}
                       <FontAwesomeIcon
-                        className="ml-2 cursor-pointer text-red-500 hover:text-red-600"
+                        className="ml-2 hidden cursor-pointer text-red-500 hover:text-red-600 group-hover:block"
                         icon={faTrash}
                         onClick={() => deleteGoal(goal[0])}
                       />

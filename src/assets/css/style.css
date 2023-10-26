@@ -23,6 +23,10 @@ button,
 a {
   @apply !font-quicksand;
 }
+
+header {
+  @apply animate-fadeIn;
+}
 .container {
   @apply w-full px-5;
 }
