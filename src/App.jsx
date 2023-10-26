@@ -71,6 +71,7 @@ import UserProfile from "./pages/Dashboard/UserProfile";
 import Error404 from "./components/Error404";
 import UserDashboardLayout from "./components/layout/UserDashboardLayout";
 import DoctorsPayment from "./pages/Dashboard/DoctorsPayment";
+import UserDashboardHistory from "./components/UserDashboardHistory";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -450,6 +451,14 @@ function App() {
           }
         />
         <Route
+          path="/user/profile"
+          element={
+            <UserDashboardLayout token={token}>
+              <UserProfile token={token} />
+            </UserDashboardLayout>
+          }
+        />
+        <Route
           path="/user/dashboard"
           element={
             <UserDashboardLayout token={token}>
@@ -457,6 +466,15 @@ function App() {
             </UserDashboardLayout>
           }
         />
+        <Route
+          path="/user/dashboard/history"
+          element={
+            <UserDashboardLayout token={token}>
+              <UserDashboardHistory />
+            </UserDashboardLayout>
+          }
+        />
+
         <Route path="*" element={<Error404 />} />
 
         {/* <Route
