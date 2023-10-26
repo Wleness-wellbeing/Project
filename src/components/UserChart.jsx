@@ -41,7 +41,7 @@ const UserChart = () => {
       {" "}
       {/* Center the content */}
       <div className="p-4">
-        <canvas id="pieChart" width="400" height="400"></canvas>
+        <canvas id="pieChart" width="350" height="350"></canvas>
       </div>
     </div>
   );
