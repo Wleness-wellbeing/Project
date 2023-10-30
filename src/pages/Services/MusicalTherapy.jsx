@@ -12,6 +12,7 @@ import Assessment from "../../components/Assessment";
 import MusicalTherapyComponent from "../../components/MusicalTherapyComponent";
 import ActivityForm from "../../components/Forms/ActivityForm";
 import useEnquiryForm from "../../hooks/useEnquiryForm";
+import { Link } from "react-router-dom";
 
 export default function MusicalTherapy() {
   const { enquiryForm, toggleForm } = useEnquiryForm();
@@ -50,6 +51,24 @@ export default function MusicalTherapy() {
         openAssessmentModal={openAssessmentModal}
         openEnquiry={toggleForm}
       />
+
+      <section className="mb-6 bg-primary-50/30 py-5">
+        <div className="container mx-auto">
+          <h2 className="mb-2 text-center text-lg font-medium">
+            Explore our music tracks for calm and meditative mind which brings a
+            sense of direction and clarity as well
+          </h2>
+          <div>
+            <Link
+              to="/services/music-healing/tracks"
+              className="block text-center font-bold uppercase text-primary-400 transition-all hover:underline lg:text-xl"
+            >
+              Explore More
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <MusicalTherapyComponent />
       <HappyClient data={musicalTherapyClient} />
       <FaqWithImage data={musicalTherapyFaq} />

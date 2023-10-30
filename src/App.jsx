@@ -72,6 +72,7 @@ import Error404 from "./components/Error404";
 import UserDashboardLayout from "./components/layout/UserDashboardLayout";
 import DoctorsPayment from "./pages/Dashboard/DoctorsPayment";
 import UserDashboardHistory from "./components/UserDashboardHistory";
+import MusicalHealingTracks from "./pages/Services/MusicalHealingTracks";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -199,6 +200,14 @@ function App() {
           element={
             <Layout>
               <MusicalTherapy />
+            </Layout>
+          }
+        />
+        <Route
+          path="/services/music-healing/tracks"
+          element={
+            <Layout>
+              <MusicalHealingTracks />
             </Layout>
           }
         />
@@ -476,15 +485,6 @@ function App() {
         />
 
         <Route path="*" element={<Error404 />} />
-
-        {/* <Route
-          path="/user/profile"
-          element={
-            <DashboardLayout>
-              <Profile token={token} />
-            </DashboardLayout>
-          }
-        /> */}
         <Route
           path="/community/chat"
           element={

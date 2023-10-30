@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 export default function ActivityHeader(props) {
   return (
     <>
-      <header className="relative overflow-x-clip bg-secondary/10 pb-6 pt-12 xl:pb-10 xl:pt-16">
+      <header className="relative animate-fadeIn overflow-x-clip bg-secondary/10 pb-6 pt-12 xl:pb-10 xl:pt-16">
         {/* <header className="bg-gradient-to-b from-primary-50/30 to-transparent"> */}
-        <div className="container relative mx-auto flex flex-col items-center rounded-3xl py-2 lg:flex-row lg:py-6 2xl:justify-between 2xl:py-12">
+        <div className="container relative mx-auto flex flex-col items-center rounded-3xl py-2 lg:flex-row lg:py-6 2xl:justify-between">
           <div className="mb-6 lg:order-2 lg:mb-0 lg:w-[45%] 2xl:flex 2xl:justify-end">
             {/* Desktop Image */}
             <img

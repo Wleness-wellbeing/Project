@@ -683,6 +683,10 @@ import musicalelipse3 from "./images/services/musicalTherapy/musicalElipse3.png"
 import musicalHealingChild from "./images/services/musicalTherapy/musical-healing-child.png";
 import musicalHealingYoung from "./images/services/musicalTherapy/musical-healing-young.png";
 import musicalHealingOld from "./images/services/musicalTherapy/musical-healing-old.png";
+import musicHealingTrack1 from "./images/services/musicalTherapy/music-healing-track-1.png";
+import musicHealingTrack2 from "./images/services/musicalTherapy/music-healing-track-2.png";
+import musicHealingTrack3 from "./images/services/musicalTherapy/music-healing-track-3.png";
+import musicHealingTrack4 from "./images/services/musicalTherapy/music-healing-track-4.png";
 
 // Services >> Therapy
 import therapyHeader from "./images/services/therapy/therapy-header.png";
@@ -728,6 +732,10 @@ export {
   bestPsychiatrist,
   bulb,
   mythsAndFacts,
+  musicHealingTrack1,
+  musicHealingTrack2,
+  musicHealingTrack3,
+  musicHealingTrack4,
 };
 
 // Issues Images

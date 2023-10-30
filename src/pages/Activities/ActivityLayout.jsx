@@ -4,9 +4,6 @@ import { activityFeatures } from "../../data";
 // Components
 import ActivityHeader from "../../components/ActivityHeader";
 import ActivityTechniques from "../../components/ActivityTechniques";
-import ActivityVideos from "../../components/ActivityVideos";
-import ActivityBlogs from "../../components/ActivityBlogs";
-import FeaturesBlock from "../../components/FeaturesBlock";
 import ActivityForm from "../../components/Forms/ActivityForm";
 import useEnquiryForm from "../../hooks/useEnquiryForm";
 
