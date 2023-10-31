@@ -19,10 +19,10 @@ import { Link } from "react-router-dom";
 
 export default function Blogs() {
   const [blogPosts, setBlogPosts] = useState([]);
+  const [allBlogPosts, setAllBlogPosts] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [recentPosts, setRecentPosts] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  let categoryFilters = [];
 
   useEffect(() => {
     // Make a GET request using Axios
@@ -30,9 +30,10 @@ export default function Blogs() {
       .get(BLOGS_URI)
       .then((response) => {
         if (response.status == 200) {
+          setAllBlogPosts(response.data.blogs);
           setBlogPosts(response.data.blogs);
           setRecentPosts(response.data.recent_blogs);
-          console.log(response.data.recent_blogs.reverse());
+
           setLoading(false);
         } else {
           console.log(response);
@@ -45,12 +46,26 @@ export default function Blogs() {
       });
   }, []);
 
+  // Filter categories
+  allBlogPosts.map((value) => {
+    if (!categories.includes(value.category)) {
+      // filters.push(value.category);
+      setCategories([...categories, value.category]);
+    }
+  });
+
   if (loading) {
     return <div className="mb-5 text-center">Loading...</div>;
   }
-
   const handleBlogsFilter = (index) => {
-    console.log(index);
+    if (index == 0) {
+      setBlogPosts(allBlogPosts);
+    } else {
+      const filteredPosts = allBlogPosts.filter((posts) => {
+        return posts.category === index;
+      });
+      setBlogPosts(filteredPosts);
+    }
   };
   return (
     <>
@@ -127,52 +142,51 @@ export default function Blogs() {
       {/* Filterable Blogs */}
       <section className="container mx-auto lg:!px-0">
         <ul className="flex flex-wrap justify-center gap-2 pb-8 pt-5 lg:gap-x-14 lg:gap-y-6 lg:pt-0 2xl:pb-8">
-          <li onClick={() => handleBlogsFilter(index)}>
+          <li onClick={() => handleBlogsFilter(0)}>
             <span className="inline-block cursor-pointer rounded-3xl bg-primary-50/50 px-6 py-2.5 text-xs font-bold text-slate-900 transition-colors hover:bg-primary-50 md:text-base">
               All
             </span>
           </li>
-          {blogPosts.map((value, index) => {
-            if (!categoryFilters.includes(value.category)) {
-              categoryFilters.push(value.category);
-              return (
-                <li key={index} onClick={() => handleBlogsFilter(value.id)}>
-                  <span className="inline-block cursor-pointer rounded-3xl bg-primary-50/50 px-6 py-2.5 text-xs font-bold text-slate-900 transition-colors hover:bg-primary-50 md:text-base">
-                    {value.category}
-                  </span>
-                </li>
-              );
-            } else {
-              return null;
-            }
+          {categories.map((value, i) => {
+            return (
+              <li key={i} onClick={() => handleBlogsFilter(value)}>
+                <span className="inline-block cursor-pointer rounded-3xl bg-primary-50/50 px-6 py-2.5 text-xs font-bold text-slate-900 transition-colors hover:bg-primary-50 md:text-base">
+                  {value}
+                </span>
+              </li>
+            );
           })}
         </ul>
 
         {/* ============== Blogs ============= */}
-        <div className="grid gap-4 rounded-xl sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        <div className="grid gap-4 rounded-xl pb-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:pb-10">
           {blogPosts.map((value, i) => {
             return <BlogCard key={i} data={value} />;
           })}
         </div>
 
         {/* Dot Pagination */}
-        <div className="my-8 flex items-center justify-center pt-4">
-          <div className="font-sm mr-4 flex h-12  w-12 items-center justify-center rounded-full bg-primary-500 text-xl text-white hover:bg-primary-300">
-            1
+        {blogPosts.length > 9 ? (
+          <div className="my-8 flex items-center justify-center pt-4">
+            <div className="font-sm mr-4 flex h-12  w-12 items-center justify-center rounded-full bg-primary-500 text-xl text-white hover:bg-primary-300">
+              1
+            </div>
+            <div className="font-sm mr-4 flex  h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-white text-xl text-primary-500 hover:bg-slate-300">
+              2
+            </div>
+            <div className="font-sm mr-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-white text-xl text-primary-500 hover:bg-slate-200">
+              3
+            </div>
+            <div className="font-sm mr-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-primary-500 text-xl text-white hover:bg-slate-200">
+              <FontAwesomeIcon
+                icon={faAnglesRight}
+                className="  hover:text-slate-600"
+              />
+            </div>
           </div>
-          <div className="font-sm mr-4 flex  h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-white text-xl text-primary-500 hover:bg-slate-300">
-            2
-          </div>
-          <div className="font-sm mr-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-white text-xl text-primary-500 hover:bg-slate-200">
-            3
-          </div>
-          <div className="font-sm mr-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-primary-500 text-xl text-white hover:bg-slate-200">
-            <FontAwesomeIcon
-              icon={faAnglesRight}
-              className="  hover:text-slate-600"
-            />
-          </div>
-        </div>
+        ) : (
+          ""
+        )}
       </section>
     </>
   );
