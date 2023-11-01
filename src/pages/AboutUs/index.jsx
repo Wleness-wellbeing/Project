@@ -1,15 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  about1,
-  about3,
-  about4,
-  about6,
-  meeting,
-  problem,
-  leaf,
-  aboutusHeader,
-} from "../../assets";
+import { about3, about6, problem, aboutusHeader } from "../../assets";
 import DummyComponent from "../../components/AboutUsDrop";
 import TeamComponent from "./TeamComponent";
 import PartnerWithUs from "../../components/Forms/PartnerWithUs";
@@ -58,7 +49,7 @@ function AboutUs() {
         </div>
       </header>
 
-      <section className="container mx-auto mt-5 text-center lg:mt-7 lg:py-8">
+      <section className="container mx-auto mb-4 mt-5 text-center lg:mt-7 lg:py-8">
         <div className="flex flex-col-reverse lg:flex-row">
           <div className="my-auto w-full text-left lg:order-2 lg:w-1/2 lg:text-left">
             <h2 className="subheading mb-2 font-semibold">
@@ -88,8 +79,8 @@ function AboutUs() {
         </div>
       </section>
 
-      <div className="mx-auto flex flex-col-reverse justify-center border-4 border-secondary/10 md:flex-row">
-        <div className="mx-auto my-auto w-full bg-secondary/10 py-8 text-center md:w-3/4">
+      <section className="flex flex-col-reverse justify-center border-4 border-secondary/10 md:flex-row">
+        <div className="container mx-auto  my-auto w-full bg-secondary/10 py-8 text-center md:w-3/4">
           <div className="my-4 text-left md:ml-60">
             <h2 className="subheading">
               <span>Charting the path </span>
@@ -191,7 +182,7 @@ function AboutUs() {
             className=""
           />
         </div>
-      </div>
+      </section>
 
       <div className="container mx-auto flex flex-col items-center justify-center text-center">
         <p className="px-6 py-6 text-lg font-semibold text-emerald-600 sm:px-12 sm:py-10 sm:text-xl md:px-24 md:py-14 md:text-2xl lg:px-48">
