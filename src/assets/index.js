@@ -687,6 +687,7 @@ import musicHealingTrack1 from "./images/services/musicalTherapy/music-healing-t
 import musicHealingTrack2 from "./images/services/musicalTherapy/music-healing-track-2.png";
 import musicHealingTrack3 from "./images/services/musicalTherapy/music-healing-track-3.png";
 import musicHealingTrack4 from "./images/services/musicalTherapy/music-healing-track-4.png";
+import wlenessExploreTracks from "./images/services/musicalTherapy/wleness-explore-tracks.png";
 
 // Services >> Therapy
 import therapyHeader from "./images/services/therapy/therapy-header.png";
@@ -736,6 +737,7 @@ export {
   musicHealingTrack2,
   musicHealingTrack3,
   musicHealingTrack4,
+  wlenessExploreTracks,
 };
 
 // Issues Images
