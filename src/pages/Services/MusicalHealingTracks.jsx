@@ -9,57 +9,34 @@ import {
 } from "../../assets";
 import MusicTracksCard from "../../components/Cards/MusicTracksCard";
 
+const musicHealingTracks = [
+  {
+    name: "Aadhyatma",
+    desc: "Spirituality. (Through the notes of Raag Bhairavi)",
+    audio: "",
+    image: musicHealingTrack1,
+  },
+  {
+    name: "Mandar Ki Thaap",
+    desc: "Folk Percussion instrument , along with humming",
+    audio: "",
+    image: musicHealingTrack2,
+  },
+  {
+    name: "Pain, Visualisation",
+    desc: "The track is to deviate from any pain perception",
+    audio: "",
+    image: musicHealingTrack3,
+  },
+  {
+    name: "To The Nature",
+    desc: "Intermittent mandar sound from afar which takes you to forest",
+    audio: "",
+    image: musicHealingTrack4,
+  },
+];
+
 export default function MusicalHealingTracks() {
-  const musicHealingTracks = [
-    {
-      name: "Aadhyatma",
-      desc: "Spirituality. (Through the notes of Raag Bhairavi)",
-      audio: "https://api.wleness.com/static/audio/aadhyatama.mp3",
-      image: musicHealingTrack1,
-    },
-    {
-      name: "Mandar Ki Thaap",
-      desc: "Folk Percussion instrument , along with humming",
-      audio: "https://api.wleness.com/static/audio/mandar-ki-thaap.mp3",
-      image: musicHealingTrack2,
-    },
-    {
-      name: "Pain, Visualisation",
-      desc: "The track is to deviate from any pain perception",
-      audio:
-        "https://api.wleness.com/static/audio/pain-visualization-sound.mp3",
-      image: musicHealingTrack3,
-    },
-    {
-      name: "To The Nature",
-      desc: "Intermittent mandar sound from afar which takes you to forest",
-      audio: "https://api.wleness.com/static/audio/to-the-nature.mp3",
-      image: musicHealingTrack4,
-    },
-  ];
-
-  const [activeIndex, setActiveIndex] = useState(null);
-  const [audioElements, setAudioElements] = useState([]);
-
-  if (audioElements.length == 0) {
-    const allElements = musicHealingTracks.map(({ audio }) => {
-      return new Audio(audio);
-    });
-    setAudioElements(allElements);
-  }
-  console.log(audioElements);
-
-  const togglePlay = (index) => {
-    if (index === activeIndex) {
-      setActiveIndex(null);
-    } else {
-      if (activeIndex !== null) {
-        setActiveIndex(null); // Pause the currently playing audio
-      }
-      setActiveIndex(index);
-    }
-  };
-
   return (
     <>
       <ActivityHeader
@@ -91,16 +68,7 @@ export default function MusicalHealingTracks() {
 
         <div className="grid gap-y-16 md:grid-cols-2 md:gap-x-4 xl:grid-cols-4 xl:gap-10">
           {musicHealingTracks.map((value, i) => {
-            console.log(audioElements);
-            return (
-              <MusicTracksCard
-                data={value}
-                key={i}
-                audio={audioElements[i]}
-                isPlaying={i === activeIndex}
-                togglePlay={() => togglePlay(i)}
-              />
-            );
+            return <MusicTracksCard key={i} data={value} />;
           })}
         </div>
       </section>
