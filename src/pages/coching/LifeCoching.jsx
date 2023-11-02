@@ -4,6 +4,7 @@ import { lifeStyleCoachingFaqs } from "../../data/faqs";
 import { lifecoching, wlenessLifeCoaching } from "../../data";
 import { lifeCoachingHeader, rectangle2, rectangle3 } from "../../assets";
 import LifeCoachingForm from "../../components/Forms/LifecoachingForm";
+import CoachRequestForm from "../../components/Forms/CoachRequestForm";
 
 const results = [
   [
@@ -172,6 +173,7 @@ export default function LifeCoching() {
 
       <FaqWithImage data={lifeStyleCoachingFaqs} />
       <LifeCoachingForm isOpen={lifecoachingForm} onClose={toggleForm} />
+      <CoachRequestForm name="Life Coaching" />
     </>
   );
 }
