@@ -73,16 +73,27 @@ import UserDashboardLayout from "./components/layout/UserDashboardLayout";
 import DoctorsPayment from "./pages/Dashboard/DoctorsPayment";
 import UserDashboardHistory from "./components/UserDashboardHistory";
 import MusicalHealingTracks from "./pages/Services/MusicalHealingTracks";
+import axios from "axios";
+import xmlFile from "/sitemap.xml";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
-  // // Disable right click on website
-  // function handleContextMenu(e) {
-  //   e.preventDefault(); // prevents the default right-click menu from appearing
-  // }
-  // // add the event listener to the component's root element
-  // const rootElement = document.getElementById("root");
-  // rootElement.addEventListener("contextmenu", handleContextMenu);
+  // Disable right click on website
+  function handleContextMenu(e) {
+    e.preventDefault(); // prevents the default right-click menu from appearing
+  }
+  // add the event listener to the component's root element
+  const rootElement = document.getElementById("root");
+  rootElement.addEventListener("contextmenu", handleContextMenu);
+
+  // Serve xml file
+  axios
+    .get(xmlFile, {
+      "Content-Type": "application/xml; charset=utf-8",
+    })
+    .then((response) => {
+      console.log("Your xml file as string", response.data);
+    });
 
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
   const activitiesMenu = activities.map((value, index) => {
