@@ -8,35 +8,52 @@ import {
   ocdHeader,
 } from "../../assets";
 import MusicTracksCard from "../../components/Cards/MusicTracksCard";
+import { useNavigate } from "react-router-dom";
 
 const musicHealingTracks = [
   {
     name: "Aadhyatma",
     desc: "Spirituality. (Through the notes of Raag Bhairavi)",
-    audio: "",
+    audio: "https://youtu.be/u9k6DJQUC24",
     image: musicHealingTrack1,
   },
   {
     name: "Mandar Ki Thaap",
     desc: "Folk Percussion instrument , along with humming",
-    audio: "",
+    audio: "https://youtu.be/2S4PLSQlx3c",
     image: musicHealingTrack2,
   },
   {
     name: "Pain, Visualisation",
     desc: "The track is to deviate from any pain perception",
-    audio: "",
+    audio: "https://youtu.be/LoqrKEAU_GU",
     image: musicHealingTrack3,
   },
   {
     name: "To The Nature",
     desc: "Intermittent mandar sound from afar which takes you to forest",
-    audio: "",
+    audio: "https://youtu.be/qFK2nGvTBbQ",
     image: musicHealingTrack4,
   },
 ];
 
-export default function MusicalHealingTracks() {
+export default function MusicalHealingTracks({ token }) {
+  const navigate = useNavigate();
+
+  const validateLogin = (url) => {
+    // Redirect user if loggedin
+    if (token == null || token == "" || token == undefined) {
+      // Navigate to login
+      navigate("/login", {
+        state: {
+          successMessage: "Please Login",
+        },
+      });
+    } else {
+      window.open(url, "_blank");
+    }
+  };
+
   return (
     <>
       <ActivityHeader
@@ -68,7 +85,9 @@ export default function MusicalHealingTracks() {
 
         <div className="grid gap-y-16 md:grid-cols-2 md:gap-x-4 xl:grid-cols-4 xl:gap-10">
           {musicHealingTracks.map((value, i) => {
-            return <MusicTracksCard key={i} data={value} />;
+            return (
+              <MusicTracksCard key={i} data={value} onclick={validateLogin} />
+            );
           })}
         </div>
       </section>

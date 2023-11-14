@@ -17,7 +17,12 @@ export default function MusicTracksCard(props) {
         </div>
         <figcaption className="flex flex-col items-center justify-between gap-y-2 px-2 py-5 text-center">
           <p className="text-center font-semibold">{props.data.desc}</p>
-          <button className="btn-one !py-2">Play Now</button>
+          <button
+            onClick={() => props.onclick(props.data.audio)}
+            className="btn-one !py-2"
+          >
+            Play Now
+          </button>
         </figcaption>
       </figure>
     </div>

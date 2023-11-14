@@ -92,7 +92,7 @@ function App() {
       "Content-Type": "application/xml; charset=utf-8",
     })
     .then((response) => {
-      console.log("Your xml file as string", response.data);
+      console.log("Your xml file as string");
     });
 
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
@@ -218,7 +218,7 @@ function App() {
           path="/services/music-healing/tracks"
           element={
             <Layout>
-              <MusicalHealingTracks />
+              <MusicalHealingTracks token={token} />
             </Layout>
           }
         />
