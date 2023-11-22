@@ -25,7 +25,7 @@ export const assessmentFeelings = [
   [assessmentIconAdhd, "ADHD"],
   [assessmentIconOcd, "OCD"],
   [assessmentIconBiopolarDisorder, "Bipolar Disorder"],
-  [assessmentIconLgbt, "LGBTQ"],
+  [assessmentIconLgbt, "Paranoia"],
 ];
 
 export const experiencingIssue = [
