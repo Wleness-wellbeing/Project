@@ -30,6 +30,7 @@ function Root() {
         <CookieConsent
           debug={true}
           hideOnAccept={true}
+          enableDeclineButton
           onAccept={handleAcceptCookies}
         >
           This website uses cookies to enhance the user experience.

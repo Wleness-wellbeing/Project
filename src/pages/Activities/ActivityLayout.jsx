@@ -6,6 +6,7 @@ import ActivityHeader from "../../components/ActivityHeader";
 import ActivityTechniques from "../../components/ActivityTechniques";
 import ActivityForm from "../../components/Forms/ActivityForm";
 import useEnquiryForm from "../../hooks/useEnquiryForm";
+import ThankYou from "../../components/Modals/ThankYou";
 
 export default function ActivityLayout(props) {
   const ref = useRef(null);
@@ -42,6 +43,7 @@ export default function ActivityLayout(props) {
         isOpen={enquiryForm}
         onClose={toggleForm}
       />
+      {/* <ThankYou /> */}
     </>
   );
 }
