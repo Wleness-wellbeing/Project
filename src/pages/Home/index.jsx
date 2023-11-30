@@ -262,6 +262,7 @@ export default function Home() {
             {featuredIn.map((value, i) => {
               return (
                 <Link
+                  key={i}
                   to={value[1]}
                   className="place-self-center"
                   target="_blank"

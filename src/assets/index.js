@@ -792,8 +792,13 @@ import symptomsAnger from "./images/issues/symptoms/symptoms-anger.png";
 import symptomsRelationship from "./images/issues/symptoms/symptoms-relationship.png";
 import symptomsParenting from "./images/issues/symptoms/symptoms-parenting.png";
 import symptomsLgbtq from "./images/issues/symptoms/symptoms-lgbtq.png";
+// Issues >> Results
+import resultStress from "./images/issues/results/result-stress.jpg";
+import resultAdhd from "./images/issues/results/result-adhd.jpg";
 
-//=============dashboard-icon=====================================================//
+export { resultStress, resultAdhd };
+
+// ==================== Dashboard Icon ====================
 import AngryIcon from "./images/dashboard/AngryIcon.png";
 import EmotionalIcon from "./images/dashboard/EmotionalIcon.png";
 import HappyIcon from "./images/dashboard/HappyIcon.png";
@@ -1224,7 +1229,7 @@ export {
   lifeCoachingOvercomingfear,
 };
 
-// =======executive-coaching=========//
+// ======= Executive Coaching=========//
 import executiveCoachingHeader from "./images/executiveCoching/executive-coaching-header.png";
 import header from "./images/executiveCoching/header1.png";
 import image2 from "./images/executiveCoching/image2.png";
@@ -1255,4 +1260,17 @@ export {
   whyExecutiveCoaching4,
   whyExecutiveCoaching5,
   whyExecutiveCoaching6,
+};
+
+// Assessment
+import AssessmentStressIcon from "./images/icons/assessment-stress-icon.png";
+import AssessmentDepressionIcon from "./images/icons/assessment-depression-icon.png";
+import AssessmentAnxietyIcon from "./images/icons/assessment-anxiety-icon.png";
+import AssessmentAdhdIcon from "./images/icons/assessment-stress-icon.png";
+
+export {
+  AssessmentStressIcon,
+  AssessmentDepressionIcon,
+  AssessmentAnxietyIcon,
+  AssessmentAdhdIcon,
 };

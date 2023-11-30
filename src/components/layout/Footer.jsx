@@ -122,7 +122,7 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link className="text-xs md:text-sm" to="">
+                    <Link className="text-xs md:text-sm" to="/assessment">
                       Assessments
                     </Link>
                   </li>

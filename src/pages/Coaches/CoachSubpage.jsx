@@ -22,6 +22,7 @@ export default function CoachSubpage(props) {
         lists={props.data.whyCoach.reason}
       />
       <CoachExpertise
+        heading="Expertise"
         image={props.data.expertise.image}
         lists={props.data.expertise.list}
       />

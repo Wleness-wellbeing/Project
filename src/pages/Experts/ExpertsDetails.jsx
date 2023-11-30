@@ -1,35 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { expertClient, featuredPatient } from "../../assets";
 import DoctorsCard from "../../components/DoctorsCard";
-import { EXPERTS_URI } from "../../data/api";
 import HappyClient from "../../components/HappyClient";
 import { expertsClients } from "../../data/clients";
-import axios from "axios";
-import Assessment from "../../components/Assessment";
+import getExperts from "./getExperts";
 
 export default function ExpertsDetails() {
-  const [doctorDetails, setDoctorDetails] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { status, doctorDetails } = getExperts();
 
-  useEffect(() => {
-    // Make a GET request using Axios
-    axios
-      .get(EXPERTS_URI)
-      .then((response) => {
-        // Handle the successful response
-        setDoctorDetails(response.data["experts"]);
-        setLoading(false);
-      })
-      .catch((error) => {
-        // Handle errors
-        console.error("Error fetching doctor details:", error);
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) {
+  if (!status) {
     return <div className="mb-5 text-center">Loading...</div>;
   }
 

@@ -75,6 +75,9 @@ import UserDashboardHistory from "./components/UserDashboardHistory";
 import MusicalHealingTracks from "./pages/Services/MusicalHealingTracks";
 import axios from "axios";
 import xmlFile from "/sitemap.xml";
+import MainAssessment from "./pages/Assessment";
+import AssessmentQuestions from "./pages/Assessment/AssessmentQuestions";
+import AssessmentResult from "./pages/Assessment/AssessmentResult";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -151,6 +154,30 @@ function App() {
           element={
             <Layout>
               <AboutUs />
+            </Layout>
+          }
+        />
+        <Route
+          path="/assessment"
+          element={
+            <Layout>
+              <MainAssessment />
+            </Layout>
+          }
+        />
+        <Route
+          path="/assessment/:slug"
+          element={
+            <Layout>
+              <AssessmentQuestions />
+            </Layout>
+          }
+        />
+        <Route
+          path="/assessment/result"
+          element={
+            <Layout>
+              <AssessmentResult />
             </Layout>
           }
         />

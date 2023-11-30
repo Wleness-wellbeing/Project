@@ -1,6 +1,7 @@
 import React from "react";
 // Data
 import { mainHeaderImage } from "../../assets";
+import { Link } from "react-router-dom";
 
 export default function MainHeader({ openAssessmentModal }) {
   return (
@@ -27,12 +28,24 @@ export default function MainHeader({ openAssessmentModal }) {
             and soul with our professionally curated services customized by
             industry experts just for you!
           </h3>
-          <button
-            className="mx-auto mt-2 block w-fit rounded-full bg-primary-400 px-6 py-2.5 text-center text-sm font-semibold text-white transition-all hover:bg-primary-300 lg:mx-0 lg:px-8 lg:text-base"
-            onClick={openAssessmentModal}
-          >
-            Schedule an appointment
-          </button>
+
+          <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:py-6 lg:justify-start lg:gap-6">
+            <button
+              className="block w-full rounded-full bg-primary-400 px-6 py-2.5 text-center text-sm font-semibold text-white transition-all hover:bg-primary-300 md:w-fit lg:mx-0 lg:px-8 lg:text-base"
+              onClick={openAssessmentModal}
+            >
+              Book appointment
+            </button>
+            <Link
+              to="/assessment"
+              className="block w-full rounded-full border-2 border-primary-400 px-6 py-2 text-center text-sm font-semibold text-primary-400 transition-all hover:bg-primary-400 hover:text-white md:w-fit lg:mx-0 lg:px-8 lg:text-base"
+            >
+              Assessment Test
+            </Link>
+          </div>
+          {/* <small className="ml-3 mt-3 inline-block border-b-2 border-primary-300 font-semibold text-gray-600 hover:text-primary-400">
+            <Link to="/assessment">Assessment Test</Link>
+          </small> */}
         </div>
       </div>
     </header>

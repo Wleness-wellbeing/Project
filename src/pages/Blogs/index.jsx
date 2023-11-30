@@ -8,65 +8,16 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 // Component
 import BlogCard from "../../components/Cards/BlogCard";
-import {
-  issuesBlogs,
-  medicalBlogs,
-  navigatingMidlifeForWomenBlogs,
-} from "../../data/blogs";
-import { BLOGS_URI } from "../../data/api";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import getBlogs from "./getBlogs";
 
 export default function Blogs() {
-  const [blogPosts, setBlogPosts] = useState([]);
-  const [allBlogPosts, setAllBlogPosts] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [recentPosts, setRecentPosts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { blogPosts, categories, recentPosts, status, handleBlogsFilter } =
+    getBlogs();
 
-  useEffect(() => {
-    // Make a GET request using Axios
-    axios
-      .get(BLOGS_URI)
-      .then((response) => {
-        if (response.status == 200) {
-          setAllBlogPosts(response.data.blogs);
-          setBlogPosts(response.data.blogs);
-          setRecentPosts(response.data.recent_blogs);
-
-          setLoading(false);
-        } else {
-          console.log(response);
-        }
-      })
-      .catch((error) => {
-        // Handle errors
-        console.error("Error fetching doctor details:", error);
-        setLoading(false);
-      });
-  }, []);
-
-  // Filter categories
-  allBlogPosts.map((value) => {
-    if (!categories.includes(value.category)) {
-      // filters.push(value.category);
-      setCategories([...categories, value.category]);
-    }
-  });
-
-  if (loading) {
+  if (!status) {
     return <div className="mb-5 text-center">Loading...</div>;
   }
-  const handleBlogsFilter = (index) => {
-    if (index == 0) {
-      setBlogPosts(allBlogPosts);
-    } else {
-      const filteredPosts = allBlogPosts.filter((posts) => {
-        return posts.category === index;
-      });
-      setBlogPosts(filteredPosts);
-    }
-  };
   return (
     <>
       {/* ========== Header ============= */}

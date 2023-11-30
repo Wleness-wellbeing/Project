@@ -39,6 +39,7 @@ export const UPDATE_SLOTS = URI + "experts/update-slots";
 export const COACH_CALLBACK_URI = URI + "coach-callback-requests";
 export const LIFE_COACHING_URI = URI + "life-coaching";
 export const GENERAL_ENQUIRY_URI = URI + "general-enquiries";
+export const ASSESSMENT_RESULT = URI + "assessment";
 
 // Blogs
 export const BLOGS_URI = URI + "blogs";
