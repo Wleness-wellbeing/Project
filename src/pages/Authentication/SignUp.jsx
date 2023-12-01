@@ -6,6 +6,7 @@ import { GOOGLE_SIGNUP_URI, SIGNUP_USER_URI, VERIFY_OTP } from "../../data/api";
 import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 import { signInWithPopup } from "firebase/auth";
 import SocialAuthButtons from "../../components/Buttons/SocialAuthButtons";
+import OtpModal from "../../components/Auth/OtpModal";
 
 export default function Signup({ setToken, token }) {
   const [otp, setOTP] = useState(null);
@@ -322,36 +323,14 @@ export default function Signup({ setToken, token }) {
         </div>
       </div>
 
-      <div
-        className={`fixed inset-0 z-20 grid w-full place-items-center bg-black/40 ${
-          OTPModal ? " block" : " hidden"
-        }`}
-      >
-        <div className="rounded-lg bg-white px-8 py-5 shadow-lg">
-          <h2 className="text-center text-xl font-semibold">Enter Your OTP</h2>
-          <small className="block text-center text-red-500">{otpAlert}</small>
-          <form className="my-4 block" onSubmit={handleVerifyOTP}>
-            <input
-              type="tel"
-              maxLength={4}
-              name="otp"
-              id="otp"
-              value={otp}
-              onChange={(e) => setOTP(e.target.value)}
-              className="form-input text-center tracking-widest"
-            />
-
-            <div>
-              <small className="mb-1 block text-center">
-                OTP sent to {phone}
-              </small>
-              <button className="btn-one !block !w-full !rounded-lg">
-                Verify OTP
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
+      <OtpModal
+        isOpen={OTPModal}
+        msg={otpAlert}
+        submit={handleVerifyOTP}
+        otp={otp}
+        setOTP={setOTP}
+        phone={phone}
+      />
     </>
   );
 }

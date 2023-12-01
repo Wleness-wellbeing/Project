@@ -5,27 +5,118 @@ import {
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link, useParams } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 // Data
 import { modes, timings } from "../../data/doctors";
-import axios from "axios";
-import { EXPERTS_URI } from "../../data/api";
+import { EXPERTS_URI, VERIFY_OTP } from "../../data/api";
 import { profileMask, swatiGhoshalPortrait } from "../../assets";
-import AppointmentComponent from "../../components/Appointment";
+import SessionMode from "../../components/icon/SessionMode";
+import BookingHeading from "../../components/Appointment/BookingHeading";
+import SessionDurationBtn from "../../components/Buttons/SessionDurationBtn";
+import SessionPricingItem from "../../components/list/SessionPricingItem";
+import AvailableSlots from "../../components/Appointment/AvailableSlots";
+import Checkout from "./Checkout";
+import OtpModal from "../../components/Auth/OtpModal";
 
 export default function Appointment() {
   const { slug } = useParams();
+
+  const availableTimeSlots = [
+    {
+      month: "January",
+      year: 2023,
+      slots: [
+        {
+          date: 10,
+          time: ["10:00", "12:00", "4:00", "02:00", "4:00", "02:00"],
+        },
+        {
+          date: 11,
+          time: ["4:00", "3:00", "1:00"],
+        },
+        {
+          date: 12,
+          time: [
+            "1:00",
+            "2:00",
+            "3:00",
+            "4:00",
+            "5:00",
+            "6:00",
+            "4:00",
+            "02:00",
+            "4:00",
+            "02:00",
+          ],
+        },
+      ],
+    },
+    {
+      month: "February",
+      year: 2023,
+      slots: [
+        {
+          date: 11,
+          time: ["11:00", "12:00", "13:00", "14:00"],
+        },
+        {
+          date: 12,
+          time: ["14:00", "2:00", "21:00", "22:00", "24:00", "43:00"],
+        },
+      ],
+    },
+    {
+      month: "March",
+      year: 2023,
+      slots: [
+        {
+          date: 25,
+          time: ["10:00", "12:00", "4:00", "02:00", "4:00", "02:00"],
+        },
+        {
+          date: 26,
+          time: ["10:00", "12:00", "4:00", "02:00", "4:00", "02:00"],
+        },
+      ],
+    },
+    {
+      month: "April",
+      year: 2023,
+      slots: [
+        {
+          date: 25,
+          time: ["10:00", "12:00", "4:00", "02:00", "4:00", "02:00"],
+        },
+        {
+          date: 26,
+          time: ["10:00", "12:00", "4:00", "02:00", "4:00", "02:00"],
+        },
+      ],
+    },
+  ];
   // Set Profile Data
   const [profileDetails, setProfileDetails] = useState({});
   const [loading, setLoading] = useState(true);
   // Set Form Data
   const [selectDuration, setSelectDuration] = useState(timings[0]["value"]);
   const [setMode, setSelectMode] = useState(modes[0]["value"]);
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [index, setIndex] = useState(0);
+  const [selectedDate, setSelectedDate] = useState(
+    availableTimeSlots[index].slots[0].date +
+      " " +
+      availableTimeSlots[index].month +
+      " " +
+      availableTimeSlots[index].year,
+  );
   const [selectedTime, setSelectedTime] = useState(null);
   const [checkout, setCheckout] = useState(false);
-  const [alertMessage, setAlertMessage] = useState("");
+  const [selectedPlan, setSelectedPlan] = useState(null);
+  // Mobile verification
+  const [mobileNumber, setMobileNumber] = useState("");
+  const [otp, setOTP] = useState(null);
+  const [OTPModal, setOTPModal] = useState(false);
+  const [otpAlert, setOTPAlert] = useState("");
 
   // Get doctor profile data
   useEffect(() => {
@@ -48,10 +139,12 @@ export default function Appointment() {
     return <div className="mb-5 text-center">Loading...</div>;
   }
 
+  // Set session duration
   const handleDuration = (event) => {
     setSelectDuration(event.target.id);
   };
 
+  // Set session modes
   const handleModes = (event) => {
     setSelectMode(event.target.id);
   };
@@ -69,22 +162,35 @@ export default function Appointment() {
 
   const handleProceed = (e) => {
     e.preventDefault();
-    console.log("successful");
     // Validate if mode, duration, session and slots are filled
-    if (selectedDate == null || selectedTime == null) {
-      // Validate date and time
-      setAlertMessage("Please select date & time");
-      return null;
-    } else {
-      setAlertMessage("");
-    }
     openCheckout();
+  };
+
+  // Handle form submission
+  const handleOTPVerification = (e) => {
+    e.preventDefault();
+    setOTPModal(true);
+    if (otp == null) {
+      setOTPAlert("Please Enter Your OTP");
+    } else {
+      axios
+        .post(VERIFY_OTP, { otp: otp })
+        .then((response) => console.log(response))
+        .catch((error) => {
+          setOTPAlert(error.data.message);
+        });
+    }
   };
 
   const handleCheckout = (e) => {
     e.preventDefault();
-    console.log("successful");
+
+    axios
+      .post("/sendOtp", { number: mobileNumber })
+      .then((response) => console.log(response))
+      .catch((error) => console.log(error));
   };
+
   return (
     <>
       <section className="relative">
@@ -147,248 +253,117 @@ export default function Appointment() {
                 <p className="para mb-8 text-center">
                   Book an appointment to connect with a mental health expert
                 </p>
-                <div className="mb-2 grid justify-center text-center">
-                  <h5 className="mb-5 text-xl font-semibold">
-                    1. Select session mode
-                  </h5>
+
+                {/* Select session mode */}
+                <div className="mb-8 grid justify-center text-center">
+                  <BookingHeading heading="1. Select session mode" />
                   <div className="mb-4 flex justify-between gap-x-2 lg:mb-0 lg:gap-x-5">
                     {modes.map((value, i) => {
                       return (
-                        <label
+                        <SessionMode
                           key={i}
-                          htmlFor={value.value}
-                          className="block w-full py-2.5 text-center font-semibold text-primary-300"
-                        >
-                          <input
-                            type="radio"
-                            name="duration"
-                            id={value.value}
-                            checked={setMode == value.value}
-                            onChange={handleModes}
-                            className="hidden"
-                          />
-                          <FontAwesomeIcon
-                            icon={value.icon}
-                            className={`mb-1 cursor-pointer rounded-full border-2 border-primary-300 p-5 text-xl ${
-                              setMode == value.value
-                                ? " bg-primary-300 text-white "
-                                : ""
-                            }`}
-                          />
-                          <span className="block text-center">
-                            {value.text}
-                          </span>
-                        </label>
+                          data={value}
+                          setMode={setMode}
+                          handleModes={handleModes}
+                        />
                       );
                     })}
                   </div>
                 </div>
 
-                <div className="mb-4 flex flex-col items-center justify-center">
-                  <h5 className="my-5 text-center text-xl font-semibold">
-                    2. Select session duration
-                  </h5>
+                {/* Select session duration */}
+                <div className="mb-8 flex flex-col items-center justify-center">
+                  <BookingHeading heading="2. Select session duration" />
                   <div className="mb-4 grid grid-cols-3 gap-x-2 lg:mb-0 lg:gap-x-3">
                     {timings.map((value, i) => {
                       return (
-                        <label
+                        <SessionDurationBtn
                           key={i}
-                          htmlFor={value.value}
-                          className={
-                            selectDuration == value.value
-                              ? "block w-full cursor-pointer rounded-2xl bg-primary-300 px-5 py-2.5 text-center font-semibold text-white "
-                              : "block w-full cursor-pointer rounded-2xl border-2 border-primary-300 px-5 py-2.5 text-center font-semibold text-primary-300"
-                          }
-                        >
-                          <input
-                            type="radio"
-                            name="duration"
-                            id={value.value}
-                            checked={selectDuration == value.value}
-                            onChange={handleDuration}
-                            className="hidden"
-                          />
-                          <span className="block">{value.text}</span>
-                        </label>
+                          data={value}
+                          selectDuration={selectDuration}
+                          handleDuration={handleDuration}
+                        />
                       );
                     })}
                   </div>
                 </div>
+
+                {/* Select session plan */}
                 <div className="mb-8">
-                  <h5 className="mb-2 mt-10 text-center text-xl font-semibold">
-                    Copy the code below and apply it to avail 50% off on your
-                    first session.
-                  </h5>
-                  <div className="border-b-2 border-dotted border-slate-400 py-4">
-                    <p className="font-medium">Get a single session</p>
-                    <label
-                      htmlFor=""
-                      className="flex items-center justify-between text-lg font-bold"
-                    >
-                      <span>1 Session</span>
-                      <span className="flex items-center space-x-2">
-                        <span>Rs. {profileDetails.price}/session</span>
-                        <input
-                          type="radio"
-                          name="session"
-                          className="cursor-pointer"
-                        />
-                      </span>
-                    </label>
-                  </div>
+                  <BookingHeading heading="3. Select session plan" />
+                  {profileDetails.packages.map((value, i) => {
+                    return (
+                      <SessionPricingItem
+                        data={value}
+                        key={i}
+                        selectPlan={() =>
+                          setSelectedPlan({
+                            plan: value.package,
+                            price: value.price,
+                          })
+                        }
+                        selectedPlan={selectedPlan?.plan === value.package}
+                      />
+                    );
+                  })}
                 </div>
 
                 {/* Choose your slots */}
                 <div className="mb-8 self-stretch lg:gap-x-5">
-                  <h2 className="mb-4 text-center text-3xl font-bold lg:mb-8">
-                    Choose Your Slot
-                  </h2>
-                  <AppointmentComponent
+                  <BookingHeading heading="4. Available slots" />
+
+                  <AvailableSlots
                     date={selectedDate}
                     time={selectedTime}
                     updateDate={setSelectedDate}
                     updateTime={setSelectedTime}
+                    slots={availableTimeSlots}
+                    index={index}
+                    setIndex={setIndex}
                   />
                 </div>
-                <p className="mb-4 text-center text-lg font-semibold text-red-500">
-                  {alertMessage}
-                </p>
+
                 <div className="mb-8 text-center">
-                  <button type="submit" className="btn-one !rounded-lg">
+                  <button
+                    type="submit"
+                    disabled={
+                      selectedPlan == null ||
+                      selectedDate == null ||
+                      selectedTime == null
+                        ? !checkout
+                        : checkout
+                    }
+                    className="btn-one !rounded-lg disabled:cursor-not-allowed disabled:bg-gray-500"
+                  >
                     Proceed
                   </button>
                 </div>
               </form>
             ) : (
-              <div className="py-6">
-                <div className="mb-4 flex items-center justify-between text-center md:flex-row ">
-                  <span className="hidden lg:block"></span>
-                  <h2 className="text-3xl font-bold">Confirm Booking</h2>
-                  <span onClick={closeCheckout} className="cursor-pointer">
-                    <FontAwesomeIcon
-                      icon={faCircleLeft}
-                      className="text-3xl hover:text-slate-600"
-                    />
-                  </span>
-                </div>
-
-                <div>
-                  <h4 className="mb-2 text-xl font-semibold">
-                    Session Details:
-                  </h4>
-                  <div className="flex gap-x-2 lg:gap-x-5">
-                    <div className="w-1/2 rounded-lg border-2 border-primary-300 px-4 py-4 text-center font-bold md:w-60 lg:px-8">
-                      <span className="text-center">
-                        <FontAwesomeIcon icon={faVideo} /> <span>Mode</span>
-                      </span>
-                      <span className="my-2 flex justify-between text-sm font-semibold text-slate-400 lg:text-base">
-                        <span>video</span>
-                        <span>45 min</span>
-                      </span>
-                      <span
-                        className="cursor-pointer text-center underline transition-all hover:text-primary-300"
-                        onClick={closeCheckout}
-                      >
-                        Change
-                      </span>
-                    </div>
-
-                    <div className="w-1/2 rounded-lg border-2 border-primary-300 px-4 py-4 text-center font-bold md:w-60 lg:px-8">
-                      <span className="text-center">
-                        <FontAwesomeIcon icon={faCalendar} /> <span>Date</span>
-                      </span>
-                      <span className="my-2 flex justify-between text-sm font-semibold text-slate-400 lg:text-base">
-                        <span>10th Aug, 23</span>
-                        <span>1:00 PM</span>
-                      </span>
-                      <span
-                        className="cursor-pointer text-center underline transition-all hover:text-primary-300"
-                        onClick={closeCheckout}
-                      >
-                        Change
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="my-8">
-                    <div className="border-b-4 border-dotted pb-2">
-                      <span className="flex justify-between rounded-lg bg-slate-200 px-4 py-1 font-semibold">
-                        <span>#FIRSTSESSION</span>
-                        <span>
-                          <FontAwesomeIcon icon={faXmark} />
-                        </span>
-                      </span>
-                    </div>
-                    <p className="font-semibold text-primary-300">
-                      Coupon applied! Enjoy your discount!
-                    </p>
-                  </div>
-
-                  <div>
-                    <h4 className="mb-2 text-xl font-semibold">
-                      Payment Details:
-                    </h4>
-                    <ul className="border-b-2 border-dashed border-slate-400 pb-4">
-                      <li className="flex justify-between">
-                        <span className="font-medium">Price for 1 session</span>
-                        <span className="font-medium">Rs. 999</span>
-                      </li>
-                      <li className="mb-2 flex justify-between">
-                        <span className="font-medium">Discount</span>
-                        <span className="font-medium">Rs. 99</span>
-                      </li>
-                      <li className="flex justify-between">
-                        <span className="text-xl font-bold">Final Amount</span>
-                        <span className="font-medium">Rs. 900</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <form className="pt-4" onSubmit={handleCheckout}>
-                    <h4 className="mb-2 text-xl font-semibold">
-                      Client Details:
-                    </h4>
-                    <input
-                      type="text"
-                      name=""
-                      placeholder="Enter Your Name"
-                      className="form-input"
-                    />
-                    <div className="flex gap-x-4">
-                      <input
-                        type="text"
-                        className="form-input inline-block !w-20"
-                        value="91+"
-                        readOnly
-                      />
-                      <label
-                        htmlFor="phone"
-                        className="form-input !flex !w-full justify-between"
-                      >
-                        <input
-                          type="tel"
-                          className="block w-full outline-none"
-                          placeholder="Phone"
-                          name="phone"
-                          id="phone"
-                        />
-                        <span className="font-semibold text-primary-400">
-                          Verify
-                        </span>
-                      </label>
-                    </div>
-                    <div className="mt-3 text-center">
-                      <button className="btn-one !rounded-lg" type="submit">
-                        Make Payment
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
+              <Checkout
+                back={closeCheckout}
+                mode={setMode}
+                duration={selectDuration}
+                date={selectedDate}
+                time={selectedTime}
+                plan={selectedPlan}
+                handleCheckout={handleCheckout}
+                setMobile={setMobileNumber}
+                mobileNumber={mobileNumber}
+              />
             )}
           </div>
         </div>
       </section>
+
+      <OtpModal
+        isOpen={OTPModal}
+        msg={otpAlert}
+        verifyOtp={handleOTPVerification}
+        otp={otp}
+        setOTP={setOTP}
+        phone={mobileNumber}
+      />
     </>
   );
 }

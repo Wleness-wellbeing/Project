@@ -56,14 +56,10 @@ import StudentsPolicy from "./pages/Policies/StudentsPolicy";
 import ExpertProfile from "./pages/Experts/ExpertProfile";
 import Gauth from "./pages/Authentication/Gauth";
 import FacebookAuth from "./pages/Authentication/FacebookAuth";
-import MeditationCheckout from "./pages/Appointment/MeditationCheckout";
-import YogaCheckout from "./pages/Appointment/YogaCheckout";
-import SadhnaCheckout from "./pages/Appointment/SadhnaCheckout";
 import Career from "./pages/Career";
 import Consent from "./pages/Policies/Consent";
 import { coachesData } from "./data/coach";
 import CoachSubpage from "./pages/Coaches/CoachSubpage";
-import ApplyForm from "./components/JoinUs/ApplyForm";
 import TabSwitcher from "./components/SwitchTab";
 import ExpertsLogin from "./pages/Authentication/ExpertsLogin";
 import ForgotPassword from "./pages/Authentication/Forget";
@@ -87,7 +83,7 @@ function App() {
   }
   // add the event listener to the component's root element
   const rootElement = document.getElementById("root");
-  rootElement.addEventListener("contextmenu", handleContextMenu);
+  // rootElement.addEventListener("contextmenu", handleContextMenu);
 
   // Serve xml file
   axios
@@ -306,42 +302,10 @@ function App() {
           }
         />
         <Route
-          path="/appointment/checkout"
-          element={
-            <Layout>
-              <Appointment />
-            </Layout>
-          }
-        />
-        <Route
           path="/issues"
           element={
             <Layout>
               <Issues />
-            </Layout>
-          }
-        />
-        <Route
-          path="/meditation-checkout"
-          element={
-            <Layout>
-              <MeditationCheckout />
-            </Layout>
-          }
-        />
-        <Route
-          path="/yoga-checkout"
-          element={
-            <Layout>
-              <YogaCheckout />
-            </Layout>
-          }
-        />
-        <Route
-          path="/sadhna-checkout"
-          element={
-            <Layout>
-              <SadhnaCheckout />
             </Layout>
           }
         />
