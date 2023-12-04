@@ -132,7 +132,7 @@ export default function AssessmentQuestions() {
                 {questions ? questions.length : 0}
               </small>
 
-              <h2 className="col-span-2 mt-6 justify-self-center text-center text-xl font-bold text-primary-300 lg:col-span-1 lg:mt-0 xl:text-2xl">
+              <h2 className="heading-primary col-span-2 mt-6 justify-self-center text-center text-xl font-bold text-primary-300 lg:col-span-1 lg:mt-0 xl:text-2xl">
                 {activeQuestion ? activeQuestion : questions && questions[0]}
               </h2>
 
@@ -156,7 +156,7 @@ export default function AssessmentQuestions() {
                       checked={currentAnswer == value}
                       onChange={() => handleUpdateAnswer(value)}
                     />
-                    <span className="ml-2 inline-block text-center font-semibold">
+                    <span className="ml-2 inline-block text-center text-sm font-semibold lg:text-base">
                       {value}
                     </span>
                   </label>
@@ -167,7 +167,7 @@ export default function AssessmentQuestions() {
             <button
               onClick={() => handleContinue()}
               disabled={currentAnswer == ""}
-              className="mx-auto flex items-center rounded-lg bg-primary-300 px-8 py-3.5 text-white shadow-md shadow-primary-50 disabled:cursor-not-allowed disabled:bg-gray-500 disabled:shadow-none lg:px-12"
+              className="mx-auto flex items-center rounded-lg bg-gray-500 px-8 py-3.5 text-white shadow-md shadow-gray-50 disabled:cursor-not-allowed disabled:bg-primary-300 disabled:shadow-none lg:px-12"
             >
               <span className="mr-2 font-semibold">Continue</span>
               <FontAwesomeIcon icon={faArrowRight} />

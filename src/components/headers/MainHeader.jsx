@@ -23,29 +23,28 @@ export default function MainHeader({ openAssessmentModal }) {
           <h4 className="mb-2 text-xl font-bold text-primary-400 lg:mb-4">
             Take Care Of Yourself
           </h4>
-          <h3 className="mx-auto mb-6 text-sm font-semibold text-slate-600 md:text-base lg:mb-10 lg:text-lg">
+          <h3 className="mx-auto mb-6 pr-4 text-sm font-semibold text-slate-600 md:text-base lg:text-lg">
             Discover your journey to a better self by nurturing your mind, body
             and soul with our professionally curated services customized by
             industry experts just for you!
           </h3>
+          <button
+            className="mx-auto mb-5 block w-4/5 rounded-full bg-primary-400 px-6 py-2.5 text-center text-sm font-semibold text-white transition-all hover:bg-primary-300 md:w-fit lg:mx-0 lg:mb-8 lg:px-8 lg:text-base"
+            onClick={openAssessmentModal}
+          >
+            Book appointment
+          </button>
+          <h3 className="mx-auto mb-4 text-sm font-semibold text-slate-600 md:text-base lg:text-lg">
+            Explore your innner self, take a comprehensive self assessment and
+            get a free online therapy session
+          </h3>
 
-          <div className="flex flex-col items-center justify-center gap-4 md:flex-row md:py-6 lg:justify-start lg:gap-6">
-            <button
-              className="block w-full rounded-full bg-primary-400 px-6 py-2.5 text-center text-sm font-semibold text-white transition-all hover:bg-primary-300 md:w-fit lg:mx-0 lg:px-8 lg:text-base"
-              onClick={openAssessmentModal}
-            >
-              Book appointment
-            </button>
-            <Link
-              to="/assessment"
-              className="block w-full rounded-full border-2 border-primary-400 px-6 py-2 text-center text-sm font-semibold text-primary-400 transition-all hover:bg-primary-400 hover:text-white md:w-fit lg:mx-0 lg:px-8 lg:text-base"
-            >
-              Assessment Test
-            </Link>
-          </div>
-          {/* <small className="ml-3 mt-3 inline-block border-b-2 border-primary-300 font-semibold text-gray-600 hover:text-primary-400">
-            <Link to="/assessment">Assessment Test</Link>
-          </small> */}
+          <Link
+            to="/assessment"
+            className="mx-auto block w-4/5 rounded-full border-2 border-primary-400 px-6 py-2 text-center text-sm font-semibold text-primary-400 transition-all hover:bg-primary-400 hover:text-white md:w-fit lg:mx-0 lg:px-8 lg:text-base"
+          >
+            Self Assessment
+          </Link>
         </div>
       </div>
     </header>
