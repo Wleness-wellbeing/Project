@@ -18,6 +18,10 @@ export default function Checkout({
   handleCheckout,
   setMobile,
   mobileNumber,
+  email,
+  setEmail,
+  username,
+  setUsername,
 }) {
   return (
     <div className="py-6">
@@ -105,27 +109,49 @@ export default function Checkout({
           </ul>
         </div>
 
-        <form className="pt-4" onSubmit={handleCheckout}>
+        <form className="pt-4" onSubmit={handleCheckout} autoComplete="off">
           <h4 className="mb-2 font-semibold">Enter Mobile Number</h4>
-          <div className="flex gap-x-4">
-            {/* <input
-              type="text"
-              className="form-input inline-block !w-20"
-              value="91+"
-              readOnly
-            /> */}
+          <div className="grid grid-cols-2 gap-x-4">
+            <label
+              htmlFor="username"
+              className="form-input col-span-2  !flex !w-full justify-between"
+            >
+              <input
+                type="text"
+                className="block w-full outline-none"
+                placeholder="Enter Your Name"
+                value={username}
+                name="username"
+                id="username"
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            </label>
             <label
               htmlFor="phone"
               className="form-input !flex !w-full justify-between"
             >
               <input
-                type="number"
+                type="tel"
                 className="block w-full outline-none"
                 placeholder="Phone"
                 value={mobileNumber}
                 name="phone"
                 id="phone"
                 onChange={(e) => setMobile(e.target.value)}
+              />
+            </label>
+            <label
+              htmlFor="email"
+              className="form-input !flex !w-full justify-between"
+            >
+              <input
+                type="email"
+                className="block w-full outline-none"
+                placeholder="Email"
+                value={email}
+                name="email"
+                id="email"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </label>
           </div>

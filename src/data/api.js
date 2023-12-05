@@ -34,6 +34,7 @@ export const EXPERTS_PROFILE_URI = URI + "experts/profile/";
 export const USER_APPOINTMENTS = URI + "appointments";
 export const APPOINTMENT_BOOK_URI = URI + "book-appointment";
 export const UPDATE_SLOTS = URI + "experts/update-slots";
+export const APPOINTMENT_PAYMENT = URI + "appointments/payment";
 
 // Enquiries
 export const COACH_CALLBACK_URI = URI + "coach-callback-requests";

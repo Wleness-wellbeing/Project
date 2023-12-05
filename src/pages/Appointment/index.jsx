@@ -9,7 +9,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 // Data
 import { modes, timings } from "../../data/doctors";
-import { EXPERTS_URI, VERIFY_OTP } from "../../data/api";
+import { APPOINTMENT_PAYMENT, EXPERTS_URI, VERIFY_OTP } from "../../data/api";
 import { profileMask, swatiGhoshalPortrait } from "../../assets";
 import SessionMode from "../../components/icon/SessionMode";
 import BookingHeading from "../../components/Appointment/BookingHeading";
@@ -114,7 +114,9 @@ export default function Appointment() {
   const [selectedPlan, setSelectedPlan] = useState(null);
   // Mobile verification
   const [mobileNumber, setMobileNumber] = useState("");
-  const [otp, setOTP] = useState(null);
+  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [otp, setOTP] = useState("");
   const [OTPModal, setOTPModal] = useState(false);
   const [otpAlert, setOTPAlert] = useState("");
 
@@ -182,13 +184,33 @@ export default function Appointment() {
     }
   };
 
+  // const handleCheckout = (e) => {
+  //   e.preventDefault();
+
+  //   axios
+  //     .post("/sendOtp", { number: mobileNumber })
+  //     .then((response) => console.log(response))
+  //     .catch((error) => console.log(error));
+  // };
+
   const handleCheckout = (e) => {
     e.preventDefault();
+    let data = {
+      price: 50,
+    };
 
     axios
-      .post("/sendOtp", { number: mobileNumber })
-      .then((response) => console.log(response))
-      .catch((error) => console.log(error));
+      .post(APPOINTMENT_PAYMENT, data)
+      .then((response) => {
+        if (response.data.status == "success") {
+          window.location = response.data.redirect_url;
+        } else {
+          console.error(response.data);
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   return (
@@ -350,6 +372,10 @@ export default function Appointment() {
                 handleCheckout={handleCheckout}
                 setMobile={setMobileNumber}
                 mobileNumber={mobileNumber}
+                email={email}
+                setEmail={setEmail}
+                username={username}
+                setUsername={setUsername}
               />
             )}
           </div>
