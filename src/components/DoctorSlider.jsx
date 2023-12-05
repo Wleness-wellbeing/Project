@@ -79,9 +79,9 @@ export default function DoctorSlider(props) {
     <section className="container relative mx-auto mb-5 mt-5 lg:mt-0">
       {/* ========== Soul Healers ========== */}
       <div className="pb-6 text-center sm:pt-6 lg:pb-14 2xl:pb-8 ">
-        <h2 className="subheading sm:pb-0 lg:mb-4">
+        <h1 className="subheading sm:pb-0 lg:mb-4">
           {textColorize(props.data.heading)}
-        </h2>
+        </h1>
         <p className="para">{props.data.desc}</p>
       </div>
 

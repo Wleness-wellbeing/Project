@@ -108,9 +108,9 @@ export default function Internship() {
       <section className="container mx-auto overflow-x-hidden pt-10 lg:pb-7 lg:pt-12">
         <div>
           <hgroup className="items-center lg:text-center">
-            <h2 className="text-center">
+            <h1 className="text-center">
               <span className="subheading heading-primary">Why Wleness?</span>
-            </h2>
+            </h1>
           </hgroup>
         </div>
         <div className="flex flex-col justify-between lg:flex-row lg:items-center">
@@ -151,11 +151,11 @@ export default function Internship() {
 
       {/* Want to know what is like to work at WLENESS */}
       <section className="container mx-auto mb-8">
-        <h1 className="text-center">
+        <h2 className="text-center">
           <span className="subheading heading-primary">
             Want to know what it's like to work at WLENESS
           </span>
-        </h1>
+        </h2>
 
         <div className="mt-4 grid grid-cols-2 items-center gap-2 lg:gap-4 xl:grid-cols-5">
           {wlenessWork.map((value, index) => {

@@ -15,7 +15,7 @@ import useEnquiryForm from "../../hooks/useEnquiryForm";
 import { Link } from "react-router-dom";
 import { wlenessExploreTracks } from "../../assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlay, faVideo } from "@fortawesome/free-solid-svg-icons";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 export default function MusicalTherapy() {
   const { enquiryForm, toggleForm } = useEnquiryForm();

@@ -89,9 +89,9 @@ export default function index() {
       {/* Community Section */}
       <section className="container mx-auto lg:pt-6 xl:flex xl:items-center xl:gap-5">
         <div className="pt-5 xl:w-1/2 xl:pr-16">
-          <h3 className="subheading mb-6">
+          <h1 className="subheading mb-6">
             <span className="heading-primary">Wleness </span>Community
-          </h3>
+          </h1>
           <p className="mb-8 text-lg font-medium">
             Through our community, individuals can find solace in knowing they
             are not alone in their struggles. Whether seeking advice, sharing
@@ -117,10 +117,10 @@ export default function index() {
       {/* Support Section */}
       <section className="pt-8 text-center">
         <div className="bg-primary-50/40 p-4">
-          <h2 className="subheading">
+          <h1 className="subheading">
             <span>Uncover your special heaven of </span>
             <span className="heading-primary">support and belonging</span>
-          </h2>
+          </h1>
           <p className="text-lg font-semibold">
             Always remember sharing your struggles only makes you stronger.
           </p>

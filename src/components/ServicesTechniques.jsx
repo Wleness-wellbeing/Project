@@ -41,7 +41,7 @@ const ServicesTechniques = React.forwardRef((props, ref) => {
   return (
     <section className="container mx-auto py-6 lg:py-9" ref={ref}>
       <div className="text-center">
-        <h2 className="subheading text-primary-400">{props.title}</h2>
+        <h1 className="subheading text-primary-400">{props.title}</h1>
         <p className="font-semibold text-slate-700 lg:text-xl">{props.desc}</p>
       </div>
 
