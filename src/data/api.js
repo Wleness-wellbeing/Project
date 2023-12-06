@@ -29,6 +29,7 @@ export const PARTNER_WITH_US_URI = URI + "partner-with-us";
 // Experts
 export const EXPERTS_URI = URI + "experts";
 export const EXPERTS_PROFILE_URI = URI + "experts/profile/";
+export const GET_CHECKOUT_DETAILS = URI + "appointment/checkout/"; // append expert slug 'experts/slots/:slug
 
 // Appointment
 export const USER_APPOINTMENTS = URI + "appointments";

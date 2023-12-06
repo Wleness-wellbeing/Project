@@ -6,12 +6,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import { timings } from "../../data/doctors";
 
 export default function Checkout({
   back,
   mode,
-  duration,
+  // duration,
   date,
   time,
   plan,
@@ -38,11 +37,11 @@ export default function Checkout({
 
       <div className="mt-8">
         <div className="flex justify-center gap-x-2 lg:gap-x-5">
-          <div className="w-1/2 rounded-lg border-2 border-primary-300 px-4 py-4 text-center font-bold md:w-60 lg:px-8">
+          <div className="flex w-1/2 flex-col justify-between rounded-lg border-2 border-primary-300 px-4 py-4 text-center font-bold md:w-60 lg:px-8">
             <span className="text-center">
               <FontAwesomeIcon icon={faVideo} /> <span>Mode</span>
             </span>
-            <span className="my-2 flex justify-between text-sm font-semibold capitalize text-slate-400 lg:text-base">
+            {/* <span className="my-2 flex justify-between text-sm font-semibold capitalize text-slate-400 lg:text-base">
               <span>{mode}</span>
               <span>
                 {
@@ -51,6 +50,10 @@ export default function Checkout({
                     .map((text) => text.text)[0]
                 }
               </span>
+            </span> */}
+            <span className="my-2 flex justify-between text-sm font-semibold capitalize text-slate-400 lg:text-base">
+              <span>{mode}</span>
+              <span>Online</span>
             </span>
             <span
               className="cursor-pointer text-center underline transition-all hover:text-primary-300"
@@ -61,15 +64,19 @@ export default function Checkout({
           </div>
 
           <div className="w-1/2 rounded-lg border-2 border-primary-300 px-4 py-4 text-center font-bold md:w-60 lg:px-8">
-            <span className="text-center">
+            <p>
               <FontAwesomeIcon icon={faCalendar} /> <span>Date</span>
-            </span>
-            <span className="my-2 flex justify-between text-sm font-semibold text-slate-400 lg:text-base">
-              <span>{date}</span>
-              <span>{time}</span>
-            </span>
+            </p>
+            <div className="my-1">
+              <p className="text-sm font-semibold text-slate-400 lg:text-base">
+                {date}
+              </p>
+              <p className="text-sm font-semibold text-slate-400 lg:text-base">
+                {time}
+              </p>
+            </div>
             <span
-              className="cursor-pointer text-center underline transition-all hover:text-primary-300"
+              className="cursor-pointer underline transition-all hover:text-primary-300"
               onClick={back}
             >
               Change
@@ -158,7 +165,11 @@ export default function Checkout({
           <div className="mt-3 text-center">
             <button
               className="btn-one !rounded-lg disabled:cursor-not-allowed disabled:bg-gray-500"
-              disabled={mobileNumber.length == 10 ? false : true}
+              disabled={
+                mobileNumber.length == 10 && email != "" && username != ""
+                  ? false
+                  : true
+              }
               type="submit"
             >
               Make Payment

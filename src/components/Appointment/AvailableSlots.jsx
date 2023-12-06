@@ -38,6 +38,7 @@ const AvailableSlots = ({
   const selectDate = (slotIndex, date) => {
     setSlotIndex(slotIndex);
     updateDate(date);
+    updateTime(null);
   };
 
   return (
@@ -46,7 +47,7 @@ const AvailableSlots = ({
         <div className="mb-6 flex items-center justify-between">
           {index > 0 ? (
             <ChooseMonthBtn
-              month={slots[index - 1].month}
+              month={slots[index - 1]?.month}
               icon={faAngleLeft}
               next={false}
               onclick={() => getPreviousMonth()}
@@ -56,12 +57,12 @@ const AvailableSlots = ({
           )}
 
           <h2 className="text-lg font-bold">
-            {slots[index].month} {slots[index].year}
+            {slots[index]?.month} {slots[index]?.year}
           </h2>
 
           {index < slots.length - 1 ? (
             <ChooseMonthBtn
-              month={slots[index + 1].month}
+              month={slots[index + 1]?.month}
               icon={faAngleRight}
               next={true}
               onclick={() => getNextMonth()}
@@ -72,23 +73,23 @@ const AvailableSlots = ({
         </div>
 
         <div className="grid grid-cols-4 gap-2">
-          {slots[index].slots.map((value, i) => {
+          {slots[index]?.slots.map((value, i) => {
             return (
               <button
                 type="button"
                 onClick={() =>
                   selectDate(
-                    slots[index].slots.indexOf(value),
+                    slots[index]?.slots.indexOf(value),
                     value.date +
                       " " +
-                      slots[index].month +
+                      slots[index]?.month +
                       " " +
-                      slots[index].year,
+                      slots[index]?.year,
                   )
                 }
                 key={i}
                 className={`cursor-pointer rounded-lg border-2 border-primary-300 p-1 py-2 text-center text-sm font-semibold  transition-all ${
-                  slotIndex == slots[index].slots.indexOf(value)
+                  slotIndex == slots[index]?.slots.indexOf(value)
                     ? "bg-primary-300 text-white"
                     : "text-primary-300 hover:bg-primary-300 hover:text-white"
                 }`}
@@ -107,7 +108,7 @@ const AvailableSlots = ({
         </h2>
 
         <div className="grid grid-cols-4 gap-2">
-          {slots[index].slots[slotIndex].time.map((value, i) => (
+          {slots[index]?.slots[slotIndex].time.map((value, i) => (
             <button
               type="button"
               onClick={() => updateTime(value)}
