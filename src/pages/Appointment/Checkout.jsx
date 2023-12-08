@@ -6,25 +6,22 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import CheckoutInputField from "../../components/Fields/CheckoutInputField";
 
 export default function Checkout({
   back,
-  mode,
-  // duration,
-  date,
-  time,
-  plan,
+  handleUserVerification,
+  handleApplyCoupon,
   handleCheckout,
-  setMobile,
-  mobileNumber,
-  email,
-  setEmail,
-  username,
-  setUsername,
+  checkoutDetails,
+  user,
+  setUser,
+  coupon,
+  setCoupon,
 }) {
   return (
     <div className="py-6">
-      <div className="mb-4 flex items-center justify-between text-center md:flex-row ">
+      <div className="mb-10 flex items-center justify-between text-center md:flex-row ">
         <span onClick={back} className="cursor-pointer">
           <FontAwesomeIcon
             icon={faAngleLeft}
@@ -35,24 +32,14 @@ export default function Checkout({
         <span className="hidden lg:block"></span>
       </div>
 
-      <div className="mt-8">
-        <div className="flex justify-center gap-x-2 lg:gap-x-5">
+      <div className="space-y-8 divide-y-2 divide-dashed divide-slate-300">
+        <div className="flex justify-center gap-x-2 pb-5 lg:gap-x-5">
           <div className="flex w-1/2 flex-col justify-between rounded-lg border-2 border-primary-300 px-4 py-4 text-center font-bold md:w-60 lg:px-8">
             <span className="text-center">
               <FontAwesomeIcon icon={faVideo} /> <span>Mode</span>
             </span>
-            {/* <span className="my-2 flex justify-between text-sm font-semibold capitalize text-slate-400 lg:text-base">
-              <span>{mode}</span>
-              <span>
-                {
-                  timings
-                    .filter((value) => duration == value.value)
-                    .map((text) => text.text)[0]
-                }
-              </span>
-            </span> */}
             <span className="my-2 flex justify-between text-sm font-semibold capitalize text-slate-400 lg:text-base">
-              <span>{mode}</span>
+              <span>{checkoutDetails.mode}</span>
               <span>Online</span>
             </span>
             <span
@@ -69,10 +56,10 @@ export default function Checkout({
             </p>
             <div className="my-1">
               <p className="text-sm font-semibold text-slate-400 lg:text-base">
-                {date}
+                {checkoutDetails.date}
               </p>
               <p className="text-sm font-semibold text-slate-400 lg:text-base">
-                {time}
+                {checkoutDetails.time}
               </p>
             </div>
             <span
@@ -84,89 +71,109 @@ export default function Checkout({
           </div>
         </div>
 
-        <div className="my-8 hidden">
-          <div className="border-b-4 border-dotted pb-2">
+        <div className="pt-8">
+          <h2 className="mb-2 text-xl font-semibold">Enter Coupon Code</h2>
+          <form onSubmit={handleApplyCoupon}>
+            <div className="flex gap-4">
+              <div className="w-3/4">
+                <CheckoutInputField
+                  name={"coupon_code"}
+                  type={"text"}
+                  value={coupon}
+                  onchange={(e) => setCoupon(e.target.value)}
+                  placeholder="#COUPONCODE"
+                />
+              </div>
+              <div className="w-1/4">
+                <button
+                  type="submit"
+                  className="block w-full rounded-lg bg-primary-300 px-6 py-2.5 font-semibold uppercase tracking-wider text-white lg:py-3"
+                >
+                  Apply
+                </button>
+              </div>
+            </div>
+          </form>
+          <div className="hidden pb-2">
             <span className="flex justify-between rounded-lg bg-slate-200 px-4 py-1 font-semibold">
               <span>#FIRSTSESSION</span>
               <span>
                 <FontAwesomeIcon icon={faXmark} />
               </span>
             </span>
+            <p className="pt-2 font-semibold text-primary-300">
+              Coupon applied! Enjoy your discount!
+            </p>
           </div>
-          <p className="font-semibold text-primary-300">
-            Coupon applied! Enjoy your discount!
-          </p>
         </div>
 
-        <div className="mt-8">
-          <h4 className="mb-2 text-xl font-semibold">Payment Details:</h4>
-          <ul className="space-y-4 border-b-2 border-dashed border-slate-400 pb-4">
-            <li className="flex justify-between">
-              <span className="font-medium">{plan.plan} Price</span>
-              <span className="font-medium">Rs. {plan.price}</span>
+        <div className="pt-8">
+          <h4 className="mb-2 text-xl font-semibold">Payment Details</h4>
+          <ul className="space-y-3 border-slate-400">
+            <li className="flex justify-between font-semibold">
+              <span className="text-slate-400">
+                {checkoutDetails.plan} Price
+              </span>
+              <span className="text-slate-800">
+                Rs. {checkoutDetails.price}
+              </span>
             </li>
             {/* <li className="mb-2 flex justify-between">
               <span className="font-medium">Discount</span>
               <span className="font-medium">Rs. 99</span>
             </li> */}
-            <li className="flex justify-between">
-              <span className="text-xl font-bold">Final Amount</span>
-              <span className="font-medium">Rs. {plan.price}</span>
+            <hr />
+            <li className="flex justify-between font-bold text-primary-300">
+              <span className="text-lg">Final Amount</span>
+              <span>Rs. {checkoutDetails.price}</span>
             </li>
           </ul>
         </div>
 
-        <form className="pt-4" onSubmit={handleCheckout} autoComplete="off">
-          <h4 className="mb-2 font-semibold">Enter Mobile Number</h4>
+        <form
+          className="pt-8"
+          onSubmit={handleUserVerification}
+          autoComplete="off"
+        >
+          <h4 className="mb-2 text-xl font-semibold">Enter Your Details</h4>
           <div className="grid grid-cols-2 gap-x-4">
-            <label
-              htmlFor="username"
-              className="form-input col-span-2  !flex !w-full justify-between"
-            >
-              <input
-                type="text"
-                className="block w-full outline-none"
-                placeholder="Enter Your Name"
-                value={username}
-                name="username"
-                id="username"
-                onChange={(e) => setUsername(e.target.value)}
-              />
-            </label>
-            <label
-              htmlFor="phone"
-              className="form-input !flex !w-full justify-between"
-            >
-              <input
-                type="tel"
-                className="block w-full outline-none"
-                placeholder="Phone"
-                value={mobileNumber}
-                name="phone"
-                id="phone"
-                onChange={(e) => setMobile(e.target.value)}
-              />
-            </label>
-            <label
-              htmlFor="email"
-              className="form-input !flex !w-full justify-between"
-            >
-              <input
-                type="email"
-                className="block w-full outline-none"
-                placeholder="Email"
-                value={email}
-                name="email"
-                id="email"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </label>
+            <CheckoutInputField
+              name={"first_name"}
+              type={"text"}
+              value={user.firstName}
+              onchange={(e) => setUser({ ...user, firstName: e.target.value })}
+              placeholder="First Name"
+            />
+            <CheckoutInputField
+              name={"last_name"}
+              type={"text"}
+              value={user.lastName}
+              onchange={(e) => setUser({ ...user, lastName: e.target.value })}
+              placeholder="Last Name"
+            />
+            <CheckoutInputField
+              name={"phone"}
+              type={"tel"}
+              value={user.phone}
+              onchange={(e) => setUser({ ...user, phone: e.target.value })}
+              placeholder="Phone"
+            />
+            <CheckoutInputField
+              name={"email"}
+              type={"email"}
+              value={user.email}
+              onchange={(e) => setUser({ ...user, email: e.target.value })}
+              placeholder="Email"
+            />
           </div>
           <div className="mt-3 text-center">
             <button
               className="btn-one !rounded-lg disabled:cursor-not-allowed disabled:bg-gray-500"
               disabled={
-                mobileNumber.length == 10 && email != "" && username != ""
+                user.phone.length == 10 &&
+                user.email != "" &&
+                user.firstName != "" &&
+                user.lastName != ""
                   ? false
                   : true
               }

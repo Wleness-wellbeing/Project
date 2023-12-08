@@ -29,13 +29,18 @@ export const PARTNER_WITH_US_URI = URI + "partner-with-us";
 // Experts
 export const EXPERTS_URI = URI + "experts";
 export const EXPERTS_PROFILE_URI = URI + "experts/profile/";
-export const GET_CHECKOUT_DETAILS = URI + "appointment/checkout/"; // append expert slug 'experts/slots/:slug
 
 // Appointment
+// >> Dashboard
 export const USER_APPOINTMENTS = URI + "appointments";
 export const APPOINTMENT_BOOK_URI = URI + "book-appointment";
 export const UPDATE_SLOTS = URI + "experts/update-slots";
+// >> Appointment booking
+export const GET_CHECKOUT_DETAILS = URI + "appointment/checkout/"; // append expert slug 'experts/slots/:slug
+export const VERIFY_USER = URI + "appointments/verification";
+export const VERIFY_USER_EMAIL = URI + "appointments/verify-email";
 export const APPOINTMENT_PAYMENT = URI + "appointments/payment";
+export const APPLY_COUPON = URI + "apply-coupon";
 
 // Enquiries
 export const COACH_CALLBACK_URI = URI + "coach-callback-requests";

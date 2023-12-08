@@ -4,9 +4,8 @@ import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import ChooseMonthBtn from "../Buttons/ChooseMonthBtn";
 
 const AvailableSlots = ({
-  time,
-  updateDate,
-  updateTime,
+  checkoutDetails,
+  setCheckoutDetails,
   slots,
   index,
   setIndex,
@@ -18,8 +17,7 @@ const AvailableSlots = ({
     if (index > 0) {
       setIndex(index - 1);
       setSlotIndex(0);
-      updateDate(null);
-      updateTime(null);
+      setCheckoutDetails({ ...checkoutDetails, date: "", time: null });
     }
   };
 
@@ -29,16 +27,14 @@ const AvailableSlots = ({
       let newIndex = index + 1;
       setIndex(newIndex);
       setSlotIndex(0);
-      updateDate(null);
-      updateTime(null);
+      setCheckoutDetails({ ...checkoutDetails, date: "", time: null });
     }
   };
 
   // Select date to display time slots
   const selectDate = (slotIndex, date) => {
     setSlotIndex(slotIndex);
-    updateDate(date);
-    updateTime(null);
+    setCheckoutDetails({ ...checkoutDetails, date: date, time: null });
   };
 
   return (
@@ -111,10 +107,12 @@ const AvailableSlots = ({
           {slots[index]?.slots[slotIndex].time.map((value, i) => (
             <button
               type="button"
-              onClick={() => updateTime(value)}
+              onClick={() =>
+                setCheckoutDetails({ ...checkoutDetails, time: value })
+              }
               key={i}
               className={`block cursor-pointer rounded-full border-2 border-primary-300 py-2 text-center text-sm font-medium transition-all  ${
-                value == time
+                value == checkoutDetails.time
                   ? "bg-primary-300 text-white"
                   : "text-primary-300 hover:bg-primary-300 hover:text-white"
               }`}

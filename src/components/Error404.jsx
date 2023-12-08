@@ -13,9 +13,12 @@ export default function Error404() {
       <button className="mt-5">
         <a className="group relative inline-block text-sm font-medium text-white focus:outline-none focus:ring active:text-white">
           <span className="absolute inset-0 translate-x-0.5 translate-y-0.5 bg-white transition-transform group-hover:translate-x-0 group-hover:translate-y-0" />
-          <span className="relative block border border-current bg-teal-500 px-8 py-3">
-            <Link to="/">Go Home</Link>
-          </span>
+          <Link
+            to="/"
+            className="relative block border border-current bg-teal-500 px-8 py-3"
+          >
+            Go Home
+          </Link>
         </a>
       </button>
     </main>

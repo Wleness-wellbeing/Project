@@ -4,7 +4,6 @@ import axios from "axios";
 import { signInWithPopup } from "firebase/auth";
 import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 // Data
-import { colorIconFacebook, colorIconGoogle } from "../../assets";
 import { GOOGLE_LOGIN_URI, LOGIN_USER_URI } from "../../data/api";
 import SocialAuthButtons from "../../components/Buttons/SocialAuthButtons";
 

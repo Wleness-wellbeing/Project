@@ -74,6 +74,7 @@ import xmlFile from "/sitemap.xml";
 import MainAssessment from "./pages/Assessment";
 import AssessmentQuestions from "./pages/Assessment/AssessmentQuestions";
 import AssessmentResult from "./pages/Assessment/AssessmentResult";
+import Success from "./components/RedirectPages/Success";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -298,6 +299,14 @@ function App() {
           element={
             <Layout>
               <Appointment />
+            </Layout>
+          }
+        />
+        <Route
+          path="/success"
+          element={
+            <Layout>
+              <Success />
             </Layout>
           }
         />

@@ -20,7 +20,7 @@ export default function OtpModal({
         <form className="my-4 block" onSubmit={verifyOtp}>
           <input
             type="tel"
-            maxLength={4}
+            maxLength={6}
             name="otp"
             id="otp"
             value={otp}
@@ -32,7 +32,10 @@ export default function OtpModal({
             <small className="mb-1 block text-center">
               OTP sent to {phone}
             </small>
-            <button className="btn-one !block !w-full !rounded-lg">
+            <button
+              type="submit"
+              className="btn-one !block !w-full !rounded-lg"
+            >
               Verify OTP
             </button>
           </div>

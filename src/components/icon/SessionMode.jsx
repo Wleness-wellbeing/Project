@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-export default function SessionMode({ data, setMode, handleModes }) {
+export default function SessionMode({ data, mode, handleModes }) {
   return (
     <label
       htmlFor={data.value}
@@ -11,14 +11,14 @@ export default function SessionMode({ data, setMode, handleModes }) {
         type="radio"
         name="duration"
         id={data.value}
-        checked={setMode == data.value}
+        checked={mode == data.value}
         onChange={handleModes}
         className="hidden"
       />
       <FontAwesomeIcon
         icon={data.icon}
         className={`mb-1 cursor-pointer rounded-full border-2 border-primary-300 p-5 text-xl ${
-          setMode == data.value ? " bg-primary-300 text-white " : ""
+          mode == data.value ? " bg-primary-300 text-white " : ""
         }`}
       />
       <span className="block text-center">{data.text}</span>

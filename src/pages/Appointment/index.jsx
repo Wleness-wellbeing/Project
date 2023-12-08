@@ -4,9 +4,11 @@ import axios from "axios";
 // Data
 import { modes } from "../../data/doctors";
 import {
+  APPLY_COUPON,
   APPOINTMENT_PAYMENT,
   GET_CHECKOUT_DETAILS,
-  VERIFY_OTP,
+  VERIFY_USER,
+  VERIFY_USER_EMAIL,
 } from "../../data/api";
 import { profileMask, swatiGhoshalPortrait } from "../../assets";
 import SessionMode from "../../components/icon/SessionMode";
@@ -20,41 +22,56 @@ export default function Appointment() {
   const { slug } = useParams();
 
   const [loading, setLoading] = useState(true);
-  // Set Profile Data
-  const [profileDetails, setProfileDetails] = useState({});
   const [availableTimeSlots, setAvailableTimeSlots] = useState({});
-  // Set Form Data
-  const [setMode, setSelectMode] = useState(modes[0]["value"]);
   const [index, setIndex] = useState(0);
-  const [selectedDate, setSelectedDate] = useState("");
-  const [selectedTime, setSelectedTime] = useState(null);
+  // Set Experts Profile Data
+  const [profileDetails, setProfileDetails] = useState({});
+  // Set Checkout Form Data
   const [checkout, setCheckout] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState(null);
+  const [checkoutDetails, setCheckoutDetails] = useState({
+    mode: "video",
+    plan: "",
+    date: "",
+    time: null,
+    price: "",
+  });
+  const [userDetails, setUserDetails] = useState({
+    firstName: "Omprakash",
+    lastName: "Prajapati",
+    email: "development1270@gmail.com",
+    phone: "9022365428",
+  });
   // Mobile verification
-  const [mobileNumber, setMobileNumber] = useState("");
-  const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
-  const [otp, setOTP] = useState("");
-  const [OTPModal, setOTPModal] = useState(false);
-  const [otpAlert, setOTPAlert] = useState("");
+  const [otpState, setOtpState] = useState({
+    otp: "",
+    showModal: false,
+    message: "",
+    email: "",
+    appointment_id: "",
+    price: "",
+  });
+  const [couponCode, setCouponCode] = useState("");
 
+  // ======================================
   // Get available booking slots
+  // ======================================
   useEffect(() => {
     axios
       .get(GET_CHECKOUT_DETAILS + slug)
       .then((response) => {
         if (response.data.status == "success") {
-          // setAvailableTimeSlots(response.data);
           setAvailableTimeSlots(response.data.slots);
           setProfileDetails(response.data.experts_profile);
           setLoading(false);
-          setSelectedDate(
-            response.data.slots[0].slots[0].date +
+          setCheckoutDetails({
+            ...checkoutDetails,
+            date:
+              response.data.slots[0].slots[0].date +
               " " +
               response.data.slots[0].month +
               " " +
               response.data.slots[0].year,
-          );
+          });
         } else {
           console.log(response.data.message);
         }
@@ -68,9 +85,141 @@ export default function Appointment() {
     return <div className="mb-5 text-center">Loading...</div>;
   }
 
+  // ======================================
+  // Verify user details
+  // ======================================
+  const handleUserVerification = (e) => {
+    e.preventDefault();
+
+    // Send request to the server
+    // Validate user details and create form element
+    for (const key in userDetails) {
+      if (userDetails[key] == "") {
+        return false;
+      }
+    }
+    // Add checkout details in data
+    let formData = { ...userDetails, expertId: profileDetails.id };
+    for (const key in checkoutDetails) {
+      formData[key] = checkoutDetails[key];
+    }
+
+    axios
+      .post(VERIFY_USER, formData)
+      .then((response) => {
+        if (response.data.status == "success") {
+          if (!response.data.isVerified) {
+            // Display otp modal
+            setOtpState({
+              showModal: true,
+              email: userDetails.email,
+              appointment_id: response.data.appointment_id,
+              price: response.data.price,
+            });
+          } else {
+            // Initiate payment
+            const pricing_data = {
+              appointment_id: response.data.appointment_id,
+              price: response.data.price,
+              phone: response.data.phone,
+            };
+            // Initiate payment
+            handleCheckout(pricing_data);
+          }
+
+          // Empty user form
+          setUserDetails({
+            firstName: "",
+            lastName: "",
+            email: "",
+            phone: "",
+          });
+        } else {
+          console.log(response.data.message);
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  // ======================================
+  // Verify OTP
+  // ======================================
+  const handleOtpVerify = (e) => {
+    e.preventDefault();
+
+    const data = {
+      otp: otpState.otp,
+      email: otpState.email,
+    };
+
+    axios
+      .post(VERIFY_USER_EMAIL, data)
+      .then((response) => {
+        if (response.data.status == "success") {
+          setOtpState({
+            otp: "",
+            email: "",
+            showModal: false,
+            message: "",
+          });
+          // Initiate payment
+          const pricing_data = {
+            appointment_id: response.data.appointment_id,
+            price: response.data.price,
+          };
+          handleCheckout(pricing_data);
+        } else {
+          setOtpState({ ...otpState, message: response.data.message });
+        }
+      })
+      .catch((error) => console.log(error));
+  };
+
+  // ======================================
+  // Apply coupone code
+  // ======================================
+  const handleApplyCoupon = (e) => {
+    e.preventDefault();
+
+    useEffect(() => {
+      axios
+        .post(APPLY_COUPON)
+        .then((response) => {
+          if (response.data.status == "success") {
+            console.log(response.data);
+          } else {
+            console.log(response.data.message);
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }, []);
+  };
+
+  // ======================================
+  // Initiate payment
+  // ======================================
+  const handleCheckout = (data) => {
+    axios
+      .post(APPOINTMENT_PAYMENT, data)
+      .then((response) => {
+        if (response.data.status == "success") {
+          window.location = response.data.redirect_url;
+        } else {
+          console.error(response.data);
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
   // Set session modes
   const handleModes = (event) => {
-    setSelectMode(event.target.id);
+    setCheckoutDetails({ ...checkoutDetails, mode: event.target.id });
   };
 
   // Handle proceed to checkout
@@ -92,40 +241,9 @@ export default function Appointment() {
     openCheckout();
   };
 
-  // Handle OTP verificatoin form submission
-  const handleOTPVerification = (e) => {
-    e.preventDefault();
-    setOTPModal(true);
-    if (otp == null) {
-      setOTPAlert("Please Enter Your OTP");
-    } else {
-      axios
-        .post(VERIFY_OTP, { otp: otp })
-        .then((response) => console.log(response))
-        .catch((error) => {
-          setOTPAlert(error.data.message);
-        });
-    }
-  };
-
-  const handleCheckout = (e) => {
-    e.preventDefault();
-    let data = {
-      price: 50,
-    };
-
-    axios
-      .post(APPOINTMENT_PAYMENT, data)
-      .then((response) => {
-        if (response.data.status == "success") {
-          window.location = response.data.redirect_url;
-        } else {
-          console.error(response.data);
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+  // Update otp value
+  const setOTP = (otp) => {
+    setOtpState({ ...otpState, otp: otp });
   };
 
   return (
@@ -200,7 +318,7 @@ export default function Appointment() {
                         <SessionMode
                           key={i}
                           data={value}
-                          setMode={setMode}
+                          mode={checkoutDetails.mode}
                           handleModes={handleModes}
                         />
                       );
@@ -234,12 +352,13 @@ export default function Appointment() {
                         data={value}
                         key={i}
                         selectPlan={() =>
-                          setSelectedPlan({
+                          setCheckoutDetails({
+                            ...checkoutDetails,
                             plan: value.package,
                             price: value.price,
                           })
                         }
-                        selectedPlan={selectedPlan?.plan === value.package}
+                        selectedPlan={checkoutDetails?.plan === value.package}
                       />
                     );
                   })}
@@ -257,10 +376,8 @@ export default function Appointment() {
 
                   {availableTimeSlots.length != 0 && (
                     <AvailableSlots
-                      date={selectedDate}
-                      time={selectedTime}
-                      updateDate={setSelectedDate}
-                      updateTime={setSelectedTime}
+                      checkoutDetails={checkoutDetails}
+                      setCheckoutDetails={setCheckoutDetails}
                       slots={availableTimeSlots}
                       index={index}
                       setIndex={setIndex}
@@ -272,13 +389,14 @@ export default function Appointment() {
                   <button
                     type="submit"
                     disabled={
-                      selectedPlan == null ||
-                      selectedDate == null ||
-                      selectedTime == null
+                      checkoutDetails.plan == "" ||
+                      checkoutDetails.mode == "" ||
+                      checkoutDetails.date == "" ||
+                      checkoutDetails.time == null
                         ? !checkout
                         : checkout
                     }
-                    className="btn-one !rounded-lg disabled:cursor-not-allowed disabled:bg-gray-500"
+                    className="btn-one !rounded-lg  enabled:!bg-primary-300 disabled:cursor-not-allowed disabled:bg-gray-500"
                   >
                     Proceed
                   </button>
@@ -287,17 +405,14 @@ export default function Appointment() {
             ) : (
               <Checkout
                 back={closeCheckout}
-                mode={setMode}
-                date={selectedDate}
-                time={selectedTime}
-                plan={selectedPlan}
                 handleCheckout={handleCheckout}
-                setMobile={setMobileNumber}
-                mobileNumber={mobileNumber}
-                email={email}
-                setEmail={setEmail}
-                username={username}
-                setUsername={setUsername}
+                handleUserVerification={handleUserVerification}
+                handleApplyCoupon={handleApplyCoupon}
+                user={userDetails}
+                setUser={setUserDetails}
+                checkoutDetails={checkoutDetails}
+                coupon={couponCode}
+                setCoupon={setCouponCode}
               />
             )}
           </div>
@@ -305,12 +420,12 @@ export default function Appointment() {
       </section>
 
       <OtpModal
-        isOpen={OTPModal}
-        msg={otpAlert}
-        verifyOtp={handleOTPVerification}
-        otp={otp}
+        isOpen={otpState.showModal}
+        msg={otpState.message}
+        verifyOtp={handleOtpVerify}
+        otp={otpState.otp}
         setOTP={setOTP}
-        phone={mobileNumber}
+        phone={otpState.email}
       />
     </>
   );
