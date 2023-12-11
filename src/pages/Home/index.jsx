@@ -184,9 +184,9 @@ export default function Home() {
             </div>
             <article className="mx-auto pb-4 lg:order-1 lg:w-3/5 lg:pb-10">
               <hgroup className="mb-2">
-                <h2 className="subheading">
+                <h1 className="subheading">
                   <span className="heading-primary">Wleness Community</span>
-                </h2>
+                </h1>
                 <p className="para ml-1 text-lg"></p>
               </hgroup>
               <p className="mb-6 ml-1 text-sm font-medium leading-6 lg:pr-28 lg:text-lg">
@@ -282,9 +282,9 @@ export default function Home() {
 
       {/* ========== Our Testimonial ========== */}
       <section>
-        <h2 className="mb-4 py-4 text-center">
+        <h1 className="mb-4 py-4 text-center">
           <span className="subheading heading-primary">Our Testimonials</span>
-        </h2>
+        </h1>
         <div className="bg-gradient-to-b from-primary-300/20 to-white py-4">
           <Testimonial data={homeTestimonials} />
         </div>

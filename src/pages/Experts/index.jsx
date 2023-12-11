@@ -1,12 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 // Data
 import { expertsHeader, bubbles } from "../../assets";
 import { doctorsPageClient } from "../../data/clients";
-import { expertDoctors } from "../../data/doctors";
 // Components
 import HappyClient from "../../components/HappyClient";
-import DoctorSlider from "../../components/DoctorSlider";
-import { Link } from "react-router-dom";
 import Assessment from "../../components/Assessment";
 import ExpertsCard from "../../components/Cards/ExpertsCard";
 import {
@@ -14,7 +13,6 @@ import {
   expertsPsychiatrist,
   expertsTherapy,
 } from "../../data/experts";
-import axios from "axios";
 import { EXPERTS_URI } from "../../data/api";
 import DoctorsCard from "../../components/DoctorsCard";
 
@@ -72,17 +70,17 @@ function Experts() {
             <img src={expertsHeader} alt="" className=" w-full object-cover" />
           </div>
           <div className="-m-5 mb-6 rounded-3xl p-5 text-center md:mb-6 lg:order-1 lg:m-0 lg:mb-0 lg:rounded-none lg:text-left xl:w-1/2 xl:pl-4">
-            <hgroup className="md:mb-3">
-              <h1 className="subheading mb-2 text-center lg:text-left">
-                <span className="heading-primary mr-2">
-                  Mental Health Matters
-                </span>
-                <span className="text-[#383838] lg:block">Unlock your </span>
-                <span className="heading-primary">well being </span>
-                <span className="text-[#383838]">with </span>
-                <span className="heading-primary">wleness</span>
-              </h1>
-            </hgroup>
+            <div className="md:mb-3">
+              <hgroup className="subheading mb-2 text-center lg:text-left">
+                <h1 className="heading-primary mr-2">Mental Health Matters</h1>
+                <h2>
+                  <span className="text-[#383838] lg:block">Unlock your </span>
+                  <span className="heading-primary">well being </span>
+                  <span className="text-[#383838]">with </span>
+                  <span className="heading-primary">wleness</span>
+                </h2>
+              </hgroup>
+            </div>
             <p className="para mb-4 lg:mb-8">
               At Wleness, we provide a holistic approach to unlocking your
               wellness. Our team of dedicated psychologists and therapists is
@@ -181,9 +179,9 @@ function Experts() {
           <figure className="mb-12 flex flex-col items-center lg:mb-2 lg:flex-row">
             <figcaption className="order-2 lg:order-1 lg:w-[55%]">
               <Link to={expertsPsychiatrist.slug}>
-                <h3 className="mb-3 text-2xl font-bold text-primary-400">
+                <h2 className="subheading mb-3 text-primary-400">
                   {expertsPsychiatrist.title}
-                </h3>
+                </h2>
               </Link>
               <p className="mb-8 text-justify font-medium">
                 {expertsPsychiatrist.desc}

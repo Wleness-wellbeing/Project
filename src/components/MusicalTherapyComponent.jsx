@@ -83,11 +83,11 @@ export default function MusicalTherapyComponent() {
   );
 
   return (
-    <div className="relative overflow-x-clip bg-secondary/5 pb-4 pt-6 xl:pb-6 xl:pt-10">
-      <h1 className="pb-4 text-center text-3xl font-bold text-primary-500">
+    <div className="relative overflow-x-clip bg-secondary/5 pb-4  pt-6 text-center xl:pb-6 xl:pt-10">
+      <h1 className="subheading pb-4 text-primary-500">
         Benefits of <span className="heading-primary">Music Healing</span>
       </h1>
-      <div className="container mx-auto grid grid-cols-2 justify-center gap-4 !px-2 text-center md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:px-4">
+      <div className="container mx-auto grid grid-cols-2 justify-center gap-4 !px-2 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 lg:px-4">
         {dummyData.map((data) => (
           <Card
             key={data.id}

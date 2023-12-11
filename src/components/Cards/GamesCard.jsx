@@ -11,9 +11,9 @@ export default function GamesCard(props) {
         />
       </div>
       <figcaption className={props.data.class[1] + " md:w-1/2 lg:text-left"}>
-        <h4 className="py-2 text-xl font-bold text-primary-400 lg:text-2xl 2xl:text-4xl">
+        <h2 className="py-2 text-xl font-bold text-primary-400 lg:text-2xl 2xl:text-4xl">
           {props.data.title}
-        </h4>
+        </h2>
         <p className="mb-2 pb-2 text-sm font-medium md:text-lg">
           {props.data.desc}
         </p>

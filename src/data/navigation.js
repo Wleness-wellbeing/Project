@@ -165,7 +165,7 @@ export const footerLocation = [
   ],
   ["www.wleness.com", "https://wleness.com/", faGlobe],
   ["hello@wleness.com", "mailto:hello@wleness.com", faEnvelope],
-  ["+91 6394770176", "tel:+916394770176", faPhone],
+  ["+91 9147047488", "tel:+919147047488", faPhone],
 ];
 
 // Footer - About Wleness
@@ -216,7 +216,7 @@ export const footerOurExperts = [
 
 // Footer social links
 export const socialLinks = [
-  [faSquareWhatsapp, "https://wa.me/916394770176"],
+  [faSquareWhatsapp, "https://wa.me/919147047488"],
   [faSquareInstagram, "https://www.instagram.com/wleness/"],
   [faFacebookSquare, "http://facebook.com/profile.php?id=100094475627706"],
   [faSquareXTwitter, "http://twitter.com/wleness111"],

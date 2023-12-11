@@ -24,9 +24,9 @@ export default function DoctorsCard(props) {
         </div>
         <figcaption className="w-[65%] px-4 lg:w-3/5 3xl:px-6">
           <hgroup>
-            <h3 className="text-xl font-semibold lg:text-2xl">
+            <h2 className="text-xl font-semibold lg:text-2xl">
               <span>{props.data.name}</span>
-            </h3>
+            </h2>
             <h5 className="font-semibold text-primary-400">
               {props.data.profession}
             </h5>

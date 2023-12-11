@@ -207,10 +207,10 @@ function AboutUs() {
 
       <div className="relative overflow-x-clip bg-secondary/20  xl:pb-4 xl:pt-4">
         <div className="container mx-auto  text-center">
-          <h2 className="subheading mx-auto  text-lg sm:mb-4 sm:text-xl md:text-4xl">
+          <h1 className="subheading mx-auto  text-lg sm:mb-4 sm:text-xl md:text-4xl">
             Meet the <span className="heading-primary">Visionaries</span> behind
             Wleness
-          </h2>
+          </h1>
           <p className="para">
             Wleness is guided, shaped, and overseen by a diverse collective of
             individuals united by a shared mission: providing exceptional mental

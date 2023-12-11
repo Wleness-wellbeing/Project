@@ -110,7 +110,7 @@ export default function AssessmentResult() {
             doctorDetails[0],
             doctorDetails[5],
             doctorDetails[2],
-            doctorDetails[3],
+            doctorDetails[1],
           ].map((value, i) => {
             return <DoctorsCard key={i} data={value} />;
           })}

@@ -56,7 +56,7 @@ export default function ContactUs() {
               <h2 className="text-lg font-semibold text-primary-400">
                 Call Us At
               </h2>
-              <h3 className="font-bold">+91 6394770176</h3>
+              <h3 className="font-bold">+91 9147047488</h3>
               <p className="font-semibold">Call between 10 AM to 6 PM</p>
             </div>
           </div>

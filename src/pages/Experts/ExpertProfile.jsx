@@ -96,9 +96,9 @@ export default function ExpertProfile() {
               />
             </div>
             <figcaption className="mx-auto text-center lg:w-1/2 lg:text-left">
-              <h4 className="text-2xl font-bold lg:text-3xl">
+              <h2 className="text-2xl font-bold lg:text-3xl">
                 {profileDetails.name}
-              </h4>
+              </h2>
               <h6 className="text-xl font-semibold lg:text-2xl">
                 {profileDetails.experience}
               </h6>
