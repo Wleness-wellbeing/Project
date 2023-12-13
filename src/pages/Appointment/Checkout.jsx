@@ -1,6 +1,7 @@
 import {
   faAngleLeft,
   faCalendar,
+  faSpinner,
   faVideo,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
@@ -18,6 +19,7 @@ export default function Checkout({
   setUser,
   coupon,
   setCoupon,
+  makePayment,
 }) {
   return (
     <div className="py-6">
@@ -168,7 +170,7 @@ export default function Checkout({
           </div>
           <div className="mt-3 text-center">
             <button
-              className="btn-one !rounded-lg disabled:cursor-not-allowed disabled:bg-gray-500"
+              className="btn-one mx-auto flex items-center !rounded-lg disabled:cursor-not-allowed disabled:bg-gray-500"
               disabled={
                 user.phone.length == 10 &&
                 user.email != "" &&
@@ -179,6 +181,12 @@ export default function Checkout({
               }
               type="submit"
             >
+              <FontAwesomeIcon
+                icon={faSpinner}
+                className={`mr-2 animate-spin text-lg ${
+                  makePayment ? "block" : "hidden"
+                }`}
+              />
               Make Payment
             </button>
           </div>

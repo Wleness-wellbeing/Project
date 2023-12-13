@@ -22,6 +22,7 @@ export default function Appointment() {
   const { slug } = useParams();
 
   const [loading, setLoading] = useState(true);
+  const [makePayment, setMakePayment] = useState(false);
   const [availableTimeSlots, setAvailableTimeSlots] = useState({});
   const [index, setIndex] = useState(0);
   // Set Experts Profile Data
@@ -104,6 +105,8 @@ export default function Appointment() {
       formData[key] = checkoutDetails[key];
     }
 
+    // Set loading in payment
+    setMakePayment(true);
     axios
       .post(VERIFY_USER, formData)
       .then((response) => {
@@ -412,6 +415,8 @@ export default function Appointment() {
                 handleApplyCoupon={handleApplyCoupon}
                 user={userDetails}
                 setUser={setUserDetails}
+                makePayment={makePayment}
+                setMakePayment={setMakePayment}
                 checkoutDetails={checkoutDetails}
                 coupon={couponCode}
                 setCoupon={setCouponCode}
