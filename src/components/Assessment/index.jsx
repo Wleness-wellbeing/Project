@@ -377,11 +377,6 @@ export default function Assessment({
                 Go Back
               </button>
               <Link
-                target={
-                  buttons != null && buttons.url != "/experts/all"
-                    ? "_blank"
-                    : "_self"
-                }
                 to={buttons != null ? buttons.url : "/experts/all"}
                 className="btn-primary !w-fit bg-gradient-to-r from-secondary to-tertiary !py-2.5 !text-sm !font-semibold transition-all hover:shadow-md"
               >

@@ -100,11 +100,7 @@ export default function SelectPricing({ slug, bookingUrl, price, packages }) {
               {successMessage.message}
             </p>
             <div className="text-center">
-              <Link
-                to={bookingUrl}
-                className="btn-one inline-block"
-                target="_blank"
-              >
+              <Link to={slug} className="btn-one inline-block">
                 Book an appointment now
               </Link>
             </div>
