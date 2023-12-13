@@ -36,10 +36,10 @@ export default function Appointment() {
     price: "",
   });
   const [userDetails, setUserDetails] = useState({
-    firstName: "Omprakash",
-    lastName: "Prajapati",
-    email: "development1270@gmail.com",
-    phone: "9022365428",
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
   });
   // Mobile verification
   const [otpState, setOtpState] = useState({
@@ -152,6 +152,8 @@ export default function Appointment() {
     const data = {
       otp: otpState.otp,
       email: otpState.email,
+      appointment_id: otpState.appointment_id,
+      price: otpState.price,
     };
 
     axios
