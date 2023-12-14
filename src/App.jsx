@@ -71,6 +71,7 @@ import UserDashboardHistory from "./components/UserDashboardHistory";
 import MusicalHealingTracks from "./pages/Services/MusicalHealingTracks";
 import axios from "axios";
 import xmlFile from "/sitemap.xml";
+import robotsFile from "/robots.txt";
 import MainAssessment from "./pages/Assessment";
 import AssessmentQuestions from "./pages/Assessment/AssessmentQuestions";
 import AssessmentResult from "./pages/Assessment/AssessmentResult";
@@ -87,13 +88,14 @@ function App() {
   // rootElement.addEventListener("contextmenu", handleContextMenu);
 
   // Serve xml file
-  axios
-    .get(xmlFile, {
-      "Content-Type": "application/xml; charset=utf-8",
-    })
-    .then((response) => {
-      console.log("Your xml file as string");
-    });
+  axios.get(xmlFile, {
+    "Content-Type": "application/xml; charset=utf-8",
+  });
+
+  // Serve robots.txt file
+  axios.get(robotsFile, {
+    "Content-Type": "application/text; charset=utf-8",
+  });
 
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
   const activitiesMenu = activities.map((value, index) => {
