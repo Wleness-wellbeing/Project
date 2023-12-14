@@ -84,11 +84,13 @@ export default function ExpertProfile() {
           </h1>
           <figure className="mx-auto items-center justify-center gap-x-8 py-3 lg:flex lg:w-[590px] lg:py-6">
             <div className="relative mx-auto mb-4 h-40 w-40 lg:h-48 lg:w-48">
-              <img
-                src={profileDetails.image}
-                alt=""
-                className="h-full w-full rounded-full object-cover object-top"
-              />
+              <div className="experts-profile-bg h-full w-full rounded-full">
+                <img
+                  src={profileDetails.image}
+                  alt=""
+                  className="h-full w-full rounded-full object-cover object-top"
+                />
+              </div>
               <img
                 src={profileMask}
                 alt=""

@@ -12,11 +12,13 @@ export default function DoctorsCard(props) {
       <div className="mb-1 flex">
         <div className="relative flex w-[35%] justify-center lg:w-2/5">
           <Link to={slug}>
-            <img
-              src={props.data.image}
-              alt=""
-              className="mb-1 block w-full rounded-2xl object-cover lg:w-40 lg:rounded-l-2xl"
-            />
+            <div className="experts-profile-bg rounded-2xl lg:rounded-l-2xl">
+              <img
+                src={props.data.image}
+                alt=""
+                className="mb-1 block w-full rounded-2xl object-cover lg:w-40 lg:rounded-l-2xl"
+              />
+            </div>
             <small className="block text-clip text-center font-quicksand font-semibold text-primary-400">
               {props.data.certification}
             </small>

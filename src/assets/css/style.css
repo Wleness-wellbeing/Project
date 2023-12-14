@@ -127,6 +127,9 @@ a {
 .issue-card {
   @apply mx-auto block h-20 w-20 object-cover lg:h-52 lg:w-52 2xl:h-60 2xl:w-60;
 }
+.experts-profile-bg {
+  @apply bg-gradient-to-b from-primary-50 to-primary-300;
+}
 
 /* Swiper Styles */
 /* ---- Pagination  */

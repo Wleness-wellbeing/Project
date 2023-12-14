@@ -262,15 +262,17 @@ export default function Appointment() {
         <figure className="left-16 top-10 mx-auto w-64 justify-center gap-x-8 py-6 lg:absolute lg:ml-5 lg:w-[300px]">
           <Link to={"/experts/profile/" + slug} className="mb-5 block">
             <div className="relative">
-              <img
-                src={
-                  profileDetails.image
-                    ? profileDetails.image
-                    : swatiGhoshalPortrait
-                }
-                alt=""
-                className="mx-auto mb-2 h-52 w-52 rounded-full object-cover object-top"
-              />
+              <div className="experts-profile-bg mx-auto mb-2 h-52 w-52 rounded-full">
+                <img
+                  src={
+                    profileDetails.image
+                      ? profileDetails.image
+                      : swatiGhoshalPortrait
+                  }
+                  alt=""
+                  className="mx-auto h-52 w-52 rounded-full object-cover object-top"
+                />
+              </div>
               <img
                 src={profileMask}
                 alt=""

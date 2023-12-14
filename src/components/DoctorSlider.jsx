@@ -138,11 +138,13 @@ export default function DoctorSlider(props) {
                       onClick={() => navigate(slug)}
                       className="rounded-2xl bg-gradient-to-tr from-secondary via-tertiary to-primary-300 p-1"
                     >
-                      <img
-                        src={value.image}
-                        alt="Doctors"
-                        className="box-border block w-full rounded-2xl object-cover"
-                      />
+                      <div className="experts-profile-bg rounded-xl">
+                        <img
+                          src={value.image}
+                          alt="Doctors"
+                          className="box-border block w-full rounded-2xl object-cover"
+                        />
+                      </div>
                     </div>
                     <figcaption className="doctor-slide-content pb-3 pt-1 text-center">
                       <small className="block text-clip text-center font-quicksand font-semibold text-primary-400">
