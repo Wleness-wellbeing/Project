@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ExpertsCalendar from "./ExpertsCalendar";
-import { format } from "date-fns";
+import { format, setWeek } from "date-fns";
 import axios from "axios";
 import { UPDATE_SLOTS } from "../../data/api";
 
@@ -12,6 +12,7 @@ const UpdateExpertSlots = ({ token }) => {
   );
   const [selectedTime, setSelectedTime] = useState(null);
   const [selectedSlots, setSelectedSlots] = useState({});
+  const [weekDay, setWeekDay] = useState(format(currentDate, "EEEE"));
   const [isChecked, setChecked] = useState(false);
   const [slots, setSlots] = useState([]);
   const [alert, setAlert] = useState({
@@ -29,7 +30,7 @@ const UpdateExpertSlots = ({ token }) => {
       const formattedDate = currentDate.toISOString().slice(0, 10);
       // You can generate different time slots for different days here
       const slotsForThisDay =
-        currentDate.getDay() === 0 ? ["10:00 AM", "2:00 PM"] : [...timeSlots]; // Example logic
+        currentDate.getDay() === 0 ? ["10:00 AM", "123:00 PM"] : [...timeSlots]; // Example logic
       appointmentData.push({
         date: formattedDate,
         timeSlots: [...slotsForThisDay],
@@ -47,12 +48,12 @@ const UpdateExpertSlots = ({ token }) => {
   const timeSlots = [
     "09:00 AM",
     "10:00 AM",
-    "11:00 PM",
+    "11:00 AM",
     "12:00 PM",
     "01:00 PM",
     "02:00 PM",
-    "03:00 AM",
-    "04:00 AM",
+    "03:00 PM",
+    "04:00 PM",
     "05:00 PM",
     "06:00 PM",
     "07:00 PM",
@@ -135,6 +136,7 @@ const UpdateExpertSlots = ({ token }) => {
       .then((response) => {
         if (response.data.status == "success") {
           setMessage("success", response.data.message);
+          setSlots([]);
         }
       })
       .catch((error) => {
@@ -162,6 +164,7 @@ const UpdateExpertSlots = ({ token }) => {
             currentDate={currentDate}
             updateslots={setSelectedSlots}
             updatedslots={selectedSlots}
+            setWeekDay={setWeekDay}
           />
         </div>
 
@@ -171,7 +174,9 @@ const UpdateExpertSlots = ({ token }) => {
             {selectedDate ? (
               <>
                 <span>Select Time Slots for </span>
-                <span className="font-bold">{selectedDate}</span>
+                <span className="font-bold">
+                  {selectedDate}, {weekDay}
+                </span>
               </>
             ) : (
               "Select a date"

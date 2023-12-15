@@ -60,7 +60,7 @@ export default function ExpertsLogin({ setToken, token }) {
       // Append form fields to the FormData object
       let formData = new FormData();
       for (const key in formInfo) {
-        formData.append(key, formInfo[key]);
+        formData.append(key, formInfo[key].trim());
       }
 
       try {

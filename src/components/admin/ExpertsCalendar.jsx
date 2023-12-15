@@ -15,7 +15,7 @@ import {
   faLessThan,
 } from "@fortawesome/free-solid-svg-icons";
 
-const ExpertsCalendar = ({ onDateSelect, currentDate }) => {
+const ExpertsCalendar = ({ onDateSelect, currentDate, setWeekDay }) => {
   const [displayedMonth, setDisplayedMonth] = useState(currentDate);
 
   // Get the first day of the displayed month
@@ -30,6 +30,7 @@ const ExpertsCalendar = ({ onDateSelect, currentDate }) => {
   // Function to handle date selection
   const handleDateSelect = (date) => {
     onDateSelect(format(date, "yyyy-MM-dd"));
+    setWeekDay(format(date, "EEEE"));
   };
 
   // Function to navigate to the next month
@@ -64,11 +65,11 @@ const ExpertsCalendar = ({ onDateSelect, currentDate }) => {
         </div>
       </div>
       <div className="grid grid-cols-7 gap-2">
-        {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
+        {/* {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
           <div key={day} className="text-center font-semibold text-gray-600">
             {day}
           </div>
-        ))}
+        ))} */}
         {dates.map((date) => (
           <span
             key={date}

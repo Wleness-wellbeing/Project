@@ -1,21 +1,11 @@
-import {
-  faAngleDown,
-  faArrowTrendDown,
-  faArrowTrendUp,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useState } from "react";
 import {
-  dashboardDoctor,
   expertsIconAppointments,
   expertsIconDp,
   expertsIconTodayPatients,
   expertsIconTotalPatients,
   palmWave,
 } from "../../assets";
-import PatientListItem from "../../components/list/PatientListItem";
-import { patientsList } from "../../data/patients";
-import UpcomingMeets from "../../components/list/UpcomingMeets";
 import { EXPERTS_PROFILE_URI } from "../../data/api";
 import axios from "axios";
 import UpdateExpertSlots from "../../components/Admin/UpdateExpertSlots";
@@ -26,13 +16,6 @@ export default function DoctorDashboard({ token, setToken }) {
   const { logout } = useLogout();
   const [loading, setLoading] = useState(true); // set loading screen
   const [user, setUser] = useState(null);
-  const [profileDetails, setProfileDetails] = useState({
-    // set profile detals
-    name: "",
-    email: "",
-    image: "",
-    profession: "",
-  });
   const navigate = useNavigate();
 
   // ======== Get user appointments and details ===========
@@ -167,7 +150,7 @@ export default function DoctorDashboard({ token, setToken }) {
             </div>
             <div>
               {[1, 2, 3, 4, 5].map((value, i) => (
-                <div className="mb-3 flex justify-between">
+                <div className="mb-3 flex justify-between" key={i}>
                   <div className="flex gap-3">
                     <img src={expertsIconDp} alt="" className="w-10" />
                     <div className="flex flex-col">
