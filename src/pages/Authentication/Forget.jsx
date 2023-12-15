@@ -43,6 +43,7 @@ const ForgotPassword = () => {
         if (response.status == 200) {
           setMessage(response.data.status, response.data.message);
           setLoading(false);
+          setEmail("");
         } else {
           console.log(response.data);
         }
