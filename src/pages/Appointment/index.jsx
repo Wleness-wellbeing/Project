@@ -250,6 +250,7 @@ export default function Appointment() {
   const setOTP = (otp) => {
     setOtpState({ ...otpState, otp: otp });
   };
+  console.log(profileDetails.packages);
 
   return (
     <>
@@ -353,6 +354,19 @@ export default function Appointment() {
                 {/* Select session plan */}
                 <div className="mb-8">
                   <BookingHeading heading="2. Select session plan" />
+                  <SessionPricingItem
+                    data={{ package: "Introductory Session", price: 599 }}
+                    selectPlan={() =>
+                      setCheckoutDetails({
+                        ...checkoutDetails,
+                        plan: "Introductory Session",
+                        price: 599,
+                      })
+                    }
+                    selectedPlan={
+                      checkoutDetails?.plan === "Introductory Session"
+                    }
+                  />
                   {profileDetails.packages.map((value, i) => {
                     return (
                       <SessionPricingItem

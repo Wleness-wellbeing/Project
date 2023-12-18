@@ -112,6 +112,7 @@ export default function AssessmentResult() {
             doctorDetails[2],
             doctorDetails[1],
           ].map((value, i) => {
+            console.log(value);
             return <DoctorsCard key={i} data={value} />;
           })}
         </div>

@@ -15,6 +15,8 @@ export default function AssessmentQuestions() {
   const [currentAnswer, setCurrentAnswer] = useState("");
   const [allAnswers, setAllAnswers] = useState([]);
   const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
+  const [phone, setPhone] = useState("");
   const [showResult, setSetshowResult] = useState(false);
 
   // Set Assessment Questions
@@ -62,7 +64,12 @@ export default function AssessmentQuestions() {
   const formSubmit = (e) => {
     e.preventDefault();
 
-    if (email == "" || allAnswers.length != 15) {
+    if (
+      email == "" ||
+      allAnswers.length != 15 ||
+      username == "" ||
+      phone == ""
+    ) {
       return null;
     }
 
@@ -92,6 +99,8 @@ export default function AssessmentQuestions() {
 
     let data = {
       email: email,
+      username: username,
+      phone: phone,
       all_scores: scores,
       total_score: total,
       name: slug,
@@ -176,7 +185,7 @@ export default function AssessmentQuestions() {
         ) : (
           <div className="px-10">
             <h2 className="text-center text-lg font-bold text-gray-600 xl:text-3xl">
-              Enter your email to see your results
+              Enter your details to see your results
             </h2>
 
             <form
@@ -184,6 +193,28 @@ export default function AssessmentQuestions() {
               autoComplete="off"
               onSubmit={formSubmit}
             >
+              <label htmlFor="username">
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  placeholder="Enter Your Name"
+                  className="form-input block w-full"
+                />
+              </label>
+              <label htmlFor="phone">
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  placeholder="Enter Your Phone"
+                  className="form-input block w-full"
+                />
+              </label>
               <label htmlFor="email">
                 <input
                   type="email"
@@ -191,13 +222,13 @@ export default function AssessmentQuestions() {
                   id="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email"
+                  placeholder="Enter Your Email"
                   className="form-input block w-full"
                 />
               </label>
               <button
                 type="submit"
-                disabled={email == ""}
+                disabled={email == "" || username == "" || phone.length != 10}
                 className="mx-auto mt-4 flex items-center rounded-lg bg-primary-300 px-8 py-2.5 text-white shadow-md shadow-primary-50 disabled:cursor-not-allowed disabled:bg-gray-500 disabled:shadow-none lg:mt-8 lg:px-12 lg:py-3.5"
               >
                 <span className="mr-2 text-sm font-semibold md:text-base">
