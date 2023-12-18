@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { ASSESSMENT_RESULT } from "../../data/api";
+import ThankYou from "../../components/Modals/ThankYou";
 
 export default function AssessmentQuestions() {
   const { slug } = useParams();
@@ -18,6 +19,8 @@ export default function AssessmentQuestions() {
   const [username, setUsername] = useState("");
   const [phone, setPhone] = useState("");
   const [showResult, setSetshowResult] = useState(false);
+  const [assessmentResult, setAssessmentResult] = useState(null);
+  const [modal, setModal] = useState(false);
 
   // Set Assessment Questions
   let questionSet = assessments
@@ -111,7 +114,9 @@ export default function AssessmentQuestions() {
       .post(ASSESSMENT_RESULT, data)
       .then((response) => {
         if (response.status == 201) {
-          navigate("/assessment/result", { state: { data: response.data } });
+          setModal(true);
+          // link: `/assessment/result, ${{ state: { data: response.data } }}`,
+          setAssessmentResult(response.data);
         }
       })
       .catch((error) => {
@@ -239,6 +244,12 @@ export default function AssessmentQuestions() {
             </form>
           </div>
         )}
+
+        <ThankYou
+          status={modal}
+          assessmentResult={assessmentResult}
+          setStatus={setModal}
+        />
       </section>
     </>
   );

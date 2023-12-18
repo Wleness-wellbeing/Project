@@ -20,9 +20,9 @@ export default function MainHeader({ openAssessmentModal }) {
           <h1 className="subheading heading-primary px-10 lg:mb-4 lg:px-0 lg:text-4xl xl:text-[38px]">
             Partnering Your Well Being
           </h1>
-          <h4 className="mb-2 text-xl font-bold text-primary-400 lg:mb-4">
+          {/* <h4 className="mb-2 text-xl font-bold text-primary-400 lg:mb-4">
             Take Care Of Yourself
-          </h4>
+          </h4> */}
           <h3 className="mx-auto mb-6 pr-4 text-sm font-semibold text-slate-600 md:text-base lg:text-lg">
             Discover your journey to a better self by nurturing your mind, body
             and soul with our professionally curated services customized by
@@ -35,8 +35,8 @@ export default function MainHeader({ openAssessmentModal }) {
             Book appointment
           </button>
           <h3 className="mx-auto mb-4 text-sm font-semibold text-slate-600 md:text-base lg:text-lg">
-            Explore your innner self, take a comprehensive self assessment and
-            get a free online therapy session
+            Explore your inner self, take a comprehensive self assessment and
+            get an online therapy session at a promotional price.
           </h3>
 
           <Link
