@@ -77,6 +77,7 @@ const UpdateExpertSlots = ({ token }) => {
   const handleDateSelect = (date) => {
     setSelectedDate(date);
     setSlots([]);
+    setMessage("", "");
     // setSelectedTime(null);
   };
 

@@ -35,6 +35,7 @@ export const EXPERTS_PROFILE_URI = URI + "experts/profile/";
 export const USER_APPOINTMENTS = URI + "appointments";
 export const APPOINTMENT_BOOK_URI = URI + "book-appointment";
 export const UPDATE_SLOTS = URI + "experts/update-slots";
+export const EXPERTS_DASHBOARD = URI + "experts/dashboard";
 // >> Appointment booking
 export const GET_CHECKOUT_DETAILS = URI + "appointment/checkout/"; // append expert slug 'experts/slots/:slug
 export const VERIFY_USER = URI + "appointments/verification";

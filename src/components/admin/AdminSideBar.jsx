@@ -1,11 +1,76 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import useLogout from "../Auth/useLogout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import useToken from "../../utils/useToken";
+import { EXPERTS_PROFILE_URI } from "../../data/api";
+import axios from "axios";
 
-export default function AdminSideBar({ user, isMenuOpen, closeMenu }) {
+export default function AdminSideBar({ isMenuOpen, closeMenu }) {
+  const { token } = useToken();
   const { logout } = useLogout();
+  const navigate = useNavigate();
+  const [user, setUser] = useState({});
+
+  // ============================================================
+  // Redirect user if loggedin
+  // ============================================================
+  if (token == null || token == "" || token == undefined) {
+    // Navigate to login
+    useEffect(() => {
+      navigate("/login", {
+        state: {
+          successMessage: "Please Login",
+        },
+      });
+    }, []);
+    return null;
+  }
+
+  const wleness_user = JSON.parse(localStorage.getItem("wleness_user"));
+  if (wleness_user.type != "expert") {
+    navigate("/");
+    return null;
+  }
+
+  // ============================================================
+  // Get Experts Info
+  // ============================================================
+  let url = EXPERTS_PROFILE_URI + wleness_user.user_id;
+  useEffect(() => {
+    // Make a GET request using Axios
+    axios
+      .get(url, {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      })
+      .then((response) => {
+        if (response.status == 200) {
+          setUser(response.data);
+          localStorage.setItem("userInfo", JSON.stringify(response.data));
+          setLoading(false);
+        }
+      })
+      .catch((error) => {
+        // Handle errors
+        if (error.response.status == 401) {
+          // Logout and redirect user
+          logout();
+          useEffect(() => {
+            navigate("/experts-login", {
+              state: {
+                successMessage: "Session Expired Please Login",
+              },
+            });
+          }, []);
+          return null;
+        } else {
+          console.error(error);
+        }
+      });
+  }, []);
 
   return (
     <aside

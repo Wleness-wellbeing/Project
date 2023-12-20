@@ -1,19 +1,43 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 import { expertsIconDp, palmWave } from "../../assets";
 
 export default function DoctorsPayment({ token, name }) {
+  const navigate = useNavigate();
+
+  // ======== Get user appointments and details ===========
+  let wleness_user = JSON.parse(localStorage.getItem("wleness_user"));
+
+  if (
+    token == null ||
+    token == "" ||
+    token == undefined ||
+    wleness_user.type != "expert"
+  ) {
+    // Navigate to login
+    useEffect(() => {
+      navigate("/experts-login", {
+        state: {
+          successMessage: "Please Login",
+        },
+      });
+    }, []);
+    return null;
+  }
+
   return (
     <section>
       <div className="flex text-xl lg:text-3xl">
         <h1 className="py-2 font-bold text-teal-500 lg:mb-2 lg:py-6">
-          <span>Hello </span>
-          <span className="font-bold text-teal-500">{name}</span>
+          <span>Payment Information </span>
+          {/* <span className="font-bold text-teal-500">{name}</span> */}
         </h1>
-        <img
+        {/* <img
           src={palmWave}
           alt="Your Image Description"
           className="h-8 w-8 object-contain lg:h-12 lg:w-12 "
-        />
+        /> */}
       </div>
 
       <table className="w-full">

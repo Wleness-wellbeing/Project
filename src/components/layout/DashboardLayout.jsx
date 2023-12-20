@@ -6,31 +6,8 @@ import { palmWave } from "../../assets";
 import { useNavigate } from "react-router-dom";
 
 export default function DashboardLayout({ children, token }) {
-  const navigate = useNavigate();
-
-  // Redirect user if loggedin
-  if (token == null || token == "" || token == undefined) {
-    // Navigate to login
-    useEffect(() => {
-      navigate("/login", {
-        state: {
-          successMessage: "Please Login",
-        },
-      });
-    }, []);
-    return null;
-  }
-  const wleness_user = JSON.parse(localStorage.getItem("wleness_user"));
-  if (wleness_user.type != "expert") {
-    useEffect(() => {
-      navigate("/");
-    }, []);
-    return null;
-  }
-
   // Handle Navigation bar
   const [isMenuOpen, setMenuOpen] = useState(false); // Menu Modal
-  const [user, setUser] = useState(null);
 
   const openMenu = () => {
     setMenuOpen(true);
@@ -40,15 +17,9 @@ export default function DashboardLayout({ children, token }) {
     setMenuOpen(false);
   };
 
-  const userInfo = JSON.parse(localStorage.getItem("userInfo"));
-
   return (
     <main className="justify-end md:flex">
-      <AdminSideBar
-        user={userInfo}
-        isMenuOpen={isMenuOpen}
-        closeMenu={closeMenu}
-      />
+      <AdminSideBar isMenuOpen={isMenuOpen} closeMenu={closeMenu} />
 
       <div className="px-4 md:w-[80%] lg:px-8">
         <div className="flex items-center">
