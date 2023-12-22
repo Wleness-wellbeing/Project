@@ -24,13 +24,13 @@ export default function MainAssessment() {
           <small></small>
         </div>
 
-        <div className="mb-6 grid grid-cols-2 justify-center gap-2 lg:grid-cols-4">
+        <div className="mx-auto mb-6 grid grid-cols-2 justify-center gap-2 lg:grid-cols-4 xl:w-4/5 xl:gap-5">
           {assessments.map((value, i) => {
             return (
               <Link
                 to={"/assessment/" + value.slug}
                 key={i}
-                className="mx-auto inline-block w-full cursor-pointer rounded-lg border-2 bg-white py-6 shadow-xl shadow-gray-300 transition-all hover:border-primary-300 hover:shadow-lg md:w-4/5 md:px-10"
+                className="mx-auto inline-block w-full cursor-pointer rounded-lg border-2 bg-white py-6 shadow-xl shadow-gray-300 transition-all hover:border-primary-300 hover:shadow-lg"
               >
                 <img
                   src={value.image}

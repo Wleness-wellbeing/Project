@@ -1267,10 +1267,12 @@ import AssessmentStressIcon from "./images/icons/assessment-stress-icon.png";
 import AssessmentDepressionIcon from "./images/icons/assessment-depression-icon.png";
 import AssessmentAnxietyIcon from "./images/icons/assessment-anxiety-icon.png";
 import AssessmentAdhdIcon from "./images/icons/assessment-stress-icon.png";
+import AssessmentOCDIcon from "./images/icons/assessment-ocd-icon.png";
 
 export {
   AssessmentStressIcon,
   AssessmentDepressionIcon,
   AssessmentAnxietyIcon,
   AssessmentAdhdIcon,
+  AssessmentOCDIcon,
 };

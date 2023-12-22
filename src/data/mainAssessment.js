@@ -2,6 +2,7 @@ import {
   AssessmentAdhdIcon,
   AssessmentAnxietyIcon,
   AssessmentDepressionIcon,
+  AssessmentOCDIcon,
   AssessmentStressIcon,
   resultAdhd,
   resultStress,
@@ -81,6 +82,42 @@ export const adhdQuestions = [
   "Following through on commitments and promises is challenging.",
   "I struggle with regulating my emotions and experience mood swings.",
   "Despite having the ability, I've noticed a pattern of underachievement in various areas of my life.",
+];
+
+export const ocdQuestions = [
+  "I encounter intrusive, unwanted thoughts, such as blasphemous or harmful ideas.",
+  "Engaging in repetitive behaviors or rituals is a common response to my intrusive thoughts.",
+  "I feel compelled to perform specific actions, like checking or counting, to alleviate anxiety associated with my thoughts.",
+  "Intrusive thoughts often cause significant distress, leading to a heightened need for compulsive rituals.",
+  "Daily life is frequently disrupted by time-consuming rituals aimed at preventing feared events.",
+  "A strong need for order or symmetry drives many of my compulsive behaviors.",
+  "Experiencing distress when things are not just right is a regular part of my daily life.",
+  "Persistent doubts or fears drive me to engage in repetitive behaviors to ease anxiety.",
+  "Controlling obsessive thoughts is an ongoing challenge for me.",
+  "I perform rituals, including mental rituals, to prevent feared events or consequences.",
+  "Engaging in mental rituals is a common strategy to reduce anxiety associated with obsessive thoughts.",
+  "Daily activities are significantly impacted by my obsessions and compulsions, influencing my routines and choices.",
+  "I actively avoid situations that trigger my obsessive thoughts to minimize distress.",
+  "Repetitive checking or counting is a regular behavior, providing temporary relief from intrusive thoughts.",
+  "I recognize that my obsessions and compulsions are excessive, yet they persist as coping mechanisms.",
+];
+
+export const substanceUseQuestions = [
+  "I find it difficult to control the amount of substances I consume, like tobacco and alcohol.",
+  "My substance use, including tobacco and alcohol, has increased over time.",
+  "I experience cravings or strong urges to use substances.",
+  "I continue to use substances, like tobacco and alcohol, despite knowing it's affecting my health.",
+  "Quitting or cutting down on substances has proven challenging for me.",
+  "I spend a significant amount of time obtaining, using, or recovering from substance use, such as tobacco and alcohol.",
+  "My substance use interferes with my responsibilities at work, home, or school.",
+  "I've given up or reduced activities I used to enjoy in favor of substance use, like tobacco and alcohol.",
+  "Substance use is causing problems in my relationships.",
+  "I use substances in situations where it's physically hazardous.",
+  "I've developed a tolerance, needing more of the substance, including tobacco and alcohol, to achieve the same effect.",
+  "Withdrawal symptoms, like irritability or anxiety, occur when I try to cut down or stop using substances, such as tobacco and alcohol.",
+  "I often use substances to cope with stress or negative emotions.",
+  "My substance use, including tobacco and alcohol, continues despite being aware of its negative impact on my mental health.",
+  "Others have expressed concern about my use of substances. ",
 ];
 
 // Assessment Categories
@@ -175,6 +212,50 @@ export const assessments = [
         "You may experience consistent difficulty in sustaining focus significantly which impacts daily tasks, and distractions are frequent, affecting activities requiring concentration. Careless mistakes become more prevalent at work or school, and organizing tasks becomes a considerable challenge. Forgetfulness is more frequent, impacting completion of daily responsibilities and commitments. Seeking professional support is advisable at this level.",
       severe:
         "You may experience persistent and significant difficulty in staying focused on tasks requiring sustained attention that significantly hampers daily functioning.. Impulsive decisions and difficulty waiting one's turn become more pronounced. Restlessness and difficulty sitting still are noticeable, and regulating emotions becomes a challenge, contributing to mood swings. Despite possessing the ability, a pattern of underachievement becomes evident in various areas of life. Seeking professional support is advisable at this level.",
+    },
+  },
+  {
+    name: "OCD",
+    image: AssessmentOCDIcon,
+    slug: "ocd",
+    questions: ocdQuestions,
+    about: [
+      "Poor Time Management: Struggling to manage time effectively",
+      "Inattention: Struggling to focus on tasks or details",
+      "Hyperactivity: Being overly restless or constantly active",
+      "Impulsivity: Acting without thinking about consequences",
+      "Disorganization: Needs to be more efficient in organizing tasks or activities",
+      "Forgetfulness: Frequently losing items and forgetting appointments",
+    ],
+    result_image: resultAdhd,
+    levels: {
+      low: "You may be experiencing intrusive thoughts which occasionally disrupt daily life. Repetitive behaviors are noticeable but do not significantly interfere with routine. Compulsions may be time-consuming but are manageable. Seeking professional guidance is advisable to ensure an accurate assessment and appropriate support.",
+      mild: "You may be experiencing frequent intrusive thoughts which interfere with daily activities. Repetitive behaviors are a noticeable and regular response to intrusive thoughts. Compulsions are time-consuming and moderately disruptive to daily life. Distress levels are elevated, impacting various aspects of daily functioning. Seeking professional support is advisable at this level.",
+      moderate:
+        "You may be persistently experiencing intrusive thoughts which dominate daily functioning. Repetitive behaviors are a common and significant response to obsessive thoughts. Compulsions are time-consuming, disruptive, and challenging to control. Daily life is frequently disrupted, and distress levels are high. Seeking professional support is advisable at this level.",
+      severe:
+        "You may be relentlessly experiencing intrusive thoughts, causing substantial distress and impairment. Repetitive behaviors are constant and significantly interfere with daily functioning. Compulsions are time-consuming, pervasive, and difficult to resist. Daily activities are severely impacted, and the distress is overwhelming. Seeking professional support is advisable at this level.",
+    },
+  },
+  {
+    name: "Substance Use",
+    image: AssessmentAdhdIcon,
+    slug: "substance-use",
+    questions: substanceUseQuestions,
+    about: [
+      "Reflect on your thoughts, emotions, and behaviors over the past 3-4 weeks.",
+      "Select the option that resonates most with your experiences.",
+      "There are no correct or incorrect responses to the questions.",
+      "Ensure you respond to every question to receive your results.",
+    ],
+    result_image: resultAdhd,
+    levels: {
+      low: "Minimal substance use with Internal Locus of Control: You seem to have minimal concerns related to substance use with manageable challenges in controlling substance use. Internal locus of control is more dominant, suggesting that the you recognize personal responsibility and control over substance use. The impact on responsibilities, relationships, and health is minimal, and efforts to quit or cut down are generally successful. Seeking professional guidance is advisable to ensure an accurate assessment and appropriate support.",
+      mild: "Mild addiction with a mix of Internal and External Locus of Control: You may experience a mild addiction with noticeable increases in substance use and some challenges in control. Both internal and external locus of control factors may be present, indicating a mix of personal responsibility and external influences. Substance use is gradually impacting responsibilities and relationships, and attempts to quit or cut down may show variability in success. Seeking professional support is advisable at this level.",
+      moderate:
+        "Moderate addiction with a shift towards External Locus of Control: At this level, addiction severity is moderate, with frequent cravings and disruptions in daily life. The internal locus of control might diminish, and external factors may increasingly influence your ability to control substance use. Substance use is causing significant problems in relationships and responsibilities, and attempts to quit or cut down are proving challenging. Seeking professional support is advisable at this level.",
+      severe:
+        "Severe addiction with Predominant External Locus of Control: You may exhibit strong cravings, and pervasive disruptions in daily life. External locus of control is dominant, indicating that external factors play a significant role in controlling substance use. Substance use is causing severe problems in relationships and responsibilities, and efforts to quit or cut down are highly challenging. Seeking professional support is advisable at this level.",
     },
   },
 ];
