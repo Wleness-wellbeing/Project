@@ -18,7 +18,7 @@ export default function MobileNavbar({
   toggleJoinUs,
   token,
   username,
-  userType,
+  user_type,
 }) {
   const [isMenuOpen, setMenuOpen] = useState(false); // Menu Modal
 
@@ -110,7 +110,9 @@ export default function MobileNavbar({
             ) : (
               <Link
                 to={
-                  userType == "expert" ? "/doctor/dashboard" : "/user/dashboard"
+                  user_type == "expert"
+                    ? "/doctor/dashboard"
+                    : "/user/dashboard"
                 }
                 className="btn-primary flex !w-full items-center justify-center !rounded-full !bg-primary-400 !py-2.5 font-semibold hover:!bg-primary-300"
               >
