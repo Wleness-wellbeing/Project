@@ -23,3 +23,15 @@ export const shuffleArray = (array) => {
 
   return shuffledArray;
 };
+
+export const get_canonical = (location) => {
+  return location.origin + location.pathname;
+};
+
+export const get_title_text = (title) => {
+  let newTitle = "";
+  for (const key in title) {
+    newTitle += title[key].text;
+  }
+  return newTitle;
+};

@@ -7,6 +7,8 @@ import ActivityTechniques from "../../components/ActivityTechniques";
 import ActivityForm from "../../components/Forms/ActivityForm";
 import useEnquiryForm from "../../hooks/useEnquiryForm";
 import ThankYou from "../../components/Modals/ThankYou";
+import { Helmet } from "react-helmet";
+import { get_canonical, get_title_text } from "../../utils";
 
 export default function ActivityLayout(props) {
   const ref = useRef(null);
@@ -15,8 +17,15 @@ export default function ActivityLayout(props) {
   const handleScrollToComponent = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
+
   return (
     <>
+      <Helmet>
+        <title>{props.name + " | " + get_title_text(props.header.title)}</title>
+        <meta name="description" content="yoga and meditation description" />
+        <link rel="canonical" href={get_canonical(window.location)} />
+      </Helmet>
+
       <ActivityHeader
         title={props.header.title}
         image={props.header.image}

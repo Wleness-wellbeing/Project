@@ -18,6 +18,9 @@ import HappyClient from "../../components/HappyClient";
 import InternshipApply from "../../components/InternshipApply";
 import { internshipFaqs } from "../../data/faqs";
 import FaqWithImage from "../../components/FaqWithImage";
+import { Helmet } from "react-helmet";
+import { INTERNSHIP_META } from "../../data/meta";
+import { get_canonical } from "../../utils";
 
 const wlenessWork = [
   {
@@ -78,6 +81,12 @@ export default function Internship() {
 
   return (
     <>
+      <Helmet>
+        <title>{INTERNSHIP_META.title}</title>
+        <meta name="description" content={INTERNSHIP_META.description} />
+        <link rel="canonical" href={get_canonical(window.location)} />
+      </Helmet>
+
       <header className="bg-primary-50/30 py-4 lg:py-16">
         <div className="container mx-auto flex flex-col items-center justify-center md:flex-row">
           {/* Image on the right */}

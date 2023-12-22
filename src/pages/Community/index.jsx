@@ -13,6 +13,9 @@ import { wlenessCommunity } from "../../data/community";
 import CommunityCard from "../../components/Cards/CommunityCard";
 import CommunitySupportCard from "../../components/Cards/CommunitySupportCard";
 import { Link } from "react-router-dom";
+import { COMMUNITY_META } from "../../data/meta";
+import { get_canonical } from "../../utils";
+import { Helmet } from "react-helmet";
 
 const communitySupport = [
   {
@@ -50,6 +53,12 @@ const communitySupport = [
 export default function index() {
   return (
     <>
+      <Helmet>
+        <title>{COMMUNITY_META.title}</title>
+        <meta name="description" content={COMMUNITY_META.description} />
+        <link rel="canonical" href={get_canonical(window.location)} />
+      </Helmet>
+
       <header className="relative overflow-x-hidden overflow-y-clip bg-primary-50/30">
         <div className="container mx-auto text-center">
           <h1 className="subheading my-8">

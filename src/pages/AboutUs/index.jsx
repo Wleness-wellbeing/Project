@@ -4,6 +4,9 @@ import { about3, about6, problem, aboutusHeader } from "../../assets";
 import DummyComponent from "../../components/AboutUsDrop";
 import TeamComponent from "./TeamComponent";
 import PartnerWithUs from "../../components/Forms/PartnerWithUs";
+import { Helmet } from "react-helmet";
+import { ABOUT_META } from "../../data/meta";
+import { get_canonical } from "../../utils";
 
 function AboutUs() {
   const [partnerWithUs, setPartnerWithUs] = useState(false);
@@ -15,6 +18,11 @@ function AboutUs() {
 
   return (
     <main>
+      <Helmet>
+        <title>{ABOUT_META.title}</title>
+        <meta name="description" content={ABOUT_META.description} />
+        <link rel="canonical" href={get_canonical(window.location)} />
+      </Helmet>
       <header
         className="relative bg-cover bg-center bg-no-repeat brightness-90 lg:bg-top"
         style={{

@@ -5,6 +5,9 @@ import { lifecoching, wlenessLifeCoaching } from "../../data";
 import { lifeCoachingHeader, rectangle2, rectangle3 } from "../../assets";
 import LifeCoachingForm from "../../components/Forms/LifecoachingForm";
 import CoachRequestForm from "../../components/Forms/CoachRequestForm";
+import { Helmet } from "react-helmet";
+import { LIFE_COACHING_META } from "../../data/meta";
+import { get_canonical } from "../../utils";
 
 const results = [
   [
@@ -39,6 +42,11 @@ export default function LifeCoching() {
 
   return (
     <>
+      <Helmet>
+        <title>{LIFE_COACHING_META.title}</title>
+        <meta name="description" content={LIFE_COACHING_META.description} />
+        <link rel="canonical" href={get_canonical(window.location)} />
+      </Helmet>
       <header className="relative overflow-x-clip bg-secondary/10 pb-6 pt-12 xl:pb-10 xl:pt-16">
         <div className="container mx-auto xl:flex xl:items-center xl:gap-x-5">
           <div className="mb-5 flex justify-end xl:order-2 xl:mr-4 xl:w-1/2">

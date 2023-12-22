@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
 // Swiper Js & Styles
@@ -10,6 +10,9 @@ import { Pagination } from "swiper/modules";
 import BlogCard from "../../components/Cards/BlogCard";
 import { Link } from "react-router-dom";
 import getBlogs from "./getBlogs";
+import { Helmet } from "react-helmet";
+import { BLOGS_META } from "../../data/meta";
+import { get_canonical } from "../../utils";
 
 export default function Blogs() {
   const { blogPosts, categories, recentPosts, status, handleBlogsFilter } =
@@ -20,6 +23,12 @@ export default function Blogs() {
   }
   return (
     <>
+      <Helmet>
+        <title>{BLOGS_META.title}</title>
+        <meta name="description" content={BLOGS_META.description} />
+        <link rel="canonical" href={get_canonical(window.location)} />
+      </Helmet>
+
       {/* ========== Header ============= */}
       <header className="bg-primary-50/40 px-4 py-5">
         <div className="text-center">

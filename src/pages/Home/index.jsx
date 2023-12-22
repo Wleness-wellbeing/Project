@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 // Data
 import {
   community,
-  doodle2,
   designRing,
   featuredIn1,
   featuredIn2,
@@ -23,6 +22,9 @@ import HomeFaq from "../../components/Faq/HomeFaq";
 import ServicesCard from "../../components/Cards/ServicesCard";
 import { homePageDoctors } from "../../data/doctors";
 import DoctorSlider from "../../components/DoctorSlider";
+import { Helmet } from "react-helmet";
+import { HOME_META } from "../../data/meta";
+import { get_canonical } from "../../utils";
 
 const featuredIn = [
   [
@@ -93,9 +95,14 @@ export default function Home() {
       // Handle error
     }
   };
-
   return (
     <>
+      <Helmet>
+        <title>{HOME_META.title}</title>
+        <meta name="description" content={HOME_META.description} />
+        <link rel="canonical" href={get_canonical(window.location)} />
+      </Helmet>
+
       {/* Hero Section */}
       <MainHeader openAssessmentModal={() => resetBookNow()} />
 

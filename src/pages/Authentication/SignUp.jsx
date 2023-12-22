@@ -7,6 +7,9 @@ import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 import { signInWithPopup } from "firebase/auth";
 import SocialAuthButtons from "../../components/Buttons/SocialAuthButtons";
 import OtpModal from "../../components/Auth/OtpModal";
+import { Helmet } from "react-helmet";
+import { USERS_SIGNUP_META } from "../../data/meta";
+import { get_canonical } from "../../utils";
 
 export default function Signup({ setToken, token }) {
   const [otp, setOTP] = useState(null);
@@ -217,6 +220,11 @@ export default function Signup({ setToken, token }) {
   };
   return (
     <>
+      <Helmet>
+        <title>{USERS_SIGNUP_META.title}</title>
+        <meta name="description" content={USERS_SIGNUP_META.description} />
+        <link rel="canonical" href={get_canonical(window.location)} />
+      </Helmet>
       <div className="flex flex-col items-center justify-center md:w-1/2 md:px-12">
         <div className="w-80 rounded-xl bg-white px-6 py-8 shadow-[5px_5px_14px_3px] shadow-gray-300 sm:w-[400px]">
           <SocialAuthButtons

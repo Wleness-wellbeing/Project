@@ -11,6 +11,9 @@ import {
 } from "../assets";
 import CampusAmbassadorForm from "../components/CampusAmbassadorForm";
 import { whyToApplyCampus } from "../data/whyWleness";
+import { Helmet } from "react-helmet";
+import { CAMPUS_AMBASSADOR_META } from "../data/meta";
+import { get_canonical } from "../utils";
 
 const roles = [
   [roleSMM, "Social Media & Public Marketing"],
@@ -31,6 +34,11 @@ export default function CampusAmbassador() {
   };
   return (
     <>
+      <Helmet>
+        <title>{CAMPUS_AMBASSADOR_META.title}</title>
+        <meta name="description" content={CAMPUS_AMBASSADOR_META.description} />
+        <link rel="canonical" href={get_canonical(window.location)} />
+      </Helmet>
       <header className="relative overflow-y-auto overflow-x-hidden bg-gradient-to-b from-primary-50/30 to-transparent py-6 text-center">
         <div className="container mx-auto">
           <h1 className="subheading mb-4">

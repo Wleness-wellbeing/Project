@@ -16,6 +16,9 @@ import { Link } from "react-router-dom";
 import { wlenessExploreTracks } from "../../assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { Helmet } from "react-helmet";
+import { MUSICAL_HEALING_META } from "../../data/meta";
+import { get_canonical } from "../../utils";
 
 export default function MusicalTherapy() {
   const { enquiryForm, toggleForm } = useEnquiryForm();
@@ -35,6 +38,12 @@ export default function MusicalTherapy() {
   };
   return (
     <>
+      <Helmet>
+        <title>{MUSICAL_HEALING_META.title}</title>
+        <meta name="description" content={MUSICAL_HEALING_META.description} />
+        <link rel="canonical" href={get_canonical(window.location)} />
+      </Helmet>
+
       <ActivityHeader
         title={MusicalTherapyData.header.title}
         image={MusicalTherapyData.header.image}

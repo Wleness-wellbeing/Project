@@ -4,13 +4,15 @@ import { couplesTherapyData } from "../../data/services";
 import { couplesTherapyDoctors } from "../../data/doctors";
 import { coupleTherapyClient } from "../../data/clients";
 import { coupleTherapyFaq } from "../../data/faqs";
-import { textColorize } from "../../utils";
+import { get_canonical, textColorize } from "../../utils";
 // Components
 import DoctorSlider from "../../components/DoctorSlider";
 import HappyClient from "../../components/HappyClient";
 import FaqWithImage from "../../components/FaqWithImage";
 import Assessment from "../../components/Assessment";
 import TherapyHeader from "../../components/TherapyHeader";
+import { Helmet } from "react-helmet";
+import { COUPLE_THERAPY_META } from "../../data/meta";
 
 function CouplesTherapy() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
@@ -42,6 +44,12 @@ function CouplesTherapy() {
 
   return (
     <>
+      <Helmet>
+        <title>{COUPLE_THERAPY_META.title}</title>
+        <meta name="description" content={COUPLE_THERAPY_META.description} />
+        <link rel="canonical" href={get_canonical(window.location)} />
+      </Helmet>
+
       <TherapyHeader
         title={couplesTherapyData.header.title}
         images={couplesTherapyData.header.images}

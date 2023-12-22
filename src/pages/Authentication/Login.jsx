@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Helmet } from "react-helmet";
 import { signInWithPopup } from "firebase/auth";
 import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 // Data
 import { GOOGLE_LOGIN_URI, LOGIN_USER_URI } from "../../data/api";
 import SocialAuthButtons from "../../components/Buttons/SocialAuthButtons";
+import { get_canonical } from "../../utils/index";
+import { USERS_LOGIN_META } from "../../data/meta";
 
 export default function Login({ setToken, token }) {
   const navigate = useNavigate();
@@ -189,96 +192,103 @@ export default function Login({ setToken, token }) {
   };
 
   return (
-    <div className="flex items-center justify-center md:w-1/2 md:px-4">
-      <div className="w-80 rounded-xl bg-white p-6 shadow-[5px_5px_14px_3px] shadow-gray-300 sm:w-[400px] lg:py-10">
-        <SocialAuthButtons
-          google={handleGoogleSignIn}
-          facebook={handleFacebookSignIn}
-        />
+    <>
+      <Helmet>
+        <title>{USERS_LOGIN_META.title}</title>
+        <meta name="description" content={USERS_LOGIN_META.description} />
+        <link rel="canonical" href={get_canonical(window.location)} />
+      </Helmet>
+      <div className="flex items-center justify-center md:w-1/2 md:px-4">
+        <div className="w-80 rounded-xl bg-white p-6 shadow-[5px_5px_14px_3px] shadow-gray-300 sm:w-[400px] lg:py-10">
+          <SocialAuthButtons
+            google={handleGoogleSignIn}
+            facebook={handleFacebookSignIn}
+          />
 
-        <div className="my-4 flex items-center justify-center gap-3">
-          <span className="h-[2px] w-36 bg-slate-200"></span>
-          <span className="text-sm font-medium">OR</span>
-          <span className="h-[2px] w-36 bg-slate-200"></span>
-        </div>
+          <div className="my-4 flex items-center justify-center gap-3">
+            <span className="h-[2px] w-36 bg-slate-200"></span>
+            <span className="text-sm font-medium">OR</span>
+            <span className="h-[2px] w-36 bg-slate-200"></span>
+          </div>
 
-        {/* Login Form */}
-        <form onSubmit={handleSubmit} className="mb-8 px-4">
-          {successMessage.status == "" ? (
-            location.state &&
-            location.state.successMessage && (
-              <p className="mb-3 text-center font-semibold text-red-500">
-                {location.state.successMessage}
+          {/* Login Form */}
+          <form onSubmit={handleSubmit} className="mb-8 px-4">
+            {successMessage.status == "" ? (
+              location.state &&
+              location.state.successMessage && (
+                <p className="mb-3 text-center font-semibold text-red-500">
+                  {location.state.successMessage}
+                </p>
+              )
+            ) : (
+              <p
+                className={`mb-3 text-center font-semibold ${
+                  successMessage.status == "success"
+                    ? " text-green-500 "
+                    : " text-red-500 "
+                }`}
+              >
+                {successMessage.message}
               </p>
-            )
-          ) : (
-            <p
-              className={`mb-3 text-center font-semibold ${
-                successMessage.status == "success"
-                  ? " text-green-500 "
-                  : " text-red-500 "
-              }`}
-            >
-              {successMessage.message}
+            )}
+
+            <label htmlFor="username" className="mb-5 block">
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Email or Mobile Number"
+                className="form-input-underline"
+                value={formInfo.username}
+                onChange={handleChange}
+              />
+            </label>
+            <label htmlFor="password">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                className="form-input-underline"
+                value={formInfo.password}
+                onChange={handleChange}
+              />
+            </label>
+
+            <div className="text-right">
+              <Link
+                to="/forgot-password"
+                className="mb-6 inline-block text-sm font-medium text-primary-400"
+              >
+                Forgot Password?
+              </Link>
+            </div>
+            <div className="text-center">
+              <button type="submit" className="btn-primary !w-fit !px-28 !py-3">
+                LOGIN
+              </button>
+            </div>
+          </form>
+
+          <div className="md:px-8">
+            <p className="text-center font-medium">
+              <span>Don't have an account yet. </span>
+              <Link className="font-semibold text-primary-400" to="/signup">
+                Sign Up
+              </Link>
             </p>
-          )}
-
-          <label htmlFor="username" className="mb-5 block">
-            <input
-              type="text"
-              id="username"
-              name="username"
-              placeholder="Email or Mobile Number"
-              className="form-input-underline"
-              value={formInfo.username}
-              onChange={handleChange}
-            />
-          </label>
-          <label htmlFor="password">
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Password"
-              className="form-input-underline"
-              value={formInfo.password}
-              onChange={handleChange}
-            />
-          </label>
-
-          <div className="text-right">
-            <Link
-              to="/forgot-password"
-              className="mb-6 inline-block text-sm font-medium text-primary-400"
-            >
-              Forgot Password?
-            </Link>
+            <p className="text-center font-medium">
+              <span>Login as an Expert. </span>
+              <Link
+                className="font-semibold text-primary-400"
+                to="/experts-login"
+              >
+                Login
+              </Link>
+            </p>
           </div>
-          <div className="text-center">
-            <button type="submit" className="btn-primary !w-fit !px-28 !py-3">
-              LOGIN
-            </button>
-          </div>
-        </form>
-
-        <div className="md:px-8">
-          <p className="text-center font-medium">
-            <span>Don't have an account yet. </span>
-            <Link className="font-semibold text-primary-400" to="/signup">
-              Sign Up
-            </Link>
-          </p>
-          <p className="text-center font-medium">
-            <span>Login as an Expert. </span>
-            <Link
-              className="font-semibold text-primary-400"
-              to="/experts-login"
-            >
-              Login
-            </Link>
-          </p>
         </div>
       </div>
-    </div>
+    </>
   );
 }

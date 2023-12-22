@@ -10,6 +10,9 @@ import HappyClient from "../../components/HappyClient";
 import IssueCard from "../../components/Cards/IssueCard";
 import { therapies } from "../../data";
 import Assessment from "../../components/Assessment";
+import { Helmet } from "react-helmet";
+import { THERAPY_META } from "../../data/meta";
+import { get_canonical } from "../../utils";
 
 export default function Therapy() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
@@ -39,6 +42,12 @@ export default function Therapy() {
   };
   return (
     <>
+      <Helmet>
+        <title>{THERAPY_META.title}</title>
+        <meta name="description" content={THERAPY_META.description} />
+        <link rel="canonical" href={get_canonical(window.location)} />
+      </Helmet>
+
       <GridHeader
         name={TherapyData.name}
         image={TherapyData.image}

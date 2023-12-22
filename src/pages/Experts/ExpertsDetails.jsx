@@ -3,6 +3,9 @@ import DoctorsCard from "../../components/DoctorsCard";
 import HappyClient from "../../components/HappyClient";
 import { expertsClients } from "../../data/clients";
 import getExperts from "./getExperts";
+import { ALL_EXPERTS_META } from "../../data/meta";
+import { get_canonical } from "../../utils";
+import { Helmet } from "react-helmet";
 
 export default function ExpertsDetails() {
   const { status, doctorDetails } = getExperts();
@@ -13,6 +16,12 @@ export default function ExpertsDetails() {
 
   return (
     <main>
+      <Helmet>
+        <title>{ALL_EXPERTS_META.title}</title>
+        <meta name="description" content={ALL_EXPERTS_META.description} />
+        <link rel="canonical" href={get_canonical(window.location)} />
+      </Helmet>
+
       <header className="container mx-auto py-4">
         <h1 className="text-center">
           <span className="subheading heading-primary">

@@ -7,6 +7,8 @@ import ActivityVideos from "../../components/ActivityVideos";
 import ActivityBlogs from "../../components/ActivityBlogs";
 import FeaturesBlock from "../../components/FeaturesBlock";
 import GamesCard from "../../components/Cards/GamesCard";
+import { Helmet } from "react-helmet";
+import { get_canonical, get_title_text } from "../../utils";
 
 export default function BrainExercise() {
   const ref = useRef(null);
@@ -16,6 +18,15 @@ export default function BrainExercise() {
   };
   return (
     <>
+      <Helmet>
+        <title>
+          {brainExercise.name +
+            " | " +
+            get_title_text(brainExercise.header.title)}
+        </title>
+        <meta name="description" content="yoga and meditation description" />
+        <link rel="canonical" href={get_canonical(window.location)} />
+      </Helmet>
       <ActivityHeader
         key={brainExercise.id}
         title={brainExercise.header.title}
