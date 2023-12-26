@@ -9,13 +9,19 @@ import {
 } from "date-fns";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faArrowLeft,
   faChevronLeft,
   faChevronRight,
-  faLessThan,
+  faCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
-const ExpertsCalendar = ({ onDateSelect, currentDate, setWeekDay }) => {
+const ExpertsCalendar = ({
+  onDateSelect,
+  selectedDate,
+  currentDate,
+  setWeekDay,
+  selected_slots,
+  setMessage,
+}) => {
   const [displayedMonth, setDisplayedMonth] = useState(currentDate);
 
   // Get the first day of the displayed month
@@ -36,12 +42,17 @@ const ExpertsCalendar = ({ onDateSelect, currentDate, setWeekDay }) => {
   // Function to navigate to the next month
   const goToNextMonth = () => {
     setDisplayedMonth(addMonths(displayedMonth, 1));
+    setMessage("", "");
   };
-
   // Function to navigate to the previous month
   const goToPreviousMonth = () => {
     setDisplayedMonth(subMonths(displayedMonth, 1));
+    setMessage("", "");
   };
+
+  // Function to check if a date exists in the array
+  const doesDateExist = (dateToCheck) =>
+    selected_slots?.some((obj) => obj.date === dateToCheck);
 
   return (
     <div className="mb-4 lg:mb-8">
@@ -70,23 +81,43 @@ const ExpertsCalendar = ({ onDateSelect, currentDate, setWeekDay }) => {
             {day}
           </div>
         ))} */}
-        {dates.map((date) => (
-          <span
-            key={date}
-            onClick={() => handleDateSelect(date)}
-            className={`cursor-pointer ${
-              date.getMonth() !== displayedMonth.getMonth()
-                ? "text-gray-400"
-                : ""
-            } ${
-              format(date, "yyyy-MM-dd") === format(currentDate, "yyyy-MM-dd")
-                ? "bg-blue-200"
-                : "bg-white hover:bg-gray-300"
-            } justify-self-center rounded-full px-4 py-2.5 text-center focus:outline-none`}
-          >
-            {format(date, "d")}
-          </span>
-        ))}
+        {dates.map((date) => {
+          return format(date, "yyyy-MM-dd") >=
+            format(currentDate, "yyyy-MM-dd") ? (
+            <button
+              type="button"
+              key={date}
+              onClick={() => handleDateSelect(date)}
+              className={`cursor-pointer ${
+                format(date, "yyyy-MM-dd") === selectedDate
+                  ? "bg-primary-50"
+                  : "bg-gray-50"
+              } ${
+                format(date, "yyyy-MM-dd") === format(currentDate, "yyyy-MM-dd")
+                  ? "!bg-blue-200"
+                  : "hover:bg-primary-50"
+              } h-12 w-12 justify-self-center rounded-full text-center focus:outline-none`}
+            >
+              <span>{format(date, "d")}</span>
+              {doesDateExist(format(date, "yyyy-MM-dd")) ? (
+                <span className="ml-1 text-primary-400">
+                  <FontAwesomeIcon width="5px" icon={faCircle} />
+                </span>
+              ) : (
+                ""
+              )}
+            </button>
+          ) : (
+            <button
+              type="button"
+              key={date}
+              disabled={true}
+              className="h-12 w-12 cursor-not-allowed justify-self-center rounded-full bg-gray-200 text-center focus:outline-none"
+            >
+              <span>{format(date, "d")}</span>
+            </button>
+          );
+        })}
       </div>
     </div>
   );

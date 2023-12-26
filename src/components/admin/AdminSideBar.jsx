@@ -50,7 +50,6 @@ export default function AdminSideBar({ isMenuOpen, closeMenu }) {
         if (response.status == 200) {
           setUser(response.data);
           localStorage.setItem("userInfo", JSON.stringify(response.data));
-          setLoading(false);
         }
       })
       .catch((error) => {

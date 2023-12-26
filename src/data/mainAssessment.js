@@ -4,6 +4,7 @@ import {
   AssessmentDepressionIcon,
   AssessmentOCDIcon,
   AssessmentStressIcon,
+  AssessmentSubstanceIcon,
   resultAdhd,
   resultStress,
 } from "../assets";
@@ -239,7 +240,7 @@ export const assessments = [
   },
   {
     name: "Substance Use",
-    image: AssessmentAdhdIcon,
+    image: AssessmentSubstanceIcon,
     slug: "substance-use",
     questions: substanceUseQuestions,
     about: [

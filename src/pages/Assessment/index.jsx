@@ -35,7 +35,7 @@ export default function MainAssessment() {
                 <img
                   src={value.image}
                   alt="stress icon"
-                  className="mx-auto mb-3 w-10 lg:w-16"
+                  className="mx-auto mb-3 h-10 w-10 object-contain lg:h-16 lg:w-16"
                 />
                 <span className="block text-center text-lg font-semibold">
                   {value.name}

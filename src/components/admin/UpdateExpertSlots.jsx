@@ -4,21 +4,19 @@ import { format, setWeek } from "date-fns";
 import axios from "axios";
 import { UPDATE_SLOTS } from "../../data/api";
 
-const UpdateExpertSlots = ({ token }) => {
+const UpdateExpertSlots = ({ token, selected_slots, slots, setSlots }) => {
   // Get Current Date
   const currentDate = new Date();
   const [selectedDate, setSelectedDate] = useState(
     format(currentDate, "yyyy-MM-dd"),
   );
-  const [selectedTime, setSelectedTime] = useState(null);
   const [selectedSlots, setSelectedSlots] = useState({});
   const [weekDay, setWeekDay] = useState(format(currentDate, "EEEE"));
-  const [isChecked, setChecked] = useState(false);
-  const [slots, setSlots] = useState([]);
   const [alert, setAlert] = useState({
     status: "",
     message: "",
   });
+
   // Sample appointment data (Replace this with a backend API call)
   function generateAppointmentData(startDate, endDate, timeSlots) {
     const appointmentData = [];
@@ -76,9 +74,15 @@ const UpdateExpertSlots = ({ token }) => {
 
   const handleDateSelect = (date) => {
     setSelectedDate(date);
-    setSlots([]);
+    // Set selected slots
+    const selected_date = selected_slots.filter((key) => key.date == date);
+    if (selected_date.length > 0) {
+      setSlots(selected_date[0].time_slots.split(","));
+    } else {
+      setSlots([]); // Set empty if slots not selected
+    }
+    // Set alert message
     setMessage("", "");
-    // setSelectedTime(null);
   };
 
   const handleSlotsUpdate = (slot) => {
@@ -111,10 +115,6 @@ const UpdateExpertSlots = ({ token }) => {
     // }
   };
 
-  const handleTimeSelect = (time) => {
-    setSelectedTime(time);
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -137,21 +137,12 @@ const UpdateExpertSlots = ({ token }) => {
       .then((response) => {
         if (response.data.status == "success") {
           setMessage("success", response.data.message);
-          setSlots([]);
         }
       })
       .catch((error) => {
         // Handle errors
         console.error("Error fetching doctor details:", error);
       });
-  };
-
-  // Function to check if time slots are available for the selected date
-  const areTimeSlotsAvailable = () => {
-    const selectedAppointment = appointmentData.find(
-      (appointment) => appointment.date === selectedDate,
-    );
-    return selectedAppointment && selectedAppointment.timeSlots.length > 0;
   };
 
   return (
@@ -163,9 +154,12 @@ const UpdateExpertSlots = ({ token }) => {
             appointmentData={appointmentData}
             onDateSelect={handleDateSelect}
             currentDate={currentDate}
+            selectedDate={selectedDate}
             updateslots={setSelectedSlots}
             updatedslots={selectedSlots}
             setWeekDay={setWeekDay}
+            selected_slots={selected_slots}
+            setMessage={setMessage}
           />
         </div>
 
