@@ -1268,7 +1268,7 @@ import AssessmentDepressionIcon from "./images/icons/assessment-depression-icon.
 import AssessmentAnxietyIcon from "./images/icons/assessment-anxiety-icon.png";
 import AssessmentAdhdIcon from "./images/icons/assessment-adhd-icon.png";
 import AssessmentOCDIcon from "./images/icons/assessment-ocd-icon.png";
-import AssessmentSubstanceIcon from "./images/icons/assessment-stress-icon.png";
+import AssessmentSubstanceIcon from "./images/icons/assessment-substance-use-logo.png";
 
 export {
   AssessmentStressIcon,
