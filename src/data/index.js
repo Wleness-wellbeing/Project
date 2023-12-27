@@ -3562,4 +3562,19 @@ export const wlenessLifeCoaching = [
     image: lifeCoaching3,
     desc: "Our comprehensive approach examines all facets of your life, providing a clear roadmap for growth. Our expert coaches will assess your strengths, identify areas for improvement, & work with you to set & achieve meaningful goals. Elevate every aspect of your life.",
   },
+  {
+    name: "Public Speaking",
+    image: lifeCoaching3,
+    desc: "Our expert coaches provide personalized guidance, practical strategies, and confidence-building exercises, empowering you to communicate with impact. Transform anxiety into assurance and captivate any audience with newfound fluency and charisma.",
+  },
+  {
+    name: "Leadership Development",
+    image: lifeCoaching3,
+    desc: "Our expert coaches offer personalized strategies, using your strengths and addressing areas for growth. Gain invaluable insights, refine decision-making, and foster effective communication. Upgrade your leadership presence, empowering you to inspire and lead with authenticity.",
+  },
+  {
+    name: "Interview Preparation",
+    image: lifeCoaching3,
+    desc: "Our comprehensive approach examines all facets of your life, providing a clear roadmap for growth. Our expert coaches will assess your strengths, identify areas for improvement, & work with you to set & achieve meaningful goals. Elevate every aspect of your life.",
+  },
 ];

@@ -2,8 +2,9 @@
 // Main Pages
 // =======================================================================
 const HOME_META = {
-  title: "Wleness | Partnerning Your Well Being",
-  description: "this is description",
+  title: "Wleness: Elevating Your Wellness Journey with Expert Guidance",
+  description:
+    "Discover holistic wellness at Wleness - your ultimate destination for mind, body, and soul rejuvenation. Explore transformative resources and expert guidance here",
 };
 
 const BLOGS_META = {

@@ -1206,6 +1206,9 @@ export { email, location, ringervolume };
 import lifeCoaching1 from "./images/lifecoching/life-coaching-1.png";
 import lifeCoaching2 from "./images/lifecoching/life-coaching-2.png";
 import lifeCoaching3 from "./images/lifecoching/life-coaching-3.png";
+import lifeCoachingPublicSpeaking from "./images/lifecoching/lifecoaching-public-speaking.jpg";
+import lifeCoachingInterviewPreparation from "./images/lifecoching/lifecoaching-interview-preparation.jpg";
+import lifeCoachingLeadershipDevelopment from "./images/lifecoching/lifecoaching-leadership-development.jpg";
 import rectangle1 from "./images/lifecoching/rectangle1.png";
 import rectangle2 from "./images/lifecoching/rectangle2.png";
 import rectangle3 from "./images/lifecoching/rectangle3.png";
@@ -1219,6 +1222,9 @@ export {
   lifeCoaching1,
   lifeCoaching2,
   lifeCoaching3,
+  lifeCoachingInterviewPreparation,
+  lifeCoachingLeadershipDevelopment,
+  lifeCoachingPublicSpeaking,
   rectangle1,
   rectangle2,
   rectangle3,
