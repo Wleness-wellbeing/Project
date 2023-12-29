@@ -76,6 +76,7 @@ import MainAssessment from "./pages/Assessment";
 import AssessmentQuestions from "./pages/Assessment/AssessmentQuestions";
 import AssessmentResult from "./pages/Assessment/AssessmentResult";
 import Success from "./components/RedirectPages/Success";
+import { lifestyleCoaches } from "./data/life-coaching";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -629,6 +630,19 @@ function App() {
           }
         />
         {coachesData.map((value, i) => {
+          return (
+            <Route
+              key={i}
+              path={value.slug}
+              element={
+                <Layout>
+                  <CoachSubpage data={value} />
+                </Layout>
+              }
+            />
+          );
+        })}
+        {lifestyleCoaches.map((value, i) => {
           return (
             <Route
               key={i}

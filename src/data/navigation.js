@@ -1,13 +1,10 @@
 import {
-  faBookBookmark,
   faClipboardList,
   faEnvelope,
   faGlobe,
-  faHeartCircleCheck,
   faHome,
   faLocationDot,
   faPhone,
-  faUser,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -15,11 +12,6 @@ import {
   JoinUsInternship,
   JoinUsPsychiatrist,
   JoinUsTherapist,
-  iconFacebook,
-  iconInstagram,
-  iconLinkedin,
-  iconTwitter,
-  iconWhatsapp,
 } from "../assets";
 import {
   faFacebookSquare,
@@ -51,8 +43,12 @@ export const serviceMenuPages = [
     ],
   },
   {
-    name: "Music Healing",
-    slug: "/services/music-healing",
+    name: "Yoga",
+    slug: "/activities/yoga",
+  },
+  {
+    name: "Lifestyle Coaching",
+    slug: "/life-coaching",
   },
   {
     name: "Executive Coaching",
@@ -63,16 +59,8 @@ export const serviceMenuPages = [
     slug: "/corporate-wellbeing",
   },
   {
-    name: "Life Coaching",
-    slug: "/life-coaching",
-  },
-  {
-    name: "Internship",
-    slug: "/internship",
-  },
-  {
-    name: "Yoga",
-    slug: "/activities/yoga",
+    name: "Music Healing",
+    slug: "/services/music-healing",
   },
   {
     name: "Meditation",
@@ -184,7 +172,7 @@ export const footerOurServices = [
   ["Music Healing", "/services/music-healing"],
   ["Executive Coaching", "/executive-coaching"],
   ["Corporate Wellbeing", "/corporate-wellbeing"],
-  ["Life Coaching", "/life-coaching"],
+  ["Lifestyle Coaching", "/life-coaching"],
   ["Internship", "/internship"],
   ["Yoga", "/activities/yoga"],
   // ["Meditation", "/activities/meditation"],

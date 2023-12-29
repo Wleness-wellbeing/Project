@@ -8,7 +8,7 @@ import DesktopNavbar from "./DesktopNavbar";
 import MobileNavbar from "./MobileNavbar";
 import useToken from "../../utils/useToken";
 import axios from "axios";
-import { EXPERTS_PROFILE_URI, USER_PROFILE_URI } from "../../data/api";
+import { USER_PROFILE_URI } from "../../data/api";
 import useLogout from "../Auth/useLogout";
 
 function Navbar() {

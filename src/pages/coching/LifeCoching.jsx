@@ -2,12 +2,19 @@ import React, { useState } from "react";
 import FaqWithImage from "../../components/FaqWithImage";
 import { lifeStyleCoachingFaqs } from "../../data/faqs";
 import { lifecoching, wlenessLifeCoaching } from "../../data";
-import { lifeCoachingHeader, rectangle2, rectangle3 } from "../../assets";
+import {
+  lifeCoachingHeader,
+  profileMask,
+  rectangle2,
+  rectangle3,
+} from "../../assets";
 import LifeCoachingForm from "../../components/Forms/LifecoachingForm";
 import CoachRequestForm from "../../components/Forms/CoachRequestForm";
 import { Helmet } from "react-helmet";
 import { LIFE_COACHING_META } from "../../data/meta";
 import { get_canonical } from "../../utils";
+import { Link } from "react-router-dom";
+import { lifestyleCoaches } from "../../data/life-coaching";
 
 const results = [
   [
@@ -47,6 +54,8 @@ export default function LifeCoching() {
         <meta name="description" content={LIFE_COACHING_META.description} />
         <link rel="canonical" href={get_canonical(window.location)} />
       </Helmet>
+
+      {/* ===================== Header Section =====================  */}
       <header className="relative overflow-x-clip bg-secondary/10 pb-6 pt-12 xl:pb-10 xl:pt-16">
         <div className="container mx-auto xl:flex xl:items-center xl:gap-x-5">
           <div className="mb-5 flex justify-end xl:order-2 xl:mr-4 xl:w-1/2">
@@ -61,7 +70,7 @@ export default function LifeCoching() {
               <h1 className="subheading">Unleash Your Inner Champion</h1>
               <h2 className="text-2xl font-semibold">
                 <span className="">Through Wleness </span>
-                <span className="heading-primary ">Life Coaching</span>
+                <span className="heading-primary ">Lifestyle Coaching</span>
               </h2>
             </hgroup>
 
@@ -85,6 +94,106 @@ export default function LifeCoching() {
         </div>
       </header>
 
+      {/* ===================== Lifestyle coaches =====================  */}
+      <section className="container mx-auto hidden  py-5 text-center">
+        <h2 className="subheading mb-3 pt-10">
+          <span>Our </span>
+          <span className="heading-primary">Lifestyle Coaches</span>
+        </h2>
+
+        <div className="mt-4 grid space-y-4 lg:grid-cols-3 lg:space-y-0">
+          {lifestyleCoaches.map((value, i) => {
+            return (
+              <Link key={i} to={value.slug} className="block">
+                <div className="mb-4">
+                  <img src={value.image} alt="" className="mx-auto w-44" />
+                </div>
+                <figcaption>
+                  <h2 className="text-lg font-semibold lg:text-2xl">
+                    {value.name}
+                  </h2>
+                  <h4 className="font-semibold text-slate-600">
+                    {value.profession}
+                  </h4>
+                  <h4 className="font-semibold text-slate-600">
+                    Certified by ICF
+                  </h4>
+                </figcaption>
+              </Link>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ===================== Wleness lifestyle coaching =====================  */}
+      <section className="container mx-auto my-4 mb-8 pt-4 text-center">
+        <h2 className="subheading">
+          <span>Wleness </span>
+          <span className=" heading-primary"> lifestyle coaching </span>
+        </h2>
+        <div className="container mx-auto mt-6 grid grid-cols-1 justify-center gap-4 sm:grid-cols-2 md:grid-cols-3">
+          {wlenessLifeCoaching.map((value, i) => {
+            return (
+              <figure
+                key={i}
+                className="cursor-pointer rounded-2xl p-4 text-center hover:shadow-xl"
+              >
+                <div className="relative mx-auto mb-4 h-36 w-36 lg:h-40 lg:w-40">
+                  <div className="h-full w-full rounded-full">
+                    <img
+                      src={value.image}
+                      alt=""
+                      className="h-full w-full rounded-full object-cover object-top"
+                    />
+                  </div>
+                  <img
+                    src={profileMask}
+                    alt=""
+                    className="absolute left-1/2 top-0 -translate-x-[55%] scale-110 object-cover"
+                  />
+                </div>
+                <figcaption className="font-semibold">
+                  <h2 className="mb-2 text-xl font-bold text-primary-400">
+                    {value.name}
+                  </h2>
+                  <p className="text-sm text-slate-500">{value.desc}</p>
+                </figcaption>
+              </figure>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ===================== Results Section =====================  */}
+      <section className="relative bg-secondary/10 py-6">
+        <div className="container mx-auto lg:flex lg:gap-x-5">
+          <div className="mb-6 flex justify-end lg:order-2 lg:w-2/5">
+            <img src={rectangle3} alt="" className="w-full xl:w-[90%]"></img>
+          </div>
+          <div className="my-auto lg:order-1 lg:w-3/5">
+            <h2 className="subheading mb-4">
+              <span>The </span>
+              <span className=" heading-primary">results </span>
+              <span>say it all</span>
+            </h2>
+            <ul className="list-outside list-disc px-4 font-semibold  text-primary-300">
+              {results.map((value, i) => {
+                return (
+                  <li key={i} className="mb-4  p-2">
+                    <p className="text-black">
+                      <span className="text-primary-300">{value[0]}</span>
+                      <span>{value[1]}</span>
+                      <span className="text-primary-300">{value[2]}</span>
+                    </p>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* ===================== How can life coaching propel you forward? =====================  */}
       <section className="container mx-auto text-center">
         <h2 className="subheading mb-3 pt-10">
           <span>How can </span>
@@ -124,62 +233,10 @@ export default function LifeCoching() {
         </div>
       </section>
 
-      <section className="relative bg-secondary/10 py-6">
-        <div className="container mx-auto lg:flex lg:gap-x-5">
-          <div className="mb-6 flex justify-end lg:order-2 lg:w-2/5">
-            <img src={rectangle3} alt="" className="w-full xl:w-[90%]"></img>
-          </div>
-          <div className="my-auto lg:order-1 lg:w-3/5">
-            <h2 className="subheading mb-4">
-              <span>The </span>
-              <span className=" heading-primary">results </span>
-              <span>say it all</span>
-            </h2>
-            <ul className="list-outside list-disc px-4 font-semibold  text-primary-300">
-              {results.map((value, i) => {
-                return (
-                  <li key={i} className="mb-4  p-2">
-                    <p className="text-black">
-                      <span className="text-primary-300">{value[0]}</span>
-                      <span>{value[1]}</span>
-                      <span className="text-primary-300">{value[2]}</span>
-                    </p>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="container mx-auto my-2 mb-8 pt-4 text-center">
-        <h2 className="subheading">
-          <span>Wleness </span>
-          <span className=" heading-primary"> life coaching </span>
-        </h2>
-        <div className="container mx-auto mt-6 grid grid-cols-1 justify-center gap-4 sm:grid-cols-2 md:grid-cols-3">
-          {wlenessLifeCoaching.map((value, i) => {
-            return (
-              <figure
-                key={i}
-                className="cursor-pointer rounded-2xl p-4 text-center hover:shadow-xl"
-              >
-                <div>
-                  <img className="mx-auto w-32 xl:w-44" src={value.image} />
-                </div>
-                <figcaption className="font-semibold">
-                  <h2 className="mb-2 text-xl font-bold text-primary-400">
-                    {value.name}
-                  </h2>
-                  <p className="text-sm text-slate-500">{value.desc}</p>
-                </figcaption>
-              </figure>
-            );
-          })}
-        </div>
-      </section>
-
+      {/* ===================== FAQ section =====================  */}
       <FaqWithImage data={lifeStyleCoachingFaqs} />
+
+      {/* ===================== Forms =====================  */}
       <LifeCoachingForm isOpen={lifecoachingForm} onClose={toggleForm} />
       <CoachRequestForm name="Life Coaching" />
     </>

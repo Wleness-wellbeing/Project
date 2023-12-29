@@ -2,9 +2,10 @@
 // Main Pages
 // =======================================================================
 const HOME_META = {
-  title: "Wleness: Elevating Your Wellness Journey with Expert Guidance",
+  title:
+    "Best Online Mental Health Therapy in India | Best Online Psychologist India",
   description:
-    "Discover holistic wellness at Wleness - your ultimate destination for mind, body, and soul rejuvenation. Explore transformative resources and expert guidance here",
+    "India's top online mental health platform. Professional, compassionate psychologists offering effective, accessible therapy",
 };
 
 const BLOGS_META = {
