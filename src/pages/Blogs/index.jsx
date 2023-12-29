@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch, faAnglesRight } from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 // Swiper Js & Styles
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -15,12 +15,22 @@ import { BLOGS_META } from "../../data/meta";
 import { get_canonical } from "../../utils";
 
 export default function Blogs() {
-  const { blogPosts, categories, recentPosts, status, handleBlogsFilter } =
-    getBlogs();
+  const {
+    blogPosts,
+    allBlogPosts,
+    categories,
+    recentPosts,
+    status,
+    handleBlogsFilter,
+  } = getBlogs();
+
+  console.log("this is blog", blogPosts);
+  console.log("this is all blog", allBlogPosts);
 
   if (!status) {
     return <div className="mb-5 text-center">Loading...</div>;
   }
+
   return (
     <>
       <Helmet>
@@ -102,7 +112,7 @@ export default function Blogs() {
       {/* Filterable Blogs */}
       <section className="container mx-auto lg:!px-0">
         <ul className="flex flex-wrap justify-center gap-2 pb-8 pt-5 lg:gap-x-14 lg:gap-y-6 lg:pt-0 2xl:pb-8">
-          <li onClick={() => handleBlogsFilter(0)}>
+          <li onClick={() => handleBlogsFilter("default")}>
             <span className="inline-block cursor-pointer rounded-3xl bg-primary-50/50 px-6 py-2.5 text-xs font-bold text-slate-900 transition-colors hover:bg-primary-50 md:text-base">
               All
             </span>
@@ -126,23 +136,31 @@ export default function Blogs() {
         </div>
 
         {/* Dot Pagination */}
-        {blogPosts.length > 9 ? (
-          <div className="my-8 flex items-center justify-center pt-4">
-            <div className="font-sm mr-4 flex h-12  w-12 items-center justify-center rounded-full bg-primary-500 text-xl text-white hover:bg-primary-300">
-              1
-            </div>
-            <div className="font-sm mr-4 flex  h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-white text-xl text-primary-500 hover:bg-slate-300">
-              2
-            </div>
-            <div className="font-sm mr-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-white text-xl text-primary-500 hover:bg-slate-200">
-              3
-            </div>
-            <div className="font-sm mr-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-primary-500 text-xl text-white hover:bg-slate-200">
-              <FontAwesomeIcon
-                icon={faAnglesRight}
-                className="  hover:text-slate-600"
-              />
-            </div>
+        {allBlogPosts.length > 9 ? (
+          // <div className="my-8 flex items-center justify-center pt-4">
+          //   <div className="font-sm mr-4 flex h-12  w-12 items-center justify-center rounded-full bg-primary-500 text-xl text-white hover:bg-primary-300">
+          //     1
+          //   </div>
+          //   <div className="font-sm mr-4 flex  h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-white text-xl text-primary-500 hover:bg-slate-300">
+          //     2
+          //   </div>
+          //   <div className="font-sm mr-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-white text-xl text-primary-500 hover:bg-slate-200">
+          //     3
+          //   </div>
+          //   <div className="font-sm mr-4 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary-500 bg-primary-500 text-xl text-white hover:bg-slate-200">
+          //     <FontAwesomeIcon
+          //       icon={faAnglesRight}
+          //       className="  hover:text-slate-600"
+          //     />
+          //   </div>
+          // </div>
+          <div className="text-center">
+            <button
+              onClick={() => handleBlogsFilter(0)}
+              className="btn-one mb-12"
+            >
+              Load More
+            </button>
           </div>
         ) : (
           ""

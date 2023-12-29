@@ -16,7 +16,9 @@ function getBlogs() {
       .then((response) => {
         // Handle the successful response
         setAllBlogPosts(response.data.blogs);
-        setBlogPosts(response.data.blogs);
+        setBlogPosts(
+          response.data.blogs.length > 0 ? response.data.blogs.slice("-9") : [],
+        );
         setRecentPosts(response.data.recent_blogs);
         setStatus(true);
       })
@@ -38,6 +40,8 @@ function getBlogs() {
   const handleBlogsFilter = (index) => {
     if (index == 0) {
       setBlogPosts(allBlogPosts);
+    } else if (index == "default") {
+      setBlogPosts(allBlogPosts.slice("-9"));
     } else {
       const filteredPosts = allBlogPosts.filter((posts) => {
         return posts.category === index;
@@ -50,7 +54,7 @@ function getBlogs() {
     blogPosts: blogPosts,
     allBlogPosts: allBlogPosts,
     categories: categories,
-    recentPosts: recentPosts,
+    recentPosts: blogPosts.length > 0 ? blogPosts.slice("-5").reverse() : [],
     status: status,
     handleBlogsFilter: handleBlogsFilter,
   };
