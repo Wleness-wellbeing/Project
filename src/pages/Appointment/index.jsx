@@ -355,12 +355,12 @@ export default function Appointment() {
                 <div className="mb-8">
                   <BookingHeading heading="2. Select session plan" />
                   <SessionPricingItem
-                    data={{ package: "Introductory Session", price: 599 }}
+                    data={{ package: "Introductory Session", price: 600 }}
                     selectPlan={() =>
                       setCheckoutDetails({
                         ...checkoutDetails,
                         plan: "Introductory Session",
-                        price: 599,
+                        price: 600,
                       })
                     }
                     selectedPlan={
