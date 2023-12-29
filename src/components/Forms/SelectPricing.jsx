@@ -11,10 +11,6 @@ export default function SelectPricing({ slug, bookingUrl, price, packages }) {
     message: "",
   });
 
-  const handleDuration = (event) => {
-    setSelectDuration(event.target.id);
-  };
-
   const handleModes = (event) => {
     setSelectMode(event.target.id);
   };
@@ -30,8 +26,8 @@ export default function SelectPricing({ slug, bookingUrl, price, packages }) {
                   htmlFor={value.value}
                   className={
                     setMode == value.value
-                      ? "block w-full cursor-pointer rounded-full bg-primary-300 px-5 py-2.5 text-center font-semibold text-white"
-                      : "block w-full cursor-pointer rounded-full border-2 border-primary-300 px-5 py-2.5 text-center font-semibold text-primary-300"
+                      ? "block w-full cursor-pointer rounded-full bg-primary-300  px-2 py-2.5 text-center font-semibold text-white lg:px-5"
+                      : "block w-full cursor-pointer rounded-full border-2 border-primary-300 px-2 py-2.5 text-center font-semibold text-primary-300 lg:px-5"
                   }
                 >
                   <input
@@ -53,33 +49,8 @@ export default function SelectPricing({ slug, bookingUrl, price, packages }) {
               );
             })}
           </div>
-          {/* <div className="mb-4 flex gap-x-2 lg:mb-0 lg:gap-x-5">
-            {pricings.map((value, i) => {
-              return (
-                <label
-                  key={i}
-                  htmlFor={value.time}
-                  className={
-                    selectDuration == value.time
-                      ? "block w-full cursor-pointer rounded-full bg-primary-300 px-5 py-2.5 text-center font-semibold text-white"
-                      : "block w-full cursor-pointer rounded-full border-2 border-primary-300 px-5 py-2.5 text-center font-semibold text-primary-300"
-                  }
-                >
-                  <input
-                    type="radio"
-                    name="duration"
-                    id={value.time}
-                    checked={selectDuration == value.time}
-                    onChange={handleDuration}
-                    className="hidden"
-                  />
-                  <span className="text-sm lg:text-base">{value.time}</span>
-                </label>
-              );
-            })}
-          </div> */}
 
-          <div className="hidden pt-5 lg:block">
+          <div className=" pt-5">
             <label htmlFor="coupon">
               <input
                 type="text"
@@ -111,6 +82,10 @@ export default function SelectPricing({ slug, bookingUrl, price, packages }) {
             Pricing Details
           </h2>
           <div>
+            <h4 className="mb-2 flex justify-between font-semibold">
+              <span>Introductory Session</span>
+              <span>Rs. 599</span>
+            </h4>
             {packages &&
               packages.map((value, i) => {
                 return (
@@ -148,36 +123,6 @@ export default function SelectPricing({ slug, bookingUrl, price, packages }) {
                 </h5>
               </>
             ))} */}
-        </div>
-
-        <div className="pt-5 lg:hidden">
-          <label htmlFor="coupon">
-            <input
-              type="text"
-              name="coupon"
-              id="coupon"
-              placeholder="Apply Coupon"
-              className="mb-3 block w-full rounded-xl border-2 border-slate-200 px-6 py-2.5"
-            />
-          </label>
-
-          <p
-            className={`mb-4 text-center font-semibold ${
-              successMessage.status == "success"
-                ? " text-green-500 "
-                : " text-red-500 "
-            }`}
-          >
-            {successMessage.message}
-          </p>
-          <div className="text-center">
-            <button
-              onClick={() => handleBook(bookingUrl)}
-              className="btn-one inline-block"
-            >
-              Book an appointment now
-            </button>
-          </div>
         </div>
       </div>
     </section>

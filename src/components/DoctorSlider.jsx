@@ -131,6 +131,7 @@ export default function DoctorSlider(props) {
           {experts &&
             experts.map((value, index) => {
               let slug = `/experts/profile/${value.slug}`;
+              let booking_slug = `/experts/booking/${value.slug}`;
               return (
                 <SwiperSlide key={index}>
                   <figure>
@@ -183,7 +184,7 @@ export default function DoctorSlider(props) {
                           Book Now
                         </Link> */}
                           <button
-                            onClick={() => handleBookNow(value.bookingUrl)}
+                            onClick={() => handleBookNow(booking_slug)}
                             target="_blank"
                             className="btn-one mx-auto inline-block !py-2 !text-sm"
                           >

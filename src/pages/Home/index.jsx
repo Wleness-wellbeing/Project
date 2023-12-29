@@ -9,6 +9,7 @@ import {
   featuredIn3,
   featuredIn4,
   featuredIn5,
+  featuredIn6,
 } from "../../assets";
 import { homeFaqs } from "../../data/faqs";
 import { homeTestimonials } from "../../data/testimonials";
@@ -47,6 +48,10 @@ const featuredIn = [
     featuredIn5,
     "https://jionews.com/home/article/5/1087191419/Discover-a-New-Era-of-Wellness-with-WLENESS-Unveiling-Innovative-Solutions-for-Your-Health-and-Happiness",
   ],
+  [
+    featuredIn6,
+    "https://timesofindia.indiatimes.com/business/india-business/indias-11-fastest-growing-businesses-in-2023/articleshow/106354579.cms",
+  ],
 ];
 
 export default function Home() {
@@ -72,29 +77,6 @@ export default function Home() {
     });
   };
 
-  const [name, setName] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [selectedDate, setSelectedDate] = useState("");
-
-  const handleSubmit = async () => {
-    try {
-      const response = await fetch("/api/submit-form", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, phoneNumber, selectedDate }),
-      });
-
-      if (response.ok) {
-        // Handle success, maybe show a success message
-      } else {
-        // Handle error
-      }
-    } catch (error) {
-      // Handle error
-    }
-  };
   return (
     <>
       <Helmet>
@@ -260,12 +242,13 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ========== Featured In ========== */}
       <section className="mb-4 bg-yellow-primary py-6 lg:mb-8 lg:py-10">
         <div className="container mx-auto">
           <h2 className="mb-5 text-center">
             <span className="subheading heading-primary">Featured In</span>
           </h2>
-          <div className="grid grid-cols-2 items-center justify-center gap-4 md:grid-cols-5 lg:pb-3">
+          <div className="grid grid-cols-2 items-center justify-center gap-4 md:grid-cols-6 lg:pb-3">
             {featuredIn.map((value, i) => {
               return (
                 <Link

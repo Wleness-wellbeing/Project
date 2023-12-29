@@ -27,7 +27,7 @@ const TeamComponent = () => {
     },
     {
       name: "Pawan Kumar Singh",
-      designation: "Technlogy Lead",
+      designation: "Technology Lead",
       imageSrc: pavansir,
     },
     {
