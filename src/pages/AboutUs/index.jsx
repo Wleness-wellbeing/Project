@@ -88,14 +88,14 @@ function AboutUs() {
       </section>
 
       <section className="flex flex-col-reverse justify-center border-4 border-secondary/10 md:flex-row">
-        <div className="container mx-auto  my-auto w-full bg-secondary/10 py-8 text-center md:w-3/4">
-          <div className="my-4 text-left md:ml-60">
+        <div className="container mx-auto my-auto w-full bg-secondary/10 py-8 text-center md:w-3/4">
+          <div className="my-4 text-left md:ml-40 lg:ml-24 xl:ml-40">
             <h2 className="subheading">
               <span>Charting the path </span>
               <span className="heading-primary"> Forward</span>
             </h2>
           </div>
-          <div className="w-full text-left md:ml-60 md:mr-0 md:w-2/4 lg:mb-12">
+          <div className="w-full text-left md:ml-40 md:mr-0 md:w-3/5 lg:mb-12 lg:ml-24 xl:ml-40">
             {/* <ul className="list-disc ">
               <li className="item-start  flex ">
                 <img
@@ -183,7 +183,7 @@ function AboutUs() {
             </p>
           </div>
         </div>
-        <div className="mx-auto my-auto transform md:mt-0 md:translate-x-0 lg:my-auto lg:-translate-x-60 lg:text-center">
+        <div className="mx-auto my-auto transform md:mt-0 md:translate-x-0 lg:my-auto lg:-translate-x-32 lg:text-center">
           <img
             src={about6} // Replace with your image URL
             alt="Description of the image"

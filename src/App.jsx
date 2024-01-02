@@ -474,14 +474,6 @@ function App() {
           }
         />
         <Route
-          path="/user/profile"
-          element={
-            <UserDashboardLayout token={token}>
-              <UserProfile token={token} />
-            </UserDashboardLayout>
-          }
-        />
-        <Route
           path="/user/dashboard"
           element={
             <UserDashboardLayout token={token}>

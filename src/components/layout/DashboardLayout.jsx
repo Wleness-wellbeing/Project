@@ -18,10 +18,10 @@ export default function DashboardLayout({ children, token }) {
   };
 
   return (
-    <main className="justify-end md:flex">
+    <main className="lg:flex lg:justify-end">
       <AdminSideBar isMenuOpen={isMenuOpen} closeMenu={closeMenu} />
 
-      <div className="px-4 md:w-[80%] lg:px-8">
+      <div className="px-4 lg:w-[80%] lg:px-8">
         <div className="flex items-center">
           {/* Hamburger Icon */}
           <button className="mr-3 lg:hidden">

@@ -42,14 +42,14 @@ export default function UserDashboardLayout({ children, token }) {
   const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
   return (
-    <div className="justify-end md:flex">
+    <div className="lg:flex lg:justify-end">
       <UserSidebar
         image={userInfo ? userInfo.image : ""}
         isMenuOpen={isMenuOpen}
         closeMenu={closeMenu}
       />
 
-      <div className="px-4 md:w-[80%] lg:px-8">
+      <div className="mx-auto px-4 md:w-[80%] lg:mx-0 lg:px-8">
         <div className="flex items-center">
           {/* Hamburger Icon */}
           <button className="mr-3 lg:hidden">

@@ -106,7 +106,7 @@ export default function UserProfile({ token }) {
   };
 
   return (
-    <div className="text-center md:px-96">
+    <div className="mx-auto w-4/5 text-center lg:w-[420px]">
       <h2 className="text-center text-2xl font-semibold text-primary-400">
         Edit Your Avatar
       </h2>

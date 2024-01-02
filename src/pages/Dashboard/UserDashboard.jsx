@@ -27,6 +27,15 @@ const days = [
   "saturday",
 ];
 
+const moodsIcons = [
+  { label: "Happy", icon: HappyIcon },
+  { label: "Neutral", icon: NeutralIcon },
+  { label: "Emotional", icon: EmotionalIcon },
+  { label: "Sad", icon: SadIcon },
+  { label: "Angry", icon: AngryIcon },
+  { label: "Overwhelming", icon: OverwhelmingIcon },
+];
+
 export default function UserDashboard({ token }) {
   const { logout } = useLogout();
 
@@ -310,7 +319,7 @@ export default function UserDashboard({ token }) {
     <>
       <div className="md:flex">
         {/* To-do Section */}
-        <div className="mt-2 md:mt-0 md:w-[30%]">
+        <div className="mt-2 md:mt-0 lg:w-[30%]">
           <h2 className="pb-4 text-lg font-bold lg:text-2xl">To-Do List:</h2>
           <div className="rounded-lg bg-teal-100 py-6 pr-10 shadow-sm">
             <ul className="pl-4">
@@ -353,19 +362,12 @@ export default function UserDashboard({ token }) {
           </div>
         </div>
 
-        <div className=" md:ml-12 md:w-[75%]">
+        <div className="md:ml-12 md:w-[75%]">
           <h2 className="mt-4 pb-4 text-xl font-bold md:mt-0 lg:text-2xl">
             Mood Tracker:
           </h2>
-          <div className="grid w-full grid-cols-3 items-center rounded-lg bg-teal-100 p-3 text-center md:flex md:h-40 md:gap-12 md:pl-7 md:pt-4">
-            {[
-              { label: "Happy", icon: HappyIcon },
-              { label: "Neutral", icon: NeutralIcon },
-              { label: "Emotional", icon: EmotionalIcon },
-              { label: "Sad", icon: SadIcon },
-              { label: "Angry", icon: AngryIcon },
-              { label: "Overwhelming", icon: OverwhelmingIcon },
-            ].map((mood, index) => (
+          <div className="grid w-full grid-cols-3 items-center justify-center rounded-lg bg-teal-100 p-3 text-center md:pt-4 lg:flex lg:gap-12 lg:pl-7">
+            {moodsIcons.map((mood, index) => (
               <label key={index} className="flex flex-col items-center">
                 <input
                   type="radio"
@@ -376,11 +378,11 @@ export default function UserDashboard({ token }) {
                 />
                 <img
                   src={mood.icon}
-                  className="h-10 w-10  cursor-pointer object-fill md:h-16 md:w-16"
+                  className="h-8 w-8 cursor-pointer object-contain xl:h-12 xl:w-12"
                   alt={mood.label}
                 />
                 <h2
-                  className={`py-2 text-sm font-semibold lg:text-lg ${
+                  className={`py-2 text-sm font-semibold 2xl:text-lg ${
                     selectedMood === mood.label ? "text-teal-500" : ""
                   }`}
                 >
@@ -522,20 +524,20 @@ export default function UserDashboard({ token }) {
                 <p className="font-medium">{currentDate}</p>
               </div>
             </div>
-            <div className="flex justify-center gap-6  md:gap-12">
+            <div className="flex justify-center gap-4 lg:gap-8">
               {days.map((day) => (
                 <div className="text-center" key={day}>
                   <input
                     type="radio"
                     id={day}
                     name="day"
-                    className="h-4 w-4 border-teal-500 bg-white lg:h-7 lg:w-7"
+                    className="h-4 w-4 border-teal-500 bg-white"
                     checked={selectedDay === day}
                     onChange={() => setSelectedDay(day)}
                   />
                   <label
                     htmlFor={day}
-                    className="mx-auto mb-1 block cursor-pointer text-sm font-bold lg:text-base"
+                    className="mx-auto mb-1 block cursor-pointer text-sm font-bold xl:text-base"
                   >
                     {day.charAt(0).toUpperCase()}
                   </label>

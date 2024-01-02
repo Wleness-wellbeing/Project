@@ -23,7 +23,7 @@ export default function MainHeader({ openAssessmentModal }) {
           {/* <h4 className="mb-2 text-xl font-bold text-primary-400 lg:mb-4">
             Take Care Of Yourself
           </h4> */}
-          <h3 className="mx-auto mb-6 pr-4 text-sm font-semibold text-slate-600 md:text-base lg:text-lg">
+          <h3 className="mx-auto mb-6 pr-4 text-sm font-semibold text-slate-700 md:text-base lg:text-lg">
             Discover your journey to a better self by nurturing your mind, body
             and soul with our professionally curated services customized by
             industry experts just for you!
@@ -34,7 +34,7 @@ export default function MainHeader({ openAssessmentModal }) {
           >
             Book appointment
           </button>
-          <h3 className="mx-auto mb-4 text-sm font-semibold text-slate-600 md:text-base lg:text-lg">
+          <h3 className="mx-auto mb-4 text-sm font-semibold text-slate-700 md:text-base lg:text-lg">
             Explore your inner self, take a comprehensive self assessment and
             get an online therapy session at a promotional price.
           </h3>
