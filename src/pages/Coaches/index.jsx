@@ -6,7 +6,6 @@ import {
   executiveCoach3,
   executiveCoachingHeader,
   faq5,
-  lifeCoachingHeader,
 } from "../../assets";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -28,6 +27,7 @@ import useEnquiryForm from "../../hooks/useEnquiryForm";
 import { Helmet } from "react-helmet";
 import { EXECUTIVE_COACHING_META } from "../../data/meta";
 import { get_canonical } from "../../utils";
+import Confirmation from "../../components/Modals/Confirmation";
 
 const executiveCoaches = [
   {
@@ -62,6 +62,7 @@ export default function ExecutiveCoaching() {
   const [openFAQ, setOpenFAQ] = useState(0);
   const [activeService, setActiveService] = useState(0);
   const [activeIndividualService, setIndividualService] = useState(0);
+  const [status, setStatus] = useState(false);
 
   // Toggle Faq's
   const toggleFAQ = (index) => {
@@ -421,13 +422,19 @@ export default function ExecutiveCoaching() {
         </p>
       </section>
 
-      <CoachRequestForm name="General" />
+      <CoachRequestForm
+        name="General"
+        onClose={toggleForm}
+        setConfirmation={setStatus}
+      />
 
       <ActivityForm
         purpose="Executive Coaching"
         isOpen={enquiryForm}
         onClose={toggleForm}
+        setConfirmation={setStatus}
       />
+      <Confirmation status={status} close={() => setStatus(false)} />
     </>
   );
 }

@@ -10,9 +10,11 @@ import CorporateForm from "../../components/Forms/CorporateForm";
 import { Helmet } from "react-helmet";
 import { CORPORATE_WELLBEING_META } from "../../data/meta";
 import { get_canonical } from "../../utils";
+import Confirmation from "../../components/Modals/Confirmation";
 
 export default function index() {
   const [corporateForm, setCorporateForm] = useState(false);
+  const [status, setStatus] = useState(false);
 
   // Toggle form
   const toggleForm = () => {
@@ -30,7 +32,7 @@ export default function index() {
         <link rel="canonical" href={get_canonical(window.location)} />
       </Helmet>
 
-      <header className="relative  overflow-x-clip bg-tertiary/10 py-8 lg:py-28">
+      <header className="relative overflow-x-clip bg-tertiary/10 py-8 lg:py-28">
         <div className="container mx-auto xl:flex xl:items-center">
           <div className="mx-auto pb-2 text-center lg:order-2 lg:w-1/2">
             <img
@@ -212,7 +214,12 @@ export default function index() {
         />
       </section>
 
-      <CorporateForm isOpen={corporateForm} onClose={toggleForm} />
+      <CorporateForm
+        isOpen={corporateForm}
+        onClose={toggleForm}
+        setConfirmation={setStatus}
+      />
+      <Confirmation status={status} close={() => setStatus(false)} />
     </>
   );
 }

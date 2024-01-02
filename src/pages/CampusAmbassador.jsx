@@ -14,6 +14,7 @@ import { whyToApplyCampus } from "../data/whyWleness";
 import { Helmet } from "react-helmet";
 import { CAMPUS_AMBASSADOR_META } from "../data/meta";
 import { get_canonical } from "../utils";
+import Confirmation from "../components/Modals/Confirmation";
 
 const roles = [
   [roleSMM, "Social Media & Public Marketing"],
@@ -24,6 +25,7 @@ const roles = [
 
 export default function CampusAmbassador() {
   const [campusModal, setcampusModal] = useState(false);
+  const [status, setStatus] = useState(false);
 
   const openCampusModal = () => {
     setcampusModal(true);
@@ -187,7 +189,12 @@ export default function CampusAmbassador() {
         /> */}
       </section>
 
-      <CampusAmbassadorForm isOpen={campusModal} onClose={closeCampusModal} />
+      <CampusAmbassadorForm
+        isOpen={campusModal}
+        onClose={closeCampusModal}
+        setConfirmation={setStatus}
+      />
+      <Confirmation status={status} close={() => setStatus(false)} />
     </>
   );
 }

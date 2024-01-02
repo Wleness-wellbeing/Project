@@ -1,18 +1,17 @@
 import React, { useRef, useState } from "react";
-// Data
-import { activityFeatures } from "../../data";
 // Components
 import ActivityHeader from "../../components/ActivityHeader";
 import ActivityTechniques from "../../components/ActivityTechniques";
 import ActivityForm from "../../components/Forms/ActivityForm";
 import useEnquiryForm from "../../hooks/useEnquiryForm";
-import ThankYou from "../../components/Modals/ThankYou";
 import { Helmet } from "react-helmet";
 import { get_canonical, get_title_text } from "../../utils";
+import Confirmation from "../../components/Modals/Confirmation";
 
 export default function ActivityLayout(props) {
   const ref = useRef(null);
   const { enquiryForm, toggleForm } = useEnquiryForm();
+  const [status, setStatus] = useState(false);
 
   const handleScrollToComponent = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
@@ -51,8 +50,10 @@ export default function ActivityLayout(props) {
         purpose={props.name}
         isOpen={enquiryForm}
         onClose={toggleForm}
+        setConfirmation={setStatus}
       />
-      {/* <ThankYou /> */}
+
+      <Confirmation status={status} close={() => setStatus(false)} />
     </>
   );
 }

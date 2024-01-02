@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { CORPORATE_JOIN_URI } from "../../data/api";
 
-export default function CorporateForm({ isOpen, onClose }) {
+export default function CorporateForm({ isOpen, onClose, setConfirmation }) {
   if (!isOpen) return null;
 
   // Handle Joining Form
@@ -49,6 +49,13 @@ export default function CorporateForm({ isOpen, onClose }) {
     setPolicy(!policy);
   };
 
+  const setMessage = (status, message) => {
+    setSuccessMessage({
+      status: status,
+      message: message,
+    });
+  };
+
   // Handle Post Request
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -63,10 +70,7 @@ export default function CorporateForm({ isOpen, onClose }) {
       formInfo["website"]
     ) {
       if (!policy) {
-        setSuccessMessage({
-          status: "error",
-          message: "Please accept our policies to continue",
-        });
+        setMessage("error", "Please accept our policies to continue");
         return null;
       }
 
@@ -76,43 +80,35 @@ export default function CorporateForm({ isOpen, onClose }) {
         formData.append(key, formInfo[key]);
       }
 
-      try {
-        const response = await axios.post(CORPORATE_JOIN_URI, formData);
-        setSuccessMessage({
-          status: response.data.status,
-          message: response.data.message,
-        });
+      axios
+        .post(CORPORATE_JOIN_URI, formData)
+        .then((response) => {
+          setMessage(response.data.status, response.data.message);
 
-        // Empty form after successfully sending data
-        if (response.data.status == "success") {
-          setFormData({
-            org: "",
-            professional_email: "",
-            full_name: "",
-            role: "",
-            number: "",
-            website: "",
-          });
-          setPolicy(false);
-        }
-      } catch (error) {
-        console.error("Error sending data:", error);
-        setSuccessMessage({
-          status: "error",
-          message: "Internal Server Error! Please Try Again later",
+          if (response.data.status == "success") {
+            setFormData({
+              name: "",
+              email: "",
+              age: "",
+              gender: "",
+              phone: "",
+            });
+            onClose();
+            setConfirmation(true);
+          }
+        })
+        .catch((error) => {
+          console.error("Error sending data:", error);
+          setMessage("error", "Internal Server Error! Please Try Again later");
         });
-      }
     } else {
-      setSuccessMessage({
-        status: "error",
-        message: "Please fill your details properly!",
-      });
+      setMessage("error", "Please fill your details properly!");
     }
   };
 
   return (
-    <section className="fixed inset-0 z-50 grid place-items-center bg-black/20">
-      <div className="corporate-form w-4/5 rounded-2xl bg-white p-6 lg:w-[620px]">
+    <section className="fixed inset-0 z-50 grid animate-fadeIn place-items-center bg-black/20 transition-all">
+      <div className="corporate-form animate-scaleIn w-4/5 rounded-2xl bg-white p-6 transition-all lg:w-[620px]">
         <div className="text-center">
           <h2 className="subheading">Corporate Join</h2>
         </div>

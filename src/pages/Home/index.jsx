@@ -10,6 +10,7 @@ import {
   featuredIn4,
   featuredIn5,
   featuredIn6,
+  featuredIn7,
 } from "../../assets";
 import { homeFaqs } from "../../data/faqs";
 import { homeTestimonials } from "../../data/testimonials";
@@ -26,6 +27,7 @@ import DoctorSlider from "../../components/DoctorSlider";
 import { Helmet } from "react-helmet";
 import { HOME_META } from "../../data/meta";
 import { get_canonical } from "../../utils";
+import Confirmation from "../../components/Modals/Confirmation";
 
 const featuredIn = [
   [
@@ -41,22 +43,27 @@ const featuredIn = [
     "https://aninews.in/news/business/business/discover-a-new-era-of-wellness-with-wleness-unveiling-innovative-solutions-for-your-health-and-happiness20231016140849/",
   ],
   [
-    featuredIn4,
-    "https://m.dailyhunt.in/news/india/english/lokmattimes+english-epaper-lokmaten/discover+a+new+era+of+wellness+with+wleness+unveiling+innovative+solutions+for+your+health+and+happiness-newsid-n547715388?sm=Y",
-  ],
-  [
     featuredIn5,
     "https://jionews.com/home/article/5/1087191419/Discover-a-New-Era-of-Wellness-with-WLENESS-Unveiling-Innovative-Solutions-for-Your-Health-and-Happiness",
   ],
   [
+    featuredIn4,
+    "https://m.dailyhunt.in/news/india/english/lokmattimes+english-epaper-lokmaten/discover+a+new+era+of+wellness+with+wleness+unveiling+innovative+solutions+for+your+health+and+happiness-newsid-n547715388?sm=Y",
+  ],
+  [
     featuredIn6,
     "https://timesofindia.indiatimes.com/business/india-business/indias-11-fastest-growing-businesses-in-2023/articleshow/106354579.cms",
+  ],
+  [
+    featuredIn7,
+    "https://www.hindustantimes.com/brand-stories/excellence-redefined-meet-the-10-businesses-setting-new-standards-in-2023-101701260465504.html",
   ],
 ];
 
 export default function Home() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
   const [rediredurl, setRediredurl] = useState(null);
+  const [status, setStatus] = useState(false);
 
   // Assessment Slides
   const openAssessmentModal = () => {
@@ -248,7 +255,7 @@ export default function Home() {
           <h2 className="mb-5 text-center">
             <span className="subheading heading-primary">Featured In</span>
           </h2>
-          <div className="grid grid-cols-2 items-center justify-center gap-4 md:grid-cols-6 lg:pb-3">
+          <div className="flex items-center justify-center gap-4 lg:gap-10 lg:pb-3">
             {featuredIn.map((value, i) => {
               return (
                 <Link
@@ -301,7 +308,7 @@ export default function Home() {
       </section>
 
       {/* ========== Request Form ========== */}
-      <RequestForm />
+      <RequestForm setConfirmation={setStatus} />
 
       {/* ========== FAQ's ========== */}
       <HomeFaq data={homeFaqs} />
@@ -312,6 +319,7 @@ export default function Home() {
         buttons={rediredurl}
       />
 
+      <Confirmation status={status} close={() => setStatus(false)} />
       {/* <Feedback isOpen={isFeedbackOpen} onClose={closeFeedbackModal} /> */}
     </>
   );

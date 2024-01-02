@@ -2,12 +2,7 @@ import React, { useState } from "react";
 import FaqWithImage from "../../components/FaqWithImage";
 import { lifeStyleCoachingFaqs } from "../../data/faqs";
 import { lifecoching, wlenessLifeCoaching } from "../../data";
-import {
-  lifeCoachingHeader,
-  profileMask,
-  rectangle2,
-  rectangle3,
-} from "../../assets";
+import { lifeCoachingHeader, profileMask, rectangle3 } from "../../assets";
 import LifeCoachingForm from "../../components/Forms/LifecoachingForm";
 import CoachRequestForm from "../../components/Forms/CoachRequestForm";
 import { Helmet } from "react-helmet";
@@ -15,6 +10,7 @@ import { LIFE_COACHING_META } from "../../data/meta";
 import { get_canonical } from "../../utils";
 import { Link } from "react-router-dom";
 import { lifestyleCoaches } from "../../data/life-coaching";
+import Confirmation from "../../components/Modals/Confirmation";
 
 const results = [
   [
@@ -41,6 +37,7 @@ const results = [
 ];
 export default function LifeCoching() {
   const [lifecoachingForm, setLifeCoachingForm] = useState(false);
+  const [status, setStatus] = useState(false);
 
   // Toggle form
   const toggleForm = () => {
@@ -237,8 +234,17 @@ export default function LifeCoching() {
       <FaqWithImage data={lifeStyleCoachingFaqs} />
 
       {/* ===================== Forms =====================  */}
-      <LifeCoachingForm isOpen={lifecoachingForm} onClose={toggleForm} />
-      <CoachRequestForm name="Life Coaching" />
+      <LifeCoachingForm
+        isOpen={lifecoachingForm}
+        onClose={toggleForm}
+        setConfirmation={setStatus}
+      />
+      <CoachRequestForm
+        name="Life Coaching"
+        onClose={toggleForm}
+        setConfirmation={setStatus}
+      />
+      <Confirmation status={status} close={() => setStatus(false)} />
     </>
   );
 }

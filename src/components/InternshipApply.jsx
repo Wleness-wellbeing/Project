@@ -3,7 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { INTERNSHIP_JOIN_URI } from "../data/api";
 
-export default function InternshipApply({ isOpen, onClose }) {
+export default function InternshipApply({ isOpen, onClose, setConfirmation }) {
   if (!isOpen) return null;
 
   const [formInfo, setFormInfo] = useState({
@@ -76,7 +76,6 @@ export default function InternshipApply({ isOpen, onClose }) {
 
       try {
         const response = await axios.post(INTERNSHIP_JOIN_URI, form_data);
-        updateMessage(response.data.status, response.data.message);
 
         // Empty form after successfully sending data
         if (response.data.status == "success") {
@@ -91,7 +90,10 @@ export default function InternshipApply({ isOpen, onClose }) {
             interest: "",
           });
           setAgreement(false);
+          onClose();
+          setConfirmation(true);
         } else {
+          updateMessage(response.data.status, response.data.message);
           return null;
         }
       } catch (error) {
@@ -120,8 +122,8 @@ export default function InternshipApply({ isOpen, onClose }) {
   }, [isOpen, onClose]);
 
   return (
-    <section className="fixed inset-0 z-40 flex justify-center pt-8 backdrop-brightness-50">
-      <div className="internship w-[640px] overflow-y-scroll rounded-t-lg bg-white p-6">
+    <section className="fixed inset-0 z-40 flex animate-fadeIn justify-center pt-8 backdrop-brightness-50 transition-all">
+      <div className="internship animate-scaleIn w-[640px] overflow-y-scroll rounded-t-lg bg-white p-6 transition-all">
         <h4 className="mb-4 text-center text-2xl font-bold text-primary-300">
           Internship Form
         </h4>

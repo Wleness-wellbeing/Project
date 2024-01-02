@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 
-export default function ApplyForm({ name, url }) {
+export default function ApplyForm({ name, url, setConfirmation }) {
   const [personalDetails, setPersonalDetails] = useState({
     full_name: "",
     email: "",
@@ -40,36 +40,39 @@ export default function ApplyForm({ name, url }) {
         formData.append(key, personalDetails[key]);
       }
       formData.append("resume", resume);
-      try {
-        const response = await axios.post(url, formData, {
+
+      axios
+        .post(url, formData, {
           headers: {
             "Content-Type": "multipart/form-data",
           },
-        });
-        setSuccessMessage({
-          status: response.data.status,
-          message: response.data.message,
-        });
+        })
+        .then((response) => {
+          if (response.data.status == "success") {
+            setPersonalDetails({
+              full_name: "",
+              email: "",
+              contact: "",
+              full_address: "",
+              languages: "",
+            });
 
-        // Empty form after successfully sending data
-        if (response.data.status == "success") {
-          setPersonalDetails({
-            full_name: "",
-            email: "",
-            contact: "",
-            full_address: "",
-            languages: "",
+            setResume(null);
+            setConfirmation(true);
+          } else {
+            setSuccessMessage({
+              status: response.data.status,
+              message: response.data.message,
+            });
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+          setSuccessMessage({
+            status: "error",
+            message: "Internal Server Error! Please Try Again later",
           });
-
-          setResume(null);
-        }
-      } catch (error) {
-        console.error("Error sending data:", error);
-        setSuccessMessage({
-          status: "error",
-          message: "Internal Server Error! Please Try Again later",
         });
-      }
     } else {
       setSuccessMessage({
         status: "error",

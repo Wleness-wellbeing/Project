@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { CORPORATE_JOIN_URI, LIFE_COACHING_URI } from "../../data/api";
+import { LIFE_COACHING_URI } from "../../data/api";
 
-export default function LifeCoachingForm({ isOpen, onClose }) {
+export default function LifeCoachingForm({ isOpen, onClose, setConfirmation }) {
   if (!isOpen) return null;
   // Handle Joining Form
   const [formInfo, setFormData] = useState({
@@ -78,33 +78,36 @@ export default function LifeCoachingForm({ isOpen, onClose }) {
         formData.append(key, formInfo[key]);
       }
 
-      try {
-        const response = await axios.post(LIFE_COACHING_URI, formData);
-        setMessage(response.data.status, response.data.message);
+      axios
+        .post(LIFE_COACHING_URI, formData)
+        .then((response) => {
+          setMessage(response.data.status, response.data.message);
 
-        // Empty form after successfully sending data
-        if (response.data.status == "success") {
-          setFormData({
-            name: "",
-            email: "",
-            age: "",
-            gender: "",
-            phone: "",
-          });
-          setPolicy(false);
-        }
-      } catch (error) {
-        console.error("Error sending data:", error);
-        setMessage("error", "Internal Server Error! Please Try Again later");
-      }
+          if (response.data.status == "success") {
+            setFormData({
+              name: "",
+              email: "",
+              age: "",
+              gender: "",
+              phone: "",
+            });
+            setPolicy(false);
+            onClose();
+            setConfirmation(true);
+          }
+        })
+        .catch((error) => {
+          console.error("Error sending data:", error);
+          setMessage("error", "Internal Server Error! Please Try Again later");
+        });
     } else {
       setMessage("error", "Please fill your details properly!");
     }
   };
 
   return (
-    <section className="fixed inset-0 z-50 grid place-items-center bg-black/20">
-      <div className="life-coaching w-4/5 rounded-2xl bg-white p-6 lg:w-[620px]">
+    <section className="fixed inset-0 z-50 grid animate-fadeIn place-items-center bg-black/20 transition-all">
+      <div className="life-coaching animate-scaleIn w-4/5 rounded-2xl bg-white p-6 transition-all lg:w-[620px]">
         <div className="text-center">
           <h2 className="subheading">Life-coaching Join</h2>
         </div>

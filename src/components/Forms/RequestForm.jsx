@@ -3,7 +3,7 @@ import axios from "axios";
 import { requestCallback } from "../../assets";
 import { REQUEST_CALLBACK_URI } from "../../data/api";
 
-function RequestForm() {
+function RequestForm({ setConfirmation }) {
   const [formInfo, setFormData] = useState({
     name: "",
     phone: "",
@@ -32,19 +32,20 @@ function RequestForm() {
 
       try {
         const response = await axios.post(REQUEST_CALLBACK_URI, formData);
-        console.log(response.data);
-        setSuccessMessage({
-          status: response.data.status,
-          message: response.data.message,
-        });
 
         // Empty form after successfully sending data
-        response.data.status == "success"
-          ? setFormData({
-              name: "",
-              phone: "",
-            })
-          : null;
+        if (response.data.status == "success") {
+          setFormData({
+            name: "",
+            phone: "",
+          });
+          setConfirmation(true);
+        } else {
+          setSuccessMessage({
+            status: response.data.status,
+            message: response.data.message,
+          });
+        }
       } catch (error) {
         console.error("Error sending data:", error);
         setSuccessMessage({
@@ -61,7 +62,7 @@ function RequestForm() {
   };
 
   return (
-    <section className="bg-yellow-primary container mx-auto mb-6 grid rounded-3xl px-6 py-8 xs:px-8 xs:py-14 md:grid-cols-2 lg:px-8 lg:py-16 2xl:py-20">
+    <section className="container mx-auto mb-6 grid rounded-3xl bg-yellow-primary px-6 py-8 xs:px-8 xs:py-14 md:grid-cols-2 lg:px-8 lg:py-16 2xl:py-20">
       <div className="md:flex md:h-full md:flex-col md:justify-between md:px-6">
         <div>
           <h3 className="font-medium text-[#464646] opacity-80 lg:text-lg">

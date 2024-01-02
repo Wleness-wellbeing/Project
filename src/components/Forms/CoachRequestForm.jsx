@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { COACH_CALLBACK_URI } from "../../data/api";
 
-export default function CoachRequestForm({ name }) {
+export default function CoachRequestForm({ name, onClose, setConfirmation }) {
   const [formInfo, setFormData] = useState({
     name: "",
     email: "",
@@ -46,31 +46,34 @@ export default function CoachRequestForm({ name }) {
         formData.append(key, formInfo[key]);
       }
       formData.append("coach", name);
-      try {
-        const response = await axios.post(COACH_CALLBACK_URI, formData);
-        setMessage(response.data.status, response.data.message);
 
-        // Empty form after successfully sending data
-        response.data.status == "success"
-          ? setFormData({
+      axios
+        .post(COACH_CALLBACK_URI, formData)
+        .then((response) => {
+          if (response.data.status == "success") {
+            setFormData({
               name: "",
               email: "",
               phone: "",
               country: "",
               message: "",
-            })
-          : null;
-      } catch (error) {
-        console.error("Error sending data:", error);
-        setMessage("error", "Internal Server Error! Please Try Again later");
-      }
+            });
+            setConfirmation(true);
+          } else {
+            setMessage(response.data.status, response.data.message);
+          }
+        })
+        .catch((error) => {
+          console.error("Error sending data:", error);
+          setMessage("error", "Internal Server Error! Please Try Again later");
+        });
     } else {
       setMessage("error", "Please fill your details properly!");
     }
   };
 
   return (
-    <section className="bg-yellow-primary container mx-auto mb-6 grid rounded-3xl px-6 py-8 xs:px-8 xs:py-14 md:grid-cols-2 lg:p-8">
+    <section className="container mx-auto mb-6 grid rounded-3xl bg-yellow-primary px-6 py-8 xs:px-8 xs:py-14 md:grid-cols-2 lg:p-8">
       <div className="md:flex md:h-full md:flex-col md:justify-center md:px-6 md:pb-10">
         <div>
           <h3 className="font-medium text-[#464646] opacity-80 lg:text-lg">

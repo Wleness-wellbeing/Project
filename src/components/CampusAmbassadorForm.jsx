@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { CAMPUS_AMBASSADOR_JOIN_URI } from "../data/api";
 
-export default function CampusAmbassadorForm({ isOpen, onClose }) {
+export default function CampusAmbassadorForm({
+  isOpen,
+  onClose,
+  setConfirmation,
+}) {
   if (!isOpen) return null;
 
   const [formInfo, setFormInfo] = useState({
@@ -78,7 +82,6 @@ export default function CampusAmbassadorForm({ isOpen, onClose }) {
           CAMPUS_AMBASSADOR_JOIN_URI,
           form_data,
         );
-        updateMessage(response.data.status, response.data.message);
 
         // Empty form after successfully sending data
         if (response.data.status == "success") {
@@ -93,7 +96,10 @@ export default function CampusAmbassadorForm({ isOpen, onClose }) {
             interest: "",
           });
           setAgreement(false);
+          setConfirmation(true);
+          onClose();
         } else {
+          updateMessage(response.data.status, response.data.message);
           return null;
         }
       } catch (error) {
@@ -123,8 +129,8 @@ export default function CampusAmbassadorForm({ isOpen, onClose }) {
   }, [isOpen, onClose]);
 
   return (
-    <section className="fixed inset-0 z-40 flex justify-center pt-8 backdrop-brightness-50">
-      <div className="campus-ambassador-form w-[640px] overflow-y-scroll rounded-lg bg-white p-6">
+    <section className="fixed inset-0 z-40 flex animate-fadeIn justify-center pt-8 backdrop-brightness-50 transition-all">
+      <div className="campus-ambassador-form animate-scaleIn w-[640px] overflow-y-scroll rounded-lg bg-white p-6 transition-all">
         <h4 className="mb-4 text-center text-2xl font-bold text-primary-300">
           Campus Ambassador Form
         </h4>

@@ -56,6 +56,7 @@ import featuredIn3 from "./images/home/icons/featured-in-3.png";
 import featuredIn4 from "./images/home/icons/featured-in-4.png";
 import featuredIn5 from "./images/home/icons/featured-in-5.png";
 import featuredIn6 from "./images/home/icons/featured-in-6.png";
+import featuredIn7 from "./images/home/icons/featured-in-7.png";
 // Services
 import homeTherapy from "./images/home/icons/home-service-1.png";
 import homeExecutiveCoaching from "./images/home/icons/home-service-3.png";
@@ -120,6 +121,7 @@ export {
   featuredIn4,
   featuredIn5,
   featuredIn6,
+  featuredIn7,
   servicesIcon1,
   servicesIcon2,
   servicesIcon3,

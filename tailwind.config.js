@@ -38,11 +38,16 @@ module.exports = {
       },
       animation: {
         fadeIn: "fadeInAni .5s ease-in-out forwards",
+        scaleIn: "scaleUpAni .3s ease-out forwards",
       },
       keyframes: {
         fadeInAni: {
           from: { opacity: 0 },
           to: { opacity: 1 },
+        },
+        scaleUpAni: {
+          from: { transform: "scale(.5)" },
+          to: { transform: "scale(1)" },
         },
       },
     },

@@ -2,7 +2,12 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { GENERAL_ENQUIRY_URI } from "../../data/api";
 
-export default function ActivityForm({ isOpen, onClose, purpose }) {
+export default function ActivityForm({
+  isOpen,
+  onClose,
+  purpose,
+  setConfirmation,
+}) {
   if (!isOpen) return null;
 
   // Handle Joining Form
@@ -43,7 +48,6 @@ export default function ActivityForm({ isOpen, onClose, purpose }) {
   // Handle Post Request
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formInfo);
 
     // Validate if form is filled
     if (
@@ -59,30 +63,32 @@ export default function ActivityForm({ isOpen, onClose, purpose }) {
       }
       formData.append("purpose", purpose);
 
-      try {
-        const response = await axios.post(GENERAL_ENQUIRY_URI, formData);
-        console.log(response.data);
-        setSuccessMessage({
-          status: response.data.status,
-          message: response.data.message,
-        });
+      axios
+        .post(GENERAL_ENQUIRY_URI, formData)
+        .then((response) => {
+          setSuccessMessage({
+            status: response.data.status,
+            message: response.data.message,
+          });
 
-        // Empty form after successfully sending data
-        response.data.status == "success"
-          ? setFormData({
+          if (response.data.status == "success") {
+            setFormData({
               full_name: "",
               email: "",
               number: "",
               location: "",
-            })
-          : null;
-      } catch (error) {
-        console.error("Error sending data:", error);
-        setSuccessMessage({
-          status: "error",
-          message: "Internal Server Error! Please Try Again later",
+            });
+            onClose();
+            setConfirmation(true);
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+          setSuccessMessage({
+            status: "error",
+            message: "Internal Server Error! Please Try Again later",
+          });
         });
-      }
     } else {
       setSuccessMessage({
         status: "error",
@@ -92,8 +98,8 @@ export default function ActivityForm({ isOpen, onClose, purpose }) {
   };
 
   return (
-    <section className="fixed inset-0 z-50 grid place-items-center bg-black/20">
-      <div className="enquiry-form w-4/5 rounded-2xl bg-white p-6 lg:w-[420px]">
+    <section className="fixed inset-0 z-50 grid animate-fadeIn place-items-center bg-black/20 transition-all">
+      <div className="enquiry-form animate-scaleIn w-4/5 rounded-2xl bg-white p-6 transition-all lg:w-[420px]">
         <div className="text-center">
           <h2 className="subheading">Enquire Now</h2>
         </div>
