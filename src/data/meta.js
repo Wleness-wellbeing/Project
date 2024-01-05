@@ -19,21 +19,24 @@ const COMMUNITY_META = {
 };
 
 const ABOUT_META = {
-  title: "About Us | Wleness Well Being",
-  description: "this is description",
+  title: "Discover our Vision: Wellness - Partnering your Well being",
+  description:
+    "At Wellness, our story is rooted in holistic well-being, Learn about our vision, practices, and dedicated to empowering you in your wellness journey.",
 };
 
 // =======================================================================
 // Experts
 // =======================================================================
 const EXPERTS_META = {
-  title: "Our Experts | Wleness Well Being",
-  description: "this is description",
+  title: "Meet Our Seasoned Wellness Experts | Wleness",
+  description:
+    "Meet our holistic health experts at Wellness. Explore a wealth of knowledge and guidance to nurture a vibrant and balanced lifestyle.",
 };
 
 const ALL_EXPERTS_META = {
-  title: "All Experts | Wleness Well Being",
-  description: "this is description",
+  title: "Expert Guidance for Holistic  Wellness | Wleness",
+  description:
+    "Meet our diverse team of wellness experts at Wellness, offering personalized guidance in mindfulness, nutrition, yoga, and more. Empower your holistic well-being today.",
 };
 
 // =======================================================================

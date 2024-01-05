@@ -26,9 +26,10 @@ export const CONTACT_URI = URI + "contact";
 export const CAREER_URI = URI + "career-apply";
 export const PARTNER_WITH_US_URI = URI + "partner-with-us";
 
-// Experts
+// Experts and instructors
 export const EXPERTS_URI = URI + "experts";
 export const EXPERTS_PROFILE_URI = URI + "experts/profile/";
+export const YOGA_EXPERTS_URI = URI + "yoga-experts";
 
 // Appointment
 // >> Dashboard
@@ -42,6 +43,10 @@ export const VERIFY_USER = URI + "appointments/verification";
 export const VERIFY_USER_EMAIL = URI + "appointments/verify-email";
 export const APPOINTMENT_PAYMENT = URI + "appointments/payment";
 export const APPLY_COUPON = URI + "apply-coupon";
+// >> Yoga Appointment booking
+export const YOGA_CHECKOUT_DETAILS = URI + "yoga-checkout/"; // append expert slug ":slug"
+export const YOGA_VERIFY_USER = URI + "yoga-appointments/verification";
+export const YOGA_APPOINTMENT_PAYMENT = URI + "yoga-appointments/payment";
 
 // Enquiries
 export const COACH_CALLBACK_URI = URI + "coach-callback-requests";

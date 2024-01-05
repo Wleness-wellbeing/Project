@@ -355,6 +355,14 @@ import yogaType9 from "./images/activities/yoga/yoga-type-9.png";
 import yogaType10 from "./images/activities/yoga/yoga-type-10.png";
 import yogaType11 from "./images/activities/yoga/yoga-type-11.png";
 import yogaType12 from "./images/activities/yoga/yoga-type-12.png";
+import yoga__AshtangaYoga from "./images/activities/yoga/yoga__astanga-yoga.jpg";
+import yoga__HathaYoga from "./images/activities/yoga/yoga__hatha-yoga.jpg";
+import yoga__MeditationAndMinfullness from "./images/activities/yoga/yoga__meditation-and-mindfullness.jpg";
+import yoga__TherapauticYoga from "./images/activities/yoga/yoga__therapautic-yoga.jpg";
+import yoga__WeightLoss from "./images/activities/yoga/yoga__weight-loss.jpg";
+import yoga__WomenYoga from "./images/activities/yoga/yoga__yoga-for-women.jpg";
+import yoga_instructor_venkatesh from "./images/activities/yoga/instructors/instructor__archya-venkatesh.jpg";
+import yoga_instructor_snigda from "./images/activities/yoga/instructors/instructor__snigdha-biswas.jpg";
 // Activities >> Yoga >> Adhomukha
 import adhvmukhaHeader from "./images/activities/yoga/adhomukha/adhv-mukha-header.png";
 import adhvmukhaSteps from "./images/activities/yoga/adhomukha/steps-of-adhv-mukha-yoga.png";
@@ -506,6 +514,14 @@ export {
   yogaType10,
   yogaType11,
   yogaType12,
+  yoga__AshtangaYoga,
+  yoga__HathaYoga,
+  yoga__MeditationAndMinfullness,
+  yoga__TherapauticYoga,
+  yoga__WeightLoss,
+  yoga__WomenYoga,
+  yoga_instructor_venkatesh,
+  yoga_instructor_snigda,
   // Brain Exericise
   brainheader,
   brainExerciseHeader,

@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Data
-import { activities, brainExercise } from "./data";
+import { activities, activityYoga, brainExercise } from "./data";
 import { therapiesData } from "./data/issues";
 import useToken from "./utils/useToken";
 // Components
@@ -77,6 +77,9 @@ import AssessmentQuestions from "./pages/Assessment/AssessmentQuestions";
 import AssessmentResult from "./pages/Assessment/AssessmentResult";
 import Success from "./components/RedirectPages/Success";
 import { lifestyleCoaches } from "./data/life-coaching";
+import YogaSubpage from "./pages/Activities/YogaSubpage";
+import YogaPage from "./pages/Activities/YogaPage";
+import YogaBooking from "./pages/Appointment/YogaBooking";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -306,6 +309,14 @@ function App() {
           }
         />
         <Route
+          path="/yoga/booking/:slug"
+          element={
+            <Layout>
+              <YogaBooking />
+            </Layout>
+          }
+        />
+        <Route
           path="/success"
           element={
             <Layout>
@@ -365,14 +376,31 @@ function App() {
             </Layout>
           }
         />
-        {/* <Route
+
+        {/* =========== Yoga =========== */}
+        <Route
           path="/activities/yoga"
           element={
             <Layout>
-              <ActivityCards />
+              <YogaPage />
             </Layout>
           }
-        /> */}
+        />
+
+        {activityYoga.activities.types.map((value, index) => {
+          return (
+            <Route
+              key={index}
+              path={value.slug}
+              element={
+                <Layout>
+                  <YogaSubpage data={value} />
+                </Layout>
+              }
+            />
+          );
+        })}
+
         {/* Activity Subpages - Yoga, Meditation, Sadhna */}
         {activitiesMenu}
         {/* Inner pages of yoga, meditation and sadhna */}
@@ -385,6 +413,8 @@ function App() {
             </Layout>
           }
         />
+
+        {/* =========== Blogs =========== */}
         <Route
           path="/blogs"
           element={
