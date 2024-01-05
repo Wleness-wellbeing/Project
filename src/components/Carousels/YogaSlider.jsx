@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -13,6 +13,8 @@ import {
   yoga_instructor_venkatesh,
 } from "../../assets";
 import YogaInstructorCard from "../Cards/YogaInstructorCard";
+import { YOGA_EXPERTS_URI } from "../../data/api";
+import axios from "axios";
 
 const yogaInstructorsData = [
   {
@@ -46,7 +48,7 @@ const yogaInstructorsData = [
   },
 ];
 
-export default function YogaSlider(props) {
+export default function YogaSlider() {
   const [swiper, setSwiper] = useState(null); // Store Swiper instance
 
   const handleMouseEnter = () => {
@@ -56,6 +58,31 @@ export default function YogaSlider(props) {
   const handleMouseLeave = () => {
     swiper ? swiper.autoplay.start() : "";
   };
+
+  const [experts, setExperts] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  // Fetch Doctors list
+  useEffect(() => {
+    // Make a GET request using Axios
+    axios
+      .get(YOGA_EXPERTS_URI)
+      .then((response) => {
+        let data = response.data["experts"];
+        if (response.status == 200) {
+          setExperts(data);
+          setLoading(false);
+        }
+      })
+      .catch((error) => {
+        // Handle errors
+        console.error("Error fetching doctor details:", error);
+      });
+  }, []);
+
+  if (loading) {
+    return <div className="mb-5 text-center">Loading...</div>;
+  }
 
   return (
     <section className="container relative mx-auto mb-5 mt-5 lg:mt-0">
@@ -73,9 +100,9 @@ export default function YogaSlider(props) {
           ])}
         </h1>
 
-        <p className="para">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia,
-          quasi.
+        <p className="para mx-auto w-4/5">
+          Meet the skilled and dedicated yoga instructors who guide you on your
+          wellness journey with expertise and passion.
         </p>
       </div>
 
@@ -107,7 +134,7 @@ export default function YogaSlider(props) {
           onSwiper={(swiper) => setSwiper(swiper)} // Store Swiper instance
           speed={600}
         >
-          {props.data.map((value, index) => {
+          {experts?.map((value, index) => {
             return (
               <SwiperSlide key={index}>
                 <YogaInstructorCard key={index} data={value} />

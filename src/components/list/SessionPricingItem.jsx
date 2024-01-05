@@ -4,10 +4,10 @@ export default function SessionPricingItem({ data, selectPlan, selectedPlan }) {
   return (
     <div className="border-b-2 border-dotted border-slate-400 py-4">
       <label
-        htmlFor={data.name}
+        htmlFor={data.package}
         className="flex items-center justify-between text-lg font-bold"
       >
-        <span>{data.name}</span>
+        <span>{data.package}</span>
         <span className="flex items-center space-x-2">
           <span>Rs. {data.price}</span>
           <input
@@ -16,7 +16,7 @@ export default function SessionPricingItem({ data, selectPlan, selectedPlan }) {
             checked={selectedPlan}
             value={selectedPlan}
             onChange={selectPlan}
-            id={data.name}
+            id={data.package}
             className="cursor-pointer"
           />
         </span>

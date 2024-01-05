@@ -36,9 +36,11 @@ function AboutUs() {
               About <span className="heading-primary !text-white">Wleness</span>
             </h1>
             <p className="brightness-10 relative z-10 w-full font-semibold text-white">
-              Wleness is a mental health startup dedicated to providing
-              accessible and affordable therapy to individuals struggling with
-              mental health issues.
+              At Wleness, we believe in nurturing the harmony of mind, body, and
+              soul, guiding you on a transformative journey towards holistic
+              well-being. Embrace a life of vitality, balance, and inner peace
+              as you explore a diverse array of resources, practices, and expert
+              insights curated to elevate every facet of your wellness.
             </p>
             <p className="relative z-10 w-full font-semibold text-white">
               By leveraging technology, Wleness connects users with licensed

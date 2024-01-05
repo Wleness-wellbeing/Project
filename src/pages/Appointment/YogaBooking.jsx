@@ -321,11 +321,11 @@ export default function YogaBooking() {
                         selectPlan={() =>
                           setCheckoutDetails({
                             ...checkoutDetails,
-                            plan: value.name,
+                            plan: value.package,
                             price: value.price,
                           })
                         }
-                        selectedPlan={checkoutDetails?.plan === value.name}
+                        selectedPlan={checkoutDetails?.plan === value.package}
                       />
                     );
                   })}

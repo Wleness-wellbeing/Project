@@ -29,6 +29,7 @@ import { HOME_META } from "../../data/meta";
 import { get_canonical } from "../../utils";
 import Confirmation from "../../components/Modals/Confirmation";
 import Objectives from "../../components/Objectives";
+import YogaSlider from "../../components/Carousels/YogaSlider";
 
 const featuredIn = [
   [
@@ -138,6 +139,8 @@ export default function Home() {
         setUrl={setRediredurl}
       />
 
+      <YogaSlider />
+
       {/* ========== Community ========== */}
       <section className="relative overflow-x-clip bg-primary-10 pt-6 3xl:py-10">
         <div className="container mx-auto">
@@ -162,32 +165,26 @@ export default function Home() {
             <article className="mx-auto pb-4 lg:order-1 lg:w-3/5 lg:pb-10">
               <hgroup className="mb-2">
                 <h1 className="subheading">
-                  <span className="heading-primary">Wleness Community</span>
+                  <span className="heading-primary">JOIN THE COMMUNITY</span>
                 </h1>
                 <p className="para ml-1 text-lg"></p>
               </hgroup>
               <p className="mb-6 ml-1 text-sm font-medium leading-6 lg:pr-28 lg:text-lg">
-                <span className="mb-4 mr-1 block font-bold">
-                  Wleness is all about the beginning of happiness in your life.
-                </span>
-                <span className="mr-1 font-bold text-primary-300">
-                  Embrace yourself,
-                </span>
-                <span className="mr-1 font-bold text-primary-300">
-                  Empower your well-being,
-                </span>
-                <span className="font-bold text-primary-300">
-                  Elevate your mental health
-                </span>
-                : Join our highly curated community dedicated to mental
-                well-being. A safe space for you to share, heal and grow as all
-                your queries will be answered by our top mental health experts
-                available just for you!
+                At Wleness, community is at the heart of our mission. We're more
+                than a platform; we're a vibrant collective of individuals
+                united by the pursuit of holistic well-being. Join us to
+                connect, share, and grow together.
               </p>
               <p className="mb-6 ml-1 text-sm font-medium leading-6 lg:pr-28 lg:text-lg">
-                Let us together break the stigma around mental health, support
-                each other and make the journey toward emotional well-being
-                beautiful.
+                Together, we embark on a path towards personal evolution. Share
+                in each other's successes, celebrate milestones, and draw
+                inspiration from the diverse experiences
+              </p>
+              <p className="mb-6 ml-1 text-sm font-medium leading-6 lg:pr-28 lg:text-lg">
+                Here, you'll find more than just a group; you'll find a
+                sanctuary—a place where wellness thrives and friendships
+                flourish. Join us and be part of a community committed to
+                holistic living.
               </p>
               <Link to="/community" className="btn-one inline-block">
                 Join Us Now

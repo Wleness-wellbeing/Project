@@ -17,30 +17,6 @@ import axios from "axios";
 export default function YogaPage() {
   const { enquiryForm, toggleForm } = useEnquiryForm();
   const [status, setStatus] = useState(false);
-  const [experts, setExperts] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  // Fetch Doctors list
-  useEffect(() => {
-    // Make a GET request using Axios
-    axios
-      .get(YOGA_EXPERTS_URI)
-      .then((response) => {
-        let data = response.data["experts"];
-        if (response.status == 200) {
-          setExperts(data);
-          setLoading(false);
-        }
-      })
-      .catch((error) => {
-        // Handle errors
-        console.error("Error fetching doctor details:", error);
-      });
-  }, []);
-
-  if (loading) {
-    return <div className="mb-5 text-center">Loading...</div>;
-  }
 
   return (
     <>
@@ -65,7 +41,7 @@ export default function YogaPage() {
         openEnquiry={toggleForm}
       />
 
-      <YogaSlider data={experts} />
+      <YogaSlider />
 
       <YogaTechniques
         title={activityYoga.activities.title}
