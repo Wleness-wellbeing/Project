@@ -5,8 +5,6 @@ import axios from "axios";
 import { modes } from "../../data/doctors";
 import {
   APPLY_COUPON,
-  APPOINTMENT_PAYMENT,
-  VERIFY_USER,
   VERIFY_USER_EMAIL,
   YOGA_APPOINTMENT_PAYMENT,
   YOGA_CHECKOUT_DETAILS,
@@ -39,10 +37,10 @@ export default function YogaBooking() {
     batch: "",
   });
   const [userDetails, setUserDetails] = useState({
-    firstName: "Omprakash",
-    lastName: "Prajapati",
-    email: "development1270@gmail.com",
-    phone: "9022365428",
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
   });
   // Mobile verification
   const [otpState, setOtpState] = useState({

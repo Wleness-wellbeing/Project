@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 // Components
 import ActivityHeader from "../../components/ActivityHeader";
 import ActivityForm from "../../components/Forms/ActivityForm";
@@ -11,8 +11,6 @@ import { activityYoga } from "../../data";
 import HappyClient from "../../components/HappyClient";
 import { coupleTherapyClient } from "../../data/clients";
 import YogaSlider from "../../components/Carousels/YogaSlider";
-import { YOGA_EXPERTS_URI } from "../../data/api";
-import axios from "axios";
 
 export default function YogaPage() {
   const { enquiryForm, toggleForm } = useEnquiryForm();
