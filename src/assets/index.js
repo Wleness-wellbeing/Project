@@ -1319,21 +1319,21 @@ export {
 };
 
 /*
-Holistic wellness,
-Mental Health Support,
-Spiritual Growth,
-Self-Care Practices,
-Mindfulness Techniques,
-Nutritional Guidance,
-Physical Fitness Routines,
-Stress Management Tips,
-EMotional Well0being,
-Mental Clarity Exercises,
-Inner Peace Methods,
-Holistic Lifestyle, 
-Health & Wellness Resources, 
-Wellness Coaching, 
-India's Most Diverse Holistic Platform, 
-Healthy Habits, 
+Holistic wellness
+Mental Health Support
+Spiritual Growth
+Self-Care Practices
+Mindfulness Techniques
+Nutritional Guidance
+Physical Fitness Routines
+Stress Management Tips
+EMotional Well0being
+Mental Clarity Exercises
+Inner Peace Methods
+Holistic Lifestyle,
+Health & Wellness Resources,
+Wellness Coaching,
+India's Most Diverse Holistic Platform,
+Healthy Habits,
 Energy Healing Practices 
 **/

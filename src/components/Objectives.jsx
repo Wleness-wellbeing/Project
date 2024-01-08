@@ -11,7 +11,7 @@ function Objectives() {
               <img
                 loading="lazy"
                 src={value.image}
-                alt=""
+                alt={"Objective " + value.name}
                 className="mx-auto mb-2 h-6 w-6 object-cover sm:h-12 sm:w-12 lg:h-14 lg:w-14"
               />
               <figcaption>

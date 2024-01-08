@@ -28,7 +28,7 @@ export default function GridHeader(props) {
           <img
             loading="lazy"
             src={props.image}
-            alt=""
+            alt={props.name}
             className="my-4 w-full lg:my-2"
           />
         </div>

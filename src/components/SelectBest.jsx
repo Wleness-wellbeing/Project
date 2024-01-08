@@ -24,7 +24,7 @@ const SelectBest = React.forwardRef((props, ref) => {
               <img
                 loading="lazy"
                 src={props.image}
-                alt=""
+                alt="Physical Fitness Routines"
                 className="mx-auto w-full"
               />
             </div>

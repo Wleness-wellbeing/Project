@@ -9,7 +9,7 @@ export default function ServicesCard(props) {
           <figure className="relative flex h-full flex-col justify-between rounded-xl bg-white p-3 transition-all hover:bg-yellow-primary hover:shadow-xl hover:shadow-secondary/30 lg:p-5">
             <img
               src={props.data.image}
-              alt="Therapy"
+              alt={props.data.title}
               className="absolute -top-[15%] left-1/2 mx-auto w-16 -translate-x-1/2 translate-y-1/4 drop-shadow-lg lg:-top-1/4 lg:w-24"
             />
             <figcaption className="pb-2 pt-8 lg:pb-5 lg:pt-10">

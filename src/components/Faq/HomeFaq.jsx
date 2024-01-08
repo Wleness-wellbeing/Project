@@ -26,7 +26,12 @@ export default function HomeFaq(props) {
           All essential information is readily available here on Wleness. Ask
           questions and browse around for answers.
         </p>
-        <img src={faq3} alt="" className="lg:w-4/5" loading="lazy" />
+        <img
+          src={faq3}
+          alt="Energy Healing Practices"
+          className="lg:w-4/5"
+          loading="lazy"
+        />
         <Link to="/faqs" className="btn-one inline-block">
           Go to FAQ's
         </Link>

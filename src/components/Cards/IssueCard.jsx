@@ -12,7 +12,7 @@ export default function IssueCard(props) {
           <img
             loading="lazy"
             src={props.data.image}
-            alt="Avatar"
+            alt={`${props.data.title} Wleness Service`}
             className="mx-auto mb-2 block h-28 object-contain md:h-32 md:w-44 lg:h-20 lg:w-44 3xl:h-32 3xl:w-44"
             style={{ marginTop: "-50%", backgroundSize: "50%" }}
           />

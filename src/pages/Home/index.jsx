@@ -157,7 +157,7 @@ export default function Home() {
 
               <img
                 src={designRing}
-                alt=""
+                alt="India's Most Diverse Holistic Platform"
                 loading="lazy"
                 className="absolute right-1/2 top-1/2 -z-10 -translate-y-1/2 translate-x-1/2 scale-125 object-cover xs:w-80 md:w-96 lg:w-[520px] lg:scale-150 xl:scale-125"
               />
@@ -209,7 +209,7 @@ export default function Home() {
                   <div>
                     <img
                       src={value.image}
-                      alt=""
+                      alt={value.title}
                       loading="lazy"
                       className="mx-auto mb-4 w-20"
                     />
@@ -245,7 +245,7 @@ export default function Home() {
                   <img
                     src={value[0]}
                     key={i}
-                    alt="featured in"
+                    alt="India's Most Diverse Holistic Platform"
                     className="w-42 h-12 object-contain"
                   />
                 </Link>

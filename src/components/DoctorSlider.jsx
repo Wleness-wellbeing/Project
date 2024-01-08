@@ -142,7 +142,7 @@ export default function DoctorSlider(props) {
                       <div className="experts-profile-bg rounded-xl">
                         <img
                           src={value.image}
-                          alt="Doctors"
+                          alt={`${value.name} - ${value.expertise}`}
                           className="box-border block w-full rounded-2xl object-cover"
                         />
                       </div>

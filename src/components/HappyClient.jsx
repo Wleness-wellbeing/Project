@@ -32,7 +32,7 @@ export default function HappyClient(props) {
                       <img
                         loading="lazy"
                         src={value.image}
-                        alt=""
+                        alt={`${value.name} ${value.profession}`}
                         className="mt-4 w-52 rounded-2xl rounded-br-[4rem] object-cover shadow-[-12px_-16px_2px_4px_rgba(82,208,194,0.27)] md:my-4"
                       />
                     </div>

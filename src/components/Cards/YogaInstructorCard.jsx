@@ -13,7 +13,7 @@ export default function YogaInstructorCard(props) {
             <img
               loading="lazy"
               src={props.data.image}
-              alt="Avatar"
+              alt={`${props.data.name} - ${props.data.expertise}`}
               className="mx-auto mb-2 block h-full w-full rounded-full object-cover shadow-lg"
             />
           </Link>
@@ -25,13 +25,11 @@ export default function YogaInstructorCard(props) {
           <ul>
             <li>
               <strong>Expertise: </strong>
-              <span className="font-medium">
-                Backbend headstand handstand aerial yoga
-              </span>
+              <span className="font-medium">{props.data.expertise}</span>
             </li>
             <li>
               <strong>Experience:</strong>
-              <span className="font-medium"> 5 Years</span>
+              <span className="font-medium"> {props.data.experience}</span>
             </li>
           </ul>
         </div>

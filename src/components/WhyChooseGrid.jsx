@@ -16,7 +16,7 @@ export default function WhyChooseGrid(props) {
                 <img
                   loading="lazy"
                   src={value.image}
-                  alt=""
+                  alt={value.title}
                   className="mx-auto w-24 lg:w-40"
                 />
               </div>
