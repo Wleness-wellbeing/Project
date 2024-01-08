@@ -2,7 +2,7 @@ import React from "react";
 import HeaderWithImage from "../../components/HeaderWithImage";
 import Objectives from "../../components/Objectives";
 import HappyClient from "../../components/HappyClient";
-import { coupleTherapyClient } from "../../data/clients";
+import { coupleTherapyClient, yogaClients } from "../../data/clients";
 import YogaSlider from "../../components/Carousels/YogaSlider";
 
 const benefits = [
@@ -63,11 +63,11 @@ function YogaSubpage(props) {
           <h4 className="mb-2 mt-4 text-lg font-semibold">Weekend Batches :</h4>
           <ul className="text-sm">
             <li className="mb-2 flex justify-between font-semibold">
-              <span>Batch 1</span>
+              <span>Morning</span>
               <span>6:00 AM - 10:00 AM</span>
             </li>
             <li className="mb-2 flex justify-between font-semibold">
-              <span>Batch 2</span>
+              <span>Evening</span>
               <span>5:00 PM - 7:00 PM</span>
             </li>
           </ul>
@@ -95,7 +95,7 @@ function YogaSubpage(props) {
 
       <YogaSlider />
 
-      <HappyClient data={coupleTherapyClient} />
+      <HappyClient data={yogaClients} />
     </>
   );
 }

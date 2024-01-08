@@ -153,7 +153,7 @@ export const yogaClients = {
         "I was prescribed by my doctor to do yoga for my body pains. Wleness yoga sessions best suited me. The guided sessions are easy to follow, making it easy and unique for a beginner like me. It has effectively helped me not only with my pains but also relieved me from the season change cough and cold.",
     },
     {
-      name: "Akshay konde",
+      name: "Akshay Konde",
       profession: "Digital Marketer",
       image: yoga_client_2,
       review:

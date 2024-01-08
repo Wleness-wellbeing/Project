@@ -29,20 +29,20 @@ export default function YogaCheckout({
             className="text-2xl hover:text-slate-600"
           />
         </span>
-        <h2 className="text-3xl font-bold">Confirm Booking</h2>
-        <span className="hidden lg:block"></span>
+        <h2 className="text-2xl font-bold lg:text-3xl">Confirm Booking</h2>
+        <span className="block"></span>
       </div>
 
       <div className="space-y-8 divide-y-2 divide-dashed divide-slate-300">
         <div className="flex justify-center gap-x-2 pb-5 lg:gap-x-5">
           <div className="flex w-1/2 flex-col justify-between rounded-lg border-2 border-primary-300 px-4 py-4 text-center font-bold md:w-60 lg:px-8">
             <span className="text-center">
-              <FontAwesomeIcon icon={faVideo} /> <span>Mode</span>
+              <FontAwesomeIcon icon={faVideo} /> <span>Date</span>
             </span>
-            <span className="my-2 flex justify-between text-sm font-semibold capitalize text-slate-400 lg:text-base">
-              <span>{checkoutDetails.mode}</span>
-              <span>Online</span>
-            </span>
+            <div className="my-2 justify-between text-sm font-semibold capitalize text-slate-400 lg:flex lg:text-base">
+              <p>{checkoutDetails.date}</p>
+              <p>Online</p>
+            </div>
             <span
               className="cursor-pointer text-center underline transition-all hover:text-primary-300"
               onClick={back}
@@ -88,7 +88,7 @@ export default function YogaCheckout({
               <div className="w-1/4">
                 <button
                   type="submit"
-                  className="block w-full rounded-lg bg-primary-300 px-6 py-2.5 font-semibold uppercase tracking-wider text-white lg:py-3"
+                  className="block w-full rounded-lg bg-primary-300 px-4 py-2.5 text-sm font-semibold uppercase tracking-wider text-white lg:py-3 lg:text-base"
                 >
                   Apply
                 </button>
@@ -137,7 +137,7 @@ export default function YogaCheckout({
           autoComplete="off"
         >
           <h4 className="mb-2 text-xl font-semibold">Enter Your Details</h4>
-          <div className="grid grid-cols-2 gap-x-4">
+          <div className="grid gap-x-4 md:grid-cols-2">
             <CheckoutInputField
               name={"first_name"}
               type={"text"}

@@ -307,7 +307,7 @@ export default function YogaBooking() {
                 </p>
 
                 {/* Select session mode */}
-                <div className="mb-8 grid justify-center text-center">
+                <div className="mb-8 hidden justify-center text-center">
                   <BookingHeading heading="1. Select session mode" />
                   <div className="mb-4 flex justify-between gap-x-2 lg:mb-0 lg:gap-x-5">
                     {modes.map((value, i) => {
@@ -325,7 +325,7 @@ export default function YogaBooking() {
 
                 {/* Select session plan */}
                 <div className="mb-8">
-                  <BookingHeading heading="2. Select session plan" />
+                  <BookingHeading heading="1. Select session plan" />
                   {sessions.map((value, i) => {
                     return (
                       <SessionPricingItem
@@ -346,9 +346,9 @@ export default function YogaBooking() {
 
                 {/* Choose your slots */}
                 <div className="mb-8 self-stretch lg:gap-x-5">
-                  <BookingHeading heading="3. Select Date and Time" />
+                  <BookingHeading heading="2. Select Date and Time" />
 
-                  <div className="flex gap-4">
+                  <div className="grid grid-cols-2 gap-2 lg:grid-cols-4 lg:gap-4">
                     {dates.map((value) => {
                       return (
                         <button
@@ -416,7 +416,7 @@ export default function YogaBooking() {
                     })}
                   </Swiper> */}
 
-                  <div className="my-10 mb-6 grid grid-cols-2 divide-x-2">
+                  <div className="my-10 mb-6 grid gap-y-6 divide-x-2 md:grid-cols-2">
                     <div>
                       <div className="bg-primary-100 py-2 text-center font-quicksand font-semibold text-white">
                         Saturday
@@ -443,7 +443,7 @@ export default function YogaBooking() {
                                 }
                                 key={i}
                                 type="button"
-                                className={`w-full cursor-pointer rounded-lg border-2 border-primary-300 px-2 py-2 text-center text-sm font-semibold transition-all lg:px-3 lg:py-3 ${
+                                className={`w-full cursor-pointer rounded-lg border-2 border-primary-300 px-2 py-2 text-center text-xs font-semibold transition-all md:text-sm lg:px-3 lg:py-3 ${
                                   checkoutDetails.batch ===
                                     "Morning Saturday " &&
                                   checkoutDetails.time === value
@@ -470,7 +470,7 @@ export default function YogaBooking() {
                                 }
                                 key={i}
                                 type="button"
-                                className={`w-full cursor-pointer rounded-lg border-2 border-primary-300 px-2 py-2 text-center text-sm font-semibold transition-all lg:px-3 lg:py-3 ${
+                                className={`w-full cursor-pointer rounded-lg border-2 border-primary-300 px-2 py-2 text-center text-xs font-semibold transition-all md:text-sm lg:px-3 lg:py-3 ${
                                   checkoutDetails.batch ===
                                     "Evening Saturday " &&
                                   checkoutDetails.time === value
@@ -511,7 +511,7 @@ export default function YogaBooking() {
                                 }
                                 key={i}
                                 type="button"
-                                className={`w-full cursor-pointer rounded-lg border-2 border-primary-300 px-2 py-2 text-center text-sm font-semibold transition-all lg:px-3 lg:py-3 ${
+                                className={`w-full cursor-pointer rounded-lg border-2 border-primary-300 px-2 py-2 text-center text-xs font-semibold transition-all md:text-sm lg:px-3 lg:py-3 ${
                                   checkoutDetails.batch === "Morning Sunday " &&
                                   checkoutDetails.time === value
                                     ? "bg-primary-300 text-white"
@@ -537,7 +537,7 @@ export default function YogaBooking() {
                                 }
                                 key={i}
                                 type="button"
-                                className={`w-full cursor-pointer rounded-lg border-2 border-primary-300 px-2 py-2 text-center text-sm font-semibold transition-all lg:px-3 lg:py-3 ${
+                                className={`w-full cursor-pointer rounded-lg border-2 border-primary-300 px-2 py-2 text-center text-xs font-semibold transition-all md:text-sm lg:px-3 lg:py-3 ${
                                   checkoutDetails.batch === "Evening Sunday " &&
                                   checkoutDetails.time === value
                                     ? "bg-primary-300 text-white"
