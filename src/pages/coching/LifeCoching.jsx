@@ -98,7 +98,7 @@ export default function LifeCoching() {
           <span className="heading-primary">Lifestyle Coaches</span>
         </h2>
 
-        <div className="mt-4 grid space-y-4 lg:grid-cols-3 lg:space-y-0">
+        <div className="mt-4 flex flex-wrap justify-center gap-12 lg:grid-cols-3 lg:gap-24">
           {lifestyleCoaches.map((value, i) => {
             return (
               <Link key={i} to={value.slug} className="block">

@@ -80,6 +80,7 @@ import { lifestyleCoaches } from "./data/life-coaching";
 import YogaSubpage from "./pages/Activities/YogaSubpage";
 import YogaPage from "./pages/Activities/YogaPage";
 import YogaBooking from "./pages/Appointment/YogaBooking";
+import WhatsappChat from "./components/WhatsappChat";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -687,6 +688,7 @@ function Layout({ children }) {
     <>
       <Navbar />
       {children}
+      <WhatsappChat />
       <Footer />
     </>
   );
