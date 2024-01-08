@@ -423,7 +423,7 @@ export default function ExecutiveCoaching() {
       </section>
 
       <CoachRequestForm
-        name="General"
+        name="Executive Coaching"
         onClose={toggleForm}
         setConfirmation={setStatus}
       />
