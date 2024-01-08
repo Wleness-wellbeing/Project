@@ -688,7 +688,6 @@ function Layout({ children }) {
     <>
       <Navbar />
       {children}
-      <WhatsappChat />
       <Footer />
     </>
   );

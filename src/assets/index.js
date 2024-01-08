@@ -936,6 +936,10 @@ import therapyClient4 from "./images/clients/therapy-review-4.png";
 import coupleTherapyReview1 from "./images/clients/couple-therapy-review-1.jpg";
 import coupleTherapyReview2 from "./images/clients/couple-therapy-review-2.jpg";
 import coupleTherapyReview3 from "./images/clients/couple-therapy-review-3.jpg";
+import yoga_client_1 from "./images/clients/yoga-client-1.jpg";
+import yoga_client_2 from "./images/clients/yoga-client-2.jpg";
+import yoga_client_3 from "./images/clients/yoga-client-3.jpg";
+import yoga_client_4 from "./images/clients/yoga-client-4.jpg";
 
 export {
   happyClient1,
@@ -949,6 +953,10 @@ export {
   coupleTherapyReview1,
   coupleTherapyReview2,
   coupleTherapyReview3,
+  yoga_client_1,
+  yoga_client_2,
+  yoga_client_3,
+  yoga_client_4,
 };
 
 // FAQ's Section

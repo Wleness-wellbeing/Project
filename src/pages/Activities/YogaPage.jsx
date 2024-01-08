@@ -9,7 +9,7 @@ import Confirmation from "../../components/Modals/Confirmation";
 import YogaTechniques from "../../components/Activities/YogaTechniques";
 import { activityYoga } from "../../data";
 import HappyClient from "../../components/HappyClient";
-import { coupleTherapyClient } from "../../data/clients";
+import { coupleTherapyClient, yogaClients } from "../../data/clients";
 import YogaSlider from "../../components/Carousels/YogaSlider";
 
 export default function YogaPage() {
@@ -56,7 +56,7 @@ export default function YogaPage() {
         setConfirmation={setStatus}
       />
 
-      <HappyClient data={coupleTherapyClient} />
+      <HappyClient data={yogaClients} />
 
       <Confirmation status={status} close={() => setStatus(false)} />
     </>

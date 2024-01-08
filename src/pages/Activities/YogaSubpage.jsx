@@ -27,8 +27,8 @@ function YogaSubpage(props) {
       />
       <Objectives />
 
-      <section className="container mx-auto py-6 lg:flex lg:gap-x-5">
-        <div className="rounded-xl bg-primary-50 p-5 lg:w-1/2 lg:p-10">
+      <section className="container mx-auto grid py-6 lg:grid-cols-2 lg:gap-x-5">
+        <div className="mb-4 rounded-xl bg-primary-10 p-5 lg:mb-0 lg:p-10">
           <h2 className="mb-4 text-xl font-bold text-slate-800 lg:text-2xl">
             Why Wellness through Yoga ?
           </h2>
@@ -51,7 +51,7 @@ function YogaSubpage(props) {
             })}
           </ul>
         </div>
-        <div className="rounded-xl bg-primary-50 p-5 lg:w-1/2 lg:p-10">
+        <div className="rounded-xl bg-primary-50 p-5 lg:p-10">
           <h2 className="mb-4 text-xl font-bold text-slate-800 lg:text-2xl">
             Wellness through Yoga
           </h2>
@@ -93,9 +93,7 @@ function YogaSubpage(props) {
         </div>
       </section>
 
-      <div className="text-center">
-        <button className="btn-one">Book Now</button>
-      </div>
+      <YogaSlider />
 
       <HappyClient data={coupleTherapyClient} />
     </>

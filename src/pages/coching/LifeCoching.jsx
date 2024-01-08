@@ -106,7 +106,7 @@ export default function LifeCoching() {
                   <img src={value.image} alt="" className="mx-auto w-44" />
                 </div>
                 <figcaption>
-                  <h2 className="text-lg font-semibold lg:text-2xl">
+                  <h2 className="text-lg font-bold lg:text-2xl">
                     {value.name}
                   </h2>
                   <h4 className="font-semibold text-slate-600">

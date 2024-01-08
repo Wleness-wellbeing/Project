@@ -10,6 +10,10 @@ import {
   therapyClient2,
   therapyClient3,
   therapyClient4,
+  yoga_client_1,
+  yoga_client_2,
+  yoga_client_3,
+  yoga_client_4,
 } from "../assets";
 
 export const clientsReviews = [
@@ -121,6 +125,53 @@ export const coupleTherapyClient = {
       image: coupleTherapyReview3,
       review:
         "We initially hesitated to invest in couple therapy, but Wleness was worth it. The therapists at Wleness are experts in their field, and they helped us understand the root causes of our problems and provided guidance on how to address them constructively. What sets Wleness apart is the emphasis on long-term strategies for maintaining a healthy relationship. Our communication has improved, and we now have the tools to navigate future challenges.",
+    },
+  ],
+};
+
+export const yogaClients = {
+  heading: [
+    {
+      color: false,
+      text: "What Our ",
+    },
+    {
+      color: true,
+      text: "Happy Clients ",
+    },
+    {
+      color: false,
+      text: "Say",
+    },
+  ],
+  clients: [
+    {
+      name: "Vinod Das",
+      profession: "Teacher",
+      image: yoga_client_1,
+      review:
+        "I was prescribed by my doctor to do yoga for my body pains. Wleness yoga sessions best suited me. The guided sessions are easy to follow, making it easy and unique for a beginner like me. It has effectively helped me not only with my pains but also relieved me from the season change cough and cold.",
+    },
+    {
+      name: "Akshay konde",
+      profession: "Digital Marketer",
+      image: yoga_client_2,
+      review:
+        "Wleness group sessions made yoga a social and enjoyable experience. Experiencing the practice with others made me feel confident. I love how the instructor encourages interaction and support among participants.",
+    },
+    {
+      name: "Vaishnav Diwate",
+      profession: "Graphics Designer",
+      image: yoga_client_3,
+      review:
+        "The stress relief from yoga is real! The sessions with Wleness focus on both physical and mental well-being. It's amazing how a simple practice can have such a positive impact on my overall stress levels.",
+    },
+    {
+      name: "Deepika Kumbharkar",
+      profession: "Finance Manager",
+      image: yoga_client_4,
+      review:
+        "Wleness provides a unique blend of effective stress relief and enjoyable group sessions. The simplicity of the exercises make it accessible for everyone, especially people like me who are total beginners. It has become my daily routine now.",
     },
   ],
 };

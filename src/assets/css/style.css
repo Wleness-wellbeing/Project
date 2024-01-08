@@ -154,7 +154,12 @@ a {
 .swiper-3d .swiper-slide-shadow-right {
   @apply rounded-2xl;
 }
+
 /* Doctors Slider Styles */
 .doctorSlider .swiper-wrapper {
   @apply h-fit;
+}
+
+.yoga-booking-navigation .swiper-button-next {
+  @apply !text-red-400;
 }

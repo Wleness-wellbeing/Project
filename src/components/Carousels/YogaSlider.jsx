@@ -115,18 +115,16 @@ export default function YogaSlider() {
         <Swiper
           modules={[Autoplay, Pagination]}
           className="mySwiper overflow-y-visible rounded-2xl pb-12"
-          navigation={true}
           grabCursor={true}
           spaceBetween={15}
-          slidesPerView={2}
+          slidesPerView={1}
           pagination={{ clickable: true }}
           loop={true}
           breakpoints={{
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 10,
-            },
             768: {
+              slidesPerView: 2,
+            },
+            1024: {
               slidesPerView: 3,
             },
           }}

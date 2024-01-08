@@ -3366,7 +3366,7 @@ export const activityYoga = {
       {
         title: "Yoga for Weight Loss",
         thumbnail: yoga__WeightLoss,
-        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit perspiciatis reprehenderit sint sit quae impedit corrupti doloremque. Saepe ipsa vitae quos distinctio odio deserunt voluptate nesciunt necessitatibus sapiente voluptatum earum, cum facilis veritatis enim, temporibus quas suscipit! Rem labore nisi aliquam assumenda iste nostrum, suscipit pariatur facere",
+        desc: "Weight loss through yoga involves a systematic approach, combining physical postures, breath control, and mindfulness. Styles like Vinyasa and Power Yoga enhance calorie burning, while mindfulness cures emotional eating. Consistent practice promotes a healthy metabolism, reduces stress-related weight gain, and encourages a balanced lifestyle for sustainable weight management.",
         slug: "/activities/yoga/yoga-for-weight-loss",
       },
       {

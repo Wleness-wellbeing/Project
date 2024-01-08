@@ -1,6 +1,9 @@
 import { Link, useParams } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 // Data
 import { modes } from "../../data/doctors";
 import {
@@ -17,6 +20,17 @@ import SessionPricingItem from "../../components/list/SessionPricingItem";
 import OtpModal from "../../components/Auth/OtpModal";
 import YogaCheckout from "./YogaCheckout";
 
+const dates = ["13 Jan 2024", "14 Jan 2024", "20 Jan 2024", "21 Jan 2024"];
+
+const morningBatches = [
+  "06:00 to 07:00 AM",
+  "07:00 to 08:00 AM",
+  "08:00 to 09:00 AM",
+  "09:00 to 10:00 AM",
+];
+
+const eveningBatches = ["05:00 to 06:00 PM", "06:00 to 07:00 PM"];
+
 export default function YogaBooking() {
   const { slug } = useParams();
 
@@ -24,6 +38,7 @@ export default function YogaBooking() {
   const [makePayment, setMakePayment] = useState(false);
   const [batches, setBatches] = useState({});
   const [sessions, setSessions] = useState({});
+  const [swiper, setSwiper] = useState(null); // Store Swiper instance
   // Set Experts Profile Data
   const [profileDetails, setProfileDetails] = useState({});
   // Set Checkout Form Data
@@ -31,7 +46,7 @@ export default function YogaBooking() {
   const [checkoutDetails, setCheckoutDetails] = useState({
     mode: "video",
     plan: "",
-    date: "06 Jan 2024",
+    date: "",
     time: null,
     price: "",
     batch: "",
@@ -331,41 +346,211 @@ export default function YogaBooking() {
 
                 {/* Choose your slots */}
                 <div className="mb-8 self-stretch lg:gap-x-5">
-                  <BookingHeading
-                    heading={
-                      batches.length != 0
-                        ? "3. Available Batches"
-                        : "Batches Not Available"
-                    }
-                  />
+                  <BookingHeading heading="3. Select Date and Time" />
 
-                  <div className="my-10 mb-6 gap-2 lg:mb-0 lg:gap-8">
-                    {batches.length != 0 && (
-                      <div className="grid gap-4 lg:grid-cols-4">
-                        {batches.map((value, i) => {
-                          return (
-                            <button
-                              onClick={() =>
-                                setCheckoutDetails({
-                                  ...checkoutDetails,
-                                  batch: value.name,
-                                  time: value.timing,
-                                })
-                              }
-                              key={i}
-                              type="button"
-                              className={`cursor-pointer rounded-lg border-2 border-primary-300 px-2 py-2 text-center text-sm font-semibold transition-all lg:px-3 lg:py-3 ${
-                                checkoutDetails.batch === value.name
-                                  ? "bg-primary-300 text-white"
-                                  : "text-primary-300 hover:bg-primary-300 hover:text-white"
-                              }`}
-                            >
-                              {value.timing}
-                            </button>
-                          );
-                        })}
+                  <div className="flex gap-4">
+                    {dates.map((value) => {
+                      return (
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setCheckoutDetails({
+                              ...checkoutDetails,
+                              date: value,
+                            })
+                          }
+                          className={`w-full cursor-pointer rounded-lg border-2 border-primary-300 px-2 py-2 text-center text-sm font-semibold transition-all lg:px-3 lg:py-3 ${
+                            checkoutDetails.date === value
+                              ? "bg-primary-300 text-white"
+                              : "text-primary-300 hover:bg-primary-300 hover:text-white"
+                          }`}
+                        >
+                          {value}
+                        </button>
+                      );
+                    })}
+                  </div>
+
+                  {/* <Swiper
+                    modules={[Autoplay, Pagination, Navigation]}
+                    navigation={true}
+                    className="yoga-booking-navigation mb-6"
+                    grabCursor={true}
+                    spaceBetween={15}
+                    slidesPerView={2}
+                    pagination={{ clickable: true }}
+                    loop={true}
+                    breakpoints={{
+                      768: {
+                        slidesPerView: 3,
+                      },
+                      1024: {
+                        slidesPerView: 4,
+                      },
+                    }}
+                    autoplay={{ delay: 2000, disableOnInteraction: false }}
+                    onSwiper={(swiper) => setSwiper(swiper)} // Store Swiper instance
+                    speed={600}
+                  >
+                    {dates.map((value) => {
+                      return (
+                        <SwiperSlide>
+                          <button
+                            type="button"
+                            onClick={() =>
+                              setCheckoutDetails({
+                                ...checkoutDetails,
+                                date: value,
+                              })
+                            }
+                            className={`w-full cursor-pointer rounded-lg border-2 border-primary-300 px-2 py-2 text-center text-sm font-semibold transition-all lg:px-3 lg:py-3 ${
+                              checkoutDetails.date === value
+                                ? "bg-primary-300 text-white"
+                                : "text-primary-300 hover:bg-primary-300 hover:text-white"
+                            }`}
+                          >
+                            {value}
+                          </button>
+                        </SwiperSlide>
+                      );
+                    })}
+                  </Swiper> */}
+
+                  <div className="my-10 mb-6 grid grid-cols-2 divide-x-2">
+                    <div>
+                      <div className="bg-primary-100 py-2 text-center font-quicksand font-semibold text-white">
+                        Saturday
                       </div>
-                    )}
+                      <div className="flex divide-x-2 bg-slate-50 py-1 text-center">
+                        <div className="w-1/2 font-quicksand font-medium">
+                          Morning
+                        </div>
+                        <div className="w-1/2 font-quicksand font-medium">
+                          Evening
+                        </div>
+                      </div>
+                      <div className="flex divide-x-2 bg-slate-50 py-1 text-center">
+                        <div className="w-1/2 space-y-2 px-2 pb-2">
+                          {morningBatches.map((value, i) => {
+                            return (
+                              <button
+                                onClick={() =>
+                                  setCheckoutDetails({
+                                    ...checkoutDetails,
+                                    batch: "Morning Saturday ",
+                                    time: value,
+                                  })
+                                }
+                                key={i}
+                                type="button"
+                                className={`w-full cursor-pointer rounded-lg border-2 border-primary-300 px-2 py-2 text-center text-sm font-semibold transition-all lg:px-3 lg:py-3 ${
+                                  checkoutDetails.batch ===
+                                    "Morning Saturday " &&
+                                  checkoutDetails.time === value
+                                    ? "bg-primary-300 text-white"
+                                    : "text-primary-300 hover:bg-primary-300 hover:text-white"
+                                }`}
+                              >
+                                {value}
+                              </button>
+                            );
+                          })}
+                        </div>
+
+                        <div className="w-1/2 space-y-2 px-2 pb-2">
+                          {eveningBatches.map((value, i) => {
+                            return (
+                              <button
+                                onClick={() =>
+                                  setCheckoutDetails({
+                                    ...checkoutDetails,
+                                    batch: "Evening Saturday ",
+                                    time: value,
+                                  })
+                                }
+                                key={i}
+                                type="button"
+                                className={`w-full cursor-pointer rounded-lg border-2 border-primary-300 px-2 py-2 text-center text-sm font-semibold transition-all lg:px-3 lg:py-3 ${
+                                  checkoutDetails.batch ===
+                                    "Evening Saturday " &&
+                                  checkoutDetails.time === value
+                                    ? "bg-primary-300 text-white"
+                                    : "text-primary-300 hover:bg-primary-300 hover:text-white"
+                                }`}
+                              >
+                                {value}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div className="bg-primary-100 py-2 text-center font-quicksand font-semibold text-white">
+                        Sunday
+                      </div>
+                      <div className="flex divide-x-2 bg-slate-50 py-1 text-center">
+                        <div className="w-1/2 font-quicksand font-medium">
+                          Morning
+                        </div>
+                        <div className="w-1/2 font-quicksand font-medium">
+                          Evening
+                        </div>
+                      </div>
+                      <div className="flex divide-x-2 bg-slate-50 py-1 text-center">
+                        <div className="w-1/2 space-y-2 px-2 pb-2">
+                          {morningBatches.map((value, i) => {
+                            return (
+                              <button
+                                onClick={() =>
+                                  setCheckoutDetails({
+                                    ...checkoutDetails,
+                                    batch: "Morning Sunday ",
+                                    time: value,
+                                  })
+                                }
+                                key={i}
+                                type="button"
+                                className={`w-full cursor-pointer rounded-lg border-2 border-primary-300 px-2 py-2 text-center text-sm font-semibold transition-all lg:px-3 lg:py-3 ${
+                                  checkoutDetails.batch === "Morning Sunday " &&
+                                  checkoutDetails.time === value
+                                    ? "bg-primary-300 text-white"
+                                    : "text-primary-300 hover:bg-primary-300 hover:text-white"
+                                }`}
+                              >
+                                {value}
+                              </button>
+                            );
+                          })}
+                        </div>
+
+                        <div className="w-1/2 space-y-2 px-2 pb-2">
+                          {eveningBatches.map((value, i) => {
+                            return (
+                              <button
+                                onClick={() =>
+                                  setCheckoutDetails({
+                                    ...checkoutDetails,
+                                    batch: "Evening Sunday ",
+                                    time: value,
+                                  })
+                                }
+                                key={i}
+                                type="button"
+                                className={`w-full cursor-pointer rounded-lg border-2 border-primary-300 px-2 py-2 text-center text-sm font-semibold transition-all lg:px-3 lg:py-3 ${
+                                  checkoutDetails.batch === "Evening Sunday " &&
+                                  checkoutDetails.time === value
+                                    ? "bg-primary-300 text-white"
+                                    : "text-primary-300 hover:bg-primary-300 hover:text-white"
+                                }`}
+                              >
+                                {value}
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div className="mb-8 text-center">
@@ -374,7 +559,7 @@ export default function YogaBooking() {
                     disabled={
                       checkoutDetails.plan == "" ||
                       checkoutDetails.mode == "" ||
-                      checkoutDetails.time == null ||
+                      checkoutDetails.date == "" ||
                       checkoutDetails.batch == ""
                         ? !checkout
                         : checkout

@@ -31,7 +31,7 @@ function YogaTechniques(props) {
                   <div className="flex items-center gap-4">
                     <div className="flex justify-end lg:w-1/2">
                       <Link
-                        className="group flex items-center justify-center rounded-full border-2 border-primary-400 py-2 text-center text-xs font-semibold text-primary-400 transition-all hover:bg-primary-400 hover:text-white lg:w-32 lg:text-sm"
+                        className="group flex w-32 items-center justify-center rounded-full border-2 border-primary-400 py-2 text-center text-xs font-semibold text-primary-400 transition-all hover:bg-primary-400 hover:text-white lg:text-sm"
                         to={value.slug}
                       >
                         <FontAwesomeIcon
@@ -43,7 +43,7 @@ function YogaTechniques(props) {
                     </div>
                     <div className="lg:w-1/2">
                       <Link
-                        className="block rounded-full bg-primary-400 py-2.5 text-center text-xs font-semibold text-white transition-all hover:bg-primary-300 lg:w-32 lg:py-2.5 lg:text-sm"
+                        className="block w-32 rounded-full bg-primary-400 py-2.5 text-center text-xs font-semibold text-white transition-all hover:bg-primary-300 lg:py-2.5 lg:text-sm"
                         to={value.slug}
                       >
                         Book Now

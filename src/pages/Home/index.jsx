@@ -30,6 +30,7 @@ import { get_canonical } from "../../utils";
 import Confirmation from "../../components/Modals/Confirmation";
 import Objectives from "../../components/Objectives";
 import YogaSlider from "../../components/Carousels/YogaSlider";
+import WhatsappChat from "../../components/WhatsappChat";
 
 const featuredIn = [
   [
@@ -298,6 +299,7 @@ export default function Home() {
       />
 
       <Confirmation status={status} close={() => setStatus(false)} />
+      <WhatsappChat />
       {/* <Feedback isOpen={isFeedbackOpen} onClose={closeFeedbackModal} /> */}
     </>
   );

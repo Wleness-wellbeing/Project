@@ -2,7 +2,7 @@ import React from "react";
 
 export default function HeaderWithImage(props) {
   return (
-    <header className="container mx-auto flex flex-col items-center lg:flex-row">
+    <header className="container mx-auto flex flex-col items-center pb-6 lg:flex-row">
       <div className="py-4 lg:order-2 lg:w-1/2">
         <img
           src={props.data.image}

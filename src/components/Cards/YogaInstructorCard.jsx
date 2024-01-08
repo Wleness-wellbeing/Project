@@ -8,7 +8,7 @@ export default function YogaInstructorCard(props) {
         <div className="relative mb-12">
           <Link
             to={`/yoga/booking/${props.data.slug}`}
-            className="absolute left-1/2 h-28 -translate-x-1/2 -translate-y-28 md:h-32 md:w-32 lg:h-36 lg:w-36"
+            className="absolute left-1/2 h-32 w-32 -translate-x-1/2 -translate-y-24 md:-translate-y-28 lg:h-36 lg:w-36"
           >
             <img
               loading="lazy"
