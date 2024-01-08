@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 // Components
 import ActivityHeader from "../../components/ActivityHeader";
 import ActivityForm from "../../components/Forms/ActivityForm";
@@ -9,13 +9,20 @@ import Confirmation from "../../components/Modals/Confirmation";
 import YogaTechniques from "../../components/Activities/YogaTechniques";
 import { activityYoga } from "../../data";
 import HappyClient from "../../components/HappyClient";
-import { coupleTherapyClient, yogaClients } from "../../data/clients";
+import { yogaClients } from "../../data/clients";
 import YogaSlider from "../../components/Carousels/YogaSlider";
 
 export default function YogaPage() {
   const { enquiryForm, toggleForm } = useEnquiryForm();
   const [status, setStatus] = useState(false);
 
+  const ref = useRef(null);
+
+  const handleScrollToComponent = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <>
       <Helmet>
@@ -32,8 +39,8 @@ export default function YogaPage() {
         title={activityYoga.header.title}
         image={activityYoga.header.image}
         desc={activityYoga.header.desc}
-        handleScrollToComponent={() => handleScrollToComponent()}
-        isEnquiry={true}
+        handleScrollToComponent={() => handleScrollToComponent(ref)}
+        isEnquiry={false}
         displayButton={true}
         button={["Explore More"]}
         openEnquiry={toggleForm}
@@ -47,6 +54,7 @@ export default function YogaPage() {
         types={activityYoga.activities.types}
         slug={activityYoga.activities.types.slug}
         openEnquiry={toggleForm}
+        ref={ref}
       />
 
       <ActivityForm

@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
 
-function YogaTechniques(props) {
+const YogaTechniques = React.forwardRef((props, ref) => {
   return (
-    <section className=" mb-10 bg-primary-10 pb-6">
+    <section className=" mb-10 bg-primary-10 pb-6" ref={ref}>
       <div className="container mx-auto">
         <div className="rounded-2xl py-4 pt-8 text-center lg:mb-4 lg:mt-10">
           <h2 className="subheading heading-primary">{props.title}</h2>
@@ -58,6 +58,6 @@ function YogaTechniques(props) {
       </div>
     </section>
   );
-}
+});
 
 export default YogaTechniques;

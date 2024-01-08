@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { textColorize } from "../utils";
-import { Link } from "react-router-dom";
 
 export default function ActivityHeader(props) {
   return (
@@ -38,13 +37,12 @@ export default function ActivityHeader(props) {
                     Enquire Now
                   </button>
                 ) : (
-                  <Link
-                    target="_blank"
-                    to="https://deba-shree.dayschedule.com/talk-with-debashree-das-gupta"
-                    className="btn-one inline-block border-2 !border-primary-400 !bg-transparent !py-2 !text-[#383838] hover:!bg-primary-400 hover:!text-white lg:!w-fit"
+                  <button
+                    className="btn-one"
+                    onClick={props.handleScrollToComponent}
                   >
-                    Book Now
-                  </Link>
+                    Explore More
+                  </button>
                 )
               ) : (
                 ""
