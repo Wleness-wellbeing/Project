@@ -12,7 +12,7 @@ export default function MainHeader({ openAssessmentModal }) {
           <img
             loading="lazy"
             src={mainHeaderImage}
-            alt=""
+            alt="Holistic wellness"
             className="mx-auto scale-110"
           />
         </div>

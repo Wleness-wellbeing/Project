@@ -11,7 +11,7 @@ export default function WhyCoach({ name, image, lists }) {
 
       <div class="container mx-auto flex flex-col md:flex-row">
         <div class="w-full md:w-2/5">
-          <img src={image} alt={name} class="w-full" />
+          <img src={image} alt={name} class="mx-auto rounded-lg lg:w-96" />
         </div>
         <div class="my-9 w-full md:ml-8 md:w-3/5">
           {lists.map((value, i) => {

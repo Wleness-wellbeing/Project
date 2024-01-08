@@ -1237,6 +1237,13 @@ import lifeCoachingClarity from "./images/lifecoching/life-coaching-clarity.png"
 import lifeCoachingConfidence from "./images/lifecoching/life-coaching-confidence.png";
 import lifeCoachingMotivation from "./images/lifecoching/life-coaching-motivation.png";
 import lifeCoachingOvercomingfear from "./images/lifecoching/life-coaching-overcoming-fear.png";
+// Coaches
+import lifeCoachRidhi from "./images/lifecoching/life-coach-ridhi.png";
+import lifeCoachRidhi2 from "./images/lifecoching/life-coach-ridhi_2.webp";
+import lifeCoachRidhi3 from "./images/lifecoching/life-coach-ridhi_3.webp";
+import lifeCoachTanuja from "./images/lifecoching/life-coach-tanuja.png";
+import lifeCoachTanuja2 from "./images/lifecoching/life-coach-tanuja_2.webp";
+import lifeCoachTanuja3 from "./images/lifecoching/life-coach-tanuja_3.webp";
 
 export {
   lifeCoaching1,
@@ -1253,6 +1260,12 @@ export {
   lifeCoachingConfidence,
   lifeCoachingMotivation,
   lifeCoachingOvercomingfear,
+  lifeCoachRidhi,
+  lifeCoachRidhi2,
+  lifeCoachRidhi3,
+  lifeCoachTanuja,
+  lifeCoachTanuja2,
+  lifeCoachTanuja3,
 };
 
 // ======= Executive Coaching=========//
@@ -1304,3 +1317,23 @@ export {
   AssessmentOCDIcon,
   AssessmentSubstanceIcon,
 };
+
+/*
+Holistic wellness,
+Mental Health Support,
+Spiritual Growth,
+Self-Care Practices,
+Mindfulness Techniques,
+Nutritional Guidance,
+Physical Fitness Routines,
+Stress Management Tips,
+EMotional Well0being,
+Mental Clarity Exercises,
+Inner Peace Methods,
+Holistic Lifestyle, 
+Health & Wellness Resources, 
+Wellness Coaching, 
+India's Most Diverse Holistic Platform, 
+Healthy Habits, 
+Energy Healing Practices 
+**/

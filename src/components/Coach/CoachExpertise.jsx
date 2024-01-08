@@ -30,7 +30,7 @@ export default function CoachExpertise({ heading, image, lists }) {
         <img
           src={image} // Replace with your image URL
           alt="Description of the image"
-          className=""
+          className="rounded-lg"
         />
       </div>
     </section>

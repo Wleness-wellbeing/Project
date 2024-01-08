@@ -92,7 +92,7 @@ export default function LifeCoching() {
       </header>
 
       {/* ===================== Lifestyle coaches =====================  */}
-      <section className="container mx-auto hidden  py-5 text-center">
+      <section className="container mx-auto py-5 text-center">
         <h2 className="subheading mb-3 pt-10">
           <span>Our </span>
           <span className="heading-primary">Lifestyle Coaches</span>
@@ -112,9 +112,9 @@ export default function LifeCoching() {
                   <h4 className="font-semibold text-slate-600">
                     {value.profession}
                   </h4>
-                  <h4 className="font-semibold text-slate-600">
+                  {/* <h4 className="font-semibold text-slate-600">
                     Certified by ICF
-                  </h4>
+                  </h4> */}
                 </figcaption>
               </Link>
             );
