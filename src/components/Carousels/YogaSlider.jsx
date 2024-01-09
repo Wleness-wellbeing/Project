@@ -6,47 +6,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 // Data
 import { textColorize } from "../../utils";
-import {
-  yoga__HathaYoga,
-  yoga__MeditationAndMinfullness,
-  yoga_instructor_snigda,
-  yoga_instructor_venkatesh,
-} from "../../assets";
 import YogaInstructorCard from "../Cards/YogaInstructorCard";
 import { YOGA_EXPERTS_URI } from "../../data/api";
 import axios from "axios";
-
-const yogaInstructorsData = [
-  {
-    name: "Snigdha Biswas",
-    image: yoga_instructor_snigda,
-    expertise: "Backbend, Headstand, Handstand, Aerial yoga",
-    slug: "snigdha-biswaws",
-    year: 5,
-  },
-  {
-    name: "Archya Venkatesh",
-    image: yoga_instructor_venkatesh,
-    // expertise: "Hatha Yoga, Krishnamacharya Yoga, Therapeutic yoga, Kundalini yoga, fertility yoga, prenatal and postnatal yoga, breathwork, mindfulness",
-    expertise: "Hatha Yoga, Krishnamacharya Yoga, Therapeutic yoga",
-    slug: "snigdha-biswaws",
-    year: 5,
-  },
-  {
-    name: "Venashree Das",
-    image: yoga__MeditationAndMinfullness,
-    expertise: "Backbend, Headstand, Handstand, Aerial yoga",
-    slug: "snigdha-biswaws",
-    year: 5,
-  },
-  {
-    name: "Rohini sharma",
-    image: yoga__HathaYoga,
-    expertise: "Backbend, Headstand, Handstand, Aerial yoga",
-    slug: "snigdha-biswaws",
-    year: 5,
-  },
-];
 
 export default function YogaSlider() {
   const [swiper, setSwiper] = useState(null); // Store Swiper instance

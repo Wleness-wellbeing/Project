@@ -19,6 +19,7 @@ import BookingHeading from "../../components/Appointment/BookingHeading";
 import SessionPricingItem from "../../components/list/SessionPricingItem";
 import OtpModal from "../../components/Auth/OtpModal";
 import YogaCheckout from "./YogaCheckout";
+import YogaSessionPricingItem from "../../components/list/YogaSessionPricingItem";
 
 const dates = ["13 Jan 2024", "14 Jan 2024", "20 Jan 2024", "21 Jan 2024"];
 
@@ -328,14 +329,14 @@ export default function YogaBooking() {
                   <BookingHeading heading="1. Select session plan" />
                   {sessions.map((value, i) => {
                     return (
-                      <SessionPricingItem
+                      <YogaSessionPricingItem
                         data={value}
                         key={i}
                         selectPlan={() =>
                           setCheckoutDetails({
                             ...checkoutDetails,
                             plan: value.package,
-                            price: value.price,
+                            price: value.discount_price,
                           })
                         }
                         selectedPlan={checkoutDetails?.plan === value.package}

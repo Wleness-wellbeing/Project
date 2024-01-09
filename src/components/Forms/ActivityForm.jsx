@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { GENERAL_ENQUIRY_URI } from "../../data/api";
+import { useNavigate } from "react-router-dom";
 
-export default function ActivityForm({
-  isOpen,
-  onClose,
-  purpose,
-  setConfirmation,
-}) {
+export default function ActivityForm({ isOpen, onClose, purpose }) {
   if (!isOpen) return null;
+
+  const navigate = useNavigate();
 
   // Handle Joining Form
   const [formInfo, setFormData] = useState({
@@ -79,7 +77,7 @@ export default function ActivityForm({
               location: "",
             });
             onClose();
-            setConfirmation(true);
+            navigate("/thank-you");
           }
         })
         .catch((error) => {
@@ -99,7 +97,7 @@ export default function ActivityForm({
 
   return (
     <section className="fixed inset-0 z-50 grid animate-fadeIn place-items-center bg-black/20 transition-all">
-      <div className="enquiry-form animate-scaleIn w-4/5 rounded-2xl bg-white p-6 transition-all lg:w-[420px]">
+      <div className="enquiry-form w-4/5 animate-scaleIn rounded-2xl bg-white p-6 transition-all lg:w-[420px]">
         <div className="text-center">
           <h2 className="subheading">Enquire Now</h2>
         </div>

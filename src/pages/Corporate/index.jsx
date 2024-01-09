@@ -10,11 +10,9 @@ import CorporateForm from "../../components/Forms/CorporateForm";
 import { Helmet } from "react-helmet";
 import { CORPORATE_WELLBEING_META } from "../../data/meta";
 import { get_canonical } from "../../utils";
-import Confirmation from "../../components/Modals/Confirmation";
 
 export default function index() {
   const [corporateForm, setCorporateForm] = useState(false);
-  const [status, setStatus] = useState(false);
 
   // Toggle form
   const toggleForm = () => {
@@ -214,12 +212,7 @@ export default function index() {
         />
       </section>
 
-      <CorporateForm
-        isOpen={corporateForm}
-        onClose={toggleForm}
-        setConfirmation={setStatus}
-      />
-      <Confirmation status={status} close={() => setStatus(false)} />
+      <CorporateForm isOpen={corporateForm} onClose={toggleForm} />
     </>
   );
 }

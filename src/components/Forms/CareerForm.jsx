@@ -4,6 +4,7 @@ import { CAREER_URI } from "../../data/api";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUpload } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 export default function CareerForm() {
   const [formInfo, setFormData] = useState({
@@ -16,6 +17,7 @@ export default function CareerForm() {
     status: "",
     message: "",
   });
+  const navigate = useNavigate();
 
   // Handle form value change event
   const handleChange = (e) => {
@@ -56,6 +58,7 @@ export default function CareerForm() {
             email: "",
           });
           setResume(null);
+          navigate("/thank-you");
         }
       } catch (error) {
         console.error("Error sending data:", error);

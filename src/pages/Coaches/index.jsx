@@ -62,7 +62,6 @@ export default function ExecutiveCoaching() {
   const [openFAQ, setOpenFAQ] = useState(0);
   const [activeService, setActiveService] = useState(0);
   const [activeIndividualService, setIndividualService] = useState(0);
-  const [status, setStatus] = useState(false);
 
   // Toggle Faq's
   const toggleFAQ = (index) => {
@@ -74,7 +73,6 @@ export default function ExecutiveCoaching() {
   // Handle Executive Services
   const handleServices = (i) => {
     setActiveService(i);
-    console.log(executiveServices[i]);
   };
 
   // Handle Individual Services
@@ -141,8 +139,7 @@ export default function ExecutiveCoaching() {
         </h2>
 
         <Swiper
-          navigation={true}
-          modules={[Navigation, Autoplay, Pagination]}
+          modules={[Autoplay, Pagination]}
           spaceBetween={40}
           className="mt-5"
           pagination={{ clickable: true }}
@@ -422,19 +419,13 @@ export default function ExecutiveCoaching() {
         </p>
       </section>
 
-      <CoachRequestForm
-        name="Executive Coaching"
-        onClose={toggleForm}
-        setConfirmation={setStatus}
-      />
+      <CoachRequestForm name="Executive Coaching" onClose={toggleForm} />
 
       <ActivityForm
         purpose="Executive Coaching"
         isOpen={enquiryForm}
         onClose={toggleForm}
-        setConfirmation={setStatus}
       />
-      <Confirmation status={status} close={() => setStatus(false)} />
     </>
   );
 }

@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function ApplyForm({ name, url, setConfirmation }) {
   const [personalDetails, setPersonalDetails] = useState({
@@ -14,7 +15,7 @@ export default function ApplyForm({ name, url, setConfirmation }) {
     status: "",
     message: "",
   });
-
+  const navigate = useNavigate();
   // Handle input fields on change
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -58,7 +59,7 @@ export default function ApplyForm({ name, url, setConfirmation }) {
             });
 
             setResume(null);
-            setConfirmation(true);
+            navigate("/thank-you");
           } else {
             setSuccessMessage({
               status: response.data.status,

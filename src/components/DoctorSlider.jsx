@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Navigation, Autoplay, A11y } from "swiper/modules";
+import { EffectCoverflow, Autoplay, A11y } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -92,9 +92,8 @@ export default function DoctorSlider(props) {
         onMouseLeave={handleMouseLeave}
       >
         <Swiper
-          modules={[EffectCoverflow, Navigation, Autoplay]}
+          modules={[EffectCoverflow, Autoplay]}
           className="mySwiper h-[420px] overflow-y-visible rounded-2xl lg:h-[500px]"
-          navigation={true}
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}

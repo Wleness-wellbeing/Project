@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import axios from "axios";
 import { requestCallback } from "../../assets";
 import { REQUEST_CALLBACK_URI } from "../../data/api";
+import { useNavigate } from "react-router-dom";
 
-function RequestForm({ setConfirmation }) {
+function RequestForm() {
+  const navigate = useNavigate();
+
   const [formInfo, setFormData] = useState({
     name: "",
     phone: "",
@@ -39,7 +42,8 @@ function RequestForm({ setConfirmation }) {
             name: "",
             phone: "",
           });
-          setConfirmation(true);
+
+          navigate("/thank-you");
         } else {
           setSuccessMessage({
             status: response.data.status,

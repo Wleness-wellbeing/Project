@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { LIFE_COACHING_URI } from "../../data/api";
 
 export default function LifeCoachingForm({ isOpen, onClose, setConfirmation }) {
   if (!isOpen) return null;
+
+  const navigate = useNavigate();
+
   // Handle Joining Form
   const [formInfo, setFormData] = useState({
     name: "",
@@ -93,7 +96,7 @@ export default function LifeCoachingForm({ isOpen, onClose, setConfirmation }) {
             });
             setPolicy(false);
             onClose();
-            setConfirmation(true);
+            navigate("/thank-you");
           }
         })
         .catch((error) => {
@@ -107,7 +110,7 @@ export default function LifeCoachingForm({ isOpen, onClose, setConfirmation }) {
 
   return (
     <section className="fixed inset-0 z-50 grid animate-fadeIn place-items-center bg-black/20 transition-all">
-      <div className="life-coaching animate-scaleIn w-4/5 rounded-2xl bg-white p-6 transition-all lg:w-[620px]">
+      <div className="life-coaching w-4/5 animate-scaleIn rounded-2xl bg-white p-6 transition-all lg:w-[620px]">
         <div className="text-center">
           <h2 className="subheading">Life-coaching Join</h2>
         </div>

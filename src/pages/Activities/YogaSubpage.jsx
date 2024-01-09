@@ -2,7 +2,7 @@ import React from "react";
 import HeaderWithImage from "../../components/HeaderWithImage";
 import Objectives from "../../components/Objectives";
 import HappyClient from "../../components/HappyClient";
-import { coupleTherapyClient, yogaClients } from "../../data/clients";
+import { yogaClients } from "../../data/clients";
 import YogaSlider from "../../components/Carousels/YogaSlider";
 
 const benefits = [

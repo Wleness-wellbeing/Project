@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { INTERNSHIP_JOIN_URI } from "../data/api";
 
-export default function InternshipApply({ isOpen, onClose, setConfirmation }) {
+export default function InternshipApply({ isOpen, onClose }) {
   if (!isOpen) return null;
-
+  const navigate = useNavigate();
   const [formInfo, setFormInfo] = useState({
     firstName: "",
     lastName: "",
@@ -91,7 +91,7 @@ export default function InternshipApply({ isOpen, onClose, setConfirmation }) {
           });
           setAgreement(false);
           onClose();
-          setConfirmation(true);
+          navigate("/thank-you");
         } else {
           updateMessage(response.data.status, response.data.message);
           return null;
@@ -123,7 +123,7 @@ export default function InternshipApply({ isOpen, onClose, setConfirmation }) {
 
   return (
     <section className="fixed inset-0 z-40 flex animate-fadeIn justify-center pt-8 backdrop-brightness-50 transition-all">
-      <div className="internship animate-scaleIn w-[640px] overflow-y-scroll rounded-t-lg bg-white p-6 transition-all">
+      <div className="internship w-[640px] animate-scaleIn overflow-y-scroll rounded-t-lg bg-white p-6 transition-all">
         <h4 className="mb-4 text-center text-2xl font-bold text-primary-300">
           Internship Form
         </h4>

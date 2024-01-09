@@ -25,7 +25,6 @@ const roles = [
 
 export default function CampusAmbassador() {
   const [campusModal, setcampusModal] = useState(false);
-  const [status, setStatus] = useState(false);
 
   const openCampusModal = () => {
     setcampusModal(true);
@@ -189,12 +188,7 @@ export default function CampusAmbassador() {
         /> */}
       </section>
 
-      <CampusAmbassadorForm
-        isOpen={campusModal}
-        onClose={closeCampusModal}
-        setConfirmation={setStatus}
-      />
-      <Confirmation status={status} close={() => setStatus(false)} />
+      <CampusAmbassadorForm isOpen={campusModal} onClose={closeCampusModal} />
     </>
   );
 }

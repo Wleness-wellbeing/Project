@@ -21,7 +21,6 @@ import FaqWithImage from "../../components/FaqWithImage";
 import { Helmet } from "react-helmet";
 import { INTERNSHIP_META } from "../../data/meta";
 import { get_canonical } from "../../utils";
-import Confirmation from "../../components/Modals/Confirmation";
 
 const wlenessWork = [
   {
@@ -71,7 +70,6 @@ const whyWleness = [
 
 export default function Internship() {
   const [internshipModal, setInternshipModal] = useState(false);
-  const [status, setStatus] = useState(false);
 
   const openInternshipModal = () => {
     setInternshipModal(true);
@@ -204,10 +202,7 @@ export default function Internship() {
       <InternshipApply
         isOpen={internshipModal}
         onClose={closeInternshipModal}
-        setConfirmation={setStatus}
       />
-
-      <Confirmation status={status} close={() => setStatus(false)} />
     </>
   );
 }

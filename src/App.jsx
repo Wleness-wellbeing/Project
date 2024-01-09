@@ -81,6 +81,8 @@ import YogaSubpage from "./pages/Activities/YogaSubpage";
 import YogaPage from "./pages/Activities/YogaPage";
 import YogaBooking from "./pages/Appointment/YogaBooking";
 import WhatsappChat from "./components/WhatsappChat";
+import ThankYou from "./components/Modals/ThankYou";
+import Confirmation from "./components/Modals/Confirmation";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -388,7 +390,7 @@ function App() {
           }
         />
 
-        {activityYoga.activities.types.map((value, index) => {
+        {/* {activityYoga.activities.types.map((value, index) => {
           return (
             <Route
               key={index}
@@ -400,7 +402,7 @@ function App() {
               }
             />
           );
-        })}
+        })} */}
 
         {/* Activity Subpages - Yoga, Meditation, Sadhna */}
         {activitiesMenu}
@@ -625,6 +627,14 @@ function App() {
           element={
             <Layout>
               <ContactUs />
+            </Layout>
+          }
+        />
+        <Route
+          path="/thank-you"
+          element={
+            <Layout>
+              <Confirmation />
             </Layout>
           }
         />

@@ -14,7 +14,7 @@ import {
 } from "../../assets";
 import { homeFaqs } from "../../data/faqs";
 import { homeTestimonials } from "../../data/testimonials";
-import { homeServices, objectives, statistics, whyChooseUs } from "../../data";
+import { homeServices, statistics, whyChooseUs } from "../../data";
 // Components
 import Assessment from "../../components/Assessment";
 import RequestForm from "../../components/Forms/RequestForm";
@@ -27,7 +27,6 @@ import DoctorSlider from "../../components/DoctorSlider";
 import { Helmet } from "react-helmet";
 import { HOME_META } from "../../data/meta";
 import { get_canonical } from "../../utils";
-import Confirmation from "../../components/Modals/Confirmation";
 import Objectives from "../../components/Objectives";
 import YogaSlider from "../../components/Carousels/YogaSlider";
 import WhatsappChat from "../../components/WhatsappChat";
@@ -66,7 +65,6 @@ const featuredIn = [
 export default function Home() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
   const [rediredurl, setRediredurl] = useState(null);
-  const [status, setStatus] = useState(false);
 
   // Assessment Slides
   const openAssessmentModal = () => {
@@ -287,7 +285,7 @@ export default function Home() {
       </section>
 
       {/* ========== Request Form ========== */}
-      <RequestForm setConfirmation={setStatus} />
+      <RequestForm />
 
       {/* ========== FAQ's ========== */}
       <HomeFaq data={homeFaqs} />
@@ -298,7 +296,6 @@ export default function Home() {
         buttons={rediredurl}
       />
 
-      <Confirmation status={status} close={() => setStatus(false)} />
       <WhatsappChat />
       {/* <Feedback isOpen={isFeedbackOpen} onClose={closeFeedbackModal} /> */}
     </>

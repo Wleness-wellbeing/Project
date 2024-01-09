@@ -11,7 +11,6 @@ import Confirmation from "../../components/Modals/Confirmation";
 export default function ActivityLayout(props) {
   const ref = useRef(null);
   const { enquiryForm, toggleForm } = useEnquiryForm();
-  const [status, setStatus] = useState(false);
 
   const handleScrollToComponent = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
@@ -50,10 +49,7 @@ export default function ActivityLayout(props) {
         purpose={props.name}
         isOpen={enquiryForm}
         onClose={toggleForm}
-        setConfirmation={setStatus}
       />
-
-      <Confirmation status={status} close={() => setStatus(false)} />
     </>
   );
 }

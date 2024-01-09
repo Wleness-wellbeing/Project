@@ -25,7 +25,6 @@ export default function MusicalTherapy() {
   const { enquiryForm, toggleForm } = useEnquiryForm();
 
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
-  const [status, setStatus] = useState(false);
 
   const openAssessmentModal = () => {
     setShowAssessmentModal(true);
@@ -113,10 +112,7 @@ export default function MusicalTherapy() {
         purpose={MusicalTherapyData.name}
         isOpen={enquiryForm}
         onClose={toggleForm}
-        setConfirmation={setStatus}
       />
-
-      <Confirmation status={status} close={() => setStatus(false)} />
     </>
   );
 }

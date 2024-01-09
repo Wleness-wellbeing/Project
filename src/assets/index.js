@@ -1,5 +1,5 @@
 // Home Images
-import mainHeaderImage from "./images/home/main-header-image.png";
+import mainHeaderImage from "./images/home/main-header-image.webp";
 import iconCommunity from "./images/home/icons/icon_community.svg";
 import iconEasyAccess from "./images/home/icons/icon_easy-access.svg";
 import iconEffective from "./images/home/icons/icon_effective.svg";
@@ -11,10 +11,10 @@ import iconInternshipBriefcase from "./images/home/icons/internship_briefcase.pn
 import iconInternshipCheck from "./images/home/icons/internship_check.png";
 import iconInternshipHandshake from "./images/home/icons/internship_handshake.png";
 import iconInternshipYout from "./images/home/icons/internship_youth.png";
-import testimonial1 from "./images/home/testimonials/testimonial-1.png";
-import testimonial2 from "./images/home/testimonials/testimonial-2.png";
-import testimonial3 from "./images/home/testimonials/testimonial-3.png";
-import testimonial4 from "./images/home/testimonials/testimonial-4.png";
+import testimonial1 from "./images/home/testimonials/testimonial-1.webp";
+import testimonial2 from "./images/home/testimonials/testimonial-2.webp";
+import testimonial3 from "./images/home/testimonials/testimonial-3.webp";
+import testimonial4 from "./images/home/testimonials/testimonial-4.webp";
 import testimonialRing from "./images/home/testimonials/testimonial-ring.png";
 import community from "./images/home/community.png";
 import doodle1 from "./images/home/doodle-1.svg";
@@ -342,27 +342,13 @@ export {
 };
 
 // Activities >> Yoga
-import yogaHeader from "./images/activities/yoga/yoga-header.png";
-import yogaType1 from "./images/activities/yoga/yoga-type-1.png";
-import yogaType2 from "./images/activities/yoga/yoga-type-2.png";
-import yogaType3 from "./images/activities/yoga/yoga-type-3.png";
-import yogaType4 from "./images/activities/yoga/yoga-type-4.png";
-import yogaType5 from "./images/activities/yoga/yoga-type-5.png";
-import yogaType6 from "./images/activities/yoga/yoga-type-6.png";
-import yogaType7 from "./images/activities/yoga/yoga-type-7.png";
-import yogaType8 from "./images/activities/yoga/yoga-type-8.png";
-import yogaType9 from "./images/activities/yoga/yoga-type-9.png";
-import yogaType10 from "./images/activities/yoga/yoga-type-10.png";
-import yogaType11 from "./images/activities/yoga/yoga-type-11.png";
-import yogaType12 from "./images/activities/yoga/yoga-type-12.png";
-import yoga__AshtangaYoga from "./images/activities/yoga/yoga__astanga-yoga.jpg";
-import yoga__HathaYoga from "./images/activities/yoga/yoga__hatha-yoga.jpg";
-import yoga__MeditationAndMinfullness from "./images/activities/yoga/yoga__meditation-and-mindfullness.jpg";
-import yoga__TherapauticYoga from "./images/activities/yoga/yoga__therapautic-yoga.jpg";
-import yoga__WeightLoss from "./images/activities/yoga/yoga__weight-loss.jpg";
-import yoga__WomenYoga from "./images/activities/yoga/yoga__yoga-for-women.jpg";
-import yoga_instructor_venkatesh from "./images/activities/yoga/instructors/instructor__archya-venkatesh.jpg";
-import yoga_instructor_snigda from "./images/activities/yoga/instructors/instructor__snigdha-biswas.jpg";
+import yogaHeader from "./images/activities/yoga/yoga-header.webp";
+import yoga__AshtangaYoga from "./images/activities/yoga/yoga__astanga-yoga.webp";
+import yoga__HathaYoga from "./images/activities/yoga/yoga__hatha-yoga.webp";
+import yoga__MeditationAndMinfullness from "./images/activities/yoga/yoga__meditation-and-mindfullness.webp";
+import yoga__TherapauticYoga from "./images/activities/yoga/yoga__therapautic-yoga.webp";
+import yoga__WeightLoss from "./images/activities/yoga/yoga__weight-loss.webp";
+import yoga__WomenYoga from "./images/activities/yoga/yoga__yoga-for-women.webp";
 // Activities >> Yoga >> Adhomukha
 import adhvmukhaHeader from "./images/activities/yoga/adhomukha/adhv-mukha-header.png";
 import adhvmukhaSteps from "./images/activities/yoga/adhomukha/steps-of-adhv-mukha-yoga.png";
@@ -502,26 +488,12 @@ export {
   yogaSadhnaHeader,
   // Yoga
   yogaHeader,
-  yogaType1,
-  yogaType2,
-  yogaType3,
-  yogaType4,
-  yogaType5,
-  yogaType6,
-  yogaType7,
-  yogaType8,
-  yogaType9,
-  yogaType10,
-  yogaType11,
-  yogaType12,
   yoga__AshtangaYoga,
   yoga__HathaYoga,
   yoga__MeditationAndMinfullness,
   yoga__TherapauticYoga,
   yoga__WeightLoss,
   yoga__WomenYoga,
-  yoga_instructor_venkatesh,
-  yoga_instructor_snigda,
   // Brain Exericise
   brainheader,
   brainExerciseHeader,
@@ -710,12 +682,12 @@ import musicHealingTrack4 from "./images/services/musicalTherapy/music-healing-t
 import wlenessExploreTracks from "./images/services/musicalTherapy/wleness-explore-tracks.png";
 
 // Services >> Therapy
-import therapyHeader from "./images/services/therapy/therapy-header.png";
-import bestTherapy from "./images/services/therapy/best-therapy.png";
-import whyChooseTherapy1 from "./images/services/therapy/why-choose-1.png";
-import whyChooseTherapy2 from "./images/services/therapy/why-choose-2.png";
-import whyChooseTherapy3 from "./images/services/therapy/why-choose-3.png";
-import whyChooseTherapy4 from "./images/services/therapy/why-choose-4.png";
+import therapyHeader from "./images/services/therapy/therapy-header.webp";
+import bestTherapy from "./images/services/therapy/best-therapy.webp";
+import whyChooseTherapy1 from "./images/services/therapy/why-choose-1.webp";
+import whyChooseTherapy2 from "./images/services/therapy/why-choose-2.webp";
+import whyChooseTherapy3 from "./images/services/therapy/why-choose-3.webp";
+import whyChooseTherapy4 from "./images/services/therapy/why-choose-4.webp";
 // Services >> Psychiatrist
 import psychiatristHeader from "./images/services/psychiatrist/psychiatrist-header.png";
 import bestPsychiatrist from "./images/services/psychiatrist/best-psychiatrist.png";
@@ -762,22 +734,22 @@ export {
 
 // Issues Images
 import issuesHeader from "./images/issues/issuesHeader.png";
-import issueAnxiety from "./images/issues/issue-anxiety.png";
-import issueAdhd from "./images/issues/issue-adhd.png";
-import issueBiopolarDisorder from "./images/issues/issue-biopolar-disorder.png";
-import issueCd from "./images/issues/issue-cd.png";
-import issueDepression from "./images/issues/issue-depression.png";
-import issueEatingDisorder from "./images/issues/issue-eating-disorder.png";
-import issueOcd from "./images/issues/issue-ocd.png";
-import issueOdd from "./images/issues/issue-odd.png";
-import issuePanicAttack from "./images/issues/issue-panic-attack.png";
-import issueParanoia from "./images/issues/issue-paranoia.png";
-import issueSchizophrenia from "./images/issues/issue-schizophrenia.png";
-import issueStress from "./images/issues/issue-stress.png";
-import issueRelationship from "./images/issues/issue-relationship.png";
-import issueAnger from "./images/issues/issue-anger.png";
-import issueLgbtq from "./images/issues/issue-lgbtq.png";
-import issueParenting from "./images/issues/issue-parenting.png";
+import issueAnxiety from "./images/issues/issue-anxiety.webp";
+import issueAdhd from "./images/issues/issue-adhd.webp";
+import issueBiopolarDisorder from "./images/issues/issue-biopolar-disorder.webp";
+import issueCd from "./images/issues/issue-cd.webp";
+import issueDepression from "./images/issues/issue-depression.webp";
+import issueEatingDisorder from "./images/issues/issue-eating-disorder.webp";
+import issueOcd from "./images/issues/issue-ocd.webp";
+import issueOdd from "./images/issues/issue-odd.webp";
+import issuePanicAttack from "./images/issues/issue-panic-attack.webp";
+import issueParanoia from "./images/issues/issue-paranoia.webp";
+import issueSchizophrenia from "./images/issues/issue-schizophrenia.webp";
+import issueStress from "./images/issues/issue-stress.webp";
+import issueRelationship from "./images/issues/issue-relationship.webp";
+import issueAnger from "./images/issues/issue-anger.webp";
+import issueLgbtq from "./images/issues/issue-lgbtq.webp";
+import issueParenting from "./images/issues/issue-parenting.webp";
 // Issues >> Subpages >> Header
 import adhdHeader from "./images/issues/hero/header-adhd.png";
 import anxietyHeader from "./images/issues/hero/header-anxiety.png";
@@ -929,17 +901,17 @@ import happyClient1 from "./images/clients/happy-client-1.png";
 import happyClient2 from "./images/clients/happy-client-2.png";
 import happyClient3 from "./images/clients/happy-client-3.png";
 import happyClient4 from "./images/clients/happy-client-4.png";
-import therapyClient1 from "./images/clients/therapy-review-1.png";
-import therapyClient2 from "./images/clients/therapy-review-2.png";
-import therapyClient3 from "./images/clients/therapy-review-3.png";
-import therapyClient4 from "./images/clients/therapy-review-4.png";
+import therapyClient1 from "./images/clients/therapy-review-1.webp";
+import therapyClient2 from "./images/clients/therapy-review-2.webp";
+import therapyClient3 from "./images/clients/therapy-review-3.webp";
+import therapyClient4 from "./images/clients/therapy-review-4.webp";
 import coupleTherapyReview1 from "./images/clients/couple-therapy-review-1.jpg";
 import coupleTherapyReview2 from "./images/clients/couple-therapy-review-2.jpg";
 import coupleTherapyReview3 from "./images/clients/couple-therapy-review-3.jpg";
-import yoga_client_1 from "./images/clients/yoga-client-1.jpg";
-import yoga_client_2 from "./images/clients/yoga-client-2.jpg";
-import yoga_client_3 from "./images/clients/yoga-client-3.jpg";
-import yoga_client_4 from "./images/clients/yoga-client-4.jpg";
+import yoga_client_1 from "./images/clients/yoga-client-1.webp";
+import yoga_client_2 from "./images/clients/yoga-client-2.webp";
+import yoga_client_3 from "./images/clients/yoga-client-3.webp";
+import yoga_client_4 from "./images/clients/yoga-client-4.webp";
 
 export {
   happyClient1,
@@ -963,9 +935,9 @@ export {
 import faqHeader from "./images/faqs/faq-header.png";
 import faq1 from "./images/faqs/faq-1.png";
 import faq2 from "./images/faqs/faq-2.png";
-import faq3 from "./images/faqs/faq-3.png";
+import faq3 from "./images/faqs/faq-3.webp";
 import faq4 from "./images/faqs/faq-4.png";
-import faq5 from "./images/faqs/guiding-business-image-faq.png";
+import faq5 from "./images/faqs/guiding-business-image-faq.webp";
 
 export { faq1, faq2, faq3, faq4, faqHeader, faq5 };
 
@@ -1231,20 +1203,20 @@ import ringervolume from "./images/contactus/RingerVolume.png";
 export { email, location, ringervolume };
 
 // ======= Life Coaching =========//
-import lifeCoaching1 from "./images/lifecoching/life-coaching-1.png";
-import lifeCoaching2 from "./images/lifecoching/life-coaching-2.png";
-import lifeCoaching3 from "./images/lifecoching/life-coaching-3.png";
-import lifeCoachingPublicSpeaking from "./images/lifecoching/lifecoaching-public-speaking.jpg";
-import lifeCoachingInterviewPreparation from "./images/lifecoching/lifecoaching-interview-preparation.jpg";
-import lifeCoachingLeadershipDevelopment from "./images/lifecoching/lifecoaching-leadership-development.jpg";
+import lifeCoaching1 from "./images/lifecoching/life-coaching-1.webp";
+import lifeCoaching2 from "./images/lifecoching/life-coaching-2.webp";
+import lifeCoaching3 from "./images/lifecoching/life-coaching-3.webp";
+import lifeCoachingPublicSpeaking from "./images/lifecoching/life-coaching-4.webp";
+import lifeCoachingLeadershipDevelopment from "./images/lifecoching/life-coaching-5.webp";
+import lifeCoachingInterviewPreparation from "./images/lifecoching/life-coaching-6.webp";
 import rectangle1 from "./images/lifecoching/rectangle1.png";
 import rectangle2 from "./images/lifecoching/rectangle2.png";
-import rectangle3 from "./images/lifecoching/rectangle3.png";
-import lifeCoachingHeader from "./images/lifecoching/life-coaching-header.png";
-import lifeCoachingClarity from "./images/lifecoching/life-coaching-clarity.png";
-import lifeCoachingConfidence from "./images/lifecoching/life-coaching-confidence.png";
-import lifeCoachingMotivation from "./images/lifecoching/life-coaching-motivation.png";
-import lifeCoachingOvercomingfear from "./images/lifecoching/life-coaching-overcoming-fear.png";
+import rectangle3 from "./images/lifecoching/rectangle3.webp";
+import lifeCoachingHeader from "./images/lifecoching/life-coaching-header.webp";
+import lifeCoachingClarity from "./images/lifecoching/life-coaching-clarity.webp";
+import lifeCoachingConfidence from "./images/lifecoching/life-coaching-confidence.webp";
+import lifeCoachingMotivation from "./images/lifecoching/life-coaching-motivation.webp";
+import lifeCoachingOvercomingfear from "./images/lifecoching/life-coaching-overcoming-fear.webp";
 // Coaches
 import lifeCoachRidhi from "./images/lifecoching/life-coach-ridhi.png";
 import lifeCoachRidhi2 from "./images/lifecoching/life-coach-ridhi_2.webp";
@@ -1277,20 +1249,20 @@ export {
 };
 
 // ======= Executive Coaching=========//
-import executiveCoachingHeader from "./images/executiveCoching/executive-coaching-header.png";
+import executiveCoachingHeader from "./images/executiveCoching/executive-coaching-header.webp";
 import header from "./images/executiveCoching/header1.png";
 import image2 from "./images/executiveCoching/image2.png";
 import image3 from "./images/executiveCoching/image3.png";
-import executiveCoach1 from "./images/executiveCoching/our-executive-coach-1.png";
-import executiveCoach2 from "./images/executiveCoching/our-executive-coach-2.png";
-import executiveCoach3 from "./images/executiveCoching/our-executive-coach-3.png";
-import bgExecutiveApproach from "./images/executiveCoching/bg-our-approach.png";
-import whyExecutiveCoaching1 from "./images/executiveCoching/why-executive-coaching-1.png";
-import whyExecutiveCoaching2 from "./images/executiveCoching/why-executive-coaching-2.png";
-import whyExecutiveCoaching3 from "./images/executiveCoching/why-executive-coaching-3.png";
-import whyExecutiveCoaching4 from "./images/executiveCoching/why-executive-coaching-4.png";
-import whyExecutiveCoaching5 from "./images/executiveCoching/why-executive-coaching-5.png";
-import whyExecutiveCoaching6 from "./images/executiveCoching/why-executive-coaching-6.png";
+import executiveCoach1 from "./images/executiveCoching/our-executive-coach-1.webp";
+import executiveCoach2 from "./images/executiveCoching/our-executive-coach-2.webp";
+import executiveCoach3 from "./images/executiveCoching/our-executive-coach-3.webp";
+import bgExecutiveApproach from "./images/executiveCoching/bg-our-approach.webp";
+import whyExecutiveCoaching1 from "./images/executiveCoching/why-executive-coaching-1.webp";
+import whyExecutiveCoaching2 from "./images/executiveCoching/why-executive-coaching-2.webp";
+import whyExecutiveCoaching3 from "./images/executiveCoching/why-executive-coaching-3.webp";
+import whyExecutiveCoaching4 from "./images/executiveCoching/why-executive-coaching-4.webp";
+import whyExecutiveCoaching5 from "./images/executiveCoching/why-executive-coaching-5.webp";
+import whyExecutiveCoaching6 from "./images/executiveCoching/why-executive-coaching-6.webp";
 
 export {
   header,

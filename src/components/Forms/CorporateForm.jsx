@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CORPORATE_JOIN_URI } from "../../data/api";
 
-export default function CorporateForm({ isOpen, onClose, setConfirmation }) {
+export default function CorporateForm({ isOpen, onClose }) {
   if (!isOpen) return null;
+
+  const navigate = useNavigate();
 
   // Handle Joining Form
   const [formInfo, setFormData] = useState({
@@ -94,7 +96,7 @@ export default function CorporateForm({ isOpen, onClose, setConfirmation }) {
               phone: "",
             });
             onClose();
-            setConfirmation(true);
+            navigate("/thank-you");
           }
         })
         .catch((error) => {
@@ -108,7 +110,7 @@ export default function CorporateForm({ isOpen, onClose, setConfirmation }) {
 
   return (
     <section className="fixed inset-0 z-50 grid animate-fadeIn place-items-center bg-black/20 transition-all">
-      <div className="corporate-form animate-scaleIn w-4/5 rounded-2xl bg-white p-6 transition-all lg:w-[620px]">
+      <div className="corporate-form w-4/5 animate-scaleIn rounded-2xl bg-white p-6 transition-all lg:w-[620px]">
         <div className="text-center">
           <h2 className="subheading">Corporate Join</h2>
         </div>

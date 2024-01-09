@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { requestCallback } from "../../assets";
 import { CONTACT_URI } from "../../data/api";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function ContactForm() {
   const [formInfo, setFormData] = useState({
@@ -14,6 +15,8 @@ function ContactForm() {
     status: "",
     message: "",
   });
+
+  const navigate = useNavigate();
 
   // Set alert message
   const setMessage = (status, message) => {
@@ -50,14 +53,15 @@ function ContactForm() {
         setMessage(response.data.status, response.data.message);
 
         // Empty form after successfully sending data
-        response.data.status == "success"
-          ? setFormData({
-              name: "",
-              email: "",
-              number: "",
-              message: "",
-            })
-          : null;
+        if (response.data.status == "success") {
+          setFormData({
+            name: "",
+            email: "",
+            number: "",
+            message: "",
+          });
+          navigate("/thank-you");
+        }
       } catch (error) {
         console.error("Error sending data:", error);
         setMessage("error", "Internal Server Error! Please Try Again later");

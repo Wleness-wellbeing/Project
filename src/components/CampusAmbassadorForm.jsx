@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { CAMPUS_AMBASSADOR_JOIN_URI } from "../data/api";
+import { useNavigate } from "react-router-dom";
 
-export default function CampusAmbassadorForm({
-  isOpen,
-  onClose,
-  setConfirmation,
-}) {
+export default function CampusAmbassadorForm({ isOpen, onClose }) {
   if (!isOpen) return null;
 
+  const navigate = useNavigate();
   const [formInfo, setFormInfo] = useState({
     firstName: "",
     lastName: "",
@@ -96,8 +94,8 @@ export default function CampusAmbassadorForm({
             interest: "",
           });
           setAgreement(false);
-          setConfirmation(true);
           onClose();
+          navigate("/thank-you");
         } else {
           updateMessage(response.data.status, response.data.message);
           return null;
@@ -130,7 +128,7 @@ export default function CampusAmbassadorForm({
 
   return (
     <section className="fixed inset-0 z-40 flex animate-fadeIn justify-center pt-8 backdrop-brightness-50 transition-all">
-      <div className="campus-ambassador-form animate-scaleIn w-[640px] overflow-y-scroll rounded-lg bg-white p-6 transition-all">
+      <div className="campus-ambassador-form w-[640px] animate-scaleIn overflow-y-scroll rounded-lg bg-white p-6 transition-all">
         <h4 className="mb-4 text-center text-2xl font-bold text-primary-300">
           Campus Ambassador Form
         </h4>

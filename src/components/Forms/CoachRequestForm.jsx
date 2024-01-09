@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { COACH_CALLBACK_URI } from "../../data/api";
+import { useNavigate } from "react-router-dom";
 
-export default function CoachRequestForm({ name, onClose, setConfirmation }) {
+export default function CoachRequestForm({ name, onClose }) {
   const [formInfo, setFormData] = useState({
     name: "",
     email: "",
@@ -14,6 +15,8 @@ export default function CoachRequestForm({ name, onClose, setConfirmation }) {
     status: "",
     message: "",
   });
+
+  const navigate = useNavigate();
 
   // Handle form value changes
   const handleChange = (e) => {
@@ -58,7 +61,7 @@ export default function CoachRequestForm({ name, onClose, setConfirmation }) {
               country: "",
               message: "",
             });
-            setConfirmation(true);
+            navigate("/thank-you");
           } else {
             setMessage(response.data.status, response.data.message);
           }

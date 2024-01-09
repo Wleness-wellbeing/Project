@@ -37,7 +37,6 @@ const results = [
 ];
 export default function LifeCoching() {
   const [lifecoachingForm, setLifeCoachingForm] = useState(false);
-  const [status, setStatus] = useState(false);
 
   // Toggle form
   const toggleForm = () => {
@@ -234,17 +233,8 @@ export default function LifeCoching() {
       <FaqWithImage data={lifeStyleCoachingFaqs} />
 
       {/* ===================== Forms =====================  */}
-      <LifeCoachingForm
-        isOpen={lifecoachingForm}
-        onClose={toggleForm}
-        setConfirmation={setStatus}
-      />
-      <CoachRequestForm
-        name="Life Coaching"
-        onClose={toggleForm}
-        setConfirmation={setStatus}
-      />
-      <Confirmation status={status} close={() => setStatus(false)} />
+      <LifeCoachingForm isOpen={lifecoachingForm} onClose={toggleForm} />
+      <CoachRequestForm name="Life Coaching" onClose={toggleForm} />
     </>
   );
 }

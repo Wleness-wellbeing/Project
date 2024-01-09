@@ -10,7 +10,6 @@ export default function Testimonial(props) {
     <div className="container relative mx-auto lg:!pr-0">
       {/* Testimonials */}
       <Swiper
-        navigation={true}
         modules={[Pagination]}
         pagination={{ clickable: true }}
         slidesPerView={1}
