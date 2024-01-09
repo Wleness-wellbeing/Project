@@ -349,6 +349,7 @@ import yoga__MeditationAndMinfullness from "./images/activities/yoga/yoga__medit
 import yoga__TherapauticYoga from "./images/activities/yoga/yoga__therapautic-yoga.webp";
 import yoga__WeightLoss from "./images/activities/yoga/yoga__weight-loss.webp";
 import yoga__WomenYoga from "./images/activities/yoga/yoga__yoga-for-women.webp";
+import benefits_of_yoga from "./images/activities/yoga/benefits-of-yoga.webp";
 // Activities >> Yoga >> Adhomukha
 import adhvmukhaHeader from "./images/activities/yoga/adhomukha/adhv-mukha-header.png";
 import adhvmukhaSteps from "./images/activities/yoga/adhomukha/steps-of-adhv-mukha-yoga.png";
@@ -488,6 +489,7 @@ export {
   yogaSadhnaHeader,
   // Yoga
   yogaHeader,
+  benefits_of_yoga,
   yoga__AshtangaYoga,
   yoga__HathaYoga,
   yoga__MeditationAndMinfullness,
@@ -654,33 +656,29 @@ export {
   couplesTherapy2,
 };
 // Services >> Musical Healing
-import musicalTherapyHeader from "./images/services/musicalTherapy/musicalHeading.png";
-import musicalTherapy1 from "./images/services/musicalTherapy/musical-therapy-1.png";
-import musicalTherapy2 from "./images/services/musicalTherapy/musical-therapy-2.png";
-import musicalTherapy3 from "./images/services/musicalTherapy/musical-therapy-3.png";
-import musicalTherapy4 from "./images/services/musicalTherapy/musical-therapy-4.png";
-import musicalTherapy5 from "./images/services/musicalTherapy/musical-therapy-5.png";
-import musicalTherapy6 from "./images/services/musicalTherapy/musical-therapy-6.png";
-import musicalHealingBenefit1 from "./images/services/musicalTherapy/musical-healing-benefit-1.png";
-import musicalHealingBenefit2 from "./images/services/musicalTherapy/musical-healing-benefit-2.png";
-import musicalHealingBenefit3 from "./images/services/musicalTherapy/musical-healing-benefit-3.png";
-import musicalHealingBenefit4 from "./images/services/musicalTherapy/musical-healing-benefit-4.png";
-import musicalHealingBenefit5 from "./images/services/musicalTherapy/musical-healing-benefit-5.png";
-import musicalHealingBenefit6 from "./images/services/musicalTherapy/musical-healing-benefit-6.png";
-import musicalHealingBenefit7 from "./images/services/musicalTherapy/musical-healing-benefit-7.png";
-import musicalHealingBenefit8 from "./images/services/musicalTherapy/musical-healing-benefit-8.png";
-import musicalelipse1 from "./images/services/musicalTherapy/musicalElipse1.png";
-import musicalelipse2 from "./images/services/musicalTherapy/musicalElipse2.png";
-import musicalelipse3 from "./images/services/musicalTherapy/musicalElipse3.png";
-import musicalHealingChild from "./images/services/musicalTherapy/musical-healing-child.png";
-import musicalHealingYoung from "./images/services/musicalTherapy/musical-healing-young.png";
-import musicalHealingOld from "./images/services/musicalTherapy/musical-healing-old.png";
+import musicalTherapyHeader from "./images/services/musicalTherapy/musicalHeading.webp";
+import musicalTherapy1 from "./images/services/musicalTherapy/musical-therapy-1.webp";
+import musicalTherapy2 from "./images/services/musicalTherapy/musical-therapy-2.webp";
+import musicalTherapy3 from "./images/services/musicalTherapy/musical-therapy-3.webp";
+import musicalTherapy4 from "./images/services/musicalTherapy/musical-therapy-4.webp";
+import musicalTherapy5 from "./images/services/musicalTherapy/musical-therapy-5.webp";
+import musicalTherapy6 from "./images/services/musicalTherapy/musical-therapy-6.webp";
+import musicalHealingBenefit1 from "./images/services/musicalTherapy/musical-healing-benefit-1.webp";
+import musicalHealingBenefit2 from "./images/services/musicalTherapy/musical-healing-benefit-2.webp";
+import musicalHealingBenefit3 from "./images/services/musicalTherapy/musical-healing-benefit-3.webp";
+import musicalHealingBenefit4 from "./images/services/musicalTherapy/musical-healing-benefit-4.webp";
+import musicalHealingBenefit5 from "./images/services/musicalTherapy/musical-healing-benefit-5.webp";
+import musicalHealingBenefit6 from "./images/services/musicalTherapy/musical-healing-benefit-6.webp";
+import musicalHealingBenefit7 from "./images/services/musicalTherapy/musical-healing-benefit-7.webp";
+import musicalHealingBenefit8 from "./images/services/musicalTherapy/musical-healing-benefit-8.webp";
+import musicalHealingChild from "./images/services/musicalTherapy/musical-healing-child.webp";
+import musicalHealingYoung from "./images/services/musicalTherapy/musical-healing-young.webp";
+import musicalHealingOld from "./images/services/musicalTherapy/musical-healing-old.webp";
 import musicHealingTrack1 from "./images/services/musicalTherapy/music-healing-track-1.png";
 import musicHealingTrack2 from "./images/services/musicalTherapy/music-healing-track-2.png";
 import musicHealingTrack3 from "./images/services/musicalTherapy/music-healing-track-3.png";
 import musicHealingTrack4 from "./images/services/musicalTherapy/music-healing-track-4.png";
-import wlenessExploreTracks from "./images/services/musicalTherapy/wleness-explore-tracks.png";
-
+import wlenessExploreTracks from "./images/services/musicalTherapy/wleness-explore-tracks.webp";
 // Services >> Therapy
 import therapyHeader from "./images/services/therapy/therapy-header.webp";
 import bestTherapy from "./images/services/therapy/best-therapy.webp";
@@ -702,9 +700,6 @@ export {
   musicalHealingBenefit6,
   musicalHealingBenefit7,
   musicalHealingBenefit8,
-  musicalelipse1,
-  musicalelipse2,
-  musicalelipse3,
   musicalTherapyHeader,
   musicalTherapy1,
   musicalTherapy2,
@@ -1087,12 +1082,12 @@ export {
 };
 
 // Community
-import corporateHeader from "./images/corporate/corporate-header.jpg";
-import corporatePriority1 from "./images/corporate/corporate-prioritize-1.png";
-import corporatePriority2 from "./images/corporate/corporate-prioritize-2.png";
-import corporatePriority3 from "./images/corporate/corporate-prioritize-3.png";
-import corporatePriority4 from "./images/corporate/corporate-prioritize-4.png";
-import employeeTriangleHub from "./images/corporate/employee-hub-triangle.png";
+import corporateHeader from "./images/corporate/corporate-header.webp";
+import corporatePriority1 from "./images/corporate/corporate-prioritize-1.webp";
+import corporatePriority2 from "./images/corporate/corporate-prioritize-2.webp";
+import corporatePriority3 from "./images/corporate/corporate-prioritize-3.webp";
+import corporatePriority4 from "./images/corporate/corporate-prioritize-4.webp";
+import employeeTriangleHub from "./images/corporate/employee-hub-triangle.webp";
 import circleArt from "./images/corporate/circle-art.png";
 import blueFlower from "./images/corporate/blue-flower.png";
 import blueDots1 from "./images/corporate/blue-dots-grid-1.png";

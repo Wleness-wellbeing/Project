@@ -19,7 +19,6 @@ import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import { Helmet } from "react-helmet";
 import { MUSICAL_HEALING_META } from "../../data/meta";
 import { get_canonical } from "../../utils";
-import Confirmation from "../../components/Modals/Confirmation";
 
 export default function MusicalTherapy() {
   const { enquiryForm, toggleForm } = useEnquiryForm();

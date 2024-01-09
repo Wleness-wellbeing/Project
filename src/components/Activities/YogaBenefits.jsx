@@ -1,4 +1,6 @@
 import React from "react";
+import { benefits_of_yoga } from "../../assets";
+import { textColorize } from "../../utils";
 
 const benefits = [
   "Yoga promotes relaxation, reducing the impact of daily stressors.",
@@ -13,20 +15,25 @@ const benefits = [
 function YogaBenefits() {
   return (
     <section className="container mx-auto mb-4">
-      <div className="mb-4 rounded-xl bg-primary-10 p-5 lg:mb-0 lg:p-10">
-        <h2 className="mb-4 text-xl font-bold text-slate-800 lg:text-2xl">
-          Why Wellness through Yoga ?
-        </h2>
-        <ul className="pl-5">
-          {benefits.map((value, i) => {
-            return (
-              <li key={i} className="mb-2 list-disc pl-4 font-semibold">
-                {value}
-              </li>
-            );
-          })}
-        </ul>
+      <div className="mb-6 text-center">
+        <h1 className="subheading sm:pb-0 lg:mb-4">
+          {textColorize([
+            {
+              color: false,
+              text: "Benefits of ",
+            },
+            {
+              color: true,
+              text: "Yoga",
+            },
+          ])}
+        </h1>
       </div>
+      <img
+        src={benefits_of_yoga}
+        alt="Benefits of yoga"
+        className="mb-6 rounded-xl"
+      />
     </section>
   );
 }
