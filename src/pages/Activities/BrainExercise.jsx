@@ -1,11 +1,8 @@
 import React, { useRef } from "react";
 // Data
-import { brainExercise, activityFeatures } from "../../data";
+import { brainExercise } from "../../data";
 // Components
 import ActivityHeader from "../../components/ActivityHeader";
-import ActivityVideos from "../../components/ActivityVideos";
-import ActivityBlogs from "../../components/ActivityBlogs";
-import FeaturesBlock from "../../components/FeaturesBlock";
 import GamesCard from "../../components/Cards/GamesCard";
 import { Helmet } from "react-helmet";
 import { get_canonical, get_title_text } from "../../utils";

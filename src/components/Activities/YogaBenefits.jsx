@@ -14,9 +14,9 @@ const benefits = [
 
 function YogaBenefits() {
   return (
-    <section className="container mx-auto mb-4">
-      <div className="mb-6 text-center">
-        <h1 className="subheading sm:pb-0 lg:mb-4">
+    <section>
+      <div className="mb-6 bg-primary-10 text-center lg:mb-12">
+        <h1 className="subheading !py-6">
           {textColorize([
             {
               color: false,
@@ -29,11 +29,13 @@ function YogaBenefits() {
           ])}
         </h1>
       </div>
-      <img
-        src={benefits_of_yoga}
-        alt="Benefits of yoga"
-        className="mb-6 rounded-xl"
-      />
+      <div className="container mx-auto mb-4">
+        <img
+          src={benefits_of_yoga}
+          alt="Benefits of yoga"
+          className="mb-6 rounded-xl"
+        />
+      </div>
     </section>
   );
 }

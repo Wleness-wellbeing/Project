@@ -142,22 +142,22 @@ export {
   homeSelfcare,
 };
 
-import about1 from "./images/aboutus/about1.png";
-import about2 from "./images/aboutus/about2.png";
-import about3 from "./images/aboutus/about3.png";
-import about4 from "./images/aboutus/about4.png";
-import about5 from "./images/aboutus/about5.png";
-import about6 from "./images/aboutus/about6.png";
-import meeting from "./images/aboutus/meeting.png";
-import pgsir from "./images/aboutus/pgsir.png";
-import asissir from "./images/aboutus/asissir.png";
-import kamalsir from "./images/aboutus/kamalsir.png";
-import pavansir from "./images/aboutus/pavansir.png";
-import salonimaam from "./images/aboutus/salonimaam.png";
-import sreyashsir from "./images/aboutus/sreyashsir.png";
-import aboutusHeader from "./images/aboutus/aboutus-header.png";
-import problem from "./images/aboutus/problem.png";
-import approveIcon from "./images/aboutus/approveIcon.png";
+import about1 from "./images/aboutus/about1.webp";
+import about2 from "./images/aboutus/about2.webp";
+import about3 from "./images/aboutus/about3.webp";
+import about4 from "./images/aboutus/about4.webp";
+import about5 from "./images/aboutus/about5.webp";
+import about6 from "./images/aboutus/about6.webp";
+import meeting from "./images/aboutus/meeting.webp";
+import pgsir from "./images/aboutus/pgsir.webp";
+import asissir from "./images/aboutus/asissir.webp";
+import kamalsir from "./images/aboutus/kamalsir.webp";
+import pavansir from "./images/aboutus/pavansir.webp";
+import salonimaam from "./images/aboutus/salonimaam.webp";
+import sreyashsir from "./images/aboutus/sreyashsir.webp";
+import aboutusHeader from "./images/aboutus/aboutus-header.webp";
+import problem from "./images/aboutus/problem.webp";
+import approveIcon from "./images/aboutus/approveIcon.webp";
 
 export {
   about1,
@@ -202,16 +202,16 @@ import yogaCheckoutBg from "./images/sadhnacheckoutBg.png";
 
 export { meditationCheckoutBg, sadhnaCheckoutBg, yogaCheckoutBg };
 // Coaches
-import saloniHeader from "./images/coaches/saloniGuptaHeader.png";
-import saloniBottom from "./images/coaches/saloniBottom.png";
-import saloniMid from "./images/coaches/saloniMid.png";
-import anjuHeader from "./images/coaches/anjuHeader.png";
-import anjuBottom from "./images/coaches/anjuBottom.png";
-import anjuMid from "./images/coaches/anjuMid.png";
-import leaf from "./images/coaches/leaf.png";
-import andreaHeader from "./images/coaches/andreaHeader.png";
-import andreaMid from "./images/coaches/andreaMid.png";
-import andreaBottom from "./images/coaches/andreaBottom.png";
+import saloniHeader from "./images/coaches/saloniGuptaHeader.webp";
+import saloniBottom from "./images/coaches/saloniBottom.webp";
+import saloniMid from "./images/coaches/saloniMid.webp";
+import anjuHeader from "./images/coaches/anjuHeader.webp";
+import anjuBottom from "./images/coaches/anjuBottom.webp";
+import anjuMid from "./images/coaches/anjuMid.webp";
+import leaf from "./images/coaches/leaf.webp";
+import andreaHeader from "./images/coaches/andreaHeader.webp";
+import andreaMid from "./images/coaches/andreaMid.webp";
+import andreaBottom from "./images/coaches/andreaBottom.webp";
 
 export {
   saloniBottom,
@@ -257,7 +257,6 @@ export { doctor, profile, doctorLogIn };
 
 // Activities Images
 import brainExercise from "./images/activities/activities-brainExercise.png";
-import brainheader from "./images/activities/brainExercise/bg.png";
 import goalPlan from "./images/activities/activities-goalPlan.png";
 import meditation from "./images/activities/activities-meditation.png";
 import sadhna from "./images/activities/activities-sadhna.png";
@@ -268,46 +267,46 @@ import activitiesExplore1 from "./images/activities/activities-explore-1.png";
 import activitiesExplore2 from "./images/activities/activities-explore-2.png";
 import activitiesExplore3 from "./images/activities/activities-explore-3.png";
 // Activities >> Meditation
-import meditationHeader from "./images/activities/meditation/meditationHeader.png";
-import meditationType1 from "./images/activities/meditation/meditation-type-1.png";
-import meditationType2 from "./images/activities/meditation/meditation-type-2.png";
-import meditationType3 from "./images/activities/meditation/meditation-type-3.png";
-import meditationType4 from "./images/activities/meditation/meditation-type-4.png";
-import meditationType5 from "./images/activities/meditation/meditation-type-5.png";
-import meditationType6 from "./images/activities/meditation/meditation-type-6.png";
-import meditationType7 from "./images/activities/meditation/meditation-type-7.png";
-import meditationType8 from "./images/activities/meditation/meditation-type-8.png";
+import meditationHeader from "./images/activities/meditation/meditationHeader.webp";
+import meditationType1 from "./images/activities/meditation/meditation-type-1.webp";
+import meditationType2 from "./images/activities/meditation/meditation-type-2.webp";
+import meditationType3 from "./images/activities/meditation/meditation-type-3.webp";
+import meditationType4 from "./images/activities/meditation/meditation-type-4.webp";
+import meditationType5 from "./images/activities/meditation/meditation-type-5.webp";
+import meditationType6 from "./images/activities/meditation/meditation-type-6.webp";
+import meditationType7 from "./images/activities/meditation/meditation-type-7.webp";
+import meditationType8 from "./images/activities/meditation/meditation-type-8.webp";
 import meditationThumbnail from "./images/activities/meditation/meditationThumbnail.png";
 // Activities >> Meditation>>subpages
-import breadthBenefit from "./images/activities/meditation/meditationSubpages/breadthBenefit.png";
-import breadthHeader from "./images/activities/meditation/meditationSubpages/breadthHeader.png";
-import breadthLeft1 from "./images/activities/meditation/meditationSubpages/breadthLeft1.png";
-import breadthRight1 from "./images/activities/meditation/meditationSubpages/breadthRight1.png";
-import breadthRight2 from "./images/activities/meditation/meditationSubpages/breadthRight2.png";
-import kundaliniHeader from "./images/activities/meditation/meditationSubpages/kundaliniHeader.png";
-import kundaliniLeft1 from "./images/activities/meditation/meditationSubpages/kundaliniLeft1.png";
-import kundaliniRight1 from "./images/activities/meditation/meditationSubpages/kundaliniRight1.png";
-import mindfulnessHeader from "./images/activities/meditation/meditationSubpages/mindfulnessHeader.png";
-import mindfulnessLeft2 from "./images/activities/meditation/meditationSubpages/mindfulnessLeft2.png";
-import mindfulnessRight1 from "./images/activities/meditation/meditationSubpages/mindfulnessRight1.png";
-import mindfulnessRight2 from "./images/activities/meditation/meditationSubpages/mindfulnessRight2.png";
-import mindfulnessLeft3 from "./images/activities/meditation/meditationSubpages/mindfulnessLeft3.png";
-import mindfulnessLeft1 from "./images/activities/meditation/meditationSubpages/mindfulnessLeft1.png";
-import spiritualHeader from "./images/activities/meditation/meditationSubpages/spiritualHeader.png";
-import spiritualLeft1 from "./images/activities/meditation/meditationSubpages/spiritualLeft1.png";
-import spiritualRight1 from "./images/activities/meditation/meditationSubpages/spiritualRight1.png";
-import walkingHeader from "./images/activities/meditation/meditationSubpages/walking-Header.png";
-import walkingLeft1 from "./images/activities/meditation/meditationSubpages/walkingLeft1.png";
-import walkingRight1 from "./images/activities/meditation/meditationSubpages/walkingRight1.png";
-import zenHeader from "./images/activities/meditation/meditationSubpages/zenHeader.png";
-import zenLeft1 from "./images/activities/meditation/meditationSubpages/zenLeft1.png";
-import zenRight1 from "./images/activities/meditation/meditationSubpages/zenRight1.png";
-import vipasnaHeader from "./images/activities/meditation/meditationSubpages/vipasna-header.png";
-import vipasnaPracticingLeft from "./images/activities/meditation/meditationSubpages/vipasna-practicing-left.png";
-import vipasnaPracticingRight from "./images/activities/meditation/meditationSubpages/vipasna-practicing-right.png";
-import concentrationHeader from "./images/activities/meditation/meditationSubpages/concentration-header.png";
-import concentrationPracticingLeft from "./images/activities/meditation/meditationSubpages/concentration-practicing-left.png";
-import concentrationPracticingRight from "./images/activities/meditation/meditationSubpages/concentration-practicing-right.png";
+import breadthBenefit from "./images/activities/meditation/meditationSubpages/breadthBenefit.webp";
+import breadthHeader from "./images/activities/meditation/meditationSubpages/breadthHeader.webp";
+import breadthLeft1 from "./images/activities/meditation/meditationSubpages/breadthLeft1.webp";
+import breadthRight1 from "./images/activities/meditation/meditationSubpages/breadthRight1.webp";
+import breadthRight2 from "./images/activities/meditation/meditationSubpages/breadthRight2.webp";
+import kundaliniHeader from "./images/activities/meditation/meditationSubpages/kundaliniHeader.webp";
+import kundaliniLeft1 from "./images/activities/meditation/meditationSubpages/kundaliniLeft1.webp";
+import kundaliniRight1 from "./images/activities/meditation/meditationSubpages/kundaliniRight1.webp";
+import mindfulnessHeader from "./images/activities/meditation/meditationSubpages/mindfulnessHeader.webp";
+import mindfulnessLeft2 from "./images/activities/meditation/meditationSubpages/mindfulnessLeft2.webp";
+import mindfulnessRight1 from "./images/activities/meditation/meditationSubpages/mindfulnessRight1.webp";
+import mindfulnessRight2 from "./images/activities/meditation/meditationSubpages/mindfulnessRight2.webp";
+import mindfulnessLeft3 from "./images/activities/meditation/meditationSubpages/mindfulnessLeft3.webp";
+import mindfulnessLeft1 from "./images/activities/meditation/meditationSubpages/mindfulnessLeft1.webp";
+import spiritualHeader from "./images/activities/meditation/meditationSubpages/spiritualHeader.webp";
+import spiritualLeft1 from "./images/activities/meditation/meditationSubpages/spiritualLeft1.webp";
+import spiritualRight1 from "./images/activities/meditation/meditationSubpages/spiritualRight1.webp";
+import walkingHeader from "./images/activities/meditation/meditationSubpages/walking-Header.webp";
+import walkingLeft1 from "./images/activities/meditation/meditationSubpages/walkingLeft1.webp";
+import walkingRight1 from "./images/activities/meditation/meditationSubpages/walkingRight1.webp";
+import zenHeader from "./images/activities/meditation/meditationSubpages/zenHeader.webp";
+import zenLeft1 from "./images/activities/meditation/meditationSubpages/zenLeft1.webp";
+import zenRight1 from "./images/activities/meditation/meditationSubpages/zenRight1.webp";
+import vipasnaHeader from "./images/activities/meditation/meditationSubpages/vipasna-header.webp";
+import vipasnaPracticingLeft from "./images/activities/meditation/meditationSubpages/vipasna-practicing-left.webp";
+import vipasnaPracticingRight from "./images/activities/meditation/meditationSubpages/vipasna-practicing-right.webp";
+import concentrationHeader from "./images/activities/meditation/meditationSubpages/concentration-header.webp";
+import concentrationPracticingLeft from "./images/activities/meditation/meditationSubpages/concentration-practicing-left.webp";
+import concentrationPracticingRight from "./images/activities/meditation/meditationSubpages/concentration-practicing-right.webp";
 
 export {
   concentrationHeader,
@@ -380,42 +379,42 @@ import uttanasanaHeader from "./images/activities/yoga/others/uttanasana-header.
 import navasanaHeader from "./images/activities/yoga/others/navasana-header.png";
 import ardhChandrasanaHeader from "./images/activities/yoga/others/ardh-chandrasana-header.png";
 // Activities >> Sadhna
-import sadhnaHeader from "./images/activities/sadhna/sadhna-header.png";
-import sadhnaType1 from "./images/activities/sadhna/sadhna-type-1.png";
-import sadhnaType2 from "./images/activities/sadhna/sadhna-type-2.png";
-import sadhnaType3 from "./images/activities/sadhna/sadhna-type-3.png";
-import sadhnaType4 from "./images/activities/sadhna/sadhna-type-4.png";
-import sadhnaType5 from "./images/activities/sadhna/sadhna-type-5.png";
-import sadhnaType6 from "./images/activities/sadhna/sadhna-type-6.png";
-import sadhnaType7 from "./images/activities/sadhna/sadhna-type-7.png";
-import sadhnaType8 from "./images/activities/sadhna/sadhna-type-8.png";
+import sadhnaHeader from "./images/activities/sadhna/sadhna-header.webp";
+import sadhnaType1 from "./images/activities/sadhna/sadhna-type-1.webp";
+import sadhnaType2 from "./images/activities/sadhna/sadhna-type-2.webp";
+import sadhnaType3 from "./images/activities/sadhna/sadhna-type-3.webp";
+import sadhnaType4 from "./images/activities/sadhna/sadhna-type-4.webp";
+import sadhnaType5 from "./images/activities/sadhna/sadhna-type-5.webp";
+import sadhnaType6 from "./images/activities/sadhna/sadhna-type-6.webp";
+import sadhnaType7 from "./images/activities/sadhna/sadhna-type-7.webp";
+import sadhnaType8 from "./images/activities/sadhna/sadhna-type-8.webp";
 import mantraSadhnaProcedure from "./images/activities/mantra-sadhna-procedure.png";
 import mantraSadhnas from "./images/activities/mantra-sadhnas.png";
-import japaSadhnaProcedure from "./images/activities/sadhna/japa-sadhna-procedure.png";
-import japaSadhnas from "./images/activities/sadhna/japa-sadhnas.png";
-import kundaliniSadhnaProcedure from "./images/activities/sadhna/kundalini-sadhna-procedure.png";
-import kundaliniSadhnas from "./images/activities/sadhna/kundalini-sadhnas.png";
-import bhaktiSadhnaProcedure from "./images/activities/sadhna/bhakti-sadhna-procedure.png";
-import bhaktiSadhnas from "./images/activities/sadhna/bhakti-sadhnas.png";
-import sevaSadhnaProcedure from "./images/activities/sadhna/seva-sadhna-procedure.png";
-import sevaSadhnas from "./images/activities/sadhna/seva-sadhnas.png";
-import natureSadhnaProcedure from "./images/activities/sadhna/nature-sadhna-procedure.png";
-import natureSadhnas from "./images/activities/sadhna/nature-sadhnas.png";
-import bhaktiSadhnaHeader from "./images/activities/sadhna/bhakti-sadhna-header.png";
-import japaSadhnaHeader from "./images/activities/sadhna/japa-sadhna-header.png";
-import kundaliniSadhnaHeader from "./images/activities/sadhna/kundalini-sadhna-header.png";
-import mantraSadhnaHeader from "./images/activities/sadhna/mantra-sadhna-header.png";
-import meditationSadhnaHeader from "./images/activities/sadhna/meditation-sadhna-header.png";
-import natureSadhnaHeader from "./images/activities/sadhna/nature-sadhna-header.png";
-import sevaSadhnaHeader from "./images/activities/sadhna/seva-sadhna-header.png";
-import yogaSadhnaHeader from "./images/activities/sadhna/yoga-sadhna-header.png";
+import japaSadhnaProcedure from "./images/activities/sadhna/japa-sadhna-procedure.webp";
+import japaSadhnas from "./images/activities/sadhna/japa-sadhnas.webp";
+import kundaliniSadhnaProcedure from "./images/activities/sadhna/kundalini-sadhna-procedure.webp";
+import kundaliniSadhnas from "./images/activities/sadhna/kundalini-sadhnas.webp";
+import bhaktiSadhnaProcedure from "./images/activities/sadhna/bhakti-sadhna-procedure.webp";
+import bhaktiSadhnas from "./images/activities/sadhna/bhakti-sadhnas.webp";
+import sevaSadhnaProcedure from "./images/activities/sadhna/seva-sadhna-procedure.webp";
+import sevaSadhnas from "./images/activities/sadhna/seva-sadhnas.webp";
+import natureSadhnaProcedure from "./images/activities/sadhna/nature-sadhna-procedure.webp";
+import natureSadhnas from "./images/activities/sadhna/nature-sadhnas.webp";
+import bhaktiSadhnaHeader from "./images/activities/sadhna/bhakti-sadhna-header.webp";
+import japaSadhnaHeader from "./images/activities/sadhna/japa-sadhna-header.webp";
+import kundaliniSadhnaHeader from "./images/activities/sadhna/kundalini-sadhna-header.webp";
+import mantraSadhnaHeader from "./images/activities/sadhna/mantra-sadhna-header.webp";
+import meditationSadhnaHeader from "./images/activities/sadhna/meditation-sadhna-header.webp";
+import natureSadhnaHeader from "./images/activities/sadhna/nature-sadhna-header.webp";
+import sevaSadhnaHeader from "./images/activities/sadhna/seva-sadhna-header.webp";
+import yogaSadhnaHeader from "./images/activities/sadhna/yoga-sadhna-header.webp";
 // Activities >> Sadhna>>subpages
 
 // Activities >> Brain Exercise
-import brainExerciseHeader from "./images/activities/brainExercise/brain-exercise-header.png";
-import brainGameGalaxy from "./images/activities/brainExercise/brain-game-galaxy.png";
-import brainGameTreasure from "./images/activities/brainExercise/brain-game-treasure-chest.png";
-import brainGameHunter from "./images/activities/brainExercise/brain-game-turtle-hunter.png";
+import brainExerciseHeader from "./images/activities/brainExercise/brain-exercise-header.webp";
+import brainGameGalaxy from "./images/activities/brainExercise/brain-game-galaxy.webp";
+import brainGameTreasure from "./images/activities/brainExercise/brain-game-treasure-chest.webp";
+import brainGameHunter from "./images/activities/brainExercise/brain-game-turtle-hunter.webp";
 // Others
 import benefits from "./images/activities/yoga/others/benefits.png";
 import precautions from "./images/activities/yoga/others/precautions.png";
@@ -497,7 +496,6 @@ export {
   yoga__WeightLoss,
   yoga__WomenYoga,
   // Brain Exericise
-  brainheader,
   brainExerciseHeader,
   brainGameGalaxy,
   brainGameTreasure,
@@ -521,14 +519,14 @@ export {
 };
 
 // Join us
-import JoinUsTherapist from "./images/joinus/joinus-therapist.png";
-import JoinUsPsychiatrist from "./images/joinus/joinus-psychiatrist.png";
-import JoinUsInternship from "./images/joinus/joinus-internship.png";
-import JoinUsCampusAmbassador from "./images/joinus/joinus-campus-ambassador.png";
-import Bubble from "./images/joinus/Bubble.png";
-import therapistApplyHeader from "./images/joinus/therapist-header.png";
-import psychiatristApplyHeader from "./images/joinus/psychiatrist-header.png";
-import doctorDashboard from "./images/joinus/doctor-dashboard.png";
+import JoinUsTherapist from "./images/joinus/joinus-therapist.webp";
+import JoinUsPsychiatrist from "./images/joinus/joinus-psychiatrist.webp";
+import JoinUsInternship from "./images/joinus/joinus-internship.webp";
+import JoinUsCampusAmbassador from "./images/joinus/joinus-campus-ambassador.webp";
+import Bubble from "./images/joinus/Bubble.webp";
+import therapistApplyHeader from "./images/joinus/therapist-header.webp";
+import psychiatristApplyHeader from "./images/joinus/psychiatrist-header.webp";
+import doctorDashboard from "./images/joinus/doctor-dashboard.webp";
 
 export {
   JoinUsTherapist,
@@ -542,24 +540,24 @@ export {
 };
 
 // Campus Ambassador
-import campusAmbassadorHeader from "./images/joinus/campusAmbassador/campus-ambassador-header.png";
-import campusAmbassadorTeam from "./images/joinus/campusAmbassador/campus-ambassador.png";
-import roleCampus from "./images/joinus/campusAmbassador/role-campus.png";
-import roleProgram from "./images/joinus/campusAmbassador/role-program.png";
-import roleSMM from "./images/joinus/campusAmbassador/role-social-media-marketing.png";
-import roleSpreadAwareness from "./images/joinus/campusAmbassador/role-spread-awareness.png";
-import campusWhyToApply from "./images/joinus/campusAmbassador/why-to-apply.png";
-import dots1 from "./images/joinus/campusAmbassador/dots-1.png";
-import dots2 from "./images/joinus/campusAmbassador/dots-2.png";
-import cloudWithDots from "./images/joinus/campusAmbassador/cloud-with-dots.png";
-import dottedLinesSmall from "./images/joinus/campusAmbassador/dotted-line-sm.png";
-import dottedLinesLarge from "./images/joinus/campusAmbassador/dotted-line-lg.png";
-import dottedPlane from "./images/joinus/campusAmbassador/dotted-plane.png";
-import bgCircles from "./images/joinus/campusAmbassador/bg-circles.png";
-import whyToApply1 from "./images/joinus/campusAmbassador/why-to-apply-1.png";
-import whyToApply2 from "./images/joinus/campusAmbassador/why-to-apply-2.png";
-import whyToApply3 from "./images/joinus/campusAmbassador/why-to-apply-3.png";
-import whyToApply4 from "./images/joinus/campusAmbassador/why-to-apply-4.png";
+import campusAmbassadorHeader from "./images/joinus/campusAmbassador/campus-ambassador-header.webp";
+import campusAmbassadorTeam from "./images/joinus/campusAmbassador/campus-ambassador.webp";
+import roleCampus from "./images/joinus/campusAmbassador/role-campus.webp";
+import roleProgram from "./images/joinus/campusAmbassador/role-program.webp";
+import roleSMM from "./images/joinus/campusAmbassador/role-social-media-marketing.webp";
+import roleSpreadAwareness from "./images/joinus/campusAmbassador/role-spread-awareness.webp";
+import campusWhyToApply from "./images/joinus/campusAmbassador/why-to-apply.webp";
+import dots1 from "./images/joinus/campusAmbassador/dots-1.webp";
+import dots2 from "./images/joinus/campusAmbassador/dots-2.webp";
+import cloudWithDots from "./images/joinus/campusAmbassador/cloud-with-dots.webp";
+import dottedLinesSmall from "./images/joinus/campusAmbassador/dotted-line-sm.webp";
+import dottedLinesLarge from "./images/joinus/campusAmbassador/dotted-line-lg.webp";
+import dottedPlane from "./images/joinus/campusAmbassador/dotted-plane.webp";
+import bgCircles from "./images/joinus/campusAmbassador/bg-circles.webp";
+import whyToApply1 from "./images/joinus/campusAmbassador/why-to-apply-1.webp";
+import whyToApply2 from "./images/joinus/campusAmbassador/why-to-apply-2.webp";
+import whyToApply3 from "./images/joinus/campusAmbassador/why-to-apply-3.webp";
+import whyToApply4 from "./images/joinus/campusAmbassador/why-to-apply-4.webp";
 export {
   campusAmbassadorHeader,
   campusAmbassadorTeam,
@@ -614,13 +612,13 @@ export {
 import doctor1 from "./images/experts/doctors/doctor-1.png";
 import faceIcon from "./images/experts/header-icon.png";
 import expertsHeaderMobile from "./images/experts/header-image-mobile.png";
-import expertsHeader from "./images/experts/header-image.png";
+import expertsHeader from "./images/experts/header-image.webp";
 import featureIcon1 from "./images/experts/icon-1.png";
 import featureIcon2 from "./images/experts/icon-2.png";
 import featureIcon3 from "./images/experts/icon-3.png";
-import expertsWhy1 from "./images/experts/why-1.png";
-import expertsWhy2 from "./images/experts/why-2.png";
-import expertsWhy3 from "./images/experts/why-3.png";
+import expertsWhy1 from "./images/experts/why-1.webp";
+import expertsWhy2 from "./images/experts/why-2.webp";
+import expertsWhy3 from "./images/experts/why-3.webp";
 import specialist1 from "./images/experts/specialist-1.png";
 import expertClient from "./images/experts/expert-client.png";
 import featuredPatient from "./images/experts/featuredPatient.png";
@@ -874,13 +872,13 @@ export {
 };
 
 // Internship images
-import internshipHeader from "./images/internship/internshipHeader.png";
-import internshipIcon1 from "./images/internship/internship-icon-1.png";
-import internshipIcon2 from "./images/internship/internship-icon-2.png";
-import internshipIcon3 from "./images/internship/internship-icon-3.png";
-import internshipIcon4 from "./images/internship/internship-icon-4.png";
-import internshipIcon5 from "./images/internship/internship-icon-5.png";
-import internshipWhy from "./images/internship/internship-why.png";
+import internshipHeader from "./images/internship/internshipHeader.webp";
+import internshipIcon1 from "./images/internship/internship-icon-1.webp";
+import internshipIcon2 from "./images/internship/internship-icon-2.webp";
+import internshipIcon3 from "./images/internship/internship-icon-3.webp";
+import internshipIcon4 from "./images/internship/internship-icon-4.webp";
+import internshipIcon5 from "./images/internship/internship-icon-5.webp";
+import internshipWhy from "./images/internship/internship-why.webp";
 export {
   internshipHeader,
   internshipIcon1,
@@ -1055,17 +1053,17 @@ export {
 };
 
 // Community
-import communityHeader from "./images/community/community-header.png";
-import community1 from "./images/community/community-1.png";
-import community2 from "./images/community/community-2.png";
-import community3 from "./images/community/community-3.png";
-import community4 from "./images/community/community-4.png";
-import communitySupport1 from "./images/community/community-support-1.png";
-import communitySupport2 from "./images/community/community-support-2.png";
-import communitySupport3 from "./images/community/community-support-3.png";
-import communitySupport4 from "./images/community/community-support-4.png";
-import communitySupport5 from "./images/community/community-support-5.png";
-import communitySupport6 from "./images/community/community-support-6.png";
+import communityHeader from "./images/community/community-header.webp";
+import community1 from "./images/community/community-1.webp";
+import community2 from "./images/community/community-2.webp";
+import community3 from "./images/community/community-3.webp";
+import community4 from "./images/community/community-4.webp";
+import communitySupport1 from "./images/community/community-support-1.webp";
+import communitySupport2 from "./images/community/community-support-2.webp";
+import communitySupport3 from "./images/community/community-support-3.webp";
+import communitySupport4 from "./images/community/community-support-4.webp";
+import communitySupport5 from "./images/community/community-support-5.webp";
+import communitySupport6 from "./images/community/community-support-6.webp";
 
 export {
   communityHeader,

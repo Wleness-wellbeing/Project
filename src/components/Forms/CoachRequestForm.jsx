@@ -3,7 +3,7 @@ import axios from "axios";
 import { COACH_CALLBACK_URI } from "../../data/api";
 import { useNavigate } from "react-router-dom";
 
-export default function CoachRequestForm({ name, onClose }) {
+export default function CoachRequestForm({ name }) {
   const [formInfo, setFormData] = useState({
     name: "",
     email: "",

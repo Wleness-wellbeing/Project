@@ -68,12 +68,6 @@ import {
   lifeCoaching1,
   lifeCoaching2,
   lifeCoaching3,
-  matsyasanaHeader,
-  sirsasanaHeader,
-  sarvangasanaHeader,
-  setuBandhasanaHeader,
-  brainheader,
-  breadthBenefit,
   breadthHeader,
   breadthLeft1,
   breadthRight1,
@@ -142,6 +136,7 @@ import {
   yoga__MeditationAndMinfullness,
   yoga__TherapauticYoga,
   yoga__WomenYoga,
+  brainExerciseHeader,
 } from "../assets";
 
 // Components
@@ -3244,7 +3239,7 @@ export const brainExercise = {
       },
     ],
     desc: "Boost your mental health with our brain exercises program. These fun activities help your thinking and concentration. Join this journey to a sharper mind and more robust mental well-being.",
-    image: brainheader,
+    image: brainExerciseHeader,
   },
   activities: {
     title: "Brain Games",
@@ -3346,10 +3341,10 @@ export const activityYoga = {
         desc: "Mindful breathing, essential to mindfulness, centers on conscious breath observation for present-moment stability, fostering calm awareness, enhancing clarity, reducing stress, and promoting mindfulness.",
       },
       {
-        title: "Therapautic yoga",
+        title: "Therapeutic yoga",
         thumbnail: yoga__TherapauticYoga,
         desc: "Therapeutic yoga blends yoga with medical science, addressing holistic health. Tailored to individual needs, it uses asanas, breathwork, and meditation for healing and well-being.",
-        slug: "/activities/yoga/therapautic-yoga",
+        slug: "/activities/yoga/therapeutic-yoga",
       },
       {
         title: "Yoga for women",
