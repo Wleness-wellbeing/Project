@@ -6,7 +6,7 @@ export default function HeaderWithImage(props) {
       <div className="py-4 lg:order-2 lg:w-1/2">
         <img
           src={props.data.image}
-          alt=""
+          alt={props.data.alt}
           className="object-cover p-4 lg:p-8"
         />
       </div>

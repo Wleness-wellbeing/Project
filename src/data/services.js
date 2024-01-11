@@ -132,6 +132,7 @@ export const MusicalTherapyData = {
     ],
     desc: "Explore how music therapy offers a unique way to express emotions and heal. With its rhythms and tones, this therapy helps with different feelings, bringing more balance inside you. Discover profound insights and find more peace through the power of music.",
     image: musicalTherapyHeader,
+    alt: "Discover the power of  Music Healing",
   },
   activities: {
     title: "MUSIC HEALING SERVICES",

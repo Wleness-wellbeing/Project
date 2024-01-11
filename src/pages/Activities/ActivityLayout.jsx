@@ -6,7 +6,6 @@ import ActivityForm from "../../components/Forms/ActivityForm";
 import useEnquiryForm from "../../hooks/useEnquiryForm";
 import { Helmet } from "react-helmet";
 import { get_canonical, get_title_text } from "../../utils";
-import Confirmation from "../../components/Modals/Confirmation";
 
 export default function ActivityLayout(props) {
   const ref = useRef(null);
@@ -28,6 +27,7 @@ export default function ActivityLayout(props) {
         title={props.header.title}
         image={props.header.image}
         desc={props.header.desc}
+        alt={props.header.alt}
         handleScrollToComponent={() => handleScrollToComponent()}
         isEnquiry={true}
         displayButton={true}

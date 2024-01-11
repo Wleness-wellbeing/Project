@@ -61,7 +61,6 @@ const doctors = {
 export const therapiesData = [
   {
     slug: "/therapy/stress",
-
     header: {
       title: [
         {
@@ -78,10 +77,13 @@ export const therapiesData = [
         "It can range from motivating challenges to overwhelming strain.",
       ],
       image: stressHeader,
+      alt: "Wleness - Master the Art of Stress Management",
     },
     symptoms: {
       highlight: "Stress Disorder symptoms ",
-      issue: "Stress",
+      alt: "Wleness - Here's How Generalized Stress Disorder symptoms May Appears",
+      issue:
+        "Wleness - Here's How Generalized Stress Disorder symptoms May Appear",
       desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive stress treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "It can range from motivating challenges to overwhelming strain.",
@@ -116,10 +118,12 @@ export const therapiesData = [
         "It can also manifest as sleep, appetite, energy levels, and concentration changes.",
       ],
       image: depressionHeader,
+      alt: "Wleness - Explore Effective Strategies to Overcome Depression",
     },
     symptoms: {
       highlight: " Depression symptoms ",
       issue: "depression",
+      alt: "Wleness - Here's How Generalized Depression Symptoms May Appear",
       desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive depression treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Trouble concentrating",
@@ -153,6 +157,7 @@ export const therapiesData = [
         "These attacks can be overwhelming and may last a few minutes to an hour.",
       ],
       image: panicAttacksHeader,
+      alt: "Wleness - Empowering Strategies to Overcome Panic Attacks",
     },
     symptoms: {
       highlight: " Panic Attack symptoms ",
@@ -167,6 +172,7 @@ export const therapiesData = [
         "Sweating and trembling",
       ],
       image: symptomsPanic,
+      alt: "Wleness - Here's How Generalized Panic Attack Symptoms May Appear",
     },
     doctors: doctors,
     quote:
@@ -190,6 +196,7 @@ export const therapiesData = [
         "It is a natural stress response, but excessive or persistent anxiety can indicate an anxiety disorder.",
       ],
       image: anxietyHeader,
+      alt: "Wleness - Discovering Effective Approaches to Conquer Anxiety",
     },
     symptoms: {
       highlight: " Anxiety symptoms ",
@@ -204,6 +211,7 @@ export const therapiesData = [
         "Sleep disturbances, such as difficulty falling asleep or staying asleep.",
       ],
       image: symptomsAnxiety,
+      alt: "Wleness - Here's How Generalized Anxiety Symptoms May Appear",
     },
     doctors: doctors,
     quote:
@@ -268,6 +276,7 @@ export const therapiesData = [
         "These fluctuations can significantly impact daily functioning and well-being.",
       ],
       image: biopolarDisorderHeader,
+      alt: "Wleness - Embrace Quality Care Navigating Bipolar Disorder with Support",
     },
     symptoms: {
       highlight: " Bipolar Disorder symptoms ",
@@ -282,6 +291,7 @@ export const therapiesData = [
         "Hopelessness and Fatigue",
       ],
       image: symptomsBiopolarDisorder,
+      alt: "Wleness - Here's How Generalized Bipolar Disorder Symptoms May Appear",
     },
     doctors: doctors,
     quote:
@@ -387,6 +397,7 @@ export const therapiesData = [
         "Seeking help is essential to address and manage these distressing thoughts.",
       ],
       image: paranoiaHeader,
+      alt: "Wleness - Overcome Paranoia With Quality Care",
     },
     symptoms: {
       highlight: " Paranoia symptoms ",
@@ -401,6 +412,7 @@ export const therapiesData = [
         "Being excessively watchful and cautious.",
       ],
       image: symptomsParanoia,
+      alt: "Wleness - Here's How Generalized Paranoia symptoms May Appear",
     },
     doctors: doctors,
     quote:
@@ -428,6 +440,7 @@ export const therapiesData = [
         "Seeking appropriate help can lead to effective management and improved well-being.",
       ],
       image: adhdHeader,
+      alt: "Wleness - Accessing ADHD Mental Health Support",
     },
     symptoms: {
       highlight: " ADHD symptoms ",
@@ -442,6 +455,7 @@ export const therapiesData = [
         "Forgetfulness: Frequently losing items and forgetting appointments",
       ],
       image: symptomsAdhd,
+      alt: "Wleness - Here's How Generalized ADHD symptoms May Appear",
     },
     doctors: doctors,
     quote:
@@ -469,6 +483,7 @@ export const therapiesData = [
         "",
       ],
       image: oddHeader,
+      alt: "Wleness - Empowering Individuals with ODD through Effective Treatment",
     },
     symptoms: {
       highlight: " ODD symptoms ",
@@ -483,6 +498,7 @@ export const therapiesData = [
         "Persistent defiance and refusal to comply with rules or requests.",
       ],
       image: symptomsOdd,
+      alt: "Wleness - Here's How Generalized ODD symptoms May Appear",
     },
     doctors: doctors,
     quote:
@@ -510,6 +526,7 @@ export const therapiesData = [
         "",
       ],
       image: cdHeader,
+      alt: "Wleness - Unlock Potential: Treat Conduct Disorder Effectively",
     },
     symptoms: {
       highlight: " Conduct Disorder symptoms ",
@@ -524,6 +541,7 @@ export const therapiesData = [
         "Lack of empathy and disregard for the feelings and rights of others.",
       ],
       image: symptomsCd,
+      alt: "Wleness - Here's How Generalized Conduct Disorder symptoms May Appear",
     },
     doctors: doctors,
     quote:
@@ -551,6 +569,7 @@ export const therapiesData = [
         "",
       ],
       image: angerHeader,
+      alt: "Wleness - Mastering Anger: A Key to Enhanced Mental Well-Being",
     },
     symptoms: {
       highlight: " Anger symptoms ",
@@ -565,6 +584,7 @@ export const therapiesData = [
         "Loss of Control: Feeling like you can't control your anger often leads to actions you regret later.",
       ],
       image: symptomsAnger,
+      alt: "Wleness - Here's How Generalized Anger Symptoms May Appear",
     },
     doctors: doctors,
     quote:
@@ -633,6 +653,7 @@ export const therapiesData = [
         "",
       ],
       image: lgbtqHeader,
+      alt: "Wleness - Diverse Journeys, Shared Resilience: LGBTQIA+ Perspectives and Solutions",
     },
     symptoms: {
       highlight: " LGBTQIA+ symptoms ",
@@ -647,6 +668,7 @@ export const therapiesData = [
         "Limited access to LGBTQIA+-friendly mental health services can hinder well-being.",
       ],
       image: symptomsLgbtq,
+      alt: "Wleness - Here's How Generalized LGBTQIA+ Symptoms May Appear",
     },
     doctors: doctors,
     quote:

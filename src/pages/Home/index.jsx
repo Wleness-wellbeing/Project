@@ -148,7 +148,7 @@ export default function Home() {
               <div className="mx-auto w-64 lg:w-72">
                 <img
                   src={community}
-                  alt=""
+                  alt="Join the community - Wleness"
                   className="w-full object-cover"
                   loading="lazy"
                 />
@@ -208,7 +208,7 @@ export default function Home() {
                   <div>
                     <img
                       src={value.image}
-                      alt={value.title}
+                      alt={value.alt}
                       loading="lazy"
                       className="mx-auto mb-4 w-20"
                     />

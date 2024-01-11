@@ -35,7 +35,7 @@ export default function index() {
           <div className="mx-auto pb-2 text-center lg:order-2 lg:w-1/2">
             <img
               src={corporateHeader}
-              alt=""
+              alt="Wleness - Foster A Healthy and thriving work environment with Wleness"
               className="mb-2 w-full rounded-3xl"
             />
           </div>
@@ -124,13 +124,13 @@ export default function index() {
 
           <img
             src={blueFlower}
-            alt=""
+            alt="Wleness - Comprehensive Employee Well-Being Hub"
             className="absolute -right-20 -top-24 w-32 lg:-top-44 lg:w-56 2xl:w-72"
           />
 
           <img
             src={blueFlower}
-            alt=""
+            alt="Wleness - Comprehensive Employee Well-Being Hub"
             className="absolute -bottom-44 -left-20 w-32 lg:w-52 xl:-bottom-28 2xl:w-72"
           />
         </div>
@@ -140,7 +140,7 @@ export default function index() {
             <div className="py-2 lg:order-2 lg:w-1/2 lg:py-0">
               <img
                 src={employeeTriangleHub}
-                alt=""
+                alt="Wleness - Comprehensive Employee Well-Being Hub"
                 className="mx-auto w-3/5 object-cover"
               />
             </div>

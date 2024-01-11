@@ -11,6 +11,7 @@ import HappyClient from "../../components/HappyClient";
 import { yogaClients } from "../../data/clients";
 import YogaSlider from "../../components/Carousels/YogaSlider";
 import YogaBenefits from "../../components/Activities/YogaBenefits";
+import { YOGA_META } from "../../data/meta";
 
 export default function YogaPage() {
   const { enquiryForm, toggleForm } = useEnquiryForm();
@@ -25,12 +26,8 @@ export default function YogaPage() {
   return (
     <>
       <Helmet>
-        <title>
-          {activityYoga.name +
-            " | " +
-            get_title_text(activityYoga.header.title)}
-        </title>
-        <meta name="description" content="yoga and meditation description" />
+        <title>{YOGA_META.title}</title>
+        <meta name="description" content={YOGA_META.description} />
         <link rel="canonical" href={get_canonical(window.location)} />
       </Helmet>
 

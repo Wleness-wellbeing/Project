@@ -1206,6 +1206,7 @@ export const activities = [
       ],
       desc: "Meditation is like a peaceful escape that can help the mind in our busy world. Science proves it can lower stress and anxiety and help us handle emotions better. Just sitting quietly and looking within can do wonders for the mind, making us feel better overall.",
       image: meditationHeader,
+      alt: "Wleness - Meditation Heals The Mind",
     },
     activities: {
       title: "MEDITATION TECHNIQUES",
@@ -2192,6 +2193,7 @@ export const activities = [
       ],
       desc: "Sadhna is like a journey that helps you grow spiritually, connecting you to deeper insights. When you embrace Sadhna, you're on a quest that takes care of your soul, helps you spiritually evolve, and makes your life more meaningful.",
       image: sadhnaHeader,
+      alt: "Wleness - Sadhna A Journey of Spiritual Growth",
     },
     activities: {
       title: "Sadhna Techniques",
@@ -3240,6 +3242,7 @@ export const brainExercise = {
     ],
     desc: "Boost your mental health with our brain exercises program. These fun activities help your thinking and concentration. Join this journey to a sharper mind and more robust mental well-being.",
     image: brainExerciseHeader,
+    alt: "Wleness - Nurturing mental health through Brain Exercises",
   },
   activities: {
     title: "Brain Games",
@@ -3521,16 +3524,19 @@ export const whyChooseUs = [
     title: "Experience",
     image: homeExperienceIcon,
     desc: "Experience world-class services based on international standards for your health",
+    alt: "Experience Wleness",
   },
   {
     title: "Commitment",
     desc: "We commit to providing personalized care tailored to your unique needs and support you at every step.",
     image: homeCommitmentIcon,
+    alt: "The Wleness Commitment",
   },
   {
     title: "Facilities",
     desc: "Experience the convenience and comfort of our state-of-the-art facilities with wleness.",
     image: homeFacilitiesIcon,
+    alt: "Wleness Facilities",
   },
 ];
 
@@ -3586,31 +3592,37 @@ export const wlenessLifeCoaching = [
   {
     name: "One to One Power Coaching",
     image: lifeCoaching1,
+    alt: "One to One Power Coaching - Wleness",
     desc: "Our transformative approach offers tailored strategies and unwavering personal and professional growth support. With a dedicated life coach, unlock your fullest potential and achieve your goals – advancing your career, enhancing relationships, or overall life improvement.",
   },
   {
     name: "Empowerment Exchange",
     image: lifeCoaching2,
+    alt: "Empowerment Exchange - Wleness",
     desc: "Explore the advantages of our Group Life Coaching offering. By joining our community of dedicated individuals, you'll receive expert guidance in pursuing personal growth. Achieve clarity, reach your goals, and experience a more enriching life journey with the help of our experienced coaches.",
   },
   {
     name: "360-degree evaluation",
     image: lifeCoaching3,
+    alt: "360-degree evaluation with Wleness",
     desc: "Our comprehensive approach examines all facets of your life, providing a clear roadmap for growth. Our expert coaches will assess your strengths, identify areas for improvement, & work with you to set & achieve meaningful goals. Elevate every aspect of your life.",
   },
   {
     name: "Public Speaking",
     image: lifeCoachingPublicSpeaking,
+    alt: "Public Speaking Guidance from Wleness",
     desc: "Our expert coaches provide personalized guidance, practical strategies, and confidence-building exercises, empowering you to communicate with impact. Transform anxiety into assurance and captivate any audience with newfound fluency and charisma.",
   },
   {
     name: "Leadership Development",
     image: lifeCoachingLeadershipDevelopment,
+    alt: "Leadership Development from Wleness",
     desc: "Our expert coaches offer personalized strategies, using your strengths and addressing areas for growth. Gain invaluable insights, refine decision-making, and foster effective communication. Upgrade your leadership presence, empowering you to inspire and lead with authenticity.",
   },
   {
     name: "Interview Preparation",
     image: lifeCoachingInterviewPreparation,
+    alt: "Interview Preparation guidance from Wleness",
     desc: "Our comprehensive approach examines all facets of your life, providing a clear roadmap for growth. Our expert coaches will assess your strengths, identify areas for improvement, & work with you to set & achieve meaningful goals. Elevate every aspect of your life.",
   },
 ];

@@ -24,6 +24,12 @@ const ABOUT_META = {
     "At Wellness, our story is rooted in holistic well-being, Learn about our vision, practices, and dedicated to empowering you in your wellness journey.",
 };
 
+const YOGA_META = {
+  title: "Nurture Body and Mind: Yoga Activities with Wleness",
+  description:
+    "Experience the power of yoga with Wleness. Our yoga activities offer a path to rejuvenation, self-discovery, and a harmonious mind-body connection.",
+};
+
 // =======================================================================
 // Experts
 // =======================================================================
@@ -129,6 +135,7 @@ export {
   THERAPY_META,
   MUSICAL_HEALING_META,
   COUPLE_THERAPY_META,
+  YOGA_META,
   EXECUTIVE_COACHING_META,
   CORPORATE_WELLBEING_META,
   LIFE_COACHING_META,

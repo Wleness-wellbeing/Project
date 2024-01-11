@@ -76,7 +76,11 @@ function Experts() {
         <div className="container mx-auto flex flex-col items-center rounded-3xl !px-5 py-2 lg:flex-row lg:py-6 2xl:justify-between 2xl:py-16">
           <div className="lg:order-2 lg:mb-0 xl:w-1/2 2xl:flex 2xl:justify-end">
             {/* Desktop Image */}
-            <img src={expertsHeader} alt="" className=" w-full object-cover" />
+            <img
+              src={expertsHeader}
+              alt="Wleness - Our Experts"
+              className=" w-full object-cover"
+            />
           </div>
           <div className="-m-5 mb-6 rounded-3xl p-5 text-center md:mb-6 lg:order-1 lg:m-0 lg:mb-0 lg:rounded-none lg:text-left xl:w-1/2 xl:pl-4">
             <div className="md:mb-3">

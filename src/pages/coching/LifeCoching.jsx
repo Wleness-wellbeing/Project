@@ -58,7 +58,7 @@ export default function LifeCoching() {
             <img
               className="w-full"
               src={lifeCoachingHeader}
-              alt="Your Image Alt Text"
+              alt="Wleness Services - Lifestyle Coaching"
             />
           </div>
           <div className="xl:order-1 xl:w-1/2">
@@ -102,7 +102,11 @@ export default function LifeCoching() {
             return (
               <Link key={i} to={value.slug} className="block">
                 <div className="mb-4">
-                  <img src={value.image} alt="" className="mx-auto w-44" />
+                  <img
+                    src={value.image}
+                    alt={value.alt}
+                    className="mx-auto w-44"
+                  />
                 </div>
                 <figcaption>
                   <h2 className="text-lg font-bold lg:text-2xl">

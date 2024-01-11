@@ -82,7 +82,7 @@ function AboutUs() {
           <div className="mx-auto my-auto w-full lg:order-1 lg:w-1/2">
             <img
               src={problem}
-              alt="Description of the image"
+              alt="Wleness - Unmasking The Challenges"
               className="mx-auto w-[480px]"
             />
           </div>
@@ -188,7 +188,7 @@ function AboutUs() {
         <div className="mx-auto my-auto transform md:mt-0 md:translate-x-0 lg:my-auto lg:-translate-x-32 lg:text-center">
           <img
             src={about6} // Replace with your image URL
-            alt="Description of the image"
+            alt="Wleness - Charting the path Forward"
             className=""
           />
         </div>
@@ -211,7 +211,11 @@ function AboutUs() {
           <DummyComponent />
         </div>
         <div className="order-1 mb-4 flex w-full items-center justify-center sm:w-1/2 lg:order-2">
-          <img src={about3} alt="Your image" className="w-2/3 lg:w-full" />
+          <img
+            src={about3}
+            alt="Wleness's way of crafting your journey"
+            className="w-2/3 lg:w-full"
+          />
         </div>
       </div>
 

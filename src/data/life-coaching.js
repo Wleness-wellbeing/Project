@@ -13,6 +13,7 @@ export const lifestyleCoaches = [
     name: "Ridhi Bajaj",
     profession: "Lifestyle Coach",
     slug: "/coach/ridhi-bajaj",
+    alt: "Ridhi Bajaj - Lifestyle Coach - Wleness",
     image: lifeCoachRidhi,
     desc: "Ridhi Bajaj, a dedicated life coach committed to transforming lives, specialises in providing invaluable mental health support. With a passion for helping individuals overcome challenges and realise their full potential, Ridhi has become an inspiration for empowerment and positive change.",
     about: {
@@ -52,6 +53,7 @@ export const lifestyleCoaches = [
   {
     name: "Tanuja Choudhury",
     profession: "Lifestyle Coach",
+    alt: "Tanuja Choudhary - Lifestyle Coach - Wleness",
     slug: "/coach/tanuja-choudhury",
     image: lifeCoachTanuja,
     desc: "With an incredible 23 years of corporate experience, Tanuja Choudhury is a highly certified industry expert and training professional with a wealth of information and insight in learning and development. Tanuja is well-known for her strong and clear communication style. She has a wealth of experience designing and executing in-person and virtual training programs for businesses and people in various sectors.",

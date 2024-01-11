@@ -49,6 +49,7 @@ export default function MusicalTherapy() {
         title={MusicalTherapyData.header.title}
         image={MusicalTherapyData.header.image}
         desc={MusicalTherapyData.header.desc}
+        alt={MusicalTherapyData.header.alt}
         handleScrollToComponent={() => handleScrollToComponent()}
         openAssessmentModal={openAssessmentModal}
         isEnquiry={true}
@@ -67,7 +68,11 @@ export default function MusicalTherapy() {
 
       <section className="container mx-auto mb-6 lg:flex xl:mb-12">
         <div className="relative z-20">
-          <img src={wlenessExploreTracks} alt="" className="md:w-96 xl:w-80" />
+          <img
+            src={wlenessExploreTracks}
+            alt="Wleness - Music Healing Tracks for Peace and Relaxation"
+            className="md:w-96 xl:w-80"
+          />
           <Link
             to="/services/music-healing/tracks"
             className="absolute -right-2 top-1/2 -translate-y-1/2 rounded-full bg-white p-2"

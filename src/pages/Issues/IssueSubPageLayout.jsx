@@ -39,6 +39,7 @@ export default function IssueSubPageLayout({
         title={header.title}
         desc={header.desc}
         image={header.image}
+        alt={header.alt}
         openAssessmentModal={() => resetBookNow()}
       />
       <Symptoms

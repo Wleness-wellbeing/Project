@@ -35,18 +35,21 @@ const executiveCoaches = [
     profession: "Executive Coach",
     slug: "/coach/saloni-gupta",
     image: executiveCoach1,
+    alt: "Saloni Gupta, Executive Coach Certified by ICF - Wleness",
   },
   {
     name: "Dr. Anju Chawla",
     profession: "Coach & Speaker",
     slug: "/coach/anju-chawla",
     image: executiveCoach2,
+    alt: "Dr. Anju Chawla, Coach & Speaker, Certified by ICF - Wleness",
   },
   {
     name: "Andrea Bianchi",
     profession: "Executive Coach",
     slug: "/coach/andrea-bianchi",
     image: executiveCoach3,
+    alt: "Andrea Bianchi, Executive Coach, Certified by ICF - Wleness",
   },
 ];
 
@@ -95,7 +98,7 @@ export default function ExecutiveCoaching() {
             <img
               className="w-full"
               src={executiveCoachingHeader}
-              alt="Your Image Alt Text"
+              alt="Wleness Executive Coaching"
             />
           </div>
           <div className="xl:order-1 xl:w-1/2">
@@ -231,7 +234,7 @@ export default function ExecutiveCoaching() {
           <div className="mb-8 lg:order-2 lg:mb-0 lg:w-1/2">
             <img
               src={faq5}
-              alt=""
+              alt="Wleness - Guiding Business And Leaders to Success"
               className="mx-auto block object-cover lg:w-4/5"
             />
           </div>
@@ -374,7 +377,7 @@ export default function ExecutiveCoaching() {
         <div className="relative mt-6">
           <img
             src={bgExecutiveApproach}
-            alt=""
+            alt="Wleness - Our Approach to Crafting Your Leadership Journey "
             className="h-[500px] w-full object-cover object-top"
           />
           <div className="absolute inset-0 w-full  bg-black/60 lg:flex">

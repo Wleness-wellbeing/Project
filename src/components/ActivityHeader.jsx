@@ -11,7 +11,7 @@ export default function ActivityHeader(props) {
             {/* Desktop Image */}
             <img
               src={props.image}
-              alt=""
+              alt={props.alt}
               className="w-full scale-105 rounded-2xl object-cover"
             />
           </div>

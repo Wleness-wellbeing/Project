@@ -28,6 +28,7 @@ export default function BrainExercise() {
         key={brainExercise.id}
         title={brainExercise.header.title}
         image={brainExercise.header.image}
+        alt={brainExercise.header.alt}
         desc={brainExercise.header.desc}
         handleScrollToComponent={() => handleScrollToComponent()}
         isEnquiry={true}
