@@ -6,6 +6,7 @@ import {
   lifeCoachTanuja,
   lifeCoachTanuja2,
   lifeCoachTanuja3,
+  therapyClient1,
 } from "../assets";
 
 export const lifestyleCoaches = [
@@ -48,6 +49,15 @@ export const lifestyleCoaches = [
       "Certified Happiness Coach from ACSTH International Coach Certification.",
       "Recommendations from International Trainers Federation.",
       "Internationally certified Soft Skills trainer and Image Consultant.",
+    ],
+    reviews: [
+      {
+        name: "Sumit Kaur",
+        profession: "Designer",
+        image: therapyClient1,
+        review:
+          "Hey Ridhi , hope you are doing well. Just wanted to thank you for all your time and support throughout my transformation journey. I have emerged as a much better, stronger and condident person, and all of this would not have been possible without your guidance and support. I hope this will help me in leading a better way of life. Thanks again for your time and effort. I highly recommend Ridhi Bajaj to be anyone's guide who is aiming towards transforming his/her life.",
+      },
     ],
   },
   {
