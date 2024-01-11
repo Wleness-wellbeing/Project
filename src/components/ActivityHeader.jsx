@@ -20,7 +20,7 @@ export default function ActivityHeader(props) {
               <h1 className="subheading mb-4 text-center lg:text-left">
                 {textColorize(props.title)}
               </h1>
-              <h5 className="mb-8 text-center text-lg font-medium lg:text-left">
+              <h5 className="mb-8 text-center text-base font-medium md:text-lg lg:text-left">
                 {props.desc}
               </h5>
             </hgroup>

@@ -10,7 +10,7 @@ export default function BlogCard(props) {
         <img
           src={props.data.thumbnail_image}
           className="w-full rounded-xl"
-          alt="..."
+          alt={props.data.title}
         />
       </Link>
       <figcaption className="flex h-full flex-col items-start justify-between">
@@ -18,7 +18,7 @@ export default function BlogCard(props) {
           <h1 className="my-2 text-lg font-bold capitalize text-black">
             <Link to={slug}>{props.data.title}</Link>
           </h1>
-          <p className="text-lg font-medium">
+          <p className="text-sm font-medium md:text-base lg:text-lg">
             {props.data.desc.length > 130
               ? props.data.desc.substring(0, 130) + "..."
               : props.data.desc}
@@ -26,7 +26,7 @@ export default function BlogCard(props) {
         </div>
         <Link
           to={`/blog/${props.data.slug}`}
-          className="mt-4 inline-block rounded-3xl bg-primary-400 px-4 py-2 font-medium text-white transition-all hover:bg-primary-500"
+          className="mt-4 inline-block rounded-3xl bg-primary-400 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-primary-500 md:text-base"
         >
           Read more
         </Link>

@@ -178,15 +178,15 @@ export default function Internship() {
                 <div>
                   <img
                     src={value.image}
-                    alt="Icon 1"
+                    alt={value.title}
                     className="mx-auto h-24 w-24 object-contain pb-1 lg:h-40 lg:w-40"
                   />
                 </div>
                 <div>
-                  <h3 className="mb-2 font-bold leading-5 text-primary-400 lg:text-lg">
+                  <h3 className="mb-2 text-sm font-bold leading-5 text-primary-400 lg:text-lg">
                     {value.title}
                   </h3>
-                  <p className="text-sm font-semibold lg:text-base">
+                  <p className="text-xs font-semibold lg:text-base">
                     {value.desc}
                   </p>
                 </div>

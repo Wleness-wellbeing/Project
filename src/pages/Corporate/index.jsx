@@ -45,7 +45,7 @@ export default function index() {
               <span className="text-[#0A99D6]">Healthy and thriving work </span>
               <span>environment with Wleness</span>
             </h1>
-            <p className="mb-6 text-xl font-semibold">
+            <p className="mb-6 font-semibold lg:text-lg xl:text-xl">
               Create a Mental Health-Friendly Work Environment with Customized
               Solutions for Your Unique Workplace
             </p>

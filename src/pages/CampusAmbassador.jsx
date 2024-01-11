@@ -14,7 +14,6 @@ import { whyToApplyCampus } from "../data/whyWleness";
 import { Helmet } from "react-helmet";
 import { CAMPUS_AMBASSADOR_META } from "../data/meta";
 import { get_canonical } from "../utils";
-import Confirmation from "../components/Modals/Confirmation";
 
 const roles = [
   [roleSMM, "Social Media & Public Marketing"],
@@ -52,7 +51,7 @@ export default function CampusAmbassador() {
       {/* Our Program */}
       <section className="container mx-auto pb-10 pt-4">
         {/* <h2 className="text-center text-2xl font-bold text-primary-300 lg:px-44 lg:text-4xl"> */}
-        <h2 className="subheading text-center text-primary-300 lg:px-44">
+        <h2 className="subheading text-center !text-xl text-primary-300 lg:px-44 lg:!text-3xl">
           Welcome to our Health and Wellness Campus Ambassador Program!
         </h2>
         <p className="para my-7 text-center lg:my-8 lg:px-12">

@@ -112,7 +112,7 @@ export default function ExecutiveCoaching() {
               </h2>
             </hgroup>
 
-            <ul className="text-center lg:text-left">
+            <ul className="text-center lg:text-left text-sm md:text-base">
               <li className="mb-6 rounded-2xl bg-primary-50 p-3 font-semibold">
                 In the dynamic realm of modern business, leaders face fierce
                 competition, complexity, and constant change. Not all leaders

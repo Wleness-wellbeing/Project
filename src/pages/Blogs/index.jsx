@@ -61,7 +61,7 @@ export default function Blogs() {
       </header>
 
       {/* =========== Recent Blog ========= */}
-      <section className="container mx-auto py-8 lg:!px-0 lg:pb-20 lg:pt-12">
+      <section className="container mx-auto py-8 lg:!px-0 lg:pb-24 lg:pt-12">
         <Swiper
           modules={[Pagination]}
           slidesPerView={1}
@@ -78,6 +78,7 @@ export default function Blogs() {
                         <img
                           src={value.thumbnail_image}
                           className="w-full rounded-2xl object-cover"
+                          alt={value.title}
                         />
                       </Link>
                       <div className="pt-3 xs:w-full sm:w-full lg:w-1/2 lg:pl-12">
@@ -87,7 +88,7 @@ export default function Blogs() {
                         <h1 className="mb-2 text-xl font-bold capitalize lg:mb-4 lg:text-4xl">
                           <Link to={slug}>{value.title}</Link>
                         </h1>
-                        <p className="text-lg font-medium">
+                        <p className="text-sm font-medium md:text-base lg:text-lg">
                           <span className="mr-2">
                             {value.desc.length >= 150
                               ? value.desc.slice(0, 150) + "..."

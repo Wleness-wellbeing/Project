@@ -68,7 +68,7 @@ export default function index() {
 
           <div className="mb-8">
             <img src={communityHeader} alt="" className="mb-10 w-full" />
-            <p className="mb-5 text-xl font-bold xl:px-44">
+            <p className="mb-5 font-bold lg:text-lg xl:px-44 xl:text-xl">
               Let's come together and build a supportive community where we
               share, grow, and heal as one.
             </p>
@@ -101,14 +101,14 @@ export default function index() {
           <h1 className="subheading mb-6">
             <span className="heading-primary">Wleness </span>Community
           </h1>
-          <p className="mb-8 text-lg font-medium">
+          <p className="mb-8 text-base font-medium lg:text-lg">
             Through our community, individuals can find solace in knowing they
             are not alone in their struggles. Whether seeking advice, sharing
             stories, or simply finding comfort in the presence of others, our
             platform offers a supportive network that embraces diversity and
             encourages personal growth.
           </p>
-          <p className="text-lg font-medium">
+          <p className="text-base font-medium lg:text-lg">
             We believe everyone deserves a space to be heard, understood, and
             supported without judgment. Join us and discover the power of
             community, where you can connect with like-minded individuals and
@@ -130,7 +130,7 @@ export default function index() {
             <span>Uncover your special heaven of </span>
             <span className="heading-primary">support and belonging</span>
           </h1>
-          <p className="text-lg font-semibold">
+          <p className="text-base font-semibold lg:text-lg">
             Always remember sharing your struggles only makes you stronger.
           </p>
         </div>

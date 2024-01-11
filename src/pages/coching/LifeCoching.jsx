@@ -200,7 +200,7 @@ export default function LifeCoching() {
           <span className="heading-primary">life coaching</span>
           <span> propel you forward?</span>
         </h2>
-        <p className="pb-12 text-lg font-medium lg:mx-auto">
+        <p className="pb-12 font-medium md:text-lg lg:mx-auto">
           Life coaching is your personalized journey to growth and fulfillment.
           It's like having a trusted partner who helps you navigate life's
           challenges and capitalize on your strengths.
