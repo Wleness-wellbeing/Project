@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Data
-import { activities, activityYoga, brainExercise } from "./data";
+import { activities, brainExercise } from "./data";
 import { therapiesData } from "./data/issues";
 import useToken from "./utils/useToken";
 // Components
@@ -13,7 +13,6 @@ import DashboardLayout from "./components/layout/DashboardLayout";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Experts from "./pages/Experts";
-import Issues from "./pages/Issues";
 import Internship from "./pages/Internship";
 import Activities from "./pages/Activities";
 import Blogs from "./pages/Blogs";
@@ -24,7 +23,6 @@ import MusicalTherapy from "./pages/Services/MusicalTherapy";
 import Avatar from "./components/layout/Avatar";
 import ActivitySubPageLayout from "./pages/Activities/ActivitySubPageLayout";
 import CampusAmbassador from "./pages/CampusAmbassador";
-import Psychiatrist from "./pages/Services/Psychiatrist";
 import Therapy from "./pages/Services/Therapy";
 import ExpertsDetails from "./pages/Experts/ExpertsDetails";
 import SignUp from "./pages/Authentication/SignUp";
@@ -36,7 +34,6 @@ import IssueSubPageLayout from "./pages/Issues/IssueSubPageLayout";
 import DoctorDashboard from "./pages/Dashboard/DoctorDashboard";
 import UserDashboard from "./pages/Dashboard/UserDashboard";
 import Corporate from "./pages/Corporate";
-import Calendly from "./components/Calendly";
 import PrivacyPolicy from "./pages/Policies/PrivacyPolicy";
 import TermsAndConditions from "./pages/Policies/TermsAndConditions";
 // import Selfcare from "./pages/Dashboard/Selfcare";
@@ -44,12 +41,8 @@ import ContactUs from "./pages/ContactUs";
 import LifeCoching from "./pages/coching/LifeCoching";
 import ExecutiveCoaching from "./pages/Coaches";
 import RoutineCare from "./pages/Dashboard/RoutineCare";
-import DoctorSignup from "./pages/Authentication/DoctorSignup";
 import TherapistJoining from "./pages/JoinUs/TherapistJoining";
 import PsychiatristJoining from "./pages/JoinUs/PsychiatristJoining";
-import Chatbox from "./pages/Dashboard/Chatbox";
-import Profile from "./pages/Dashboard/Profile";
-import Chat from "./pages/Community/Chat";
 import BlogDetails from "./pages/Blogs/BlogDetails";
 import Cancellation from "./pages/Policies/Cancellation";
 import StudentsPolicy from "./pages/Policies/StudentsPolicy";
@@ -58,9 +51,6 @@ import Gauth from "./pages/Authentication/Gauth";
 import FacebookAuth from "./pages/Authentication/FacebookAuth";
 import Career from "./pages/Career";
 import Consent from "./pages/Policies/Consent";
-import { coachesData } from "./data/coach";
-import CoachSubpage from "./pages/Coaches/CoachSubpage";
-import TabSwitcher from "./components/SwitchTab";
 import ExpertsLogin from "./pages/Authentication/ExpertsLogin";
 import ForgotPassword from "./pages/Authentication/Forget";
 import UserProfile from "./pages/Dashboard/UserProfile";
@@ -80,9 +70,57 @@ import { lifestyleCoaches } from "./data/life-coaching";
 import YogaSubpage from "./pages/Activities/YogaSubpage";
 import YogaPage from "./pages/Activities/YogaPage";
 import YogaBooking from "./pages/Appointment/YogaBooking";
-import WhatsappChat from "./components/WhatsappChat";
-import ThankYou from "./components/Modals/ThankYou";
 import Confirmation from "./components/Modals/Confirmation";
+import {
+  ABOUT_US,
+  ACTIVITIES,
+  ALL_EXPERTS,
+  AVATAR,
+  BLOGS,
+  BLOGS_DETAILS,
+  CAMPUS_AMBASSADOR,
+  CANCELLATION,
+  CAREER,
+  COMMUNITY,
+  CONSENT,
+  CONTACT_US,
+  CORPORATE_WELLBEING,
+  COUPLES_THERAPY,
+  EXECUTIVE_COACHING,
+  EXPERTS,
+  EXPERTS_BOOKING,
+  EXPERTS_LOGIN,
+  EXPERTS_PROFILE,
+  EXPERT_DASHBOARD,
+  EXPERT_DASHBOARD_PAYMENT,
+  FACEBOOK_AUTH,
+  FAQ,
+  FORGOT_PASSWORD,
+  GAUTH,
+  HOME,
+  INTERNSHIP,
+  LIFESTYLE_COACHING,
+  LOGIN,
+  MUSICAL_HEALING,
+  MUSICAL_HEALING_TRACKS,
+  PRIVACY_POLICY,
+  PSYCHIATRIST_JOIN,
+  SELF_ASSESSMENT,
+  SIGNUP,
+  STUDENTS_POLICY,
+  SUCCESS,
+  TERMS_AND_CONDITIONS,
+  THANKS_YOU,
+  THERAPIST_JOIN,
+  THERAPY,
+  USER_DASHBOARD,
+  USER_HISTORY,
+  USER_PROFILE,
+  USER_ROUTINE_CARE,
+  YOGA,
+  YOGA_BOOKING,
+} from "./data/urls";
+import { JOIN_THERAPIST } from "./data/meta";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -103,6 +141,16 @@ function App() {
   axios.get(robotsFile, {
     "Content-Type": "application/text; charset=utf-8",
   });
+
+  function Layout({ children }) {
+    return (
+      <>
+        <Navbar />
+        {children}
+        <Footer />
+      </>
+    );
+  }
 
   // Activity Subpages Routing - Yoga, Meditation, Sadhna
   const activitiesMenu = activities.map((value, index) => {
@@ -147,201 +195,117 @@ function App() {
     <Router>
       <ScrollToTop />
       <Routes>
+        {/* =========== Pages */}
+        <Route path={HOME} element={<Layout children={<Home />} />} />
+        <Route path={EXPERTS} element={<Layout children={<EXPERTS />} />} />
+        <Route path={ABOUT_US} element={<Layout children={<AboutUs />} />} />
+        <Route path={COMMUNITY} element={<Layout children={<Community />} />} />
+        <Route path={BLOGS} element={<Layout children={<Blogs />} />} />
+        <Route path={CAREER} element={<Layout children={<Career />} />} />
+        <Route path={FAQ} element={<Layout children={<Faqs />} />} />
         <Route
-          path="/"
-          element={
-            <Layout>
-              <Home />
-            </Layout>
-          }
+          path={CONTACT_US}
+          element={<Layout children={<ContactUs />} />}
         />
         <Route
-          path="/about-us"
-          element={
-            <Layout>
-              <AboutUs />
-            </Layout>
-          }
+          path={ACTIVITIES}
+          element={<Layout children={<Activities />} />}
         />
         <Route
-          path="/assessment"
-          element={
-            <Layout>
-              <MainAssessment />
-            </Layout>
-          }
+          path={BLOGS_DETAILS}
+          element={<Layout children={<BlogDetails />} />}
         />
         <Route
-          path="/assessment/:slug"
-          element={
-            <Layout>
-              <AssessmentQuestions />
-            </Layout>
-          }
+          path={ALL_EXPERTS}
+          element={<Layout children={<ExpertsDetails />} />}
         />
         <Route
-          path="/assessment/result"
-          element={
-            <Layout>
-              <AssessmentResult />
-            </Layout>
-          }
+          path={EXPERTS_PROFILE}
+          element={<Layout children={<ExpertProfile />} />}
         />
-
         <Route
-          path="/avatar"
-          element={
-            <Layout>
-              <Avatar />
-            </Layout>
-          }
+          path={EXPERTS_BOOKING}
+          element={<Layout children={<Appointment />} />}
         />
-
         <Route
-          path="/gauth"
-          element={
-            <Layout>
-              <Gauth />
-            </Layout>
-          }
+          path={EXPERTS_BOOKING}
+          element={<Layout children={<Appointment />} />}
+        />
+        <Route
+          path={SELF_ASSESSMENT}
+          element={<Layout children={<MainAssessment />} />}
+        />
+        <Route
+          path={`${SELF_ASSESSMENT}/:slug`}
+          element={<Layout children={<AssessmentQuestions />} />}
+        />
+        <Route
+          path={`${SELF_ASSESSMENT}/result`}
+          element={<Layout children={<AssessmentResult />} />}
         />
 
+        {/* =========== Authentication */}
+        <Route path={AVATAR} element={<Layout children={<Avatar />} />} />
+        <Route path={GAUTH} element={<Layout children={<Gauth />} />} />
         <Route
-          path="/facebook"
-          element={
-            <Layout>
-              <FacebookAuth />
-            </Layout>
-          }
+          path={FACEBOOK_AUTH}
+          element={<Layout children={<FacebookAuth />} />}
         />
 
+        {/* =========== Join Us */}
         <Route
-          path="/services/psychiatrist"
-          element={
-            <Layout>
-              <Psychiatrist />
-            </Layout>
-          }
+          path={THERAPIST_JOIN}
+          element={<Layout children={<TherapistJoining />} />}
         />
         <Route
-          path="/services/therapy"
-          element={
-            <Layout>
-              <Therapy />
-            </Layout>
-          }
+          path={PSYCHIATRIST_JOIN}
+          element={<Layout children={<PsychiatristJoining />} />}
         />
         <Route
-          path="/services/couples-therapy"
-          element={
-            <Layout>
-              <CouplesTherapy />
-            </Layout>
-          }
+          path={CAMPUS_AMBASSADOR}
+          element={<Layout children={<CampusAmbassador />} />}
+        />
+
+        {/* =========== Services */}
+        <Route path={THERAPY} element={<Layout children={<Therapy />} />} />
+        <Route path={YOGA} element={<Layout children={<YogaPage />} />} />
+        <Route
+          path={CORPORATE_WELLBEING}
+          element={<Layout children={<Corporate />} />}
         />
         <Route
-          path="/services/music-healing"
-          element={
-            <Layout>
-              <MusicalTherapy />
-            </Layout>
-          }
+          path={brainExercise.slug}
+          element={<Layout children={<BrainExercise />} />}
         />
         <Route
-          path="/services/music-healing/tracks"
-          element={
-            <Layout>
-              <MusicalHealingTracks token={token} />
-            </Layout>
-          }
+          path={COUPLES_THERAPY}
+          element={<Layout children={<CouplesTherapy />} />}
         />
         <Route
-          path="/community"
-          element={
-            <Layout>
-              <Community />
-            </Layout>
-          }
+          path={MUSICAL_HEALING}
+          element={<Layout children={<MusicalTherapy />} />}
         />
         <Route
-          path="/calendly"
-          element={
-            <Layout>
-              <Calendly />
-            </Layout>
-          }
+          path={MUSICAL_HEALING_TRACKS}
+          element={<Layout children={<MusicalHealingTracks token={token} />} />}
         />
         <Route
-          path="/experts"
-          element={
-            <Layout>
-              <Experts />
-            </Layout>
-          }
+          path={INTERNSHIP}
+          element={<Layout children={<Internship />} />}
         />
         <Route
-          path="/tab-switch"
-          element={
-            <Layout>
-              <TabSwitcher />
-            </Layout>
-          }
+          path={LIFESTYLE_COACHING}
+          element={<Layout children={<LifeCoching />} />}
         />
         <Route
-          path="/experts/all"
-          element={
-            <Layout>
-              <ExpertsDetails />
-            </Layout>
-          }
+          path={EXECUTIVE_COACHING}
+          element={<Layout children={<ExecutiveCoaching />} />}
         />
+
+        {/* =========== Appointment and Booking */}
         <Route
-          path="/experts/profile/:slug"
-          element={
-            <Layout>
-              <ExpertProfile />
-            </Layout>
-          }
-        />
-        <Route
-          path="/experts/booking/:slug"
-          element={
-            <Layout>
-              <Appointment />
-            </Layout>
-          }
-        />
-        <Route
-          path="/yoga/booking/:slug"
-          element={
-            <Layout>
-              <YogaBooking />
-            </Layout>
-          }
-        />
-        <Route
-          path="/success"
-          element={
-            <Layout>
-              <Success />
-            </Layout>
-          }
-        />
-        <Route
-          path="/issues"
-          element={
-            <Layout>
-              <Issues />
-            </Layout>
-          }
-        />
-        <Route
-          path="/calendly"
-          element={
-            <Layout>
-              <Calendly />
-            </Layout>
-          }
+          path={YOGA_BOOKING}
+          element={<Layout children={<YogaBooking />} />}
         />
 
         {/* Therapies Subpages */}
@@ -351,355 +315,156 @@ function App() {
               key={index}
               path={value.slug}
               element={
-                <Layout>
-                  <IssueSubPageLayout
-                    header={value.header}
-                    symptoms={value.symptoms}
-                    doctors={value.doctors}
-                    quote={value.quote}
-                  />
-                </Layout>
+                <Layout
+                  children={
+                    <IssueSubPageLayout
+                      header={value.header}
+                      symptoms={value.symptoms}
+                      doctors={value.doctors}
+                      quote={value.quote}
+                    />
+                  }
+                />
               }
             />
           );
         })}
-        <Route
-          path="/internship"
-          element={
-            <Layout>
-              <Internship />
-            </Layout>
-          }
-        />
-        <Route
-          path="/activities"
-          element={
-            <Layout>
-              <Activities />
-            </Layout>
-          }
-        />
-
-        {/* =========== Yoga =========== */}
-        <Route
-          path="/activities/yoga"
-          element={
-            <Layout>
-              <YogaPage />
-            </Layout>
-          }
-        />
-
-        {/* {activityYoga.activities.types.map((value, index) => {
-          return (
-            <Route
-              key={index}
-              path={value.slug}
-              element={
-                <Layout>
-                  <YogaSubpage data={value} />
-                </Layout>
-              }
-            />
-          );
-        })} */}
 
         {/* Activity Subpages - Yoga, Meditation, Sadhna */}
         {activitiesMenu}
         {/* Inner pages of yoga, meditation and sadhna */}
         {activitiesInnerSubpages}
+
+        {/* =========== Authentication =========== */}
         <Route
-          path={brainExercise.slug}
+          path={EXPERTS_LOGIN}
           element={
-            <Layout>
-              <BrainExercise />
-            </Layout>
+            <SignupLayout
+              children={<ExpertsLogin setToken={setToken} token={token} />}
+            />
+          }
+        />
+        <Route
+          path={LOGIN}
+          element={
+            <SignupLayout
+              children={<Login setToken={setToken} token={token} />}
+            />
+          }
+        />
+        <Route
+          path={FORGOT_PASSWORD}
+          element={
+            <SignupLayout
+              children={<ForgotPassword setToken={setToken} token={token} />}
+            />
+          }
+        />
+        <Route
+          path={SIGNUP}
+          element={
+            <SignupLayout
+              children={<SignUp setToken={setToken} token={token} />}
+            />
           }
         />
 
-        {/* =========== Blogs =========== */}
-        <Route
-          path="/blogs"
-          element={
-            <Layout>
-              <Blogs />
-            </Layout>
-          }
-        />
-        <Route
-          path="/blog/:slug"
-          element={
-            <Layout>
-              <BlogDetails />
-            </Layout>
-          }
-        />
-        <Route
-          path="/faqs"
-          element={
-            <Layout>
-              <Faqs />
-            </Layout>
-          }
-        />
-        <Route
-          path="/experts-login"
-          element={
-            <SignupLayout>
-              <ExpertsLogin setToken={setToken} token={token} />
-            </SignupLayout>
-          }
-        />
-        <Route
-          path="/doctor/dashboard"
-          element={
-            <DashboardLayout token={token}>
-              <DoctorDashboard token={token} />
-            </DashboardLayout>
-          }
-        />
-        <Route
-          path="/doctor/payment"
-          element={
-            <DashboardLayout token={token}>
-              <DoctorsPayment token={token} />
-            </DashboardLayout>
-          }
-        />
-        <Route
-          path="/login"
-          element={
-            <SignupLayout>
-              <Login setToken={setToken} token={token} />
-            </SignupLayout>
-          }
-        />
-        <Route
-          path="/forgot-password"
-          element={
-            <SignupLayout>
-              <ForgotPassword setToken={setToken} token={token} />
-            </SignupLayout>
-          }
-        />
-        <Route
-          path="/signup"
-          element={
-            <SignupLayout>
-              <SignUp setToken={setToken} token={token} />
-            </SignupLayout>
-          }
-        />
-        <Route
-          path="/forgot-password"
-          element={
-            <SignupLayout>
-              <ForgotPassword />
-            </SignupLayout>
-          }
-        />
-        <Route
-          path="/user/profile"
-          element={
-            <UserDashboardLayout token={token}>
-              <UserProfile token={token} />
-            </UserDashboardLayout>
-          }
-        />
-        <Route
-          path="/user/dashboard"
-          element={
-            <UserDashboardLayout token={token}>
-              <UserDashboard token={token} />
-            </UserDashboardLayout>
-          }
-        />
-        <Route
-          path="/user/history"
-          element={
-            <UserDashboardLayout token={token}>
-              <UserDashboardHistory token={token} />
-            </UserDashboardLayout>
-          }
-        />
-
+        {/* =========== Redirects */}
         <Route path="*" element={<Error404 />} />
+        <Route path={SUCCESS} element={<Layout children={<Success />} />} />
         <Route
-          path="/community/chat"
-          element={
-            <DashboardLayout>
-              <Chat token={token} />
-            </DashboardLayout>
-          }
-        />
-        <Route
-          path="/user/routine-care"
-          element={
-            <DashboardLayout>
-              <RoutineCare token={token} />
-            </DashboardLayout>
-          }
-        />
-        <Route
-          path="/campus-ambassador"
-          element={
-            <Layout>
-              <CampusAmbassador />
-            </Layout>
-          }
-        />
-        <Route
-          path="/corporate-wellbeing"
-          element={
-            <Layout>
-              <Corporate />
-            </Layout>
-          }
-        />
-        <Route
-          path="/join-therapist"
-          element={
-            <Layout>
-              <TherapistJoining />
-            </Layout>
-          }
-        />
-        <Route
-          path="/join-psychiatrist"
-          element={
-            <Layout>
-              <PsychiatristJoining />
-            </Layout>
-          }
-        />
-        <Route
-          path="/chatbox"
-          element={
-            <SignupLayout>
-              <Chatbox />
-            </SignupLayout>
-          }
+          path={THANKS_YOU}
+          element={<Layout children={<Confirmation />} />}
         />
 
-        {/* Policies Pages */}
+        {/* =========== Dashboard */}
         <Route
-          path="/privacy-policy"
+          path={EXPERT_DASHBOARD}
           element={
-            <Layout>
-              <PrivacyPolicy />
-            </Layout>
+            <DashboardLayout children={<DoctorDashboard token={token} />} />
           }
         />
         <Route
-          path="/students-policy"
+          path={EXPERT_DASHBOARD_PAYMENT}
           element={
-            <Layout>
-              <StudentsPolicy />
-            </Layout>
+            <DashboardLayout children={<DoctorsPayment token={token} />} />
           }
         />
         <Route
-          path="/cancellation"
+          path={USER_PROFILE}
           element={
-            <Layout>
-              <Cancellation />
-            </Layout>
+            <UserDashboardLayout
+              token={token}
+              children={<UserProfile token={token} />}
+            />
           }
         />
         <Route
-          path="/consent"
+          path={USER_DASHBOARD}
           element={
-            <Layout>
-              <Consent />
-            </Layout>
+            <UserDashboardLayout
+              token={token}
+              children={<UserDashboard token={token} />}
+            />
           }
         />
         <Route
-          path="/terms-and-conditions"
+          path={USER_HISTORY}
           element={
-            <Layout>
-              <TermsAndConditions />
-            </Layout>
+            <UserDashboardLayout
+              token={token}
+              children={<UserDashboardHistory token={token} />}
+            />
           }
         />
         <Route
-          path="/contact-us"
-          element={
-            <Layout>
-              <ContactUs />
-            </Layout>
-          }
+          path={USER_ROUTINE_CARE}
+          element={<DashboardLayout children={<RoutineCare token={token} />} />}
+        />
+
+        {/* =========== Policies Pages */}
+        <Route
+          path={PRIVACY_POLICY}
+          element={<Layout children={<PrivacyPolicy />} />}
         />
         <Route
-          path="/thank-you"
-          element={
-            <Layout>
-              <Confirmation />
-            </Layout>
-          }
+          path={STUDENTS_POLICY}
+          element={<Layout children={<StudentsPolicy />} />}
         />
         <Route
-          path="/career"
-          element={
-            <Layout>
-              <Career />
-            </Layout>
-          }
+          path={CANCELLATION}
+          element={<Layout children={<Cancellation />} />}
         />
+        <Route path={CONSENT} element={<Layout children={<Consent />} />} />
         <Route
-          path="/life-coaching"
-          element={
-            <Layout>
-              <LifeCoching />
-            </Layout>
-          }
+          path={TERMS_AND_CONDITIONS}
+          element={<Layout children={<TermsAndConditions />} />}
         />
-        <Route
-          path="/executive-coaching"
-          element={
-            <Layout>
-              <ExecutiveCoaching />
-            </Layout>
-          }
-        />
-        {coachesData.map((value, i) => {
+
+        {/* =========== Coaches */}
+        {/* Executive coaches */}
+        {/* {coachesData.map((value, i) => {
           return (
             <Route
               key={i}
               path={value.slug}
-              element={
-                <Layout>
-                  <CoachSubpage data={value} />
-                </Layout>
-              }
+              element={<Layout children={<CoachSubpage data={value} />} />}
             />
           );
-        })}
-        {lifestyleCoaches.map((value, i) => {
+        })} */}
+
+        {/* Lifestyle coaches */}
+        {/* {lifestyleCoaches.map((value, i) => {
           return (
             <Route
               key={i}
               path={value.slug}
-              element={
-                <Layout>
-                  <CoachSubpage data={value} />
-                </Layout>
-              }
+              element={<Layout children={<CoachSubpage data={value} />} />}
             />
           );
-        })}
+        })} */}
       </Routes>
     </Router>
-  );
-}
-
-function Layout({ children }) {
-  return (
-    <>
-      <Navbar />
-      {children}
-      <Footer />
-    </>
   );
 }
 

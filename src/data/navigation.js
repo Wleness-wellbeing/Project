@@ -20,51 +20,88 @@ import {
   faSquareWhatsapp,
   faSquareXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import {
+  ABOUT_US,
+  ADHD,
+  ALL_EXPERTS,
+  ANGER_ISSUES,
+  ANXIETY,
+  BIPOLAR_DISORDER,
+  BLOGS,
+  BRAIN_EXERCISE,
+  CAMPUS_AMBASSADOR,
+  CAREER,
+  COMMUNITY,
+  CONDUCT_DISORDER,
+  CONTACT_US,
+  CORPORATE_WELLBEING,
+  COUPLES_THERAPY,
+  DEPRESSION,
+  EXECUTIVE_COACHING,
+  FAQ,
+  INTERNSHIP,
+  LGBTQ,
+  LIFESTYLE_COACHING,
+  MEDITATION,
+  MUSICAL_HEALING,
+  ODD,
+  PANIC_ATTACKS,
+  PARANOIA,
+  PSYCHIATRIST_JOIN,
+  SADHNA,
+  STRESS,
+  THERAPIST_JOIN,
+  THERAPY,
+  USER_DASHBOARD,
+  USER_PROFILE,
+  USER_ROUTINE_CARE,
+  YOGA,
+} from "./urls";
 
 // ================= Navigation Bar =================
 // Services sub pages
 export const serviceMenuPages = [
   {
     name: "Therapy",
-    slug: "/services/therapy",
+    slug: THERAPY,
     subPages: [
-      ["Couples Therapy", "/services/couples-therapy"],
-      ["Stress", "/therapy/stress"],
-      ["Depression", "/therapy/depression"],
-      ["Anxiety", "/therapy/anxiety"],
-      ["Anger", "/therapy/anger"],
-      ["Panic Attack", "/therapy/panic-attack"],
-      ["Bipolar Disorder", "/therapy/bipolar-disorder"],
-      ["LGBTQ", "/therapy/lgbtq"],
-      ["ADHD", "/therapy/adhd"],
-      ["ODD", "/therapy/odd"],
-      ["Paranoia", "/therapy/paranoia"],
-      ["Conduct Disorder", "/therapy/conduct-disorder"],
+      ["Couples Therapy", COUPLES_THERAPY],
+      ["Stress", STRESS],
+      ["Depression", DEPRESSION],
+      ["Anxiety", ANXIETY],
+      ["Anger", ANGER_ISSUES],
+      ["Panic Attack", PANIC_ATTACKS],
+      ["Bipolar Disorder", BIPOLAR_DISORDER],
+      ["LGBTQ", LGBTQ],
+      ["ADHD", ADHD],
+      ["ODD", ODD],
+      ["Paranoia", PARANOIA],
+      ["Conduct Disorder", CONDUCT_DISORDER],
     ],
   },
   {
     name: "Yoga",
-    slug: "/activities/yoga",
+    slug: YOGA,
   },
   {
     name: "Lifestyle Coaching",
-    slug: "/life-coaching",
+    slug: LIFESTYLE_COACHING,
   },
   {
     name: "Executive Coaching",
-    slug: "/executive-coaching",
+    slug: EXECUTIVE_COACHING,
   },
   {
     name: "Corporate Wellbeing",
-    slug: "/corporate-wellbeing",
+    slug: CORPORATE_WELLBEING,
   },
   {
     name: "Music Healing",
-    slug: "/services/music-healing",
+    slug: MUSICAL_HEALING,
   },
   {
     name: "Meditation",
-    slug: "/activities/meditation",
+    slug: MEDITATION,
   },
 ];
 
@@ -72,19 +109,19 @@ export const serviceMenuPages = [
 export const activitiesMenuPages = [
   {
     name: "Yoga",
-    slug: "/activities/yoga",
+    slug: YOGA,
   },
   {
     name: "Meditation",
-    slug: "/activities/meditation",
+    slug: MEDITATION,
   },
   {
     name: "Sadhna",
-    slug: "/activities/sadhna",
+    slug: SADHNA,
   },
   {
     name: "Brain Exercise",
-    slug: "/activities/brain-exercise",
+    slug: BRAIN_EXERCISE,
   },
 ];
 
@@ -92,15 +129,15 @@ export const activitiesMenuPages = [
 export const seldCareSubpages = [
   {
     name: "Selfcare Dashbaord",
-    slug: "/user/dashboard",
+    slug: USER_DASHBOARD,
   },
   {
     name: "Brain Exercise",
-    slug: "/activities/brain-exercise",
+    slug: BRAIN_EXERCISE,
   },
   {
     name: "Sadhna",
-    slug: "/activities/sadhna",
+    slug: SADHNA,
   },
 ];
 
@@ -108,15 +145,11 @@ export const seldCareSubpages = [
 export const resourcesSubpages = [
   {
     name: "Blogs",
-    slug: "/blogs",
+    slug: BLOGS,
   },
-  // {
-  //   name: "Videos",
-  //   slug: "/videos",
-  // },
   {
     name: "Community",
-    slug: "/community",
+    slug: COMMUNITY,
   },
 ];
 
@@ -124,22 +157,22 @@ export const joinUsList = [
   {
     image: JoinUsTherapist,
     name: "Therapist",
-    slug: "/join-therapist",
+    slug: THERAPIST_JOIN,
   },
   {
     image: JoinUsPsychiatrist,
     name: "Psychiatrist",
-    slug: "/join-psychiatrist",
+    slug: PSYCHIATRIST_JOIN,
   },
   {
     image: JoinUsInternship,
     name: "Internship",
-    slug: "/internship",
+    slug: INTERNSHIP,
   },
   {
     image: JoinUsCampusAmbassador,
     name: "Campus Ambassador",
-    slug: "/campus-ambassador",
+    slug: CAMPUS_AMBASSADOR,
   },
 ];
 
@@ -158,36 +191,34 @@ export const footerLocation = [
 
 // Footer - About Wleness
 export const footerAboutWleness = [
-  ["About Us", "/about-us"],
-  ["Contact Us", "/contact-us"],
-  ["Career", "/career"],
-  ["Join as Psychiatrist", "/join-psychiatrist"],
-  ["Join as Therapist", "/join-therapist"],
-  ["FAQs", "/faqs"],
+  ["About Us", ABOUT_US],
+  ["Contact Us", CONTACT_US],
+  ["Career", CAREER],
+  ["Join as Psychiatrist", PSYCHIATRIST_JOIN],
+  ["Join as Therapist", THERAPIST_JOIN],
+  ["FAQs", FAQ],
 ];
 
 // Footer - Our Services
 export const footerOurServices = [
-  ["Therapy", "/services/therapy"],
-  ["Music Healing", "/services/music-healing"],
-  ["Executive Coaching", "/executive-coaching"],
-  ["Corporate Wellbeing", "/corporate-wellbeing"],
-  ["Lifestyle Coaching", "/life-coaching"],
-  ["Internship", "/internship"],
-  ["Yoga", "/activities/yoga"],
-  // ["Meditation", "/activities/meditation"],
-  // ["Internship", "/activities/internship"],
+  ["Therapy", THERAPY],
+  ["Music Healing", MUSICAL_HEALING],
+  ["Executive Coaching", EXECUTIVE_COACHING],
+  ["Corporate Wellbeing", CORPORATE_WELLBEING],
+  ["Lifestyle Coaching", LIFESTYLE_COACHING],
+  ["Internship", INTERNSHIP],
+  ["Yoga", YOGA],
 ];
 
 // Footer - Focus Areas
 export const footerFocusAreas = [
-  ["Couples Therapy", "/services/couples-therapy"],
-  ["Stress", "/therapy/stress"],
-  ["Depression", "/therapy/depression"],
-  ["Anxiety", "/therapy/anxiety"],
-  ["Anger Issues", "/therapy/anger"],
-  ["Panic Attack", "/therapy/panic-attack"],
-  ["Bipolar Disorder", "/therapy/bipolar-disorder"],
+  ["Couples Therapy", COUPLES_THERAPY],
+  ["Stress", STRESS],
+  ["Depression", DEPRESSION],
+  ["Anxiety", ANXIETY],
+  ["Anger Issues", ANGER_ISSUES],
+  ["Panic Attack", PANIC_ATTACKS],
+  ["Bipolar Disorder", BIPOLAR_DISORDER],
   // ["LGBTQ", "/therapy/lgbtq"],
   // ["ADHD", "/therapy/adhd"],
   // ["ODD", "/therapy/odd"],
@@ -197,9 +228,9 @@ export const footerFocusAreas = [
 
 // Footer - Our Experts
 export const footerOurExperts = [
-  ["Therapists", "/experts/all"],
+  ["Therapists", ALL_EXPERTS],
   ["Psychiatrists", ""],
-  ["Coaches", "/executive-coaching"],
+  ["Coaches", EXECUTIVE_COACHING],
 ];
 
 // Footer social links
@@ -211,23 +242,11 @@ export const socialLinks = [
   [faLinkedin, "https://www.linkedin.com/company/wleness/"],
 ];
 
-// ================= Admin Links =================
-// Admin Side bar
-export const adminSidebar = [
-  ["Doctors", "/admin/doctors"],
-  ["Queries", "/admin/queries"],
-  ["Issue Category", "/admin/issue-category"],
-  ["Issues", "/admin/therapy"],
-  ["Users", "/admin/users"],
-  ["Questions", "/admin/questions"],
-  ["Blogs", "/admin/blogs"],
-];
-
 export const userDashboardLinks = [
-  ["Home", "/user/profile", faHome, "_self"],
+  ["Home", USER_PROFILE, faHome, "_self"],
   // ["Profile", "/user/profile", faUser],
   // ["Self Care", "/user/dashboard", faHeartCircleCheck],
   // ["Routine Care", "/user/routine-care", faBookBookmark],
-  ["Routine Care", "/user/routine-care", faClipboardList, "_self"],
+  ["Routine Care", USER_ROUTINE_CARE, faClipboardList, "_self"],
   ["Community", "https://community.wleness.com", faUsers, "_blank"],
 ];

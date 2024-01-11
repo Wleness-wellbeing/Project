@@ -9,13 +9,18 @@ import {
   saloniHeader,
   saloniMid,
 } from "../assets";
+import {
+  EC_COACH_ANDREA_BIANCHI,
+  EC_COACH_ANJU_CHAWLA,
+  EC_COACH_SALONI_GUPTA,
+} from "./urls";
 
 export const coachesData = [
   {
     name: "Saloni Gupta",
     profession: "Executive Coach | Speaker",
     image: saloniHeader,
-    slug: "/coach/saloni-gupta",
+    slug: EC_COACH_SALONI_GUPTA,
     desc: "Saloni is a certified international executive coach with a strong passion for assisting leaders and organizations in navigating change and achieving success in a disruptive world. Her corporate career spans over 20 years, during which she held innovative HR leadership roles and served as a coach in various multinational companies across North America, Europe, and Asia.",
     about: {
       title: "Saloni Gupta",
@@ -64,7 +69,7 @@ export const coachesData = [
     name: "Dr. Anju Chawla",
     profession: "Coach | Speaker | Trainer | Assessor",
     image: anjuHeader,
-    slug: "/coach/anju-chawla",
+    slug: EC_COACH_ANJU_CHAWLA,
     desc: "Dr. Anju Chawla is a dedicated advocate for harnessing the power of Emotional Intelligence (EI) to transform lives and achieve personal and professional goals. With over two decades of experience in coaching and mentoring, Dr. Chawla firmly believes that every individual possesses the incredible potential of EI, which she endeavours to unlock through her work. As a seasoned coach, she understands the invaluable role that an external perspective plays in personal growth and development.",
     about: {
       title: "Anju Chawla",
@@ -110,7 +115,7 @@ export const coachesData = [
     profession:
       "Executive Coach | Professional Coach PCC ICF | HOGAN & EQ Assessor | Brain Profiler | Speaker",
     image: andreaHeader,
-    slug: "/coach/andrea-bianchi",
+    slug: EC_COACH_ANDREA_BIANCHI,
     desc: "Andrea Bianchi is a highly accomplished professional with a diverse range of skills and expertise. A PCC ICF-level Coach and Senior Trainer, offers over a decade of Project Management experience in Learning and development. With a Master's degree from the University of Milan, he provides coaching, consultancy, and training to corporations on leadership development, managing transitions, change management, and time management.",
     about: {
       title: "Andrea Bianchi",
