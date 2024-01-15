@@ -21,7 +21,7 @@ import OtpModal from "../../components/Auth/OtpModal";
 import YogaCheckout from "./YogaCheckout";
 import YogaSessionPricingItem from "../../components/list/YogaSessionPricingItem";
 
-const dates = ["13 Jan 2024", "14 Jan 2024", "20 Jan 2024", "21 Jan 2024"];
+const dates = ["20 Jan 2024", "21 Jan 2024", "27 Jan 2024", "28 Jan 2024"];
 
 const morningBatches = [
   "06:00 to 07:00 AM",
