@@ -17,9 +17,12 @@ export default function Checkout({
   checkoutDetails,
   user,
   setUser,
-  coupon,
+  couponCode,
   setCoupon,
   makePayment,
+  setCouponAlertMessage,
+  couponMessage,
+  removeDiscount,
 }) {
   return (
     <div className="py-6">
@@ -81,8 +84,11 @@ export default function Checkout({
                 <CheckoutInputField
                   name={"coupon_code"}
                   type={"text"}
-                  value={coupon}
-                  onchange={(e) => setCoupon(e.target.value)}
+                  value={couponCode.code}
+                  onchange={(e) => {
+                    setCoupon({ ...couponCode, code: e.target.value });
+                    setCouponAlertMessage("", "");
+                  }}
                   placeholder="#COUPONCODE"
                 />
               </div>
@@ -96,30 +102,50 @@ export default function Checkout({
               </div>
             </div>
           </form>
-          <div className="hidden pb-2">
-            <span className="flex justify-between rounded-lg bg-slate-200 px-4 py-1 font-semibold">
-              <span>#FIRSTSESSION</span>
-              <span>
-                <FontAwesomeIcon icon={faXmark} />
-              </span>
-            </span>
-            <p className="pt-2 font-semibold text-primary-300">
-              Coupon applied! Enjoy your discount!
-            </p>
-          </div>
+
+          {couponCode.code ? (
+            <div className="pb-2">
+              {couponCode.is_applied ? (
+                <span className="flex justify-between rounded-lg bg-slate-200 px-4 py-1 font-semibold">
+                  <span>#{couponCode.code}</span>
+                  <span>
+                    <FontAwesomeIcon icon={faXmark} onClick={removeDiscount} />
+                  </span>
+                </span>
+              ) : null}
+              <p
+                className={`pt-2 font-semibold ${
+                  couponMessage.status == "success"
+                    ? "text-primary-300"
+                    : "text-red-500"
+                }`}
+              >
+                {couponMessage.message}
+              </p>
+            </div>
+          ) : null}
         </div>
 
         <div className="pt-8">
           <h4 className="mb-2 text-xl font-semibold">Payment Details</h4>
-          <ul className="space-y-3 border-slate-400">
-            <li className="flex justify-between font-semibold">
+          <ul className="border-slate-400">
+            <li className="mb-2 flex justify-between font-semibold">
               <span className="text-slate-400">
                 {checkoutDetails.plan} Price
               </span>
               <span className="text-slate-800">
-                Rs. {checkoutDetails.price}
+                Rs. {checkoutDetails.original_price}
               </span>
             </li>
+            {couponCode.is_applied ? (
+              <li className="mb-3 flex justify-between font-semibold">
+                <span className="text-slate-400">
+                  Referral Discount ( 10% )
+                </span>
+                <span className="text-slate-800">- Rs. {couponCode.price}</span>
+              </li>
+            ) : null}
+
             {/* <li className="mb-2 flex justify-between">
               <span className="font-medium">Discount</span>
               <span className="font-medium">Rs. 99</span>

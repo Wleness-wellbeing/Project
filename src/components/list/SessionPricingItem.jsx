@@ -9,7 +9,7 @@ export default function SessionPricingItem({ data, selectPlan, selectedPlan }) {
       >
         <span>{data.package}</span>
         <span className="flex items-center space-x-2">
-          <span>Rs. {data.price}</span>
+          <span>Rs. {data.original_price}</span>
           <input
             type="radio"
             name="plan"
