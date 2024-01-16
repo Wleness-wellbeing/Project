@@ -119,7 +119,7 @@ export default function Appointment() {
     for (const key in checkoutDetails) {
       formData[key] = checkoutDetails[key];
     }
-    console.log(couponCode);
+
     if (couponCode.is_applied) {
       formData["coupon_code"] = couponCode.code;
     }
@@ -129,7 +129,6 @@ export default function Appointment() {
     axios
       .post(VERIFY_USER, formData)
       .then((response) => {
-        console.log(response.data);
         if (response.data.status == "success") {
           if (!response.data.isVerified) {
             // Display otp modal
@@ -225,6 +224,7 @@ export default function Appointment() {
   // ======================================
   const handleApplyCoupon = (e) => {
     e.preventDefault();
+    return null;
 
     // Validate coupon code
     if (couponCode.code != profileDetails.expert_id) {
