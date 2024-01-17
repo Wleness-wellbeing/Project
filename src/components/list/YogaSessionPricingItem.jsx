@@ -25,7 +25,7 @@ export default function YogaSessionPricingItem({
         </div>
         <div className="flex justify-between">
           <small className="font-quicksand font-semibold text-slate-500">
-            {data.discount ? `${data.discount} % discount` : ""}
+            {data.discount ? `${data.discount} % savings` : ""}
           </small>
           <small className=" font-quicksand font-semibold text-slate-500">
             <del>{data.discount ? `Rs. ${data.original_price}` : ""}</del>

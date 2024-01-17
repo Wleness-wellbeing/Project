@@ -21,7 +21,7 @@ import OtpModal from "../../components/Auth/OtpModal";
 import YogaCheckout from "./YogaCheckout";
 import YogaSessionPricingItem from "../../components/list/YogaSessionPricingItem";
 
-const dates = ["13 Jan 2024", "14 Jan 2024", "20 Jan 2024", "21 Jan 2024"];
+const dates = ["20 Jan 2024", "21 Jan 2024", "27 Jan 2024", "28 Jan 2024"];
 
 const morningBatches = [
   "06:00 to 07:00 AM",
@@ -50,7 +50,7 @@ export default function YogaBooking() {
     date: "",
     time: null,
     price: "",
-    batch: "",
+    original_price: "",
   });
   const [userDetails, setUserDetails] = useState({
     firstName: "",
@@ -67,7 +67,22 @@ export default function YogaBooking() {
     appointment_id: "",
     price: "",
   });
-  const [couponCode, setCouponCode] = useState("");
+  const [couponCode, setCouponCode] = useState({
+    code: "",
+    is_applied: false,
+    discount_price: 0,
+  });
+  const [couponMessage, setCouponMessage] = useState({
+    status: "",
+    message: "",
+  });
+
+  const setCouponAlertMessage = (status, message) => {
+    setCouponMessage({
+      status: status,
+      message: message,
+    });
+  };
 
   // ======================================
   // Get available booking slots
@@ -113,6 +128,10 @@ export default function YogaBooking() {
       formData[key] = checkoutDetails[key];
     }
 
+    if (couponCode.is_applied) {
+      formData["coupon_code"] = couponCode.code;
+    }
+
     // Set loading in payment
     setMakePayment(true);
     axios
@@ -146,7 +165,25 @@ export default function YogaBooking() {
             phone: "",
           });
         } else {
-          console.log(response.data.message);
+          setCouponAlertMessage(response.data.status, response.data.message);
+          // Empty user form
+          setUserDetails({
+            firstName: "",
+            lastName: "",
+            email: "",
+            phone: "",
+          });
+          setCouponCode({
+            ...couponCode,
+            is_applied: false,
+            discount_price: 0,
+            price: 0,
+          });
+          setMakePayment(false);
+          setCheckoutDetails({
+            ...checkoutDetails,
+            price: checkoutDetails.original_price,
+          });
         }
       })
       .catch((error) => {
@@ -195,23 +232,55 @@ export default function YogaBooking() {
   // ======================================
   const handleApplyCoupon = (e) => {
     e.preventDefault();
+    return null;
 
-    useEffect(() => {
-      axios
-        .post(APPLY_COUPON)
-        .then((response) => {
-          if (response.data.status == "success") {
-            console.log(response.data);
-          } else {
-            console.log(response.data.message);
-          }
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    }, []);
+    // Validate coupon code
+    if (couponCode.code != profileDetails.expert_id) {
+      setCouponAlertMessage("error", "Invalid Coupon Code");
+      setCheckoutDetails({
+        ...checkoutDetails,
+        price: checkoutDetails.original_price,
+      });
+      setCouponCode({
+        ...couponCode,
+        is_applied: false,
+      });
+      return null;
+    }
+
+    // Coupon code minimum value
+    if (checkoutDetails.original_price < 500) {
+      setCouponAlertMessage(
+        "error",
+        "Coupon Code is valid on minimum value of Rs.500",
+      );
+      return null;
+    } else {
+      setCouponCode({
+        ...couponCode,
+        price: checkoutDetails.original_price * 0.1,
+        is_applied: true,
+      });
+      setCheckoutDetails({
+        ...checkoutDetails,
+        price:
+          checkoutDetails.original_price - checkoutDetails.original_price * 0.1,
+      });
+      setCouponAlertMessage("success", "Coupon applied! Enjoy your discount!");
+    }
   };
 
+  const removeDiscount = () => {
+    setCouponCode({
+      code: "",
+      is_applied: false,
+    });
+    setCheckoutDetails({
+      ...checkoutDetails,
+      price: checkoutDetails.original_price,
+    });
+    setCouponAlertMessage("", "");
+  };
   // ======================================
   // Initiate payment
   // ======================================
@@ -337,6 +406,7 @@ export default function YogaBooking() {
                             ...checkoutDetails,
                             plan: value.package,
                             price: value.discount_price,
+                            original_price: value.original_price,
                           })
                         }
                         selectedPlan={checkoutDetails?.plan === value.package}
@@ -557,14 +627,9 @@ export default function YogaBooking() {
                 <div className="mb-8 text-center">
                   <button
                     type="submit"
-                    disabled={
-                      checkoutDetails.plan == "" ||
-                      checkoutDetails.mode == "" ||
-                      checkoutDetails.date == "" ||
-                      checkoutDetails.batch == ""
-                        ? !checkout
-                        : checkout
-                    }
+                    disabled={Object.values(checkoutDetails).includes(
+                      "" || null,
+                    )}
                     className="btn-one !rounded-lg  enabled:!bg-primary-300 disabled:cursor-not-allowed disabled:bg-gray-500"
                   >
                     Proceed
@@ -582,8 +647,11 @@ export default function YogaBooking() {
                 makePayment={makePayment}
                 setMakePayment={setMakePayment}
                 checkoutDetails={checkoutDetails}
-                coupon={couponCode}
+                couponCode={couponCode}
                 setCoupon={setCouponCode}
+                setCouponAlertMessage={setCouponAlertMessage}
+                couponMessage={couponMessage}
+                removeDiscount={removeDiscount}
               />
             )}
           </div>

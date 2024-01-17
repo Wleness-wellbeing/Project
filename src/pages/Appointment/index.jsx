@@ -4,7 +4,6 @@ import axios from "axios";
 // Data
 import { modes } from "../../data/doctors";
 import {
-  APPLY_COUPON,
   APPOINTMENT_PAYMENT,
   GET_CHECKOUT_DETAILS,
   VERIFY_USER,
@@ -35,6 +34,7 @@ export default function Appointment() {
     date: "",
     time: null,
     price: "",
+    original_price: "",
   });
   const [userDetails, setUserDetails] = useState({
     firstName: "",
@@ -51,7 +51,22 @@ export default function Appointment() {
     appointment_id: "",
     price: "",
   });
-  const [couponCode, setCouponCode] = useState("");
+  const [couponCode, setCouponCode] = useState({
+    code: "",
+    is_applied: false,
+    discount_price: 0,
+  });
+  const [couponMessage, setCouponMessage] = useState({
+    status: "",
+    message: "",
+  });
+
+  const setCouponAlertMessage = (status, message) => {
+    setCouponMessage({
+      status: status,
+      message: message,
+    });
+  };
 
   // ======================================
   // Get available booking slots
@@ -105,6 +120,10 @@ export default function Appointment() {
       formData[key] = checkoutDetails[key];
     }
 
+    if (couponCode.is_applied) {
+      formData["coupon_code"] = couponCode.code;
+    }
+
     // Set loading in payment
     setMakePayment(true);
     axios
@@ -138,7 +157,25 @@ export default function Appointment() {
             phone: "",
           });
         } else {
-          console.log(response.data.message);
+          setCouponAlertMessage(response.data.status, response.data.message);
+          // Empty user form
+          setUserDetails({
+            firstName: "",
+            lastName: "",
+            email: "",
+            phone: "",
+          });
+          setCouponCode({
+            ...couponCode,
+            is_applied: false,
+            discount_price: 0,
+            price: 0,
+          });
+          setMakePayment(false);
+          setCheckoutDetails({
+            ...checkoutDetails,
+            price: checkoutDetails.original_price,
+          });
         }
       })
       .catch((error) => {
@@ -187,21 +224,54 @@ export default function Appointment() {
   // ======================================
   const handleApplyCoupon = (e) => {
     e.preventDefault();
+    return null;
 
-    useEffect(() => {
-      axios
-        .post(APPLY_COUPON)
-        .then((response) => {
-          if (response.data.status == "success") {
-            console.log(response.data);
-          } else {
-            console.log(response.data.message);
-          }
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    }, []);
+    // Validate coupon code
+    if (couponCode.code != profileDetails.expert_id) {
+      setCouponAlertMessage("error", "Invalid Coupon Code");
+      setCheckoutDetails({
+        ...checkoutDetails,
+        price: checkoutDetails.original_price,
+      });
+      setCouponCode({
+        ...couponCode,
+        is_applied: false,
+      });
+      return null;
+    }
+
+    // Coupon code minimum value
+    if (checkoutDetails.original_price < 500) {
+      setCouponAlertMessage(
+        "error",
+        "Coupon Code is valid on minimum value of Rs.500",
+      );
+      return null;
+    } else {
+      setCouponCode({
+        ...couponCode,
+        price: checkoutDetails.original_price * 0.1,
+        is_applied: true,
+      });
+      setCheckoutDetails({
+        ...checkoutDetails,
+        price:
+          checkoutDetails.original_price - checkoutDetails.original_price * 0.1,
+      });
+      setCouponAlertMessage("success", "Coupon applied! Enjoy your discount!");
+    }
+  };
+
+  const removeDiscount = () => {
+    setCouponCode({
+      code: "",
+      is_applied: false,
+    });
+    setCheckoutDetails({
+      ...checkoutDetails,
+      price: checkoutDetails.original_price,
+    });
+    setCouponAlertMessage("", "");
   };
 
   // ======================================
@@ -250,7 +320,6 @@ export default function Appointment() {
   const setOTP = (otp) => {
     setOtpState({ ...otpState, otp: otp });
   };
-  console.log(profileDetails.packages);
 
   return (
     <>
@@ -355,12 +424,16 @@ export default function Appointment() {
                 <div className="mb-8">
                   <BookingHeading heading="2. Select session plan" />
                   <SessionPricingItem
-                    data={{ package: "Introductory Session", price: 600 }}
+                    data={{
+                      package: "Introductory Session",
+                      original_price: 600,
+                    }}
                     selectPlan={() =>
                       setCheckoutDetails({
                         ...checkoutDetails,
                         plan: "Introductory Session",
                         price: 600,
+                        original_price: 600,
                       })
                     }
                     selectedPlan={
@@ -376,7 +449,8 @@ export default function Appointment() {
                           setCheckoutDetails({
                             ...checkoutDetails,
                             plan: value.package,
-                            price: value.price,
+                            price: value.original_price,
+                            original_price: value.original_price,
                           })
                         }
                         selectedPlan={checkoutDetails?.plan === value.package}
@@ -434,8 +508,11 @@ export default function Appointment() {
                 makePayment={makePayment}
                 setMakePayment={setMakePayment}
                 checkoutDetails={checkoutDetails}
-                coupon={couponCode}
+                couponCode={couponCode}
                 setCoupon={setCouponCode}
+                setCouponAlertMessage={setCouponAlertMessage}
+                couponMessage={couponMessage}
+                removeDiscount={removeDiscount}
               />
             )}
           </div>

@@ -33,32 +33,24 @@ import WhatsappChat from "../../components/WhatsappChat";
 
 const featuredIn = [
   [
-    featuredIn1,
-    "https://www.business-standard.com/content/press-releases-ani/discover-a-new-era-of-wellness-with-wleness-unveiling-innovative-solutions-for-your-health-and-happiness-123101600467_1.html",
+    featuredIn6,
+    "https://timesofindia.indiatimes.com/business/india-business/indias-11-fastest-growing-businesses-in-2023/articleshow/106354579.cms",
   ],
   [
-    featuredIn2,
-    "https://republicnewsindia.com/discover-a-new-era-of-wellness-with-wleness-unveiling-innovative-solutions-for-your-health-and-happiness/",
+    featuredIn1,
+    "https://www.business-standard.com/content/press-releases-ani/discover-a-new-era-of-wellness-with-wleness-unveiling-innovative-solutions-for-your-health-and-happiness-123101600467_1.html",
   ],
   [
     featuredIn3,
     "https://aninews.in/news/business/business/discover-a-new-era-of-wellness-with-wleness-unveiling-innovative-solutions-for-your-health-and-happiness20231016140849/",
   ],
   [
-    featuredIn5,
-    "https://jionews.com/home/article/5/1087191419/Discover-a-New-Era-of-Wellness-with-WLENESS-Unveiling-Innovative-Solutions-for-Your-Health-and-Happiness",
+    featuredIn7,
+    "https://www.hindustantimes.com/brand-stories/excellence-redefined-meet-the-10-businesses-setting-new-standards-in-2023-101701260465504.html",
   ],
   [
     featuredIn4,
     "https://m.dailyhunt.in/news/india/english/lokmattimes+english-epaper-lokmaten/discover+a+new+era+of+wellness+with+wleness+unveiling+innovative+solutions+for+your+health+and+happiness-newsid-n547715388?sm=Y",
-  ],
-  [
-    featuredIn6,
-    "https://timesofindia.indiatimes.com/business/india-business/indias-11-fastest-growing-businesses-in-2023/articleshow/106354579.cms",
-  ],
-  [
-    featuredIn7,
-    "https://www.hindustantimes.com/brand-stories/excellence-redefined-meet-the-10-businesses-setting-new-standards-in-2023-101701260465504.html",
   ],
 ];
 
@@ -247,7 +239,7 @@ export default function Home() {
                     src={value[0]}
                     key={i}
                     alt="India's Most Diverse Holistic Platform"
-                    className="w-42 h-12 object-contain"
+                    className="h-12 w-48 object-contain"
                   />
                 </Link>
               );
