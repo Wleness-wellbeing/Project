@@ -28,7 +28,7 @@ export default function MainAssessment() {
           {assessments.map((value, i) => {
             return (
               <Link
-                to={"/assessment/" + value.slug}
+                to={value.slug}
                 key={i}
                 className="mx-auto inline-block w-full cursor-pointer rounded-lg border-2 bg-white py-6 shadow-xl shadow-gray-300 transition-all hover:border-primary-300 hover:shadow-lg"
               >

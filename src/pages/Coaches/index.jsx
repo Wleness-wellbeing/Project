@@ -28,26 +28,31 @@ import { Helmet } from "react-helmet";
 import { EXECUTIVE_COACHING_META } from "../../data/meta";
 import { get_canonical } from "../../utils";
 import Confirmation from "../../components/Modals/Confirmation";
+import {
+  EC_COACH_ANDREA_BIANCHI,
+  EC_COACH_ANJU_CHAWLA,
+  EC_COACH_SALONI_GUPTA,
+} from "../../data/urls";
 
 const executiveCoaches = [
   {
     name: "Saloni Gupta",
     profession: "Executive Coach",
-    slug: "/coach/saloni-gupta",
+    slug: EC_COACH_SALONI_GUPTA,
     image: executiveCoach1,
     alt: "Saloni Gupta, Executive Coach Certified by ICF - Wleness",
   },
   {
     name: "Dr. Anju Chawla",
     profession: "Coach & Speaker",
-    slug: "/coach/anju-chawla",
+    slug: EC_COACH_ANJU_CHAWLA,
     image: executiveCoach2,
     alt: "Dr. Anju Chawla, Coach & Speaker, Certified by ICF - Wleness",
   },
   {
     name: "Andrea Bianchi",
     profession: "Executive Coach",
-    slug: "/coach/andrea-bianchi",
+    slug: EC_COACH_ANDREA_BIANCHI,
     image: executiveCoach3,
     alt: "Andrea Bianchi, Executive Coach, Certified by ICF - Wleness",
   },
@@ -112,7 +117,7 @@ export default function ExecutiveCoaching() {
               </h2>
             </hgroup>
 
-            <ul className="text-center lg:text-left text-sm md:text-base">
+            <ul className="text-center text-sm md:text-base lg:text-left">
               <li className="mb-6 rounded-2xl bg-primary-50 p-3 font-semibold">
                 In the dynamic realm of modern business, leaders face fierce
                 competition, complexity, and constant change. Not all leaders

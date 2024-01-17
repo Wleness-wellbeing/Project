@@ -6,6 +6,7 @@ import { faAngleLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { ASSESSMENT_RESULT } from "../../data/api";
 import ThankYou from "../../components/Modals/ThankYou";
+import { SELF_ASSESSMENT } from "../../data/urls";
 
 export default function AssessmentQuestions() {
   const { slug } = useParams();
@@ -24,7 +25,7 @@ export default function AssessmentQuestions() {
 
   // Set Assessment Questions
   let questionSet = assessments
-    .filter((key) => key.slug == slug)
+    .filter((key) => key.slug.split("/").at(-1) == slug)
     .map((value) => value.questions);
 
   if (questions == null) {
@@ -52,7 +53,7 @@ export default function AssessmentQuestions() {
   const handleBack = () => {
     let index = questions.indexOf(activeQuestion);
     if (index == 0 || index == -1) {
-      navigate("/assessment");
+      navigate(SELF_ASSESSMENT);
     } else {
       setActiveQuestion(questions[index - 1]);
       setCurrentAnswer(allAnswers[index - 1]);

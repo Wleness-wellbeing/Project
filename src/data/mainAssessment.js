@@ -8,6 +8,14 @@ import {
   resultAdhd,
   resultStress,
 } from "../assets";
+import {
+  ADHD_ASSESSMENT,
+  ANXIETY_ASSESSMENT,
+  DEPRESSION_ASSESSMENT,
+  OCD_ASSESSMENT,
+  STRESS_ASSESSMENT,
+  SUBSTANCE_USE_ASSESSMENT,
+} from "./urls";
 
 // Answerable options
 export const answers = ["Never", "Sometimes", "Often", "Always"];
@@ -126,7 +134,7 @@ export const assessments = [
   {
     name: "Stress",
     image: AssessmentStressIcon,
-    slug: "stress",
+    slug: STRESS_ASSESSMENT,
     questions: stressQuestions,
     about: [
       "It can range from motivating challenges to overwhelming strain.",
@@ -149,7 +157,7 @@ export const assessments = [
   {
     name: "Depression",
     image: AssessmentDepressionIcon,
-    slug: "depression",
+    slug: DEPRESSION_ASSESSMENT,
     questions: depressionQuestions,
     about: [
       "Trouble concentrating",
@@ -172,7 +180,7 @@ export const assessments = [
   {
     name: "Anxiety",
     image: AssessmentAnxietyIcon,
-    slug: "anxiety",
+    slug: ANXIETY_ASSESSMENT,
     questions: anxietyQuestions,
     about: [
       "Excessive worry and apprehension about everyday events or situations.",
@@ -195,7 +203,7 @@ export const assessments = [
   {
     name: "ADHD",
     image: AssessmentAdhdIcon,
-    slug: "adhd",
+    slug: ADHD_ASSESSMENT,
     questions: adhdQuestions,
     about: [
       "Poor Time Management: Struggling to manage time effectively",
@@ -218,7 +226,7 @@ export const assessments = [
   {
     name: "OCD",
     image: AssessmentOCDIcon,
-    slug: "ocd",
+    slug: OCD_ASSESSMENT,
     questions: ocdQuestions,
     about: [
       "Poor Time Management: Struggling to manage time effectively",
@@ -241,7 +249,7 @@ export const assessments = [
   {
     name: "Substance Use",
     image: AssessmentSubstanceIcon,
-    slug: "substance-use",
+    slug: SUBSTANCE_USE_ASSESSMENT,
     questions: substanceUseQuestions,
     about: [
       "Reflect on your thoughts, emotions, and behaviors over the past 3-4 weeks.",

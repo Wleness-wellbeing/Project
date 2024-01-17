@@ -24,9 +24,6 @@ export default function Blogs() {
     handleBlogsFilter,
   } = getBlogs();
 
-  console.log("this is blog", blogPosts);
-  console.log("this is all blog", allBlogPosts);
-
   if (!status) {
     return <div className="mb-5 text-center">Loading...</div>;
   }

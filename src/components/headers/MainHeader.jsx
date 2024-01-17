@@ -2,6 +2,7 @@ import React from "react";
 // Data
 import { mainHeaderImage } from "../../assets";
 import { Link } from "react-router-dom";
+import { SELF_ASSESSMENT } from "../../data/urls";
 
 export default function MainHeader({ openAssessmentModal }) {
   return (
@@ -40,7 +41,7 @@ export default function MainHeader({ openAssessmentModal }) {
           </h3>
 
           <Link
-            to="/assessment"
+            to={SELF_ASSESSMENT}
             className="mx-auto block w-4/5 rounded-full border-2 border-primary-400 px-6 py-2 text-center text-sm font-semibold text-primary-400 transition-all hover:bg-primary-400 hover:text-white md:w-fit lg:mx-0 lg:px-8 lg:text-base"
           >
             Self Assessment
