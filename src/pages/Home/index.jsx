@@ -30,6 +30,7 @@ import { get_canonical } from "../../utils";
 import Objectives from "../../components/Objectives";
 import YogaSlider from "../../components/Carousels/YogaSlider";
 import WhatsappChat from "../../components/WhatsappChat";
+import InternshipBanner from "../Internship/InternshipBanner";
 
 const featuredIn = [
   [
@@ -120,8 +121,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ========== Objectives ========== */}
-      <Objectives />
+      <InternshipBanner url="/internship" new_page={false} />
+      <br />
+      <br />
 
       {/* Doctors Slider */}
       <DoctorSlider
@@ -130,6 +132,9 @@ export default function Home() {
         setUrl={setRediredurl}
       />
 
+      {/* ========== Objectives ========== */}
+      <br />
+      <Objectives />
       <YogaSlider />
 
       {/* ========== Community ========== */}

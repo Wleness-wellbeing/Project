@@ -879,6 +879,7 @@ import internshipIcon3 from "./images/internship/internship-icon-3.webp";
 import internshipIcon4 from "./images/internship/internship-icon-4.webp";
 import internshipIcon5 from "./images/internship/internship-icon-5.webp";
 import internshipWhy from "./images/internship/internship-why.webp";
+import internshipBanner from "./images/internship/internship-banner.webp";
 export {
   internshipHeader,
   internshipIcon1,
@@ -887,6 +888,7 @@ export {
   internshipIcon4,
   internshipIcon5,
   internshipWhy,
+  internshipBanner,
 };
 
 // Clients and Testimonials Image
