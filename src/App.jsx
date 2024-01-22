@@ -391,7 +391,7 @@ function App() {
           }
         />
         <Route
-          path="/yoga-subscription"
+          path="/yoga-for-99"
           element={
             <Layout>
               <YogaSubscription />

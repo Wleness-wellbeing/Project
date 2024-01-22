@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function YogaInstructorCard(props) {
   return (
-    <div className="mx-auto w-full p-2 pt-24 lg:w-full" title={props.data.name}>
+    <div className="p-2 pt-24 lg:w-[400px]" title={props.data.name}>
       <div className="flex flex-col items-center justify-center rounded-xl bg-primary-50 px-4 py-4 md:py-6">
         <div className="relative mb-12">
           <Link
@@ -34,13 +34,12 @@ export default function YogaInstructorCard(props) {
             </li>
           </ul>
         </div>
-        <Link
-          to="javascript:void()"
-          // to={`/yoga/booking/${props.data.slug}`}
+        {/* <button
+          to={`/yoga/booking/${props.data.slug}`}
           className="btn-one bg-teal-600 !text-sm !font-bold transition-colors hover:bg-teal-500 hover:bg-gradient-to-br hover:shadow-md"
         >
           Book Now
-        </Link>
+        </button> */}
       </div>
     </div>
   );

@@ -351,6 +351,8 @@ import yoga__WeightLoss from "./images/activities/yoga/yoga__weight-loss.webp";
 import yoga__WomenYoga from "./images/activities/yoga/yoga__yoga-for-women.webp";
 import benefits_of_yoga from "./images/activities/yoga/benefits-of-yoga.webp";
 import portrait_benefits_of_yoga from "./images/activities/yoga/yoga_benefits-of-yoga.webp";
+import yoga__one_time_session from "./images/activities/yoga/yoga_one-time-session.jpeg";
+import yoga__montly_subscription from "./images/activities/yoga/yoga_monthly-subscription.jpeg";
 // Activities >> Yoga >> Adhomukha
 import adhvmukhaHeader from "./images/activities/yoga/adhomukha/adhv-mukha-header.png";
 import adhvmukhaSteps from "./images/activities/yoga/adhomukha/steps-of-adhv-mukha-yoga.png";
@@ -499,6 +501,8 @@ export {
   yoga__TherapauticYoga,
   yoga__WeightLoss,
   yoga__WomenYoga,
+  yoga__one_time_session,
+  yoga__montly_subscription,
   // Brain Exericise
   brainExerciseHeader,
   brainGameGalaxy,

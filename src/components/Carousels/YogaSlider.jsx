@@ -10,7 +10,7 @@ import YogaInstructorCard from "../Cards/YogaInstructorCard";
 import { YOGA_EXPERTS_URI } from "../../data/api";
 import axios from "axios";
 
-export default function YogaSlider() {
+export default function YogaSlider({ onclick }) {
   const [swiper, setSwiper] = useState(null); // Store Swiper instance
 
   const handleMouseEnter = () => {
@@ -70,11 +70,11 @@ export default function YogaSlider() {
 
       {/* Yoga Instructors */}
       <div
-        className="doctorSlider relative"
+        className="doctorSlider relative flex justify-center"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <Swiper
+        {/* <Swiper
           modules={[Autoplay, Pagination]}
           className="mySwiper overflow-y-visible rounded-2xl pb-12"
           grabCursor={true}
@@ -94,14 +94,11 @@ export default function YogaSlider() {
           onSwiper={(swiper) => setSwiper(swiper)} // Store Swiper instance
           speed={600}
         >
-          {experts?.map((value, index) => {
-            return (
-              <SwiperSlide key={index}>
-                <YogaInstructorCard key={index} data={value} />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+          
+        </Swiper> */}
+        {experts?.map((value, index) => {
+          return <YogaInstructorCard key={index} data={value} />;
+        })}
       </div>
     </section>
   );

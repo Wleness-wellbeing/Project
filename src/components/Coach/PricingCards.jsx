@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function PricingCards({ packages }) {
+function PricingCards({ packages, openForm }) {
   const [selectedPackage, setSetselectedPackage] = useState({
     service: packages[0].title,
     name: packages[0].pricing[0].name,
@@ -97,7 +97,10 @@ function PricingCards({ packages }) {
                   </figcaption>
                 </div>
                 <div className="text-center">
-                  <button className="rounded-lg bg-primary-300 px-5 py-2 font-semibold text-white transition-all hover:bg-primary-300/80">
+                  <button
+                    onClick={() => openForm(selectedPackage)}
+                    className="rounded-lg bg-primary-300 px-5 py-2 font-semibold text-white transition-all hover:bg-primary-300/80"
+                  >
                     Book Now
                   </button>
                 </div>
