@@ -6,6 +6,7 @@ import CoachExpertise from "../../components/Coach/CoachExpertise";
 import CoachCertificates from "../../components/Coach/CoachCertificates";
 import CoachRequestForm from "../../components/Forms/CoachRequestForm";
 import HappyClient from "../../components/HappyClient";
+import PricingCards from "../../components/Coach/PricingCards";
 
 const reviewsHeading = {
   heading: [
@@ -40,6 +41,11 @@ export default function CoachSubpage(props) {
         image={props.data.expertise.image}
         lists={props.data.expertise.list}
       />
+
+      {props.data.displayPricing ? (
+        <PricingCards packages={props.data.packages} />
+      ) : null}
+
       <CoachCertificates certificates={props.data.certifications} />
 
       {props.data.reviews ? (

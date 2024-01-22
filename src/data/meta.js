@@ -30,6 +30,12 @@ const YOGA_META = {
     "Experience the power of yoga with Wleness. Our yoga activities offer a path to rejuvenation, self-discovery, and a harmonious mind-body connection.",
 };
 
+const YOGA_SUBSCRIPTION_META = {
+  title: "Yoga Sessions",
+  description:
+    "Experience the power of yoga with Wleness. Our yoga activities offer a path to rejuvenation, self-discovery, and a harmonious mind-body connection.",
+};
+
 // =======================================================================
 // Experts
 // =======================================================================
@@ -136,6 +142,7 @@ export {
   MUSICAL_HEALING_META,
   COUPLE_THERAPY_META,
   YOGA_META,
+  YOGA_SUBSCRIPTION_META,
   EXECUTIVE_COACHING_META,
   CORPORATE_WELLBEING_META,
   LIFE_COACHING_META,

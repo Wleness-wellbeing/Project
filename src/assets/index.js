@@ -342,6 +342,7 @@ export {
 
 // Activities >> Yoga
 import yogaHeader from "./images/activities/yoga/yoga-header.webp";
+import yogaSubscriptionHeader from "./images/activities/yoga/yoga-subscription-header.webp";
 import yoga__AshtangaYoga from "./images/activities/yoga/yoga__astanga-yoga.webp";
 import yoga__HathaYoga from "./images/activities/yoga/yoga__hatha-yoga.webp";
 import yoga__MeditationAndMinfullness from "./images/activities/yoga/yoga__meditation-and-mindfullness.webp";
@@ -349,6 +350,7 @@ import yoga__TherapauticYoga from "./images/activities/yoga/yoga__therapautic-yo
 import yoga__WeightLoss from "./images/activities/yoga/yoga__weight-loss.webp";
 import yoga__WomenYoga from "./images/activities/yoga/yoga__yoga-for-women.webp";
 import benefits_of_yoga from "./images/activities/yoga/benefits-of-yoga.webp";
+import portrait_benefits_of_yoga from "./images/activities/yoga/yoga_benefits-of-yoga.webp";
 // Activities >> Yoga >> Adhomukha
 import adhvmukhaHeader from "./images/activities/yoga/adhomukha/adhv-mukha-header.png";
 import adhvmukhaSteps from "./images/activities/yoga/adhomukha/steps-of-adhv-mukha-yoga.png";
@@ -440,6 +442,7 @@ export {
   meditation,
   sadhna,
   yoga,
+  yogaSubscriptionHeader,
   activitiesHeader,
   activitiesExplore1,
   activitiesExplore2,
@@ -488,6 +491,7 @@ export {
   yogaSadhnaHeader,
   // Yoga
   yogaHeader,
+  portrait_benefits_of_yoga,
   benefits_of_yoga,
   yoga__AshtangaYoga,
   yoga__HathaYoga,
@@ -1042,6 +1046,7 @@ import placeholderPortrait from "./images/designs/placeholder-portrait.png";
 import placeholderLandscape from "./images/designs/placeholder-landscape.png";
 import quoteBg from "./images/quote-bg.jpg";
 import profileMask from "./images/designs/profile-mask.png";
+import dottedRing from "./images/designs/dotted-ring.webp";
 
 export {
   bgDotsPattern,
@@ -1052,6 +1057,7 @@ export {
   placeholderLandscape,
   quoteBg,
   profileMask,
+  dottedRing,
 };
 
 // Community

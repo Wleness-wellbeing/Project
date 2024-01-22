@@ -2,9 +2,9 @@ import React from "react";
 
 export default function CoachCertificates({ certificates }) {
   return (
-    <section class="container mx-auto my-8 text-center">
-      <h2 class="subheading my-4 text-center">Certifications</h2>
-      <div class="my-10 text-center">
+    <section className="container mx-auto my-8 text-center">
+      <h2 className="subheading my-4 text-center">Certifications</h2>
+      <div className="my-10 text-center">
         <div className="certificate-container grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {certificates.map((value, index) => (
             <div

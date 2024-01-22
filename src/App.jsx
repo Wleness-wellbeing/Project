@@ -83,6 +83,7 @@ import YogaBooking from "./pages/Appointment/YogaBooking";
 import WhatsappChat from "./components/WhatsappChat";
 import ThankYou from "./components/Modals/ThankYou";
 import Confirmation from "./components/Modals/Confirmation";
+import YogaSubscription from "./pages/Activities/YogaSubscription";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -311,14 +312,14 @@ function App() {
             </Layout>
           }
         />
-        <Route
+        {/* <Route
           path="/yoga/booking/:slug"
           element={
             <Layout>
               <YogaBooking />
             </Layout>
           }
-        />
+        /> */}
         <Route
           path="/success"
           element={
@@ -386,6 +387,14 @@ function App() {
           element={
             <Layout>
               <YogaPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/yoga-subscription"
+          element={
+            <Layout>
+              <YogaSubscription />
             </Layout>
           }
         />

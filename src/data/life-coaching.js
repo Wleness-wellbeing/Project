@@ -1,5 +1,4 @@
 import {
-  executiveCoach3,
   lifeCoachRidhi,
   lifeCoachRidhi2,
   lifeCoachRidhi3,
@@ -15,6 +14,7 @@ export const lifestyleCoaches = [
     profession: "Lifestyle Coach",
     slug: "/coach/ridhi-bajaj",
     alt: "Ridhi Bajaj - Lifestyle Coach - Wleness",
+    displayPricing: true,
     image: lifeCoachRidhi,
     desc: "Ridhi Bajaj, a dedicated life coach committed to transforming lives, specialises in providing invaluable mental health support. With a passion for helping individuals overcome challenges and realise their full potential, Ridhi has become an inspiration for empowerment and positive change.",
     about: {
@@ -59,11 +59,59 @@ export const lifestyleCoaches = [
           "Hey Ridhi , hope you are doing well. Just wanted to thank you for all your time and support throughout my transformation journey. I have emerged as a much better, stronger and condident person, and all of this would not have been possible without your guidance and support. I hope this will help me in leading a better way of life. Thanks again for your time and effort. I highly recommend Ridhi Bajaj to be anyone's guide who is aiming towards transforming his/her life.",
       },
     ],
+    packages: [
+      {
+        title: "Image Consultancy",
+        desc: "Image Consultancy is a personalized service where experts focus on improving an individual's ABC, that is,  Appearance, Behavior, and Communication. We offer guidance on grooming, body language, and communication skills to boost confidence, enhance career prospects, and build a positive personal brand. ",
+        pricing: [
+          {
+            name: "1 Session",
+            price: 4000,
+          },
+          {
+            name: "6 Sessions",
+            price: 12000,
+            original_price: 24000,
+          },
+        ],
+      },
+      {
+        title: "Soft Skills Improvement",
+        desc: "From effective business communication and relationship interaction to life coaching and interview preparation, we cover it all. Boost your workplace communication, ace presentations and public speaking, manage conflicts, and master time management with our expert guidance. Elevate your career with our comprehensive support.",
+        pricing: [
+          {
+            name: "1 Session",
+            price: 4000,
+          },
+          {
+            name: "6 Sessions",
+            price: 15000,
+            original_price: 30000,
+          },
+        ],
+      },
+      {
+        title: "Life Coaching",
+        desc: "Our service prioritizes your mental well-being to help you achieve goals with clarity. We guide individuals in forming a positive mindset, ensuring a strong foundation for pursuing and reaching their objectives. Let us support you on your journey towards success by nurturing your mental health first.",
+        pricing: [
+          {
+            name: "6 Sessions",
+            price: 12000,
+          },
+          {
+            name: "12 Sessions",
+            price: 24000,
+            original_price: 48000,
+          },
+        ],
+      },
+    ],
   },
   {
     name: "Tanuja Choudhury",
     profession: "Lifestyle Coach",
     alt: "Tanuja Choudhary - Lifestyle Coach - Wleness",
+    displayPricing: true,
     slug: "/coach/tanuja-choudhury",
     image: lifeCoachTanuja,
     desc: "With an incredible 23 years of corporate experience, Tanuja Choudhury is a highly certified industry expert and training professional with a wealth of information and insight in learning and development. Tanuja is well-known for her strong and clear communication style. She has a wealth of experience designing and executing in-person and virtual training programs for businesses and people in various sectors.",
@@ -100,6 +148,53 @@ export const lifestyleCoaches = [
       "Harvard Training certifications on various L&D Topics ",
       "Certificate in General Management from XLRI, Jamshedpur.",
       "Post Graduate Diploma in Information Technology from Indian Institute of Technology, Kharagpur.",
+    ],
+    packages: [
+      {
+        title: "Image Consultancy",
+        desc: "Image Consultancy is a personalized service where experts focus on improving an individual's ABC, that is,  Appearance, Behavior, and Communication. We offer guidance on grooming, body language, and communication skills to boost confidence, enhance career prospects, and build a positive personal brand. ",
+        pricing: [
+          {
+            name: "1 Session",
+            price: 2000,
+          },
+          {
+            name: "6 Sessions",
+            price: 6000,
+            original_price: 12000,
+          },
+        ],
+      },
+      {
+        title: "Soft Skills Improvement",
+        desc: "From effective business communication and relationship interaction to life coaching and interview preparation, we cover it all. Boost your workplace communication, ace presentations and public speaking, manage conflicts, and master time management with our expert guidance. Elevate your career with our comprehensive support.",
+        pricing: [
+          {
+            name: "1 Session",
+            price: 2000,
+          },
+          {
+            name: "6 Sessions",
+            price: 6000,
+            original_price: 12000,
+          },
+        ],
+      },
+      {
+        title: "Life Coaching",
+        desc: "Our service prioritizes your mental well-being to help you achieve goals with clarity. We guide individuals in forming a positive mindset, ensuring a strong foundation for pursuing and reaching their objectives. Let us support you on your journey towards success by nurturing your mental health first.",
+        pricing: [
+          {
+            name: "6 Sessions",
+            price: 10000,
+          },
+          {
+            name: "12 Sessions",
+            price: 18000,
+            original_price: 20000,
+          },
+        ],
+      },
     ],
   },
 ];

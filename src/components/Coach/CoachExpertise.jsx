@@ -10,14 +10,14 @@ export default function CoachExpertise({ heading, image, lists }) {
             <h2 className="subheading ">{heading}</h2>
           </div>
 
-          <ul class="list-disc">
+          <ul className="list-disc">
             {lists.map((value, i) => {
               return (
                 <li
-                  class="flex items-center px-4 py-2 text-left font-medium lg:px-0"
+                  className="flex items-center px-4 py-2 text-left font-medium lg:px-0"
                   key={i}
                 >
-                  <img src={leaf} alt="Icon 1" class=" mr-1 h-4 w-4" />
+                  <img src={leaf} alt="Icon 1" className=" mr-1 h-4 w-4" />
                   {value}
                 </li>
               );
