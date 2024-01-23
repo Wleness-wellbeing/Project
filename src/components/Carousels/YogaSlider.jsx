@@ -70,7 +70,7 @@ export default function YogaSlider({ onclick }) {
 
       {/* Yoga Instructors */}
       <div
-        className="doctorSlider relative flex justify-center"
+        className="justify-center md:grid md:grid-cols-2"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >

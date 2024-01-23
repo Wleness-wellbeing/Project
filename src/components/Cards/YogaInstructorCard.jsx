@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 
 export default function YogaInstructorCard(props) {
   return (
-    <div className="p-2 pt-24 lg:w-[400px]" title={props.data.name}>
+    <div
+      className="place-self-center p-2 pt-24 lg:w-[400px]"
+      title={props.data.name}
+    >
       <div className="flex flex-col items-center justify-center rounded-xl bg-primary-50 px-4 py-4 md:py-6">
         <div className="relative mb-12">
           <Link

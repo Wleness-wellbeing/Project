@@ -121,7 +121,7 @@ function YogaSubscription() {
               and enjoyable yoga classes. Boost your happiness and well-being
               through simple practices. Join us on this journey to a better you!
             </div>
-            <div className="mb-6 flex space-x-5 text-sm lg:mb-8 lg:space-x-14">
+            <div className="mb-6 flex justify-center space-x-5 text-sm md:justify-start lg:mb-8 lg:space-x-14">
               <div className="rounded-xl bg-primary-400 px-6 py-3 xl:px-8 xl:py-5">
                 <p className="mb-2 rounded-lg bg-white px-2 text-center font-semibold text-primary-400">
                   Duration
@@ -141,7 +141,7 @@ function YogaSubscription() {
                 className="btn-one lg:!px-14"
                 onClick={() => handleScrollToComponent()}
               >
-                Book Your Introductory Live Session
+                Book Your Session
               </button>
             </div>
           </div>
