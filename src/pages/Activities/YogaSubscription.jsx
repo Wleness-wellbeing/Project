@@ -17,12 +17,17 @@ import { yogaSubscriptionFaqs } from "../../data/faqs";
 import YogaUserDetailsForm from "../../components/Forms/YogaUserDetailsForm";
 import { get_canonical, textColorize } from "../../utils";
 import useEnquiryForm from "../../hooks/useEnquiryForm";
+import CoachRequestForm from "../../components/Forms/CoachRequestForm";
+import FeaturedIn from "../../components/Sections/FeaturedIn";
+import HappyClient from "../../components/HappyClient";
+import { yogaSubscriptionClients } from "../../data/clients";
 
 const pricingData = [
   {
     title: "One Time sessions",
     image: yoga__one_time_session,
     original_price: 199,
+    desc: "Join us for our special one-time yoga session, priced at just Rs 99,and start your road towards rejuvenation. Take a one-hour yoga class led by a professional to develop your health and peace. The opportunity to witness the life-changing effects of yoga without committing is presented by this limited-time offer.",
     price: 99,
     features: [
       "1 class per payment",
@@ -35,6 +40,7 @@ const pricingData = [
   },
   {
     title: "Monthly Subscriptions",
+    desc: "Subscribe to our monthly plan and enjoy hassle-free yoga sessions at your convenience. Experience the ease of maintaining your well-being with regular, guided practices delivered right to your doorstep, all at just Rs 1499. Join us today for a stress-free path to a healthier you! Perks",
     image: yoga__montly_subscription,
     original_price: 2499,
     price: 1499,
@@ -162,75 +168,73 @@ function YogaSubscription() {
             {textColorize([
               {
                 color: false,
-                text: "Session ",
+                text: "Book Your ",
               },
               {
                 color: true,
-                text: "Pricing ",
+                text: "Session ",
               },
             ])}
           </h1>
-          <p className="para">
-            Subscribe to our monthly plan and enjoy hassle-free yoga sessions at
-            your convenience. Experience the ease of maintaining your well-being
-            with regular, guided practices delivered right to your doorstep, all
-            at just Rs 1499. Join us today for a stress-free path to a healthier
-            you! Perks:
-          </p>
-          <span className="inline-block h-[3px] w-8 rounded-full bg-primary-300"></span>
+          <span className="mx-auto block h-[3px] w-8 rounded-full bg-primary-300"></span>
         </div>
         <div className="grid items-center gap-4 lg:gap-8">
           {pricingData.map((value, i) => {
             return (
-              <figure
-                key={i}
-                className="group rounded-2xl text-center shadow-md transition-all hover:cursor-pointer lg:flex"
-              >
-                <div className="flex flex-col items-center justify-between rounded-l-xl bg-primary-300 lg:w-2/5">
-                  <img
-                    src={value.image}
-                    alt={value.title}
-                    className="h-full w-full rounded-l-lg object-cover"
-                  />
-                </div>
-
-                <div className="rounded-r-xl border-y-2 border-r-2 border-slate-200 py-6 lg:w-3/5">
-                  <h3 className="mb-4 pl-5 text-left text-xl font-extrabold transition-all xl:text-2xl">
-                    {value.title}
-                  </h3>
-                  <ul className="mb-4 list-disc space-y-1 pl-9 text-left lg:mb-6 lg:pl-12">
-                    {value.features.map((element, j) => (
-                      <li
-                        className="text-sm font-medium text-slate-500"
-                        key={j}
-                      >
-                        {element}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex items-center justify-between px-4 lg:px-8">
-                    <button
-                      onClick={() => userDetailsForm(value.title, value.price)}
-                      className="rounded-xl bg-primary-300 px-4 py-2.5 text-sm font-medium text-white lg:px-6"
-                    >
-                      Book Now
-                    </button>
-                    <h2 className="flex flex-col items-end lg:flex-row">
-                      <p className="flex items-end justify-between">
-                        <span className="font-medium">@ Rs.</span>
-                        <span className="text-3xl font-extrabold lg:text-4xl xl:text-5xl">
-                          {value.price}
-                        </span>
-                      </p>
-
-                      <p className="flex justify-between text-sm">
-                        <span></span>
-                        <del>Rs. {value.original_price}</del>
-                      </p>
-                    </h2>
+              <div className="mb-6">
+                <p className="para mb-6 text-left">{value.desc}</p>
+                <figure
+                  key={i}
+                  className="group rounded-2xl text-center shadow-md transition-all hover:cursor-pointer lg:flex"
+                >
+                  <div className="flex flex-col items-center justify-between rounded-l-xl bg-primary-300 lg:w-2/5">
+                    <img
+                      src={value.image}
+                      alt={value.title}
+                      className="h-full w-full rounded-l-lg object-cover"
+                    />
                   </div>
-                </div>
-              </figure>
+
+                  <div className="rounded-r-xl border-y-2 border-r-2 border-slate-200 py-6 lg:w-3/5">
+                    <h3 className="mb-4 pl-5 text-left text-xl font-extrabold transition-all xl:text-2xl">
+                      {value.title}
+                    </h3>
+                    <ul className="mb-4 list-disc space-y-1 pl-9 text-left lg:mb-6 lg:pl-12">
+                      {value.features.map((element, j) => (
+                        <li
+                          className="text-sm font-medium text-slate-500"
+                          key={j}
+                        >
+                          {element}
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="flex items-center justify-between px-4 lg:px-8">
+                      <button
+                        onClick={() =>
+                          userDetailsForm(value.title, value.price)
+                        }
+                        className="rounded-xl bg-primary-300 px-4 py-2.5 text-sm font-medium text-white lg:px-6"
+                      >
+                        Book Now
+                      </button>
+                      <h2 className="flex flex-col items-end lg:flex-row">
+                        <p className="flex items-end justify-between">
+                          <span className="font-medium">@ Rs.</span>
+                          <span className="text-3xl font-extrabold lg:text-4xl xl:text-5xl">
+                            {value.price}
+                          </span>
+                        </p>
+
+                        <p className="flex justify-between text-sm">
+                          <span></span>
+                          <del>Rs. {value.original_price}</del>
+                        </p>
+                      </h2>
+                    </div>
+                  </div>
+                </figure>
+              </div>
             );
           })}
         </div>
@@ -284,6 +288,7 @@ function YogaSubscription() {
         </div>
       </section>
 
+      <FeaturedIn />
       <YogaSlider />
 
       <section className="container relative mx-auto mb-5 lg:mb-10">
@@ -369,8 +374,11 @@ function YogaSubscription() {
         <div></div>
       </section>
 
+      <CoachRequestForm name="Yoga Subscription" title="Book Yoga Session" />
+      <HappyClient data={yogaSubscriptionClients} />
       <FaqWithImage data={yogaSubscriptionFaqs} />
 
+      {/* Modals */}
       <YogaUserDetailsForm
         plan={plan}
         isOpen={enquiryForm}

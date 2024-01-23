@@ -46,7 +46,7 @@ export default function CoachingUserDetailsForm({ plan, isOpen, onClose }) {
 
     // Validate if form is filled
     if (formInfo["full_name"] && formInfo["email"] && formInfo["number"]) {
-      let data = { ...formInfo, title: plan.title, price: plan.price };
+      let data = { ...formInfo, ...plan };
 
       axios
         .post(LIFE_COACHING_BOOKING, data)

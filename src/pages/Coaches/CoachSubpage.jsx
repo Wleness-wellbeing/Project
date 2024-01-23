@@ -31,9 +31,7 @@ export default function CoachSubpage(props) {
   });
 
   const userDetailsForm = (data) => {
-    // setPlan({ ...plan, name: name, price: price, service: service });
-    console.log(data);
-
+    setPlan({ ...plan, ...data });
     toggleForm();
   };
 

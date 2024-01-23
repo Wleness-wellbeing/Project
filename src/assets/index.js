@@ -915,6 +915,11 @@ import yoga_client_1 from "./images/clients/yoga-client-1.webp";
 import yoga_client_2 from "./images/clients/yoga-client-2.webp";
 import yoga_client_3 from "./images/clients/yoga-client-3.webp";
 import yoga_client_4 from "./images/clients/yoga-client-4.webp";
+import yoga_subscription_1 from "./images/clients/yoga-subscription-client-1.jpg";
+import yoga_subscription_2 from "./images/clients/yoga-subscription-client-2.jpg";
+import yoga_subscription_3 from "./images/clients/yoga-subscription-client-3.jpg";
+import yoga_subscription_4 from "./images/clients/yoga-subscription-client-4.jpg";
+import yoga_subscription_5 from "./images/clients/yoga-subscription-client-5.jpg";
 
 export {
   happyClient1,
@@ -932,6 +937,11 @@ export {
   yoga_client_2,
   yoga_client_3,
   yoga_client_4,
+  yoga_subscription_1,
+  yoga_subscription_2,
+  yoga_subscription_3,
+  yoga_subscription_4,
+  yoga_subscription_5,
 };
 
 // FAQ's Section
