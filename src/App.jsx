@@ -312,14 +312,14 @@ function App() {
             </Layout>
           }
         />
-        {/* <Route
+        <Route
           path="/yoga/booking/:slug"
           element={
             <Layout>
               <YogaBooking />
             </Layout>
           }
-        /> */}
+        />
         <Route
           path="/success"
           element={

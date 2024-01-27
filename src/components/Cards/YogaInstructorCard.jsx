@@ -10,8 +10,8 @@ export default function YogaInstructorCard(props) {
       <div className="flex flex-col items-center justify-center rounded-xl bg-primary-50 px-4 py-4 md:py-6">
         <div className="relative mb-12">
           <Link
-            // to={`/yoga/booking/${props.data.slug}`}
-            to="javascript:void()"
+            to={`/yoga/booking/${props.data.slug}`}
+            // to="javascript:void()"
             className="absolute left-1/2 h-32 w-32 -translate-x-1/2 -translate-y-24 md:-translate-y-28 lg:h-36 lg:w-36"
           >
             <img
@@ -37,12 +37,12 @@ export default function YogaInstructorCard(props) {
             </li>
           </ul>
         </div>
-        {/* <button
+        <Link
           to={`/yoga/booking/${props.data.slug}`}
           className="btn-one bg-teal-600 !text-sm !font-bold transition-colors hover:bg-teal-500 hover:bg-gradient-to-br hover:shadow-md"
         >
           Book Now
-        </button> */}
+        </Link>
       </div>
     </div>
   );

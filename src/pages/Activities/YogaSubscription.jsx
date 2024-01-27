@@ -1,10 +1,8 @@
 import React, { useRef, useState } from "react";
 import {
-  benefits_of_yoga,
   dottedRing,
   portrait_benefits_of_yoga,
   yogaSubscriptionHeader,
-  yoga__MeditationAndMinfullness,
   yoga__TherapauticYoga,
   yoga__montly_subscription,
   yoga__one_time_session,
@@ -24,7 +22,7 @@ import { yogaSubscriptionClients } from "../../data/clients";
 
 const pricingData = [
   {
-    title: "One Time sessions",
+    title: "One Time session",
     image: yoga__one_time_session,
     original_price: 199,
     desc: "Join us for our special one-time yoga session, priced at just Rs 99,and start your road towards rejuvenation. Take a one-hour yoga class led by a professional to develop your health and peace. The opportunity to witness the life-changing effects of yoga without committing is presented by this limited-time offer.",
@@ -39,7 +37,7 @@ const pricingData = [
     ],
   },
   {
-    title: "Monthly Subscriptions",
+    title: "Monthly Subscription",
     desc: "Subscribe to our monthly plan and enjoy hassle-free yoga sessions at your convenience. Experience the ease of maintaining your well-being with regular, guided practices delivered right to your doorstep, all at just Rs 1499. Join us today for a stress-free path to a healthier you! Perks",
     image: yoga__montly_subscription,
     original_price: 2499,
@@ -337,7 +335,7 @@ function YogaSubscription() {
               life.
             </p>
             <p className="font-semibold">
-              <strong className="text-primary-300">Beginners Friendly: </strong>
+              <strong className="text-primary-300">Beginner Friendly: </strong>
               Our classes are made to help you learn about your mind and body
               through easy steps. Each lesson teaches the basics of yoga for
               good health. It's all about building a solid foundation in yoga

@@ -48,6 +48,7 @@ export const YOGA_CHECKOUT_DETAILS = URI + "yoga-checkout/"; // append expert sl
 export const YOGA_VERIFY_USER = URI + "yoga-appointments/verification";
 export const YOGA_APPOINTMENT_PAYMENT = URI + "yoga-appointments/payment";
 export const YOGA_SUBSCRIPTION = URI + "yoga-subscription";
+export const APPLY_YOGA_COUPON = URI + "yoga-apply-coupon";
 // >> Life-coaching booking
 export const LIFE_COACHING_BOOKING = URI + "life-coaching/booking";
 export const LIFE_COACHING_PAYMENT = URI + "life-coaching/payment";

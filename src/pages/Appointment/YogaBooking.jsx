@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 // Data
 import { modes } from "../../data/doctors";
 import {
-  APPLY_COUPON,
+  APPLY_YOGA_COUPON,
   VERIFY_USER_EMAIL,
   YOGA_APPOINTMENT_PAYMENT,
   YOGA_CHECKOUT_DETAILS,
@@ -16,12 +16,11 @@ import {
 import { profileMask } from "../../assets";
 import SessionMode from "../../components/icon/SessionMode";
 import BookingHeading from "../../components/Appointment/BookingHeading";
-import SessionPricingItem from "../../components/list/SessionPricingItem";
 import OtpModal from "../../components/Auth/OtpModal";
 import YogaCheckout from "./YogaCheckout";
 import YogaSessionPricingItem from "../../components/list/YogaSessionPricingItem";
 
-const dates = ["20 Jan 2024", "21 Jan 2024", "27 Jan 2024", "28 Jan 2024"];
+const dates = ["3 Feb 2024", "4 Feb 2024", "10 Feb 2024", "11 Feb 2024"];
 
 const morningBatches = [
   "06:00 to 07:00 AM",
@@ -232,21 +231,8 @@ export default function YogaBooking() {
   // ======================================
   const handleApplyCoupon = (e) => {
     e.preventDefault();
-    return null;
 
-    // Validate coupon code
-    if (couponCode.code != profileDetails.expert_id) {
-      setCouponAlertMessage("error", "Invalid Coupon Code");
-      setCheckoutDetails({
-        ...checkoutDetails,
-        price: checkoutDetails.original_price,
-      });
-      setCouponCode({
-        ...couponCode,
-        is_applied: false,
-      });
-      return null;
-    }
+    console.log("coupon code applied");
 
     // Coupon code minimum value
     if (checkoutDetails.original_price < 500) {
@@ -256,17 +242,32 @@ export default function YogaBooking() {
       );
       return null;
     } else {
-      setCouponCode({
-        ...couponCode,
-        price: checkoutDetails.original_price * 0.1,
-        is_applied: true,
-      });
-      setCheckoutDetails({
-        ...checkoutDetails,
-        price:
-          checkoutDetails.original_price - checkoutDetails.original_price * 0.1,
-      });
-      setCouponAlertMessage("success", "Coupon applied! Enjoy your discount!");
+      let formData = new FormData();
+      formData.append("coupon_code", couponCode.code);
+
+      axios
+        .post(APPLY_YOGA_COUPON, formData)
+        .then((response) => {
+          setCouponAlertMessage(response.data.status, response.data.message);
+          if (response.data.status == "success") {
+            setCouponCode({
+              ...couponCode,
+              price: Math.round(checkoutDetails.original_price * 0.1), // Apply 10% discount
+              is_applied: true,
+            });
+            setCheckoutDetails({
+              ...checkoutDetails,
+              price: Math.round(
+                checkoutDetails.original_price -
+                  checkoutDetails.original_price * 0.1,
+              ),
+            });
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+          setCouponAlertMessage("error", "Please Try Again Later");
+        });
     }
   };
 
@@ -281,6 +282,7 @@ export default function YogaBooking() {
     });
     setCouponAlertMessage("", "");
   };
+
   // ======================================
   // Initiate payment
   // ======================================
