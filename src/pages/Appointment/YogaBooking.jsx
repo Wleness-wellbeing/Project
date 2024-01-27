@@ -408,7 +408,7 @@ export default function YogaBooking() {
                             ...checkoutDetails,
                             plan: value.package,
                             price: value.discount_price,
-                            original_price: value.original_price,
+                            original_price: value.discount_price,
                           })
                         }
                         selectedPlan={checkoutDetails?.plan === value.package}
