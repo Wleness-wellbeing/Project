@@ -27,14 +27,14 @@ const pricingData = [
     title: "One Time sessions",
     image: yoga__one_time_session,
     original_price: 199,
-    desc: "Join us for our special one-time yoga session, priced at just Rs 99,and start your road towards rejuvenation. Take a one-hour yoga class led by a professional to develop your health and peace. The opportunity to witness the life-changing effects of yoga without committing is presented by this limited-time offer.",
+    desc: "Enjoy the Special Introductory Limited Period Offer that is curated only for you. Join us every weekend to feel the rejuvenation and detox your week, which was full of stress.",
     price: 99,
     features: [
-      "1 class per payment",
-      "Guided Sessions",
-      "Priority Event Notifications",
-      "No recorded sessions are available",
-      "No Progress Tracking",
+      "Personalized relaxation and rejuvenation program.",
+      "Flexible schedule with early morning and weekend options.",
+      "Detoxify and destress on weekends for a positive start to the week.",
+      "Limited-time introductory offer for exceptional value.",
+      "Complimentary trial sessions to experience the program firsthand.",
       "No Community Connection Access",
     ],
   },
@@ -45,20 +45,108 @@ const pricingData = [
     original_price: 2499,
     price: 1499,
     features: [
-      "Yoga for recovering from various health issues likes Thyroid, Diabetes, Hypertension, PCOS, Prenatal Pregnancy, Weight Loss",
-      "Informative sessions on elements of yoga like Hatha Yoga, Pranayama, etc, for a more fulfilling experience.",
-      "Important talks on Prenatal Care, Sleep Hygiene, Diet, etc, from our experts for a better guided lifestyle.",
-      "Recorded sessions available",
-      "Progress Tracking",
-      "Community Connection Access",
+      "20 minutes of yoga philosophy for managing thoughts and emotions.",
+      "30 minutes of step-by-step asanas from Hatha and Ashtanga styles.",
+      "Guided pranayama and meditation.",
+      "10 minutes of doable, healthy lifestyle tips.",
+      "Straightforward strategies for navigating life's ups and downs.",
+      "Engaging teaching methods using exercises, stories, and analogies.",
+      "Learn how foods can enhance yoga practice and prevent illnesses.",
+      "A highly nutritious plant-based diet for daily energy.",
+      "Backup of sessions for missed classes.",
+      "Access to recorded sessions for catching up and maximizing benefits."
     ],
   },
 ];
+
+const CURRICULUM_DATA = [
+  {
+    day: "Day 1",
+    yoga: "Yoga Session:- Yoga For Thyroid"
+  },
+  {
+    day: "Day 2",
+    yoga: "Yoga Session:- Yoga For Diabetes"
+  },
+  {
+    day: "Day 3",
+    yoga: "Yoga Session:- Yoga For Hypertension",
+  },
+  {
+    day: "Day 4",
+    yoga: "Yoga Session:- Yoga For PCOS",
+  },
+  {
+    day: "Day 5",
+    yoga: "Knowledge Time : Talk on Ashtanga yoga",
+  },
+  {
+    day: "Day 6",
+    yoga: "Yoga Session:- Yoga for Prenatal Pregnancy",
+  },
+  {
+    day: "Day 7",
+    yoga: "Yoga Session:- Yoga for Weight Loss",
+  },
+  {
+    day: "Day 8",
+    yoga: "Yoga Session:- Yoga For Constipation",
+  },
+  {
+    day: "Day 9",
+    yoga: "Yoga Session:- Yoga for TB",
+  },
+  {
+    day: "Day 10",
+    yoga: "Knowledge Time:- Ashtanga yoga - What and Why?",
+  },
+  {
+    day: "Day 11",
+    yoga: "Yoga Session:- Yoga for Arthritis",
+  },
+  {
+    day: "Day 12",
+    yoga: "Yoga Session:- Yoga for Male Reproductive Health",
+  },
+  {
+    day: "Day 13",
+    yoga: "Yoga Session:- Yoga for Ashtama",
+  },
+  {
+    day: "Day 14",
+    yoga: "Yoga Session:- Yoga for Skin Health",
+  },
+  {
+    day: "Day 15",
+    yoga: "Knowledge Time : Talk on pranamayam",
+  },
+  {
+    day: "Day 16",
+    yoga: "Yoga Session:- Yoga for Tonsillitis",
+  },
+  {
+    day: "Day 17",
+    yoga: "Yoga Session:- Yoga for Cervical Pain",
+  },
+  {
+    day: "Day 18",
+    yoga: "Yoga Session:- Yoga for Stress and Anxiety",
+  },
+  {
+    day: "Day 19",
+    yoga: "Yoga Session:- Welcoming Hatha Yoga",
+  },
+  {
+    day: "Day 20",
+    yoga: "Knowledge Time:- Debunking Women’s Health",
+  },
+]
 
 function YogaSubscription() {
   const ref = useRef(null);
   const { enquiryForm, toggleForm } = useEnquiryForm();
   const [plan, setPlan] = useState(null);
+  const [selectedWeek, setSelectedWeek] = useState("week1");
 
   const handleScrollToComponent = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
@@ -181,7 +269,7 @@ function YogaSubscription() {
         <div className="grid items-center gap-4 lg:gap-8">
           {pricingData.map((value, i) => {
             return (
-              <div className="mb-6">
+              <div key={i} className="mb-6">
                 <p className="para mb-6 text-left">{value.desc}</p>
                 <figure
                   key={i}
@@ -238,7 +326,69 @@ function YogaSubscription() {
             );
           })}
         </div>
+
+        <div className="p-2 mt-6 pt-4 pb-6">
+          <div className="mb-8">
+            <p className="font-bold text-3xl text-center mb-3">Your Guided <span className="heading-primary"> Yoga Path</span></p>
+            <p className="para mb-6 text-left">A 20-day program designed to make yoga accessible and enjoyable for you. With expert guidance, you'll explore relaxation, strength-building, and mindfulness, guiding a fulfilling mental and physical wellness journey.</p>
+            <div className="flex justify-center">
+              <span className="inline-block h-[3px] w-8 rounded-full bg-primary-300"></span>
+            </div>
+          </div>
+          {/* weeks */}
+          <div className="flex justify-center gap-10 mb-10">
+            <p className={`font-bold sm:text-2xl text-center ${selectedWeek === 'week1' && 'heading-primary'}`} onClick={() => setSelectedWeek("week1")}>Week 1</p>
+            <p className={`font-bold sm:text-2xl text-center ${selectedWeek === 'week2' && 'heading-primary'}`} onClick={() => setSelectedWeek("week2")}>Week 2</p>
+            <p className={`font-bold sm:text-2xl text-center ${selectedWeek === 'week3' && 'heading-primary'}`} onClick={() => setSelectedWeek("week3")}>Week 3</p>
+            <p className={`font-bold sm:text-2xl text-center ${selectedWeek === 'week4' && 'heading-primary'}`} onClick={() => setSelectedWeek("week4")}>Week 4</p>
+          </div>
+          <div className="grid grid-cols-3 gap-4">
+            {/* curriculum */}
+            {selectedWeek === 'week1' && CURRICULUM_DATA?.slice(0, 5)?.map((el, index) => (
+              <>
+                <div className="bg-[#289C8F] text-lg flex items-center justify-center xs:block xs:text-xl text-white font-semibold col-span-1 rounded-lg p-2 xs:p-5">
+                  <p className="">{el?.day}</p>
+                </div>
+                <div className="bg-[#2FC4B1] text-lg xs:text-xl text-white font-semibold col-span-2 rounded-lg p-2 xs:p-5">
+                  <p>{el?.yoga}</p>
+                </div>
+              </>
+            ))}
+            {selectedWeek === 'week2' && CURRICULUM_DATA?.slice(5, 10)?.map((el, index) => (
+              <>
+                <div className="bg-[#289C8F] text-lg flex items-center justify-center xs:block xs:text-xl text-white font-semibold col-span-1 rounded-lg p-2 xs:p-5">
+                  <p className="">{el?.day}</p>
+                </div>
+                <div className="bg-[#2FC4B1] text-lg xs:text-xl text-white font-semibold col-span-2 rounded-lg p-2 xs:p-5">
+                  <p>{el?.yoga}</p>
+                </div>
+              </>
+            ))}
+            {selectedWeek === 'week3' && CURRICULUM_DATA?.slice(10, 15)?.map((el, index) => (
+              <>
+                <div className="bg-[#289C8F] text-lg flex items-center justify-center xs:block xs:text-xl text-white font-semibold col-span-1 rounded-lg p-2 xs:p-5">
+                  <p className="">{el?.day}</p>
+                </div>
+                <div className="bg-[#2FC4B1] text-lg xs:text-xl text-white font-semibold col-span-2 rounded-lg p-2 xs:p-5">
+                  <p>{el?.yoga}</p>
+                </div>
+              </>
+            ))}
+            {selectedWeek === 'week4' && CURRICULUM_DATA?.slice(15, 21)?.map((el, index) => (
+              <>
+                <div className="bg-[#289C8F] text-lg flex items-center justify-center xs:block xs:text-xl text-white font-semibold col-span-1 rounded-lg p-2 xs:p-5">
+                  <p className="">{el?.day}</p>
+                </div>
+                <div className="bg-[#2FC4B1] text-lg xs:text-xl text-white font-semibold col-span-2 rounded-lg p-2 xs:p-5">
+                  <p>{el?.yoga}</p>
+                </div>
+              </>
+            ))}
+
+          </div>
+        </div>
       </section>
+
 
       <section className="container relative mx-auto mb-5 lg:mb-10">
         <div className="pb-6 pt-4 text-center sm:pt-6 lg:pb-14 2xl:pb-8">
