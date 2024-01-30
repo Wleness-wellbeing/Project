@@ -52,7 +52,7 @@ const pricingData = [
       "Learn how foods can enhance yoga practice and prevent illnesses.",
       "A highly nutritious plant-based diet for daily energy.",
       "Backup of sessions for missed classes.",
-      "Access to recorded sessions for catching up and maximizing benefits."
+      "Access to recorded sessions for catching up and maximizing benefits.",
     ],
   },
 ];
@@ -60,11 +60,11 @@ const pricingData = [
 const CURRICULUM_DATA = [
   {
     day: "Day 1",
-    yoga: "Yoga Session:- Yoga For Thyroid"
+    yoga: "Yoga Session:- Yoga For Thyroid",
   },
   {
     day: "Day 2",
-    yoga: "Yoga Session:- Yoga For Diabetes"
+    yoga: "Yoga Session:- Yoga For Diabetes",
   },
   {
     day: "Day 3",
@@ -138,7 +138,7 @@ const CURRICULUM_DATA = [
     day: "Day 20",
     yoga: "Knowledge Time:- Debunking Women’s Health",
   },
-]
+];
 
 function YogaSubscription() {
   const ref = useRef(null);
@@ -214,7 +214,7 @@ function YogaSubscription() {
               through simple practices. Join us on this journey to a better you!
             </div>
             <div className="mb-6 flex justify-center space-x-5 text-sm md:justify-start lg:mb-8 lg:space-x-14">
-              <div className="rounded-xl bg-primary-400 px-6 py-3 xl:px-8 xl:py-5">
+              <div className="flex flex-col justify-center rounded-xl bg-primary-400 px-6 py-3 xl:px-8 xl:py-5">
                 <p className="mb-2 rounded-lg bg-white px-2 text-center font-semibold text-primary-400">
                   Duration
                 </p>
@@ -225,6 +225,9 @@ function YogaSubscription() {
                   Day
                 </p>
                 <p className="text-lg font-semibold text-white">Sat-Sun</p>
+                <small className="font-semibold text-white">
+                  3rd & 4th Feb
+                </small>
               </div>
             </div>
 
@@ -325,68 +328,105 @@ function YogaSubscription() {
           })}
         </div>
 
-        <div className="p-2 mt-6 pt-4 pb-6">
+        <div className="mt-6 p-2 pb-6 pt-4">
           <div className="mb-8">
-            <p className="font-bold text-3xl text-center mb-3">Your Guided <span className="heading-primary"> Yoga Path</span></p>
-            <p className="para mb-6 text-left">A 20-day program designed to make yoga accessible and enjoyable for you. With expert guidance, you'll explore relaxation, strength-building, and mindfulness, guiding a fulfilling mental and physical wellness journey.</p>
+            <p className="mb-3 text-center text-3xl font-bold">
+              Your Guided <span className="heading-primary"> Yoga Path</span>
+            </p>
+            <p className="para mb-6 text-left">
+              A 20-day program designed to make yoga accessible and enjoyable
+              for you. With expert guidance, you'll explore relaxation,
+              strength-building, and mindfulness, guiding a fulfilling mental
+              and physical wellness journey.
+            </p>
             <div className="flex justify-center">
               <span className="inline-block h-[3px] w-8 rounded-full bg-primary-300"></span>
             </div>
           </div>
           {/* weeks */}
-          <div className="flex justify-center gap-10 mb-10">
-            <p className={`font-bold sm:text-2xl text-center ${selectedWeek === 'week1' && 'heading-primary'}`} onClick={() => setSelectedWeek("week1")}>Week 1</p>
-            <p className={`font-bold sm:text-2xl text-center ${selectedWeek === 'week2' && 'heading-primary'}`} onClick={() => setSelectedWeek("week2")}>Week 2</p>
-            <p className={`font-bold sm:text-2xl text-center ${selectedWeek === 'week3' && 'heading-primary'}`} onClick={() => setSelectedWeek("week3")}>Week 3</p>
-            <p className={`font-bold sm:text-2xl text-center ${selectedWeek === 'week4' && 'heading-primary'}`} onClick={() => setSelectedWeek("week4")}>Week 4</p>
+          <div className="mb-10 flex justify-center gap-10">
+            <p
+              className={`text-center font-bold sm:text-2xl ${
+                selectedWeek === "week1" && "heading-primary"
+              }`}
+              onClick={() => setSelectedWeek("week1")}
+            >
+              Week 1
+            </p>
+            <p
+              className={`text-center font-bold sm:text-2xl ${
+                selectedWeek === "week2" && "heading-primary"
+              }`}
+              onClick={() => setSelectedWeek("week2")}
+            >
+              Week 2
+            </p>
+            <p
+              className={`text-center font-bold sm:text-2xl ${
+                selectedWeek === "week3" && "heading-primary"
+              }`}
+              onClick={() => setSelectedWeek("week3")}
+            >
+              Week 3
+            </p>
+            <p
+              className={`text-center font-bold sm:text-2xl ${
+                selectedWeek === "week4" && "heading-primary"
+              }`}
+              onClick={() => setSelectedWeek("week4")}
+            >
+              Week 4
+            </p>
           </div>
           <div className="grid grid-cols-3 gap-4">
             {/* curriculum */}
-            {selectedWeek === 'week1' && CURRICULUM_DATA?.slice(0, 5)?.map((el, index) => (
-              <>
-                <div className="bg-[#289C8F] text-lg flex items-center justify-center xs:block xs:text-xl text-white font-semibold col-span-1 rounded-lg p-2 xs:p-5">
-                  <p className="">{el?.day}</p>
-                </div>
-                <div className="bg-[#2FC4B1] text-lg xs:text-xl text-white font-semibold col-span-2 rounded-lg p-2 xs:p-5">
-                  <p>{el?.yoga}</p>
-                </div>
-              </>
-            ))}
-            {selectedWeek === 'week2' && CURRICULUM_DATA?.slice(5, 10)?.map((el, index) => (
-              <>
-                <div className="bg-[#289C8F] text-lg flex items-center justify-center xs:block xs:text-xl text-white font-semibold col-span-1 rounded-lg p-2 xs:p-5">
-                  <p className="">{el?.day}</p>
-                </div>
-                <div className="bg-[#2FC4B1] text-lg xs:text-xl text-white font-semibold col-span-2 rounded-lg p-2 xs:p-5">
-                  <p>{el?.yoga}</p>
-                </div>
-              </>
-            ))}
-            {selectedWeek === 'week3' && CURRICULUM_DATA?.slice(10, 15)?.map((el, index) => (
-              <>
-                <div className="bg-[#289C8F] text-lg flex items-center justify-center xs:block xs:text-xl text-white font-semibold col-span-1 rounded-lg p-2 xs:p-5">
-                  <p className="">{el?.day}</p>
-                </div>
-                <div className="bg-[#2FC4B1] text-lg xs:text-xl text-white font-semibold col-span-2 rounded-lg p-2 xs:p-5">
-                  <p>{el?.yoga}</p>
-                </div>
-              </>
-            ))}
-            {selectedWeek === 'week4' && CURRICULUM_DATA?.slice(15, 21)?.map((el, index) => (
-              <>
-                <div className="bg-[#289C8F] text-lg flex items-center justify-center xs:block xs:text-xl text-white font-semibold col-span-1 rounded-lg p-2 xs:p-5">
-                  <p className="">{el?.day}</p>
-                </div>
-                <div className="bg-[#2FC4B1] text-lg xs:text-xl text-white font-semibold col-span-2 rounded-lg p-2 xs:p-5">
-                  <p>{el?.yoga}</p>
-                </div>
-              </>
-            ))}
-
+            {selectedWeek === "week1" &&
+              CURRICULUM_DATA?.slice(0, 5)?.map((el, index) => (
+                <>
+                  <div className="col-span-1 flex items-center justify-center rounded-lg bg-[#289C8F] p-2 text-lg font-semibold text-white xs:block xs:p-5 xs:text-xl">
+                    <p className="">{el?.day}</p>
+                  </div>
+                  <div className="col-span-2 rounded-lg bg-[#2FC4B1] p-2 text-lg font-semibold text-white xs:p-5 xs:text-xl">
+                    <p>{el?.yoga}</p>
+                  </div>
+                </>
+              ))}
+            {selectedWeek === "week2" &&
+              CURRICULUM_DATA?.slice(5, 10)?.map((el, index) => (
+                <>
+                  <div className="col-span-1 flex items-center justify-center rounded-lg bg-[#289C8F] p-2 text-lg font-semibold text-white xs:block xs:p-5 xs:text-xl">
+                    <p className="">{el?.day}</p>
+                  </div>
+                  <div className="col-span-2 rounded-lg bg-[#2FC4B1] p-2 text-lg font-semibold text-white xs:p-5 xs:text-xl">
+                    <p>{el?.yoga}</p>
+                  </div>
+                </>
+              ))}
+            {selectedWeek === "week3" &&
+              CURRICULUM_DATA?.slice(10, 15)?.map((el, index) => (
+                <>
+                  <div className="col-span-1 flex items-center justify-center rounded-lg bg-[#289C8F] p-2 text-lg font-semibold text-white xs:block xs:p-5 xs:text-xl">
+                    <p className="">{el?.day}</p>
+                  </div>
+                  <div className="col-span-2 rounded-lg bg-[#2FC4B1] p-2 text-lg font-semibold text-white xs:p-5 xs:text-xl">
+                    <p>{el?.yoga}</p>
+                  </div>
+                </>
+              ))}
+            {selectedWeek === "week4" &&
+              CURRICULUM_DATA?.slice(15, 21)?.map((el, index) => (
+                <>
+                  <div className="col-span-1 flex items-center justify-center rounded-lg bg-[#289C8F] p-2 text-lg font-semibold text-white xs:block xs:p-5 xs:text-xl">
+                    <p className="">{el?.day}</p>
+                  </div>
+                  <div className="col-span-2 rounded-lg bg-[#2FC4B1] p-2 text-lg font-semibold text-white xs:p-5 xs:text-xl">
+                    <p>{el?.yoga}</p>
+                  </div>
+                </>
+              ))}
           </div>
         </div>
       </section>
-
 
       <section className="container relative mx-auto mb-5 lg:mb-10">
         <div className="pb-6 pt-4 text-center sm:pt-6 lg:pb-14 2xl:pb-8">

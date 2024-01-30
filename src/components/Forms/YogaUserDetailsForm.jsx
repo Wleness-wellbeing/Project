@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { GENERAL_ENQUIRY_URI, YOGA_SUBSCRIPTION } from "../../data/api";
-import { useNavigate } from "react-router-dom";
+import { YOGA_SUBSCRIPTION } from "../../data/api";
 
 export default function YogaUserDetailsForm({ isOpen, onClose, plan }) {
   if (!isOpen) return null;
@@ -11,6 +10,7 @@ export default function YogaUserDetailsForm({ isOpen, onClose, plan }) {
     full_name: "",
     email: "",
     number: "",
+    batch: "",
   });
   const [successMessage, setSuccessMessage] = useState({
     status: "",
@@ -46,7 +46,12 @@ export default function YogaUserDetailsForm({ isOpen, onClose, plan }) {
     e.preventDefault();
 
     // Validate if form is filled
-    if (formInfo["full_name"] && formInfo["email"] && formInfo["number"]) {
+    if (
+      formInfo["full_name"] &&
+      formInfo["email"] &&
+      formInfo["number"] &&
+      formInfo["batch"]
+    ) {
       let data = { ...formInfo, title: plan.title, price: plan.price };
 
       axios
@@ -58,6 +63,7 @@ export default function YogaUserDetailsForm({ isOpen, onClose, plan }) {
               full_name: "",
               email: "",
               number: "",
+              batch: "",
             });
             window.location = response.data.redirect_url;
           }
@@ -127,6 +133,19 @@ export default function YogaUserDetailsForm({ isOpen, onClose, plan }) {
               value={formInfo.email}
               onChange={handleChange}
             />
+          </label>
+          <label htmlFor="batch">
+            <select
+              name="batch"
+              id="batch"
+              className="form-input"
+              value={formInfo.batch}
+              onChange={handleChange}
+            >
+              <option value="">-- Select Batch --</option>
+              <option value="07:00 to 08:00 AM">07:00 to 08:00 AM</option>
+              <option value="08:00 to 09:00 AM">08:00 to 09:00 AM</option>
+            </select>
           </label>
           <div className="grid grid-cols-2 justify-center lg:flex">
             <button
