@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-function ThankYou({ status }) {
+function ThankYou({ status, assessmentResult, setStatus }) {
   if (!status) {
     return null;
   }
