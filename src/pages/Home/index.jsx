@@ -19,7 +19,6 @@ import { HOME_META } from "../../data/meta";
 import { get_canonical } from "../../utils";
 import Objectives from "../../components/Objectives";
 import YogaSlider from "../../components/Carousels/YogaSlider";
-import WhatsappChat from "../../components/WhatsappChat";
 import InternshipBanner from "../Internship/InternshipBanner";
 
 import FeaturedIn from "../../components/Sections/FeaturedIn";

@@ -19,144 +19,14 @@ import CoachRequestForm from "../../components/Forms/CoachRequestForm";
 import FeaturedIn from "../../components/Sections/FeaturedIn";
 import HappyClient from "../../components/HappyClient";
 import { yogaSubscriptionClients } from "../../data/clients";
-
-const pricingData = [
-  {
-    title: "One Time session",
-    image: yoga__one_time_session,
-    original_price: 199,
-    desc: "Enjoy the Special Introductory Limited Period Offer that is curated only for you. Join us every weekend to feel the rejuvenation and detox your week, which was full of stress.",
-    price: 99,
-    features: [
-      "Personalized relaxation and rejuvenation program.",
-      "Flexible schedule with early morning and weekend options.",
-      "Detoxify and destress on weekends for a positive start to the week.",
-      "Limited-time introductory offer for exceptional value.",
-      "Complimentary trial sessions to experience the program firsthand.",
-      "No Community Connection Access",
-    ],
-  },
-  {
-    title: "Monthly Subscription",
-    desc: "Subscribe to our monthly plan and enjoy hassle-free yoga sessions at your convenience. Experience the ease of maintaining your well-being with regular, guided practices delivered right to your doorstep, all at just Rs 1499. Join us today for a stress-free path to a healthier you! Perks",
-    image: yoga__montly_subscription,
-    original_price: 2499,
-    price: 1499,
-    features: [
-      "20 minutes of yoga philosophy for managing thoughts and emotions.",
-      "30 minutes of step-by-step asanas from Hatha and Ashtanga styles.",
-      "Guided pranayama and meditation.",
-      "10 minutes of doable, healthy lifestyle tips.",
-      "Straightforward strategies for navigating life's ups and downs.",
-      "Engaging teaching methods using exercises, stories, and analogies.",
-      "Learn how foods can enhance yoga practice and prevent illnesses.",
-      "A highly nutritious plant-based diet for daily energy.",
-      "Backup of sessions for missed classes.",
-      "Access to recorded sessions for catching up and maximizing benefits.",
-    ],
-  },
-];
-
-const CURRICULUM_DATA = [
-  {
-    day: "Day 1",
-    yoga: "Yoga Session:- Yoga For Thyroid",
-  },
-  {
-    day: "Day 2",
-    yoga: "Yoga Session:- Yoga For Diabetes",
-  },
-  {
-    day: "Day 3",
-    yoga: "Yoga Session:- Yoga For Hypertension",
-  },
-  {
-    day: "Day 4",
-    yoga: "Yoga Session:- Yoga For PCOS",
-  },
-  {
-    day: "Day 5",
-    yoga: "Knowledge Time : Talk on Ashtanga yoga",
-  },
-  {
-    day: "Day 6",
-    yoga: "Yoga Session:- Yoga for Prenatal Pregnancy",
-  },
-  {
-    day: "Day 7",
-    yoga: "Yoga Session:- Yoga for Weight Loss",
-  },
-  {
-    day: "Day 8",
-    yoga: "Yoga Session:- Yoga For Constipation",
-  },
-  {
-    day: "Day 9",
-    yoga: "Yoga Session:- Yoga for TB",
-  },
-  {
-    day: "Day 10",
-    yoga: "Knowledge Time:- Ashtanga yoga - What and Why?",
-  },
-  {
-    day: "Day 11",
-    yoga: "Yoga Session:- Yoga for Arthritis",
-  },
-  {
-    day: "Day 12",
-    yoga: "Yoga Session:- Yoga for Male Reproductive Health",
-  },
-  {
-    day: "Day 13",
-    yoga: "Yoga Session:- Yoga for Ashtama",
-  },
-  {
-    day: "Day 14",
-    yoga: "Yoga Session:- Yoga for Skin Health",
-  },
-  {
-    day: "Day 15",
-    yoga: "Knowledge Time : Talk on pranamayam",
-  },
-  {
-    day: "Day 16",
-    yoga: "Yoga Session:- Yoga for Tonsillitis",
-  },
-  {
-    day: "Day 17",
-    yoga: "Yoga Session:- Yoga for Cervical Pain",
-  },
-  {
-    day: "Day 18",
-    yoga: "Yoga Session:- Yoga for Stress and Anxiety",
-  },
-  {
-    day: "Day 19",
-    yoga: "Yoga Session:- Welcoming Hatha Yoga",
-  },
-  {
-    day: "Day 20",
-    yoga: "Knowledge Time:- Debunking Women’s Health",
-  },
-];
+import YogaGuidedPath from "../../components/Activities/YogaGuidedPath";
+import YogaSession from "../../components/Activities/YogaSession";
 
 function YogaSubscription() {
   const ref = useRef(null);
-  const { enquiryForm, toggleForm } = useEnquiryForm();
-  const [plan, setPlan] = useState(null);
-  const [selectedWeek, setSelectedWeek] = useState("week1");
 
   const handleScrollToComponent = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const userDetailsForm = (title, price) => {
-    setPlan({
-      title: title,
-      price: price,
-    });
-
-    toggleForm();
   };
 
   return (
@@ -251,182 +121,33 @@ function YogaSubscription() {
 
       <div ref={ref}></div>
 
-      <section className="container relative mx-auto mb-5 pt-4 lg:mb-10">
-        <div className="pb-6 text-center sm:pt-6 lg:pb-14 2xl:pb-8 ">
-          <h1 className="subheading sm:pb-0 lg:mb-4">
-            {textColorize([
-              {
-                color: false,
-                text: "Book Your ",
-              },
-              {
-                color: true,
-                text: "Session ",
-              },
-            ])}
-          </h1>
-          <span className="mx-auto block h-[3px] w-8 rounded-full bg-primary-300"></span>
-        </div>
-        <div className="grid items-center gap-4 lg:gap-8">
-          {pricingData.map((value, i) => {
-            return (
-              <div key={i} className="mb-6">
-                <p className="para mb-6 text-left">{value.desc}</p>
-                <figure
-                  key={i}
-                  className="group rounded-2xl text-center shadow-md transition-all hover:cursor-pointer lg:flex"
-                >
-                  <div className="flex flex-col items-center justify-between rounded-l-xl bg-primary-300 lg:w-2/5">
-                    <img
-                      src={value.image}
-                      alt={value.title}
-                      className="h-full w-full rounded-l-lg object-cover"
-                    />
-                  </div>
+      <YogaSession
+        title={[
+          {
+            color: false,
+            text: "Book Your ",
+          },
+          {
+            color: true,
+            text: "Session ",
+          },
+        ]}
+        one_time={true}
+        one_month={true}
+      />
 
-                  <div className="rounded-r-xl border-y-2 border-r-2 border-slate-200 py-6 lg:w-3/5">
-                    <h3 className="mb-4 pl-5 text-left text-xl font-extrabold transition-all xl:text-2xl">
-                      {value.title}
-                    </h3>
-                    <ul className="mb-4 list-disc space-y-1 pl-9 text-left lg:mb-6 lg:pl-12">
-                      {value.features.map((element, j) => (
-                        <li
-                          className="text-sm font-medium text-slate-500"
-                          key={j}
-                        >
-                          {element}
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="flex items-center justify-between px-4 lg:px-8">
-                      <button
-                        onClick={() =>
-                          userDetailsForm(value.title, value.price)
-                        }
-                        className="rounded-xl bg-primary-300 px-4 py-2.5 text-sm font-medium text-white lg:px-6"
-                      >
-                        Book Now
-                      </button>
-                      <h2 className="flex flex-col items-end lg:flex-row">
-                        <p className="flex items-end justify-between">
-                          <span className="font-medium">@ Rs.</span>
-                          <span className="text-3xl font-extrabold lg:text-4xl xl:text-5xl">
-                            {value.price}
-                          </span>
-                        </p>
-
-                        <p className="flex justify-between text-sm">
-                          <span></span>
-                          <del>Rs. {value.original_price}</del>
-                        </p>
-                      </h2>
-                    </div>
-                  </div>
-                </figure>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="mt-6 p-2 pb-6 pt-4">
-          <div className="mb-8">
-            <p className="mb-3 text-center text-3xl font-bold">
-              Your Guided <span className="heading-primary"> Yoga Path</span>
-            </p>
-            <p className="para mb-6 text-left">
-              A 20-day program designed to make yoga accessible and enjoyable
-              for you. With expert guidance, you'll explore relaxation,
-              strength-building, and mindfulness, guiding a fulfilling mental
-              and physical wellness journey.
-            </p>
-            <div className="flex justify-center">
-              <span className="inline-block h-[3px] w-8 rounded-full bg-primary-300"></span>
-            </div>
-          </div>
-          {/* weeks */}
-          <div className="mb-10 flex justify-center gap-10">
-            <p
-              className={`text-center font-bold sm:text-2xl ${
-                selectedWeek === "week1" && "heading-primary"
-              }`}
-              onClick={() => setSelectedWeek("week1")}
-            >
-              Week 1
-            </p>
-            <p
-              className={`text-center font-bold sm:text-2xl ${
-                selectedWeek === "week2" && "heading-primary"
-              }`}
-              onClick={() => setSelectedWeek("week2")}
-            >
-              Week 2
-            </p>
-            <p
-              className={`text-center font-bold sm:text-2xl ${
-                selectedWeek === "week3" && "heading-primary"
-              }`}
-              onClick={() => setSelectedWeek("week3")}
-            >
-              Week 3
-            </p>
-            <p
-              className={`text-center font-bold sm:text-2xl ${
-                selectedWeek === "week4" && "heading-primary"
-              }`}
-              onClick={() => setSelectedWeek("week4")}
-            >
-              Week 4
-            </p>
-          </div>
-          <div className="grid grid-cols-3 gap-4">
-            {/* curriculum */}
-            {selectedWeek === "week1" &&
-              CURRICULUM_DATA?.slice(0, 5)?.map((el, index) => (
-                <>
-                  <div className="col-span-1 flex items-center justify-center rounded-lg bg-[#289C8F] p-2 text-lg font-semibold text-white xs:block xs:p-5 xs:text-xl">
-                    <p className="">{el?.day}</p>
-                  </div>
-                  <div className="col-span-2 rounded-lg bg-[#2FC4B1] p-2 text-lg font-semibold text-white xs:p-5 xs:text-xl">
-                    <p>{el?.yoga}</p>
-                  </div>
-                </>
-              ))}
-            {selectedWeek === "week2" &&
-              CURRICULUM_DATA?.slice(5, 10)?.map((el, index) => (
-                <>
-                  <div className="col-span-1 flex items-center justify-center rounded-lg bg-[#289C8F] p-2 text-lg font-semibold text-white xs:block xs:p-5 xs:text-xl">
-                    <p className="">{el?.day}</p>
-                  </div>
-                  <div className="col-span-2 rounded-lg bg-[#2FC4B1] p-2 text-lg font-semibold text-white xs:p-5 xs:text-xl">
-                    <p>{el?.yoga}</p>
-                  </div>
-                </>
-              ))}
-            {selectedWeek === "week3" &&
-              CURRICULUM_DATA?.slice(10, 15)?.map((el, index) => (
-                <>
-                  <div className="col-span-1 flex items-center justify-center rounded-lg bg-[#289C8F] p-2 text-lg font-semibold text-white xs:block xs:p-5 xs:text-xl">
-                    <p className="">{el?.day}</p>
-                  </div>
-                  <div className="col-span-2 rounded-lg bg-[#2FC4B1] p-2 text-lg font-semibold text-white xs:p-5 xs:text-xl">
-                    <p>{el?.yoga}</p>
-                  </div>
-                </>
-              ))}
-            {selectedWeek === "week4" &&
-              CURRICULUM_DATA?.slice(15, 21)?.map((el, index) => (
-                <>
-                  <div className="col-span-1 flex items-center justify-center rounded-lg bg-[#289C8F] p-2 text-lg font-semibold text-white xs:block xs:p-5 xs:text-xl">
-                    <p className="">{el?.day}</p>
-                  </div>
-                  <div className="col-span-2 rounded-lg bg-[#2FC4B1] p-2 text-lg font-semibold text-white xs:p-5 xs:text-xl">
-                    <p>{el?.yoga}</p>
-                  </div>
-                </>
-              ))}
-          </div>
-        </div>
-      </section>
+      <YogaGuidedPath
+        title={[
+          {
+            color: false,
+            text: "Your Guided ",
+          },
+          {
+            color: true,
+            text: "Yoga Path ",
+          },
+        ]}
+      />
 
       <section className="container relative mx-auto mb-5 lg:mb-10">
         <div className="pb-6 pt-4 text-center sm:pt-6 lg:pb-14 2xl:pb-8">
@@ -565,13 +286,6 @@ function YogaSubscription() {
       <CoachRequestForm name="Yoga Subscription" title="Book Yoga Session" />
       <HappyClient data={yogaSubscriptionClients} />
       <FaqWithImage data={yogaSubscriptionFaqs} />
-
-      {/* Modals */}
-      <YogaUserDetailsForm
-        plan={plan}
-        isOpen={enquiryForm}
-        onClose={toggleForm}
-      />
     </>
   );
 }

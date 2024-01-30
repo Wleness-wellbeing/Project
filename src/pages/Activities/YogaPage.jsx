@@ -12,6 +12,8 @@ import { yogaClients } from "../../data/clients";
 import YogaSlider from "../../components/Carousels/YogaSlider";
 import YogaBenefits from "../../components/Activities/YogaBenefits";
 import { YOGA_META } from "../../data/meta";
+import YogaGuidedPath from "../../components/Activities/YogaGuidedPath";
+import YogaSession from "../../components/Activities/YogaSession";
 
 export default function YogaPage() {
   const { enquiryForm, toggleForm } = useEnquiryForm();
@@ -51,8 +53,35 @@ export default function YogaPage() {
         ref={ref}
       />
 
-      <YogaSlider />
+      <YogaSession
+        title={[
+          {
+            color: false,
+            text: "Grab Your ",
+          },
+          {
+            color: true,
+            text: "Monthly Pass ",
+          },
+        ]}
+        one_time={false}
+        one_month={true}
+      />
 
+      <YogaGuidedPath
+        title={[
+          {
+            color: false,
+            text: "Your Guided ",
+          },
+          {
+            color: true,
+            text: "Yoga Path ",
+          },
+        ]}
+      />
+
+      <YogaSlider />
       <YogaBenefits />
 
       <ActivityForm
