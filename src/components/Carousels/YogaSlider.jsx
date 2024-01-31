@@ -70,11 +70,11 @@ export default function YogaSlider({ onclick }) {
 
       {/* Yoga Instructors */}
       <div
-        className="justify-center md:grid md:grid-cols-2"
+        // className="justify-center md:grid md:grid-cols-2"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        {/* <Swiper
+        <Swiper
           modules={[Autoplay, Pagination]}
           className="mySwiper overflow-y-visible rounded-2xl pb-12"
           grabCursor={true}
@@ -94,11 +94,14 @@ export default function YogaSlider({ onclick }) {
           onSwiper={(swiper) => setSwiper(swiper)} // Store Swiper instance
           speed={600}
         >
-          
-        </Swiper> */}
-        {experts?.map((value, index) => {
-          return <YogaInstructorCard key={index} data={value} />;
-        })}
+          {experts?.map((value, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <YogaInstructorCard data={value} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </div>
     </section>
   );
