@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import DoctorsCard from "../../components/DoctorsCard";
 import HappyClient from "../../components/HappyClient";
 import { expertsClients } from "../../data/clients";
