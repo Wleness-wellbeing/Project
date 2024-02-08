@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIndianRupee } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import FormatPrice from "../utils/FormatPrice";
 
 export default function DoctorsCard(props) {
   const slug = `/experts/profile/${props.data.slug}`; // slug for profile
@@ -49,9 +50,8 @@ export default function DoctorsCard(props) {
               {props.data.languages}
             </p>
             <h5 className="my-1 text-sm font-semibold text-primary-400 lg:text-lg">
-              Session Starts
-              <FontAwesomeIcon icon={faIndianRupee} className="mx-1 text-sm" />
-              {props.data.price}
+              <span>Session Starts </span>
+              <FormatPrice price={props.data.price} currency="INR" />
             </h5>
           </div>
         </figcaption>

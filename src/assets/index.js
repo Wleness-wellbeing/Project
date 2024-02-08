@@ -16,6 +16,7 @@ import testimonial2 from "./images/home/testimonials/testimonial-2.webp";
 import testimonial3 from "./images/home/testimonials/testimonial-3.webp";
 import testimonial4 from "./images/home/testimonials/testimonial-4.webp";
 import testimonialRing from "./images/home/testimonials/testimonial-ring.png";
+import selfAssessmentModal from "./images/home/self-assessment-modal.jpg";
 import community from "./images/home/community.png";
 import doodle1 from "./images/home/doodle-1.svg";
 import doodle2 from "./images/home/doodle-2.svg";
@@ -91,6 +92,7 @@ export {
   testimonial4,
   testimonialRing,
   community,
+  selfAssessmentModal,
   doodle1,
   doodle2,
   doodle3,

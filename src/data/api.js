@@ -30,6 +30,7 @@ export const PARTNER_WITH_US_URI = URI + "partner-with-us";
 export const EXPERTS_URI = URI + "experts";
 export const EXPERTS_PROFILE_URI = URI + "experts/profile/";
 export const YOGA_EXPERTS_URI = URI + "yoga-experts";
+export const GET_RATES = URI + "get-rates";
 
 // Appointment
 // >> Dashboard

@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 // Data
 import { community, designRing } from "../../assets";
+import { get_canonical } from "../../utils";
 import { homeFaqs } from "../../data/faqs";
 import { homeTestimonials } from "../../data/testimonials";
 import { homeServices, statistics, whyChooseUs } from "../../data";
+import { HOME_META } from "../../data/meta";
+import { homePageDoctors } from "../../data/doctors";
 // Components
 import Assessment from "../../components/Assessment";
 import RequestForm from "../../components/Forms/RequestForm";
@@ -12,19 +16,16 @@ import Testimonial from "../../components/testimonial/Testimonial";
 import MainHeader from "../../components/headers/MainHeader";
 import HomeFaq from "../../components/Faq/HomeFaq";
 import ServicesCard from "../../components/Cards/ServicesCard";
-import { homePageDoctors } from "../../data/doctors";
 import DoctorSlider from "../../components/DoctorSlider";
-import { Helmet } from "react-helmet";
-import { HOME_META } from "../../data/meta";
-import { get_canonical } from "../../utils";
 import Objectives from "../../components/Objectives";
 import YogaSlider from "../../components/Carousels/YogaSlider";
-import InternshipBanner from "../Internship/InternshipBanner";
-
 import FeaturedIn from "../../components/Sections/FeaturedIn";
+import SelfAssessment from "../../components/Modals/SelfAssessment";
+import InternshipBanner from "../Internship/InternshipBanner";
 
 export default function Home() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
+  const [assessmentModal, setAssessmentModal] = useState(true);
   const [rediredurl, setRediredurl] = useState(null);
 
   // Assessment Slides
@@ -59,7 +60,7 @@ export default function Home() {
 
       {/* ========== Services ========== */}
       <section>
-        <div className="py-8 text-center sm:pt-6 lg:pb-14  2xl:pb-10">
+        {/* <div className="py-8 text-center sm:pt-6 lg:pb-14  2xl:pb-10">
           <div className="container mx-auto">
             <h2 className="sm:pb-0 xl:pb-1">
               <span className="subheading heading-primary">
@@ -73,7 +74,7 @@ export default function Home() {
               well-being.
             </p>
           </div>
-        </div>
+        </div> */}
 
         {/* Services */}
         <div className="bg-gradient-to-br from-primary-10 to-white pb-6 font-quicksand lg:pb-10">
@@ -239,6 +240,10 @@ export default function Home() {
       />
 
       {/* <Feedback isOpen={isFeedbackOpen} onClose={closeFeedbackModal} /> */}
+      <SelfAssessment
+        assessmentModal={assessmentModal}
+        setAssessmentModal={setAssessmentModal}
+      />
     </>
   );
 }

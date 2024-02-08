@@ -3551,19 +3551,19 @@ export const blogsData = [
 export const homeServices = [
   {
     title: "Therapy",
-    desc: "Transform through therapy with caring, skilled therapists in a supportive, confidential setting. Enhance mental health and personal growth for a happier life.",
+    desc: "Experience an empowering therapeutic journey where your voice is valued, your strengths are recognized, and you're continuously supported and celebrated.",
     image: homeTherapy,
     slug: "/services/therapy",
   },
   {
     title: "Yoga",
-    desc: "Yoga combines postures, breathing, meditation, and mindfulness for mental wellness. It enhances mental health by nurturing the mind-body connection.",
+    desc: "Yoga is not just an exercise, it's a profound journey of self-discovery and holistic well-being. Immerse yourself in an unique yoga experience designed to nourish your mind, body, and spirit.",
     image: homeYoga,
     slug: "/activities/yoga",
   },
   {
     title: "Lifestyle Coaching",
-    desc: "Lifestyle coaching empowers well-being, productivity, and balance. It encourages health, reduces stress, boosts motivation, and enhances performance.",
+    desc: "A personalized roadmap to help you achieve balance, fulfillment, and lasting well-being.  Going beyond traditional fitness routines, addressing all aspects of life to create a balanced lifestyle. ",
     image: homeLifestyleCoaching,
     slug: "/life-coaching",
   },

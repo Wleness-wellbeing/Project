@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 // Swiper Js & Styles
@@ -23,9 +23,6 @@ export default function Blogs() {
     status,
     handleBlogsFilter,
   } = getBlogs();
-
-  console.log("this is blog", blogPosts);
-  console.log("this is all blog", allBlogPosts);
 
   if (!status) {
     return <div className="mb-5 text-center">Loading...</div>;

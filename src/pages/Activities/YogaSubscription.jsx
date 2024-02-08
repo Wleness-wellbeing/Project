@@ -90,13 +90,13 @@ function YogaSubscription() {
                 </p>
                 <p className="text-lg font-semibold text-white">60 mins</p>
               </div>
-              <div className="rounded-xl bg-primary-400 px-6 py-3 xl:px-8 xl:py-5">
+              <div className="rounded-xl bg-primary-400 px-6 py-3 text-center xl:px-8 xl:py-5">
                 <p className="mb-2 rounded-lg bg-white px-2 text-center font-semibold text-primary-400">
                   Day
                 </p>
                 <p className="text-lg font-semibold text-white">Sat-Sun</p>
                 <small className="font-semibold text-white">
-                  3rd & 4th Feb
+                  4th, 10th, 11th Feb
                 </small>
               </div>
             </div>
