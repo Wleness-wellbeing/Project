@@ -3,11 +3,16 @@ import { Link } from "react-router-dom";
 
 export default function YogaInstructorCard(props) {
   return (
-    <div className="mx-auto w-full p-2 pt-24 lg:w-full" title={props.data.name}>
+    <div
+      // className="place-self-center p-2 pt-24 lg:w-[400px]"
+      className="p-2 pt-24"
+      title={props.data.name}
+    >
       <div className="flex flex-col items-center justify-center rounded-xl bg-primary-50 px-4 py-4 md:py-6">
         <div className="relative mb-12">
           <Link
             to={`/yoga/booking/${props.data.slug}`}
+            // to="javascript:void()"
             className="absolute left-1/2 h-32 w-32 -translate-x-1/2 -translate-y-24 md:-translate-y-28 lg:h-36 lg:w-36"
           >
             <img

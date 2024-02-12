@@ -16,6 +16,7 @@ import testimonial2 from "./images/home/testimonials/testimonial-2.webp";
 import testimonial3 from "./images/home/testimonials/testimonial-3.webp";
 import testimonial4 from "./images/home/testimonials/testimonial-4.webp";
 import testimonialRing from "./images/home/testimonials/testimonial-ring.png";
+import selfAssessmentModal from "./images/home/self-assessment-modal.jpg";
 import community from "./images/home/community.png";
 import doodle1 from "./images/home/doodle-1.svg";
 import doodle2 from "./images/home/doodle-2.svg";
@@ -91,6 +92,7 @@ export {
   testimonial4,
   testimonialRing,
   community,
+  selfAssessmentModal,
   doodle1,
   doodle2,
   doodle3,
@@ -342,6 +344,7 @@ export {
 
 // Activities >> Yoga
 import yogaHeader from "./images/activities/yoga/yoga-header.webp";
+import yogaSubscriptionHeader from "./images/activities/yoga/yoga-subscription-header.webp";
 import yoga__AshtangaYoga from "./images/activities/yoga/yoga__astanga-yoga.webp";
 import yoga__HathaYoga from "./images/activities/yoga/yoga__hatha-yoga.webp";
 import yoga__MeditationAndMinfullness from "./images/activities/yoga/yoga__meditation-and-mindfullness.webp";
@@ -349,6 +352,9 @@ import yoga__TherapauticYoga from "./images/activities/yoga/yoga__therapautic-yo
 import yoga__WeightLoss from "./images/activities/yoga/yoga__weight-loss.webp";
 import yoga__WomenYoga from "./images/activities/yoga/yoga__yoga-for-women.webp";
 import benefits_of_yoga from "./images/activities/yoga/benefits-of-yoga.webp";
+import portrait_benefits_of_yoga from "./images/activities/yoga/yoga_benefits-of-yoga.webp";
+import yoga__one_time_session from "./images/activities/yoga/yoga_one-time-session.jpeg";
+import yoga__montly_subscription from "./images/activities/yoga/yoga_monthly-subscription.jpeg";
 // Activities >> Yoga >> Adhomukha
 import adhvmukhaHeader from "./images/activities/yoga/adhomukha/adhv-mukha-header.png";
 import adhvmukhaSteps from "./images/activities/yoga/adhomukha/steps-of-adhv-mukha-yoga.png";
@@ -440,6 +446,7 @@ export {
   meditation,
   sadhna,
   yoga,
+  yogaSubscriptionHeader,
   activitiesHeader,
   activitiesExplore1,
   activitiesExplore2,
@@ -488,6 +495,7 @@ export {
   yogaSadhnaHeader,
   // Yoga
   yogaHeader,
+  portrait_benefits_of_yoga,
   benefits_of_yoga,
   yoga__AshtangaYoga,
   yoga__HathaYoga,
@@ -495,6 +503,8 @@ export {
   yoga__TherapauticYoga,
   yoga__WeightLoss,
   yoga__WomenYoga,
+  yoga__one_time_session,
+  yoga__montly_subscription,
   // Brain Exericise
   brainExerciseHeader,
   brainGameGalaxy,
@@ -879,6 +889,7 @@ import internshipIcon3 from "./images/internship/internship-icon-3.webp";
 import internshipIcon4 from "./images/internship/internship-icon-4.webp";
 import internshipIcon5 from "./images/internship/internship-icon-5.webp";
 import internshipWhy from "./images/internship/internship-why.webp";
+import internshipBanner from "./images/internship/internship-banner.webp";
 export {
   internshipHeader,
   internshipIcon1,
@@ -887,6 +898,7 @@ export {
   internshipIcon4,
   internshipIcon5,
   internshipWhy,
+  internshipBanner,
 };
 
 // Clients and Testimonials Image
@@ -905,6 +917,11 @@ import yoga_client_1 from "./images/clients/yoga-client-1.webp";
 import yoga_client_2 from "./images/clients/yoga-client-2.webp";
 import yoga_client_3 from "./images/clients/yoga-client-3.webp";
 import yoga_client_4 from "./images/clients/yoga-client-4.webp";
+import yoga_subscription_1 from "./images/clients/yoga-subscription-client-1.jpg";
+import yoga_subscription_2 from "./images/clients/yoga-subscription-client-2.jpg";
+import yoga_subscription_3 from "./images/clients/yoga-subscription-client-3.jpg";
+import yoga_subscription_4 from "./images/clients/yoga-subscription-client-4.jpg";
+import yoga_subscription_5 from "./images/clients/yoga-subscription-client-5.jpg";
 
 export {
   happyClient1,
@@ -922,6 +939,11 @@ export {
   yoga_client_2,
   yoga_client_3,
   yoga_client_4,
+  yoga_subscription_1,
+  yoga_subscription_2,
+  yoga_subscription_3,
+  yoga_subscription_4,
+  yoga_subscription_5,
 };
 
 // FAQ's Section
@@ -1040,6 +1062,7 @@ import placeholderPortrait from "./images/designs/placeholder-portrait.png";
 import placeholderLandscape from "./images/designs/placeholder-landscape.png";
 import quoteBg from "./images/quote-bg.jpg";
 import profileMask from "./images/designs/profile-mask.png";
+import dottedRing from "./images/designs/dotted-ring.webp";
 
 export {
   bgDotsPattern,
@@ -1050,6 +1073,7 @@ export {
   placeholderLandscape,
   quoteBg,
   profileMask,
+  dottedRing,
 };
 
 // Community

@@ -323,8 +323,6 @@ export const mythsAndFacts = [
 ];
 
 // Lifestyle Coaching Faqs
-
-// Musical Therapy FAQ's
 export const lifeStyleCoachingFaqs = {
   heading1: [
     {
@@ -384,6 +382,44 @@ export const lifeStyleCoachingFaqs = {
         "What is your approach to handling client feedback or concerns?",
       answer:
         "At Wleness, we value client feedback and concerns as essential to our commitment to your progress. We encourage open communication and provide a safe space to share your thoughts. Our dedicated coaches listen attentively, address your feedback constructively, and adapt our approach to ensure your coaching experience is positive and productive. Your satisfaction and progress are our top priorities, and we are dedicated to working collaboratively to resolve any concerns or challenges that may arise during your coaching journey.",
+    },
+  ],
+};
+
+// Yoga Subscription
+export const yogaSubscriptionFaqs = {
+  heading1: [
+    {
+      color: false,
+      text: "Frequently Asked ",
+    },
+    {
+      color: true,
+      text: "Questions",
+    },
+  ],
+  heading2: [],
+  desc: "Everything you need to know about the yoga sessions.",
+  image: faq4,
+  qnas: [
+    {
+      question:
+        "Is there a cost for attending these daily yoga classes, or is it free?",
+      answer: "There is an Investment of Rs. 99 Per session.",
+    },
+    {
+      question: "In these classes, will you cover the different yoga styles?",
+      answer:
+        "Yes, the classes will cover various yoga styles suitable to your goals.",
+    },
+    {
+      question:
+        "Are these classes prerecorded or live? Will you be sharing the recording?",
+      answer: "Recording will be only provided in the monthly plans.",
+    },
+    {
+      question: "Can I attend more than one time in a day?",
+      answer: "Yes, you can attend as many sessions as you want.",
     },
   ],
 };

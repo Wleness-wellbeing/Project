@@ -10,7 +10,7 @@ import YogaInstructorCard from "../Cards/YogaInstructorCard";
 import { YOGA_EXPERTS_URI } from "../../data/api";
 import axios from "axios";
 
-export default function YogaSlider() {
+export default function YogaSlider({ onclick }) {
   const [swiper, setSwiper] = useState(null); // Store Swiper instance
 
   const handleMouseEnter = () => {
@@ -70,7 +70,7 @@ export default function YogaSlider() {
 
       {/* Yoga Instructors */}
       <div
-        className="doctorSlider relative"
+        // className="justify-center md:grid md:grid-cols-2"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -97,7 +97,7 @@ export default function YogaSlider() {
           {experts?.map((value, index) => {
             return (
               <SwiperSlide key={index}>
-                <YogaInstructorCard key={index} data={value} />
+                <YogaInstructorCard data={value} />
               </SwiperSlide>
             );
           })}

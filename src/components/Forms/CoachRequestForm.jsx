@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { COACH_CALLBACK_URI } from "../../data/api";
 import { useNavigate } from "react-router-dom";
+import { COACH_CALLBACK_URI } from "../../data/api";
 
-export default function CoachRequestForm({ name }) {
+export default function CoachRequestForm({ name, title }) {
   const [formInfo, setFormData] = useState({
     name: "",
     email: "",
@@ -31,6 +31,7 @@ export default function CoachRequestForm({ name }) {
       message: message,
     });
   };
+
   // Handle Post Request
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -83,7 +84,7 @@ export default function CoachRequestForm({ name }) {
             Need coaching?
           </h3>
           <h2 className="font-quicksand text-3xl font-bold leading-tight tracking-tight text-[#464646] opacity-90 xl:text-4xl">
-            Book a session
+            {title ? title : "Book a session"}
           </h2>
 
           <p className="pb-4 pt-2 font-medium text-slate-700 opacity-90 lg:text-lg">

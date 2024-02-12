@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 // Data
 import { expertsHeader, bubbles } from "../../assets";
 import { doctorsPageClient } from "../../data/clients";
@@ -17,7 +18,6 @@ import { EXPERTS_URI } from "../../data/api";
 import DoctorsCard from "../../components/DoctorsCard";
 import { EXPERTS_META } from "../../data/meta";
 import { get_canonical } from "../../utils";
-import { Helmet } from "react-helmet";
 
 function Experts() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
@@ -141,37 +141,6 @@ function Experts() {
           </Link>
         </div>
       </section>
-
-      {/* ========== Objectives ========== */}
-      {/* <section className="container mx-auto mb-10 mt-5 grid items-center gap-5 rounded-2xl bg-primary-50/30 lg:grid-cols-3">
-        <figure className="flex items-center px-5 pt-5 lg:py-10">
-          <div className="mr-3 w-3/12 lg:w-20">
-            <img src={featureIcon1} alt="" className="w-full object-cover" />
-          </div>
-          <figcaption className="w-3/4 text-lg text-[#464646] lg:w-fit">
-            Get the best and assured service.
-          </figcaption>
-        </figure>
-        <figure className="flex items-center px-5 pt-5 lg:py-10">
-          <div className="mr-3 w-3/12 lg:w-20">
-            <img src={featureIcon2} alt="" className="w-full object-cover" />
-          </div>
-          <figcaption className="w-3/4 text-lg text-[#464646] lg:w-fit">
-            Have a good mental health at a price of pizza.
-          </figcaption>
-        </figure>
-        <figure className="flex items-center px-5 py-5 lg:py-10">
-          <div className="mr-3 w-3/12 lg:w-20">
-            <img src={featureIcon3} alt="" className="w-full object-cover" />
-          </div>
-          <figcaption
-            className="w-3/4 text-lg text-[#464646] lg:w-fit"
-            ref={ref}
-          >
-            24X7 Quality service
-          </figcaption>
-        </figure>
-      </section> */}
 
       {/* ========== Why Us ========== */}
       <section className="relative overflow-x-hidden overflow-y-clip px-5 lg:!px-0 lg:pb-14">

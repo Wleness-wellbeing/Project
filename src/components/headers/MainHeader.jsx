@@ -35,7 +35,7 @@ export default function MainHeader({ openAssessmentModal }) {
           >
             Book appointment
           </button>
-          <h3 className="mx-auto mb-4 text-sm font-semibold text-slate-700 md:text-base lg:text-lg">
+          {/* <h3 className="mx-auto mb-4 text-sm font-semibold text-slate-700 md:text-base lg:text-lg">
             Explore your inner self, take a comprehensive self assessment and
             get an online therapy session at a promotional price.
           </h3>
@@ -45,7 +45,7 @@ export default function MainHeader({ openAssessmentModal }) {
             className="mx-auto block w-4/5 rounded-full border-2 border-primary-400 px-6 py-2 text-center text-sm font-semibold text-primary-400 transition-all hover:bg-primary-400 hover:text-white md:w-fit lg:mx-0 lg:px-8 lg:text-base"
           >
             Self Assessment
-          </Link>
+          </Link> */}
         </div>
       </div>
     </header>

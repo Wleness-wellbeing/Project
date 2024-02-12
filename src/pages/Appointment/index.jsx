@@ -224,10 +224,9 @@ export default function Appointment() {
   // ======================================
   const handleApplyCoupon = (e) => {
     e.preventDefault();
-    return null;
 
     // Validate coupon code
-    if (couponCode.code != profileDetails.expert_id) {
+    if (couponCode.code != "WELL40") {
       setCouponAlertMessage("error", "Invalid Coupon Code");
       setCheckoutDetails({
         ...checkoutDetails,
@@ -240,7 +239,7 @@ export default function Appointment() {
       return null;
     }
 
-    // Coupon code minimum value
+    // Validate coupon code minimum value
     if (checkoutDetails.original_price < 500) {
       setCouponAlertMessage(
         "error",
@@ -248,15 +247,16 @@ export default function Appointment() {
       );
       return null;
     } else {
+      // Apply coupon code
       setCouponCode({
         ...couponCode,
-        price: checkoutDetails.original_price * 0.1,
+        price: checkoutDetails.original_price * 0.4,
         is_applied: true,
       });
       setCheckoutDetails({
         ...checkoutDetails,
         price:
-          checkoutDetails.original_price - checkoutDetails.original_price * 0.1,
+          checkoutDetails.original_price - checkoutDetails.original_price * 0.4,
       });
       setCouponAlertMessage("success", "Coupon applied! Enjoy your discount!");
     }

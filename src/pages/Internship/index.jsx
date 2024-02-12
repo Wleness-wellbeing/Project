@@ -11,6 +11,7 @@ import {
   iconCommitment,
   iconFacilities,
   iconExperience,
+  internshipBanner,
 } from "../../assets";
 import { internshipClients } from "../../data/clients";
 // Components
@@ -21,6 +22,9 @@ import FaqWithImage from "../../components/FaqWithImage";
 import { Helmet } from "react-helmet";
 import { INTERNSHIP_META } from "../../data/meta";
 import { get_canonical } from "../../utils";
+import { Link } from "react-router-dom";
+import { APPLY_INTERNSHIP_FORM_URL } from "../../data/urls";
+import InternshipBanner from "./InternshipBanner";
 
 const wlenessWork = [
   {
@@ -87,7 +91,7 @@ export default function Internship() {
         <link rel="canonical" href={get_canonical(window.location)} />
       </Helmet>
 
-      <header className="bg-primary-50/30 py-4 lg:py-16">
+      <header className="mb-6 bg-primary-50/30 py-4 lg:mb-14 lg:py-16">
         <div className="container mx-auto flex flex-col items-center justify-center md:flex-row">
           {/* Image on the right */}
           <div className="md:w-1/2 lg:order-2 ">
@@ -106,12 +110,18 @@ export default function Internship() {
               look no further! Join Wleness to embark on a rewarding journey
               promoting well-being and supporting individuals in need.
             </p>
-            <button className="btn-one" onClick={openInternshipModal}>
+            <Link
+              target="_blank"
+              to="https://docs.google.com/forms/d/e/1FAIpQLSdgYCChXTeQK01bfFM0_xS5Lq6MDesEPNN_JGkeVkiEtDu5QA/viewform"
+              className="btn-one"
+            >
               Apply Now
-            </button>
+            </Link>
           </div>
         </div>
       </header>
+
+      <InternshipBanner url={APPLY_INTERNSHIP_FORM_URL} new_page={true} />
 
       {/* ==== why wleness===== */}
       <section className="container mx-auto overflow-x-hidden pt-10 lg:pb-7 lg:pt-12">

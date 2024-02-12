@@ -127,6 +127,7 @@ import {
 } from "./data/urls";
 import { lifestyleCoaches } from "./data/life-coaching";
 import { coachesData } from "./data/coach";
+import YogaSubscription from "./pages/Activities/YogaSubscription";
 
 function App() {
   const { token, removeToken, setToken } = useToken();

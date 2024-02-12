@@ -14,6 +14,11 @@ import {
   yoga_client_2,
   yoga_client_3,
   yoga_client_4,
+  yoga_subscription_1,
+  yoga_subscription_2,
+  yoga_subscription_3,
+  yoga_subscription_4,
+  yoga_subscription_5,
 } from "../assets";
 
 export const clientsReviews = [
@@ -172,6 +177,60 @@ export const yogaClients = {
       image: yoga_client_4,
       review:
         "Wleness provides a unique blend of effective stress relief and enjoyable group sessions. The simplicity of the exercises make it accessible for everyone, especially people like me who are total beginners. It has become my daily routine now.",
+    },
+  ],
+};
+
+export const yogaSubscriptionClients = {
+  heading: [
+    {
+      color: false,
+      text: "What Our ",
+    },
+    {
+      color: true,
+      text: "Happy Clients ",
+    },
+    {
+      color: false,
+      text: "Say",
+    },
+  ],
+  clients: [
+    {
+      name: "Anup Singh",
+      profession: "Teacher",
+      image: yoga_subscription_1,
+      review:
+        "Having been struggling with weight loss for years. The yoga classes are not only effective for my weight control but also enjoyable. I've shed pounds and gained a new sense of confidence in my body. Highly recommended!",
+    },
+    {
+      name: "Riddhi Gupta",
+      profession: "Digital Marketer",
+      image: yoga_subscription_2,
+      review:
+        "Wleness has been really helpful for my PCOS journey. The yoga sessions are according to specific concerns, and I've experienced noticeable improvements in my hormonal balance. Grateful for this holistic approach to wellness!",
+    },
+    {
+      name: "Vaishnavi Arora",
+      profession: "Graphics Designer",
+      image: yoga_subscription_3,
+      review:
+        "Wleness is my sanctuary for finding peace and rejuvenation. The expert yoga guidance has made a significant impact on my mental well-being. It's a haven for anyone seeking tranquility.",
+    },
+    {
+      name: "Deep Kumar",
+      profession: "Finance Manager",
+      image: yoga_subscription_4,
+      review:
+        "The focus on overall health at Wleness is commendable. Regular yoga practice here has not only improved my flexibility but has also positively influenced my general well-being. Grateful for the positive changes in my health journey.",
+    },
+    {
+      name: "Jyoti Chawla",
+      profession: "Finance Manager",
+      image: yoga_subscription_5,
+      review:
+        "Wleness has been really helpful in achieving good health through their well-crafted yoga programs. The instructors are knowledgeable, and the personalized approach has made a significant difference in my fitness and overall health. A great investment in oneself!",
     },
   ],
 };

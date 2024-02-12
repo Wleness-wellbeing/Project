@@ -134,7 +134,7 @@ export default function YogaCheckout({
                 {checkoutDetails.plan} Price
               </span>
               <span className="text-slate-800">
-                Rs. {checkoutDetails.price}
+                Rs. {checkoutDetails.original_price}
               </span>
             </li>
             {couponCode.is_applied ? (
