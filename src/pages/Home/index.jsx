@@ -22,6 +22,7 @@ import YogaSlider from "../../components/Carousels/YogaSlider";
 import FeaturedIn from "../../components/Sections/FeaturedIn";
 import SelfAssessment from "../../components/Modals/SelfAssessment";
 import InternshipBanner from "../Internship/InternshipBanner";
+import { INTERNSHIP } from "../../data/urls";
 
 export default function Home() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
@@ -90,7 +91,7 @@ export default function Home() {
         </div>
       </section>
 
-      <InternshipBanner url="/internship" new_page={false} />
+      <InternshipBanner url={INTERNSHIP} new_page={false} />
       <br />
       <br />
 

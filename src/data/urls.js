@@ -90,6 +90,8 @@ export const CONSENT = "/consent";
 export const THERAPIST_JOIN = "/therapist-join";
 export const PSYCHIATRIST_JOIN = "/psychiatrist-join";
 export const INTERNSHIP = "/internship";
+export const APPLY_INTERNSHIP_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSdgYCChXTeQK01bfFM0_xS5Lq6MDesEPNN_JGkeVkiEtDu5QA/viewform";
 export const CAMPUS_AMBASSADOR = "/campus-ambassador";
 
 // User
