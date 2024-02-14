@@ -93,7 +93,7 @@ function App() {
   }
   // add the event listener to the component's root element
   const rootElement = document.getElementById("root");
-  // rootElement.addEventListener("contextmenu", handleContextMenu);
+  rootElement.addEventListener("contextmenu", handleContextMenu);
 
   // Serve xml file
   axios.get(xmlFile, {
