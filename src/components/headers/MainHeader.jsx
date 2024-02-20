@@ -1,7 +1,6 @@
 import React from "react";
 // Data
 import { mainHeaderImage } from "../../assets";
-import { Link } from "react-router-dom";
 
 export default function MainHeader({ openAssessmentModal }) {
   return (
