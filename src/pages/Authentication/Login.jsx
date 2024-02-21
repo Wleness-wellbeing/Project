@@ -46,7 +46,6 @@ export default function Login({ setToken, token }) {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         const user = result.user;
-        console.log(user);
         VerifyLoginData(user, GOOGLE_LOGIN_URI);
       })
       .catch((error) => {
@@ -73,12 +72,13 @@ export default function Login({ setToken, token }) {
 
   const VerifyLoginData = async (data, url) => {
     // Append form fields to the FormData object
-    let formData = new FormData();
-    formData.append("email", data.email);
-    formData.append("access_token", data.accessToken);
+    let request_data = {
+      email: data.email,
+      access_token: data.accessToken,
+    };
     try {
       // Send user data to the backend
-      const response = await axios.post(url, formData);
+      const response = await axios.post(url, request_data);
       setMessages(response.data.status, response.data.message); // set success message
 
       // Empty form after successfully sending data

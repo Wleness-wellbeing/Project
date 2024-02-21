@@ -52,7 +52,6 @@ export default function Signup({ setToken, token }) {
       .then((result) => {
         let user = result.user;
         user.login_type = "google";
-        console.log(user);
 
         // Send user data to the backend
         sendUserDataToBackend(user, GOOGLE_SIGNUP_URI);
@@ -93,15 +92,8 @@ export default function Signup({ setToken, token }) {
       access_token: user.accessToken,
     };
 
-    let formData = new FormData();
-    formData.append("name", data.name);
-    formData.append("email", data.email);
-    formData.append("image", data.image);
-    formData.append("login_type", data.login_type);
-    formData.append("access_token", data.access_token);
-
     try {
-      const response = await axios.post(url, formData);
+      const response = await axios.post(url, data);
       if (response.data.status == "success") {
         // Set login token
         setToken(response.data.access_token);
