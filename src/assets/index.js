@@ -1,5 +1,6 @@
 // Home Images
 import mainHeaderImage from "./images/home/main-header-image.webp";
+import whyWleness from "./images/home/why-wleness.png";
 import iconCommunity from "./images/home/icons/icon_community.svg";
 import iconEasyAccess from "./images/home/icons/icon_easy-access.svg";
 import iconEffective from "./images/home/icons/icon_effective.svg";
@@ -73,6 +74,7 @@ import suggestionRight from "./images/suggestionRight.png";
 
 export {
   mainforteRight,
+  whyWleness,
   suggestionRight,
   mainHeaderImage,
   iconCommunity,

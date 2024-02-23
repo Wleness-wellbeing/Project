@@ -137,6 +137,7 @@ import {
   yoga__TherapauticYoga,
   yoga__WomenYoga,
   brainExerciseHeader,
+  whyWleness,
 } from "../assets";
 
 // Components
@@ -149,6 +150,7 @@ import LeftImageList from "../components/LeftImageList";
 import LeftImageList3 from "../components/LeftImageList3";
 import SubpagesConclusion from "../components/SubpagesConclusion";
 import RightImageList2 from "../components/RightImageList2";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 // Therapies data for landing page
 export const therapies = [
@@ -3738,5 +3740,90 @@ export const wlenessLifeCoaching = [
     image: lifeCoachingInterviewPreparation,
     alt: "Interview Preparation guidance from Wleness",
     desc: "Our comprehensive approach examines all facets of your life, providing a clear roadmap for growth. Our expert coaches will assess your strengths, identify areas for improvement, & work with you to set & achieve meaningful goals. Elevate every aspect of your life.",
+  },
+];
+
+export const home_service_banner = [
+  {
+    name: "Individual Counselling",
+    description: "Individual counselling provides personalized support.",
+    slug: "/therapy",
+    icon: faUser,
+  },
+  {
+    name: "Couple Counselling",
+    description: "Every couple, at one point or another, faces challenges.",
+    slug: "/therapy",
+    icon: faUser,
+  },
+  {
+    name: "Family Counselling",
+    description: "Family counselling plays a crucial role in promoting",
+    slug: "/therapy",
+    icon: faUser,
+  },
+  {
+    name: "Musical Healing",
+    description: "Your spaces to talk about what's going on.",
+    slug: "/therapy",
+    icon: faUser,
+  },
+];
+
+export const home_why_wleness = [
+  {
+    name: "Individual Counselling",
+    description: "Individual counselling provides personalized support.",
+    slug: "/therapy",
+    icon: faUser,
+  },
+  {
+    name: "Couple Counselling",
+    description: "Every couple, at one point or another, faces challenges.",
+    slug: "/therapy",
+    icon: faUser,
+  },
+  {
+    name: "Family Counselling",
+    description: "Family counselling plays a crucial role in promoting",
+    slug: "/therapy",
+    icon: faUser,
+  },
+];
+
+export const home_services = [
+  {
+    title: "Strengthen Mental Health and Wellness",
+    image: whyWleness,
+    description:
+      "We understand the significance of a balanced and resilient mind, and we're committed to equipping you with the knowledge and skills to achieve just that. Through a blend of curated resources, expert guidance, and personalized support.",
+    points: [
+      "Guidance you can trust",
+      "Skills for life success",
+      "Strategies to feel better",
+      "Strategies to feel better",
+    ],
+    button: {
+      text: "Book Now",
+      slug: "/therapy",
+    },
+    ltr: true,
+  },
+  {
+    title: "Reason to Choose Wleness",
+    image: whyWleness,
+    description:
+      "Wleness stands as a beacon of support in the realm of mental health care, offering a comprehensive suite of resources and personalized assistance.",
+    points: [
+      "Guidance you can trust",
+      "Skills for life success",
+      "Strategies to feel better",
+      "Strategies to feel better",
+    ],
+    button: {
+      text: "Get Started",
+      slug: "/therapy",
+    },
+    ltr: false,
   },
 ];

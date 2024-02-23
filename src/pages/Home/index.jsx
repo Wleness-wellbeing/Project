@@ -2,11 +2,18 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 // Data
-import { community, designRing } from "../../assets";
+import { community, designRing, whyWleness } from "../../assets";
 import { get_canonical } from "../../utils";
 import { homeFaqs } from "../../data/faqs";
 import { homeTestimonials } from "../../data/testimonials";
-import { homeServices, statistics, whyChooseUs } from "../../data";
+import {
+  homeServices,
+  home_service_banner,
+  home_services,
+  home_why_wleness,
+  statistics,
+  whyChooseUs,
+} from "../../data";
 import { HOME_META } from "../../data/meta";
 import { homePageDoctors } from "../../data/doctors";
 // Components
@@ -22,6 +29,14 @@ import YogaSlider from "../../components/Carousels/YogaSlider";
 import FeaturedIn from "../../components/Sections/FeaturedIn";
 import SelfAssessment from "../../components/Modals/SelfAssessment";
 import InternshipBanner from "../Internship/InternshipBanner";
+import {
+  faArrowRight,
+  faCheck,
+  faCheckCircle,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import HomeServiceCard from "../../components/Cards/HomeServiceCard";
 
 export default function Home() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
@@ -58,25 +73,86 @@ export default function Home() {
       {/* Hero Section */}
       <MainHeader openAssessmentModal={() => resetBookNow()} />
 
-      {/* ========== Services ========== */}
-      <section>
-        {/* <div className="py-8 text-center sm:pt-6 lg:pb-14  2xl:pb-10">
-          <div className="container mx-auto">
-            <h2 className="sm:pb-0 xl:pb-1">
-              <span className="subheading heading-primary">
-                The World Is Your Stage
-              </span>
-            </h2>
-            <p className="para">
-              We are an integrated digital platform offering holistic wellness
-              services with yoga, meditation, musical healing, brain games and a
-              wealth of engaging resources. Join us on this unique path to
-              well-being.
-            </p>
-          </div>
-        </div> */}
+      {/* ========== Services Banner ========== */}
+      <section className="container mx-auto -translate-y-24">
+        <div className="grid rounded-xl bg-primary-100 px-8 py-10 drop-shadow-lg md:grid-cols-2 xl:grid-cols-4">
+          {home_service_banner.map((value, i) => {
+            return (
+              <div key={i} className="flex">
+                <FontAwesomeIcon
+                  icon={value.icon}
+                  className="mr-3 mt-1 block font-semibold text-primary-200"
+                />
+                <div>
+                  <h2 className="mb-3 font-semibold text-white">
+                    {value.name}
+                  </h2>
+                  <p className="mb-4 text-sm font-medium text-teal-100">
+                    {value.description}
+                  </p>
+                  <Link
+                    to={value.slug}
+                    className="group inline-block rounded-2xl border-2 border-primary-50 px-4 py-[2px] hover:bg-primary-50"
+                  >
+                    <FontAwesomeIcon
+                      icon={faArrowRight}
+                      className="text-sm text-white group-hover:text-black"
+                    />
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
 
-        {/* Services */}
+      {/* ========== Why Wleness ========== */}
+      <section className="container mx-auto mb-10 grid gap-5 lg:grid-cols-2">
+        <div className="p-6">
+          <img src={whyWleness} alt="Why wleness wellbeing" />
+        </div>
+        <div>
+          <h3 className="grid text-4xl font-bold">
+            <span>Why wleness and </span>
+            <span>what it solves for you</span>
+          </h3>
+          <p className="mb-8 mt-4 text-lg font-medium">
+            Wleness is growing community working towards changing the way
+            individuals think & act about problems related to Mental Health.
+            Managed by the current generation.
+          </p>
+          <div className="space-y-4">
+            {home_why_wleness.map((value, i) => {
+              return (
+                <div
+                  className="flex cursor-pointer rounded-xl bg-slate-100 px-6 py-4 transition-all hover:bg-slate-200"
+                  key={i}
+                >
+                  <FontAwesomeIcon
+                    icon={faUser}
+                    className="mr-3 mt-1 block font-semibold"
+                  />
+                  <div>
+                    <h2 className="font-semibold">{value.name}</h2>
+                    <p className="my-4 hidden text-sm font-medium text-slate-500">
+                      {value.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ========== Our Services ========== */}
+      <section className="space-y-20 bg-primary-10 py-24">
+        {home_services.map((value, i) => {
+          return <HomeServiceCard data={value} key={i} />;
+        })}
+      </section>
+
+      {/* <section>
         <div className="bg-gradient-to-br from-primary-10 to-white pb-6 font-quicksand lg:pb-10">
           <div className="container mx-auto grid grid-cols-2 gap-x-2 gap-y-8 py-6 pt-8 lg:grid-cols-3 lg:gap-6 lg:pb-10 lg:pt-12 xl:gap-x-14 xl:gap-y-20 xl:pt-24">
             {homeServices.map((value, index) => {
@@ -88,8 +164,40 @@ export default function Home() {
             })}
           </div>
         </div>
+      </section> */}
+
+      {/* ========== How wleness work ========== */}
+      <section className="p-16">
+        <div className="container mx-auto mb-10 grid gap-5 rounded-xl bg-primary-500 !px-16 py-14 lg:grid-cols-2">
+          <div>
+            <h2 className="subheading text-primary-50">How Wleness Works</h2>
+            <p className="font-semibold text-slate-200">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+          <div className="flex items-end justify-end text-right">
+            <button className="btn-one">Explore our services</button>
+          </div>
+          <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perspiciatis fuga, illum similique animi consequuntur corporis
+            molestiae cumque temporibus laborum suscipit nostrum quaerat
+            exercitationem repudiandae nesciunt possimus magni quos quia a et
+            rem dolores quae obcaecati. Provident recusandae ullam quia neque
+            unde. Quo, sapiente illo quisquam libero est a? Itaque, minima!
+          </div>
+          <div className="p-20 text-right">
+            <img
+              src={whyWleness}
+              alt="Why wleness wellbeing"
+              className="rounded-3xl shadow-[50px_-50px_4px_-10px] shadow-primary-50"
+            />
+          </div>
+        </div>
       </section>
 
+      <br />
+      <br />
       <InternshipBanner url="/internship" new_page={false} />
       <br />
       <br />
