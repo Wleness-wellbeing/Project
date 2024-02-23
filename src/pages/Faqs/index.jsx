@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { bgDotsPattern, faq3, faqHeader } from "../../assets";
 import Faq from "../../components/layout/Faq";
 import { faqs } from "../../data/faqs";
+import { Helmet } from "react-helmet";
+import { FAQS_META } from "../../data/meta";
 
 export default function index() {
   const [openFAQ, setOpenFAQ] = useState(-1); // Initialize with -1 to represent all FAQs as closed
@@ -19,6 +21,11 @@ export default function index() {
 
   return (
     <>
+      <Helmet>
+        <title>{FAQS_META.title}</title>
+        <meta name="description" content={FAQS_META.description} />
+        <link rel="canonical" href={get_canonical(window.location)} />
+      </Helmet>
       <header className="relative overflow-x-hidden overflow-y-clip bg-gradient-to-b from-primary-50/30 to-transparent">
         <div className="container mx-auto">
           <h1 className="subheading mt-8 !grid text-center">
