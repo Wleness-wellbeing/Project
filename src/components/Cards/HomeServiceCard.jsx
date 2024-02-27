@@ -22,10 +22,9 @@ export default function HomeServiceCard({ data }) {
         />
       </div>
       <div className={`${data.ltr ? "order-1" : "order-2"} lg:w-1/2`}>
-        <h2 className="subheading text-primary-300 lg:!grid">
-          {data.title.map((heading, i) => {
-            return <span key={i}>{heading} </span>;
-          })}
+        <h2 className="subheading lg:pr-12">
+          {data.title[0]}
+          <span className="heading-primary"> {data.title[1]}</span>
         </h2>
         <p className="para mt-4">{data.description}</p>
         <ul className="my-8 space-y-2">

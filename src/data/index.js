@@ -3850,7 +3850,7 @@ export const home_services = [
     ltr: true,
   },
   {
-    title: ["Lifestyle Coaching"],
+    title: ["Lifestyle", "Coaching"],
     image: homeLifeCoaching,
     description:
       "Transform your personal development with guidance and support through ICF-certified life coaching services. Find a life coach online at your fingertips—top life coaching guidance in India. Start your journey towards a healthier, happier life!",
@@ -3867,7 +3867,7 @@ export const home_services = [
     ltr: false,
   },
   {
-    title: ["Executive Coaching"],
+    title: ["Executive", "Coaching"],
     image: homeExecutiveCoachingImage,
     description:
       "Unlock your full potential and enhance your leadership abilities with personalised executive coaching. Get the best business and executive coaching from the comfort of your home. Start on a journey with certified leadership coaches towards growth and success!",

@@ -179,7 +179,7 @@ export default function Home() {
                     value.dark ? "bg-primary-400" : "bg-white"
                   }`}
                 >
-                  <div className="mb-2 h-10 w-20 text-left">
+                  <div className="mb-2 h-10 w-28 text-left">
                     <img
                       src={value.image}
                       alt={value.title}
@@ -188,7 +188,7 @@ export default function Home() {
                   </div>
                   <figcaption>
                     <h4
-                      className={`mb-2 text-lg font-bold ${
+                      className={`mb-2 text-lg font-extrabold ${
                         value.dark ? "text-white" : "text-primary-400"
                       }`}
                     >
