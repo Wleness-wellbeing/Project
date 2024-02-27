@@ -33,11 +33,11 @@ const featuredIn = [
 
 export default function FeaturedIn() {
   return (
-    <section className="mb-4 bg-yellow-primary py-6 lg:mb-8 lg:py-10">
+    <section className="bg-yellow-primary py-6 lg:py-10">
       <div className="container mx-auto">
-        <h2 className="mb-5 text-center">
+        {/* <h2 className="mb-5 text-center">
           <span className="subheading heading-primary">Featured In</span>
-        </h2>
+        </h2> */}
         <div className="flex items-center justify-center gap-4 lg:gap-10 lg:pb-3">
           {featuredIn.map((value, i) => {
             return (

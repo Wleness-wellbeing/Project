@@ -154,14 +154,14 @@ export const homePageDoctors = {
   heading: [
     {
       color: false,
-      text: "Meet Our ",
+      text: "Get the support of ",
     },
     {
       color: true,
-      text: "Soul Healers",
+      text: "India's top psychologists!",
     },
   ],
-  desc: "",
+  desc: "Wleness provides quality therapy and counseling to all clients. Get the best and most recommended online therapy and guidance packages with India's best psychiatrists, therapists, and guides.",
   doctors: doctorsDetails,
   button: {
     text: "Book Now",

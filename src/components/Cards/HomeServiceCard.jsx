@@ -5,21 +5,29 @@ import { Link } from "react-router-dom";
 
 export default function HomeServiceCard({ data }) {
   return (
-    <div className="container mx-auto mb-10 flex items-center gap-5">
-      <div className={`${data.ltr ? "order-2" : "order-1"} p-6 lg:w-1/2`}>
+    <div className="container mx-auto flex flex-col items-center py-10 lg:flex-row lg:gap-x-10">
+      <div
+        className={`${
+          data.ltr ? "order-1 lg:order-2" : "order-1"
+        } p-6 lg:w-1/2`}
+      >
         <img
           src={data.image}
           alt="Why wleness wellbeing"
           className={`${
             data.ltr
-              ? "shadow-[50px_-50px_4px_-10px]"
-              : "shadow-[-50px_50px_4px_-10px]"
-          } rounded-3xl  shadow-primary-50`}
+              ? "shadow-[30px_-30px_3px_-8px] lg:shadow-[50px_-50px_4px_-10px]"
+              : "shadow-[30px_-30px_3px_-8px] lg:shadow-[-50px_50px_4px_-10px]"
+          } rounded-3xl  shadow-primary-50 lg:shadow-primary-50`}
         />
       </div>
       <div className={`${data.ltr ? "order-1" : "order-2"} lg:w-1/2`}>
-        <h3 className="grid text-4xl font-bold">{data.title}</h3>
-        <p className="mt-4 text-lg font-medium">{data.description}</p>
+        <h2 className="subheading lg:!grid">
+          {data.title.map((heading, i) => {
+            return <span key={i}>{heading} </span>;
+          })}
+        </h2>
+        <p className="para mt-4">{data.description}</p>
         <ul className="my-8 space-y-2">
           {data.points.map((value, i) => {
             return (

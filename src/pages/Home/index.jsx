@@ -1,42 +1,38 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Data
-import { community, designRing, whyWleness } from "../../assets";
+import { community, designRing, howWlenessWorks } from "../../assets";
 import { get_canonical } from "../../utils";
 import { homeFaqs } from "../../data/faqs";
-import { homeTestimonials } from "../../data/testimonials";
 import {
-  homeServices,
+  homeCertified,
+  home_how_wleness_works,
   home_service_banner,
   home_services,
-  home_why_wleness,
-  statistics,
-  whyChooseUs,
+  therapies,
 } from "../../data";
 import { HOME_META } from "../../data/meta";
 import { homePageDoctors } from "../../data/doctors";
 // Components
 import Assessment from "../../components/Assessment";
 import RequestForm from "../../components/Forms/RequestForm";
-import Testimonial from "../../components/testimonial/Testimonial";
 import MainHeader from "../../components/headers/MainHeader";
 import HomeFaq from "../../components/Faq/HomeFaq";
-import ServicesCard from "../../components/Cards/ServicesCard";
 import DoctorSlider from "../../components/DoctorSlider";
-import Objectives from "../../components/Objectives";
-import YogaSlider from "../../components/Carousels/YogaSlider";
 import FeaturedIn from "../../components/Sections/FeaturedIn";
 import SelfAssessment from "../../components/Modals/SelfAssessment";
-import InternshipBanner from "../Internship/InternshipBanner";
-import {
-  faArrowRight,
-  faCheck,
-  faCheckCircle,
-  faUser,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import HomeServiceCard from "../../components/Cards/HomeServiceCard";
+import SelfCareHome from "../../components/Sections/SelfCareHome";
+import IssueCard from "../../components/Cards/IssueCard";
+import HomeFeaturedIn from "../../components/Sections/HomeFeaturedIn";
+import HomeCorporate from "../../components/Sections/HomeCorporate";
+import HomeInternship from "../../components/Sections/HomeInternship";
+import HomeWhyWleness from "../../components/Sections/HomeWhyWleness";
+import HomeBlogs from "../../components/Sections/HomeBlogs";
+import HomeTestimonials from "../../components/Sections/HomeTestimonials";
 
 export default function Home() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
@@ -74,8 +70,8 @@ export default function Home() {
       <MainHeader openAssessmentModal={() => resetBookNow()} />
 
       {/* ========== Services Banner ========== */}
-      <section className="container mx-auto -translate-y-24">
-        <div className="grid rounded-xl bg-primary-100 px-8 py-10 drop-shadow-lg md:grid-cols-2 xl:grid-cols-4">
+      <section className="container mx-auto mb-10 lg:mb-0 lg:-translate-y-24">
+        <div className="grid gap-5 rounded-xl bg-primary-300 px-7 py-6 drop-shadow-lg md:grid-cols-2 lg:px-8 lg:py-10 xl:grid-cols-4">
           {home_service_banner.map((value, i) => {
             return (
               <div key={i} className="flex">
@@ -84,19 +80,29 @@ export default function Home() {
                   className="mr-3 mt-1 block font-semibold text-primary-200"
                 />
                 <div>
-                  <h2 className="mb-3 font-semibold text-white">
-                    {value.name}
-                  </h2>
-                  <p className="mb-4 text-sm font-medium text-teal-100">
-                    {value.description}
-                  </p>
+                  <div>
+                    <h2 className="mb-3 font-semibold text-white">
+                      {value.name}
+                    </h2>
+                    <p className="mb-4 text-sm font-medium text-teal-50">
+                      {value.description}
+                    </p>
+                  </div>
                   <Link
                     to={value.slug}
-                    className="group inline-block rounded-2xl border-2 border-primary-50 px-4 py-[2px] hover:bg-primary-50"
+                    className={`group inline-block rounded-2xl border-2  px-4 py-[2px] ${
+                      value.selected
+                        ? "border-white bg-white"
+                        : "border-primary-50 hover:border-white hover:bg-white"
+                    }`}
                   >
                     <FontAwesomeIcon
                       icon={faArrowRight}
-                      className="text-sm text-white group-hover:text-black"
+                      className={`${
+                        value.selected
+                          ? "text-black"
+                          : "text-white group-hover:text-black"
+                      }`}
                     />
                   </Link>
                 </div>
@@ -107,115 +113,150 @@ export default function Home() {
       </section>
 
       {/* ========== Why Wleness ========== */}
-      <section className="container mx-auto mb-10 grid gap-5 lg:grid-cols-2">
-        <div className="p-6">
-          <img src={whyWleness} alt="Why wleness wellbeing" />
-        </div>
-        <div>
-          <h3 className="grid text-4xl font-bold">
-            <span>Why wleness and </span>
-            <span>what it solves for you</span>
-          </h3>
-          <p className="mb-8 mt-4 text-lg font-medium">
-            Wleness is growing community working towards changing the way
-            individuals think & act about problems related to Mental Health.
-            Managed by the current generation.
-          </p>
-          <div className="space-y-4">
-            {home_why_wleness.map((value, i) => {
-              return (
-                <div
-                  className="flex cursor-pointer rounded-xl bg-slate-100 px-6 py-4 transition-all hover:bg-slate-200"
-                  key={i}
-                >
-                  <FontAwesomeIcon
-                    icon={faUser}
-                    className="mr-3 mt-1 block font-semibold"
-                  />
-                  <div>
-                    <h2 className="font-semibold">{value.name}</h2>
-                    <p className="my-4 hidden text-sm font-medium text-slate-500">
-                      {value.description}
-                    </p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      <HomeWhyWleness />
 
       {/* ========== Our Services ========== */}
-      <section className="space-y-20 bg-primary-10 py-24">
+      <section className="mb-8 bg-primary-10 pb-4 lg:mb-0 lg:pt-10">
         {home_services.map((value, i) => {
           return <HomeServiceCard data={value} key={i} />;
         })}
       </section>
 
-      {/* <section>
-        <div className="bg-gradient-to-br from-primary-10 to-white pb-6 font-quicksand lg:pb-10">
-          <div className="container mx-auto grid grid-cols-2 gap-x-2 gap-y-8 py-6 pt-8 lg:grid-cols-3 lg:gap-6 lg:pb-10 lg:pt-12 xl:gap-x-14 xl:gap-y-20 xl:pt-24">
-            {homeServices.map((value, index) => {
-              // Show community card only on desktop
-              return value.slug == "/community" &&
-                window.screen.width > 600 ? null : (
-                <ServicesCard key={index} data={value} />
+      {/* ========== How wleness work ========== */}
+      <section className="px-3 lg:p-16">
+        <div className="container mx-auto grid gap-x-5 gap-y-6 rounded-xl bg-teal-600 !px-0 py-5 lg:grid-cols-4 lg:gap-y-14 lg:py-14">
+          <div className="px-5 text-center lg:col-span-3 lg:pl-16 lg:text-left">
+            <h2 className="subheading text-white">How Wleness Works</h2>
+            <p className="para ">
+              <span className="text-slate-200">
+                Wellness focuses on overall health and happiness, emphasising
+                habits that support physical, mental, and emotional well-being.
+                It involves eating nutritious foods, exercising regularly,
+                managing stress, and creating positive relationships to live a
+                balanced and fulfilling life.
+              </span>
+            </p>
+          </div>
+          <div className="flex items-end justify-center text-right lg:justify-end lg:pr-16">
+            <Link
+              to="/services/therapy"
+              className="btn-one !bg-white !text-black shadow-xl hover:!bg-primary-50"
+            >
+              Explore services
+            </Link>
+          </div>
+
+          <div className="mb-8 space-y-4 lg:col-span-2 lg:mb-0">
+            {home_how_wleness_works.map((value, i) => {
+              return (
+                <div className="px-5 py-4 even:bg-gradient-to-r even:from-teal-700 even:to-transparent lg:pl-16">
+                  <span className="font-bold text-slate-300">0{i + 1}</span>
+                  <h3 className="mb-2 mt-1 text-xl font-semibold text-white">
+                    {value.title}
+                  </h3>
+                  <p className="text-sm font-semibold text-slate-200">
+                    {value.desc}
+                  </p>
+                </div>
               );
             })}
           </div>
-        </div>
-      </section> */}
 
-      {/* ========== How wleness work ========== */}
-      <section className="p-16">
-        <div className="container mx-auto mb-10 grid gap-5 rounded-xl bg-primary-500 !px-16 py-14 lg:grid-cols-2">
-          <div>
-            <h2 className="subheading text-primary-50">How Wleness Works</h2>
-            <p className="font-semibold text-slate-200">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-          </div>
-          <div className="flex items-end justify-end text-right">
-            <button className="btn-one">Explore our services</button>
-          </div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perspiciatis fuga, illum similique animi consequuntur corporis
-            molestiae cumque temporibus laborum suscipit nostrum quaerat
-            exercitationem repudiandae nesciunt possimus magni quos quia a et
-            rem dolores quae obcaecati. Provident recusandae ullam quia neque
-            unde. Quo, sapiente illo quisquam libero est a? Itaque, minima!
-          </div>
-          <div className="p-20 text-right">
+          <div className="flex items-end px-8 lg:col-span-2 lg:px-20">
             <img
-              src={whyWleness}
+              src={howWlenessWorks}
               alt="Why wleness wellbeing"
-              className="rounded-3xl shadow-[50px_-50px_4px_-10px] shadow-primary-50"
+              className="rounded-3xl shadow-[30px_-30px_3px_-8px] shadow-primary-50/20 lg:shadow-[50px_-50px_4px_-10px] lg:shadow-primary-50/20"
             />
           </div>
         </div>
       </section>
 
-      <br />
-      <br />
-      <InternshipBanner url="/internship" new_page={false} />
-      <br />
-      <br />
+      {/* ========== Self Care Section ========== */}
+      <SelfCareHome />
 
-      {/* Doctors Slider */}
+      {/* ========== Our Therapies ========== */}
+      <section className="container mx-auto pt-8 lg:pt-12">
+        <div className="text-center">
+          <h2 className="subheading">Our Therapies</h2>
+        </div>
+        <div className="grid grid-cols-2 gap-2 lg:grid-cols-3 lg:gap-6 lg:py-6 xl:grid-cols-4 2xl:grid-cols-4 2xl:gap-6">
+          {therapies.slice(0, 8).map((value, index) => {
+            return <IssueCard key={index} data={value} />;
+          })}
+        </div>
+      </section>
+
+      {/* ========== Featured In Section ========== */}
+      <HomeFeaturedIn />
+      <FeaturedIn />
+
+      {/* ========== Corporate Section ========== */}
+      <HomeCorporate />
+
+      {/* ========== Doctors Slider ========== */}
       <DoctorSlider
         data={homePageDoctors}
         openAssessmentModal={openAssessmentModal}
         setUrl={setRediredurl}
       />
 
-      {/* ========== Objectives ========== */}
-      <br />
-      <Objectives />
-      <YogaSlider />
+      {/* ========== Our Certifications ========== */}
+      <section className="bg-primary-10 py-10">
+        <div className="container relative mx-auto mb-5 mt-5 lg:mt-0">
+          <div className="mx-auto pb-6 text-center sm:pt-6 lg:pb-14 2xl:pb-8">
+            <h1 className="subheading sm:pb-0 lg:mb-4">
+              We are <span className="heading-primary">Certified</span>
+            </h1>
+            <p className="para mb-4">
+              We're certified as the top mental well-being platform, trusted by
+              thousands for our proven results. Our expert team offers India’s
+              best personalized support to enhance mental health and well-being.
+              Experience the best mental online therapy and wellness with our
+              comprehensive services tailored to your needs.
+            </p>
+          </div>
+          <div className="grid gap-y-6 lg:grid-cols-3 lg:gap-x-8">
+            {homeCertified.map((value, i) => {
+              return (
+                <figure
+                  key={i}
+                  className={`rounded-xl px-6 py-8 shadow-lg lg:px-8 ${
+                    value.dark ? "bg-primary-400" : "bg-white"
+                  }`}
+                >
+                  <div className="mb-2 h-10 w-20 text-left">
+                    <img
+                      src={value.image}
+                      alt={value.title}
+                      className="h-full object-contain"
+                    />
+                  </div>
+                  <figcaption>
+                    <h4
+                      className={`mb-2 text-lg font-bold ${
+                        value.dark ? "text-white" : "text-primary-400"
+                      }`}
+                    >
+                      {value.title}
+                    </h4>
+                    <p
+                      className={`text-sm font-semibold ${
+                        value.dark ? "text-slate-100" : "text-slate-500"
+                      }`}
+                    >
+                      {value.description}
+                    </p>
+                  </figcaption>
+                </figure>
+              );
+            })}
+          </div>
+        </div>
+      </section>
 
       {/* ========== Community ========== */}
-      <section className="relative overflow-x-clip bg-primary-10 pt-6 3xl:py-10">
+      <section className="relative overflow-x-clip py-6 2xl:py-14">
         <div className="container mx-auto">
           <div className="relative flex flex-col justify-between lg:flex-row lg:items-center">
             <div className="relative mb-8 lg:order-2 lg:mb-0 lg:w-2/5">
@@ -235,29 +276,25 @@ export default function Home() {
                 className="absolute right-1/2 top-1/2 -z-10 -translate-y-1/2 translate-x-1/2 scale-125 object-cover xs:w-80 md:w-96 lg:w-[520px] lg:scale-150 xl:scale-125"
               />
             </div>
-            <article className="mx-auto pb-4 lg:order-1 lg:w-3/5 lg:pb-10">
-              <hgroup className="mb-2">
+            <article className="mx-auto space-y-7 pb-4 lg:order-1 lg:w-3/5 lg:pb-10">
+              <hgroup>
                 <h1 className="subheading">
-                  <span className="heading-primary">JOIN THE COMMUNITY</span>
+                  Join Our
+                  <span className="heading-primary"> Community</span>
                 </h1>
                 <p className="para ml-1 text-lg"></p>
               </hgroup>
-              <p className="mb-6 ml-1 text-sm font-medium leading-6 lg:pr-28 lg:text-lg">
-                At Wleness, community is at the heart of our mission. We're more
-                than a platform; we're a vibrant collective of individuals
-                united by the pursuit of holistic well-being. Join us to
-                connect, share, and grow together.
+              <p className="ml-1 text-sm font-medium leading-6 lg:pr-28 lg:text-lg">
+                At Wleness, the community is at the heart of our mission. We’re
+                more than a platform; we're an active collection of individuals
+                united by the effort of holistic well-being. Here, you'll find
+                more than just a community.
               </p>
-              <p className="mb-6 ml-1 text-sm font-medium leading-6 lg:pr-28 lg:text-lg">
-                Together, we embark on a path towards personal evolution. Share
-                in each other's successes, celebrate milestones, and draw
-                inspiration from the diverse experiences
-              </p>
-              <p className="mb-6 ml-1 text-sm font-medium leading-6 lg:pr-28 lg:text-lg">
-                Here, you'll find more than just a group; you'll find a
-                sanctuary—a place where wellness thrives and friendships
-                flourish. Join us and be part of a community committed to
-                holistic living.
+              <p className="ml-1 text-sm font-medium leading-6 lg:mb-8 lg:pr-28 lg:text-lg">
+                You'll find a place where wellness wins and friendships grow.
+                And the best part? You can be anonymous, as per your comfort.
+                Join us and be part of a top community committed to holistic
+                living.
               </p>
               <Link to="/community" className="btn-one inline-block">
                 Join Us Now
@@ -267,73 +304,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ========== Why Choose Us ========== */}
-      <section className="py-6">
-        <div className="container mx-auto text-center">
-          <h2 className="subheading heading-primary">Why Choose Us?</h2>
-          <p className="pb-12 text-sm font-medium text-slate-500 md:text-lg lg:mx-auto lg:w-[720px]">
-            Our platform is built by psychiatrists, psychologists and mental
-            health experts with immense global experience.
-          </p>
-          <div className="mb-14 grid gap-y-8 md:grid-cols-3 lg:gap-12 lg:gap-y-0">
-            {whyChooseUs.map((value, i) => {
-              return (
-                <figure key={i}>
-                  <div>
-                    <img
-                      src={value.image}
-                      alt={value.alt}
-                      loading="lazy"
-                      className="mx-auto mb-4 w-20"
-                    />
-                  </div>
-                  <figcaption>
-                    <h2 className="heading-primary mb-3 inline-block text-xl font-bold text-primary-400">
-                      {value.title}
-                    </h2>
-                    <p className="text-sm font-medium md:text-lg">
-                      {value.desc}
-                    </p>
-                  </figcaption>
-                </figure>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+      {/* ========== Internship section ========== */}
+      <HomeInternship />
 
-      {/* ========== Featured In ========== */}
-      <FeaturedIn />
+      {/* ========== Blogs ========== */}
+      <HomeBlogs />
 
       {/* ========== Our Testimonial ========== */}
-      <section>
-        <h1 className="mb-4 py-4 text-center">
+      <HomeTestimonials />
+
+      {/* ========== Our Testimonial ========== */}
+      {/* <section className="lg:mb-20">
+        <h1 className="py-4 text-center lg:py-8">
           <span className="subheading heading-primary">Our Testimonials</span>
         </h1>
-        <div className="bg-gradient-to-b from-primary-300/20 to-white py-4">
+        <div className="bg-gradient-to-b from-primary-10 to-white py-4">
           <Testimonial data={homeTestimonials} />
         </div>
-      </section>
-
-      {/* ========== Statistics ========== */}
-      <section className="container mx-auto grid grid-cols-4 gap-2 py-4 pt-10 lg:gap-8 lg:py-12">
-        {statistics.map((value, i) => {
-          return (
-            <div
-              key={i}
-              className="flex flex-col rounded-2xl bg-primary-50 p-2 text-center md:p-4"
-            >
-              <span className="mb-1 text-xl font-bold md:text-2xl">
-                {value.value}
-                {value.suffix}
-              </span>
-              <span className="block text-center text-xs leading-3 lg:text-base lg:font-semibold">
-                {value.title}
-              </span>
-            </div>
-          );
-        })}
-      </section>
+      </section> */}
 
       {/* ========== Request Form ========== */}
       <RequestForm />
@@ -341,13 +329,12 @@ export default function Home() {
       {/* ========== FAQ's ========== */}
       <HomeFaq data={homeFaqs} />
 
+      {/* ========== Modals ========== */}
       <Assessment
         isAssessmentOpen={isAssessmentModalOpen}
         onAssessmentClose={closeAssessmentModal}
         buttons={rediredurl}
       />
-
-      {/* <Feedback isOpen={isFeedbackOpen} onClose={closeFeedbackModal} /> */}
       <SelfAssessment
         assessmentModal={assessmentModal}
         setAssessmentModal={setAssessmentModal}
