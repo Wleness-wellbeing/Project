@@ -136,7 +136,13 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-2 gap-2 lg:grid-cols-3 lg:gap-6 lg:py-6 xl:grid-cols-4 2xl:grid-cols-4 2xl:gap-6">
           {therapies.slice(0, 8).map((value, index) => {
-            return <IssueCard key={index} data={value} />;
+            return (
+              <IssueCard
+                openAssessmentModal={() => resetBookNow()}
+                key={index}
+                data={value}
+              />
+            );
           })}
         </div>
       </section>

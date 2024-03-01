@@ -26,7 +26,7 @@ function HomeFeaturedIn() {
           best psychologists, therapists, counselors, and mental health experts
           now via chat, phone, or video call
         </p>
-        <Link to="/" className="btn-one inline-block">
+        <Link to="/services/therapy" className="btn-one inline-block">
           Best Therapies
         </Link>
       </div>

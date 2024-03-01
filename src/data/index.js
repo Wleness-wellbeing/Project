@@ -3783,7 +3783,7 @@ export const home_service_banner = [
     name: "Individual Counselling",
     description:
       "Get personalised plans from the best therapists and psychologists online to meet your unique needs.",
-    slug: "/therapy",
+    slug: "/experts",
     icon: faUser,
   },
   {
@@ -3798,7 +3798,7 @@ export const home_service_banner = [
     name: "Family Counselling",
     description:
       "Overcome families issues with India's best therapist, improving communication for growth",
-    slug: "/therapy",
+    slug: "/services/therapy",
     icon: faUsers,
   },
   {
@@ -3862,7 +3862,7 @@ export const home_services = [
     ],
     button: {
       text: "Get Started",
-      slug: "/therapy",
+      slug: "/life-coaching",
     },
     ltr: false,
   },
@@ -3879,7 +3879,7 @@ export const home_services = [
     ],
     button: {
       text: "Get Started",
-      slug: "/therapy",
+      slug: "/executive-coaching",
     },
     ltr: true,
   },
