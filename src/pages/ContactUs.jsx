@@ -1,17 +1,18 @@
 import React from "react";
-import {
-  about1,
-  about4,
-  email,
-  location,
-  meeting,
-  ringervolume,
-} from "../assets";
+import { about1, about4, meeting } from "../assets";
 import ContactForm from "../components/Forms/ContactForm";
+import { Helmet } from "react-helmet";
+import { get_canonical } from "../utils";
+import { CONTACT_US_META } from "../data/meta";
 
 export default function ContactUs() {
   return (
     <>
+      <Helmet>
+        <title>{CONTACT_US_META.title}</title>
+        <meta name="description" content={CONTACT_US_META.description} />
+        <link rel="canonical" href={get_canonical(window.location)} />
+      </Helmet>
       <header className="relative overflow-x-clip bg-gradient-to-b from-secondary/10 to-transparent pb-5 pt-12">
         <div className="container mx-auto text-center">
           <h1 className="subheading heading-primary">Contact Us</h1>

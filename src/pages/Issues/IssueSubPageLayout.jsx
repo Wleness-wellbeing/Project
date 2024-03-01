@@ -7,6 +7,8 @@ import Community from "../../components/Community";
 import IssueQuote from "../../components/IssueQuote";
 import Assessment from "../../components/Assessment";
 import WlenessApproach from "../../components/WlenessApproach";
+import { Helmet } from "react-helmet";
+import { get_canonical } from "../../utils";
 
 export default function IssueSubPageLayout({
   header,
@@ -35,6 +37,15 @@ export default function IssueSubPageLayout({
 
   return (
     <>
+      <Helmet>
+        <title>
+          {header.title.map((value) => {
+            return value.text;
+          })}
+        </title>
+        <meta name="description" content={header.desc} />
+        <link rel="canonical" href={get_canonical(window.location)} />
+      </Helmet>
       <HeaderWithButton
         title={header.title}
         desc={header.desc}

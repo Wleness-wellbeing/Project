@@ -8,6 +8,11 @@ const HOME_META = {
     "India's top online mental health platform. Professional, compassionate psychologists offering effective, accessible therapy",
 };
 
+const ASSESSMENT_META = {
+  title: "Self Assessment | Wlenes",
+  description: "Take your self-assessment and get you mental health score.",
+};
+
 const BLOGS_META = {
   title: "Wellness Uncovered: Dive into Insights & Tips | Wleness Blogs",
   description:
@@ -24,6 +29,11 @@ const ABOUT_META = {
   title: "Discover our Vision: Wellness - Partnering your Well being",
   description:
     "At Wellness, our story is rooted in holistic well-being, Learn about our vision, practices, and dedicated to empowering you in your wellness journey.",
+};
+
+const CONTACT_US_META = {
+  title: "Contact Us | Wleness",
+  description: "Feel free to contact us",
 };
 
 const YOGA_META = {
@@ -156,6 +166,8 @@ const FORGOT_PASSWORD_META = {
 
 export {
   HOME_META,
+  ASSESSMENT_META,
+  CONTACT_US_META,
   ABOUT_META,
   EXPERTS_META,
   ALL_EXPERTS_META,
