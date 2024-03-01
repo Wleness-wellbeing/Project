@@ -79,6 +79,8 @@ import AssessmentResult from "./pages/Assessment/AssessmentResult";
 import YogaPage from "./pages/Activities/YogaPage";
 import YogaBooking from "./pages/Appointment/YogaBooking";
 import YogaSubscription from "./pages/Activities/YogaSubscription";
+import LoginPage from "./pages/Authentication/LoginPage";
+import SignupPage from "./pages/Authentication/SignupPage";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -88,7 +90,7 @@ function App() {
   }
   // add the event listener to the component's root element
   const rootElement = document.getElementById("root");
-  rootElement.addEventListener("contextmenu", handleContextMenu);
+  // rootElement.addEventListener("contextmenu", handleContextMenu);
 
   // Serve xml file
   axios.get(xmlFile, {
@@ -471,14 +473,6 @@ function App() {
           }
         />
         <Route
-          path="/login"
-          element={
-            <SignupLayout>
-              <Login setToken={setToken} token={token} />
-            </SignupLayout>
-          }
-        />
-        <Route
           path="/forgot-password"
           element={
             <SignupLayout>
@@ -487,20 +481,12 @@ function App() {
           }
         />
         <Route
-          path="/signup"
-          element={
-            <SignupLayout>
-              <SignUp setToken={setToken} token={token} />
-            </SignupLayout>
-          }
+          path="/login"
+          element={<LoginPage setToken={setToken} token={token} />}
         />
         <Route
-          path="/forgot-password"
-          element={
-            <SignupLayout>
-              <ForgotPassword />
-            </SignupLayout>
-          }
+          path="/signup"
+          element={<SignupPage setToken={setToken} token={token} />}
         />
         <Route
           path="/user/profile"

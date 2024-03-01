@@ -195,6 +195,20 @@ export const footerFocusAreas = [
   // ["Conduct Disorder", "/therapy/conduct-disorder"],
 ];
 
+// Footer - Useful Links
+export const usefulLinks = [
+  ["Online therapy services", "/services/therapy"],
+  ["Best online psychologist ", "/experts/all"],
+  ["Couple counseling", "/services/couples-therapy"],
+  ["Music therapy", "/services/music-healing"],
+  ["Best depression therapy ", "/therapy/depression"],
+  ["Stress management ", "/therapy/stress"],
+  ["Anxiety management ", "/therapy/anxiety"],
+  ["Best family counseling in india", ""],
+  ["Best online lifestyle coaching", "/life-coaching"],
+  ["Best executive coaching in india", "/executive-coaching"],
+];
+
 // Footer - Our Experts
 export const footerOurExperts = [
   ["Therapists", "/experts/all"],

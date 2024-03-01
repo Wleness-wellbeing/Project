@@ -137,6 +137,13 @@ import {
   yoga__TherapauticYoga,
   yoga__WomenYoga,
   brainExerciseHeader,
+  whyWleness,
+  logoIAF,
+  startUpIndiaLogo,
+  logoISO,
+  homeThearpy,
+  homeLifeCoaching,
+  homeExecutiveCoachingImage,
 } from "../assets";
 
 // Components
@@ -149,6 +156,14 @@ import LeftImageList from "../components/LeftImageList";
 import LeftImageList3 from "../components/LeftImageList3";
 import SubpagesConclusion from "../components/SubpagesConclusion";
 import RightImageList2 from "../components/RightImageList2";
+import {
+  faL,
+  faMusic,
+  faSearch,
+  faUser,
+  faUserGroup,
+  faUsers,
+} from "@fortawesome/free-solid-svg-icons";
 
 // Therapies data for landing page
 export const therapies = [
@@ -3637,18 +3652,40 @@ export const whyChooseUs = [
   {
     title: "Experience",
     image: homeExperienceIcon,
-    desc: "Experience world-class services based on international standards for your health",
+    desc: "Experience top therapists, the best online psychologists, coaches, and guides based on international standards for your health in the comfort of your home.",
     alt: "Experience Wleness",
   },
   {
     title: "Commitment",
-    desc: "We commit to providing personalized care tailored to your unique needs and support you at every step.",
+    desc: "We provide personalised care from India's top counsellors per your needs at every step, from family counselling to behavioural therapy.",
     image: homeCommitmentIcon,
     alt: "The Wleness Commitment",
   },
   {
     title: "Facilities",
-    desc: "Experience the convenience and comfort of our state-of-the-art facilities with wleness.",
+    desc: "Experience the convenience and comfort of state-of-the-art facilities anytime and anywhere at one platform for all your needs with Wleness.",
+    image: homeFacilitiesIcon,
+    alt: "Wleness Facilities",
+  },
+];
+
+export const home_how_wleness_works = [
+  {
+    title: "Find Best Therapist in India",
+    image: homeExperienceIcon,
+    desc: "Explore different top therapist profiles to find the one who understands your concerns and can most emotionally support you.",
+    alt: "Experience Wleness",
+  },
+  {
+    title: "Book an Online Therapy Session",
+    desc: "Meet your therapist from the comfort of your home online, and work together to achieve your goals and see the positive changes in your mental health.",
+    image: homeCommitmentIcon,
+    dark: true,
+    alt: "The Wleness Commitment",
+  },
+  {
+    title: "Facilities",
+    desc: "Use our top facilities to make progress outside sessions with therapist-recommended self-care tools, community support, and more.",
     image: homeFacilitiesIcon,
     alt: "Wleness Facilities",
   },
@@ -3738,5 +3775,136 @@ export const wlenessLifeCoaching = [
     image: lifeCoachingInterviewPreparation,
     alt: "Interview Preparation guidance from Wleness",
     desc: "Our comprehensive approach examines all facets of your life, providing a clear roadmap for growth. Our expert coaches will assess your strengths, identify areas for improvement, & work with you to set & achieve meaningful goals. Elevate every aspect of your life.",
+  },
+];
+
+export const home_service_banner = [
+  {
+    name: "Individual Counselling",
+    description:
+      "Get personalised plans from the best therapists and psychologists online to meet your unique needs.",
+    slug: "/experts",
+    icon: faUser,
+  },
+  {
+    name: "Couple Counselling",
+    description:
+      "Enhancing relationships with emotionally focused therapy, one conversation at a time.",
+    slug: "/services/couples-therapy",
+    selected: true,
+    icon: faUserGroup,
+  },
+  {
+    name: "Family Counselling",
+    description:
+      "Overcome families issues with India's best therapist, improving communication for growth",
+    slug: "/services/therapy",
+    icon: faUsers,
+  },
+  {
+    name: "Musical Healing",
+    description:
+      "Try music therapy to feel better emotionally and stay positive every day.",
+    slug: "/services/music-healing",
+    icon: faMusic,
+  },
+];
+
+export const home_why_wleness = [
+  {
+    name: "Individual Counselling",
+    description: "Individual counselling provides personalized support.",
+    slug: "/therapy",
+    icon: faUser,
+  },
+  {
+    name: "Couple Counselling",
+    description: "Every couple, at one point or another, faces challenges.",
+    slug: "/therapy",
+    icon: faUser,
+  },
+  {
+    name: "Family Counselling",
+    description: "Family counselling plays a crucial role in promoting",
+    slug: "/therapy",
+    icon: faUser,
+  },
+];
+
+export const home_services = [
+  {
+    title: ["Strengthen Mental Health", "and Wellness"],
+    image: homeThearpy,
+    description:
+      "Compassionate mental health support for your emotional healing and growth, just like a warm hug from your loved ones. Get the top therapists and counsellors near you—the best online consultations in India.",
+    points: [
+      "Guidance you can trust",
+      "Personalised Mental Wellness",
+      "Strategies to feel better",
+      "Evidence-based approaches",
+    ],
+    button: {
+      text: "Book Now",
+      slug: "/services/therapy",
+    },
+    ltr: true,
+  },
+  {
+    title: ["Lifestyle", "Coaching"],
+    image: homeLifeCoaching,
+    description:
+      "Transform your personal development with guidance and support through ICF-certified life coaching services. Find a life coach online at your fingertips—top life coaching guidance in India. Start your journey towards a healthier, happier life!",
+    points: [
+      "Goal oriented approach",
+      "Customised Life Coach Strategies",
+      "Positive thinking cultivation",
+      "Skills for life success",
+    ],
+    button: {
+      text: "Get Started",
+      slug: "/life-coaching",
+    },
+    ltr: false,
+  },
+  {
+    title: ["Executive", "Coaching"],
+    image: homeExecutiveCoachingImage,
+    description:
+      "Unlock your full potential and enhance your leadership abilities with personalised executive coaching. Get the best business and executive coaching from the comfort of your home. Start on a journey with certified leadership coaches towards growth and success!",
+    points: [
+      "Result-oriented leadership coaching",
+      "Gain a solid executive presence",
+      "Master time management",
+      "Visible Career Progression",
+    ],
+    button: {
+      text: "Get Started",
+      slug: "/executive-coaching",
+    },
+    ltr: true,
+  },
+];
+
+export const homeCertified = [
+  {
+    title: "IAF",
+    image: logoIAF,
+    dark: false,
+    description:
+      "We are certified by the IAF. We meet the standards for excellence and quality in our services. You can trust that we're recognised for our expertise and commitment to high standards",
+  },
+  {
+    title: "Startup India",
+    image: startUpIndiaLogo,
+    dark: true,
+    description:
+      "We're certified by Startup India. Our commitment to innovation and entrepreneurship confirms our dedication to driving growth and contributing to India's startup ecosystem.",
+  },
+  {
+    title: "ISO",
+    image: logoISO,
+    dark: false,
+    description:
+      "We're ISO certified. We meet international standards for quality and efficiency in our operations. Our products or services meet customer requirements and regulatory standards.",
   },
 ];

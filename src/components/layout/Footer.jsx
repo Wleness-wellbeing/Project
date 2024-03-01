@@ -7,6 +7,7 @@ import {
   footerOurExperts,
   footerLocation,
   socialLinks,
+  usefulLinks,
 } from "../../data/navigation";
 import { Link } from "react-router-dom";
 import {
@@ -130,6 +131,27 @@ export default function Footer() {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="container mx-auto mb-6 border-y-2 border-slate-300 py-8">
+          <h4 className="mb-2 text-center text-lg font-semibold md:mb-4 lg:text-xl">
+            Useful Links
+          </h4>
+
+          <ul className="grid grid-cols-2 lg:grid-cols-4">
+            {usefulLinks.map((value, i) => {
+              return (
+                <li key={i}>
+                  <Link
+                    to={value[1]}
+                    className="text-sm font-semibold text-blue-500 underline"
+                  >
+                    {value[0]}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </div>
 
         <div className="container mx-auto pb-1 lg:pb-4">

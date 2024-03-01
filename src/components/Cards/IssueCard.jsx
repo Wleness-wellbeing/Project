@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function IssueCard(props) {
   return (
     <div
-      className="mx-auto w-full p-2 pt-24 lg:w-full"
+      className="mx-auto w-full p-2 pt-14 lg:w-full lg:pt-24"
       title={props.data.title}
     >
       <div className="flex h-full flex-col items-center justify-center bg-primary-50 py-4 md:py-6">
