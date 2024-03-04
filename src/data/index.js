@@ -3883,6 +3883,23 @@ export const home_services = [
     },
     ltr: true,
   },
+  {
+    title: ["Get the best service for", " your Team!"],
+    image: homeLifeCoaching,
+    description:
+      "Wleness provides the best employee health and well-being services for your team. Unlock increased productivity, job satisfaction, and outcomes. Associate with your company and get mental health support for all employees. Take your corporate well-being to the next level with Wleness",
+    points: [
+      "Best employee health and well-being",
+      "Increased productivity",
+      "Job Satisfaction",
+      "Get mental health support",
+    ],
+    button: {
+      text: "Get Started",
+      slug: "/corporate-wellbeing",
+    },
+    ltr: false,
+  },
 ];
 
 export const homeCertified = [

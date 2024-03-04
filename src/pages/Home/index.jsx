@@ -116,18 +116,18 @@ export default function Home() {
       {/* ========== Why Wleness ========== */}
       <HomeWhyWleness />
 
+      {/* ========== How wleness work ========== */}
+      <HomeWlenessWork />
       {/* ========== Our Services ========== */}
-      <section className="mb-8 bg-primary-10 pb-4 lg:mb-0 lg:pt-10">
+      <section className="mb-8 pb-4 lg:mb-0 lg:pt-10">
         {home_services.map((value, i) => {
           return <HomeServiceCard data={value} key={i} />;
         })}
       </section>
 
-      {/* ========== How wleness work ========== */}
-      <HomeWlenessWork />
-
-      {/* ========== Self Care Section ========== */}
-      <SelfCareHome />
+      {/* ========== Featured In Section ========== */}
+      <HomeFeaturedIn />
+      <FeaturedIn />
 
       {/* ========== Our Therapies ========== */}
       <section className="container mx-auto pt-8 lg:pt-12">
@@ -146,13 +146,6 @@ export default function Home() {
           })}
         </div>
       </section>
-
-      {/* ========== Featured In Section ========== */}
-      <HomeFeaturedIn />
-      <FeaturedIn />
-
-      {/* ========== Corporate Section ========== */}
-      <HomeCorporate />
 
       {/* ========== Doctors Slider ========== */}
       <DoctorSlider
@@ -214,6 +207,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ========== Corporate Section ========== */}
+      {/* <HomeCorporate /> */}
+
+      {/* ========== Self Care Section ========== */}
+      <SelfCareHome />
 
       {/* ========== Community ========== */}
       <section className="relative overflow-x-clip py-6 2xl:py-14">
