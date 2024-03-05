@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { homeCorporateImage, internshipHeader } from "../../assets";
+import { homeInternshipSection } from "../../assets";
 
 function HomeInternship() {
   return (
     <section className="flex items-center bg-primary-10 py-6 xl:py-14">
       <div className="container mx-auto flex flex-col items-center gap-x-10 lg:grid-cols-2 lg:flex-row">
-        <div className="lg:order-2 lg:w-[52%]">
+        <div className="lg:order-2 lg:w-[52%] lg:p-10">
           <img
-            src={internshipHeader}
+            src={homeInternshipSection}
             alt="Why wleness wellbeing"
             className="rounded-3xl shadow-primary-50"
           />

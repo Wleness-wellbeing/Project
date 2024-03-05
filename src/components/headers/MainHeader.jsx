@@ -5,7 +5,7 @@ import { mainHeaderImage } from "../../assets";
 export default function MainHeader({ openAssessmentModal }) {
   return (
     <header className="mb-8 animate-fadeIn overflow-x-clip bg-primary-10 py-4 pb-8 pt-6 lg:mb-0 lg:!px-5 lg:py-10 xl:py-14 2xl:pb-28">
-      <div className="container mx-auto items-center !px-0 text-center lg:flex lg:text-left">
+      <div className="container mx-auto items-center !px-0 text-center lg:flex lg:pb-2 lg:text-left">
         {/* Header Image */}
         <div className="relative mb-2 lg:order-2 lg:my-2 lg:w-1/2">
           <img

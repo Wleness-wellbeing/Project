@@ -8,7 +8,7 @@ function WhatsappChat() {
   const [textVisibility, setTextVisibility] = useState(true);
 
   return (
-    <div className="fixed bottom-5 right-4 hidden flex-col items-end md:flex">
+    <div className="fixed bottom-5 right-4 z-30 hidden flex-col items-end md:flex">
       {textVisibility ? (
         <div className="mb-2 flex items-center gap-x-2">
           <span className="rounded-2xl border-2 border-green-500 bg-primary-50 px-3 py-1 text-sm font-medium">

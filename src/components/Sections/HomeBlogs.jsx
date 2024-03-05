@@ -1,60 +1,54 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { BLOGS_URI } from "../../data/api";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import HomeBlogCards from "../Cards/HomeBlogCards";
+import HomeAssessmentsCards from "../Cards/HomeAssessmentsCards";
+import HomeVideosCards from "../Cards/HomeVideosCards";
 
 function HomeBlogs() {
-  const [blogs, setBlogs] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState("Blogs");
 
-  // Fetch blogs data
-  useEffect(() => {
-    axios
-      .get(BLOGS_URI)
-      .then((response) => {
-        setBlogs(response.data.blogs);
-        setLoading(false);
-        console.log(response.data.blogs);
-      })
-      .catch((error) => console.error(error));
-    return () => {};
-  }, []);
+  const tabs = [
+    {
+      name: "Assessments",
+      component: HomeAssessmentsCards,
+    },
+    {
+      name: "Blogs",
+      component: HomeBlogCards,
+    },
+    {
+      name: "Videos",
+      component: HomeVideosCards,
+    },
+  ];
 
-  if (loading) {
-    return <span>Loading...</span>;
-  }
   return (
-    <section className="container mx-auto py-12 lg:py-14">
-      <div className="mb-8 flex items-center justify-between">
-        <h2 className="subheading">Blogs</h2>
-        <Link to="/blogs" className="btn-one">
-          Explore more
-        </Link>
+    <section className="container mx-auto my-8 rounded-xl bg-primary-10 py-10 lg:min-h-[520px]">
+      <div className="flex flex-col items-center justify-center text-center">
+        <h2 className="subheading">Our Resources</h2>
       </div>
-      <div className="grid gap-8 lg:grid-cols-3 lg:gap-6">
-        {blogs.slice(0, 3).map((value, i) => {
-          return (
-            <div key={i} className="flex flex-col justify-between">
-              <img
-                src={value.thumbnail_image}
-                alt={value.title}
-                className="mb-4 rounded-lg"
-              />
-              <div className="mb-6">
-                <h2 className="mb-3 text-xl font-bold">{value.title}</h2>
-                <p className="font-semibold text-slate-500">
-                  {value.desc.length > 150
-                    ? value.desc.substring(0, 150)
-                    : value.desc}
-                </p>
-              </div>
-              <Link to={`/blog/${value.slug}`} className="btn-one inline-block">
-                Read More
-              </Link>
-            </div>
-          );
+      <div className="mb-8 mt-4">
+        <ul className="flex justify-center gap-x-2">
+          {tabs.map((value, i) => (
+            <li
+              key={i}
+              onClick={() => setActiveTab(value.name)}
+              className={`cursor-pointer select-none px-4 py-2 text-sm font-bold lg:px-7 ${
+                value.name == activeTab
+                  ? "border-b-2 border-primary-300 text-primary-300"
+                  : ""
+              }`}
+            >
+              {value.name}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {tabs
+        .filter((tab) => tab.name == activeTab)
+        .map((value) => {
+          return <value.component />;
         })}
-      </div>
     </section>
   );
 }

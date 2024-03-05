@@ -1,34 +1,103 @@
 import React from "react";
+import {
+  featuredIn1,
+  featuredIn3,
+  featuredIn4,
+  featuredIn6,
+  featuredIn7,
+  homeFeaturedIn,
+} from "../../assets";
 import { Link } from "react-router-dom";
-import { homeFeaturedIn } from "../../assets";
+
+const featuredIn = [
+  {
+    name: "Times of India",
+    image: featuredIn6,
+    size: "w-12",
+    link: "https://timesofindia.indiatimes.com/business/india-business/indias-11-fastest-growing-businesses-in-2023/articleshow/106354579.cms",
+  },
+  {
+    name: "Business Standard",
+    image: featuredIn1,
+    size: "w-36",
+    link: "https://www.business-standard.com/content/press-releases-ani/discover-a-new-era-of-wellness-with-wleness-unveiling-innovative-solutions-for-your-health-and-happiness-123101600467_1.html",
+  },
+  {
+    name: "ANI News",
+    image: featuredIn3,
+    size: "w-12",
+    link: "https://aninews.in/news/business/business/discover-a-new-era-of-wellness-with-wleness-unveiling-innovative-solutions-for-your-health-and-happiness20231016140849/",
+  },
+  {
+    name: "Hindustan Times",
+    image: featuredIn7,
+    size: "w-36",
+    link: "https://www.hindustantimes.com/brand-stories/excellence-redefined-meet-the-10-businesses-setting-new-standards-in-2023-101701260465504.html",
+  },
+  {
+    name: "Dailyhunt",
+    image: featuredIn4,
+    size: "w-32",
+    link: "https://m.dailyhunt.in/news/india/english/lokmattimes+english-epaper-lokmaten/discover+a+new+era+of+wellness+with+wleness+unveiling+innovative+solutions+for+your+health+and+happiness-newsid-n547715388?sm=Y",
+  },
+];
 
 function HomeFeaturedIn() {
   return (
-    <section className="container mx-auto grid items-center gap-x-10 py-12 lg:grid-cols-2">
-      <div className="mb-6 lg:mb-0">
-        <img
-          src={homeFeaturedIn}
-          alt="Why wleness wellbeing"
-          className="rounded-3xl border-2 border-primary-50 shadow-lg shadow-primary-50"
-        />
-      </div>
-      <div>
-        <h2 className="subheading">Featured In</h2>
-        <p className="my-4 font-semibold text-slate-600">
-          Discover the power of life coaching and therapy to overcome challenges
-          and achieve your goals. Our top counselors, therapists,and coaches
-          provide personalized guidance to help you confidently navigate life's
-          ups and downs.
-        </p>
-        <p className="mb-6 mt-4 font-semibold text-slate-600">
-          From stress management to career advancement, unlock your full
-          potential with our proven techniques and support. Connect with the
-          best psychologists, therapists, counselors, and mental health experts
-          now via chat, phone, or video call
-        </p>
-        <Link to="/services/therapy" className="btn-one inline-block">
-          Best Therapies
-        </Link>
+    <section className="bg-primary-10 py-12 lg:py-16">
+      <div className="container mx-auto">
+        <div className="grid items-center gap-x-10 lg:grid-cols-2">
+          <div className="mb-4 lg:mb-0">
+            <img
+              src={homeFeaturedIn}
+              alt="Why wleness wellbeing"
+              className="rounded-3xl border-2 border-primary-50 shadow-lg shadow-primary-50"
+            />
+          </div>
+          <div>
+            <h2 className="subheading">
+              <span className="heading-primary">Featured In</span>
+            </h2>
+            <p className="my-2 font-semibold text-slate-600">
+              Wleness aims to touch deeper feelings and connect with you in ways
+              that go beyond the usual. It's about understanding your journey,
+              supporting you, and making you feel something special every step
+              of the way. Something that even we forget to do for ourselves. It
+              blends traditional therapeutic methods with yoga and meditation,
+              music therapy, and engaging brain games.
+            </p>
+            <p className="mb-6 mt-4 font-semibold text-slate-600">
+              Wleness is the best platform to receive a comprehensive set of
+              services designed specifically for your wellbeing. Connect with
+              the best psychologists, therapists, counselors, and coaches now
+              from the comfort of your home.
+            </p>
+            <Link to="/services/therapy" className="btn-one inline-block">
+              Best Therapies
+            </Link>
+          </div>
+        </div>
+
+        <div className="mt-10 grid items-center gap-5 lg:grid-cols-5">
+          {featuredIn.map((value, i) => {
+            return (
+              <div key={i} className="h-full">
+                <Link
+                  to={value.link}
+                  target="_blank"
+                  className="flex h-full flex-col justify-center rounded-lg border-2 border-slate-100 bg-white py-2 shadow-xl xl:py-2.5"
+                >
+                  <img
+                    src={value.image}
+                    alt={value.name}
+                    className={`mx-auto mb-2 object-contain ${value.size}`}
+                  />
+                  <h2 className="text-center font-bold">{value.name}</h2>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

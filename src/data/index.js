@@ -144,6 +144,7 @@ import {
   homeThearpy,
   homeLifeCoaching,
   homeExecutiveCoachingImage,
+  homeCorporateImage,
 } from "../assets";
 
 // Components
@@ -3885,7 +3886,7 @@ export const home_services = [
   },
   {
     title: ["Get the best service for", " your Team!"],
-    image: homeLifeCoaching,
+    image: homeCorporateImage,
     description:
       "Wleness provides the best employee health and well-being services for your team. Unlock increased productivity, job satisfaction, and outcomes. Associate with your company and get mental health support for all employees. Take your corporate well-being to the next level with Wleness",
     points: [

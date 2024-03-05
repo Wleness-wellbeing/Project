@@ -8,7 +8,11 @@ function HomeWhyWleness() {
   return (
     <section className="container mx-auto mb-10 grid items-center gap-5 lg:grid-cols-2">
       <div className="p-6">
-        <img src={whyWleness} alt="Why wleness wellbeing" />
+        <img
+          src={whyWleness}
+          alt="Why wleness wellbeing"
+          className="rounded-xl"
+        />
       </div>
       <div>
         <div className="text-center lg:text-left">

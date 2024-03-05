@@ -26,8 +26,8 @@ export default function HomeServiceCard({ data }) {
           {data.title[0]}
           <span className="heading-primary"> {data.title[1]}</span>
         </h2>
-        <p className="para mt-4">{data.description}</p>
-        <ul className="my-8 space-y-2">
+        <p className="para mt-2">{data.description}</p>
+        <ul className="my-6 space-y-2">
           {data.points.map((value, i) => {
             return (
               <li

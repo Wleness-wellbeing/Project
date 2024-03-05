@@ -4,12 +4,11 @@ import { Helmet } from "react-helmet";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // Data
-import { community, designRing, howWlenessWorks } from "../../assets";
+import { community, designRing } from "../../assets";
 import { get_canonical } from "../../utils";
 import { homeFaqs } from "../../data/faqs";
 import {
   homeCertified,
-  home_how_wleness_works,
   home_service_banner,
   home_services,
   therapies,
@@ -28,7 +27,6 @@ import HomeServiceCard from "../../components/Cards/HomeServiceCard";
 import SelfCareHome from "../../components/Sections/SelfCareHome";
 import IssueCard from "../../components/Cards/IssueCard";
 import HomeFeaturedIn from "../../components/Sections/HomeFeaturedIn";
-import HomeCorporate from "../../components/Sections/HomeCorporate";
 import HomeInternship from "../../components/Sections/HomeInternship";
 import HomeWhyWleness from "../../components/Sections/HomeWhyWleness";
 import HomeBlogs from "../../components/Sections/HomeBlogs";
@@ -118,6 +116,7 @@ export default function Home() {
 
       {/* ========== How wleness work ========== */}
       <HomeWlenessWork />
+
       {/* ========== Our Services ========== */}
       <section className="mb-8 pb-4 lg:mb-0 lg:pt-10">
         {home_services.map((value, i) => {
@@ -127,7 +126,6 @@ export default function Home() {
 
       {/* ========== Featured In Section ========== */}
       <HomeFeaturedIn />
-      <FeaturedIn />
 
       {/* ========== Our Therapies ========== */}
       <section className="container mx-auto pt-8 lg:pt-12">
@@ -271,16 +269,6 @@ export default function Home() {
 
       {/* ========== Our Testimonial ========== */}
       <HomeTestimonials />
-
-      {/* ========== Our Testimonial ========== */}
-      {/* <section className="lg:mb-20">
-        <h1 className="py-4 text-center lg:py-8">
-          <span className="subheading heading-primary">Our Testimonials</span>
-        </h1>
-        <div className="bg-gradient-to-b from-primary-10 to-white py-4">
-          <Testimonial data={homeTestimonials} />
-        </div>
-      </section> */}
 
       {/* ========== Request Form ========== */}
       <RequestForm />

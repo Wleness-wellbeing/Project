@@ -1,9 +1,10 @@
 // Home Images
 import mainHeaderImage from "./images/home/main-header-image.webp";
-import whyWleness from "./images/home/why-wleness.png";
+import whyWleness from "./images/home/why-wleness.webp";
 import selfCareHome from "./images/home/self-care-home.jpg";
-import homeFeaturedIn from "./images/home/home-featured-in.jpg";
-import homeCorporateImage from "./images/home/home-corporate.jpg";
+import homeFeaturedIn from "./images/home/home-featured-in.webp";
+import homeInternshipSection from "./images/home/home-internship.webp";
+import homeCorporateImage from "./images/home/home-corporate.webp";
 import homeThearpy from "./images/home/home-therapy.webp";
 import homeLifeCoaching from "./images/home/home-life-coaching.webp";
 import homeSelfCareImage from "./images/home/home-self-care.webp";
@@ -85,6 +86,7 @@ export {
   selfCareHome,
   homeFeaturedIn,
   homeCorporateImage,
+  homeInternshipSection,
   homeExecutiveCoachingImage,
   homeLifeCoaching,
   howWlenessWorks,
