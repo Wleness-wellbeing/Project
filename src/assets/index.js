@@ -4,6 +4,7 @@ import whyWleness from "./images/home/why-wleness.webp";
 import selfCareHome from "./images/home/self-care-home.jpg";
 import homeFeaturedIn from "./images/home/home-featured-in.webp";
 import homeInternshipSection from "./images/home/home-internship.webp";
+import homeRequestForm from "./images/home/home-request-form.webp";
 import homeCorporateImage from "./images/home/home-corporate.webp";
 import homeThearpy from "./images/home/home-therapy.webp";
 import homeLifeCoaching from "./images/home/home-life-coaching.webp";
@@ -86,6 +87,7 @@ export {
   selfCareHome,
   homeFeaturedIn,
   homeCorporateImage,
+  homeRequestForm,
   homeInternshipSection,
   homeExecutiveCoachingImage,
   homeLifeCoaching,

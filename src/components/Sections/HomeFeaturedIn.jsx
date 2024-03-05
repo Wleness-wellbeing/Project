@@ -73,7 +73,7 @@ function HomeFeaturedIn() {
               from the comfort of your home.
             </p>
             <Link to="/services/therapy" className="btn-one inline-block">
-              Best Therapies
+              Get Best Therapies
             </Link>
           </div>
         </div>
