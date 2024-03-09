@@ -59,18 +59,19 @@ function HomeFeaturedIn() {
               <span className="heading-primary">Featured In</span>
             </h2>
             <p className="my-2 font-semibold text-slate-600">
-              Wleness aims to touch deeper feelings and connect with you in ways
-              that go beyond the usual. It's about understanding your journey,
-              supporting you, and making you feel something special every step
-              of the way. Something that even we forget to do for ourselves. It
-              blends traditional therapeutic methods with yoga and meditation,
-              music therapy, and engaging brain games.
+              Wleness has been featured on leading platforms such as the Times
+              of India, Business Standard, ANI News, Hindustan Times, Daily
+              Hunt, and many others, marking its position as a premium provider
+              of top-quality mental wellness services. These testaments show how
+              Wleness connects with the best psychologists, therapists,
+              counsellors, and coaches from your home.
             </p>
             <p className="mb-6 mt-4 font-semibold text-slate-600">
-              Wleness is the best platform to receive a comprehensive set of
-              services designed specifically for your wellbeing. Connect with
-              the best psychologists, therapists, counselors, and coaches now
-              from the comfort of your home.
+              Wleness is all about acknowledging your journey, being there for
+              you, and making each step unique in your unique journey. Something
+              we even overlook when taking care of ourselves. It combines yoga,
+              meditation, music therapy, interactive brain games, and
+              conventional therapeutic techniques.
             </p>
             <Link to="/services/therapy" className="btn-one inline-block">
               Get Best Therapies
@@ -85,7 +86,7 @@ function HomeFeaturedIn() {
                 <Link
                   to={value.link}
                   target="_blank"
-                  className="flex h-full flex-col justify-center rounded-lg border-2 border-slate-100 bg-white py-2 shadow-xl xl:py-2.5"
+                  className="flex h-full flex-col justify-center rounded-lg border-2 border-slate-100 bg-white py-2 shadow-xl transition-all hover:scale-95 hover:shadow-md xl:py-2.5"
                 >
                   <img
                     src={value.image}

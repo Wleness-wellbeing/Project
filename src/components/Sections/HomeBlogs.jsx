@@ -4,7 +4,7 @@ import HomeAssessmentsCards from "../Cards/HomeAssessmentsCards";
 import HomeVideosCards from "../Cards/HomeVideosCards";
 
 function HomeBlogs() {
-  const [activeTab, setActiveTab] = useState("Blogs");
+  const [activeTab, setActiveTab] = useState("Videos");
 
   const tabs = [
     {
