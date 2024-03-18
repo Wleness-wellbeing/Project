@@ -67,7 +67,7 @@ function CouplesTherapy() {
               {textColorize([
                 {
                   color: false,
-                  text: "How can ",
+                  text: "Get the   ",
                 },
                 {
                   color: true,
@@ -75,7 +75,7 @@ function CouplesTherapy() {
                 },
                 {
                   color: false,
-                  text: "help you?",
+                  text: "Help for your Relationship",
                 },
               ])}
             </h2>
@@ -85,26 +85,28 @@ function CouplesTherapy() {
             <div className="cursor-pointer rounded-2xl border-2 border-primary-50  px-6 py-3 shadow-lg hover:bg-primary-50">
               <h6 className="text-lg font-bold">Dedicated experts team:</h6>
               <p className="text-sm font-medium lg:text-base">
-                With years of specialized training and a compassionate approach,
-                our team of best counselors can guide you through challenges and
-                help you build a stronger, more fulfilling connection.
+                With Wleness, your relationship is in the hands of dedicated
+                experts who genuinely care about your happiness and well-being.
+                Get the best online couples counselling with the top
+                counsellors.
               </p>
             </div>
             <div className="rounded-2xl rounded-br-[4rem] border-2 border-primary-50 bg-transparent px-6 py-3 shadow-lg hover:bg-primary-50">
               <h6 className="text-lg font-bold">Tailored Approach:</h6>
               <p className="text-sm font-medium lg:text-base">
-                We understand that every couple is unique, and there is no
-                one-size-fits-all solution. Our therapy sessions are customized
-                to address your specific needs, concerns, and goals, ensuring
-                you receive personalized support throughout your journey.
+                Experience personalised care and guidance tailored to your
+                relationship's needs, ensuring meaningful progress and growth.
+                From marital relationship counselling to premarital counselling,
+                get the best support today!
               </p>
             </div>
             <div className="cursor-pointer  rounded-2xl border-2 border-primary-50 px-6 py-3 shadow-lg hover:bg-primary-50">
               <h6 className="text-lg font-bold ">Accessibility:</h6>
               <p className="text-sm font-medium lg:text-base">
-                Get a one-to-one therapy session with the best therapist from
-                the comfort of your home through video, calls or chats to deal
-                with your ongoing issues.
+                Wleness offers accessible support, making it easy for you and
+                your partner to prioritise your relationship, no matter your
+                schedule or location. Get the best online couples counselling at
+                your home, at your time.
               </p>
             </div>
             <div className="rounded-2xl rounded-br-[4rem] border-2 border-primary-50 bg-transparent px-6 py-3 shadow-lg hover:bg-primary-50">
@@ -112,10 +114,9 @@ function CouplesTherapy() {
                 Safe and Non-Judgmental Space:
               </h6>
               <p className="text-sm font-medium lg:text-base">
-                Our therapy environment is a safe haven where you and your
-                partner can express yourselves openly without fear of judgment.
-                We foster a nurturing atmosphere, encouraging honest
-                communication and emotional vulnerability.
+                Step into a safe, non-judgmental space at Wleness where you and
+                your partner can freely express yourselves and work through
+                challenges with understanding and empathy.
               </p>
             </div>
           </div>

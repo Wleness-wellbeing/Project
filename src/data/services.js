@@ -82,14 +82,14 @@ export const couplesTherapyData = {
     title: [
       {
         color: false,
-        text: "Harmonizing love via ",
+        text: "Build Stronger Relationships with Best ",
       },
       {
         color: true,
-        text: "Couples Therapy",
+        text: " Couples Counselling",
       },
     ],
-    desc: "Rediscover the joy of togetherness with Relationship Revive, our personalized couple therapy program. Enhance communication, deepen intimacy, and overcome challenges alongside expert guidance. Invest in your relationship today for a stronger, more fulfilling connection.",
+    desc: "Let’s start on a journey of love and understanding with the best online relationship counselling at Wleness. We understand the importance of love and connection in your relationship. Find a safe space for you and your partner to get emotionally focused therapy and create a stronger bond. Let us guide you towards a happier and more fulfilling partnership.",
     images: [
       couplesTherapyHeader1,
       couplesTherapyHeader2,
@@ -198,7 +198,7 @@ export const MusicalTherapyData = {
 
 export const TherapyData = {
   name: "Therapy",
-  desc: "Discover transformative counselling and online Therapy for growth, healing, and resilience, empowering you with compassionate support for renewed well-being.",
+  desc: "Unlock the incredible power of therapy to change your life. Feel supported as you overcome struggles, and find your inner strength. Get the best services like CBT (Cognitive Behavioural Therapy), DBT (Dialectic Behavioural Therapy), Applied Behavioural Analysis, and many more from the top psychologists in India.",
   slug: "/therapy",
   image: therapyHeader,
   bestTherapist: {
@@ -218,32 +218,32 @@ export const TherapyData = {
     ],
     featureImage: bestTherapy,
     features: [
-      ["Consultation ", "anywhere, anytime"],
-      ["Online ", "Consultation"],
-      ["Trusted ", "Therapist"],
-      ["Affordable ", "Help"],
+      ["Online Therapy  ", "Anywhere, Anytime"],
+      ["Best Therapist   ", "from all over India"],
+      ["Most Affordable ", "from the comfort of your home"],
+      ["Anonymous Online   ", "Consultation of your comfort"],
     ],
     startBtn: ["Start the therapy", "/issues"],
   },
   whyChoose: [
     {
       title: "Emotional Support",
-      desc: "Therapy provides a safe and supportive space to express and process emotions.",
+      desc: "At Wleness Therapy, we're here to be your rock through every high and low. Get the top therapist's support from the comfort of your home.",
       image: whyChooseTherapy1,
     },
     {
       title: "Problem Solving",
-      desc: "Therapists offer strategies to cope with challenges and find solutions.",
+      desc: "Let the best counselors guide you through your challenges with practical solutions breaking down obstacles into manageable steps.",
       image: whyChooseTherapy2,
     },
     {
       title: "Relationships",
-      desc: "Therapy can enhance communication and interpersonal skills.",
+      desc: " Get quality family and couple counseling with our therapists online to build trust and healthy conversations to better relationships.",
       image: whyChooseTherapy3,
     },
     {
       title: "Mental Wellness",
-      desc: "Therapy promotes overall mental health and well-being.",
+      desc: "At Wleness, nurture your well being. Our top therapists will help unlock your inner strength and find balance to live a positive life.",
       image: whyChooseTherapy4,
     },
   ],

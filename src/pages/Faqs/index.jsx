@@ -4,6 +4,7 @@ import Faq from "../../components/layout/Faq";
 import { faqs } from "../../data/faqs";
 import { Helmet } from "react-helmet";
 import { FAQS_META } from "../../data/meta";
+import { get_canonical } from "../../utils";
 
 export default function index() {
   const [openFAQ, setOpenFAQ] = useState(-1); // Initialize with -1 to represent all FAQs as closed

@@ -15,6 +15,7 @@ export default function IssueSubPageLayout({
   symptoms,
   doctors,
   quote,
+  approach,
 }) {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
   const [rediredurl, setRediredurl] = useState(null);
@@ -58,7 +59,11 @@ export default function IssueSubPageLayout({
         image={symptoms.image}
         points={symptoms.points}
       />
-      <WlenessApproach issue={symptoms.issue} desc={symptoms.desc} />
+      <WlenessApproach
+        issue={symptoms.issue}
+        desc={symptoms.desc}
+        approach={approach}
+      />
       <DoctorSlider
         data={doctors}
         openAssessmentModal={openAssessmentModal}

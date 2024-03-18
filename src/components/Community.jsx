@@ -12,8 +12,10 @@ export default function Community() {
           {/* <span className="text-2xl">We are here to help you! </span> */}
         </h1>
         <p className="para pb-6 !text-xl">
-          Wleness is helping you connect with like-minded people. Find your
-          ultimate support network today.
+          Join our community and discover a network of understanding hearts
+          where support flows freely, and compassion knows no bounds. Here,
+          you'll find comfort, encouragement, and a sense of belonging as we
+          walk hand in hand through life's ups and downs
         </p>
         <Link to="/community" className="btn-one mx-auto block w-fit">
           Join Now

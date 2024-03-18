@@ -355,6 +355,7 @@ function App() {
                     symptoms={value.symptoms}
                     doctors={value.doctors}
                     quote={value.quote}
+                    approach={value.approach}
                   />
                 </Layout>
               }

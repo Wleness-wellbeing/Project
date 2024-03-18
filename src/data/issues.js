@@ -43,14 +43,14 @@ const doctors = {
   heading: [
     {
       color: false,
-      text: "Speak To Our ",
+      text: "Get the support of ",
     },
     {
       color: true,
-      text: " Soul Healers",
+      text: " India's top therapists ",
     },
   ],
-  desc: "",
+  desc: "Find the care of India's finest therapists, ready to guide you through your stress battles with expertise. Get the best support for your journey towards inner peace and happiness. Reach out today and take a brave step towards a brighter tomorrow.",
   doctors: doctorsDetails,
   button: {
     text: "Book Now",
@@ -73,8 +73,8 @@ export const therapiesData = [
         },
       ],
       desc: [
-        "Stress is the body's response to external pressures or demands, triggering physical, emotional, and cognitive reactions that can affect well-being and performance. It can range from motivating challenges to overwhelming strain.",
-        "It can range from motivating challenges to overwhelming strain.",
+        "Stress is the body's response to external pressures or demands, triggering physical, emotional, and cognitive reactions that can affect well-being and performance.",
+        "At wleness, we focus on effective stress busters and stress relief techniques tailored to your needs. We guide you towards a calmer, more balanced life through personalized strategies and support. ",
       ],
       image: stressHeader,
       alt: "Wleness - Master the Art of Stress Management",
@@ -82,9 +82,8 @@ export const therapiesData = [
     symptoms: {
       highlight: "Stress Disorder symptoms ",
       alt: "Wleness - Here's How Generalized Stress Disorder symptoms May Appears",
-      issue:
-        "Wleness - Here's How Generalized Stress Disorder symptoms May Appear",
-      desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive stress treatment program at the healthcare center, where relaxation and well-being intertwine.",
+      issue: ["The Wleness Way of", "Stress Management"],
+      desc: "At Wellness Way, we embrace a holistic approach to stress management, nurturing your mind, body, and spirit. Our team of the best therapists is here to provide tailored support, empowering you to find peace and balance among life's challenges.",
       points: [
         "It can range from motivating challenges to overwhelming strain.",
         "Facing difficulty in concentrating",
@@ -95,10 +94,26 @@ export const therapiesData = [
       ],
       image: symptomsStress,
     },
-
-    doctors: doctors,
+    approach: [
+      "Talk to the best therapists online and get insights on coping strategies, gain valuable insights, and work towards overcoming stressors.",
+      "Get professional guidance and expertise in understanding and managing mental health challenges, including stress.",
+      "Wleness community opens doors to a supportive network of individuals where you'll find encouragement and valuable resources for stress relief. ",
+    ],
+    doctors: {
+      heading: [
+        {
+          color: false,
+          text: "Get the support of ",
+        },
+        {
+          color: true,
+          text: " India's top therapists ",
+        },
+      ],
+      desc: "Find the care of India's finest therapists, ready to guide you through your stress battles with expertise. Get the best support for your journey towards inner peace and happiness. Reach out today and take a brave step towards a brighter tomorrow.",
+    },
     quote:
-      "Research published in the journal JAMA Internal Medicine indicates that practicing stress reduction techniques can lead to a 38% reduction in the likelihood of developing anxiety disorders.",
+      "Research published in the journal JAMA Internal Medicine indicates that practising stress reduction techniques can lead to a 38% reduction in the likelihood of developing anxiety disorders.",
   },
   {
     slug: "/therapy/depression",
@@ -106,38 +121,55 @@ export const therapiesData = [
       title: [
         {
           color: false,
-          text: "Explore Effective Strategies to ",
+          text: "Your Guide to healing and Happiness to  ",
         },
         {
           color: true,
-          text: "Overcome Depression",
+          text: "rise above Depression",
         },
       ],
       desc: [
-        "Depression is a mood disorder characterized by persistent sadness, hopelessness, and a lack of interest or pleasure in once-used activities.",
-        "It can also manifest as sleep, appetite, energy levels, and concentration changes.",
+        "Feeling sad is a common experience, but when it lasts longer, it may signal depression. From overwhelming sadness to a loss of interest in activities, the signs of depression can be different and challenging.",
+        "At Wleness, our mental wellness services are designed to support you through this journey, offering guidance through the best psychiatrists, and strategies to regain happiness.",
       ],
       image: depressionHeader,
       alt: "Wleness - Explore Effective Strategies to Overcome Depression",
     },
     symptoms: {
       highlight: " Depression symptoms ",
-      issue: "depression",
+      issue: ["The Wleness Way of ", "Depression Treatment"],
       alt: "Wleness - Here's How Generalized Depression Symptoms May Appear",
-      desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive depression treatment program at the healthcare center, where relaxation and well-being intertwine.",
+      desc: "At Wellness Way, we believe in a holistic approach to treating depression, focusing on your mental, emotional, and physical well-being. Our team of India’s top therapists and psychiatrists is dedicated to providing you with personalised care and support.",
       points: [
-        "Trouble concentrating",
-        "Facing difficulty in concentrating",
-        "Persistent sadness & Feeling of worthlessness",
-        "Loss of interest in activities",
+        "Facing Difficulty in concentrating",
+        "Persistent Sadness and Feelings of worthlessness",
+        "Loss of interest in once-loved activities",
         "Changes in appetite or weight",
-        "Fatigue or low energy",
+        "Fatigue or low-energy",
+        "Trouble falling asleep or staying awake",
       ],
       image: symptomsDepression,
     },
-    doctors: doctors,
+    approach: [
+      "Talk to the best therapists online and get insights on coping strategies, gain valuable insights, and work towards overcoming depression.",
+      "Get professional guidance and expertise in understanding and managing mental health challenges, including depression symptoms.",
+      "The Wleness community opens doors to a supportive network of individuals where you'll find encouragement and valuable resources for motivation.",
+    ],
+    doctors: {
+      heading: [
+        {
+          color: false,
+          text: "Get the support of ",
+        },
+        {
+          color: true,
+          text: " India's top therapists ",
+        },
+      ],
+      desc: "Find the care of India's finest therapists, who are ready to guide you through your depression treatment with expertise. Get the best support for your journey towards inner peace and happiness. Reach out today and take a brave step towards a brighter tomorrow.",
+    },
     quote:
-      "Over 80% of people with depression can experience significant improvement through therapy, medication, or a combination of both.",
+      "Over 80% of people with depression can experience significant improvement through therapy, medication, or a combination of both",
   },
   {
     slug: "/therapy/panic-attack",
@@ -159,9 +191,14 @@ export const therapiesData = [
       image: panicAttacksHeader,
       alt: "Wleness - Empowering Strategies to Overcome Panic Attacks",
     },
+    approach: [
+      "Talk to the best therapists online and get insights on coping strategies, gain valuable insights, and work towards overcoming depression.",
+      "Get professional guidance and expertise in understanding and managing mental health challenges, including depression symptoms.",
+      "The Wleness community opens doors to a supportive network of individuals where you'll find encouragement and valuable resources for motivation.",
+    ],
     symptoms: {
       highlight: " Panic Attack symptoms ",
-      issue: "panic-attack",
+      issue: ["The Wleness Way of", " Panic Attack Management"],
       desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive Panic Attack treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Rapid heartbeat or palpitations",
@@ -198,9 +235,14 @@ export const therapiesData = [
       image: anxietyHeader,
       alt: "Wleness - Discovering Effective Approaches to Conquer Anxiety",
     },
+    approach: [
+      "Talk to the best therapists online and get insights on coping strategies, gain valuable insights, and work towards overcoming depression.",
+      "Get professional guidance and expertise in understanding and managing mental health challenges, including depression symptoms.",
+      "The Wleness community opens doors to a supportive network of individuals where you'll find encouragement and valuable resources for motivation.",
+    ],
     symptoms: {
       highlight: " Anxiety symptoms ",
-      issue: "anxiety",
+      issue: ["The Wleness Way of", " Anxiety Management"],
       desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive anxiety treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Excessive worry and apprehension about everyday events or situations.",
@@ -236,9 +278,14 @@ export const therapiesData = [
       ],
       image: ocdHeader,
     },
+    approach: [
+      "Talk to the best therapists online and get insights on coping strategies, gain valuable insights, and work towards overcoming depression.",
+      "Get professional guidance and expertise in understanding and managing mental health challenges, including depression symptoms.",
+      "The Wleness community opens doors to a supportive network of individuals where you'll find encouragement and valuable resources for motivation.",
+    ],
     symptoms: {
       highlight: " OCD symptoms ",
-      issue: "ocd",
+      issue: ["The Wleness Way of", " OCD Management"],
       desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive ocd treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Intrusive, Distressing Thoughts",
@@ -278,9 +325,14 @@ export const therapiesData = [
       image: biopolarDisorderHeader,
       alt: "Wleness - Embrace Quality Care Navigating Bipolar Disorder with Support",
     },
+    approach: [
+      "Talk to the best therapists online and get insights on coping strategies, gain valuable insights, and work towards overcoming depression.",
+      "Get professional guidance and expertise in understanding and managing mental health challenges, including depression symptoms.",
+      "The Wleness community opens doors to a supportive network of individuals where you'll find encouragement and valuable resources for motivation.",
+    ],
     symptoms: {
       highlight: " Bipolar Disorder symptoms ",
-      issue: "bipolar-disorder",
+      issue: ["The Wleness Way of", " Bipolar Disorder Management"],
       desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive bipolar disorder treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Intense Euphoria and Energy",
@@ -320,9 +372,14 @@ export const therapiesData = [
       ],
       image: schizophreniaHeader,
     },
+    approach: [
+      "Talk to the best therapists online and get insights on coping strategies, gain valuable insights, and work towards overcoming depression.",
+      "Get professional guidance and expertise in understanding and managing mental health challenges, including depression symptoms.",
+      "The Wleness community opens doors to a supportive network of individuals where you'll find encouragement and valuable resources for motivation.",
+    ],
     symptoms: {
       highlight: " Schizophrenia symptoms ",
-      issue: "schizophrenia",
+      issue: ["The Wleness Way of", " Schizophrenia Management"],
       desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive schizophrenia program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Hallucinations",
@@ -357,9 +414,14 @@ export const therapiesData = [
       ],
       image: eatingDisorderHeader,
     },
+    approach: [
+      "Talk to the best therapists online and get insights on coping strategies, gain valuable insights, and work towards overcoming depression.",
+      "Get professional guidance and expertise in understanding and managing mental health challenges, including depression symptoms.",
+      "The Wleness community opens doors to a supportive network of individuals where you'll find encouragement and valuable resources for motivation.",
+    ],
     symptoms: {
       highlight: " Eating Disorder symptoms ",
-      issue: "eating-disorder",
+      issue: ["The Wleness Way of", " Eating Disorder Management"],
       desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive eating disorder treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Social Withdrawal and Isolation",
@@ -399,9 +461,14 @@ export const therapiesData = [
       image: paranoiaHeader,
       alt: "Wleness - Overcome Paranoia With Quality Care",
     },
+    approach: [
+      "Talk to the best therapists online and get insights on coping strategies, gain valuable insights, and work towards overcoming depression.",
+      "Get professional guidance and expertise in understanding and managing mental health challenges, including depression symptoms.",
+      "The Wleness community opens doors to a supportive network of individuals where you'll find encouragement and valuable resources for motivation.",
+    ],
     symptoms: {
       highlight: " Paranoia symptoms ",
-      issue: "paranoia",
+      issue: ["The Wleness Way of", " Paranoia Management"],
       desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive paranoia treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Social withdrawal due to fear.",
@@ -442,9 +509,14 @@ export const therapiesData = [
       image: adhdHeader,
       alt: "Wleness - Accessing ADHD Mental Health Support",
     },
+    approach: [
+      "Talk to the best therapists online and get insights on coping strategies, gain valuable insights, and work towards overcoming depression.",
+      "Get professional guidance and expertise in understanding and managing mental health challenges, including depression symptoms.",
+      "The Wleness community opens doors to a supportive network of individuals where you'll find encouragement and valuable resources for motivation.",
+    ],
     symptoms: {
       highlight: " ADHD symptoms ",
-      issue: "ADHD",
+      issue: ["The Wleness Way of", " ADHD Management"],
       desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive ADHD treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Poor Time Management: Struggling to manage time effectively",
@@ -485,9 +557,14 @@ export const therapiesData = [
       image: oddHeader,
       alt: "Wleness - Empowering Individuals with ODD through Effective Treatment",
     },
+    approach: [
+      "Talk to the best therapists online and get insights on coping strategies, gain valuable insights, and work towards overcoming depression.",
+      "Get professional guidance and expertise in understanding and managing mental health challenges, including depression symptoms.",
+      "The Wleness community opens doors to a supportive network of individuals where you'll find encouragement and valuable resources for motivation.",
+    ],
     symptoms: {
       highlight: " ODD symptoms ",
-      issue: "ODD",
+      issue: ["The Wleness Way of", " ODD Management"],
       desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive ODD treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Vindictiveness and seeking revenge when feeling wronged.",
@@ -528,9 +605,14 @@ export const therapiesData = [
       image: cdHeader,
       alt: "Wleness - Unlock Potential: Treat Conduct Disorder Effectively",
     },
+    approach: [
+      "Talk to the best therapists online and get insights on coping strategies, gain valuable insights, and work towards overcoming depression.",
+      "Get professional guidance and expertise in understanding and managing mental health challenges, including depression symptoms.",
+      "The Wleness community opens doors to a supportive network of individuals where you'll find encouragement and valuable resources for motivation.",
+    ],
     symptoms: {
       highlight: " Conduct Disorder symptoms ",
-      issue: "Conduct-Disorder",
+      issue: ["The Wleness Way of", " Conduct Disorder Management"],
       desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive conduct disorder treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Aggression towards people and animals.",
@@ -571,9 +653,14 @@ export const therapiesData = [
       image: angerHeader,
       alt: "Wleness - Mastering Anger: A Key to Enhanced Mental Well-Being",
     },
+    approach: [
+      "Talk to the best therapists online and get insights on coping strategies, gain valuable insights, and work towards overcoming depression.",
+      "Get professional guidance and expertise in understanding and managing mental health challenges, including depression symptoms.",
+      "The Wleness community opens doors to a supportive network of individuals where you'll find encouragement and valuable resources for motivation.",
+    ],
     symptoms: {
       highlight: " Anger symptoms ",
-      issue: "Anger",
+      issue: ["The Wleness Way of", " Anger Management"],
       desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive anger treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Frequent Irritability: Getting easily annoyed or irritated over small matters regularly.",
@@ -613,9 +700,14 @@ export const therapiesData = [
       ],
       image: relationshipHeader,
     },
+    approach: [
+      "Talk to the best therapists online and get insights on coping strategies, gain valuable insights, and work towards overcoming depression.",
+      "Get professional guidance and expertise in understanding and managing mental health challenges, including depression symptoms.",
+      "The Wleness community opens doors to a supportive network of individuals where you'll find encouragement and valuable resources for motivation.",
+    ],
     symptoms: {
       highlight: " Relationship challenges ",
-      issue: "relationship",
+      issue: ["The Wleness Way of", " Relationship Management"],
       desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive relationship improvement program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Dating Fatigue: Dating fatigue can be caused by overwhelming choices, and the time and energy investment required in the dating process.",
@@ -655,9 +747,14 @@ export const therapiesData = [
       image: lgbtqHeader,
       alt: "Wleness - Diverse Journeys, Shared Resilience: LGBTQIA+ Perspectives and Solutions",
     },
+    approach: [
+      "Talk to the best therapists online and get insights on coping strategies, gain valuable insights, and work towards overcoming depression.",
+      "Get professional guidance and expertise in understanding and managing mental health challenges, including depression symptoms.",
+      "The Wleness community opens doors to a supportive network of individuals where you'll find encouragement and valuable resources for motivation.",
+    ],
     symptoms: {
       highlight: " LGBTQIA+ symptoms ",
-      issue: "LGBTQIA+",
+      issue: ["The Wleness Way of", " LGBTQIA+ Management"],
       desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive stress treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Higher Rates of Depression. In LGBTQIA+ individuals often experience higher rates of depression due to stigma and discrimination.",
@@ -693,9 +790,14 @@ export const therapiesData = [
       ],
       image: parentingHeader,
     },
+    approach: [
+      "Talk to the best therapists online and get insights on coping strategies, gain valuable insights, and work towards overcoming depression.",
+      "Get professional guidance and expertise in understanding and managing mental health challenges, including depression symptoms.",
+      "The Wleness community opens doors to a supportive network of individuals where you'll find encouragement and valuable resources for motivation.",
+    ],
     symptoms: {
       highlight: " Parenting Challenges ",
-      issue: "parenting Hurdles",
+      issue: ["The Wleness Way of", " Parenting"],
       desc: "Indulge in a rejuvenating journey towards tranquillity with our comprehensive stress treatment program at the healthcare center, where relaxation and well-being intertwine.",
       points: [
         "Postpartum Depression: Many new mothers experience postpartum depression, characterized by persistent feelings of sadness, exhaustion, and anxiety after giving birth.",
@@ -716,16 +818,19 @@ export const therapiesData = [
 export const wlenessApproach = [
   {
     title: "Talk to a Therapist",
+    desc: "Talk to the best therapists online and get insights on coping strategies, gain valuable insights, and work towards overcoming stressors.",
     image: wlenessApproachIcon1,
     slug: "/experts/all",
   },
   {
     title: "Consult a Psychiatrist",
+    desc: "Get professional guidance and expertise in understanding and managing mental health challenges, including stress.",
     image: wlenessApproachIcon3,
     slug: "",
   },
   {
     title: "Join the community",
+    desc: "Wleness community opens doors to a supportive network of individuals where you'll find encouragement and valuable resources for stress relief.",
     image: wlenessApproachIcon4,
     slug: "/community",
   },

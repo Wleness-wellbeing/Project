@@ -59,7 +59,7 @@ function HomeWlenessWork() {
           How Wleness <span className="heading-primary">Works</span>
         </h2>
         <p className="para">
-          Wellness focuses on overall health and happiness, emphasising habits
+          Wleness focuses on overall health and happiness, emphasising habits
           that support physical, mental, and emotional well-being. It involves
           eating nutritious foods, exercising regularly, managing stress, and
           creating positive relationships to live a balanced and fulfilling

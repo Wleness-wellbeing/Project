@@ -5,7 +5,7 @@ export default function WhyChooseGrid(props) {
     <section className="mb-8 pt-2 text-center">
       <h2 className="subheading mx-auto mb-8 lg:w-[640px]">
         <span>Why Should I Choose </span>
-        <span className="heading-primary">Therapy</span>
+        <span className="heading-primary">Wleness Therapy</span>
       </h2>
 
       <div className="container mx-auto grid grid-cols-2 gap-5 lg:grid-cols-4">

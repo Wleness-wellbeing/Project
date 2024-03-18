@@ -22,6 +22,9 @@ export default function HomeServiceCard({ data }) {
         />
       </div>
       <div className={`${data.ltr ? "order-1" : "order-2"} lg:w-1/2`}>
+        <span className="mb-2 block font-bold text-primary-300">
+          {data.subtitle}
+        </span>
         <h2 className="subheading lg:pr-12">
           {data.title[0]}
           <span className="heading-primary"> {data.title[1]}</span>

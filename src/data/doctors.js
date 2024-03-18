@@ -180,7 +180,7 @@ export const couplesTherapyDoctors = {
       text: "Relationship Gurus",
     },
   ],
-  desc: "",
+  desc: "Wleness provides quality therapy and couples counselling to all our clients. Get the best and most recommended online therapy and guidance packages with India's best counsellors for you and your loved ones. Connect your relationship with a trained and certified online psychologist and counsellor.",
   doctors: doctorsDetails,
   button: {
     text: "Book Now",

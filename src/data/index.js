@@ -3835,6 +3835,7 @@ export const home_why_wleness = [
 export const home_services = [
   {
     title: ["Strengthen Mental Health", "and Wellness"],
+    subtitle: "Therapy",
     image: homeThearpy,
     description:
       "Compassionate mental health support for your emotional healing and growth, just like a warm hug from your loved ones. Get the top therapists and counsellors near you—the best online consultations in India.",
@@ -3851,7 +3852,8 @@ export const home_services = [
     ltr: true,
   },
   {
-    title: ["Lifestyle", "Coaching"],
+    title: ["Discover Your ", "Best Self"],
+    subtitle: "Lifestyle Coaching",
     image: homeLifeCoaching,
     description:
       "Transform your personal development with guidance and support through ICF-certified life coaching services. Find a life coach online at your fingertips—top life coaching guidance in India. Start your journey towards a healthier, happier life!",
@@ -3868,7 +3870,8 @@ export const home_services = [
     ltr: false,
   },
   {
-    title: ["Executive", "Coaching"],
+    title: ["Lead with ", "Impact"],
+    subtitle: "Executive Coaching",
     image: homeExecutiveCoachingImage,
     description:
       "Unlock your full potential and enhance your leadership abilities with personalised executive coaching. Get the best business and executive coaching from the comfort of your home. Start on a journey with certified leadership coaches towards growth and success!",
@@ -3886,6 +3889,7 @@ export const home_services = [
   },
   {
     title: ["Get the best service for", " your Team!"],
+    subtitle: "Corporate",
     image: homeCorporateImage,
     description:
       "Wleness provides the best employee health and well-being services for your team. Unlock increased productivity, job satisfaction, and outcomes. Associate with your company and get mental health support for all employees. Take your corporate well-being to the next level with Wleness",
