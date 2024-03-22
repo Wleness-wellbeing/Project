@@ -165,6 +165,7 @@ import {
   faUserGroup,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
+import { BRAIN_EXERCISE } from "./urls";
 
 // Therapies data for landing page
 export const therapies = [
@@ -3244,7 +3245,7 @@ export const activities = [
 export const brainExercise = {
   id: 1,
   name: "Brain Exercise",
-  slug: "/activities/brain-exercise",
+  slug: BRAIN_EXERCISE,
   header: {
     title: [
       {

@@ -14,7 +14,6 @@ import Footer from "./components/layout/Footer";
 import ScrollToTop from "./components/icon/ScrollToTop";
 import SignupLayout from "./components/layout/SignupLayout";
 import DashboardLayout from "./components/layout/DashboardLayout";
-import Avatar from "./components/layout/Avatar";
 import TabSwitcher from "./components/SwitchTab";
 import Error404 from "./components/Error404";
 import UserDashboardLayout from "./components/layout/UserDashboardLayout";
@@ -22,12 +21,10 @@ import UserDashboardHistory from "./components/UserDashboardHistory";
 import WhatsappChat from "./components/WhatsappChat";
 import Confirmation from "./components/Modals/Confirmation";
 import Success from "./components/RedirectPages/Success";
-import Calendly from "./components/Calendly";
 // Pages
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import Experts from "./pages/Experts";
-import Issues from "./pages/Issues";
 import Internship from "./pages/Internship";
 import Activities from "./pages/Activities";
 import Blogs from "./pages/Blogs";
@@ -40,8 +37,6 @@ import CampusAmbassador from "./pages/CampusAmbassador";
 import Psychiatrist from "./pages/Services/Psychiatrist";
 import Therapy from "./pages/Services/Therapy";
 import ExpertsDetails from "./pages/Experts/ExpertsDetails";
-import SignUp from "./pages/Authentication/SignUp";
-import Login from "./pages/Authentication/Login";
 import Appointment from "./pages/Appointment";
 import Faqs from "./pages/Faqs";
 import Community from "./pages/Community";
@@ -57,7 +52,6 @@ import ExecutiveCoaching from "./pages/Coaches";
 import RoutineCare from "./pages/Dashboard/RoutineCare";
 import TherapistJoining from "./pages/JoinUs/TherapistJoining";
 import PsychiatristJoining from "./pages/JoinUs/PsychiatristJoining";
-import Chatbox from "./pages/Dashboard/Chatbox";
 import Chat from "./pages/Community/Chat";
 import BlogDetails from "./pages/Blogs/BlogDetails";
 import Cancellation from "./pages/Policies/Cancellation";
@@ -81,6 +75,56 @@ import YogaBooking from "./pages/Appointment/YogaBooking";
 import YogaSubscription from "./pages/Activities/YogaSubscription";
 import LoginPage from "./pages/Authentication/LoginPage";
 import SignupPage from "./pages/Authentication/SignupPage";
+import {
+  ABOUT_US,
+  ACTIVITIES,
+  ALL_EXPERTS,
+  ASSESSMENT,
+  ASSESSMENT_RESULT,
+  ASSESSMENT_SLUG,
+  BLOGS,
+  BLOGS_DETAILS,
+  CAMPUS_AMBASSADOR,
+  CANCELLATION,
+  CAREER,
+  COMMUNITY,
+  CONSENT,
+  CONTACT_US,
+  CORPORATE_WELLBEING,
+  COUPLES_THERAPY,
+  EXECUTIVE_COACHING,
+  EXPERTS,
+  EXPERTS_BOOKING,
+  EXPERTS_LOGIN,
+  EXPERTS_PROFILE,
+  EXPERT_DASHBOARD,
+  EXPERT_DASHBOARD_PAYMENT,
+  FAQ,
+  FORGOT_PASSWORD,
+  HOME,
+  INTERNSHIP,
+  LIFESTYLE_COACHING,
+  LOGIN,
+  MUSICAL_HEALING,
+  MUSICAL_HEALING_TRACKS,
+  PRIVACY_POLICY,
+  PSYCHIATRIST,
+  PSYCHIATRIST_JOIN,
+  SIGNUP,
+  STUDENTS_POLICY,
+  SUCCESS,
+  TERMS_AND_CONDITIONS,
+  THANKS_YOU,
+  THERAPIST_JOIN,
+  THERAPY,
+  USER_DASHBOARD,
+  USER_HISTORY,
+  USER_PROFILE,
+  USER_ROUTINE_CARE,
+  YOGA,
+  YOGA_BOOKING,
+  YOGA_FOR_99,
+} from "./data/urls";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -109,14 +153,16 @@ function App() {
         key={index}
         path={value.slug}
         element={
-          <Layout>
-            <ActivityLayout
-              name={value.name}
-              header={value.header}
-              activities={value.activities}
-              blogs={value.blogs}
-            />
-          </Layout>
+          <Layout
+            children={
+              <ActivityLayout
+                name={value.name}
+                header={value.header}
+                activities={value.activities}
+                blogs={value.blogs}
+              />
+            }
+          />
         }
       />
     );
@@ -130,9 +176,7 @@ function App() {
           key={i}
           path={key.slug}
           element={
-            <Layout>
-              <ActivitySubPageLayout data={key.sections} />
-            </Layout>
+            <Layout children={<ActivitySubPageLayout data={key.sections} />} />
           }
         />
       );
@@ -145,206 +189,68 @@ function App() {
     <Router>
       <ScrollToTop />
       <Routes>
-        {/* <Route
-          path={MUSICAL_HEALING_TRACKS}
-          element={<Layout children={<MusicalHealingTracks token={token} />} />}
-        /> */}
+        <Route path={HOME} element={<Layout children={<Home />} />} />
+        <Route path={ABOUT_US} element={<Layout children={<AboutUs />} />} />
         <Route
-          path="/"
-          element={
-            <Layout>
-              <Home />
-            </Layout>
-          }
+          path={ASSESSMENT}
+          element={<Layout children={<MainAssessment />} />}
         />
         <Route
-          path="/about-us"
-          element={
-            <Layout>
-              <AboutUs />
-            </Layout>
-          }
+          path={ASSESSMENT_SLUG}
+          element={<Layout children={<AssessmentQuestions />} />}
         />
         <Route
-          path="/assessment"
-          element={
-            <Layout>
-              <MainAssessment />
-            </Layout>
-          }
-        />
-        <Route
-          path="/assessment/:slug"
-          element={
-            <Layout>
-              <AssessmentQuestions />
-            </Layout>
-          }
-        />
-        <Route
-          path="/assessment/result"
-          element={
-            <Layout>
-              <AssessmentResult />
-            </Layout>
-          }
+          path={ASSESSMENT_RESULT}
+          element={<Layout children={<AssessmentResult />} />}
         />
 
-        <Route
-          path="/avatar"
-          element={
-            <Layout>
-              <Avatar />
-            </Layout>
-          }
-        />
-
-        <Route
-          path="/gauth"
-          element={
-            <Layout>
-              <Gauth />
-            </Layout>
-          }
-        />
+        <Route path="/gauth" element={<Layout children={<Gauth />} />} />
 
         <Route
           path="/facebook"
-          element={
-            <Layout>
-              <FacebookAuth />
-            </Layout>
-          }
+          element={<Layout children={<FacebookAuth />} />}
         />
 
         <Route
-          path="/services/psychiatrist"
-          element={
-            <Layout>
-              <Psychiatrist />
-            </Layout>
-          }
+          path={PSYCHIATRIST}
+          element={<Layout children={<Psychiatrist />} />}
+        />
+        <Route path={THERAPY} element={<Layout children={<Therapy />} />} />
+        <Route
+          path={COUPLES_THERAPY}
+          element={<Layout children={<CouplesTherapy />} />}
         />
         <Route
-          path="/services/therapy"
-          element={
-            <Layout>
-              <Therapy />
-            </Layout>
-          }
+          path={MUSICAL_HEALING}
+          element={<Layout children={<MusicalTherapy />} />}
         />
         <Route
-          path="/services/couples-therapy"
-          element={
-            <Layout>
-              <CouplesTherapy />
-            </Layout>
-          }
+          path={MUSICAL_HEALING_TRACKS}
+          element={<Layout children={<MusicalHealingTracks token={token} />} />}
+        />
+        <Route path={COMMUNITY} element={<Layout children={<Community />} />} />
+        <Route path={EXPERTS} element={<Layout children={<Experts />} />} />
+        <Route
+          path={ALL_EXPERTS}
+          element={<Layout children={<ExpertsDetails />} />}
         />
         <Route
-          path="/services/music-healing"
-          element={
-            <Layout>
-              <MusicalTherapy />
-            </Layout>
-          }
-        />
-        <Route
-          path="/services/music-healing/tracks"
-          element={
-            <Layout>
-              <MusicalHealingTracks token={token} />
-            </Layout>
-          }
-        />
-        <Route
-          path="/community"
-          element={
-            <Layout>
-              <Community />
-            </Layout>
-          }
-        />
-        <Route
-          path="/calendly"
-          element={
-            <Layout>
-              <Calendly />
-            </Layout>
-          }
-        />
-        <Route
-          path="/experts"
-          element={
-            <Layout>
-              <Experts />
-            </Layout>
-          }
+          path={EXPERTS_PROFILE}
+          element={<Layout children={<ExpertProfile />} />}
         />
         <Route
           path="/tab-switch"
-          element={
-            <Layout>
-              <TabSwitcher />
-            </Layout>
-          }
+          element={<Layout children={<TabSwitcher />} />}
         />
         <Route
-          path="/experts/all"
-          element={
-            <Layout>
-              <ExpertsDetails />
-            </Layout>
-          }
+          path={EXPERTS_BOOKING}
+          element={<Layout children={<Appointment />} />}
         />
         <Route
-          path="/experts/profile/:slug"
-          element={
-            <Layout>
-              <ExpertProfile />
-            </Layout>
-          }
+          path={YOGA_BOOKING}
+          element={<Layout children={<YogaBooking />} />}
         />
-        <Route
-          path="/experts/booking/:slug"
-          element={
-            <Layout>
-              <Appointment />
-            </Layout>
-          }
-        />
-        <Route
-          path="/yoga/booking/:slug"
-          element={
-            <Layout>
-              <YogaBooking />
-            </Layout>
-          }
-        />
-        <Route
-          path="/success"
-          element={
-            <Layout>
-              <Success />
-            </Layout>
-          }
-        />
-        <Route
-          path="/issues"
-          element={
-            <Layout>
-              <Issues />
-            </Layout>
-          }
-        />
-        <Route
-          path="/calendly"
-          element={
-            <Layout>
-              <Calendly />
-            </Layout>
-          }
-        />
+        <Route path={SUCCESS} element={<Layout children={<Success />} />} />
 
         {/* Therapies Subpages */}
         {therapiesData.map((value, index) => {
@@ -353,67 +259,36 @@ function App() {
               key={index}
               path={value.slug}
               element={
-                <Layout>
-                  <IssueSubPageLayout
-                    header={value.header}
-                    symptoms={value.symptoms}
-                    doctors={value.doctors}
-                    quote={value.quote}
-                    approach={value.approach}
-                  />
-                </Layout>
+                <Layout
+                  children={
+                    <IssueSubPageLayout
+                      header={value.header}
+                      symptoms={value.symptoms}
+                      doctors={value.doctors}
+                      quote={value.quote}
+                      approach={value.approach}
+                    />
+                  }
+                />
               }
             />
           );
         })}
         <Route
-          path="/internship"
-          element={
-            <Layout>
-              <Internship />
-            </Layout>
-          }
+          path={INTERNSHIP}
+          element={<Layout children={<Internship />} />}
         />
         <Route
-          path="/activities"
-          element={
-            <Layout>
-              <Activities />
-            </Layout>
-          }
+          path={ACTIVITIES}
+          element={<Layout children={<Activities />} />}
         />
 
         {/* =========== Yoga =========== */}
+        <Route path={YOGA} element={<Layout children={<YogaPage />} />} />
         <Route
-          path="/activities/yoga"
-          element={
-            <Layout>
-              <YogaPage />
-            </Layout>
-          }
+          path={YOGA_FOR_99}
+          element={<Layout children={<YogaSubscription />} />}
         />
-        <Route
-          path="/yoga-for-99"
-          element={
-            <Layout>
-              <YogaSubscription />
-            </Layout>
-          }
-        />
-
-        {/* {activityYoga.activities.types.map((value, index) => {
-          return (
-            <Route
-              key={index}
-              path={value.slug}
-              element={
-                <Layout>
-                  <YogaSubpage data={value} />
-                </Layout>
-              }
-            />
-          );
-        })} */}
 
         {/* Activity Subpages - Yoga, Meditation, Sadhna */}
         {activitiesMenu}
@@ -421,252 +296,151 @@ function App() {
         {activitiesInnerSubpages}
         <Route
           path={brainExercise.slug}
-          element={
-            <Layout>
-              <BrainExercise />
-            </Layout>
-          }
+          element={<Layout children={<BrainExercise />} />}
         />
 
         {/* =========== Blogs =========== */}
         <Route
-          path="/blogs"
+          path={brainExercise.slug}
+          element={<Layout children={<BrainExercise />} />}
+        />
+        <Route path={BLOGS} element={<Layout children={<Blogs />} />} />
+        <Route
+          path={BLOGS_DETAILS}
+          element={<Layout children={<BlogDetails />} />}
+        />
+        <Route path={FAQ} element={<Layout children={<Faqs />} />} />
+        <Route
+          path={EXPERTS_LOGIN}
           element={
-            <Layout>
-              <Blogs />
-            </Layout>
+            <SignupLayout
+              children={<ExpertsLogin setToken={setToken} token={token} />}
+            />
           }
         />
         <Route
-          path="/blog/:slug"
+          path={EXPERT_DASHBOARD}
           element={
-            <Layout>
-              <BlogDetails />
-            </Layout>
+            <DashboardLayout children={<DoctorDashboard token={token} />} />
           }
         />
         <Route
-          path="/faqs"
+          path={EXPERT_DASHBOARD_PAYMENT}
           element={
-            <Layout>
-              <Faqs />
-            </Layout>
+            <DashboardLayout children={<DoctorsPayment token={token} />} />
           }
         />
         <Route
-          path="/experts-login"
+          path={FORGOT_PASSWORD}
           element={
-            <SignupLayout>
-              <ExpertsLogin setToken={setToken} token={token} />
-            </SignupLayout>
+            <SignupLayout
+              children={<ForgotPassword setToken={setToken} token={token} />}
+            />
           }
         />
         <Route
-          path="/doctor/dashboard"
-          element={
-            <DashboardLayout token={token}>
-              <DoctorDashboard token={token} />
-            </DashboardLayout>
-          }
-        />
-        <Route
-          path="/doctor/payment"
-          element={
-            <DashboardLayout token={token}>
-              <DoctorsPayment token={token} />
-            </DashboardLayout>
-          }
-        />
-        <Route
-          path="/forgot-password"
-          element={
-            <SignupLayout>
-              <ForgotPassword setToken={setToken} token={token} />
-            </SignupLayout>
-          }
-        />
-        <Route
-          path="/login"
+          path={LOGIN}
           element={<LoginPage setToken={setToken} token={token} />}
         />
         <Route
-          path="/signup"
+          path={SIGNUP}
           element={<SignupPage setToken={setToken} token={token} />}
         />
         <Route
-          path="/user/profile"
+          path={USER_PROFILE}
           element={
-            <UserDashboardLayout token={token}>
-              <UserProfile token={token} />
-            </UserDashboardLayout>
+            <UserDashboardLayout
+              token={token}
+              children={<UserProfile token={token} />}
+            />
           }
         />
         <Route
-          path="/user/dashboard"
+          path={USER_DASHBOARD}
           element={
-            <UserDashboardLayout token={token}>
-              <UserDashboard token={token} />
-            </UserDashboardLayout>
+            <UserDashboardLayout
+              token={token}
+              children={<UserDashboard token={token} />}
+            />
           }
         />
         <Route
-          path="/user/history"
+          path={USER_HISTORY}
           element={
-            <UserDashboardLayout token={token}>
-              <UserDashboardHistory token={token} />
-            </UserDashboardLayout>
+            <UserDashboardLayout
+              token={token}
+              children={<UserDashboardHistory token={token} />}
+            />
           }
         />
 
         <Route path="*" element={<Error404 />} />
         <Route
           path="/community/chat"
-          element={
-            <DashboardLayout>
-              <Chat token={token} />
-            </DashboardLayout>
-          }
+          element={<DashboardLayout children={<Chat token={token} />} />}
         />
         <Route
-          path="/user/routine-care"
-          element={
-            <DashboardLayout>
-              <RoutineCare token={token} />
-            </DashboardLayout>
-          }
+          path={USER_ROUTINE_CARE}
+          element={<DashboardLayout children={<RoutineCare token={token} />} />}
         />
         <Route
-          path="/campus-ambassador"
-          element={
-            <Layout>
-              <CampusAmbassador />
-            </Layout>
-          }
+          path={CAMPUS_AMBASSADOR}
+          element={<Layout children={<CampusAmbassador />} />}
         />
         <Route
-          path="/corporate-wellbeing"
-          element={
-            <Layout>
-              <Corporate />
-            </Layout>
-          }
+          path={CORPORATE_WELLBEING}
+          element={<Layout children={<Corporate />} />}
         />
         <Route
-          path="/join-therapist"
-          element={
-            <Layout>
-              <TherapistJoining />
-            </Layout>
-          }
+          path={THERAPIST_JOIN}
+          element={<Layout children={<TherapistJoining />} />}
         />
         <Route
-          path="/join-psychiatrist"
-          element={
-            <Layout>
-              <PsychiatristJoining />
-            </Layout>
-          }
-        />
-        <Route
-          path="/chatbox"
-          element={
-            <SignupLayout>
-              <Chatbox />
-            </SignupLayout>
-          }
+          path={PSYCHIATRIST_JOIN}
+          element={<Layout children={<PsychiatristJoining />} />}
         />
 
         {/* Policies Pages */}
         <Route
-          path="/privacy-policy"
-          element={
-            <Layout>
-              <PrivacyPolicy />
-            </Layout>
-          }
+          path={PRIVACY_POLICY}
+          element={<Layout children={<PrivacyPolicy />} />}
         />
         <Route
-          path="/students-policy"
-          element={
-            <Layout>
-              <StudentsPolicy />
-            </Layout>
-          }
+          path={STUDENTS_POLICY}
+          element={<Layout children={<StudentsPolicy />} />}
         />
         <Route
-          path="/cancellation"
-          element={
-            <Layout>
-              <Cancellation />
-            </Layout>
-          }
+          path={CANCELLATION}
+          element={<Layout children={<Cancellation />} />}
+        />
+        <Route path={CONSENT} element={<Layout children={<Consent />} />} />
+        <Route
+          path={TERMS_AND_CONDITIONS}
+          element={<Layout children={<TermsAndConditions />} />}
         />
         <Route
-          path="/consent"
-          element={
-            <Layout>
-              <Consent />
-            </Layout>
-          }
+          path={CONTACT_US}
+          element={<Layout children={<ContactUs />} />}
         />
         <Route
-          path="/terms-and-conditions"
-          element={
-            <Layout>
-              <TermsAndConditions />
-            </Layout>
-          }
+          path={THANKS_YOU}
+          element={<Layout children={<Confirmation />} />}
+        />
+        <Route path={CAREER} element={<Layout children={<Career />} />} />
+        <Route
+          path={LIFESTYLE_COACHING}
+          element={<Layout children={<LifeCoching />} />}
         />
         <Route
-          path="/contact-us"
-          element={
-            <Layout>
-              <ContactUs />
-            </Layout>
-          }
-        />
-        <Route
-          path="/thank-you"
-          element={
-            <Layout>
-              <Confirmation />
-            </Layout>
-          }
-        />
-        <Route
-          path="/career"
-          element={
-            <Layout>
-              <Career />
-            </Layout>
-          }
-        />
-        <Route
-          path="/life-coaching"
-          element={
-            <Layout>
-              <LifeCoching />
-            </Layout>
-          }
-        />
-        <Route
-          path="/executive-coaching"
-          element={
-            <Layout>
-              <ExecutiveCoaching />
-            </Layout>
-          }
+          path={EXECUTIVE_COACHING}
+          element={<Layout children={<ExecutiveCoaching />} />}
         />
         {coachesData.map((value, i) => {
           return (
             <Route
               key={i}
               path={value.slug}
-              element={
-                <Layout>
-                  <CoachSubpage data={value} />
-                </Layout>
-              }
+              element={<Layout children={<CoachSubpage data={value} />} />}
             />
           );
         })}
@@ -675,11 +449,7 @@ function App() {
             <Route
               key={i}
               path={value.slug}
-              element={
-                <Layout>
-                  <CoachSubpage data={value} />
-                </Layout>
-              }
+              element={<Layout children={<CoachSubpage data={value} />} />}
             />
           );
         })}
