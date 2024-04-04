@@ -9,7 +9,7 @@ export default function CoachCertificates({ certificates }) {
           {certificates.map((value, index) => (
             <div
               key={index}
-              className="rounded-xl border-2 border-teal-400 bg-white p-4 text-teal-400 shadow-md hover:bg-teal-400 hover:text-white"
+              className="rounded-xl border-2 border-teal-400 bg-white p-4 text-sm font-semibold text-teal-400 shadow-md hover:bg-teal-400 hover:text-white lg:text-base"
             >
               <p>{value}</p>
             </div>

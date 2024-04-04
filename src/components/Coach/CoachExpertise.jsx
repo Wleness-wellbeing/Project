@@ -3,9 +3,16 @@ import { leaf } from "../../assets";
 
 export default function CoachExpertise({ heading, image, lists }) {
   return (
-    <section className="mx-auto flex flex-col-reverse border-4 border-secondary/10 md:flex-row">
-      <div className="w-full bg-secondary/10 md:w-3/4">
-        <div className="my-16 ml-4 w-full sm:ml-20 md:mr-0 md:text-left lg:ml-32 xl:ml-44">
+    <section className="container mx-auto flex flex-col items-center border-4 border-secondary/10 p-4 lg:flex-row lg:p-0">
+      <div className="mb-8 lg:order-2 lg:mb-0">
+        <img
+          src={image} // Replace with your image URL
+          alt="Description of the image"
+          className="rounded-lg lg:w-[520px] lg:-translate-x-12 xl:-translate-x-24 2xl:w-[620px]"
+        />
+      </div>
+      <div className="w-full bg-secondary/10 lg:order-1">
+        <div className="my-8 w-full px-4 md:px-8 md:text-left lg:my-12 lg:w-4/5">
           <div>
             <h2 className="subheading ">{heading}</h2>
           </div>
@@ -14,7 +21,7 @@ export default function CoachExpertise({ heading, image, lists }) {
             {lists.map((value, i) => {
               return (
                 <li
-                  className="flex items-center px-4 py-2 text-left font-medium lg:px-0"
+                  className="flex items-center py-2 text-left text-sm font-medium md:text-base lg:px-0"
                   key={i}
                 >
                   <img src={leaf} alt="Icon 1" className=" mr-1 h-4 w-4" />
@@ -24,14 +31,6 @@ export default function CoachExpertise({ heading, image, lists }) {
             })}
           </ul>
         </div>
-      </div>
-
-      <div className="m-auto md:-translate-x-20 lg:-translate-x-32 lg:text-center xl:-translate-x-44">
-        <img
-          src={image} // Replace with your image URL
-          alt="Description of the image"
-          className="rounded-lg"
-        />
       </div>
     </section>
   );

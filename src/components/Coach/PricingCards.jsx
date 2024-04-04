@@ -24,7 +24,7 @@ function PricingCards({ packages, openForm }) {
         </h2>
       </div>
 
-      <div className="grid grid-cols-3 gap-5 lg:gap-10">
+      <div className="grid gap-5 lg:grid-cols-3 xl:gap-10">
         {packages.map((value, i) => {
           return (
             <figure key={i}>
@@ -87,7 +87,7 @@ function PricingCards({ packages, openForm }) {
                       </>
                     )}
                   </div>
-                  <h2 className="mb-3 text-center text-xl font-bold lg:text-2xl">
+                  <h2 className="mb-3 text-center text-xl font-bold xl:text-2xl">
                     {value.title}
                   </h2>
                   <figcaption>
