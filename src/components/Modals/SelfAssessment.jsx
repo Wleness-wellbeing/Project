@@ -4,11 +4,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { selfAssessmentModal } from "../../assets";
 
-export default function SelfAssessment({
-  assessmentModal,
-  setAssessmentModal,
-}) {
-  if (!assessmentModal) {
+export default function SelfAssessment({ isOpen, close }) {
+  if (!isOpen) {
     return null;
   }
   return (
@@ -33,7 +30,7 @@ export default function SelfAssessment({
           </div>
         </div>
         <button
-          onClick={() => setAssessmentModal(false)}
+          onClick={() => close(false)}
           className="absolute -right-3 -top-4 flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-primary-400 lg:-right-2 lg:-top-2"
         >
           <FontAwesomeIcon icon={faClose} className="text-xl text-white" />

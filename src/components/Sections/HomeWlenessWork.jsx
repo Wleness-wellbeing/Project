@@ -70,7 +70,10 @@ function HomeWlenessWork() {
         <div className="mb-8 space-y-4 lg:col-span-2 lg:mb-0">
           {home_how_wleness_works.map((value, i) => {
             return (
-              <div className="px-5 py-4 transition-all hover:bg-gradient-to-r hover:from-primary-400 hover:to-transparent lg:pl-16">
+              <div
+                key={i}
+                className="px-5 py-4 transition-all hover:bg-gradient-to-r hover:from-primary-400 hover:to-transparent lg:pl-16"
+              >
                 <span className="font-bold text-slate-300">0{i + 1}</span>
                 <h3 className="mb-2 mt-1 text-xl font-semibold text-white">
                   {value.title}

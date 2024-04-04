@@ -21,8 +21,6 @@ import RequestForm from "../../components/Forms/RequestForm";
 import MainHeader from "../../components/headers/MainHeader";
 import HomeFaq from "../../components/Faq/HomeFaq";
 import DoctorSlider from "../../components/DoctorSlider";
-import FeaturedIn from "../../components/Sections/FeaturedIn";
-import SelfAssessment from "../../components/Modals/SelfAssessment";
 import HomeServiceCard from "../../components/Cards/HomeServiceCard";
 import SelfCareHome from "../../components/Sections/SelfCareHome";
 import IssueCard from "../../components/Cards/IssueCard";
@@ -32,10 +30,10 @@ import HomeWhyWleness from "../../components/Sections/HomeWhyWleness";
 import HomeBlogs from "../../components/Sections/HomeBlogs";
 import HomeTestimonials from "../../components/Sections/HomeTestimonials";
 import HomeWlenessWork from "../../components/Sections/HomeWlenessWork";
+import { ALL_EXPERTS } from "../../data/urls";
 
 export default function Home() {
   const [isAssessmentModalOpen, setShowAssessmentModal] = useState(false);
-  const [assessmentModal, setAssessmentModal] = useState(true);
   const [rediredurl, setRediredurl] = useState(null);
 
   // Assessment Slides
@@ -53,7 +51,7 @@ export default function Home() {
     setRediredurl({
       title: "Find a Therapist",
       name: "Find a Therapist",
-      url: "/experts/all",
+      url: ALL_EXPERTS,
     });
   };
 
@@ -281,10 +279,6 @@ export default function Home() {
         isAssessmentOpen={isAssessmentModalOpen}
         onAssessmentClose={closeAssessmentModal}
         buttons={rediredurl}
-      />
-      <SelfAssessment
-        assessmentModal={assessmentModal}
-        setAssessmentModal={setAssessmentModal}
       />
     </>
   );

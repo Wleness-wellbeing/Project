@@ -125,6 +125,7 @@ import {
   YOGA_BOOKING,
   YOGA_FOR_99,
 } from "./data/urls";
+import SelfAssessmentButton from "./components/Buttons/SelfAssessmentButton";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -463,6 +464,7 @@ function Layout({ children }) {
     <>
       <Navbar />
       {children}
+      <SelfAssessmentButton />
       <WhatsappChat />
       <Footer />
     </>
