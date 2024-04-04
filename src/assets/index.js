@@ -1263,6 +1263,8 @@ import lifeCoachRidhi3 from "./images/lifecoching/life-coach-ridhi_3.webp";
 import lifeCoachTanuja from "./images/lifecoching/life-coach-tanuja.png";
 import lifeCoachTanuja2 from "./images/lifecoching/life-coach-tanuja_2.webp";
 import lifeCoachTanuja3 from "./images/lifecoching/life-coach-tanuja_3.webp";
+import lifeCoachShivani from "./images/lifecoching/life-coach-shivani.webp";
+import lifeCoachShivani2 from "./images/lifecoching/shivani-narang.jpg";
 
 export {
   lifeCoaching1,
@@ -1285,6 +1287,8 @@ export {
   lifeCoachTanuja,
   lifeCoachTanuja2,
   lifeCoachTanuja3,
+  lifeCoachShivani,
+  lifeCoachShivani2,
 };
 
 // ======= Executive Coaching=========//

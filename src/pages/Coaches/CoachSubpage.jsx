@@ -8,7 +8,6 @@ import CoachRequestForm from "../../components/Forms/CoachRequestForm";
 import HappyClient from "../../components/HappyClient";
 import PricingCards from "../../components/Coach/PricingCards";
 import useEnquiryForm from "../../hooks/useEnquiryForm";
-import YogaUserDetailsForm from "../../components/Forms/YogaUserDetailsForm";
 import CoachingUserDetailsForm from "../../components/Forms/CoachingUserDetailsForm";
 
 const reviewsHeading = {
