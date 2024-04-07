@@ -47,7 +47,7 @@ export const serviceMenuPages = [
     slug: "/activities/yoga",
   },
   {
-    name: "Lifestyle Coaching",
+    name: "Lifestyle & Mindulness Coaching",
     slug: "/life-coaching",
   },
   {

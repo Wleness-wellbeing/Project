@@ -9,6 +9,7 @@ import {
   lifeCoachTanuja3,
   therapyClient1,
 } from "../assets";
+import { LS_COACH_SHIVANI_NARANG } from "./urls";
 
 export const lifestyleCoaches = [
   {
@@ -201,10 +202,10 @@ export const lifestyleCoaches = [
   },
   {
     name: "Shivani Narang",
-    profession: "Lifestyle Coach",
+    profession: "Mindfulness Coach",
     alt: "Shivani Narang - Lifestyle Coach - Wleness",
     displayPricing: true,
-    slug: "/coach/shivani-narang",
+    slug: LS_COACH_SHIVANI_NARANG,
     image: lifeCoachShivani,
     desc: "Shivani Narang is a Mental Wellness Coach who helps individuals and organizations improve their mental health using simple and effective strategies. Having conducted over 200 sessions / workshops over 75 themes  and equipped with certifications in mindfulness and meditation, Shivani guides individuals in discovering inner balance and unlocking their full potential.",
     about: {
