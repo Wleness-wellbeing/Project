@@ -116,7 +116,7 @@ export default function Home() {
       <HomeWlenessWork />
 
       {/* ========== Our Services ========== */}
-      <section className="mb-8 pb-4 lg:mb-0 lg:pt-10">
+      <section className="mb-8 pb-4 lg:mb-0 lg:py-14 xl:pb-20">
         {home_services.map((value, i) => {
           return <HomeServiceCard data={value} key={i} />;
         })}
@@ -126,8 +126,8 @@ export default function Home() {
       <HomeFeaturedIn />
 
       {/* ========== Our Therapies ========== */}
-      <section className="container mx-auto pt-8 lg:pt-12">
-        <div className="text-center">
+      <section className="container mx-auto pt-8 lg:mb-12 lg:pt-12">
+        <div className="text-center lg:mb-4">
           <h2 className="subheading">Our Therapies</h2>
         </div>
         <div className="grid grid-cols-2 gap-2 lg:grid-cols-3 lg:gap-6 lg:py-6 xl:grid-cols-4 2xl:grid-cols-4 2xl:gap-6">
@@ -151,7 +151,7 @@ export default function Home() {
       />
 
       {/* ========== Our Certifications ========== */}
-      <section className="bg-primary-10 py-10">
+      <section className="bg-primary-10 py-10 lg:mt-20">
         <div className="container relative mx-auto mb-5 mt-5 lg:mt-0">
           <div className="mx-auto pb-6 text-center sm:pt-6 lg:pb-14 2xl:pb-8">
             <h1 className="subheading sm:pb-0 lg:mb-4">
@@ -211,7 +211,7 @@ export default function Home() {
       <SelfCareHome />
 
       {/* ========== Community ========== */}
-      <section className="relative overflow-x-clip py-6 2xl:py-14">
+      <section className="relative overflow-x-clip py-6 xl:py-20">
         <div className="container mx-auto">
           <div className="relative flex flex-col justify-between lg:flex-row lg:items-center">
             <div className="relative mb-8 lg:order-2 lg:mb-0 lg:w-2/5">

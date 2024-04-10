@@ -4,7 +4,7 @@ import { homeSelfCareImage } from "../../assets";
 
 function SelfCareHome() {
   return (
-    <section className="bg-primary-10 py-12">
+    <section className="bg-primary-10 py-12 lg:pb-20">
       <div className="container mx-auto  grid items-center gap-x-12 lg:grid-cols-2">
         <div className="mb-6 lg:mb-0">
           <img

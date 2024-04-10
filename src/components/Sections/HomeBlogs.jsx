@@ -22,7 +22,7 @@ function HomeBlogs() {
   ];
 
   return (
-    <section className="container mx-auto my-8 rounded-xl bg-primary-10 py-10 lg:min-h-[520px]">
+    <section className="container mx-auto my-8 rounded-xl bg-primary-10 py-10 lg:my-14 lg:min-h-[520px]">
       <div className="flex flex-col items-center justify-center text-center">
         <h2 className="subheading">Our Resources</h2>
       </div>

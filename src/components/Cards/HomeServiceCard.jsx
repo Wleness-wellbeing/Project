@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function HomeServiceCard({ data }) {
   return (
-    <div className="container mx-auto flex flex-col items-center py-10 lg:flex-row lg:gap-x-10">
+    <div className="container mx-auto flex flex-col items-center py-10 lg:mb-10 lg:flex-row lg:gap-x-10">
       <div
         className={`${
           data.ltr ? "order-1 lg:order-2" : "order-1"

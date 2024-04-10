@@ -44,7 +44,7 @@ const featuredIn = [
 
 function HomeFeaturedIn() {
   return (
-    <section className="bg-primary-10 py-12 lg:py-16">
+    <section className="bg-primary-10 py-12 lg:mb-14 lg:py-16">
       <div className="container mx-auto">
         <div className="grid items-center gap-x-10 lg:grid-cols-2">
           <div className="mb-4 lg:mb-0">

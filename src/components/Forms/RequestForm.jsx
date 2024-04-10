@@ -77,7 +77,7 @@ function RequestForm() {
   };
 
   return (
-    <section className="p-4 lg:p-0">
+    <section className="p-4 lg:my-14 lg:p-0 xl:mb-20 xl:mt-16">
       <div className="container mx-auto mb-6 grid gap-x-5 rounded-3xl border-2 border-slate-100 bg-white !p-2 shadow-xl md:grid-cols-[2fr_3fr] lg:!p-4">
         <div className="mb-6 rounded-2xl bg-primary-300 px-6 py-8 lg:mb-0 lg:px-12 lg:py-20">
           <h2 className="mb-1 text-xl font-bold text-white lg:text-2xl">

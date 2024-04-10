@@ -6,7 +6,7 @@ function HomeWhyWleness() {
   const [selected, setSelected] = useState(whyChooseUs[0].title);
 
   return (
-    <section className="container mx-auto mb-10 grid items-center gap-5 lg:grid-cols-2">
+    <section className="container mx-auto mb-10 grid items-center gap-5 lg:mb-14 lg:grid-cols-2">
       <div className="p-6">
         <img
           src={whyWleness}
