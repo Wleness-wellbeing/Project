@@ -5,7 +5,12 @@ import { Helmet } from "react-helmet";
 import { signInWithPopup } from "firebase/auth";
 import { auth, googleProvider, facebookProvider } from "./FirebaseConfig";
 // Data
-import { GOOGLE_SIGNUP_URI, SIGNUP_USER_URI, VERIFY_OTP } from "../../data/api";
+import {
+  GOOGLE_SIGNUP_URI,
+  SIGNUP_USER_URI,
+  VERIFY_OTP,
+  VERIFY_SIGNUP_OTP,
+} from "../../data/api";
 import { get_canonical } from "../../utils/index";
 import { USERS_LOGIN_META } from "../../data/meta";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -26,6 +31,7 @@ export default function SignupPage({ setToken, token }) {
   const [otpAlert, setOTPAlert] = useState("");
   const [newToken, setNewToken] = useState("");
   const [phone, setPhone] = useState(null);
+  const [email, setEmail] = useState(null);
   const navigate = useNavigate();
 
   // Redirect user if loggedin
@@ -155,7 +161,7 @@ export default function SignupPage({ setToken, token }) {
 
         // Empty form after successfully sending data
         if (response.data.status == "success") {
-          setPhone(formInfo["phone"]);
+          setEmail(formInfo["email"]);
           localStorage.setItem(
             "wleness_user",
             JSON.stringify({
@@ -187,21 +193,30 @@ export default function SignupPage({ setToken, token }) {
   };
 
   // Handle OTP Verification
-  const handleVerifyOTP = async (e) => {
+  const handleVerifyOTP = (e) => {
     e.preventDefault();
 
     if (otp == null) {
       setOTPAlert("Please Enter Your OTP");
     } else {
-      const verifyOtp = await axios.post(VERIFY_OTP, { otp: otp });
-      if (verifyOtp.data.status == "success") {
-        // Set login token after OTP Verification
-        setToken(newToken);
-        localStorage.setItem("phone", phone);
-        navigate("/");
-      } else {
-        setOTPAlert(verifyOtp.data.message);
-      }
+      let otpBody = {
+        otp: otp,
+        email: email,
+      };
+
+      axios
+        .post(VERIFY_SIGNUP_OTP, otpBody)
+        .then((response) => {
+          if (response.data.status == "success") {
+            // Set login token after OTP Verification
+            setToken(newToken);
+            localStorage.setItem("phone", phone);
+            navigate("/");
+          } else {
+            setOTPAlert(response.data.message);
+          }
+        })
+        .catch((error) => console.log(error));
     }
   };
 
@@ -363,7 +378,7 @@ export default function SignupPage({ setToken, token }) {
         submit={handleVerifyOTP}
         otp={otp}
         setOTP={setOTP}
-        phone={phone}
+        email={email}
       />
     </>
   );

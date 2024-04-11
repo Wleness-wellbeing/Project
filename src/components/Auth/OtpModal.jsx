@@ -1,13 +1,6 @@
 import React from "react";
 
-export default function OtpModal({
-  isOpen,
-  msg,
-  verifyOtp,
-  setOTP,
-  otp,
-  phone,
-}) {
+export default function OtpModal({ isOpen, msg, submit, setOTP, otp, email }) {
   return (
     <div
       className={`fixed inset-0 z-40 grid w-full place-items-center bg-black/40 ${
@@ -17,7 +10,7 @@ export default function OtpModal({
       <div className="rounded-lg bg-white px-8 py-5 shadow-lg">
         <h2 className="text-center text-xl font-semibold">Enter Your OTP</h2>
         <small className="block text-center text-red-500">{msg}</small>
-        <form className="my-4 block" onSubmit={verifyOtp}>
+        <form className="my-4 block" onSubmit={submit}>
           <input
             type="tel"
             maxLength={6}
@@ -30,7 +23,7 @@ export default function OtpModal({
 
           <div>
             <small className="mb-1 block text-center">
-              OTP sent to {phone}
+              OTP sent to {email}
             </small>
             <button
               type="submit"

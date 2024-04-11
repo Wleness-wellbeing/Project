@@ -10,6 +10,7 @@ export const EXPERTS_LOGIN_URI = URI + "experts-login";
 export const GOOGLE_SIGNUP_URI = URI + "google-signup";
 export const GOOGLE_LOGIN_URI = URI + "google-signin";
 export const VERIFY_OTP = URI + "verifyOtp";
+export const VERIFY_SIGNUP_OTP = URI + "verify-signup-email";
 export const FORGOT_PASSWORD_URI = URI + "forgot-password";
 
 // Users
