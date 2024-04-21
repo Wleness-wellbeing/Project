@@ -174,11 +174,11 @@ export default function Home() {
                     value.dark ? "bg-primary-400" : "bg-white"
                   }`}
                 >
-                  <div className="mb-2 h-10 w-28 text-left">
+                  <div className={`mb-2 w-28 lg:mb-4 ${value.size} text-left`}>
                     <img
                       src={value.image}
                       alt={value.title}
-                      className="h-full object-contain"
+                      className="aspect-video w-full object-contain"
                     />
                   </div>
                   <figcaption>

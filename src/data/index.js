@@ -3912,6 +3912,7 @@ export const homeCertified = [
   {
     title: "IAF",
     image: logoIAF,
+    size: "scale-105",
     dark: false,
     description:
       "We are certified by the IAF. We meet the standards for excellence and quality in our services. You can trust that we're recognised for our expertise and commitment to high standards",
@@ -3919,6 +3920,7 @@ export const homeCertified = [
   {
     title: "Startup India",
     image: startUpIndiaLogo,
+    size: "scale-125",
     dark: true,
     description:
       "We're certified by Startup India. Our commitment to innovation and entrepreneurship confirms our dedication to driving growth and contributing to India's startup ecosystem.",
@@ -3926,6 +3928,7 @@ export const homeCertified = [
   {
     title: "ISO",
     image: logoISO,
+    size: "scale-125",
     dark: false,
     description:
       "We're ISO certified. We meet international standards for quality and efficiency in our operations. Our products or services meet customer requirements and regulatory standards.",
