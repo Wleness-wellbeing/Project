@@ -29,7 +29,7 @@ export default function BlogDetails() {
         setLoading(false);
         console.error(error);
       });
-  }, []);
+  }, [slug]);
 
   if (loading) {
     return <div className="mb-5 text-center">Loading...</div>;
@@ -117,12 +117,12 @@ export default function BlogDetails() {
                     <li key={i} className="px-2">
                       <Link
                         to={`/blog/${value.slug}`}
-                        className="grid grid-cols-[1fr_3fr] justify-between gap-3 font-semibold"
+                        className="grid grid-cols-[1fr_3fr] items-center justify-between gap-3 font-semibold"
                       >
                         <img
                           src={value.image}
-                          alt=""
-                          className="h-full w-full rounded-md object-cover"
+                          alt={value.title}
+                          className="h-14 w-full rounded-md object-cover"
                         />
                         <span className="text-sm">{value.title}</span>
                       </Link>
