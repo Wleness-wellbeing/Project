@@ -1,6 +1,7 @@
 // Pages
 export const HOME = "/";
 export const BLOGS = "/blogs";
+export const BLOGS_CATEGORY = "/blogs/:category";
 export const BLOGS_DETAILS = "/blog/:slug";
 export const ABOUT_US = "/about-us";
 export const ACTIVITIES = "/activities";

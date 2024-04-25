@@ -1,9 +1,9 @@
 /* Blog details formatting */
 #blog-content h2 {
-  @apply text-2xl;
+  @apply text-2xl font-bold;
 }
 #blog-content h3 {
-  @apply text-xl;
+  @apply text-xl font-semibold;
 }
 #blog-content h4 {
   @apply text-lg;

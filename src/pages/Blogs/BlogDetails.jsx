@@ -93,9 +93,14 @@ export default function BlogDetails() {
                   return (
                     <li
                       key={i}
-                      className="flex justify-between px-4 font-semibold hover:text-slate-900"
+                      className="flex justify-between px-4 font-semibold"
                     >
-                      <span>{value.category}</span>
+                      <Link
+                        to={`/blogs/${value.slug}`}
+                        className="transition-all hover:text-primary-300"
+                      >
+                        {value.category}
+                      </Link>
                     </li>
                   );
                 })}

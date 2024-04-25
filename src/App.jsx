@@ -83,6 +83,7 @@ import {
   ASSESSMENT_RESULT,
   ASSESSMENT_SLUG,
   BLOGS,
+  BLOGS_CATEGORY,
   BLOGS_DETAILS,
   CAMPUS_AMBASSADOR,
   CANCELLATION,
@@ -126,6 +127,7 @@ import {
   YOGA_FOR_99,
 } from "./data/urls";
 import SelfAssessmentButton from "./components/Buttons/SelfAssessmentButton";
+import BlogsCategories from "./pages/Blogs/BlogsCategories";
 
 function App() {
   const { token, removeToken, setToken } = useToken();
@@ -306,6 +308,10 @@ function App() {
           element={<Layout children={<BrainExercise />} />}
         />
         <Route path={BLOGS} element={<Layout children={<Blogs />} />} />
+        <Route
+          path={BLOGS_CATEGORY}
+          element={<Layout children={<BlogsCategories />} />}
+        />
         <Route
           path={BLOGS_DETAILS}
           element={<Layout children={<BlogDetails />} />}

@@ -64,6 +64,7 @@ export const ASSESSMENT_RESULT = URI + "assessment";
 // Blogs
 export const BLOGS_URI = URI + "blogs";
 export const SINGLE_BLOG_URI = URI + "blog";
+export const BLOGS_CATEGORY_URI = URI + "blog-categories";
 
 // Joining Forms
 export const CORPORATE_JOIN_URI = URI + "join-corporate";
