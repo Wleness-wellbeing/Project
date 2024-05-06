@@ -61,7 +61,7 @@ export default function SignupPage({ setToken, token }) {
   const [user, setUser] = useState(null);
 
   // ===================Google Login ==========================//
-  const handleGoogleSignIn = () => {
+  const handleGoogleSignUp = () => {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         let user = result.user;
@@ -79,16 +79,11 @@ export default function SignupPage({ setToken, token }) {
   const handleFacebookSignIn = () => {
     signInWithPopup(auth, facebookProvider) // Use the Facebook provider
       .then((result) => {
-        const user = result.user;
+        let user = result.user;
+        user.login_type = "facebook";
 
         // Send user data to the backend
-        sendUserDataToBackend(user);
-
-        // Save user data to localStorage
-        localStorage.setItem("user", JSON.stringify(user));
-
-        // Redirect to the home page
-        navigate("/"); // Replace "/" with the appropriate home page route
+        sendUserDataToBackend(user, GOOGLE_SIGNUP_URI);
       })
       .catch((error) => {
         console.error("Error signing in with Facebook:", error);
@@ -240,7 +235,7 @@ export default function SignupPage({ setToken, token }) {
               </h2>
               <div className="mb-2 flex items-center justify-center gap-x-2 py-2">
                 <button
-                  onClick={handleGoogleSignIn}
+                  onClick={handleGoogleSignUp}
                   className="grid h-12 w-12 place-items-center rounded-full border-2 border-slate-200"
                 >
                   <FontAwesomeIcon icon={faGoogle} className="text-slate-500" />

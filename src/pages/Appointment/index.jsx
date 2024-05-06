@@ -37,10 +37,10 @@ export default function Appointment() {
     original_price: "",
   });
   const [userDetails, setUserDetails] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
+    firstName: "Om",
+    lastName: "Kumar",
+    email: "omprakash.wleness@gmail.com",
+    phone: "9999999999",
   });
   // Mobile verification
   const [otpState, setOtpState] = useState({
@@ -210,13 +210,18 @@ export default function Appointment() {
           const pricing_data = {
             appointment_id: response.data.appointment_id,
             price: response.data.price,
+            phone: response.data.phone,
           };
+          console.log(pricing_data);
           handleCheckout(pricing_data);
         } else {
           setOtpState({ ...otpState, message: response.data.message });
         }
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        setOtpState({ ...otpState, message: error.message });
+        console.log(error);
+      });
   };
 
   // ======================================
@@ -522,10 +527,10 @@ export default function Appointment() {
       <OtpModal
         isOpen={otpState.showModal}
         msg={otpState.message}
-        verifyOtp={handleOtpVerify}
+        submit={handleOtpVerify}
         otp={otpState.otp}
         setOTP={setOTP}
-        phone={otpState.email}
+        email={otpState.email}
       />
     </>
   );

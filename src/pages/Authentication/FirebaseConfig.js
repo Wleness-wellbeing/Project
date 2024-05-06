@@ -4,22 +4,20 @@ import {
   GoogleAuthProvider,
   FacebookAuthProvider,
 } from "firebase/auth";
+
 const firebaseConfig = {
-  apiKey: "AIzaSyCeaaFJF6R0KC7UsWZOrr0x4JhHeSO-7aw",
-  authDomain: "wleness-84739.firebaseapp.com",
-  projectId: "wleness-84739",
-  storageBucket: "wleness-84739.appspot.com",
-  messagingSenderId: "584754703541",
-  appId: "1:584754703541:web:c6dc3ac065e7d840f3a2fc",
-  measurementId: "G-4SYTVTV84N",
+  apiKey: "AIzaSyDpopiKa0iEIdwhWLKl8MSr2R9oPyPidq8",
+  authDomain: "wleness-d8700.firebaseapp.com",
+  projectId: "wleness-d8700",
+  storageBucket: "wleness-d8700.appspot.com",
+  messagingSenderId: "8952035558",
+  appId: "1:8952035558:web:9f51250b90375cd5a66327",
+  measurementId: "G-3C2DC95QVZ",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
 const auth = getAuth(app);
-
-// const provider=new GoogleAuthProvider();
 
 const googleProvider = new GoogleAuthProvider();
 const facebookProvider = new FacebookAuthProvider();
