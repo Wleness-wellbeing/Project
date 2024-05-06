@@ -49,7 +49,7 @@ export default function LoginPage({ setToken, token }) {
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         const user = result.user;
-        VerifyLoginData(user, GOOGLE_LOGIN_URI);
+        VerifyLoginData(user, GOOGLE_LOGIN_URI, "google");
       })
       .catch((error) => {
         console.error("Error signing in with Google:", error);
@@ -60,18 +60,15 @@ export default function LoginPage({ setToken, token }) {
   const handleFacebookSignIn = () => {
     signInWithPopup(auth, facebookProvider) // Use the Facebook provider
       .then((result) => {
-        let user = result.user;
-        user.login_type = "facebook";
-
-        // Send user data to the backend
-        sendUserDataToBackend(user, GOOGLE_LOGIN_URI);
+        const user = result.user;
+        VerifyLoginData(user, GOOGLE_LOGIN_URI, "facebook");
       })
       .catch((error) => {
         console.error("Error signing in with Facebook:", error);
       });
   };
 
-  const VerifyLoginData = async (data, url) => {
+  const VerifyLoginData = async (data, url, login_type) => {
     // Append form fields to the FormData object
     let request_data = {
       email: data.email,
@@ -92,7 +89,7 @@ export default function LoginPage({ setToken, token }) {
             key: "email",
             username: data.email,
             type: "user",
-            login_type: "google",
+            login_type: login_type,
           }),
         );
 
