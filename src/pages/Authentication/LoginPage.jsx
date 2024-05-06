@@ -60,13 +60,11 @@ export default function LoginPage({ setToken, token }) {
   const handleFacebookSignIn = () => {
     signInWithPopup(auth, facebookProvider) // Use the Facebook provider
       .then((result) => {
-        const user = result.user;
+        let user = result.user;
+        user.login_type = "facebook";
 
-        // Save user data to localStorage
-        localStorage.setItem("user", JSON.stringify(user));
-
-        // Redirect to the home page
-        navigate("/"); // Replace "/" with the appropriate home page route
+        // Send user data to the backend
+        sendUserDataToBackend(user, GOOGLE_LOGIN_URI);
       })
       .catch((error) => {
         console.error("Error signing in with Facebook:", error);
