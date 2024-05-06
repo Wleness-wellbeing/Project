@@ -37,10 +37,10 @@ export default function Appointment() {
     original_price: "",
   });
   const [userDetails, setUserDetails] = useState({
-    firstName: "Om",
-    lastName: "Kumar",
-    email: "omprakash.wleness@gmail.com",
-    phone: "9999999999",
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
   });
   // Mobile verification
   const [otpState, setOtpState] = useState({
