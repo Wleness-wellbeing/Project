@@ -75,7 +75,7 @@ export default function Blogs() {
                         <img
                           src={value.thumbnail_image}
                           className="w-full rounded-2xl object-cover"
-                          alt={value.title}
+                          alt={value.image_alt}
                         />
                       </Link>
                       <div className="pt-3 xs:w-full sm:w-full lg:w-1/2 lg:pl-12">

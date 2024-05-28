@@ -1,10 +1,12 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { SINGLE_BLOG_URI } from "../../data/api";
 import "../../assets/css/blog.css";
+import { Helmet } from "react-helmet";
+import { get_canonical } from "../../utils";
 
 export default function BlogDetails() {
   const { slug } = useParams();
@@ -34,15 +36,20 @@ export default function BlogDetails() {
   if (loading) {
     return <div className="mb-5 text-center">Loading...</div>;
   }
-
   return (
     <>
+      <Helmet>
+        <title>{blogDetails?.meta_title}</title>
+        <meta name="description" content={blogDetails?.meta_description} />
+        <link rel="canonical" href={get_canonical(window.location)} />
+      </Helmet>
+
       <main className="container mx-auto lg:flex">
         <article className="pb-5 lg:mb-8 lg:w-[70%]">
           <div className="mb-3 lg:mb-8">
             <img
               src={blogDetails.header_image}
-              alt=""
+              alt={blogDetails?.image_alt}
               className="w-full rounded-3xl object-cover object-top"
             />
           </div>

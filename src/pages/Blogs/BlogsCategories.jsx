@@ -34,8 +34,8 @@ export default function BlogsCategories() {
   return (
     <>
       <Helmet>
-        <title>This is blog category page</title>
-        <meta name="description" content={"BLOGS_META.description"} />
+        <title>Blogs Categories | Wleness</title>
+        <meta name="description" content={"View all blogs categories"} />
         <link rel="canonical" href={get_canonical(window.location)} />
       </Helmet>
 

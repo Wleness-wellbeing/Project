@@ -10,7 +10,7 @@ export default function BlogCard(props) {
         <img
           src={props.data.thumbnail_image}
           className="w-full rounded-xl"
-          alt={props.data.title}
+          alt={props.data.image_alt}
         />
       </Link>
       <figcaption className="flex h-full flex-col items-start justify-between">
