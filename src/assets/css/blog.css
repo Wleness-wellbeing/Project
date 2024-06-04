@@ -22,3 +22,6 @@
 #blog-content ol {
   @apply space-y-2 rounded-xl bg-slate-100 p-2 font-medium lg:space-y-3 lg:px-8 lg:py-6;
 }
+#blog-content a {
+  @apply font-semibold text-blue-600;
+}
