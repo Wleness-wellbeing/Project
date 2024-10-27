@@ -307,6 +307,7 @@ function App() {
           path={brainExercise.slug}
           element={<Layout children={<BrainExercise />} />}
         />
+        {/* This is comment for routes */}
         <Route path={BLOGS} element={<Layout children={<Blogs />} />} />
         <Route
           path={BLOGS_CATEGORY}
